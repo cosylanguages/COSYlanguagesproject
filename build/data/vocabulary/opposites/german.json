@@ -1,0 +1,72 @@
+{
+  "1": {
+    "Hallo": "Auf Wiedersehen",
+    "Auf Wiedersehen": "Hallo",
+    "Ja": "Nein",
+    "Nein": "Ja",
+    "Danke": "Bitte",
+    "Bitte": "Danke"
+  },
+  "2": {
+    "Der Junge": "Das Mädchen",
+    "Das Mädchen": "Der Junge", 
+    "Die Frau": "Der Mann",
+    "Der Mann": "Die Frau",
+    "Die Person": "Das Ding", 
+    "Das Ding": "Die Person", 
+    "Der Schüler": "Die Schülerin", 
+    "Die Schülerin": "Der Schüler", 
+    "Der Lehrer": "Der Schüler", 
+    "Die Lehrerin": "Der Schüler", 
+    "Er": "Sie",
+    "Sie": "Er"
+  },
+  "3": {
+    "Die Mutter": "Der Vater", 
+    "Der Vater": "Die Mutter", 
+    "Die Tochter": "Der Sohn",
+    "Der Sohn": "Die Tochter", 
+    "Die Schwester": "Der Bruder", 
+    "Der Bruder": "Die Schwester",
+    "Der Ehemann": "Die Ehefrau", 
+    "Die Ehefrau": "Der Ehemann", 
+    "Der Freund": "Die Freundin", 
+    "Die Freundin": "Der Freund"
+  },
+  "4": {
+    "0": "Null",
+    "Null": "0",
+    "1": "Eins",
+    "Eins": "1",
+    "2": "Zwei",
+    "Zwei": "2",
+    "3": "Drei",
+    "Drei": "3",
+    "4": "Vier",
+    "Vier": "4",
+    "5": "Fünf",
+    "Fünf": "5",
+    "6": "Sechs",
+    "Sechs": "6",
+    "7": "Sieben",
+    "Sieben": "7",
+    "8": "Acht",
+    "Acht": "8",
+    "9": "Neun",
+    "Neun": "9"
+  },
+  "5": {
+    "Gut": "Schlecht",
+    "Schlecht": "Gut",
+    "Groß": "Klein",
+    "Klein": "Groß",
+    "Einfach": "Schwierig",
+    "Schwierig": "Einfach",
+    "Interessant": "Langweilig",
+    "Langweilig": "Interessant",
+    "Kalt": "Heiß",
+    "Heiß": "Kalt",
+    "Teuer": "Billig",
+    "Billig": "Teuer"
+  }
+}
