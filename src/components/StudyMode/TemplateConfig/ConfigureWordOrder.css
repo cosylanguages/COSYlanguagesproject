@@ -1,0 +1,73 @@
+.configure-word-order {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.configure-word-order h3,
+.configure-word-order h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.configure-word-order .form-group {
+    margin-bottom: 15px;
+}
+
+.configure-word-order label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.configure-word-order input[type="text"],
+.configure-word-order textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.configure-word-order textarea {
+    min-height: 60px; 
+    resize: vertical;
+}
+
+.configure-word-order .wo-sentence-entry {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.configure-word-order .wo-sentence-entry h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.configure-word-order .wo-format-hint {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #eef;
+    border-left: 3px solid #77f;
+}
+
+
+.configure-word-order .btn-danger {
+    margin-top: 10px;
+}
+
+.configure-word-order .form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Language tab styles can be shared/global */

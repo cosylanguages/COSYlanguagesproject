@@ -1,0 +1,87 @@
+.configure-audio-block {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.configure-audio-block h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+.configure-audio-block fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.configure-audio-block legend {
+    font-weight: bold;
+    padding: 0 5px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.configure-audio-block .form-group {
+    margin-bottom: 15px;
+}
+
+.configure-audio-block label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.configure-audio-block input[type="text"],
+.configure-audio-block input[type="url"],
+.configure-audio-block input[type="file"],
+.configure-audio-block textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.configure-audio-block input[type="file"] {
+    padding: 5px; 
+}
+
+.configure-audio-block input[type="checkbox"] {
+    width: auto; /* Override general width for checkbox */
+    margin-right: 5px;
+}
+
+
+.configure-audio-block textarea {
+    min-height: 70px;
+    resize: vertical;
+}
+
+.configure-audio-block .file-name-display {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
+
+.configure-audio-block .upload-note {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 5px;
+}
+
+.configure-audio-block .form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Language tab styles can be shared/global */
+/*
+.language-selector-tabs { ... }
+.lang-tab-btn { ... }
+.lang-tab-btn.active { ... }
+*/

@@ -1,0 +1,53 @@
+.configure-fill-gaps-box {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.configure-fill-gaps-box h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.configure-fill-gaps-box .form-group {
+    margin-bottom: 15px;
+}
+
+.configure-fill-gaps-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.configure-fill-gaps-box input[type="text"],
+.configure-fill-gaps-box textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.configure-fill-gaps-box textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.configure-fill-gaps-box .fgbox-format-hint {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555;
+    margin-top: 5px;
+    padding: 8px;
+    background-color: #eef;
+    border-left: 3px solid #77f;
+}
+
+.configure-fill-gaps-box .form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Language tab styles can be shared/global */

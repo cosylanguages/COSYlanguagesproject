@@ -1,0 +1,66 @@
+/* ConfigureGifBlock.css */
+.configure-gif-block {
+    padding: var(--spacing-md, 1rem);
+    background-color: var(--color-surface-light, #fff);
+    border: 1px solid var(--color-border, #ddd);
+    border-radius: var(--border-radius-lg, 0.3rem);
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));
+}
+
+.configure-gif-block h4 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-lg, 1.5rem);
+    color: var(--color-text-headings, #343a40);
+    border-bottom: 1px solid var(--color-border, #eee);
+    padding-bottom: var(--spacing-sm, 0.5rem);
+}
+
+.configure-gif-block .form-group {
+    margin-bottom: var(--spacing-md, 1rem);
+}
+
+.configure-gif-block label {
+    display: block;
+    margin-bottom: var(--spacing-xs, 0.25rem);
+    font-weight: bold;
+    color: var(--color-text-secondary, #555);
+}
+
+.configure-gif-block .form-control {
+    width: 100%;
+    padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem);
+    border: 1px solid var(--color-border, #ccc);
+    border-radius: var(--border-radius-sm, 0.2rem);
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.5;
+}
+
+.gif-source-helpers {
+    margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-md); /* More space after helpers */
+}
+
+.gif-source-helpers .btn-small {
+    font-size: 0.8rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.gif-source-helpers .form-control-file { /* Basic styling for file input if used */
+    display: block;
+    margin-top: var(--spacing-sm);
+}
+
+
+.configure-gif-block .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm, 0.5rem);
+    margin-top: var(--spacing-lg, 1.5rem);
+    padding-top: var(--spacing-md, 1rem);
+    border-top: 1px solid var(--color-border, #eee);
+}
+
+.configure-gif-block .btn {
+  padding: 0.5rem 1rem;
+}

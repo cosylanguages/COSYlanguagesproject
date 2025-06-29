@@ -1,0 +1,103 @@
+/* ConfigureStructuredNote.css */
+.configure-structured-note {
+    padding: var(--spacing-md, 1rem);
+    background-color: var(--color-surface-light, #fff); /* Slightly lighter than page background if distinct */
+    border: 1px solid var(--color-border, #ddd);
+    border-radius: var(--border-radius-lg, 0.3rem);
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));
+}
+
+.configure-structured-note h4 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-lg, 1.5rem);
+    color: var(--color-text-headings, #343a40);
+    border-bottom: 1px solid var(--color-border, #eee);
+    padding-bottom: var(--spacing-sm, 0.5rem);
+}
+
+.configure-structured-note .form-group {
+    margin-bottom: var(--spacing-md, 1rem);
+}
+
+.configure-structured-note label {
+    display: block;
+    margin-bottom: var(--spacing-xs, 0.25rem);
+    font-weight: bold;
+    color: var(--color-text-secondary, #555);
+}
+
+.configure-structured-note .form-control-color {
+    width: 100%;
+    height: 40px; /* Standard height for color input */
+    padding: var(--spacing-xs, 0.25rem);
+    border: 1px solid var(--color-border, #ccc);
+    border-radius: var(--border-radius-sm, 0.2rem);
+    cursor: pointer;
+}
+
+.configure-structured-note .form-control-plaintext {
+    display: block;
+    width: 100%;
+    padding: .375rem 0; /* Match Bootstrap's form-control-plaintext padding */
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+    background-color: transparent;
+    border: solid transparent;
+    border-width: 1px 0;
+    font-weight: bold; /* Make preview stand out */
+}
+.configure-structured-note .form-control-plaintext:disabled {
+    background-color: var(--color-surface, #f8f9fa); /* Slight background when disabled */
+    opacity: 0.8;
+}
+
+
+.configure-structured-note .form-control-textarea {
+    width: 100%;
+    padding: var(--spacing-sm, 0.5rem);
+    border: 1px solid var(--color-border, #ccc);
+    border-radius: var(--border-radius-sm, 0.2rem);
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.5;
+    min-height: 100px; /* Ensure decent height for textarea */
+}
+
+.configure-structured-note .form-check {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm, 0.5rem);
+}
+
+.configure-structured-note .form-check-input {
+    width: 1.15em; /* Slightly larger checkbox */
+    height: 1.15em;
+    margin-top: 0.1em; /* Align better with label */
+    cursor: pointer;
+}
+
+.configure-structured-note .form-check-label {
+    margin-bottom: 0; /* Remove default label margin */
+    font-weight: normal; /* Normal weight for checkbox label */
+    color: var(--color-text-primary);
+}
+
+.configure-structured-note .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm, 0.5rem);
+    margin-top: var(--spacing-lg, 1.5rem);
+    padding-top: var(--spacing-md, 1rem);
+    border-top: 1px solid var(--color-border, #eee);
+}
+
+/* Using global .btn styles from index.css */
+.configure-structured-note .btn {
+  padding: 0.5rem 1rem;
+}
+/* Specific overrides if needed, but prefer global .btn styles */
+/*
+.configure-structured-note .btn-secondary { ... }
+.configure-structured-note .btn-primary { ... }
+*/

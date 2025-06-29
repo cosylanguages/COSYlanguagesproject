@@ -1,0 +1,145 @@
+.configure-label-pictures {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.configure-label-pictures .form-group {
+    margin-bottom: 15px;
+}
+
+.configure-label-pictures label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.configure-label-pictures input[type="text"],
+.configure-label-pictures input[type="url"],
+.configure-label-pictures input[type="file"] {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.image-preview-container-lp {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 2px dashed #aaa;
+    min-height: 200px;
+    position: relative;
+    background-color: #e9ecef;
+    display: flex; /* For centering placeholder text if image not loaded */
+    align-items: center;
+    justify-content: center;
+}
+
+.image-preview-container-lp img {
+    display: block;
+    max-width: 100%;
+    max-height: 400px; /* Or your preferred max height */
+    object-fit: contain;
+}
+
+.hotspot-marker-config {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transform: translate(-50%, -50%); /* Center the marker on the coordinates */
+    cursor: default; /* Not draggable in config view, just an indicator */
+    border: 1px solid white;
+}
+
+.hotspot-editor-modal {
+    position: fixed; /* Or absolute if positioned within a specific parent */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 100; /* Ensure it's above other content */
+    width: 90%;
+    max-width: 450px;
+}
+
+.hotspot-editor-modal h5 {
+    margin-top: 0;
+}
+
+.hotspots-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.hotspots-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.hotspots-list li:last-child {
+    border-bottom: none;
+}
+
+.hotspots-list li span {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.configure-label-pictures .form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.configure-label-pictures .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.configure-label-pictures .btn-primary {
+    background-color: var(--primary-color); /* Assuming you have CSS variables */
+    color: white;
+}
+.configure-label-pictures .btn-primary:hover {
+    background-color: var(--primary-dark-color);
+}
+
+.configure-label-pictures .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+.configure-label-pictures .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.configure-label-pictures .btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+.configure-label-pictures .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.configure-label-pictures .btn-sm {
+    padding: 5px 10px;
+    font-size: 0.875em;
+}
