@@ -1,37 +1,37 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
-// Vocabulary Exercise Components
-import ShowWordExercise from './exercises/vocabulary/ShowWordExercise';
-import IdentifyImageExercise from './exercises/vocabulary/IdentifyImageExercise';
-import TranscribeWordExercise from './exercises/vocabulary/TranscribeWordExercise';
-import TypeOppositeExercise from './exercises/vocabulary/TypeOppositeExercise';
-import MatchOppositesExercise from './exercises/vocabulary/MatchOppositesExercise';
-import BuildWordExercise from './exercises/vocabulary/BuildWordExercise';
-import MatchImageWordExercise from './exercises/vocabulary/MatchImageWordExercise';
+// Vocabulary Exercise Components (lazy)
+const ShowWordExercise = React.lazy(() => import('./exercises/vocabulary/ShowWordExercise'));
+const IdentifyImageExercise = React.lazy(() => import('./exercises/vocabulary/IdentifyImageExercise'));
+const TranscribeWordExercise = React.lazy(() => import('./exercises/vocabulary/TranscribeWordExercise'));
+const TypeOppositeExercise = React.lazy(() => import('./exercises/vocabulary/TypeOppositeExercise'));
+const MatchOppositesExercise = React.lazy(() => import('./exercises/vocabulary/MatchOppositesExercise'));
+const BuildWordExercise = React.lazy(() => import('./exercises/vocabulary/BuildWordExercise'));
+const MatchImageWordExercise = React.lazy(() => import('./exercises/vocabulary/MatchImageWordExercise'));
 
-// Grammar Exercise Components
-import ArticleWordExercise from './exercises/grammar/ArticleWordExercise';
-import MatchArticlesWordsExercise from './exercises/grammar/MatchArticlesWordsExercise';
-import SelectArticleExercise from './exercises/grammar/SelectArticleExercise';
-import TypeVerbExercise from './exercises/grammar/TypeVerbExercise';
-import MatchVerbsPronounsExercise from './exercises/grammar/MatchVerbsPronounsExercise';
-import FillGapsExercise from './exercises/grammar/FillGapsExercise';
-import WordOrderExercise from './exercises/grammar/WordOrderExercise';
-import PossessivesExercise from './exercises/grammar/PossessivesExercise'; // Added
+// Grammar Exercise Components (lazy)
+const ArticleWordExercise = React.lazy(() => import('./exercises/grammar/ArticleWordExercise'));
+const MatchArticlesWordsExercise = React.lazy(() => import('./exercises/grammar/MatchArticlesWordsExercise'));
+const SelectArticleExercise = React.lazy(() => import('./exercises/grammar/SelectArticleExercise'));
+const TypeVerbExercise = React.lazy(() => import('./exercises/grammar/TypeVerbExercise'));
+const MatchVerbsPronounsExercise = React.lazy(() => import('./exercises/grammar/MatchVerbsPronounsExercise'));
+const FillGapsExercise = React.lazy(() => import('./exercises/grammar/FillGapsExercise'));
+const WordOrderExercise = React.lazy(() => import('./exercises/grammar/WordOrderExercise'));
+const PossessivesExercise = React.lazy(() => import('./exercises/grammar/PossessivesExercise'));
 
-// Reading Exercise Components
-import StoryReadingExercise from './exercises/reading/StoryReadingExercise';
-import InterestingFactExercise from './exercises/reading/InterestingFactExercise';
+// Reading Exercise Components (lazy)
+const StoryReadingExercise = React.lazy(() => import('./exercises/reading/StoryReadingExercise'));
+const InterestingFactExercise = React.lazy(() => import('./exercises/reading/InterestingFactExercise'));
 
-// Speaking Exercise Components
-import SpeakingQuestionExercise from './exercises/speaking/SpeakingQuestionExercise';
-import MonologueExercise from './exercises/speaking/MonologueExercise';
-import RolePlayExercise from './exercises/speaking/RolePlayExercise';
+// Speaking Exercise Components (lazy)
+const SpeakingQuestionExercise = React.lazy(() => import('./exercises/speaking/SpeakingQuestionExercise'));
+const MonologueExercise = React.lazy(() => import('./exercises/speaking/MonologueExercise'));
+const RolePlayExercise = React.lazy(() => import('./exercises/speaking/RolePlayExercise'));
 
-// Writing Exercise Components
-import WritingQuestionExercise from './exercises/writing/WritingQuestionExercise';
-import StorytellingExercise from './exercises/writing/StorytellingExercise'; 
-import DiaryPracticeExercise from './exercises/writing/DiaryPracticeExercise'; 
+// Writing Exercise Components (lazy)
+const WritingQuestionExercise = React.lazy(() => import('./exercises/writing/WritingQuestionExercise'));
+const StorytellingExercise = React.lazy(() => import('./exercises/writing/StorytellingExercise'));
+const DiaryPracticeExercise = React.lazy(() => import('./exercises/writing/DiaryPracticeExercise'));
 
 // Placeholder component for exercises not yet migrated (though not currently used after possessives added)
 const PlaceholderExercise = ({ name, subPracticeType }) => (
@@ -101,7 +101,11 @@ const ExerciseHost = ({ subPracticeType, language, days, exerciseKey }) => {
     }
   }
   
-  return <ExerciseComponent language={language} days={days} exerciseKey={exerciseKey} />;
+  return (
+    <Suspense fallback={<div style={{textAlign: 'center', padding: '20px'}}>Chargement de l'exercice...</div>}>
+      <ExerciseComponent language={language} days={days} exerciseKey={exerciseKey} />
+    </Suspense>
+  );
 };
 
 export default ExerciseHost;
