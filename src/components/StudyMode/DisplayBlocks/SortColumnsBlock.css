@@ -1,0 +1,152 @@
+.sort-columns-block {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.sort-columns-block h4 {
+    margin-top: 0;
+    color: var(--text-primary);
+}
+
+.sort-columns-block > p { /* Instruction paragraph */
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.item-pool {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    min-height: 80px;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 10px; /* Space between items in the pool */
+    align-content: flex-start; /* Align wrapped lines to the start */
+}
+.item-pool h5 {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: var(--text-secondary);
+    text-align: center;
+}
+.empty-pool-message {
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
+
+
+.columns-area {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px; /* Space between columns */
+    margin-bottom: 20px;
+}
+
+.sortable-column {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f0f8ff; /* Light alice blue or similar */
+    min-height: 150px; /* Ensure columns have some drop area */
+    display: flex;
+    flex-direction: column;
+}
+
+.sortable-column h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--text-primary);
+}
+
+.column-items-container {
+    flex-grow: 1; /* Make this area fill the column */
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Space between items in a column */
+}
+
+.empty-column-placeholder {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-style: italic;
+    border: 2px dashed #e0e0e0;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.draggable-item {
+    padding: 8px 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: grab;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    text-align: center;
+}
+.draggable-item:active {
+    cursor: grabbing;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    background-color: #f0f0f0;
+}
+
+.pool-item {
+    /* Specific styles for items in the pool if needed */
+}
+
+.placed-item {
+    /* Specific styles for items placed in columns */
+}
+
+.placed-item.correct {
+    background-color: var(--success-color-xlight, #d4edda); /* Very light green */
+    border-color: var(--success-color-light, #c3e6cb);
+    color: var(--success-color, #155724);
+}
+
+.placed-item.incorrect {
+    background-color: var(--danger-color-xlight, #f8d7da); /* Very light red */
+    border-color: var(--danger-color-light, #f5c6cb);
+    color: var(--danger-color, #721c24);
+}
+
+
+.sc-block-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sc-results-summary {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+.sc-results-summary h5 {
+    margin-top: 0;
+}
+.sc-results-summary p {
+    font-weight: bold;
+}
+
+/* General button styles from other CSS files should apply */
