@@ -1,0 +1,93 @@
+/* ConfigurePictureCarousel.css */
+.configure-picture-carousel {
+    padding: var(--spacing-md, 1rem);
+    background-color: var(--color-surface-light, #fff);
+    border: 1px solid var(--color-border, #ddd);
+    border-radius: var(--border-radius-lg, 0.3rem);
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));
+}
+
+.configure-picture-carousel h4 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-lg, 1.5rem);
+    color: var(--color-text-headings, #343a40);
+    border-bottom: 1px solid var(--color-border, #eee);
+    padding-bottom: var(--spacing-sm, 0.5rem);
+}
+
+.configure-picture-carousel .form-group {
+    margin-bottom: var(--spacing-md, 1rem);
+}
+
+.configure-picture-carousel label {
+    display: block;
+    margin-bottom: var(--spacing-xs, 0.25rem);
+    font-weight: bold;
+    color: var(--color-text-secondary, #555);
+}
+
+.configure-picture-carousel .form-control {
+    width: 100%;
+    padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem);
+    border: 1px solid var(--color-border, #ccc);
+    border-radius: var(--border-radius-sm, 0.2rem);
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.5;
+}
+
+.carousel-items-list {
+    margin-bottom: var(--spacing-md, 1rem);
+    max-height: 400px; /* Allow scroll if many items */
+    overflow-y: auto;
+    padding-right: var(--spacing-xs); /* Space for scrollbar */
+}
+
+.carousel-item-config {
+    border: 1px solid var(--color-border-light, #e0e0e0);
+    padding: var(--spacing-md, 1rem);
+    margin-bottom: var(--spacing-md, 1rem);
+    border-radius: var(--border-radius-md, 0.25rem);
+    background-color: var(--color-surface, #f8f9fa);
+}
+
+.carousel-item-config h5 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm, 0.5rem);
+    font-size: 1.1em;
+    color: var(--color-primary);
+}
+
+.image-source-helpers {
+    margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.image-source-helpers .btn-small {
+    font-size: 0.8rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.remove-item-btn {
+    margin-top: var(--spacing-sm, 0.5rem);
+    /* Uses global .btn and .btn-danger from index.css or define here */
+}
+.add-item-btn {
+    margin-bottom: var(--spacing-lg, 1.5rem);
+    /* Uses global .btn and .btn-info from index.css or define here */
+}
+
+
+.configure-picture-carousel .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm, 0.5rem);
+    margin-top: var(--spacing-lg, 1.5rem);
+    padding-top: var(--spacing-md, 1rem);
+    border-top: 1px solid var(--color-border, #eee);
+}
+
+/* Using global .btn styles from index.css */
+.configure-picture-carousel .btn {
+  padding: 0.5rem 1rem;
+}

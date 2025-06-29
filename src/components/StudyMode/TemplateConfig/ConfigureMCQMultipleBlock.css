@@ -1,0 +1,57 @@
+.configure-mcq-multiple-block {
+    /* Uses .configure-simple-block styles from SimpleTextConfig.css */
+}
+
+.mcq-option-config-entry {
+    display: flex;
+    flex-direction: column; /* Stack text input and checkbox vertically on small screens if needed */
+    gap: 10px;
+    padding: 10px;
+    border: 1px dashed #e0e0e0;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #ffffff; /* Slightly different background for options area */
+}
+
+@media (min-width: 600px) {
+    .mcq-option-config-entry {
+        flex-direction: row; /* Text input and checkbox side-by-side on larger screens */
+        align-items: center; /* Align items vertically in the row */
+    }
+}
+
+
+.mcq-option-config-entry .option-text-group {
+    flex-grow: 1; /* Text input takes available space */
+}
+
+.mcq-option-config-entry .option-correct-group {
+    flex-shrink: 0; /* Prevent checkbox group from shrinking */
+    padding-left: 10px; /* Space between text input and checkbox */
+    white-space: nowrap; /* Keep "Correct Answer" on one line */
+}
+
+.mcq-option-config-entry .option-correct-group label {
+    font-weight: normal; /* Label for checkbox doesn't need to be bold */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between checkbox and its text */
+    cursor: pointer;
+}
+.mcq-option-config-entry input[type="checkbox"] {
+    width: auto; /* Override general input style */
+    margin-right: 5px;
+    cursor: pointer;
+    transform: scale(1.2); /* Make checkbox slightly larger */
+}
+
+
+.mcq-option-config-entry .remove-option-btn {
+    margin-left: auto; /* Push remove button to the far right if flex direction is row */
+    flex-shrink: 0;
+}
+
+.add-option-btn {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

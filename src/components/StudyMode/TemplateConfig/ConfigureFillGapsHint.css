@@ -1,0 +1,91 @@
+.configure-fill-gaps-hint {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.configure-fill-gaps-hint h3,
+.configure-fill-gaps-hint h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.configure-fill-gaps-hint .form-group {
+    margin-bottom: 15px;
+}
+
+.configure-fill-gaps-hint label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.configure-fill-gaps-hint input[type="text"],
+.configure-fill-gaps-hint textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.configure-fill-gaps-hint textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.configure-fill-gaps-hint .gap-item-entry {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.configure-fill-gaps-hint .gap-item-entry h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.configure-fill-gaps-hint .btn-danger {
+    margin-top: 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.configure-fill-gaps-hint .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.configure-fill-gaps-hint .form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.language-selector-tabs {
+    margin-bottom: 15px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.lang-tab-btn {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid transparent; /* For active indicator */
+    margin-bottom: -1px; /* Align with the container's border */
+}
+
+.lang-tab-btn.active {
+    border-bottom: 2px solid var(--primary-color, blue);
+    font-weight: bold;
+    color: var(--primary-color, blue);
+}

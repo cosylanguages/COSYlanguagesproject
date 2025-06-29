@@ -1,0 +1,74 @@
+.configure-true-false-block {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.configure-true-false-block h3,
+.configure-true-false-block h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.configure-true-false-block .form-group {
+    margin-bottom: 15px;
+}
+
+.configure-true-false-block label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.configure-true-false-block input[type="text"],
+.configure-true-false-block textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.configure-true-false-block textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+.configure-true-false-block .tf-statement-entry {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.configure-true-false-block .tf-statement-entry h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.configure-true-false-block .tf-radio-group label {
+    font-weight: normal;
+    margin-right: 15px;
+    display: inline-flex; /* Align radio and text nicely */
+    align-items: center;
+}
+.configure-true-false-block .tf-radio-group input[type="radio"] {
+    width: auto; /* Override global if any */
+    margin-right: 5px;
+}
+
+
+.configure-true-false-block .btn-danger {
+    margin-top: 10px;
+}
+
+.configure-true-false-block .form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Language tab styles can be shared/global */

@@ -1,0 +1,70 @@
+/* TemplateTypeSelectionModal.css */
+
+.template-type-list {
+    max-height: 60vh; /* Ensure list itself can scroll if very long */
+    overflow-y: auto;
+    padding-right: var(--spacing-sm); /* For scrollbar */
+}
+
+.template-category-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.template-category-header {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.template-options-list {
+    list-style: none;
+    padding-left: var(--spacing-sm); /* Indent options slightly */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: var(--spacing-sm);
+}
+
+.template-option-item {
+    /* Each item can have specific styling if needed */
+}
+
+.template-type-option-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.template-type-option-btn:hover {
+    background-color: #e9ecef; /* Light hover */
+    border-color: #adb5bd;
+    box-shadow: var(--shadow-sm);
+}
+
+.template-type-option-btn .emoji-icon {
+    margin-right: var(--spacing-sm);
+    font-size: 1.2em; /* Make emoji slightly larger */
+}
+
+.template-type-option-btn .template-option-name {
+    flex-grow: 1;
+}
+
+.modal-actions { /* General styling for modal action buttons container */
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
+}
