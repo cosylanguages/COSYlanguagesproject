@@ -1,0 +1,101 @@
+/* Modal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+    padding: 1rem; /* Add some padding for smaller screens */
+}
+
+.modal-content {
+    background-color: white;
+    padding: var(--spacing-lg, 1.5rem);
+    border-radius: var(--border-radius-lg, 0.3rem);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px; /* Default max-width */
+    max-height: 85vh; /* Max height */
+    overflow-y: auto; /* Allow scrolling for content */
+    position: relative; /* For positioning close button */
+    color: var(--color-text-primary, #212529); /* Ensure text color is set */
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border, #dee2e6);
+    padding-bottom: var(--spacing-md, 1rem);
+    margin-bottom: var(--spacing-md, 1rem);
+}
+
+.modal-title {
+    margin: 0;
+    font-size: var(--font-size-h3, 1.75rem);
+    color: var(--color-text-headings, #343a40);
+}
+
+.modal-close-button {
+    background: none;
+    border: none;
+    font-size: 2rem; /* Make it larger and easier to click */
+    font-weight: bold;
+    color: var(--color-text-secondary, #6c757d);
+    cursor: pointer;
+    padding: 0 0.5rem; /* Add some padding for click area */
+    line-height: 1; /* Ensure proper vertical alignment */
+}
+
+.modal-close-button:hover {
+    color: var(--color-text-primary, #212529);
+}
+
+.modal-body {
+    padding-top: var(--spacing-sm, 0.5rem);
+    /* Styles for modal body content can be added here or by children */
+}
+
+/* Example: if you have forms in modals */
+.modal-body form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md, 1rem);
+}
+
+.modal-body .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm, 0.5rem);
+    margin-top: var(--spacing-lg, 1.5rem);
+    border-top: 1px solid var(--color-border, #dee2e6);
+    padding-top: var(--spacing-md, 1rem);
+}
+
+/* Ensure buttons inside modals use variables if defined */
+.modal-body .btn {
+  padding: 0.5rem 1rem;
+}
+.modal-body .btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+.modal-body .btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+.modal-body .btn-secondary {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: white;
+}
+.modal-body .btn-secondary:hover {
+  background-color: #5a6268; /* Darken secondary */
+  border-color: #545b62;
+}
