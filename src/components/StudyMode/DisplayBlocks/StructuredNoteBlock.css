@@ -1,0 +1,43 @@
+/* StructuredNoteBlock.css */
+
+.structured-note-block {
+    padding: var(--spacing-md, 1rem);
+    margin-bottom: var(--spacing-md, 1rem);
+    border-radius: var(--border-radius-sm, 0.2rem); /* Slight rounding, main border is on left */
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));
+    word-wrap: break-word; /* Ensure long text wraps */
+    overflow-wrap: break-word;
+}
+
+.structured-note-title {
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm, 0.5rem);
+    font-size: var(--font-size-h5, 1.25rem); /* Assuming h5 size for notes */
+    font-weight: 600;
+    /* The color is set inline based on noteColor prop */
+}
+
+.structured-note-text-content {
+    font-size: var(--font-size-base, 1rem);
+    line-height: 1.6;
+    color: var(--color-text-primary);
+}
+
+.structured-note-text-content p { /* If content might have <p> tags from a rich editor */
+    margin-bottom: var(--spacing-sm, 0.5rem);
+}
+.structured-note-text-content p:last-child {
+    margin-bottom: 0;
+}
+
+.visibility-notice {
+    margin-top: var(--spacing-sm, 0.5rem);
+    font-size: var(--font-size-sm, 0.875rem);
+    color: var(--color-text-secondary, #6c757d);
+    font-style: italic;
+}
+
+/* General class for all displayed exercise blocks - can be expanded */
+.exercise-block-display {
+    /* Common styles for all block display components can go here */
+}

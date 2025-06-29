@@ -1,0 +1,86 @@
+.true-false-block {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.true-false-block h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.true-false-block .instructions {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+.tf-statements-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between each statement group */
+}
+
+.tf-statement-display {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.tf-statement-display .statement-text {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.tf-answer-options {
+    display: flex;
+    gap: 10px; /* Space between True and False buttons */
+}
+
+.tf-option-btn {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.tf-option-btn:hover {
+    border-color: #bbb;
+    background-color: #f0f0f0;
+}
+
+.tf-option-btn.true-btn.selected {
+    background-color: var(--success-bg, #d4edda); /* Light green */
+    border-color: var(--success-border, #c3e6cb);
+    color: var(--success-text, #155724);
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.tf-option-btn.false-btn.selected {
+    background-color: var(--danger-bg, #f8d7da); /* Light red */
+    border-color: var(--danger-border, #f5c6cb);
+    color: var(--danger-text, #721c24);
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Styles for feedback (if implemented later) */
+/*
+.tf-statement-display .feedback.correct {
+    color: green;
+    font-weight: bold;
+}
+.tf-statement-display .feedback.incorrect {
+    color: red;
+    font-weight: bold;
+}
+*/

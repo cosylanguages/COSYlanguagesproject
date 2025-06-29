@@ -1,0 +1,101 @@
+.wordlist-block {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.wordlist-block h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+.toggle-all-terms-btn {
+    margin-bottom: 15px;
+    font-size: 0.85em;
+    padding: 4px 8px;
+}
+
+.wordlist-display-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wordlist-display-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1em;
+}
+.wordlist-display-item:last-child {
+    border-bottom: none;
+}
+
+.wordlist-display-item .term1 {
+    font-weight: 500;
+    color: var(--text-primary-dark); /* Slightly darker for emphasis */
+    flex-basis: 45%; /* Give it some base width */
+    flex-grow: 1;
+    display: flex; /* To align pronounce button with text */
+    align-items: center;
+}
+
+.term2-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align content to the right */
+    flex-basis: 45%;
+    flex-grow: 1;
+}
+
+.wordlist-display-item .term2 {
+    color: var(--text-secondary);
+    /* flex-grow: 1; */ /* Managed by container now */
+    text-align: right; 
+    margin-right: 8px; /* Space before pronounce button if visible */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.wordlist-display-item .term2.hidden {
+    opacity: 0.3;
+    font-style: italic;
+}
+.wordlist-display-item .term2.visible {
+    opacity: 1;
+    font-style: normal;
+}
+
+.pronounce-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 1.1em; /* Adjust size as needed */
+    padding: 0 5px; /* Minimal padding */
+    margin-left: 8px; /* Space from the text */
+    line-height: 1;
+}
+.pronounce-btn:hover {
+    color: var(--primary-color);
+}
+
+.toggle-term2-btn {
+    padding: 3px 7px;
+    font-size: 0.9em;
+    line-height: 1;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    color: #555;
+    border-radius: 4px;
+    min-width: 30px; /* Ensure button has some width for the icon */
+    margin-left: 8px; /* Space from pronounce button or text */
+}
+.toggle-term2-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* General button styles from other CSS files should apply if global */

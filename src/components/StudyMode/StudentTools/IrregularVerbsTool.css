@@ -1,0 +1,124 @@
+.irregular-verbs-tool {
+    padding: 20px;
+    max-width: 800px; /* Or adjust as needed */
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.irregular-verbs-tool h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--text-primary-dark);
+}
+
+.search-irregular-verbs {
+    width: calc(100% - 22px); /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.irregular-verbs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.irregular-verbs-table th,
+.irregular-verbs-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.irregular-verbs-table th {
+    background-color: #f2f2f2; /* Light grey for header */
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.irregular-verbs-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping */
+}
+
+.irregular-verbs-table tbody tr:hover {
+    background-color: #e9e9e9; /* Hover effect */
+}
+
+/* Styles for French Conjugation Display */
+.conjugation-table-container {
+    /* Container for multiple verb entries if needed */
+}
+
+.conjugation-verb-entry {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+}
+.conjugation-verb-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.conjugation-verb-entry h4 { /* Infinitive */
+    font-size: 1.3em;
+    color: var(--primary-color, #007bff);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tense-section {
+    margin-bottom: 15px;
+}
+.tense-section h5 { /* Tense Name */
+    font-size: 1.1em;
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding-left: 10px;
+    border-left: 3px solid var(--secondary-color, #6c757d);
+}
+.tense-section ul {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+}
+.tense-section li {
+    padding: 4px 0;
+    font-size: 0.95em;
+}
+.tense-section li strong { /* Pronoun */
+    display: inline-block;
+    min-width: 70px; /* Align verb forms somewhat */
+    color: var(--text-secondary);
+}
+
+.pronounce-btn-inline {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 1em; /* Adjust if too large/small compared to table text */
+    padding: 0 3px;
+    margin-left: 5px;
+    vertical-align: middle; /* Align with text */
+    line-height: 1;
+}
+.pronounce-btn-inline:hover {
+    color: var(--primary-color);
+}
+
+
+.error-message { /* Ensure this is styled if used from this component */
+    color: var(--danger-color, red);
+    padding: 10px;
+    background-color: var(--danger-color-xlight, #f8d7da);
+    border: 1px solid var(--danger-color-light, #f5c6cb);
+    border-radius: 4px;
+    text-align: center;
+}

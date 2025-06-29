@@ -1,0 +1,41 @@
+/* GifBlock.css */
+
+.gif-block {
+    padding: var(--spacing-sm, 0.5rem);
+    margin-bottom: var(--spacing-md, 1rem);
+    border: 1px solid var(--color-border, #ddd);
+    border-radius: var(--border-radius-sm, 0.2rem);
+    background-color: var(--color-surface-light, #fcfdff);
+    text-align: center; /* Center the GIF and title */
+}
+
+.gif-block-title {
+    margin-top: 0;
+    margin-bottom: var(--spacing-md, 1rem);
+    font-size: var(--font-size-h5, 1.25rem);
+    font-weight: 600;
+    color: var(--color-text-headings);
+}
+
+.gif-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--spacing-sm, 0.5rem); /* Space below GIF */
+    background-color: #f0f0f0; /* Light background for the GIF area */
+    border-radius: var(--border-radius-sm);
+    overflow: hidden; /* Ensure rounded corners apply to image if it's larger */
+    min-height: 150px; /* Minimum height so it doesn't collapse */
+}
+
+.gif-image-container img {
+    max-width: 100%;
+    max-height: 400px; /* Max height for the GIF */
+    display: block; /* Remove extra space below image */
+    border-radius: var(--border-radius-sm); /* If image itself should have rounded corners */
+}
+
+.gif-block p em { /* For 'not configured' message */
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}

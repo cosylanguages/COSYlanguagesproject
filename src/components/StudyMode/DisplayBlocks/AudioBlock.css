@@ -1,0 +1,84 @@
+.audio-block {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.audio-block h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.audio-upload-placeholder,
+.audio-tts-placeholder {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    text-align: center;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.audio-upload-placeholder p,
+.audio-tts-placeholder p {
+    margin: 5px 0;
+}
+
+.audio-upload-placeholder strong,
+.audio-tts-placeholder strong {
+    color: #555;
+}
+
+.audio-tts-placeholder .tts-text-quote {
+    font-style: italic;
+    background-color: #eee;
+    padding: 10px;
+    margin-top: 10px;
+    border-left: 3px solid #bbb;
+    text-align: left;
+    white-space: pre-wrap; /* Preserve line breaks from textarea */
+}
+
+.transcript-section {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.transcript-toggle-btn {
+    background-color: var(--secondary-button-bg, #6c757d);
+    color: var(--secondary-button-color, white);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.transcript-toggle-btn:hover {
+    opacity: 0.9;
+}
+
+.transcript-content {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    max-height: 200px; /* Limit height and make scrollable */
+    overflow-y: auto;
+}
+
+.transcript-content pre {
+    white-space: pre-wrap; /* Allows text to wrap naturally */
+    word-wrap: break-word; /* Breaks long words if necessary */
+    font-family: inherit; /* Use the block's font */
+    font-size: 0.95em;
+    margin: 0;
+    color: #333;
+}
