@@ -1,7 +1,7 @@
 // This file is copied from src/js/core/translations.js
 // It will be used by the new I18nContext for the React application.
 
-const translations = {
+export const translations = {
   COSYenglish: {
     dayNames: {
         1: "Basic words",
@@ -3565,11 +3565,11 @@ COSYitaliano: {
 };
 
 // Make it available for other scripts if they are loaded via <script> tags
-if (typeof window !== 'undefined') {
+{
   window.translations = translations;
 }
 
 // If using Node.js modules (e.g. for backend or bundling with webpack/rollup)
-if (typeof module !== 'undefined' && module.exports) {
+{
   module.exports = translations;
 }
