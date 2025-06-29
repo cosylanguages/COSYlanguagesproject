@@ -16,7 +16,7 @@ if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
-      <BrowserRouter basename="/cosylanguagesproject">
+      <BrowserRouter basename="/COSYlanguagesproject">
         <I18nProvider>
           <LatinizationProvider>
             <AuthProvider>
