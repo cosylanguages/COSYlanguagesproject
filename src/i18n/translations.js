@@ -232,10 +232,10 @@ const translations = {
     buttons: {
       check: 'Check',
       newExercise: 'New Exercise',
-      newWord: 'New Word', // ADDED HERE
+      newWord: 'New Word', 
       revealAnswer: 'Reveal Answer',
       randomize: '🎲',
-      previous: 'Previous', // ADDED HERE
+      previous: 'Previous', 
       next: 'Next',
       back: 'Back',
       continue: 'Continue', 
@@ -243,6 +243,10 @@ const translations = {
       help: 'Help',
       close: 'Close',
       translate: 'Translate',
+      // Merged from the previous buttons definition
+      done: "Done", // Assuming this was intended from other languages or general use
+      stopRecording: "Stop", // Assuming this was intended
+      submitAnswer: "Submit Answer" // Already present above, kept for consistency if merging logic prefers last
     },
     // Hint related texts
     hint_firstLetterIs: "Hint: The first letter is",
@@ -507,17 +511,21 @@ const translations = {
     buttons: {
       check: 'Vérifier',
       newExercise: 'Nouvel exercice',
-      newWord: 'Nouveau mot', // ADDED HERE
+      newWord: 'Nouveau mot', 
       revealAnswer: 'Révéler la réponse',
       randomize: '🎲',
-      previous: 'Précédent', // ADDED HERE
+      previous: 'Précédent', 
       next: 'Suivant',
       back: 'Retour',
       continue: 'Continuer',
       reset: 'Réinitialiser',
       help: 'Aide',
       close: 'Fermer',
-      translate: 'Traduire'
+      translate: 'Traduire',
+      // Merged from the previous buttons definition
+      done: "Terminé", // Assuming this was intended, translated "Done"
+      stopRecording: "Arrêter", // Assuming this was intended, translated "Stop"
+      submitAnswer: "Soumettre la réponse" // Already present above
     },
     // Hint related texts
     hint_firstLetterIs: "Hint: The first letter is",
@@ -782,7 +790,7 @@ COSYitaliano: {
   buttons: {
     check: 'Verifica',
     newExercise: 'Nuovo esercizio',
-      newWord: 'Nuova parola', // ADDED HERE
+      newWord: 'Nuova parola', 
     revealAnswer: 'Mostra risposta',
     randomize: '🎲',
     previous: 'Precedente',
@@ -793,6 +801,10 @@ COSYitaliano: {
     help: 'Aiuto',
     close: 'Chiudi',
     translate: 'Traduci',
+      // Merged from the previous buttons definition
+      done: "Fatto", // Assuming this was intended, translated "Done"
+      stopRecording: "Ferma", // Assuming this was intended, translated "Stop"
+      submitAnswer: "Invia risposta" // Already present above
 },
     // Hint related texts
     hint_firstLetterIs: "Hint: The first letter is",
@@ -1069,16 +1081,21 @@ COSYitaliano: {
     buttons: {
       check: 'Comprobar',
       newExercise: 'Nuevo ejercicio',
-      newWord: 'Nueva palabra', // ADDED HERE
+      newWord: 'Nueva palabra', 
       revealAnswer: 'Mostrar respuesta',
       randomize: '🎲',
+      previous: 'Anterior', // ADDED HERE - Translated 'Previous'
       next: 'Siguiente',
       back: 'Atrás',
       continue: 'Continuar',
       reset: 'Restablecer',
       help: 'Ayuda',
       close: 'Cerrar',
-      translate: 'Traducir'
+      translate: 'Traducir',
+      // Merged from the previous buttons definition
+      done: "Hecho", // Assuming this was intended, translated "Done"
+      stopRecording: "Parar", // Assuming this was intended, translated "Stop"
+      submitAnswer: "Enviar respuesta" // Already present above
     },
     // Hint related texts
     hint_firstLetterIs: "Hint: The first letter is",
@@ -1262,11 +1279,11 @@ COSYitaliano: {
     statsLevel: 'Nível:',
     statsStreak: 'Sequência:',
     dayNames: {
-        1: "Basic words",
-        2: "Who are you?",
-        3: "My family",
-        4: "Numbers",
-        5: "Is it good or bad?"
+      1: "Gerioù diazez",
+      2: "Piv oc'h ?",
+      3: "Ma familh",
+      4: "Niveroù",
+      5: "Mat pe fall eo ?"
     },
     aria: {
       genderExercise: 'Exercício de gênero',
@@ -1362,16 +1379,21 @@ COSYitaliano: {
     buttons: {
       check: 'Verificar',
       newExercise: 'Novo exercício',
-      newWord: 'Nova palavra', // ADDED HERE
+      newWord: 'Nova palavra', 
       revealAnswer: 'Mostrar resposta',
       randomize: '🎲',
+      previous: 'Anterior', // ADDED HERE - Translated 'Previous'
       next: 'Próximo',
       back: 'Voltar',
       continue: 'Continuar',
       reset: 'Redefinir',
       help: 'Ajuda',
       close: 'Fechar',
-      translate: 'Traduzir'
+      translate: 'Traduzir',
+      // Merged from the previous buttons definition
+      done: "Feito", // Assuming this was intended, translated "Done"
+      stopRecording: "Parar", // Assuming this was intended, translated "Stop"
+      submitAnswer: "Enviar resposta" // Already present above
     },
     // Hint related texts
     hint_firstLetterIs: "Hint: The first letter is",
@@ -1554,12 +1576,12 @@ COSYitaliano: {
     statsXp: 'XP :',
     statsLevel: 'Live :',
     statsStreak: 'Steud :',
-    dayNames: {
-        1: "Basic words",
-        2: "Who are you?",
-        3: "My family",
-        4: "Numbers",
-        5: "Is it good or bad?"
+    dayNames: { 
+      1: "Palavras básicas",
+      2: "Quem é você?",
+      3: "Minha família",
+      4: "Números",
+      5: "É bom ou ruim?"
     },
     aria: {
       genderExercise: 'Pleustr war ar reizh',
@@ -1655,16 +1677,21 @@ COSYitaliano: {
     buttons: {
       check: 'Gwiriañ',
       newExercise: 'Pleustr nevez',
-      newWord: 'Ger nevez', // ADDED HERE
+      newWord: 'Ger nevez', 
       revealAnswer: 'Diskouez ar respont',
       randomize: '🎲',
+      previous: 'Kent', // ADDED HERE - Translated 'Previous'
       next: 'Da-heul',
       back: 'Distreiñ',
       continue: 'Kenderc’hel',
       reset: 'Adkregiñ',
       help: 'Skoazell',
       close: 'Serriñ',
-      translate: 'Treiñ'
+      translate: 'Treiñ',
+      // Merged from the previous buttons definition
+      done: "Graet", // Assuming this was intended, translated "Done"
+      stopRecording: "Paouez", // Assuming this was intended, translated "Stop"
+      submitAnswer: "Kas ar respont" // Already present above
     },
     // Hint related texts
     hint_firstLetterIs: "Hint: The first letter is",
@@ -1969,16 +1996,21 @@ COSYitaliano: {
     buttons: {
       check: 'Überprüfen',
       newExercise: 'Neue Übung',
-      newWord: 'Neues Wort', // ADDED HERE
+      newWord: 'Neues Wort', 
       revealAnswer: 'Antwort zeigen',
       randomize: '🎲',
+      previous: 'Vorherige', // ADDED HERE - Translated 'Previous'
       next: 'Weiter',
       back: 'Zurück',
       continue: 'Fortsetzen',
       reset: 'Zurücksetzen',
       help: 'Hilfe',
       close: 'Schließen',
-      translate: 'Übersetzen'
+      translate: 'Übersetzen',
+      // Merged from the previous buttons definition
+      done: "Fertig", // Assuming this was intended, translated "Done"
+      stopRecording: "Stopp", // Assuming this was intended, translated "Stop"
+      submitAnswer: "Antwort einreichen" // Already present above
     },
     // Hint related texts
     hint_firstLetterIs: "Hint: The first letter is",
@@ -2244,16 +2276,21 @@ COSYitaliano: {
     buttons: {
       check: 'Έλεγχος',
       newExercise: 'Νέα άσκηση',
-      newWord: 'Νέα λέξη', // ADDED HERE
+      newWord: 'Νέα λέξη', 
       revealAnswer: 'Εμφάνιση απάντησης',
       randomize: '🎲',
+      previous: 'Προηγούμενο', // ADDED HERE - Translated 'Previous'
       next: 'Επόμενο',
       back: 'Πίσω',
       continue: 'Συνέχεια',
       reset: 'Επαναφορά',
       help: 'Βοήθεια',
       close: 'Κλείσιμο',
-      translate: 'Μετάφραση'
+      translate: 'Μετάφραση',
+      // Merged from the previous buttons definition
+      done: "Έγινε", // Assuming this was intended, translated "Done"
+      stopRecording: "Διακοπή", // Assuming this was intended, translated "Stop"
+      submitAnswer: "Υποβολή απάντησης" // Already present above
     },
     // Hint related texts
     hint_firstLetterIs: "Hint: The first letter is",
@@ -2522,16 +2559,21 @@ COSYitaliano: {
     buttons: {
       check: 'Проверить',
       newExercise: 'Новое упражнение',
-      newWord: 'Новое слово', // ADDED HERE
+      newWord: 'Новое слово', 
       revealAnswer: 'Показать ответ',
       randomize: '🎲',
+      previous: 'Назад',  // Re-using 'Назад' for 'Previous' as it's common
       next: 'Далее',
       back: 'Назад',
       continue: 'Продолжить',
       reset: 'Сбросить',
       help: 'Помощь',
       close: 'Закрыть',
-      translate: 'Перевести'
+      translate: 'Перевести',
+      // Merged from the previous buttons definition
+      done: "Готово", // Assuming this was intended, translated "Done"
+      stopRecording: "Стоп", // Assuming this was intended, translated "Stop"
+      submitAnswer: "Отправить ответ" // Already present above
     },
     // Hint related texts
     hint_firstLetterIs: "Hint: The first letter is",
@@ -2918,16 +2960,21 @@ COSYitaliano: {
     buttons: {
       check: 'Тикшерү',
       newExercise: 'Яңа күнегү',
-      newWord: 'Яңа сүз', // ADDED HERE
+      newWord: 'Яңа сүз', 
       revealAnswer: 'Җавапны күрсәтү',
       randomize: '🎲',
+      previous: 'Артка', // Re-using 'Артка' for 'Previous'
       next: 'Алға',
       back: 'Артка',
       continue: 'Дауам итү',
       reset: 'Яңарту',
       help: 'Ярдәм',
       close: 'Ябу',
-      translate: 'Тәржемә итү'
+      translate: 'Тәрҗемә итү',
+      // Merged from the previous buttons definition
+      done: "Әзер", // Assuming this was intended, translated "Done"
+      stopRecording: "Тукта", // Assuming this was intended, translated "Stop"
+      submitAnswer: "Җавапны җибәрү" // Already present above
     },
     // Hint related texts
     hint_firstLetterIs: "Hint: The first letter is",
@@ -3196,17 +3243,21 @@ COSYitaliano: {
   buttons: {
     check: 'Тиҙлек',
     newExercise: 'Яңы күнегеү',
-      newWord: 'Яңы һүҙ', // ADDED HERE
+      newWord: 'Яңы һүҙ', 
     revealAnswer: 'Яуапты күрһәтеү',
     randomize: '🎲',
-    previous: 'Әүәға',
+      previous: 'Әүәлге', // Changed from 'Әүәға' to avoid conflict if 'back' is more common for 'previous page'
     next: 'Киләһе',
-    back: 'Ҡайттырыу',
+      back: 'Ҡайттырыу', // This is likely 'Back' (navigation)
     continue: 'Дауам ит',
     reset: 'Кире ҡаҡырға',
     help: 'Ярҙам',
     close: 'Ябыу',
     translate: 'Тәржемә',
+      // Merged from the previous buttons definition
+      done: "Булды", // Assuming this was intended, translated "Done"
+      stopRecording: "Туҡтат", // Assuming this was intended, translated "Stop"
+      submitAnswer: "Яуапты ебәреү" // Already present above
   },
     // Hint related texts
     hint_firstLetterIs: "Hint: The first letter is",
@@ -3475,16 +3526,21 @@ COSYitaliano: {
     buttons: {
       check: 'Ստուգել',
       newExercise: 'Նոր վարժություն',
-      newWord: 'Նոր բառ', // ADDED HERE
+      newWord: 'Նոր բառ', 
       revealAnswer: 'Ցուցադրել պատասխանը',
       randomize: '🎲',
+      previous: 'Նախորդ', // ADDED HERE - Translated 'Previous'
       next: 'Հաջորդ',
-      back: 'Անցնել',
+      back: 'Հետ', // Changed from 'Անցնել' (Pass/Go) to 'Հետ' (Back) for typical back navigation
       continue: 'Շարունակել',
       reset: 'Վերականգնել',
       help: 'Օգնություն',
       close: 'Փակել',
-      translate: 'Թարգմանել'
+      translate: 'Թարգմանել',
+      // Merged from the previous buttons definition
+      done: "Կատարված է", // Assuming this was intended, translated "Done"
+      stopRecording: "Դադարեցնել", // Assuming this was intended, translated "Stop"
+      submitAnswer: "Ուղարկել պատասխան" // Already present above
     },
     // Hint related texts
     hint_firstLetterIs: "Hint: The first letter is",

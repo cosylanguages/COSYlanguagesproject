@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/COSYlanguagesproject/static/css/main.3568ad04.css",
-    "main.js": "/COSYlanguagesproject/static/js/main.c4ab1736.js",
+    "main.js": "/COSYlanguagesproject/static/js/main.d4c6516e.js",
     "index.html": "/COSYlanguagesproject/index.html",
     "main.3568ad04.css.map": "/COSYlanguagesproject/static/css/main.3568ad04.css.map",
-    "main.c4ab1736.js.map": "/COSYlanguagesproject/static/js/main.c4ab1736.js.map"
+    "main.d4c6516e.js.map": "/COSYlanguagesproject/static/js/main.d4c6516e.js.map"
   },
   "entrypoints": [
     "static/css/main.3568ad04.css",
-    "static/js/main.c4ab1736.js"
+    "static/js/main.d4c6516e.js"
   ]
 }
