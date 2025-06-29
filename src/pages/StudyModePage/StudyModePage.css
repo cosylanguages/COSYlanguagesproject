@@ -1,0 +1,204 @@
+/* StudyModePage.css */
+
+.study-mode-page-container {
+    padding: var(--spacing-md);
+}
+
+/* RoleSelectionView Styles */
+.role-selection-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.role-selection-view h2 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-headings);
+}
+
+.role-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.role-button {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 1.1rem;
+    border-radius: var(--border-radius-md);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    min-width: 150px; 
+}
+
+.role-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+.role-button:disabled {
+    background-color: var(--color-secondary-light, #ccc); /* Lighter grey for disabled */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+.btn-student {
+    background-color: var(--color-info);
+    color: white;
+}
+.btn-student:hover:not(:disabled) {
+    background-color: #138496; 
+}
+
+.btn-teacher {
+    background-color: var(--color-success);
+    color: white;
+}
+.btn-teacher:hover:not(:disabled) {
+    background-color: #1e7e34; 
+}
+.teacher-role-notice {
+    margin-top: var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    max-width: 350px;
+    text-align: center;
+}
+
+
+/* StudyInterfaceView Styles */
+.study-interface-view {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column; 
+}
+
+.study-mode-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.study-mode-header h2 {
+    margin: 0;
+}
+
+.back-to-freestyle-btn {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.back-to-freestyle-btn:hover {
+    background-color: #545b62;
+}
+
+.study-mode-main-layout {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.study-mode-sidebar {
+    flex: 0 0 300px; 
+    padding-right: var(--spacing-md);
+    border-right: 1px solid var(--color-border);
+    max-height: calc(100vh - 150px); 
+    overflow-y: auto;
+}
+
+.study-mode-content-area {
+    flex-grow: 1; 
+    padding-left: var(--spacing-md);
+}
+
+.lesson-section-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.lesson-section-content-header h3 {
+    margin: 0;
+}
+
+.btn-add-content-block {
+    /* Uses .btn and .btn-success from index.css if available, or define here */
+    font-size: 0.9rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+
+.lesson-content-area p,
+.study-mode-content-area > p { 
+    font-style: italic;
+    color: var(--color-text-secondary);
+    text-align: center;
+    padding: var(--spacing-lg);
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius-md);
+}
+
+.exercise-block-placeholder {
+    border: 1px dashed var(--color-border);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    background-color: #f9f9f9;
+}
+
+.exercise-block-placeholder p {
+    margin-bottom: var(--spacing-xs);
+    font-style: normal; /* Override general italic placeholder */
+    text-align: left;
+    background-color: transparent;
+    padding: 0;
+}
+
+
+/* Placeholder PIN Modal Style (can be removed if PIN modal component is made) */
+.pin-modal-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    max-width: 400px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.pin-modal-placeholder h3 {
+    margin-bottom: var(--spacing-md);
+}
+.pin-modal-placeholder p {
+    margin-bottom: var(--spacing-md);
+}
+.pin-modal-placeholder input {
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    width: 80%;
+}
+.pin-modal-placeholder button {
+    margin: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+}
