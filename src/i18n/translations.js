@@ -2994,7 +2994,7 @@ COSYitaliano: {
     wordShownWas: "word shown was:",
     imageIsA: "The image is a",
     hint_yesNo_positive: "Hint: The displayed name is indeed correct for the image.",
-    hint_tryThisItem: "Hint: Try matching this word.",
+    hint_tryThisItem: "Hint: Try matching this item.",
 
     // Study Mode Specific
     // These keys were previously here but are now managed by study-mode-translations.js
@@ -3563,13 +3563,3 @@ COSYitaliano: {
     hint_tryThisItem: "Hint: Try matching this item."
   }
 };
-
-// Make it available for other scripts if they are loaded via <script> tags
-{
-  window.translations = translations;
-}
-
-// If using Node.js modules (e.g. for backend or bundling with webpack/rollup)
-{
-  module.exports = translations;
-}

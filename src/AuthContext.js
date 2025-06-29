@@ -9,7 +9,16 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
     const [authToken, setAuthToken] = useState(sessionStorage.getItem('authToken'));
-    const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('currentUser')));
+    const [currentUser, setCurrentUser] = useState(() => {
+        try {
+            const item = sessionStorage.getItem('currentUser');
+            return item ? JSON.parse(item) : null;
+        } catch (error) {
+            console.error("Error parsing currentUser from sessionStorage:", error);
+            sessionStorage.removeItem('currentUser'); // Clear corrupted item
+            return null;
+        }
+    });
     const [authError, setAuthError] = useState(null);
     const [loadingAuth, setLoadingAuth] = useState(false);
 
