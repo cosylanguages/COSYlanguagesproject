@@ -1,0 +1,86 @@
+/* Basic styling for Login page - can be expanded later */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Adjusted to take most of the screen height */
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding doesn't add to width/height */
+}
+
+.login-form {
+  padding: 30px; /* Increased padding */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Slightly more rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  width: 100%;
+  max-width: 400px; /* Max width for larger screens */
+  background-color: #fff; /* Explicit background color */
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 25px; /* Increased margin */
+  color: #333; /* Darker heading color */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Increased margin */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px; /* Increased margin */
+  font-weight: bold;
+  color: #555; /* Label color */
+}
+
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 12px; /* Increased padding */
+  border: 1px solid #ddd; /* Lighter border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px; /* Slightly larger font */
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px 15px; /* Adjusted padding */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; /* Consistent font size */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition */
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.login-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #dc3545; /* Bootstrap danger color */
+  text-align: center;
+  margin-top: 15px; /* Margin above error message */
+  margin-bottom: 0; /* Reset bottom margin if it's the last element before button */
+  font-size: 0.9em; /* Slightly smaller font for error */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .login-form {
+    margin: 20px;
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .login-form h2 {
+    font-size: 1.5em; /* Adjust heading size */
+  }
+}
