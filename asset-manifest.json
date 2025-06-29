@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cosylanguagesproject/static/css/main.3568ad04.css",
+    "main.js": "/cosylanguagesproject/static/js/main.0f67eb33.js",
+    "index.html": "/cosylanguagesproject/index.html",
+    "main.3568ad04.css.map": "/cosylanguagesproject/static/css/main.3568ad04.css.map",
+    "main.0f67eb33.js.map": "/cosylanguagesproject/static/js/main.0f67eb33.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3568ad04.css",
+    "static/js/main.0f67eb33.js"
+  ]
+}

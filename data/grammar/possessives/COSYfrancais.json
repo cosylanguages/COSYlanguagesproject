@@ -1,0 +1,31 @@
+{
+  "1": [
+    {
+      "type": "fill_blank",
+      "sentence": "C'est ____ voiture. (tu)",
+      "answer": "ta"
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Le chat a léché ____ pattes. (il, le chat)",
+      "answer": "ses"
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ce sont ____ chaussures. (ils/elles)",
+      "answer": "leurs"
+    }
+  ],
+  "2": [
+    {
+      "type": "fill_blank",
+      "sentence": "Elle m'a montré ____ nouveau téléphone. (elle)",
+      "answer": "son"
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "____ maison est bleue. (nous)",
+      "answer": "notre"
+    }
+  ]
+}

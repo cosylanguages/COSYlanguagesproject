@@ -1,0 +1,56 @@
+{
+  "1": [
+    {
+      "type": "fill_blank",
+      "sentence": "This is ____ car. (you)",
+      "answer": "your"
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "The cat licked ____ paws. (it)",
+      "answer": "its"
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Those are ____ shoes. (they)",
+      "answer": "their"
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "He drives ____ children to school. (he)",
+      "answer": "his"
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "I love ____ new job. (I)",
+      "answer": "my"
+    }
+  ],
+  "2": [
+    {
+      "type": "fill_blank",
+      "sentence": "She showed me ____ new phone. (she)",
+      "answer": "her"
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "____ house is blue. (we)",
+      "answer": "our"
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Is this ____ bag? (you, singular, informal)",
+      "answer": "your"
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "The company increased ____ profits. (it, company)",
+      "answer": "its"
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "They miss ____ old friends. (they)",
+      "answer": "their"
+    }
+  ]
+}
