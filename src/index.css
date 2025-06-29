@@ -1,0 +1,182 @@
+/* Global Styles and CSS Variables */
+
+/* Basic Reset/Normalize */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  display: flex; /* Ensure body takes full height for sticky footer */
+  flex-direction: column; /* Ensure body takes full height for sticky footer */
+  min-height: 100vh; /* Ensure body takes full height for sticky footer */
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-headings);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+
+/* CSS Custom Properties (Variables) */
+:root {
+  /* Core Colors */
+  --color-primary: #007bff;
+  --color-primary-dark: #0056b3;
+  --color-secondary: #6c757d;
+  --color-secondary-dark: #5a6268; /* Added from old theme */
+  
+  /* Semantic Colors */
+  --color-success: #28a745; /* Main accent for success */
+  --color-danger: #dc3545;  /* Main accent for danger/error */
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+
+  /* Backgrounds & Surfaces */
+  --color-background: #ffffff;
+  --color-surface: #f8f9fa;         /* Light grey, for cards, panels - matches old --light-grey */
+  --color-surface-medium: #e9ecef;  /* Matches old --medium-grey */
+
+  /* Text Colors */
+  --color-text-primary: #212529;    /* Dark text for light backgrounds - similar to old --text-color-dark */
+  --color-text-secondary: #6c757d;  /* Grey text */
+  --color-text-headings: #343a40;
+  --color-text-on-dark: #ffffff;    /* For text on dark/primary/secondary backgrounds - matches old --text-color-light */
+  
+  /* State Colors (Backgrounds, Text, Borders) */
+  --color-success-bg: #d4edda;
+  --color-success-text: #155724;
+  --color-success-border: #c3e6cb;
+  --color-danger-bg: #f8d7da;
+  --color-danger-text: #721c24;
+  --color-danger-border: #f5c6cb;
+
+  /* Borders */
+  --color-border: #dee2e6;          /* Matches old --border-color */
+  --border-radius-sm: 0.2rem;
+  --border-radius-md: 0.25rem;
+  --border-radius-lg: 0.3rem;
+  
+  /* Links */
+  --color-link: var(--color-primary);
+  --color-link-hover: var(--color-primary-dark);
+
+  /* Typography */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-family-headings: var(--font-family-base); 
+  --font-size-base: 1rem; 
+  --font-size-sm: 0.875rem; /* Old --font-size-small was 0.85rem */
+  --font-size-lg: 1.25rem;  /* Old --font-size-large was 1.15rem */
+  --font-size-h1: 2.25rem;
+  --font-size-h2: 1.875rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.125rem;
+
+  /* Spacing (based on 1rem = 16px default) */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem;  /* 8px */
+  --spacing-md: 1rem;    /* 16px (old --spacing-unit was 10px) */
+  --spacing-lg: 1.5rem;  /* 24px */
+  --spacing-xl: 2rem;    /* 32px */
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+/* Example of how variables might be used for a common button style */
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  border-radius: var(--border-radius-md);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+  color: var(--color-text-on-dark);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  color: var(--color-text-on-dark);
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  color: var(--color-text-on-dark);
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.btn-secondary:hover {
+  color: var(--color-text-on-dark);
+  background-color: var(--color-secondary-dark); 
+  border-color: var(--color-secondary-dark);
+}
+
+/* Add more global styles or utility classes as needed */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: var(--spacing-sm); }
+.mb-1 { margin-bottom: var(--spacing-sm); }
+/* etc. for more spacing utilities */
