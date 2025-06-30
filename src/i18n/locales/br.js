@@ -200,3 +200,5 @@ const brTranslations = {
     resetTiles: 'Adkregiñ gant an taolennoù'
   }
 };
+
+export default brTranslations;

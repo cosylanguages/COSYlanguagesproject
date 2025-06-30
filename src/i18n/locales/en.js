@@ -98,3 +98,5 @@ const enTranslations = {
   "selectSubPractice": "Please select a specific exercise."
 
 };
+
+export default enTranslations;

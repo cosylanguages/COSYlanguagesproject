@@ -206,3 +206,5 @@ const frTranslations = {
     resetTiles: 'Réinitialiser les tuiles'
   }
 };
+
+export default frTranslations;

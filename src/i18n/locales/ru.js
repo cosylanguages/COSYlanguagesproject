@@ -206,3 +206,5 @@ const ruTranslations = {
     resetTiles: 'Сбросить плитки'
   }
 };
+
+export default ruTranslations;

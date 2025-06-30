@@ -200,3 +200,5 @@ const baTranslations = {
     resetTiles: 'Таштарҙы яңыртыу'
   }
 };
+
+export default baTranslations;

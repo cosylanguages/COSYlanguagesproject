@@ -200,3 +200,5 @@ const esTranslations = {
     resetTiles: 'Restablecer fichas'
   }
 };
+
+export default esTranslations;

@@ -200,3 +200,5 @@ const itTranslations = {
     resetTiles: 'Resetta tessere'
   }
 };
+
+export default itTranslations;
