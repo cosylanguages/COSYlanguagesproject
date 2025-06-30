@@ -142,6 +142,100 @@ export const translations = {
     statsLevel: "Level:",
     statsStreak: "Streak:",
 
+    // --- START: Added/Updated section for COSYenglish ---
+    titles: {
+      options: "Options",
+      chooseYourDay: "📅 Choose Your Day(s):",
+      whatIsThis: "What is this?", 
+      typeWhatYouHear: "Type What You Hear",
+      buildTheWord: "Build the Word:", 
+      whatIsTheOpposite: "What is the opposite of:",
+    },
+    daySelector: {
+      singleDay: "Single Day",
+      dayRange: "Day Range",
+      selectDay: "Select a day",
+      from: "Day From:",
+      to: "Day To:",
+      selectStartDay: "Start",
+      selectEndDay: "End",
+    },
+    mainCategory: { 
+      vocabulary: '🔠 Vocabulary',
+      grammar: '🧩 Grammar',
+      reading: '📚 Reading',
+      speaking: '🗣️ Speaking',
+      writing: '✍️ Writing',
+      practiceAll: '🔄 Practice All',
+    },
+    subPractice: {
+      vocabulary: {
+        randomWord: '🔤 Random Word (Show)',
+        randomImage: '🖼️ Random Image (Identify)',
+        matchImageWord: '🖼️≠🔤 Match Image & Word',
+        listening: '🎧 Listening (Transcribe)',
+        typeOpposite: '≠ Type Opposite',
+        matchOpposites: '≠ Match Opposites',
+        buildWord: '🧱 Build Word',
+      },
+      grammar: {
+        genderArticles: '✨ Gender & Articles',
+        verbsConjugation: '🧩 Verbs & Conjugation',
+        possessives: '🔠 Possessives',
+        wordOrder: '↔️ Word Order',
+      },
+      reading: {
+        story: '📖 Story',
+        interestingFact: '🔄 Interesting facts',
+      },
+      speaking: {
+        question: '❓ Question',
+        monologue: '💬 Monologue',
+      },
+      writing: {
+        question: '❓ Question (Writing)',
+        storytelling: '📜 Storytelling',
+      }
+    },
+    errors: {
+        selectLangDay: "Please select language and day(s) first",
+        unexpectedError: "An unexpected error occurred.",
+        pronunciationError: "Could not pronounce the word.",
+        soundPlayError: "Could not play sound.",
+    },
+    loading: {
+        oppositesExercise: "Loading opposites exercise...",
+        imageExercise: "Loading image exercise...",
+        transcribeExercise: "Loading transcription exercise...",
+        buildWordExercise: "Loading word building exercise...",
+    },
+    exercises: {
+        noOppositesData: "No opposites data found for the selected criteria.",
+        noWordsWithOpposites: "No words with opposites found in the data.",
+        noOppositesPair: "No opposites pair available. Try different selections.",
+        noImagesFound: "No images available!",
+        noImageToDisplay: "No image to display. Try different selections.",
+        noWordsFound: "No vocabulary words found for the selected criteria.",
+        noWordForTranscription: "No word available for transcription. Try different selections.",
+        noSuitableWordBuild: "Could not find a suitable word (3-14 letters, no spaces) for \"Build Word\" exercise.",
+        noWordForBuild: "No word available for this exercise.",
+    },
+    // feedback is merged carefully below to preserve existing specific keys
+    placeholders: {
+        typeTheOpposite: "Type the opposite...",
+        typeTheWord: "Type the word...",
+        typeHere: "Type here...",
+    },
+    tooltips: {
+        pronounceWord: "Pronounce word",
+        pronounceCorrectAnswer: "Pronounce correct answer",
+    },
+    studyModeButtonLabel: "🚀 Study Mode",
+    pinPromptMessage: "Please enter the PIN to access Study Mode:",
+    pinIncorrectMessage: "Incorrect PIN. Access denied.",
+    pinCorrectMessage: "Correct PIN. Accessing Study Mode...",
+    // --- END: Added/Updated section for COSYenglish ---
+
     aria: {
       genderExercise: 'Gender Exercise',
       matchArticlesWords: 'Match Articles and Words',
@@ -163,20 +257,20 @@ export const translations = {
       checkMatches: 'Check Matches', 
       feedback: 'Feedback', 
       randomize: 'Randomize exercise',
-      randomWord: 'Random Word',
-      randomImage: 'Random Image',
-      listening: 'Listening',
-      practiceAll: 'Practice All',
-      gender: 'Gender', 
-      verbs: 'Verbs',   
-      possessives: 'Possessives', 
-      story: 'Story',
-      interestingFacts: 'Faits intéressants',
-      question: 'Question',
-      monologue: 'Monologue',
-      rolePlay: 'Role Play',
-      storytelling: 'Storytelling',
-      diary: 'Diary',
+      randomWord: 'Random Word', // This is for aria, distinct from subPractice label
+      randomImage: 'Random Image', // This is for aria
+      listening: 'Listening', // This is for aria
+      practiceAll: 'Practice All', // This is for aria
+      gender: 'Gender', // This is for aria
+      verbs: 'Verbs',   // This is for aria
+      possessives: 'Possessives', // This is for aria
+      story: 'Story', // This is for aria
+      interestingFacts: 'Interesting facts', // This is for aria
+      question: 'Question', // This is for aria
+      monologue: 'Monologue', // This is for aria
+      rolePlay: 'Role Play', // This is for aria
+      storytelling: 'Storytelling', // This is for aria
+      diary: 'Diary', // This is for aria
       practiceAllVocab: 'Practice All Vocabulary',
       practiceAllGrammar: 'Practice All Grammar',
       practiceAllSpeaking: 'Practice All Speaking',
@@ -191,13 +285,77 @@ export const translations = {
       grammarOptions: "Grammar options", 
       readingOptions: "Reading options", 
       speakingOptions: "Speaking options", 
-      writingOptions: "Writing options" 
+      writingOptions: "Writing options",
+      playSound: "Play sound",
+      resetTiles: "Reset Tiles"
     },
-    buttons: {
+    // Merging new feedback keys with existing ones carefully
+    feedback: {
+        correct: 'Correct!', // from existing
+        wrong: 'Wrong!', // from existing
+        means: 'means', // from existing
+        chooseCorrect: 'Which is correct?', // from existing
+        noImages: 'No images available!', // from existing (also in exercises.noImagesFound)
+        chooseVerbForm: 'Choose the correct verb form:', // from existing
+        chooseGender: 'Choose the word for the article:', // from existing
+        noVerbs: 'No verbs available!', // from existing
+        noVerbForms: 'No verb forms!', // from existing
+        noGender: 'No gender data!', // from existing
+        alertLangDay: "Please select language and day(s) first", // from existing
+        noDataMessage: "No data available for selected day/language.", // from existing
+        articleFor: "Article for", // from existing
+        wordFor: "Word for", // from existing
+        typeYourAnswerPlaceholder: "Type your answer...", // from existing
+        feedbackPleaseType: "Please type your answer above.", // from existing
+        feedbackNotQuite: "❌ Not quite. The correct answer is: ", // from existing
+        checkMatchesButtonLabel: "Check Matches", // from existing
+        feedbackCorrectMatch: "✅ Correct match!", // from existing
+        feedbackNotAMatch: "❌ Not a match. Try again!", // from existing
+        feedbackShowingCorrectMatches: "Showing all correct matches...", // from existing
+        infinitiveOf: "Infinitive of", // from existing
+        conjugateFor: "Conjugate", // from existing
+        forPronoun: "for", // from existing
+        matchVerbPronounTitle: "Match each verb with its pronoun", // from existing
+        feedbackGoodMatch: "✅ Good match!", // from existing
+        feedbackNotCompatible: "❌ Not compatible. Try again!", // from existing
+        feedbackAllMatchesCompleted: "All possible matches completed!", // from existing
+        feedbackCorrectWellDone: "✅ Correct! Well done!", // from existing
+        feedbackNotQuiteCorrectOrder: "❌ Not quite. The correct order is: ", // from existing
+        continuePromptText: "Press continue for next exercise", // from existing
+        findOppositeButtonLabel: "⇄ Find Opposite", // from existing
+        buildWordButtonLabel: "🔡 Build Word", // from existing
+        typeTheOppositePlaceholder: "Type the opposite...", // from existing
+        matchOppositesTitle: "Match each word with its opposite", // from existing
+        buildWordTitle: "Build the Word:", // from existing
+        typeTheWordPlaceholder: "Type the word...", // from existing
+        feedbackNotQuiteTryAgain: "❌ Not quite. Try again!", // from existing
+        identifyImageTitle: "What is this?", // from existing
+        matchImageWordTitle: "Match each image with its word", // from existing
+        transcribePlaceholder: "Type what you hear...", // from existing
+        matchSoundWordTitle: "Match the Sound to the Word:", // from existing
+        feedbackNotCorrectTryAgain: "❌ Not correct. Try again!", // from existing
+        noOppositeFound: "No opposite found", // from existing
+      // --- New generic feedback keys (inspired by ТАКОЙрусский) ---
+        incorrectOpposite: "Incorrect. The opposite of \"{word}\" is \"{opposite}\".",
+        incorrectAnswerWas: "Incorrect. The correct answer is: {answer}", // Could be same as feedbackNotQuite if {answer} is used
+        incorrectAnswerIs: "Incorrect. The correct answer is: {correctAnswer}", // Similar to above
+        incorrectKeepTrying: "Incorrect. Keep trying or use a hint.",
+        hintStartsWith: "Hint: The opposite starts with '{letter}'.",
+        hintLetterPlaced: "Hint: Letter \"{letter}\" placed.",
+        hintLetterMisplaced: "Hint: Could not find the next correct letter in the pool (it might be misplaced).",
+        hintWordStructure: "Hint: The word has {length} letters and starts with '{letter}'.",
+        hintWordCorrectOrNoMore: "Word seems correct or no more hints applicable.",
+        revealedOpposite: "The opposite of \"{word}\" is \"{opposite}\".",
+        answerIs: "The answer is:", // from existing
+        allLettersPlaced: "All letters placed!",
+    },
+    buttons: { // This structure was duplicated, ensuring one final correct version
       check: 'Check',
       newExercise: 'New Exercise',
+      newWord: 'New Word', 
       revealAnswer: 'Reveal Answer',
       randomize: '🎲',
+      previous: 'Previous', 
       next: 'Next',
       back: 'Back',
       continue: 'Continue', 
@@ -205,8 +363,11 @@ export const translations = {
       help: 'Help',
       close: 'Close',
       translate: 'Translate',
+      done: "Done", 
+      stopRecording: "Stop", 
+      submitAnswer: "Submit Answer" 
     },
-    // New keys for Speaking/Writing exercises - START
+    // New keys for Speaking/Writing exercises - START (already present)
     noQuestionsAvailable: "No questions available for this selection.",
     speakingQuestionTitle: "Question Practice", 
     writingQuestionTitle: "Question Practice", 
@@ -223,53 +384,33 @@ export const translations = {
     goodAnswerWriting: "Good! You've used some keywords from the question",
     answerSubmittedWriting: "Answer submitted. Try to incorporate more elements from the question.",
     tryToElaborate: "Try to elaborate more in your answer.",
-    submitAnswer: "Submit Answer",
+    // submitAnswer: "Submit Answer", // Already in buttons
     recordingInProgress: "Recording...",
     errorStartingRecognition: "Error starting recognition",
     noGrammarDay1English: "No grammar exercises for Day 1 in English.",
     // New keys for Speaking/Writing exercises - END
-    // Adding 'previous' to buttons
-    buttons: {
-      check: 'Check',
-      newExercise: 'New Exercise',
-      newWord: 'New Word', 
-      revealAnswer: 'Reveal Answer',
-      randomize: '🎲',
-      previous: 'Previous', 
-      next: 'Next',
-      back: 'Back',
-      continue: 'Continue', 
-      reset: 'Reset',
-      help: 'Help',
-      close: 'Close',
-      translate: 'Translate',
-      // Merged from the previous buttons definition
-      done: "Done", // Assuming this was intended from other languages or general use
-      stopRecording: "Stop", // Assuming this was intended
-      submitAnswer: "Submit Answer" // Already present above, kept for consistency if merging logic prefers last
-    },
-    // Hint related texts
+    
+    // Hint related texts (already present)
     hint_firstLetterIs: "Hint: The first letter is",
     noSpecificHint: "Try matching one of the remaining items.",
-    noMoreHints: "No more hints available.", // Or "No more hints available or all matched."
+    noMoreHints: "No more hints available.", 
     hint_nextWordIs: "Hint: The next word is",
     hint_firstWordIs: "Hint: The first word is",
     noMoreHintsSlotsFull: "All slots are full. Try checking your answer or resetting.",
-    hint_correctLetterForNextSlot: "Hint: The letter <strong>%s</strong> goes into the next empty slot. It's highlighted in the pool.", // %s for letter
+    hint_correctLetterForNextSlot: "Hint: The letter <strong>%s</strong> goes into the next empty slot. It's highlighted in the pool.",
     hint_tryMatchingThis: "Hint: Try matching this word.",
     hint_transcribeYesNo_general: "Listen closely. Does the sound match the word you see?",
     hint_transcribeYesNo_isMatch: "Hint: The sound and the word are indeed the same.",
     hint_transcribeYesNo_sameLetter: "Hint: The sound and word start with the same letter, but are they identical?",
     hint_transcribeYesNo_differentLetter: "Hint: The sound and word start with different letters.",
-    answerIs: "The answer is:",
+    // answerIs: "The answer is:", // Duplicate, moved to feedback
     soundWasFor: "The sound was for:",
     wordShownWas: "word shown was:",
     imageIsA: "The image is a",
     hint_yesNo_positive: "Hint: The displayed name is indeed correct for the image.",
-    // Note: `hint_yesNo_sameLetter` (for image yes/no) is covered by the general one above.
     hint_tryThisItem: "Hint: Try matching this item.",
 
-    // Study Mode Specific
+    // Study Mode Specific (already present)
     studyModeTitle: "COSYlanguages - Study Mode",
     studyChooseRole: "👤 Choose Your Role:",
     studyStudent: "🧑‍🎓 Student",
@@ -894,7 +1035,7 @@ COSYitaliano: {
     chooseCorrect: '¿Cuál es correcto?',
     listen: 'Escuchar',
     noImages: '¡No hay imágenes disponibles!',
-    chooseVerbForm: 'Elige la forma correcta del verbo:',
+    chooseVerbForm: 'Elige la forma correta del verbo:',
     chooseGender: 'Elige la palabra para el artículo:',
     noVerbs: '¡No hay verbos disponibles!',
     noVerbForms: '¡No hay formas verbales!',
@@ -2041,7 +2182,7 @@ COSYitaliano: {
         5: "Είναι καλό ή κακό;"
     },
     chooseLanguage: '🌎 Επιλέξτε τη γλώσσα σας:',
-    chooseDay: '📅 Επιλέξτε την ημέρα σας:',
+    chooseDay: '📅 Επιλέξτε την ημέра σας:',
     dayFrom: 'Ημέρα από:',
     dayTo: 'Ημέρα έως:',
     selectPractice: '🧭 Επιλέξτε την άσκησή σας:',
@@ -2593,7 +2734,7 @@ COSYitaliano: {
     wordShownWas: "word shown was:",
     imageIsA: "The image is a",
     hint_yesNo_positive: "Hint: The displayed name is indeed correct for the image.",
-    hint_tryThisItem: "Hint: Try matching this item.",
+    hint_tryThisItem: "Hint: Try matching this word.",
 
     // Study Mode Specific
     studyModeTitle: "COSYlanguages - Study Mode",
@@ -2696,7 +2837,7 @@ COSYitaliano: {
         hintWordStructure: "Hint: The word has {length} letters and starts with '{letter}'.",
         hintWordCorrectOrNoMore: "Word seems correct or no more hints applicable.",
         revealedOpposite: "The opposite of \"{word}\" is \"{opposite}\".",
-        answerIs: "The correct answer is: {answer}",
+        answerIs: "The answer is:",
         correctAnswerIs: "The correct answer is: {correctAnswer}",
         allLettersPlaced: "All letters placed!",
     },
