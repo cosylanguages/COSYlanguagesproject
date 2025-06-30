@@ -21,7 +21,7 @@ const FreestyleInterfaceView = ({
   onCategorySelect,
   onSubPracticeSelect,
 }) => {
-  const { t, allTranslations, language: i18nLanguage } = useI18n(); // Destructure allTranslations and i18nLanguage
+  const { t, allTranslations, language: i18nLanguage } = useI18n();
   const navigate = useNavigate();
 
   const [showPinModal, setShowPinModal] = useState(false);
@@ -50,25 +50,22 @@ const FreestyleInterfaceView = ({
   };
 
   const showPracticeNav = selectedLanguage && selectedDays && selectedDays.length > 0;
-  // const showSubPracticeMenu = currentMainCategory && showPracticeNav; // This line is not directly used in the new layout structure for conditional rendering of SubPracticeMenu
 
   return (
     <div className="freestyle-mode-container">
       <div className="main-menu-box">
+        {/* Site Name/Heading is already a direct child and will be centered by main-menu-box styles */}
         <h1 className="freestyle-mode-header">{t('mainHeading', 'COSYlanguages')}</h1>
 
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
-          <button
-            onClick={handleStudyModeClick}
-            className="study-mode-button"
-            style={{
-              background: '#007bff', color: 'white', padding: '10px 24px', borderRadius: 8, textDecoration: 'none', fontWeight: 'bold', fontSize: '1.1rem', boxShadow: '0 2px 8px #0001', cursor: 'pointer', border: 'none'
-            }}
-          >
-            {t('studyModeButtonLabel', '🚀 Study Mode')}
-          </button>
-        </div>
+        {/* Study Mode Button - will be centered by main-menu-box styles */}
+        <button
+          onClick={handleStudyModeClick}
+          className="study-mode-button" // Style from CSS
+        >
+          {t('studyModeButtonLabel', '🚀 Study Mode')}
+        </button>
 
+        {/* PIN Modal (conditionally rendered, does not affect layout flow significantly) */}
         {showPinModal && (
           <PinModal
             onSubmit={handlePinSubmit}
@@ -77,15 +74,17 @@ const FreestyleInterfaceView = ({
           />
         )}
 
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
+        {/* Language Selector */}
+        <div className="selector-container">
           <LanguageSelectorFreestyle
             selectedLanguage={selectedLanguage}
             onLanguageChange={onLanguageChange}
           />
         </div>
 
+        {/* Day Selector (includes "From" and "To") */}
         {selectedLanguage && (
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
+          <div className="selector-container">
             <DaySelectorFreestyle
               currentDays={selectedDays}
               onDaysChange={onDaysChange}
@@ -93,50 +92,62 @@ const FreestyleInterfaceView = ({
             />
           </div>
         )}
-
+        
+        {/* Toggle Latinization Button - Placed after Day Selector for logical flow */}
         {selectedLanguage && (
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: 8, marginBottom: 20 }}>
-            <ToggleLatinizationButton currentDisplayLanguage={selectedLanguage} />
-          </div>
-        )}
-
-        {showPracticeNav && !currentMainCategory && (
-          <PracticeCategoryNav
-            activeCategory={null}
-            onCategorySelect={onCategorySelect}
-          />
-        )}
-
-        {showPracticeNav && currentMainCategory && (
-          <>
-            <div style={{ margin: '20px 0', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
-              <button
-                onClick={() => onCategorySelect(currentMainCategory)}
-                style={{
-                  padding: '10px 15px',
-                  fontSize: '1.1rem',
-                  cursor: 'pointer',
-                  backgroundColor: '#007bff',
-                  color: 'white',
-                  border: '1px solid #007bff',
-                  borderRadius: '5px',
-                  fontWeight: 'bold',
-                }}
-              >
-                { (allTranslations[i18nLanguage]?.mainCategory?.[currentMainCategory] || // Use i18nLanguage
-                   allTranslations.COSYenglish?.mainCategory?.[currentMainCategory] ||
-                   currentMainCategory) }
-              </button>
+            <div className="selector-container">
+                 <ToggleLatinizationButton currentDisplayLanguage={selectedLanguage} />
             </div>
-            <SubPracticeMenu
-              mainCategory={currentMainCategory}
-              activeSubPractice={currentSubPractice}
-              onSubPracticeSelect={onSubPracticeSelect}
-            />
-          </>
+        )}
+
+        {/* Practice Category Navigation OR Selected Category + SubPracticeMenu */}
+        {showPracticeNav && (
+          currentMainCategory ? (
+            <>
+              {/* Display selected main category (centered by main-menu-box) */}
+              <div className="selector-container" style={{ marginBottom: '10px' }}> {/* Added margin for spacing */}
+                <button
+                  onClick={() => onCategorySelect(currentMainCategory)} // Allows re-clicking to possibly reset or just show it's active
+                  style={{ // Inline styles kept for unique active category display, can be moved to CSS
+                    padding: '10px 15px',
+                    fontSize: '1.1rem',
+                    cursor: 'pointer',
+                    backgroundColor: '#007bff', 
+                    color: 'white',
+                    border: '1px solid #007bff',
+                    borderRadius: '5px',
+                    fontWeight: 'bold',
+                    width: '100%', // Ensure it takes width from selector-container
+                    maxWidth: '380px' // Consistent with other selectors
+                  }}
+                >
+                  {(allTranslations[i18nLanguage]?.mainCategory?.[currentMainCategory] ||
+                    allTranslations.COSYenglish?.mainCategory?.[currentMainCategory] ||
+                    currentMainCategory)}
+                </button>
+              </div>
+              {/* SubPracticeMenu */}
+              <div className="selector-container">
+                <SubPracticeMenu
+                  mainCategory={currentMainCategory}
+                  activeSubPractice={currentSubPractice}
+                  onSubPracticeSelect={onSubPracticeSelect}
+                />
+              </div>
+            </>
+          ) : (
+            // PracticeCategoryNav
+            <div className="selector-container">
+              <PracticeCategoryNav
+                activeCategory={null}
+                onCategorySelect={onCategorySelect}
+              />
+            </div>
+          )
         )}
       </div>
 
+      {/* Exercise Host remains outside the main-menu-box for layout purposes */}
       <div className="freestyle-mode-exercise-host">
         {selectedLanguage && selectedDays && selectedDays.length > 0 && currentMainCategory && currentSubPractice ? (
           <ExerciseHost
@@ -150,7 +161,7 @@ const FreestyleInterfaceView = ({
             {!selectedLanguage ? t('selectLang', "Please select a language to begin.") :
              !(selectedDays && selectedDays.length > 0) ? t('selectDay', "Please select day(s).") :
              !currentMainCategory && showPracticeNav ? t('selectPractice', "Please select a practice category.") :
-             currentMainCategory && !currentSubPractice && showPracticeNav ? t('selectSubPractice', "Please select a specific exercise.") : // Added showPracticeNav condition here
+             currentMainCategory && !currentSubPractice && showPracticeNav ? t('selectSubPractice', "Please select a specific exercise.") :
              ""
             }
           </p>

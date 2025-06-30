@@ -66,4 +66,35 @@ const enTranslations = {
     'Use gestures or draw the word!',
     'Recall is stronger if you test yourself after a break!'
   ],
+
+  // Keys for FreestyleInterfaceView and general layout
+  "mainHeading": "COSYlanguages",
+  "studyModeButtonLabel": "🚀 Study Mode",
+  "pinIncorrectMessage": "Incorrect PIN. Access denied.",
+
+  // Keys for DaySelectorFreestyle (ensuring they are actual keys now)
+  "titles.chooseYourDay": "📅 Choose Your Day(s)",
+  "daySelector.singleDay": "Single Day",
+  "daySelector.dayRange": "Day Range",
+  "daySelector.selectDay": "Select Day",
+  "daySelector.from": "From:",
+  "daySelector.to": "To:",
+  "daySelector.selectStartDay": "Start",
+  "daySelector.selectEndDay": "End",
+
+  // Keys for Layout.js
+  "navHome": "Home",
+  "navFreestyle": "Freestyle",
+  "navStudyMode": "Study",
+  "welcomeUser": "Welcome, {name}!",
+  "loggingOut": "Logging out...",
+  "btnLogout": "Logout",
+  "btnLogin": "Login",
+
+  // Keys for messages in FreestyleInterfaceView (already used with defaults, good to have them explicitly)
+  "selectLang": "Please select a language to begin.",
+  // "selectDay": "Please select day(s).", // Already covered by daySelector.selectDay, but used differently in message context
+  "selectPractice": "Please select a practice category.",
+  "selectSubPractice": "Please select a specific exercise."
+
 };
