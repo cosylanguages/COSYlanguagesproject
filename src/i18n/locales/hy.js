@@ -200,3 +200,5 @@ const hyTranslations = {
     resetTiles: 'Վերականգնել սալիկները'
   }
 };
+
+export default hyTranslations;

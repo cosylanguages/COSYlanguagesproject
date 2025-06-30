@@ -200,3 +200,5 @@ const deTranslations = {
     resetTiles: 'Felder zurücksetzen'
   }
 };
+
+export default deTranslations;

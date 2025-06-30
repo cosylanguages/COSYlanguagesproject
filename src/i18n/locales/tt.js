@@ -200,3 +200,5 @@ const ttTranslations = {
     resetTiles: 'Ташларны яңарту'
   }
 };
+
+export default ttTranslations;
