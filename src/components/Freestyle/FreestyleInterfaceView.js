@@ -33,7 +33,22 @@ const FreestyleInterfaceView = ({
             selectedLanguage={selectedLanguage}
             onLanguageChange={onLanguageChange}
           />
-          <ToggleLatinizationButton currentDisplayLanguage={selectedLanguage} />
+          <ToggleLatinizationButton 
+            currentDisplayLanguage={selectedLanguage}
+            style={{
+              padding: '8px 18px',
+              fontSize: '1.1rem',
+              cursor: 'pointer',
+              background: 'linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%)',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '6px',
+              marginLeft: '16px',
+              boxShadow: '0 2px 8px rgba(78,84,200,0.15)',
+              transition: 'background 0.3s, box-shadow 0.3s',
+              fontWeight: 600
+            }}
+          />
         </div>
         {/* Sélecteur de jours */}
         {selectedLanguage && (

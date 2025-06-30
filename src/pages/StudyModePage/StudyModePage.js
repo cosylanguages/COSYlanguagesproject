@@ -5,11 +5,12 @@ import RoleSelector from './RoleSelector'; // Import the actual RoleSelector com
 import StudentDashboard from './StudentDashboard'; // Import actual StudentDashboard
 import TeacherDashboard from './TeacherDashboard'; // Import actual TeacherDashboard
 import TransliterableText from '../../components/Common/TransliterableText'; 
+import ToggleLatinizationButton from '../../components/Common/ToggleLatinizationButton';
 
 import './StudyModePage.css'; 
 
 const StudyModePage = () => {
-  const { t } = useI18n();
+  const { t, language, currentLangKey } = useI18n();
   const [selectedRole, setSelectedRole] = useState(() => {
     return localStorage.getItem('selectedRole') || null; 
   });
@@ -27,9 +28,6 @@ const StudyModePage = () => {
     setSelectedRole(prevRole => prevRole === role ? null : role);
   };
 
-  // Placeholder for ToggleLatinizationButton until it's fully created in Phase 2
-  const ToggleLatinizationButton = () => <button style={{marginLeft: '10px'}}>Toggle Latinization (Placeholder)</button>;
-
   return (
     <div className="study-mode-page-container">
       <h1>
@@ -41,7 +39,22 @@ const StudyModePage = () => {
           <TransliterableText text={t('studyMode.chooseLanguageLabel', '🌎 Choose Your Language:')} />
         </label>
         <LanguageSelector /> 
-        <ToggleLatinizationButton />
+        <ToggleLatinizationButton 
+          currentDisplayLanguage={currentLangKey || language}
+          style={{
+            padding: '8px 18px',
+            fontSize: '1.1rem',
+            cursor: 'pointer',
+            background: 'linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%)',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '6px',
+            marginLeft: '16px',
+            boxShadow: '0 2px 8px rgba(78,84,200,0.15)',
+            transition: 'background 0.3s, box-shadow 0.3s',
+            fontWeight: 600
+          }}
+        />
       </div>
 
       <div className="study-menu-section">
