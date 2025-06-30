@@ -1,5 +1,5 @@
 // Deutsche Übersetzungen
-export default {
+const deTranslations = {
   dayNames: {
       1: "Grundwörter",
       2: "Wer bist du?",

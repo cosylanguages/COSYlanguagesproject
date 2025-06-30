@@ -1,5 +1,5 @@
 // Traductions anglaises
-export default {
+const enTranslations = {
   dayNames: {
       1: "Basic words",
       2: "Who are you?",

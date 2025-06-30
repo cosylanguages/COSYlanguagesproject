@@ -1,5 +1,5 @@
 // Traductions tataрес
-export default {
+const ttTranslations = {
   dayNames: {
       1: "Төп сүзләр",
       2: "Кем син?",

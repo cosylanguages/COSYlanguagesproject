@@ -1,5 +1,5 @@
 // Traductions françaises
-export default {
+const frTranslations = {
   dayNames: {
       1: "Mots de base",
       2: "Qui es-tu ?",

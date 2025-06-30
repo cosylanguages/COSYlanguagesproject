@@ -1,5 +1,5 @@
 // Traductions russes
-export default {
+const ruTranslations = {
   dayNames: {
       1: "Базовые слова",
       2: "Кто ты?",

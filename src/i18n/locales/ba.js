@@ -1,5 +1,5 @@
 // Traductions bachkirs
-export default {
+const baTranslations = {
   dayNames: {
       1: "Төп һүҙҙәр",
       2: "Кем һин?",

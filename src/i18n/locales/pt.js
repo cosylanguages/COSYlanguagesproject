@@ -1,5 +1,5 @@
 // Traduções portugaises
-export default {
+const ptTranslations = {
   dayNames: {
       1: "Palavras básicas",
       2: "Quem é você?",
