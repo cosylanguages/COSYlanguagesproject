@@ -1,8 +1,15 @@
 import React, { createContext, useState, useContext, useCallback, useEffect } from 'react';
 
-// This list should ideally be kept in sync with any master language list
-// or configuration. For now, mirroring what was in latinizer.js
-export const LATINIZABLE_LANGUAGE_IDS = ['ΚΟΖΥελληνικά', 'ТАКОЙрусский', 'ԾՈՍՅհայկական'];
+// This list should be the single source of truth for which languages can be latinized.
+// It should align with languages having transliteration rules in transliteration.js
+// and ideally use keys consistent with translationsData.js for easier management.
+export const LATINIZABLE_LANGUAGE_IDS = [
+    'ΚΟΖΥελληνικά', // Greek
+    'ТАКОЙрусский', // Russian
+    'ԾՈՍՅհայկական', // Armenian
+    'COSYtatar',    // Tatar (matches key in translationsData.js)
+    'COSYbachkir'   // Bashkir (matches key in translationsData.js)
+];
 
 const LatinizationContext = createContext();
 

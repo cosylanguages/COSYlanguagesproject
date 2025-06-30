@@ -1,18 +1,15 @@
 import React from 'react';
-import { useI18n } from '../../i18n/I18nContext'; // Adjusted path if necessary
-import './LanguageSelectorFreestyle.css';
+import { useI18n } from '../../i18n/I18nContext'; 
+import '../LanguageSelector/LanguageSelector.css'; // Import unified CSS
 
 const LanguageSelectorFreestyle = ({ selectedLanguage, onLanguageChange }) => {
     const { allTranslations } = useI18n();
 
     const availableLanguages = Object.keys(allTranslations).map(langKey => {
-        // Extract a more user-friendly name
-        // Prioritize languageNameNative if available, then languageNameInEnglish, then fallback
         let name = allTranslations[langKey]?.languageNameNative || 
                    allTranslations[langKey]?.languageNameInEnglish || 
-                   langKey.replace('COSY', ''); // Basic cleanup
+                   langKey.replace('COSY', '').replace('ТАКОЙ', '').replace('ΚΟΖΥ', '').replace('ԾՈՍՅ', ''); // General cleanup
 
-        // If native and English names are different and both exist, show both
         if (allTranslations[langKey]?.languageNameNative && 
             allTranslations[langKey]?.languageNameInEnglish && 
             allTranslations[langKey]?.languageNameNative !== allTranslations[langKey]?.languageNameInEnglish) {
@@ -29,15 +26,15 @@ const LanguageSelectorFreestyle = ({ selectedLanguage, onLanguageChange }) => {
     };
 
     return (
-        <div className="language-selector-freestyle-container"> {/* Added class for potential CSS targeting */}
-            <label htmlFor="freestyle-language-select" className="language-selector-label">
+        <div className="language-selector-container"> {/* Use unified class */}
+            <label htmlFor="freestyle-language-select" className="language-select-label">
                 🌎:
             </label>
             <select 
                 id="freestyle-language-select" 
                 value={selectedLanguage} 
                 onChange={handleChange} 
-                className="language-selector-select"
+                className="language-select-dropdown" /* Use unified class */
                 aria-label="Select language for freestyle mode"
             >
                 {availableLanguages.map(lang => (

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import FreestyleInterfaceView from '../../components/Freestyle/FreestyleInterfaceView';
 import './FreestyleModePage.css';
+import { useI18n } from '../../i18n/I18nContext'; // Import useI18n
 
 const FreestyleModePage = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState('COSYenglish');
+  const { language: selectedLanguage, changeLanguage, t } = useI18n(); // Use I18n context
   const [selectedDays, setSelectedDays] = useState([]);
   const [currentMainCategory, setCurrentMainCategory] = useState(null);
   const [currentSubPractice, setCurrentSubPractice] = useState(null);
@@ -22,21 +23,8 @@ const FreestyleModePage = () => {
     setSelectedDays([]);
   }, []);
 
-  // Ajoute ou met à jour la classe du body selon la langue sélectionnée
-  useEffect(() => {
-    // Nettoie toutes les classes de fond de langue
-    const body = document.body;
-    const classesToRemove = Array.from(body.classList).filter(cls => cls.endsWith('-bg') || cls === 'lang-bg');
-    classesToRemove.forEach(cls => body.classList.remove(cls));
-    if (selectedLanguage) {
-      body.classList.add(`${selectedLanguage}-bg`);
-      body.classList.add('lang-bg');
-    }
-    return () => {
-      const classesToRemove = Array.from(body.classList).filter(cls => cls.endsWith('-bg') || cls === 'lang-bg');
-      classesToRemove.forEach(cls => body.classList.remove(cls));
-    };
-  }, [selectedLanguage]);
+  // The useEffect block for updating body class has been removed from here.
+  // LanguageSelector.js is now solely responsible for this.
 
   // Fonction utilitaire pour afficher un toast temporaire
   const showToast = (message, duration = 2500) => {
@@ -44,16 +32,18 @@ const FreestyleModePage = () => {
     setTimeout(() => setToast(null), duration);
   };
 
-  const handleLanguageChange = (language) => {
-    setSelectedLanguage(language);
+  const handleLanguageChange = (newLanguage) => { // Parameter name changed for clarity
+    changeLanguage(newLanguage); // Use changeLanguage from context
     setCurrentMainCategory(null);
     setCurrentSubPractice(null);
     setExerciseKey(prevKey => prevKey + 1);
-    showToast(`Langue changée : ${language}`);
+    // Attempt to get the display name of the language for the toast
+    const languageName = t(`language.${newLanguage}`, newLanguage.replace('COSY', '')); 
+    showToast(t('freestyle.languageChangedToast', `Language changed: ${languageName}`, { languageName }));
   };
 
-  const handleDaysChange = (days) => { // Renamed handleDayChange to handleDaysChange
-    setSelectedDays(days); // Changed setSelectedDay to setSelectedDays
+  const handleDaysChange = (days) => { 
+    setSelectedDays(days); 
     setCurrentMainCategory(null);
     setCurrentSubPractice(null);
     setExerciseKey(prevKey => prevKey + 1);
@@ -68,7 +58,7 @@ const FreestyleModePage = () => {
   const handleSubPracticeSelect = (subPractice) => {
     setCurrentSubPractice(subPractice);
     setExerciseKey(prevKey => prevKey + 1);
-    console.log(`Selected SubPractice: ${subPractice} for Category: ${currentMainCategory} with Lang: ${selectedLanguage} Days: ${selectedDays}`); // Updated log
+    console.log(`Selected SubPractice: ${subPractice} for Category: ${currentMainCategory} with Lang: ${selectedLanguage} Days: ${Array.isArray(selectedDays) ? selectedDays.join(', ') : selectedDays}`);
   };
 
   // Exemple : simuler un gain d'XP et un level up
@@ -93,11 +83,11 @@ const FreestyleModePage = () => {
   return (
     <div className="freestyle-mode-root">
       <div id="cosy-gamestats" className={levelUp ? 'levelup' : ''}>
-        Niveau : {stats.level} | XP : {stats.xp}/100 | 🔥 Série : {stats.streak}
-        <button style={{marginLeft:8, fontSize:'1em'}} onClick={() => gainXp(100)} title="Simuler un level up">+XP</button>
+        {t('freestyle.level', 'Level')}: {stats.level} | XP: {stats.xp}/100 | 🔥 {t('freestyle.streak', 'Streak')}: {stats.streak}
+        <button style={{marginLeft:8, fontSize:'1em'}} onClick={() => gainXp(100)} title={t('freestyle.simulateLevelUpTooltip', "Simulate level up")}>+XP</button>
       </div>
       <FreestyleInterfaceView
-        selectedLanguage={selectedLanguage}
+        selectedLanguage={selectedLanguage} 
         selectedDays={selectedDays}
         currentMainCategory={currentMainCategory}
         currentSubPractice={currentSubPractice}
@@ -108,13 +98,13 @@ const FreestyleModePage = () => {
         onSubPracticeSelect={handleSubPracticeSelect}
       />
       {toast && <div className="cosy-toast">{toast}</div>}
-      <button id="floating-help-btn" onClick={() => setShowHelp(h => !h)} title="Aide">?</button>
+      <button id="floating-help-btn" onClick={() => setShowHelp(h => !h)} title={t('freestyle.helpButtonTitle', 'Help')}>?</button>
       {showHelp && (
         <div className="floating-popup" style={{zIndex: 2000}}>
-          <div className="popup-header">Aide rapide</div>
-          <div className="popup-content">Sélectionnez une langue, puis un jour et un exercice pour commencer. Utilisez le bouton d'aide pour afficher ou masquer cette fenêtre.</div>
+          <div className="popup-header">{t('freestyle.quickHelpHeader', 'Quick Help')}</div>
+          <div className="popup-content">{t('freestyle.quickHelpContent', 'Select a language, then a day and an exercise to begin. Use the help button to show or hide this window.')}</div>
           <div className="popup-actions">
-            <button className="btn btn-secondary" onClick={() => setShowHelp(false)}>Fermer</button>
+            <button className="btn btn-secondary" onClick={() => setShowHelp(false)}>{t('buttons.close', 'Close')}</button>
           </div>
         </div>
       )}

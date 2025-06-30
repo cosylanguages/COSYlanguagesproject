@@ -201,55 +201,82 @@ body {
 }
 
 /* Individual Language Backgrounds */
-.COSYenglish-bg {
+/* Ensure class names match the keys in src/i18n/translationsData.js */
+.COSYenglish-bg { /* Key: COSYenglish */
   background-image: url('https://flagcdn.com/gb.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYfrançais-bg {
+.COSYfrench-bg { /* Key: COSYfrench */
   background-image: url('https://flagcdn.com/fr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYrussian-bg { /* Assuming ТАКОЙрусский maps to a general 'russian' key for class name simplicity */
+.COSYrussian-bg { /* Key: COSYrussian */
   background-image: url('https://flagcdn.com/ru.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYitaliano-bg {
+.COSYitalian-bg { /* Key: COSYitalian */
   background-image: url('https://flagcdn.com/it.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYespañol-bg {
+.COSYspanish-bg { /* Key: COSYspanish */
   background-image: url('https://flagcdn.com/es.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYdeutsch-bg {
+.COSYgerman-bg { /* Key: COSYgerman */
   background-image: url('https://flagcdn.com/de.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYarmenian-bg { /* Assuming ԾՈՍՅհայկական maps to 'armenian' */
+.COSYarmenian-bg { /* Key: COSYarmenian */
   background-image: url('https://flagcdn.com/am.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
 /* Languages with local flags - paths might need adjustment based on project structure */
 /* Assuming assets are in public folder, so /assets/icons/ is relative to public URL */
-.COSYbashkort-bg {
+.COSYbachkir-bg { /* Key: COSYbachkir */
   background-image: url('/assets/icons/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYtatarça-bg {
+.COSYtatar-bg { /* Key: COSYtatar */
   background-image: url('/assets/icons/Flag_of_Tatarstan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYbrezhoneg-bg {
+.COSYbreton-bg { /* Key: COSYbreton */
   background-image: url('/assets/icons/Flag_of_Brittany.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-/* Adding Greek as it was in the old CSS. Adjusted to use the specific key if applicable. */
-/* If the actual key is ΚΟΖΥελληνικά, this class will be targeted. */
-.ΚΟΖΥελληνικά-bg {
+/* Key: ΚΟΖΥελληνικά */
+.ΚΟΖΥελληνικά-bg { 
   background-image: url('https://flagcdn.com/gr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-/* Adding Portuguese as it was in the old CSS */
-.COSYportuguês-bg {
+/* Key: COSYportugese */
+.COSYportugese-bg { 
   background-image: url('https://flagcdn.com/pt.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+/* Style for ToggleLatinizationButton */
+.toggle-latinization-btn {
+  padding: 8px 18px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin-left: 16px;
+  box-shadow: 0 2px 8px rgba(78,84,200,0.15);
+  transition: background 0.3s, box-shadow 0.3s;
+  font-weight: 600;
+}
+
+.toggle-latinization-btn:hover {
+  background: linear-gradient(90deg, #4148b3 0%, #7c82e6 100%); /* Darken gradient on hover */
+  box-shadow: 0 4px 12px rgba(78,84,200,0.25);
+}
+
+/* Style for latinized text */
+.latinized-text {
+  font-style: italic;
+  /* font-family: 'Arial', sans-serif; /* Example: Optional: use a different font for better readability of transliteration */
+  /* color: #555; /* Example: Optional: slightly different color for latinized text */
 }
