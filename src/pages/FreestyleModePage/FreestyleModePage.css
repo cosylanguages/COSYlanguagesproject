@@ -88,10 +88,19 @@
 
 /* Global elements styles */
 .freestyle-mode-root {
-  min-height: 100vh;
-  width: 100vw;
+  min-height: 100vh; /* Ensure it can fill height if content is short */
+  width: 100%; /* Take full width of its parent (app-main-content) */
   position: relative;
-  background: none;
+  /* background: none; /* Body background will show through */
+
+  /* Added Flex properties to center its direct children (e.g., FreestyleInterfaceView) */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  /* justify-content: center; /* Optional: if vertical centering of content within this page is desired */
+  
+  padding: var(--spacing-md, 20px); /* Use theme variable or a default */
+  box-sizing: border-box;
 }
 
 #cosy-gamestats {
