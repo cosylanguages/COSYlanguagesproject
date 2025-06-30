@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../../AuthContext'; // Adjusted path
 import { useNavigate } from 'react-router-dom';
 import './Login.css'; // We'll create this for basic styling
+import TransliterableText from '../Common/TransliterableText';
 
 const Login = () => {
     const [pin, setPin] = useState('');
@@ -25,9 +26,9 @@ const Login = () => {
     return (
         <div className="login-container">
             <form onSubmit={handleSubmit} className="login-form">
-                <h2>Teacher Login</h2>
+                <h2><TransliterableText text="Teacher Login" /></h2>
                 <div className="form-group">
-                    <label htmlFor="pin">PIN:</label>
+                    <label htmlFor="pin"><TransliterableText text="PIN:" /></label>
                     <input
                         type="password"
                         id="pin"
@@ -37,9 +38,9 @@ const Login = () => {
                         autoFocus
                     />
                 </div>
-                {authError && <p className="error-message">{authError}</p>}
+                {authError && <p className="error-message"><TransliterableText text={authError} /></p>}
                 <button type="submit" className="login-button" disabled={loadingAuth}>
-                    {loadingAuth ? 'Logging in...' : 'Login'}
+                    <TransliterableText text={loadingAuth ? 'Logging in...' : 'Login'} />
                 </button>
             </form>
         </div>

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'; // Added useEffect
 import { useI18n } from '../../i18n/I18nContext';
 import './LanguageSelector.css';
+import TransliterableText from '../Common/TransliterableText';
 
 const LanguageSelector = () => {
     // Assuming currentLangKey is provided by useI18n and represents the actual language key string
@@ -57,7 +58,7 @@ const LanguageSelector = () => {
             >
                 {availableLanguages.map(lang => (
                     <option key={lang.key} value={lang.key}>
-                        {lang.name}
+                        <TransliterableText text={lang.name} />
                     </option>
                 ))}
             </select>
