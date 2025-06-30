@@ -1,0 +1,30 @@
+.language-selector-freestyle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.language-selector-freestyle-container label {
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-primary, #333);
+}
+.language-selector-freestyle-container select {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  min-width: 200px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.language-selector-freestyle-container select:focus {
+  border-color: var(--color-primary, #007bff);
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.15);
+}
+.language-selector-freestyle-container select:hover {
+  border-color: var(--color-primary-dark, #0056b3);
+}
