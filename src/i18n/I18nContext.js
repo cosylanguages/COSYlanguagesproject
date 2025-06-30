@@ -33,7 +33,18 @@ export function I18nProvider({ children }) {
         // Basic placeholder replacement, e.g., t('levelUpToast', { level: 5 })
         if (options && typeof translation === 'string') {
             for (const placeholder in options) {
-                translation = translation.replace(new RegExp(`{${placeholder}}`, 'g'), options[placeholder]);
+                // Ignore empty or purely numeric placeholders (like {0})
+                if (!placeholder || /^\d+$/.test(placeholder)) continue;
+                const value = options[placeholder];
+                if (value === undefined || value === null) continue;
+                // Escape special regex characters in placeholder
+                const escapedPlaceholder = placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                try {
+                    translation = translation.replace(new RegExp(`{${escapedPlaceholder}}`, 'g'), value);
+                } catch (e) {
+                    // Ignore invalid regex
+                    continue;
+                }
             }
         }
         return translation;

@@ -97,17 +97,38 @@ const DaySelectorFreestyle = ({ currentDays, onDaysChange, language }) => {
     }
   };
   
-  const labelStyle = { marginRight: '10px', fontWeight: 'bold', color: 'var(--text-color-dark)' }; // Assuming dark text on light bg for controls
-  const selectStyle = { padding: '8px', borderRadius: '4px', border: '1px solid #ccc', minWidth: '100px', marginRight: '10px' };
-  const radioContainerStyle = { marginBottom: '10px', display: 'flex', gap: '15px', justifyContent: 'center' };
-  const radioLabelStyle = { marginRight: '5px', color: 'var(--text-color-dark)'};
+  const cardStyle = {
+    margin: '30px auto',
+    padding: '24px 32px',
+    border: '1px solid #e0e0e0',
+    borderRadius: '16px',
+    backgroundColor: '#fff',
+    boxShadow: '0 4px 24px #0001',
+    maxWidth: 420,
+    minWidth: 280,
+    textAlign: 'center',
+  };
+  const titleStyle = {
+    marginBottom: '18px',
+    fontWeight: 700,
+    fontSize: '1.25rem',
+    color: '#007bff',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+  };
+  const radioContainerStyle = { marginBottom: '18px', display: 'flex', gap: '30px', justifyContent: 'center' };
+  const radioLabelStyle = { marginRight: '5px', color: '#222', fontWeight: 500, fontSize: '1.05em', display: 'flex', alignItems: 'center', gap: 4 };
+  const selectStyle = { padding: '10px', borderRadius: '6px', border: '1.5px solid #007bff', minWidth: '120px', marginRight: '10px', fontSize: '1em', background: '#f8faff' };
+  const labelStyle = { marginRight: '10px', fontWeight: 600, color: '#222', fontSize: '1em' };
 
   return (
-    <div style={{ margin: '20px 0', padding: '15px', border: '1px solid #e0e0e0', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
-      <div style={{ marginBottom: '15px', textAlign: 'center', fontWeight: 'bold', color: 'var(--text-color-dark)' }}>
-        {t('titles.chooseYourDay', '📅 Choose Your Day(s):')}
+    <div style={cardStyle}>
+      <div style={titleStyle}>
+        <span role="img" aria-label="calendar">📅</span>
+        {t('titles.chooseYourDay', 'Choose Your Day(s)')}
       </div>
-      
       <div style={radioContainerStyle}>
         <label style={radioLabelStyle}>
           <input type="radio" name="dayMode" value="single" checked={mode === 'single'} onChange={() => handleModeChange('single')} />
@@ -118,9 +139,8 @@ const DaySelectorFreestyle = ({ currentDays, onDaysChange, language }) => {
           {t('daySelector.dayRange', 'Day Range')}
         </label>
       </div>
-
       {mode === 'single' && (
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', marginTop: 10 }}>
           <select
             id="freestyle-day-select"
             value={singleDay}
@@ -136,17 +156,16 @@ const DaySelectorFreestyle = ({ currentDays, onDaysChange, language }) => {
             ))}
           </select>
           {thematicName && (
-            <div style={{ marginTop: '10px', fontSize: '0.9em', color: '#555', fontStyle: 'italic' }}>
+            <div style={{ marginTop: '10px', fontSize: '0.95em', color: '#007bff', fontStyle: 'italic', fontWeight: 500 }}>
               {thematicName}
             </div>
           )}
         </div>
       )}
-
       {mode === 'range' && (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginTop: '10px' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '18px', marginTop: '10px' }}>
           <div>
-            <label htmlFor="freestyle-day-from" style={{...labelStyle, display:'block', marginBottom:'5px'}}>{t('daySelector.from', 'From:')}</label>
+            <label htmlFor="freestyle-day-from" style={{...labelStyle, display:'block', marginBottom:'7px'}}>{t('daySelector.from', 'From:')}</label>
             <select id="freestyle-day-from" value={dayFrom} onChange={handleDayFromChange} style={selectStyle}>
               <option value="">{t('daySelector.selectStartDay', 'Start')}</option>
               {daysOptions.map((day) => (
@@ -155,7 +174,7 @@ const DaySelectorFreestyle = ({ currentDays, onDaysChange, language }) => {
             </select>
           </div>
           <div>
-            <label htmlFor="freestyle-day-to" style={{...labelStyle, display:'block', marginBottom:'5px'}}>{t('daySelector.to', 'To:')}</label>
+            <label htmlFor="freestyle-day-to" style={{...labelStyle, display:'block', marginBottom:'7px'}}>{t('daySelector.to', 'To:')}</label>
             <select id="freestyle-day-to" value={dayTo} onChange={handleDayToChange} style={selectStyle}>
               <option value="">{t('daySelector.selectEndDay', 'End')}</option>
               {daysOptions.map((day) => (

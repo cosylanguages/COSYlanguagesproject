@@ -82,25 +82,33 @@ const FreestyleInterfaceView = ({
         />
       )}
 
-      {/* Language Selector */}
-      <div className="freestyle-mode-selectors">
-        <LanguageSelectorFreestyle // This is actually LanguageSelector from components/LanguageSelector
-          selectedLanguage={selectedLanguage}
-          onLanguageChange={onLanguageChange}
-        />
+      {/* Language Selector + Day Selector dans la même carte centrale */}
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+        <div style={{ width: '100%', maxWidth: 480 }}>
+          <div style={{ marginBottom: 16 }}>
+            {/* Sélecteur de langue centré */}
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <LanguageSelectorFreestyle
+                selectedLanguage={selectedLanguage}
+                onLanguageChange={onLanguageChange}
+              />
+            </div>
+          </div>
+          {/* Sélecteur de jour */}
+          {selectedLanguage && (
+            <DaySelectorFreestyle
+              currentDays={selectedDays}
+              onDaysChange={onDaysChange}
+              language={selectedLanguage}
+            />
+          )}
+        </div>
         {selectedLanguage && (
-          <ToggleLatinizationButton currentDisplayLanguage={selectedLanguage} />
+          <div style={{ marginTop: 8 }}>
+            <ToggleLatinizationButton currentDisplayLanguage={selectedLanguage} />
+          </div>
         )}
       </div>
-
-      {/* Day Selector - appears if language is selected */}
-      {selectedLanguage && (
-        <DaySelectorFreestyle
-          currentDays={selectedDays}
-          onDaysChange={onDaysChange}
-          language={selectedLanguage}
-        />
-      )}
 
       {/* Practice Navigation & Sub-Practice Menu Logic */}
       {showPracticeNav && !currentMainCategory && (
