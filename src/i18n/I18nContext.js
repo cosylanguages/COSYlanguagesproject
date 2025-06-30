@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
-import { translations } from './translations'; // Assuming translations.js is in the same directory
+import translations from './translations'; // Assuming translations.js is in the same directory
 
 const I18nContext = createContext();
 
