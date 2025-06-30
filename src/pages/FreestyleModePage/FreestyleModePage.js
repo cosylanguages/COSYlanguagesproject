@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FreestyleInterfaceView from '../../components/Freestyle/FreestyleInterfaceView';
 // import './FreestyleModePage.css'; // We'll create this later
 
 const FreestyleModePage = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState(null);
-  const [selectedDays, setSelectedDays] = useState([]); // Changed selectedDay to selectedDays, initialized to []
+  const [selectedLanguage, setSelectedLanguage] = useState('COSYenglish');
+  const [selectedDays, setSelectedDays] = useState([]);
   const [currentMainCategory, setCurrentMainCategory] = useState(null);
   const [currentSubPractice, setCurrentSubPractice] = useState(null);
   const [exerciseKey, setExerciseKey] = useState(0);
+
+  // Réinitialise la sélection des jours à chaque chargement de la page
+  useEffect(() => {
+    setSelectedDays([]);
+  }, []);
 
   const handleLanguageChange = (language) => {
     setSelectedLanguage(language);
