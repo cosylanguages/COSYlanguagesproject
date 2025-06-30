@@ -1,66 +1,67 @@
 import React, { useState, useEffect } from 'react';
-import FreestyleInterfaceView from '../../components/Freestyle/FreestyleInterfaceView';
-// import './FreestyleModePage.css'; // We'll create this later
+import { useI18n } from '../../i18n/I18nContext';
+import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
+import RoleSelector from './RoleSelector'; // Import the actual RoleSelector component
+import StudentDashboard from './StudentDashboard'; // Import actual StudentDashboard
+import TeacherDashboard from './TeacherDashboard'; // Import actual TeacherDashboard
+import TransliterableText from '../../components/Common/TransliterableText'; 
 
-const FreestyleModePage = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState(null);
-  const [selectedDays, setSelectedDays] = useState([]); // State now holds an array
-  const [currentMainCategory, setCurrentMainCategory] = useState(null);
-  const [currentSubPractice, setCurrentSubPractice] = useState(null);
-  const [exerciseKey, setExerciseKey] = useState(0);
+import './StudyModePage.css'; 
 
-  const handleLanguageChange = (language) => {
-    setSelectedLanguage(language);
-    setCurrentMainCategory(null);
-    setCurrentSubPractice(null);
-    // setSelectedDays([]); // Also reset days when language changes? Optional.
-    setExerciseKey(prevKey => prevKey + 1);
-  };
+const StudyModePage = () => {
+  const { t } = useI18n();
+  const [selectedRole, setSelectedRole] = useState(() => {
+    return localStorage.getItem('selectedRole') || null; 
+  });
 
-  // Renamed from handleDayChange, now expects an array
-  const handleDaysChange = (daysArray) => { 
-    setSelectedDays(daysArray);
-    setCurrentMainCategory(null);
-    setCurrentSubPractice(null);
-    setExerciseKey(prevKey => prevKey + 1);
-  };
-
-  const handleCategorySelect = (category) => {
-    setCurrentMainCategory(category);
-    setCurrentSubPractice(null);
-    setExerciseKey(prevKey => prevKey + 1);
-  };
-
-  const handleSubPracticeSelect = (subPractice) => {
-    setCurrentSubPractice(subPractice);
-    setExerciseKey(prevKey => prevKey + 1);
-    // console.log(`Selected SubPractice: ${subPractice} for Category: ${currentMainCategory} with Lang: ${selectedLanguage} Days: ${selectedDays.join(', ')}`);
-  };
-
-  // Ajoute ou met à jour la classe du body selon la langue sélectionnée
   useEffect(() => {
-    if (selectedLanguage) {
-      document.body.className = `flag-${selectedLanguage}`;
+    if (selectedRole) {
+      localStorage.setItem('selectedRole', selectedRole);
     } else {
-      document.body.className = '';
+      localStorage.removeItem('selectedRole'); 
     }
-    // Nettoyage lors du démontage
-    return () => { document.body.className = ''; };
-  }, [selectedLanguage]);
+  }, [selectedRole]);
+
+  const handleRoleSelect = (role) => {
+    // Toggle role off if the same role is clicked again
+    setSelectedRole(prevRole => prevRole === role ? null : role);
+  };
+
+  // Placeholder for ToggleLatinizationButton until it's fully created in Phase 2
+  const ToggleLatinizationButton = () => <button style={{marginLeft: '10px'}}>Toggle Latinization (Placeholder)</button>;
 
   return (
-    <FreestyleInterfaceView
-      selectedLanguage={selectedLanguage}
-      selectedDays={selectedDays} // Pass selectedDays array
-      currentMainCategory={currentMainCategory}
-      currentSubPractice={currentSubPractice}
-      exerciseKey={exerciseKey}
-      onLanguageChange={handleLanguageChange}
-      onDaysChange={handleDaysChange} // Pass handleDaysChange callback
-      onCategorySelect={handleCategorySelect}
-      onSubPracticeSelect={handleSubPracticeSelect}
-    />
+    <div className="study-mode-page-container">
+      <h1>
+        <TransliterableText text={t('studyMode.mainHeading', 'COSYlanguages - Study Mode')} />
+      </h1>
+      
+      <div className="study-menu-section">
+        <label htmlFor="language-select" id="study-choose-language-label"> {/* Reinstated label, ensure 'language-select' is the id of the actual select input in LanguageSelector.js */}
+          <TransliterableText text={t('studyMode.chooseLanguageLabel', '🌎 Choose Your Language:')} />
+        </label>
+        <LanguageSelector /> 
+        <ToggleLatinizationButton />
+      </div>
+
+      <div className="study-menu-section">
+        <label htmlFor="role-selector-buttons" id="study-choose-role-label"> 
+            <TransliterableText text={t('studyMode.chooseRoleLabel', '👤 Choose Your Role:')} />
+        </label>
+        <RoleSelector onSelectRole={handleRoleSelect} currentRole={selectedRole} />
+      </div>
+      
+      <div className="study-content-area">
+        {!selectedRole && (
+          <p id="study-welcome-message"> {/* Added ID from old HTML for consistency if needed by CSS/tests */}
+            <TransliterableText text={t('studyMode.welcomeMessage', 'Please select your role to begin.')} />
+          </p>
+        )}
+        {selectedRole === 'student' && <StudentDashboard />}
+        {selectedRole === 'teacher' && <TeacherDashboard />}
+      </div>
+    </div>
   );
 };
 
-export default FreestyleModePage;
+export default StudyModePage;

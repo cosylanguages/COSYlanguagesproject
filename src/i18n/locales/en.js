@@ -95,7 +95,19 @@ const enTranslations = {
   "selectLang": "Please select a language to begin.",
   // "selectDay": "Please select day(s).", // Already covered by daySelector.selectDay, but used differently in message context
   "selectPractice": "Please select a practice category.",
-  "selectSubPractice": "Please select a specific exercise."
+  "selectSubPractice": "Please select a specific exercise.",
+
+  // Study Mode Specific
+  "studyMode.mainHeading": "COSYlanguages - Study Mode",
+  "studyMode.chooseLanguageLabel": "🌎 Choose Your Language:",
+  "studyMode.chooseRoleLabel": "👤 Choose Your Role:",
+  "studyMode.studentRole": "🧑‍🎓 Student",
+  "studyMode.teacherRole": "🧑‍🏫 Teacher",
+  "studyMode.welcomeMessage": "Please select your role to begin.",
+  "studyMode.studentDashboardHeading": "Student Dashboard",
+  "studyMode.studentDashboardComingSoon": "Create your own flashcard sets for further practice (Coming Soon).",
+  "studyMode.teacherDashboardHeading": "Teacher Dashboard",
+  "studyMode.teacherDashboardComingSoon": "Create, edit, and add material (Coming Soon)."
 
 };
 
