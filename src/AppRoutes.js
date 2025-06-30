@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { usePlan } from './PlanContext';
 import { useAuth } from './AuthContext';
+import { useI18n } from './i18n/I18nContext';
 import Layout from './components/Layout/Layout';
 import Login from './components/Auth/Login';
 import StudyModePage from './pages/StudyModePage/StudyModePage';
@@ -13,6 +14,7 @@ const STUDY_MODE_PIN = "1234"; // Define the PIN
 
 // Component for the Plan Overview
 const PlanOverview = () => {
+    const { t, language } = useI18n();
     const { plan, fetchPlan, loading, error } = usePlan();
     const { authToken, isAuthenticated } = useAuth();
 
@@ -28,38 +30,37 @@ const PlanOverview = () => {
     if (!isAuthenticated) {
         return (
             <div>
-                <h2>Plan Data</h2>
-                <p><em>Please log in to view plan data.</em></p>
+                <h2>{t('planData.heading', 'Plan Data')}</h2>
+                <p><em>{t('planData.loginPrompt', 'Please log in to view plan data.')}</em></p>
             </div>
         );
     }
 
     if (loading) {
-        return <div><h2>Plan Data</h2><p><em>Loading plan data...</em></p></div>;
+        return <div><h2>{t('planData.heading', 'Plan Data')}</h2><p><em>{t('planData.loading', 'Loading plan data...')}</em></p></div>;
     }
 
     if (error) {
-        return <div><h2>Plan Data</h2><p style={{color: 'red'}}><em>Error fetching plan: {error}</em></p></div>;
+        return <div><h2>{t('planData.heading', 'Plan Data')}</h2><p style={{color: 'red'}}><em>{t('planData.error', 'Error fetching plan: {error}', { error })}</em></p></div>;
     }
 
     return (
         <div>
-            <h2>Current Plan Data (from Backend)</h2>
-            
+            <h2>{t('planData.currentHeading', 'Current Plan Data (from Backend)')}</h2>
             {(daysExist && plan.days.length > 0) || (studySetsExist && plan.studySets.length > 0) ? (
                 <>
                     {daysExist && plan.days.length > 0 && (
                         <>
-                            <h3>Days</h3>
+                            <h3>{t('planData.days', 'Days')}</h3>
                             <ul>
                                 {plan.days.map(day => (
                                     <li key={day.id}>
-                                        <strong>{day.title?.COSYenglish || day.title?.default || day.title || `Day ${day.id}`}</strong>
+                                        <strong>{day.title?.[language] || day.title?.COSYenglish || day.title?.default || day.title || t('planData.day', `Day ${day.id}`)}</strong>
                                         {day.sections && day.sections.length > 0 && (
                                             <ul>
                                                 {day.sections.map(section => (
                                                     <li key={section.id}>
-                                                        {section.title?.COSYenglish || section.title?.default || section.title || `Section ${section.id}`}
+                                                        {section.title?.[language] || section.title?.COSYenglish || section.title?.default || section.title || t('planData.section', `Section ${section.id}`)}
                                                     </li>
                                                 ))}
                                             </ul>
@@ -69,14 +70,13 @@ const PlanOverview = () => {
                             </ul>
                         </>
                     )}
-                    
                     {studySetsExist && plan.studySets.length > 0 && (
                         <>
-                            <h3>Study Sets</h3>
+                            <h3>{t('planData.studySets', 'Study Sets')}</h3>
                             <ul>
                                 {plan.studySets.map(set => (
                                     <li key={set.id}>
-                                        {set.name || set.title || `Set ${set.id}`} ({set.itemCount} items)
+                                        {set.name || set.title || t('planData.set', `Set ${set.id}`)} ({set.itemCount} {t('planData.items', 'items')})
                                     </li>
                                 ))}
                             </ul>
@@ -84,7 +84,7 @@ const PlanOverview = () => {
                     )}
                 </>
             ) : (
-                <p><em>No plan data available for this user, or data is empty.</em></p>
+                <p><em>{t('planData.noData', 'No plan data available for this user, or data is empty.')}</em></p>
             )}
         </div>
     );
@@ -93,8 +93,10 @@ const PlanOverview = () => {
 // ProtectedRoute component (for general auth)
 const ProtectedRoute = ({ children }) => {
     const { isAuthenticated, loadingAuth } = useAuth();
+    const { t } = useI18n();
+
     if (loadingAuth) {
-        return <div>Loading authentication status...</div>;
+        return <div>{t('auth.loadingStatus', 'Loading authentication status...')}</div>;
     }
     return isAuthenticated ? children : <Navigate to="/login" replace />;
 };
@@ -105,6 +107,7 @@ const StudyModeProtectedRoute = ({ children }) => {
     const [showPinModal, setShowPinModal] = useState(!isPinVerified);
     const [pinError, setPinError] = useState('');
     const navigate = useNavigate();
+    const { t } = useI18n();
 
     const handlePinSubmit = (pin) => {
         if (pin === STUDY_MODE_PIN) {
@@ -127,7 +130,7 @@ const StudyModeProtectedRoute = ({ children }) => {
     }
 
     if (showPinModal) {
-        return <PinModal onSubmit={handlePinSubmit} onClose={handleModalClose} error={pinError} />;
+        return <PinModal onSubmit={handlePinSubmit} onClose={handleModalClose} error={t('auth.incorrectPin', pinError)} />;
     }
     
     // Fallback, should ideally not be reached if logic is correct
