@@ -1,48 +1,49 @@
 import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
+import TransliterableText from '../Common/TransliterableText'; // For the label
+
+// It's good practice to have a dedicated CSS file for components
+import './PracticeCategoryNav.css'; 
 
 const PracticeCategoryNav = ({ activeCategory, onCategorySelect }) => {
-  const { t, allTranslations, language } = useI18n();
+  const { t } = useI18n(); // Removed allTranslations and language as they are not needed directly here
 
-  // Get main categories from the translations for the current language
-  // The mainCategory object should have keys like 'vocabulary', 'grammar', etc.
-  // and values like '🔠 Vocabulary', '🧩 Grammar', etc.
-  const currentLanguageTranslations = allTranslations[language] || allTranslations.COSYenglish;
-  // Ensure mainCategory exists and is an object, default to COSYenglish's mainCategory if not found or if it's not an object
-  let mainCategoriesSource = currentLanguageTranslations.mainCategory;
-  if (typeof mainCategoriesSource !== 'object' || mainCategoriesSource === null) {
-    mainCategoriesSource = allTranslations.COSYenglish.mainCategory || {};
-  }
-  
-  const mainCategories = mainCategoriesSource;
+  // Define the practice categories statically for now.
+  // Labels will be fetched using t(category.id) or t(category.translationKey)
+  const definedPracticeCategories = [
+    { id: 'vocabulary', translationKey: 'vocabulary', defaultLabel: '🔠 Vocabulary' },
+    { id: 'grammar', translationKey: 'grammar', defaultLabel: '🧩 Grammar' },
+    { id: 'reading', translationKey: 'reading', defaultLabel: '📚 Reading' },
+    { id: 'speaking', translationKey: 'speaking', defaultLabel: '🗣️ Speaking' },
+    { id: 'writing', translationKey: 'writing', defaultLabel: '✍️ Writing' },
+    // { id: 'practiceAll', translationKey: 'practiceAll', defaultLabel: '🔄 Practice All'} // Example if "Practice All" is a category
+  ];
 
-  const practiceCategories = Object.keys(mainCategories).map(key => ({
-    id: key, // e.g., 'vocabulary'
-    // The label is directly from the mainCategory object's value, which is already translated.
-    // If mainCategory values were keys (e.g., 'mainCategory.vocabulary'), we'd use t() here.
-    label: mainCategories[key] 
+  const practiceCategories = definedPracticeCategories.map(category => ({
+    id: category.id,
+    label: t(category.translationKey, category.defaultLabel) // Get translated label
   }));
 
+  const choosePracticeLabelText = t('selectPractice', '🧭 Choose Your Practice:'); // Use existing key 'selectPractice'
+
   return (
-    <div style={{ margin: '20px 0', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
-      {practiceCategories.map((category) => (
-        <button
-          key={category.id}
-          onClick={() => onCategorySelect(category.id)}
-          style={{
-            padding: '10px 15px',
-            fontSize: '1rem',
-            cursor: 'pointer',
-            backgroundColor: activeCategory === category.id ? '#007bff' : '#f0f0f0',
-            color: activeCategory === category.id ? 'white' : 'black',
-            border: '1px solid #ccc',
-            borderRadius: '5px',
-          }}
-          aria-pressed={activeCategory === category.id}
-        >
-          {category.label}
-        </button>
-      ))}
+    <div className="practice-category-nav-container">
+      <h3 className="practice-category-label">
+        <TransliterableText text={choosePracticeLabelText} />
+      </h3>
+      <div className="practice-category-buttons">
+        {practiceCategories.map((category) => (
+          <button
+            key={category.id}
+            onClick={() => onCategorySelect(category.id)}
+            className={`practice-category-btn ${activeCategory === category.id ? 'active' : ''}`}
+            aria-pressed={activeCategory === category.id}
+          >
+            {/* Label is now translated via t() */}
+            {category.label} 
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
