@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useI18n } from '../../i18n/I18nContext';
 import LanguageSelectorFreestyle from './LanguageSelectorFreestyle';
+import ToggleLatinizationButton from '../Common/ToggleLatinizationButton';
 import DaySelectorFreestyle from './DaySelectorFreestyle';
 import PracticeCategoryNav from './PracticeCategoryNav';
 import SubPracticeMenu from './SubPracticeMenu';
 import ExerciseHost from './ExerciseHost';
-import ToggleLatinizationButton from '../Common/ToggleLatinizationButton';
-import PinModal from '../Common/PinModal';
 import '../../pages/FreestyleModePage/FreestyleModePage.css';
 
 const FreestyleInterfaceView = ({
@@ -22,67 +20,22 @@ const FreestyleInterfaceView = ({
   onSubPracticeSelect,
 }) => {
   const { t, allTranslations, language: i18nLanguage } = useI18n();
-  const navigate = useNavigate();
+  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
 
-  const [showPinModal, setShowPinModal] = useState(false);
-  const [pinError, setPinError] = useState('');
-
-  const STUDY_MODE_PIN = "1234";
-
-  const handleStudyModeClick = () => {
-    setShowPinModal(true);
-    setPinError('');
-  };
-
-  const handlePinSubmit = (pin) => {
-    if (pin === STUDY_MODE_PIN) {
-      sessionStorage.setItem('studyModeUnlocked', 'true');
-      setShowPinModal(false);
-      navigate('/study');
-    } else {
-      setPinError(t('pinIncorrectMessage', 'Incorrect PIN. Access denied.'));
-    }
-  };
-
-  const handlePinModalClose = () => {
-    setShowPinModal(false);
-    setPinError('');
-  };
-
-  const showPracticeNav = selectedLanguage && selectedDays && selectedDays.length > 0;
-
+  // Ajout du header et du sélecteur de langue inspirés de l'ancien HTML
   return (
     <div className="freestyle-mode-container">
       <div className="main-menu-box">
-        {/* Site Name/Heading is already a direct child and will be centered by main-menu-box styles */}
-        <h1 className="freestyle-mode-header">{t('mainHeading', 'COSYlanguages')}</h1>
-
-        {/* Study Mode Button - will be centered by main-menu-box styles */}
-        <button
-          onClick={handleStudyModeClick}
-          className="study-mode-button" // Style from CSS
-        >
-          {t('studyModeButtonLabel', '🚀 Study Mode')}
-        </button>
-
-        {/* PIN Modal (conditionally rendered, does not affect layout flow significantly) */}
-        {showPinModal && (
-          <PinModal
-            onSubmit={handlePinSubmit}
-            onClose={handlePinModalClose}
-            error={pinError}
-          />
-        )}
-
-        {/* Language Selector */}
-        <div className="selector-container">
+        <h1 className="freestyle-mode-header" data-transliterable>COSYlanguages - Freestyle Mode</h1>
+        <div className="menu-section selector-container">
+          <label htmlFor="freestyle-language-select" data-transliterable id="study-choose-language-label">🌎 Choose Your Language:</label>
           <LanguageSelectorFreestyle
             selectedLanguage={selectedLanguage}
             onLanguageChange={onLanguageChange}
           />
+          <ToggleLatinizationButton currentDisplayLanguage={selectedLanguage} />
         </div>
-
-        {/* Day Selector (includes "From" and "To") */}
+        {/* Sélecteur de jours */}
         {selectedLanguage && (
           <div className="selector-container">
             <DaySelectorFreestyle
@@ -92,33 +45,24 @@ const FreestyleInterfaceView = ({
             />
           </div>
         )}
-        
-        {/* Toggle Latinization Button - Placed after Day Selector for logical flow */}
-        {selectedLanguage && (
-            <div className="selector-container">
-                 <ToggleLatinizationButton currentDisplayLanguage={selectedLanguage} />
-            </div>
-        )}
-
-        {/* Practice Category Navigation OR Selected Category + SubPracticeMenu */}
-        {showPracticeNav && (
+        {/* Navigation des catégories */}
+        {selectedLanguage && selectedDays && selectedDays.length > 0 && (
           currentMainCategory ? (
             <>
-              {/* Display selected main category (centered by main-menu-box) */}
-              <div className="selector-container" style={{ marginBottom: '10px' }}> {/* Added margin for spacing */}
+              <div className="selector-container" style={{ marginBottom: '10px' }}>
                 <button
-                  onClick={() => onCategorySelect(currentMainCategory)} // Allows re-clicking to possibly reset or just show it's active
-                  style={{ // Inline styles kept for unique active category display, can be moved to CSS
+                  onClick={() => onCategorySelect(currentMainCategory)}
+                  style={{
                     padding: '10px 15px',
                     fontSize: '1.1rem',
                     cursor: 'pointer',
-                    backgroundColor: '#007bff', 
+                    backgroundColor: '#007bff',
                     color: 'white',
                     border: '1px solid #007bff',
                     borderRadius: '5px',
                     fontWeight: 'bold',
-                    width: '100%', // Ensure it takes width from selector-container
-                    maxWidth: '380px' // Consistent with other selectors
+                    width: '100%',
+                    maxWidth: '380px'
                   }}
                 >
                   {(allTranslations[i18nLanguage]?.mainCategory?.[currentMainCategory] ||
@@ -126,7 +70,6 @@ const FreestyleInterfaceView = ({
                     currentMainCategory)}
                 </button>
               </div>
-              {/* SubPracticeMenu */}
               <div className="selector-container">
                 <SubPracticeMenu
                   mainCategory={currentMainCategory}
@@ -136,7 +79,6 @@ const FreestyleInterfaceView = ({
               </div>
             </>
           ) : (
-            // PracticeCategoryNav
             <div className="selector-container">
               <PracticeCategoryNav
                 activeCategory={null}
@@ -146,8 +88,6 @@ const FreestyleInterfaceView = ({
           )
         )}
       </div>
-
-      {/* Exercise Host remains outside the main-menu-box for layout purposes */}
       <div className="freestyle-mode-exercise-host">
         {selectedLanguage && selectedDays && selectedDays.length > 0 && currentMainCategory && currentSubPractice ? (
           <ExerciseHost
@@ -160,8 +100,8 @@ const FreestyleInterfaceView = ({
           <p className="freestyle-mode-message">
             {!selectedLanguage ? t('selectLang', "Please select a language to begin.") :
              !(selectedDays && selectedDays.length > 0) ? t('selectDay', "Please select day(s).") :
-             !currentMainCategory && showPracticeNav ? t('selectPractice', "Please select a practice category.") :
-             currentMainCategory && !currentSubPractice && showPracticeNav ? t('selectSubPractice', "Please select a specific exercise.") :
+             !currentMainCategory ? t('selectPractice', "Please select a practice category.") :
+             currentMainCategory && !currentSubPractice ? t('selectSubPractice', "Please select a specific exercise.") :
              ""
             }
           </p>
