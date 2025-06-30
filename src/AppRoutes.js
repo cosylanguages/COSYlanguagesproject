@@ -142,15 +142,8 @@ function AppRoutes() {
     return (
         <Routes>
             <Route path="/login" element={<Login />} />
-            <Route
-                path="/"
-                element={
-                    <ProtectedRoute>
-                        <Layout />
-                    </ProtectedRoute>
-                }
-            >
-    <Route index element={<FreestyleModePage />} /> {/* Changed PlanOverview to FreestyleModePage */}
+            <Route path="/" element={<Layout />}>
+                <Route index element={<FreestyleModePage />} />
                 <Route path="freestyle" element={<FreestyleModePage />} />
                 <Route 
                   path="study" 
