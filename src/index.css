@@ -180,3 +180,76 @@ h4 { font-size: var(--font-size-h4); }
 .mt-1 { margin-top: var(--spacing-sm); }
 .mb-1 { margin-bottom: var(--spacing-sm); }
 /* etc. for more spacing utilities */
+
+/* Language Flag Backgrounds */
+/* Default body background - can be overridden by language-specific classes */
+body {
+  /* Keeping the gradient from the old CSS as a base or fallback */
+  background-image: linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Base for language-specific backgrounds */
+.lang-bg {
+  background-attachment: fixed !important;
+  background-size: cover, cover !important; /* Ensure cover for both flag and gradient */
+  background-position: center center !important;
+  background-repeat: no-repeat, no-repeat !important; /* Ensure no-repeat for both */
+}
+
+/* Individual Language Backgrounds */
+.COSYenglish-bg {
+  background-image: url('https://flagcdn.com/gb.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+.COSYfrançais-bg {
+  background-image: url('https://flagcdn.com/fr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+.COSYrussian-bg { /* Assuming ТАКОЙрусский maps to a general 'russian' key for class name simplicity */
+  background-image: url('https://flagcdn.com/ru.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+.COSYitaliano-bg {
+  background-image: url('https://flagcdn.com/it.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+.COSYespañol-bg {
+  background-image: url('https://flagcdn.com/es.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+.COSYdeutsch-bg {
+  background-image: url('https://flagcdn.com/de.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+.COSYarmenian-bg { /* Assuming ԾՈՍՅհայկական maps to 'armenian' */
+  background-image: url('https://flagcdn.com/am.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+/* Languages with local flags - paths might need adjustment based on project structure */
+/* Assuming assets are in public folder, so /assets/icons/ is relative to public URL */
+.COSYbashkort-bg {
+  background-image: url('/assets/icons/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+.COSYtatarça-bg {
+  background-image: url('/assets/icons/Flag_of_Tatarstan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+.COSYbrezhoneg-bg {
+  background-image: url('/assets/icons/Flag_of_Brittany.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+/* Adding Greek as it was in the old CSS. Adjusted to use the specific key if applicable. */
+/* If the actual key is ΚΟΖΥελληνικά, this class will be targeted. */
+.ΚΟΖΥελληνικά-bg {
+  background-image: url('https://flagcdn.com/gr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+/* Adding Portuguese as it was in the old CSS */
+.COSYportuguês-bg {
+  background-image: url('https://flagcdn.com/pt.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
