@@ -20,7 +20,12 @@ const FreestyleInterfaceView = ({
 }) => {
   return (
     <div className="freestyle-mode-container">
-      <h1 className="freestyle-mode-header">Freestyle Mode</h1>
+      <h1 className="freestyle-mode-header">COSYlanguages</h1>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
+        <a href="/study" style={{
+          background: '#007bff', color: 'white', padding: '10px 24px', borderRadius: 8, textDecoration: 'none', fontWeight: 'bold', fontSize: '1.1rem', boxShadow: '0 2px 8px #0001', marginRight: 10
+        }}>Study Mode</a>
+      </div>
 
       <div className="freestyle-mode-selectors">
         <LanguageSelectorFreestyle
