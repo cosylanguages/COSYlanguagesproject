@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FreestyleInterfaceView from '../../components/Freestyle/FreestyleInterfaceView';
 // import './FreestyleModePage.css'; // We'll create this later
 
@@ -36,6 +36,17 @@ const FreestyleModePage = () => {
     setExerciseKey(prevKey => prevKey + 1);
     // console.log(`Selected SubPractice: ${subPractice} for Category: ${currentMainCategory} with Lang: ${selectedLanguage} Days: ${selectedDays.join(', ')}`);
   };
+
+  // Ajoute ou met à jour la classe du body selon la langue sélectionnée
+  useEffect(() => {
+    if (selectedLanguage) {
+      document.body.className = `flag-${selectedLanguage}`;
+    } else {
+      document.body.className = '';
+    }
+    // Nettoyage lors du démontage
+    return () => { document.body.className = ''; };
+  }, [selectedLanguage]);
 
   return (
     <FreestyleInterfaceView

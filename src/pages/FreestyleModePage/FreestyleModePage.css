@@ -86,6 +86,76 @@
   font-size: 1.05rem; /* Slightly larger font size */
 }
 
+/* Global elements styles */
+.freestyle-mode-root {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: none;
+}
+
+#cosy-gamestats {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: var(--color-primary, #007bff);
+  color: var(--color-text-on-dark, #fff);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+#cosy-gamestats.levelup {
+  animation: gamestatsLevelUp 1.2s ease-out;
+}
+
+.cosy-toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#floating-help-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-primary, #007bff);
+  color: var(--color-text-on-dark, #fff);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.2s, transform 0.2s;
+}
+#floating-help-btn:hover {
+  background-color: var(--color-primary-dark, #0056b3);
+  transform: scale(1.1);
+}
+
+@keyframes gamestatsLevelUp {
+  0% { transform: scale(1); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  50% { transform: scale(1.15) rotate(-3deg); box-shadow: 0 4px 10px rgba(0,123,255,0.5); }
+  100% { transform: scale(1); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .freestyle-mode-header {
