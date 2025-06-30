@@ -172,3 +172,88 @@ button[style*="Toggle Latinization (Placeholder)"] /* Targeting placeholder more
     font-size: var(--font-size-h3, 1.5rem);
   }
 }
+
+/* Three-column dashboard layout */
+.dashboard-layout {
+  display: flex;
+  flex-direction: row; /* Default for larger screens */
+  width: 100%;
+  gap: var(--spacing-md, 1rem);
+  margin-top: var(--spacing-lg, 1.5rem); /* Space above the three-column layout */
+  max-width: 100%; /* Override max-width from study-content-area for the layout itself */
+}
+
+.layout-left-panel,
+.layout-right-panel {
+  flex-basis: 20%; /* Adjust as needed */
+  min-width: 180px; /* Minimum width for side panels */
+  padding: var(--spacing-md, 1rem);
+  background-color: var(--color-surface-light, #e9ecef); /* Slightly different background */
+  border-radius: var(--border-radius-md, 0.25rem);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));
+  height: fit-content; /* Adjust height or make scrollable as content grows */
+}
+
+.layout-center-panel {
+  flex-basis: 60%; /* Adjust as needed */
+  padding: var(--spacing-md, 1rem);
+  background-color: var(--color-background, #fff); /* Main content area background */
+  border-radius: var(--border-radius-md, 0.25rem);
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06));
+}
+
+/* Titles within panels */
+.layout-left-panel h4,
+.layout-right-panel h4 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md, 1rem);
+  color: var(--color-text-headings, #343a40);
+  border-bottom: 1px solid var(--color-border-light, #ced4da);
+  padding-bottom: var(--spacing-sm, 0.5rem);
+}
+
+.layout-left-panel ul,
+.layout-right-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.layout-left-panel li,
+.layout-right-panel li {
+  margin-bottom: var(--spacing-sm, 0.5rem);
+}
+
+/* Styling for btn-link in ToolsPanel */
+.tools-panel .btn-link {
+  background: none;
+  border: none;
+  color: var(--color-primary-dark, #0056b3);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+}
+.tools-panel .btn-link:hover {
+  color: var(--color-primary, #007bff);
+}
+.tools-panel .btn-link:disabled {
+  color: var(--color-text-muted, #6c757d);
+  text-decoration: none;
+  cursor: not-allowed;
+}
+
+
+/* Responsive adjustments for the three-column layout */
+@media (max-width: 992px) { /* Tablet and below */
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .layout-left-panel,
+  .layout-center-panel,
+  .layout-right-panel {
+    flex-basis: 100%; /* Stack them */
+    min-width: auto; /* Reset min-width */
+  }
+}

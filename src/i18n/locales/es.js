@@ -1,5 +1,6 @@
 // Traducciones españolas
 const esTranslations = {
+  languageNameNative: 'Español', // Added native name
   dayNames: {
       1: "Palabras básicas",
       2: "¿Quién eres?",

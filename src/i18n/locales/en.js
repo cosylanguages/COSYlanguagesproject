@@ -1,5 +1,6 @@
 // Traductions anglaises
 const enTranslations = {
+  languageNameNative: 'English', // Added native name
   dayNames: {
       1: "Basic words",
       2: "Who are you?",
@@ -107,8 +108,78 @@ const enTranslations = {
   "studyMode.studentDashboardHeading": "Student Dashboard",
   "studyMode.studentDashboardComingSoon": "Create your own flashcard sets for further practice (Coming Soon).",
   "studyMode.teacherDashboardHeading": "Teacher Dashboard",
-  "studyMode.teacherDashboardComingSoon": "Create, edit, and add material (Coming Soon)."
+  "studyMode.teacherDashboardComingSoon": "Create, edit, and add material (Coming Soon).",
 
+  // For LessonSectionsPanel and ToolsPanel
+  "studyMode.lessonSectionsTitle": "Lessons & Sections",
+  "studyMode.lessonSectionsComingSoon": "(Lesson navigation will appear here)",
+  "studyMode.lesson1": "Lesson 1: Greetings",
+  "studyMode.lesson2": "Lesson 2: Numbers",
+  "studyMode.lesson3": "Lesson 3: Family",
+  "studyMode.toolsTitle": "Tools",
+  "studyMode.toolNotes": "📝 Notes",
+  "studyMode.toolIrregularVerbs": "📚 Irregular Verbs",
+  "studyMode.toolDictionary": "📖 Dictionary (Soon)",
+
+  // For NotesPanel.js
+  "notesSavedSuccess": "Notes saved!",
+  "notesSaveError": "Could not save notes.",
+  "myNotesTitle": "My Notes",
+  "closeNotesBtnAria": "Close Notes",
+  "typeNotesPlaceholder": "Type your notes here...",
+  "saveNotesBtn": "Save Notes",
+
+  // For TeacherDashboard.js & TemplateTypeSelectionModal.js
+  "addContentBlockBtn": "+ Add Content Block",
+  "teacherDashboard.noBlocksMessage": "No content blocks added yet. Click \"Add Content Block\" to start building your lesson.",
+  "configureBtn": "Configure",
+  "removeBtn": "Remove",
+  "selectTemplateTypeTitle": "Select Content Block Type",
+  "closeBtn": "Close",
+  "configureBlockTitle": "Configure {blockName}",
+  "configureBlockComingSoon": "Configuration options for this block type will appear here.",
+  "closeConfigBtn": "Close Configuration",
+
+  // Example Template Type Category Names (keys are lowercased and spaces replaced with underscores)
+  "upload_picture": "Upload picture",
+  "audio_and_video": "Audio and video",
+  "words_and_gaps": "Words and gaps",
+  "tests": "Tests",
+  "select_the_correct_answer": "Select the correct answer",
+  "arrange_in_the_correct_order": "Arrange in the correct order",
+  "working_with_text": "Working with text",
+  "other": "Other",
+
+  // Example Template Type Names (keys are lowercased and spaces replaced with underscores)
+  "image_in_carousel": "Image in carousel",
+  "gif_animation": "GIF animation",
+  "other_things/activities_which_are_related_to_this": "Other things/activities which are related to this", // Generic key from template
+  "video": "Video",
+  "audio": "Audio",
+  "voice_recording": "Voice recording",
+  "move_the_word_to_the_gap_(fill_gaps_from_box)": "Move the word to the gap (Fill Gaps from Box)",
+  "enter_the_word_in_the_blank_(fill_gaps_with_hint)": "Enter the word in the blank (Fill Gaps with Hint)",
+  "select_the_word_form_for_the_gap_(choose_correct_option)": "Select the word form for the gap (Choose Correct Option)",
+  "test_without_a_timer": "Test without a timer",
+  "timed_test": "Timed test",
+  "true,_false,_not_stated": "True, false, not stated",
+  "multiple_choice_(single_answer)": "Multiple choice (single answer)",
+  "multiple_choice_(multiple_answers)": "Multiple choice (multiple answers)",
+  "sentence_of_words_(word_order)": "Sentence of words (Word Order)",
+  "sort_by_columns": "Sort by columns",
+  "put_the_text_in_order_(paragraph_order)": "Put the text in order (Paragraph Order)",
+  "match_words": "Match words",
+  "article": "Article",
+  "essay": "Essay",
+  "text": "Text",
+  "wordlist": "Wordlist",
+  "note_(structured_note)": "Note (Structured Note)",
+  "link": "Link",
+
+  // For TextBlock.js (if not already present or for consistency)
+  "pronounceTitle": "Pronounce title",
+  "pronounceContent": "Pronounce content",
+  "noTextContentProvided": "No text content provided."
 };
 
 export default enTranslations;

@@ -1,5 +1,6 @@
 // Traductions russes
 const ruTranslations = {
+  languageNameNative: 'Русский', // Added native name
   dayNames: {
       1: "Базовые слова",
       2: "Кто ты?",
