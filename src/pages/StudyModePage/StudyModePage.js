@@ -28,6 +28,22 @@ const StudyModePage = () => {
     setSelectedRole(prevRole => prevRole === role ? null : role);
   };
 
+  useEffect(() => {
+    // Nettoie toutes les classes de fond de langue
+    const body = document.body;
+    const classesToRemove = Array.from(body.classList).filter(cls => cls.endsWith('-bg') || cls === 'lang-bg');
+    classesToRemove.forEach(cls => body.classList.remove(cls));
+    const langKey = currentLangKey || language;
+    if (langKey) {
+      body.classList.add(`${langKey}-bg`);
+      body.classList.add('lang-bg');
+    }
+    return () => {
+      const classesToRemove = Array.from(body.classList).filter(cls => cls.endsWith('-bg') || cls === 'lang-bg');
+      classesToRemove.forEach(cls => body.classList.remove(cls));
+    };
+  }, [currentLangKey, language]);
+
   return (
     <div className="study-mode-page-container">
       <h1>
