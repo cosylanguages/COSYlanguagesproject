@@ -150,7 +150,7 @@ function AppRoutes() {
                     </ProtectedRoute>
                 }
             >
-                <Route index element={<PlanOverview />} />
+    <Route index element={<FreestyleModePage />} /> {/* Changed PlanOverview to FreestyleModePage */}
                 <Route path="freestyle" element={<FreestyleModePage />} />
                 <Route 
                   path="study" 

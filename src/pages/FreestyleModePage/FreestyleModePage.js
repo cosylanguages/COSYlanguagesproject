@@ -4,7 +4,7 @@ import FreestyleInterfaceView from '../../components/Freestyle/FreestyleInterfac
 
 const FreestyleModePage = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(null);
-  const [selectedDay, setSelectedDay] = useState(null);
+  const [selectedDays, setSelectedDays] = useState([]); // Changed selectedDay to selectedDays, initialized to []
   const [currentMainCategory, setCurrentMainCategory] = useState(null);
   const [currentSubPractice, setCurrentSubPractice] = useState(null);
   const [exerciseKey, setExerciseKey] = useState(0);
@@ -16,8 +16,8 @@ const FreestyleModePage = () => {
     setExerciseKey(prevKey => prevKey + 1);
   };
 
-  const handleDayChange = (day) => {
-    setSelectedDay(day);
+  const handleDaysChange = (days) => { // Renamed handleDayChange to handleDaysChange
+    setSelectedDays(days); // Changed setSelectedDay to setSelectedDays
     setCurrentMainCategory(null);
     setCurrentSubPractice(null);
     setExerciseKey(prevKey => prevKey + 1);
@@ -32,18 +32,18 @@ const FreestyleModePage = () => {
   const handleSubPracticeSelect = (subPractice) => {
     setCurrentSubPractice(subPractice);
     setExerciseKey(prevKey => prevKey + 1);
-    console.log(`Selected SubPractice: ${subPractice} for Category: ${currentMainCategory} with Lang: ${selectedLanguage} Day: ${selectedDay}`);
+    console.log(`Selected SubPractice: ${subPractice} for Category: ${currentMainCategory} with Lang: ${selectedLanguage} Days: ${selectedDays}`); // Updated log
   };
 
   return (
     <FreestyleInterfaceView
       selectedLanguage={selectedLanguage}
-      selectedDay={selectedDay}
+      selectedDays={selectedDays} // Changed selectedDay to selectedDays
       currentMainCategory={currentMainCategory}
       currentSubPractice={currentSubPractice}
       exerciseKey={exerciseKey}
       onLanguageChange={handleLanguageChange}
-      onDayChange={handleDayChange}
+      onDaysChange={handleDaysChange} // Changed onDayChange to onDaysChange
       onCategorySelect={handleCategorySelect}
       onSubPracticeSelect={handleSubPracticeSelect}
     />
