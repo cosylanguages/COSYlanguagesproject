@@ -1,29 +1,133 @@
 .freestyle-mode-container {
+  display: flex; /* Use flexbox to manage layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
   padding: 20px;
-  max-width: 800px;
   margin: 0 auto;
+  min-height: 100vh; /* Ensure container takes at least full viewport height */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.main-menu-box {
+  background-color: #f8f9fa; /* Light background for the box */
+  padding: 25px; /* Increased padding */
+  border-radius: 10px; /* Slightly larger border radius */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  width: 100%; 
+  max-width: 550px; /* Adjusted max width for a more compact menu */
+  margin-bottom: 35px; /* Increased space between menu box and exercise host */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 .freestyle-mode-header {
   text-align: center;
+  color: #2c3e50; /* Darker, more modern color */
+  margin-bottom: 25px; 
+  font-size: 2.2rem; /* Larger font size */
+  font-weight: 600; /* Bolder */
 }
 
-.freestyle-mode-selectors {
+/* General styling for selector containers for consistent spacing */
+.selector-container {
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
+  margin-bottom: 18px; /* Consistent margin for selector containers */
 }
+
+.selector-container > * { /* Target the actual selector component */
+  width: 100%;
+  max-width: 380px; /* Max width for individual selectors */
+}
+
+
+.study-mode-button {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+  padding: 12px 30px; /* Adjusted padding for a better look */
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.15rem; /* Slightly increased font size */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Refined shadow */
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease; /* Added transform transition */
+}
+
+.study-mode-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.study-mode-button:active {
+  transform: translateY(1px); /* Button press effect */
+}
+
 
 .freestyle-mode-exercise-host {
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 2px solid #007bff;
+  margin-top: 20px; 
+  padding: 25px; /* Increased padding */
+  border-top: 3px solid #007bff; /* Thicker border */
+  width: 100%;
+  max-width: 750px; /* Adjusted max width */
+  background-color: #ffffff; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
 }
 
 .freestyle-mode-message {
   text-align: center;
   font-style: italic;
-  color: #666;
+  color: #5a6570; /* Softer, more readable color */
+  padding: 25px; 
+  font-size: 1.05rem; /* Slightly larger font size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .freestyle-mode-header {
+    font-size: 1.8rem; /* Adjust header font size for smaller screens */
+  }
+
+  .main-menu-box {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+  .study-mode-button {
+    padding: 10px 25px;
+    font-size: 1.1rem;
+  }
+
+  .freestyle-mode-exercise-host {
+    padding: 20px;
+  }
+
+  .freestyle-mode-message {
+    padding: 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .freestyle-mode-container {
+    padding: 15px;
+  }
+  .main-menu-box {
+    max-width: 95%; /* Allow box to be more fluid on very small screens */
+    padding: 15px;
+  }
+  .freestyle-mode-header {
+    font-size: 1.6rem;
+  }
+  .study-mode-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .selector-container > * {
+    max-width: 300px; /* Further reduce max-width for selectors */
+  }
 }
