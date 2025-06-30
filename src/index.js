@@ -20,9 +20,6 @@ if (rootElement) {
         <I18nProvider>
           <LatinizationProvider>
             <AuthProvider>
-              <UserProfileProvider> {/* Added UserProfileProvider */}
-                <ProgressProvider> 
-                  <PlanProvider>
                     <AppRoutes /> 
                   </PlanProvider>
                 </ProgressProvider>
