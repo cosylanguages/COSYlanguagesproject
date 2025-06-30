@@ -11,26 +11,45 @@ import { UserProfileProvider } from './contexts/UserProfileContext'; // Added Us
 import './index.css'; 
 
 const rootElement = document.getElementById('root');
+const isProd = process.env.NODE_ENV === 'production';
 
 if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
-      <BrowserRouter basename="/COSYlanguagesproject">
-        <I18nProvider>
-          <LatinizationProvider>
-            <AuthProvider>
-              <UserProfileProvider>
-                <ProgressProvider>
-                  <PlanProvider>
-                    <AppRoutes /> 
-                  </PlanProvider>
-                </ProgressProvider>
-              </UserProfileProvider>
-            </AuthProvider>
-          </LatinizationProvider>
-        </I18nProvider>
-      </BrowserRouter>
+      {isProd ? (
+        <BrowserRouter basename="/COSYlanguagesproject">
+          <I18nProvider>
+            <LatinizationProvider>
+              <AuthProvider>
+                <UserProfileProvider>
+                  <ProgressProvider>
+                    <PlanProvider>
+                      <AppRoutes /> 
+                    </PlanProvider>
+                  </ProgressProvider>
+                </UserProfileProvider>
+              </AuthProvider>
+            </LatinizationProvider>
+          </I18nProvider>
+        </BrowserRouter>
+      ) : (
+        <BrowserRouter>
+          <I18nProvider>
+            <LatinizationProvider>
+              <AuthProvider>
+                <UserProfileProvider>
+                  <ProgressProvider>
+                    <PlanProvider>
+                      <AppRoutes /> 
+                    </PlanProvider>
+                  </ProgressProvider>
+                </UserProfileProvider>
+              </AuthProvider>
+            </LatinizationProvider>
+          </I18nProvider>
+        </BrowserRouter>
+      )}
     </React.StrictMode>
   );
 } else {
