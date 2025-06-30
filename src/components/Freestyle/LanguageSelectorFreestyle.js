@@ -38,9 +38,6 @@ const LanguageSelectorFreestyle = ({ selectedLanguage }) => {
 
     return (
         <div className="language-selector-container"> {/* Use unified class */}
-            <label htmlFor="freestyle-language-select" className="language-select-label">
-                🌎:
-            </label>
             <select 
                 id="freestyle-language-select" 
                 value={currentLangKey || ''} 

@@ -4,6 +4,8 @@ import LanguageSelector from '../../components/LanguageSelector/LanguageSelector
 import RoleSelector from './RoleSelector'; // Import the actual RoleSelector component
 import StudentDashboard from './StudentDashboard'; // Import actual StudentDashboard
 import TeacherDashboard from './TeacherDashboard'; // Import actual TeacherDashboard
+import LessonSectionsPanel from '../../components/StudyMode/LessonSectionsPanel'; // Added
+import ToolsPanel from '../../components/StudyMode/ToolsPanel'; // Added
 import TransliterableText from '../../components/Common/TransliterableText'; 
 import ToggleLatinizationButton from '../../components/Common/ToggleLatinizationButton';
 
@@ -28,9 +30,6 @@ const StudyModePage = () => {
     setSelectedRole(prevRole => prevRole === role ? null : role);
   };
 
-  // The useEffect block for updating body class has been removed from here.
-  // LanguageSelector.js is now solely responsible for this.
-
   return (
     <div className="study-mode-page-container">
       <h1>
@@ -38,13 +37,12 @@ const StudyModePage = () => {
       </h1>
       
       <div className="study-menu-section">
-        <label htmlFor="language-select" id="study-choose-language-label"> {/* Reinstated label, ensure 'language-select' is the id of the actual select input in LanguageSelector.js */}
+        <label htmlFor="language-select" id="study-choose-language-label">
           <TransliterableText text={t('studyMode.chooseLanguageLabel', '🌎 Choose Your Language:')} />
         </label>
         <LanguageSelector /> 
         <ToggleLatinizationButton 
           currentDisplayLanguage={currentLangKey || language}
-          // Inline style override removed, will use .toggle-latinization-btn from index.css
         />
       </div>
 
@@ -56,13 +54,24 @@ const StudyModePage = () => {
       </div>
       
       <div className="study-content-area">
-        {!selectedRole && (
-          <p id="study-welcome-message"> {/* Added ID from old HTML for consistency if needed by CSS/tests */}
+        {!selectedRole ? (
+          <p id="study-welcome-message">
             <TransliterableText text={t('studyMode.welcomeMessage', 'Please select your role to begin.')} />
           </p>
+        ) : (
+          <div className="dashboard-layout">
+            <div className="layout-left-panel">
+              <LessonSectionsPanel />
+            </div>
+            <div className="layout-center-panel">
+              {selectedRole === 'student' && <StudentDashboard />}
+              {selectedRole === 'teacher' && <TeacherDashboard />}
+            </div>
+            <div className="layout-right-panel">
+              <ToolsPanel />
+            </div>
+          </div>
         )}
-        {selectedRole === 'student' && <StudentDashboard />}
-        {selectedRole === 'teacher' && <TeacherDashboard />}
       </div>
     </div>
   );

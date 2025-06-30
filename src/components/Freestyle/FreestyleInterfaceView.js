@@ -26,7 +26,7 @@ const FreestyleInterfaceView = ({
   return (
     <div className="freestyle-mode-container">
       <div className="main-menu-box">
-        <h1 className="freestyle-mode-header" data-transliterable>COSYlanguages - Freestyle Mode</h1>
+        <h1 className="freestyle-mode-header" data-transliterable>COSYlanguage</h1>
         <div className="menu-section selector-container">
           <label htmlFor="freestyle-language-select" data-transliterable id="study-choose-language-label">🌎 Choose Your Language:</label>
           <LanguageSelectorFreestyle

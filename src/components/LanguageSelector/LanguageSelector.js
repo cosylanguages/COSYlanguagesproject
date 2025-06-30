@@ -8,17 +8,21 @@ const LanguageSelector = () => {
     const { language, changeLanguage, allTranslations, currentLangKey } = useI18n();
 
     const availableLanguages = Object.keys(allTranslations).map(langKey => {
-        let name = allTranslations[langKey]?.languageNameInEnglish || 
-                   langKey.replace('COSY', '').replace('ТАКОЙ', '').replace('ΚΟΖΥ', '').replace('ԾՈՍՅ', ''); // General cleanup for display name
-        
-        if (langKey === 'ΚΟΖΥελληνικά') name = 'Greek';
-        else if (langKey === 'ТАКОЙрусский') name = 'Russian';
-        else if (langKey === 'ԾՈՍՅհայկական') name = 'Armenian';
-        // Add other specific overrides if necessary
-
         const nativeName = allTranslations[langKey]?.languageNameNative;
+        let name;
+
         if (nativeName) {
-            name = `${nativeName} (${name})`;
+            name = nativeName; // Prioritize native name
+        } else {
+            // Fallback to English name or parsed key
+            name = allTranslations[langKey]?.languageNameInEnglish ||
+                   langKey.replace('COSY', '').replace('ТАКОЙ', '').replace('ΚΟΖΥ', '').replace('ԾՈՍՅ', ''); // General cleanup for display name
+            
+            // Specific overrides for English names if nativeName is not available
+            if (langKey === 'ΚΟΖΥελληνικά') name = 'Greek';
+            else if (langKey === 'ТАКОЙрусский') name = 'Russian';
+            else if (langKey === 'ԾՈՍՅհայկական') name = 'Armenian';
+            // Add other specific overrides if necessary
         }
         return { key: langKey, name: name };
     });

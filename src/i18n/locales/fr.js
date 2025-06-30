@@ -1,5 +1,6 @@
 // Traductions françaises
 const frTranslations = {
+  languageNameNative: 'Français', // Added native name
   dayNames: {
       1: "Mots de base",
       2: "Qui es-tu ?",

@@ -1,5 +1,6 @@
 // Traductions tataрес
 const ttTranslations = {
+  languageNameNative: 'Татарча', // Added native name
   dayNames: {
       1: "Төп сүзләр",
       2: "Кем син?",
