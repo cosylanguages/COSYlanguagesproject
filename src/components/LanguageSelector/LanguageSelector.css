@@ -1,32 +1,38 @@
-.language-selector-container {
+/* Common styles for language selectors */
+.language-selector-container { 
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle background for visibility in dark headers */
-    border-radius: 4px;
+    gap: 0.5rem; 
+    /* margin-bottom: 10px; /* Context-specific, manage in parent or specific page CSS if needed */
+    /* background-color: rgba(255, 255, 255, 0.1); /* Removed for neutrality */
+    /* border-radius: 4px; /* Will use new default */
 }
 
 .language-select-label {
     font-size: 1.2rem; /* For the emoji */
-    color: white; /* Assuming it might be in a dark header */
+    color: var(--color-text-primary, #333); /* Default text color */
+    margin-right: 10px; 
+    font-weight: 500; 
 }
 
 .language-select-dropdown {
-    padding: 0.3rem 0.5rem;
-    border-radius: 4px;
+    padding: 10px 15px; 
+    border-radius: 5px; 
     border: 1px solid #ccc;
     background-color: #fff;
     color: #333;
-    font-size: 0.9rem;
+    font-size: 1rem; 
     cursor: pointer;
+    min-width: 200px; 
+    transition: border-color 0.2s, box-shadow 0.2s; 
 }
 
 .language-select-dropdown:hover {
-    border-color: #888;
+    border-color: var(--color-primary-dark, #0056b3); 
 }
 
 .language-select-dropdown:focus {
-    outline: 2px solid #007bff;
-    outline-offset: 1px;
+    outline: none; 
+    border-color: var(--color-primary, #007bff); 
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.15); 
 }

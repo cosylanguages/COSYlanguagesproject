@@ -28,21 +28,8 @@ const StudyModePage = () => {
     setSelectedRole(prevRole => prevRole === role ? null : role);
   };
 
-  useEffect(() => {
-    // Nettoie toutes les classes de fond de langue
-    const body = document.body;
-    const classesToRemove = Array.from(body.classList).filter(cls => cls.endsWith('-bg') || cls === 'lang-bg');
-    classesToRemove.forEach(cls => body.classList.remove(cls));
-    const langKey = currentLangKey || language;
-    if (langKey) {
-      body.classList.add(`${langKey}-bg`);
-      body.classList.add('lang-bg');
-    }
-    return () => {
-      const classesToRemove = Array.from(body.classList).filter(cls => cls.endsWith('-bg') || cls === 'lang-bg');
-      classesToRemove.forEach(cls => body.classList.remove(cls));
-    };
-  }, [currentLangKey, language]);
+  // The useEffect block for updating body class has been removed from here.
+  // LanguageSelector.js is now solely responsible for this.
 
   return (
     <div className="study-mode-page-container">
@@ -57,19 +44,7 @@ const StudyModePage = () => {
         <LanguageSelector /> 
         <ToggleLatinizationButton 
           currentDisplayLanguage={currentLangKey || language}
-          style={{
-            padding: '8px 18px',
-            fontSize: '1.1rem',
-            cursor: 'pointer',
-            background: 'linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%)',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '6px',
-            marginLeft: '16px',
-            boxShadow: '0 2px 8px rgba(78,84,200,0.15)',
-            transition: 'background 0.3s, box-shadow 0.3s',
-            fontWeight: 600
-          }}
+          // Inline style override removed, will use .toggle-latinization-btn from index.css
         />
       </div>
 

@@ -8,14 +8,8 @@ const ToggleLatinizationButton = ({ currentDisplayLanguage }) => {
 
   // Determine if the button should be visible
   // Based on whether the currentDisplayLanguage (passed as prop) is in the latinizable list
-  const isCurrentLanguageLatinizable = latinizableLanguageIds.some(id =>
-    currentDisplayLanguage && (
-      currentDisplayLanguage.toLowerCase().includes(id.toLowerCase()) ||
-      (id === 'ΚΟΖΥελληνικά' && currentDisplayLanguage.toLowerCase().includes('greek')) ||
-      (id === 'ТАКОЙрусский' && currentDisplayLanguage.toLowerCase().includes('russian')) ||
-      (id === 'ԾՈՍՅհայկական' && currentDisplayLanguage.toLowerCase().includes('armenian'))
-    )
-  );
+  // The latinizableLanguageIds from context now contains the exact COSY-style language keys.
+  const isCurrentLanguageLatinizable = currentDisplayLanguage && latinizableLanguageIds.includes(currentDisplayLanguage);
 
   if (!isCurrentLanguageLatinizable) {
     return null; // Don't render the button if the current language isn't latinizable
@@ -28,16 +22,7 @@ const ToggleLatinizationButton = ({ currentDisplayLanguage }) => {
   return (
     <button
       onClick={toggleLatinization}
-      style={{
-        padding: '5px 10px',
-        fontSize: '0.9rem',
-        cursor: 'pointer',
-        backgroundColor: '#6c757d',
-        color: 'white',
-        border: '1px solid #5a6268',
-        borderRadius: '4px',
-        marginLeft: '10px', // Example styling
-      }}
+      className="toggle-latinization-btn" // Apply the CSS class
       title={isLatinized ? t('tooltips.showOriginalScript', 'Show text in its original script') : t('tooltips.showLatinScript', 'Show text in Latin script (transliterated)')}
     >
       {buttonText}
