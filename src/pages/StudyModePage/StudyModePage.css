@@ -1,204 +1,174 @@
 /* StudyModePage.css */
 
+/* Container for the entire Study Mode page content */
 .study-mode-page-container {
-    padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content like h1 and menu sections */
+  padding: var(--spacing-lg, 20px);
+  gap: var(--spacing-lg, 20px); /* Space between sections */
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* RoleSelectionView Styles */
-.role-selection-view {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: var(--spacing-xl);
-    background-color: var(--color-surface);
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-md);
-    max-width: 500px;
-    margin: 2rem auto;
+.study-mode-page-container h1 {
+  color: var(--color-text-headings, #343a40);
+  text-align: center;
+  margin-bottom: var(--spacing-md, 1rem); /* Space below main heading */
 }
 
-.role-selection-view h2 {
-    margin-bottom: var(--spacing-lg);
-    color: var(--color-text-headings);
+/* Styling for sections containing label + control (e.g., Language, Role) */
+/* Inspired by .menu-section from old HTML */
+.study-menu-section {
+  display: flex;
+  flex-direction: column; /* Stack label and control vertically */
+  align-items: center; /* Center label and control */
+  gap: var(--spacing-sm, 8px); /* Space between label and control */
+  padding: var(--spacing-md, 1rem);
+  background-color: var(--color-surface, #f8f9fa);
+  border-radius: var(--border-radius-lg, 0.3rem);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1));
+  width: 100%;
+  max-width: 500px; /* Constrain width of these menu sections */
 }
 
-.role-buttons {
-    display: flex;
-    gap: var(--spacing-md);
+.study-menu-section label {
+  font-weight: bold;
+  font-size: var(--font-size-base, 1rem);
+  color: var(--color-text-secondary, #6c757d);
+  margin-bottom: var(--spacing-xs, 4px); /* Small space below label if controls are side-by-side */
 }
 
-.role-button {
-    padding: var(--spacing-md) var(--spacing-lg);
-    font-size: 1.1rem;
-    border-radius: var(--border-radius-md);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    min-width: 150px; 
+/* Specific adjustments for the language selector and latinization button if they are side-by-side */
+.study-menu-section .language-selector-container, 
+.study-menu-section button[title*="Latinization"] { /* Targeting the placeholder by title */
+  /* If they should be side-by-side, their parent div within study-menu-section needs to be display:flex; row */
+  /* For now, assuming they stack or LanguageSelector handles its own layout well. */
 }
-
-.role-button:hover:not(:disabled) {
-    transform: translateY(-2px);
-}
-.role-button:disabled {
-    background-color: var(--color-secondary-light, #ccc); /* Lighter grey for disabled */
-    cursor: not-allowed;
-    opacity: 0.7;
-}
-
-
-.btn-student {
-    background-color: var(--color-info);
-    color: white;
-}
-.btn-student:hover:not(:disabled) {
-    background-color: #138496; 
-}
-
-.btn-teacher {
-    background-color: var(--color-success);
-    color: white;
-}
-.btn-teacher:hover:not(:disabled) {
-    background-color: #1e7e34; 
-}
-.teacher-role-notice {
-    margin-top: var(--spacing-md);
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-    max-width: 350px;
-    text-align: center;
+/* Styling for LanguageSelector's own label if it needs to be different in this context */
+#study-choose-language-label + .language-selector-container .language-select-label {
+  /* Example: hide LanguageSelector's internal label if the external one is preferred */
+  /* display: none; */
 }
 
 
-/* StudyInterfaceView Styles */
-.study-interface-view {
-    padding: var(--spacing-md);
-    display: flex;
-    flex-direction: column; 
+/* Styling for RoleSelector's container and buttons */
+/* RoleSelector.js has .role-selector-container and .role-buttons-wrapper */
+.role-selector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.study-mode-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: var(--spacing-lg);
-    padding-bottom: var(--spacing-md);
-    border-bottom: 1px solid var(--color-border);
+.role-buttons-wrapper {
+  display: flex;
+  gap: var(--spacing-md, 1rem); /* Space between Student and Teacher buttons */
+  justify-content: center; /* Center buttons if they don't fill width */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
-.study-mode-header h2 {
-    margin: 0;
+.role-btn { /* Base class for role buttons from RoleSelector.js */
+  padding: var(--spacing-sm, 0.5rem) var(--spacing-lg, 1.5rem);
+  font-size: var(--font-size-base, 1rem);
+  font-weight: bold;
+  border-radius: var(--border-radius-md, 0.25rem);
+  border: 1px solid var(--color-primary, #007bff);
+  background-color: var(--color-surface, #f8f9fa);
+  color: var(--color-primary, #007bff);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+  min-width: 120px; /* Minimum width for role buttons */
 }
 
-.back-to-freestyle-btn {
-    background-color: var(--color-secondary);
-    color: white;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border: none;
-    border-radius: var(--border-radius-md);
-    font-size: 0.9rem;
-    cursor: pointer;
+.role-btn:hover {
+  background-color: var(--color-primary-dark, #0056b3);
+  color: var(--color-text-on-dark, #fff);
+  border-color: var(--color-primary-dark, #0056b3);
+  transform: translateY(-1px);
 }
 
-.back-to-freestyle-btn:hover {
-    background-color: #545b62;
+.role-btn.active-role-btn {
+  background-color: var(--color-primary, #007bff);
+  color: var(--color-text-on-dark, #fff);
+  border-color: var(--color-primary, #007bff);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
 }
 
-.study-mode-main-layout {
-    display: flex;
-    gap: var(--spacing-md);
+/* Main content area for dashboards or welcome message */
+/* Inspired by .result-area from old HTML */
+.study-content-area {
+  width: 100%;
+  max-width: 700px; /* Max width for the content display area */
+  min-height: 150px;
+  padding: var(--spacing-lg, 1.5rem);
+  margin-top: var(--spacing-md, 1rem); /* Space above content area */
+  background-color: var(--color-background, #fff);
+  border: 1px solid var(--color-border, #dee2e6);
+  border-radius: var(--border-radius-lg, 0.3rem);
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06));
+  text-align: center; /* Default text alignment */
 }
 
-.study-mode-sidebar {
-    flex: 0 0 300px; 
-    padding-right: var(--spacing-md);
-    border-right: 1px solid var(--color-border);
-    max-height: calc(100vh - 150px); 
-    overflow-y: auto;
+.study-content-area p#study-welcome-message {
+  font-style: italic;
+  color: var(--color-text-secondary, #6c757d);
+  font-size: var(--font-size-lg, 1.25rem);
 }
 
-.study-mode-content-area {
-    flex-grow: 1; 
-    padding-left: var(--spacing-md);
+/* Styling for Student/Teacher Dashboard containers */
+.student-dashboard-container,
+.teacher-dashboard-container {
+  text-align: center; /* Center headings and paragraphs within */
 }
 
-.lesson-section-content-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: var(--spacing-md);
+.student-dashboard-container h2,
+.teacher-dashboard-container h2 {
+  color: var(--color-primary, #007bff);
+  margin-bottom: var(--spacing-md, 1rem);
 }
 
-.lesson-section-content-header h3 {
-    margin: 0;
+.student-dashboard-container p,
+.teacher-dashboard-container p {
+  font-size: var(--font-size-base, 1rem);
+  color: var(--color-text-primary, #212529);
 }
 
-.btn-add-content-block {
-    /* Uses .btn and .btn-success from index.css if available, or define here */
-    font-size: 0.9rem;
-    padding: var(--spacing-sm) var(--spacing-md);
+/* Placeholder for Latinization Button - to be styled in Phase 2 */
+button[title*="Latinization"], 
+button[style*="Toggle Latinization (Placeholder)"] /* Targeting placeholder more directly */
+{
+  margin-left: var(--spacing-sm, 10px);
+  padding: 5px 10px; /* from old HTML */
+  background-color: #f0f0f0; /* from old HTML */
+  border: 1px solid #ccc; /* from old HTML */
+  border-radius: 4px; /* from old HTML */
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .study-menu-section,
+  .study-content-area {
+    max-width: 95%;
+    padding: var(--spacing-md, 1rem);
+  }
 
-.lesson-content-area p,
-.study-mode-content-area > p { 
-    font-style: italic;
-    color: var(--color-text-secondary);
-    text-align: center;
-    padding: var(--spacing-lg);
-    background-color: var(--color-surface);
-    border-radius: var(--border-radius-md);
-}
-
-.exercise-block-placeholder {
-    border: 1px dashed var(--color-border);
-    padding: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
-    border-radius: var(--border-radius-sm);
-    background-color: #f9f9f9;
+  .study-mode-page-container h1 {
+    font-size: var(--font-size-h2, 1.875rem);
+  }
 }
 
-.exercise-block-placeholder p {
-    margin-bottom: var(--spacing-xs);
-    font-style: normal; /* Override general italic placeholder */
-    text-align: left;
-    background-color: transparent;
-    padding: 0;
-}
-
-
-/* Placeholder PIN Modal Style (can be removed if PIN modal component is made) */
-.pin-modal-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: var(--spacing-xl);
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-md);
-    max-width: 400px;
-    margin: 2rem auto;
-    text-align: center;
-}
-
-.pin-modal-placeholder h3 {
-    margin-bottom: var(--spacing-md);
-}
-.pin-modal-placeholder p {
-    margin-bottom: var(--spacing-md);
-}
-.pin-modal-placeholder input {
-    margin-bottom: var(--spacing-md);
-    padding: var(--spacing-sm);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-sm);
-    width: 80%;
-}
-.pin-modal-placeholder button {
-    margin: var(--spacing-xs);
-    padding: var(--spacing-sm) var(--spacing-md);
+@media (max-width: 480px) {
+  .role-buttons-wrapper {
+    flex-direction: column; /* Stack role buttons vertically on very small screens */
+    width: 100%;
+  }
+  .role-btn {
+    width: 100%; /* Make role buttons full width when stacked */
+  }
+  .study-mode-page-container h1 {
+    font-size: var(--font-size-h3, 1.5rem);
+  }
 }
