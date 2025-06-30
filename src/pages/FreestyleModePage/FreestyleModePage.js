@@ -24,13 +24,18 @@ const FreestyleModePage = () => {
 
   // Ajoute ou met à jour la classe du body selon la langue sélectionnée
   useEffect(() => {
+    // Nettoie toutes les classes de fond de langue
+    const body = document.body;
+    const classesToRemove = Array.from(body.classList).filter(cls => cls.endsWith('-bg') || cls === 'lang-bg');
+    classesToRemove.forEach(cls => body.classList.remove(cls));
     if (selectedLanguage) {
-      document.body.className = `flag-${selectedLanguage}`;
-    } else {
-      document.body.className = '';
+      body.classList.add(`${selectedLanguage}-bg`);
+      body.classList.add('lang-bg');
     }
-    // Nettoyage lors du démontage
-    return () => { document.body.className = ''; };
+    return () => {
+      const classesToRemove = Array.from(body.classList).filter(cls => cls.endsWith('-bg') || cls === 'lang-bg');
+      classesToRemove.forEach(cls => body.classList.remove(cls));
+    };
   }, [selectedLanguage]);
 
   // Fonction utilitaire pour afficher un toast temporaire
