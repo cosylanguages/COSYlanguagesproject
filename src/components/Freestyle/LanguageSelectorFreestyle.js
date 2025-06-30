@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useI18n } from '../../i18n/I18nContext'; 
 import '../LanguageSelector/LanguageSelector.css'; // Import unified CSS
 
@@ -24,6 +24,18 @@ const LanguageSelectorFreestyle = ({ selectedLanguage, onLanguageChange }) => {
             onLanguageChange(event.target.value);
         }
     };
+
+    useEffect(() => {
+        const body = document.body;
+        // Supprimer les anciennes classes de fond
+        const classesToRemove = Array.from(body.classList).filter(cls => cls.endsWith('-bg') || cls === 'lang-bg');
+        classesToRemove.forEach(cls => body.classList.remove(cls));
+        if (selectedLanguage) {
+            const langClassName = `${selectedLanguage}-bg`;
+            body.classList.add(langClassName);
+            body.classList.add('lang-bg');
+        }
+    }, [selectedLanguage]);
 
     return (
         <div className="language-selector-container"> {/* Use unified class */}
