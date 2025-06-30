@@ -48,7 +48,7 @@ const WhatHappensNextExercise = ({ language, days, onNext }) => {
         setIsLoading(false);
         setError(t('errors.selectLangDay', "Please select a language and day(s)."));
     }
-  }, [fetchNewPrompt, language, days]);
+  }, [fetchNewPrompt, language, days, t]); // Added t to dependency array
   
   const handleSubmit = () => {
     if (text.trim().length < 10) {

@@ -1,4 +1,3 @@
-import { shuffleArray } from './arrayUtils';
 import { capitalizeWord, escapeRegExp } from './stringUtils';
 import { loadVocabularyData } from './exerciseDataService'; // For fetching vocabulary for objects
 

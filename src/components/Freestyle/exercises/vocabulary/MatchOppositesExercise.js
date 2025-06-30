@@ -22,7 +22,8 @@ const MatchOppositesExercise = ({ language, days, exerciseKey }) => {
   const [isRevealed, setIsRevealed] = useState(false);
   const [lines, setLines] = useState([]); // For drawing lines between matched items
 
-  const { isLatinized } = useLatinizationContext();
+  // const { isLatinized } = useLatinizationContext(); // This instance of isLatinized is unused.
+  useLatinizationContext(); // Called to satisfy rules-of-hooks, assuming other context values might be used later or were used before.
   const getLatinizedText = useLatinization;
   const progress = useProgress();
 
@@ -192,7 +193,7 @@ const MatchOppositesExercise = ({ language, days, exerciseKey }) => {
   const revealAllAnswers = () => {
     setIsRevealed(true);
     const allCurrentlyMatched = {};
-    const newLines = [];
+    const linesForRevealed = []; 
     pairs.forEach(pair => {
       allCurrentlyMatched[pair.word] = true;
       allCurrentlyMatched[pair.opposite] = true;
@@ -209,11 +210,11 @@ const MatchOppositesExercise = ({ language, days, exerciseKey }) => {
         const y1 = rect1.top + rect1.height / 2 - containerRect.top + columnsContainerRef.current.scrollTop;
         const x2 = rect2.left + rect2.width / 2 - containerRect.left + columnsContainerRef.current.scrollLeft;
         const y2 = rect2.top + rect2.height / 2 - containerRect.top + columnsContainerRef.current.scrollTop;
-        newLines.push({ x1, y1, x2, y2, key: `line-${normalizeString(pair.word)}-${normalizeString(pair.opposite)}` });
+        linesForRevealed.push({ x1, y1, x2, y2, key: `line-${normalizeString(pair.word)}-${normalizeString(pair.opposite)}` });
       }
     });
     setMatchedItems(allCurrentlyMatched);
-    setLines(newLines);
+    setLines(linesForRevealed); // Use the new variable here
     setNumCorrectMatches(pairs.length);
     setFeedback({ message: "All pairs revealed.", type: 'info' });
   };
