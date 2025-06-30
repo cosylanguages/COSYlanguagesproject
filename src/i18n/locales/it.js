@@ -1,5 +1,5 @@
 // Traductions italiennes
-export default {
+const itTranslations = {
   dayNames: {
       1: "Parole di base",
       2: "Chi sei?",

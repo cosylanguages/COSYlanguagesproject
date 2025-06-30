@@ -1,5 +1,5 @@
 // Traductions bretonnes
-export default {
+const brTranslations = {
   dayNames: {
     1: "Gerioù diazez",
     2: "Piv out?",

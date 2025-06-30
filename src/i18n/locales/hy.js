@@ -1,5 +1,5 @@
 // Traductions armենական
-export default {
+const hyTranslations = {
   dayNames: {
       1: "Հիմնական բառեր",
       2: "Ո՞վ ես դու?",
