@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet, Link, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../AuthContext'; // Adjusted path
 import { useI18n } from '../../i18n/I18nContext'; // Import useI18n
-import LanguageSelector from '../LanguageSelector/LanguageSelector'; // Import LanguageSelector
+// import LanguageSelector from '../LanguageSelector/LanguageSelector'; // Import LanguageSelector - REMOVED
 import './Layout.css'; 
 
 const Layout = () => {
@@ -37,7 +37,7 @@ const Layout = () => {
           </ul>
         </nav>
         <div className="header-controls">
-          <LanguageSelector />
+          {/* <LanguageSelector /> - REMOVED */}
           {isAuthenticated && currentUser && (
             <div className="user-info">
               <span>{t('welcomeUser', { name: currentUser.username || currentUser.role || 'User' }) || `Welcome, ${currentUser.username || currentUser.role || 'User'}!`}</span>

@@ -1,65 +1,79 @@
 import React from 'react';
+import { useI18n } from '../../i18n/I18nContext'; // Adjusted path if necessary
 
-// Actual Exercise Components
-import ShowWordExercise from './exercises/vocabulary/ShowWordExercise';
+// Assuming a similar CSS class can be used or define specific styles
+// import '../LanguageSelector/LanguageSelector.css'; 
 
-// Placeholder components for exercises - these will be replaced by actual exercise components later
-const PlaceholderExercise = ({ name }) => (
-  <div style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '5px', backgroundColor: '#f9f9f9' }}>
-    <h3>{name} Exercise</h3>
-    <p>This is a placeholder for the <em>{name}</em> exercise.</p>
-    <p>Implementation is pending.</p>
-  </div>
-);
+const LanguageSelectorFreestyle = ({ selectedLanguage, onLanguageChange }) => {
+    const { allTranslations } = useI18n();
 
-// Mapping of sub-practice IDs to their components
-// This will grow as actual exercise components are developed.
-const exerciseMap = {
-  // Vocabulary
-  'random-word': ShowWordExercise, // Use the actual component
-  'random-image': () => <PlaceholderExercise name="Random Image" />,
-  'listening': () => <PlaceholderExercise name="Listening" />,
-  // Grammar
-  'gender-articles': () => <PlaceholderExercise name="Gender & Articles" />,
-  'verbs-conjugation': () => <PlaceholderExercise name="Verbs & Conjugation" />,
-  'possessives': () => <PlaceholderExercise name="Possessives" />,
-  // Reading
-  'story': () => <PlaceholderExercise name="Story" />,
-  'interesting-fact': () => <PlaceholderExercise name="Interesting Fact" />,
-  // Speaking
-  'question-practice': () => <PlaceholderExercise name="Speaking Question" />,
-  'monologue': () => <PlaceholderExercise name="Monologue" />,
-  // Writing
-  'writing-question': () => <PlaceholderExercise name="Writing Question" />,
-  'storytelling': () => <PlaceholderExercise name="Storytelling" />,
-  // Add more mappings as exercises are developed
-};
+    const availableLanguages = Object.keys(allTranslations).map(langKey => {
+        // Extract a more user-friendly name
+        // Prioritize languageNameNative if available, then languageNameInEnglish, then fallback
+        let name = allTranslations[langKey]?.languageNameNative || 
+                   allTranslations[langKey]?.languageNameInEnglish || 
+                   langKey.replace('COSY', ''); // Basic cleanup
 
-const ExerciseHost = ({ subPracticeType, language, days, exerciseKey }) => {
-  if (!subPracticeType) {
-    return <p style={{ textAlign: 'center', fontStyle: 'italic', color: '#666' }}>Please select an exercise type above.</p>;
-  }
+        // If native and English names are different and both exist, show both
+        if (allTranslations[langKey]?.languageNameNative && 
+            allTranslations[langKey]?.languageNameInEnglish && 
+            allTranslations[langKey]?.languageNameNative !== allTranslations[langKey]?.languageNameInEnglish) {
+            name = `${allTranslations[langKey]?.languageNameNative} (${allTranslations[langKey]?.languageNameInEnglish})`;
+        }
+        
+        return { key: langKey, name: name };
+    });
 
-  const ExerciseComponent = exerciseMap[subPracticeType];
+    const handleChange = (event) => {
+        if (onLanguageChange) {
+            onLanguageChange(event.target.value);
+        }
+    };
 
-  if (!ExerciseComponent) {
+    // Basic styling, can be enhanced with CSS file
+    const selectStyle = {
+        padding: '10px 15px',
+        fontSize: '1rem',
+        borderRadius: '5px',
+        border: '1px solid #ccc',
+        backgroundColor: 'white',
+        cursor: 'pointer',
+        minWidth: '200px', // Ensure it has some width
+    };
+
+    const labelStyle = {
+      marginRight: '10px',
+      fontSize: '1rem',
+      fontWeight: '500',
+    };
+
+    const containerStyle = {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center', // Ensures content within is centered if container is wider
+      width: '100%', // Takes width from parent (.selector-container)
+    };
+
     return (
-      <div style={{ color: 'red', textAlign: 'center', padding: '20px', border: '1px solid red', borderRadius: '5px' }}>
-        <h3>Exercise Error</h3>
-        <p>Exercise type "<strong>{subPracticeType}</strong>" not found or not yet implemented.</p>
-        <p>Please check the mapping in ExerciseHost.js or select another exercise.</p>
-      </div>
+        <div style={containerStyle} className="language-selector-freestyle-container"> {/* Added class for potential CSS targeting */}
+            <label htmlFor="freestyle-language-select" style={labelStyle}>
+                🌎:
+            </label>
+            <select 
+                id="freestyle-language-select" 
+                value={selectedLanguage} 
+                onChange={handleChange} 
+                style={selectStyle}
+                aria-label="Select language for freestyle mode"
+            >
+                {availableLanguages.map(lang => (
+                    <option key={lang.key} value={lang.key}>
+                        {lang.name}
+                    </option>
+                ))}
+            </select>
+        </div>
     );
-  }
-
-  // Pass necessary props to the actual exercise component
-  // exerciseKey is used to force re-mounting and re-fetching data if the same exercise type is selected again
-  // Note: If ExerciseComponent is a functional component that returns JSX (like Placeholders),
-  // it needs to be called as <ExerciseComponent /> not ExerciseComponent().
-  // If it's a class component or a direct reference to a functional component (like ShowWordExercise),
-  // it can be used directly as <ExerciseComponent ... />.
-  // For consistency with how React handles components, direct reference is better.
-  return <ExerciseComponent language={language} days={days} exerciseKey={exerciseKey} />;
 };
 
-export default ExerciseHost;
+export default LanguageSelectorFreestyle;
