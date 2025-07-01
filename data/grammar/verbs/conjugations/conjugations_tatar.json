@@ -1,0 +1,151 @@
+{
+  "language_code": "tt",
+  "language_name": "Tatar",
+  "notes": "Tatar is an agglutinative language with vowel harmony. The forms shown are highly illustrative and simplified, and may not capture all nuances or correct vowel harmony in all cases. Expert review is absolutely essential.",
+  "verbs": [
+    {
+      "infinitive": "булырга",
+      "translation_en": "to be",
+      "tags": ["irregular", "auxiliary"],
+      "tenses": {
+        "хәзерге заман (present)": {
+          "mood": "indicative",
+          "forms": { "мин": "юк/бар (predicative)", "син": "юк/бар", "ул": "юк/бар", "без": "юк/бар", "сез": "юк/бар", "алар": "юк/бар" },
+          "notes": "Present tense 'is/am/are' is often shown by lack of verb or by predicative particles/nouns, not direct conjugation of 'булырга'. 'Мин студент' (I am a student)."
+        },
+        "билгеле үткән заман (definite past)": {
+          "mood": "indicative",
+          "forms": { "мин": "булдым", "син": "булдың", "ул": "булды", "без": "булдык", "сез": "булдыгыз", "алар": "булдылар" }
+        },
+        "билгеле киләчәк заман (definite future)": {
+          "mood": "indicative",
+          "forms": { "мин": "булырмын", "син": "булырсың", "ул": "булыр", "без": "булырбыз", "сез": "булырсыз", "алар": "булырлар" }
+        },
+        "шарт фигыль (conditional)": {
+          "mood": "conditional",
+          "forms": { "мин": "булсам", "син": "булсаң", "ул": "булса", "без": "булсак", "сез": "булсагыз", "алар": "булсалар" }
+        }
+      }
+    },
+    {
+      "infinitive": "ия булырга",
+      "translation_en": "to have (possess)",
+      "tags": ["compound"],
+      "notes": "More commonly 'минем ... бар' (I have...). This is 'to become an owner'.",
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "ул": "ия була" } },
+        "билгеле үткән заман (definite past)": { "forms": { "ул": "ия булды" } }
+      }
+    },
+    {
+      "infinitive": "ошарга",
+      "translation_en": "to like",
+      "tags": [],
+      "notes": "Often used with dative: 'миңа ошый' (I like it - it pleases me).",
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "ул": "ошый" } },
+        "билгеле үткән заман (definite past)": { "forms": { "ул": "ошады" } }
+      }
+    },
+    {
+      "infinitive": "уйларга",
+      "translation_en": "to think",
+      "tags": [],
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "мин": "уйлыйм", "ул": "уйлый" } },
+        "билгеле үткән заман (definite past)": { "forms": { "мин": "уйладым", "ул": "уйлады" } }
+      }
+    },
+    {
+      "infinitive": "белергә",
+      "translation_en": "to know (facts/skills)",
+      "tags": [],
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "мин": "беләм", "ул": "белә" } },
+        "билгеле үткән заман (definite past)": { "forms": { "мин": "белдем", "ул": "белде" } }
+      }
+    },
+    {
+      "infinitive": "танырга",
+      "translation_en": "to know (people/places)",
+      "tags": [],
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "мин": "таныйм", "ул": "таный" } },
+        "билгеле үткән заман (definite past)": { "forms": { "мин": "таныдым", "ул": "таныды" } }
+      }
+    },
+    {
+      "infinitive": "теләргә",
+      "translation_en": "to want",
+      "tags": [],
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "мин": "телим", "ул": "тели" } },
+        "билгеле үткән заман (definite past)": { "forms": { "мин": "теләдем", "ул": "теләде" } },
+        "шарт фигыль (conditional)": { "translation_en_tense": "would like", "forms": { "мин": "теләсәм", "ул": "теләсә" }, "notes": "Often with 'иде': 'теләр идем' (I would like)." }
+      }
+    },
+    {
+      "infinitive": "эшләргә",
+      "translation_en": "to work",
+      "tags": [],
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "мин": "эшлим", "ул": "эшли" } },
+        "билгеле үткән заман (definite past)": { "forms": { "мин": "эшләдем", "ул": "эшләде" } }
+      }
+    },
+    {
+      "infinitive": "укырга",
+      "translation_en": "to study/read",
+      "tags": [],
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "мин": "укыйм", "ул": "укый" } },
+        "билгеле үткән заман (definite past)": { "forms": { "мин": "укыдым", "ул": "укыды" } }
+      }
+    },
+    {
+      "infinitive": "барырга",
+      "translation_en": "to go",
+      "tags": [],
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "мин": "барам", "ул": "бара" } },
+        "билгеле үткән заман (definite past)": { "forms": { "мин": "бардым", "ул": "барды" } }
+      }
+    },
+    {
+      "infinitive": "булдыра алу", 
+      "translation_en": "to be able to (can)",
+      "tags": ["periphrastic"],
+      "notes": "Formed with verbal noun in -а/-ә + алу (e.g. бара алам - I can go). Simpler verb 'итәргә' (to do/make) might be used in some contexts or a more specific verb for 'can manage'.",
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "мин": "булдыра алам", "ул": "булдыра ала" } }
+      }
+    },
+    {
+      "infinitive": "ашарга",
+      "translation_en": "to eat",
+      "tags": [],
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "мин": "ашыйм", "ул": "ашый" } },
+        "билгеле үткән заман (definite past)": { "forms": { "мин": "ашадым", "ул": "ашады" } }
+      }
+    },
+    {
+      "infinitive": "эчәргә",
+      "translation_en": "to drink",
+      "tags": [],
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "мин": "эчәм", "ул": "эчә" } },
+        "билгеле үткән заман (definite past)": { "forms": { "мин": "эчтем", "ул": "эчте" } }
+      }
+    },
+    {
+      "infinitive": "сөйләргә",
+      "translation_en": "to speak",
+      "tags": [],
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "мин": "сөйлим", "ул": "сөйли" } },
+        "билгеле үткән заман (definite past)": { "forms": { "мин": "сөйләдем", "ул": "сөйләде" } }
+      }
+    }
+  ]
+}
