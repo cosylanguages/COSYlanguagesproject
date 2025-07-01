@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { loadOppositesData } from '../../../../utils/exerciseDataService';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
 import { useLatinizationContext } from '../../../../contexts/LatinizationContext';
 import useLatinization from '../../../../hooks/useLatinization';
 import { shuffleArray } from '../../../../utils/arrayUtils';
-import { useProgress } from '../../../../contexts/ProgressContext'; 
 import { normalizeString } from '../../../../utils/stringUtils';
 
 const MatchOppositesExercise = ({ language, days, exerciseKey }) => {
@@ -25,7 +24,6 @@ const MatchOppositesExercise = ({ language, days, exerciseKey }) => {
   // const { isLatinized } = useLatinizationContext(); // This instance of isLatinized is unused.
   useLatinizationContext(); // Called to satisfy rules-of-hooks, assuming other context values might be used later or were used before.
   const getLatinizedText = useLatinization;
-  const progress = useProgress();
 
   const itemRefs = useRef({}); // To store refs for each matchable item
   const columnsContainerRef = useRef(null); // Ref for the div containing both columns
@@ -150,14 +148,12 @@ const MatchOppositesExercise = ({ language, days, exerciseKey }) => {
         }
         
         setNumCorrectMatches(prev => prev + 1);
-        progress.awardCorrectAnswer(itemId, 'vocab-match-opposites', language);
         
         setSelectedWord(null); // Clear selections immediately after correct match
         setSelectedOpposite(null);
 
       } else {
         setFeedback({ message: 'Incorrect Match. Try again.', type: 'incorrect' });
-        progress.awardIncorrectAnswer(itemId, 'vocab-match-opposites', language);
         
         // Visual feedback for incorrect (e.g., flash border red)
         if(selectedWord.element) selectedWord.element.classList.add('incorrect-flash');
@@ -171,7 +167,7 @@ const MatchOppositesExercise = ({ language, days, exerciseKey }) => {
         }, 1000);
       }
     }
-  }, [selectedWord, selectedOpposite, pairs, progress, language, drawLine]);
+  }, [selectedWord, selectedOpposite, pairs, drawLine]);
 
   useEffect(() => {
     if (pairs.length > 0 && numCorrectMatches === pairs.length && !isRevealed) {
@@ -197,8 +193,6 @@ const MatchOppositesExercise = ({ language, days, exerciseKey }) => {
     pairs.forEach(pair => {
       allCurrentlyMatched[pair.word] = true;
       allCurrentlyMatched[pair.opposite] = true;
-      const itemId = `matchopposite_${normalizeString(pair.word)}_${normalizeString(pair.opposite)}`;
-      progress.scheduleReview(itemId, 'vocab-match-opposites', language, false); // Mark as incorrect for review if revealed
 
       const el1 = itemRefs.current[`word-${pair.word}`];
       const el2 = itemRefs.current[`opposite-${pair.opposite}`];

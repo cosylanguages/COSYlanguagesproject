@@ -6,7 +6,6 @@ import ExerciseControls from '../../ExerciseControls';
 import { useLatinizationContext } from '../../../../contexts/LatinizationContext';
 import useLatinization from '../../../../hooks/useLatinization';
 import { normalizeString as normalizeStringUtil } from '../../../../utils/stringUtils';
-import { useProgress } from '../../../../contexts/ProgressContext';
 import { useI18n } from '../../../../i18n/I18nContext';
 
 const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
@@ -20,7 +19,6 @@ const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
-  const progress = useProgress();
   const { t } = useI18n();
 
   const fetchAndSetNewWord = useCallback(async () => {
@@ -91,14 +89,12 @@ const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
 
     if (isCorrect) {
       setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
-      progress.awardCorrectAnswer(itemId, 'vocab-transcribe', language);
       setIsAnsweredCorrectly(true);
       setTimeout(() => {
         fetchAndSetNewWord();
       }, 1500); // 1.5-second delay
     } else {
       setFeedback({ message: t('feedback.incorrectAnswerIs', `Incorrect. The correct answer is: ${displayAnswer}`, { correctAnswer: displayAnswer }), type: 'incorrect' });
-      progress.awardIncorrectAnswer(itemId, 'vocab-transcribe', language);
     }
   };
 
@@ -117,7 +113,6 @@ const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
     setUserInput(correctWord); 
     setFeedback({ message: t('feedback.correctAnswerIs', `The correct answer is: ${displayAnswer}`, { correctAnswer: displayAnswer }), type: 'info' });
     setIsRevealed(true);
-    progress.scheduleReview(itemId, 'vocab-transcribe', language, false); // Ensure language is passed
 
     if (!isAnsweredCorrectly) { // Only auto-progress if not already answered correctly
         setTimeout(() => {

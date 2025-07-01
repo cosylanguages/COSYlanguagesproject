@@ -6,7 +6,6 @@ import { useLatinizationContext } from '../../../../contexts/LatinizationContext
 import useLatinization from '../../../../hooks/useLatinization';
 import { pronounceText } from '../../../../utils/speechUtils';
 import { shuffleArray } from '../../../../utils/arrayUtils';
-import { useProgress } from '../../../../contexts/ProgressContext';
 import { normalizeString } from '../../../../utils/stringUtils';
 import { useI18n } from '../../../../i18n/I18nContext'; // Assuming i18n for texts
 
@@ -24,7 +23,6 @@ const BuildWordExercise = ({ language, days, exerciseKey }) => {
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization; // Use the hook directly
-  const progress = useProgress();
   const { t } = useI18n(); // For internationalized strings
 
   const latinizedCorrectWord = getLatinizedText(correctWord, language);
@@ -129,13 +127,11 @@ const BuildWordExercise = ({ language, days, exerciseKey }) => {
     if (isCorrectNow) {
       setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
       setIsCorrectState(true);
-      progress.awardCorrectAnswer(itemId, 'vocab-build-word', language);
       setTimeout(() => {
         setupNewWord();
       }, 1500); // Auto-progress
     } else {
       setFeedback({ message: t('feedback.incorrectKeepTrying', `Incorrect. Keep trying or use a hint.`), type: 'incorrect' });
-      progress.awardIncorrectAnswer(itemId, 'vocab-build-word', language);
     }
   };
 
@@ -186,7 +182,6 @@ const BuildWordExercise = ({ language, days, exerciseKey }) => {
     setFeedback({ message: t('feedback.answerIs', `The word is: ${latinizedCorrectWord || correctWord}`, { answer: latinizedCorrectWord || correctWord }), type: 'info' });
     setIsRevealed(true);
     setIsCorrectState(true); 
-    progress.scheduleReview(itemId, 'vocab-build-word', language, false); // Ensure language is passed
     if(!isCorrectState) { // Only auto-progress if not already answered correctly before reveal
         setTimeout(() => {
             setupNewWord();
