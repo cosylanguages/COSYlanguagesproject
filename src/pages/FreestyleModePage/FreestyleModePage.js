@@ -44,8 +44,6 @@ const FreestyleModePage = () => {
 
   const handleDaysChange = (days) => { 
     setSelectedDays(days); 
-    setCurrentMainCategory(null);
-    setCurrentSubPractice(null);
     setExerciseKey(prevKey => prevKey + 1);
   };
 
