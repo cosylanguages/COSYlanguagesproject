@@ -8,10 +8,10 @@
  */
 async function fetchJsonData(filePath) {
   try {
-    // In a React app, paths for static assets in `public` are usually relative to the root.
-    // If your `data` folder is in `public`, paths would be like `/data/vocabulary/words/english.json`.
-    // If served via a specific route by a dev server or backend, adjust accordingly.
-    const response = await fetch(filePath); 
+    // Prepend PUBLIC_URL to ensure correct pathing, especially in production builds or subfolder deployments.
+    // filePath is expected to start with a leading slash like '/data/...'
+    const fullPath = `${process.env.PUBLIC_URL || ''}${filePath}`;
+    const response = await fetch(fullPath); 
     if (response.ok) {
       try {
         const data = await response.json();
