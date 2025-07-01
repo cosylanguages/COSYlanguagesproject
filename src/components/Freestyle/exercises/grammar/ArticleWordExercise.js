@@ -6,7 +6,6 @@ import { pronounceText } from '../../../../utils/speechUtils';
 import { normalizeString } from '../../../../utils/stringUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
-import { useProgress } from '../../../../contexts/ProgressContext'; // Import useProgress
 
 const ArticleWordExercise = ({ language, days, exerciseKey }) => {
   const [grammarItem, setGrammarItem] = useState(null); // { word: '...', article: '...' }
@@ -19,7 +18,6 @@ const ArticleWordExercise = ({ language, days, exerciseKey }) => {
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
-  const progress = useProgress(); // Get progress functions
 
   const setupNewExercise = useCallback(async () => {
     setIsLoading(true);
@@ -75,14 +73,11 @@ const ArticleWordExercise = ({ language, days, exerciseKey }) => {
     const expectedAnswer = variation.answer;
     const latinizedExpected = getLatinizedText(expectedAnswer, language);
     const displayCorrect = isLatinized ? latinizedExpected : expectedAnswer;
-    const itemId = `gender_${grammarItem.word}_${grammarItem.article}`; // Construct a unique item ID
 
     if (normalizeString(userInput) === normalizeString(expectedAnswer)) {
       setFeedback({ message: 'Correct!', type: 'correct' });
-      progress.awardCorrectAnswer(itemId, 'grammar-article');
     } else {
       setFeedback({ message: `Incorrect. The correct answer is: ${displayCorrect}`, type: 'incorrect' });
-      progress.awardIncorrectAnswer(itemId, 'grammar-article');
     }
   };
 
@@ -101,12 +96,10 @@ const ArticleWordExercise = ({ language, days, exerciseKey }) => {
     const expectedAnswer = variation.answer;
     const latinizedExpected = getLatinizedText(expectedAnswer, language);
     const displayCorrect = isLatinized ? latinizedExpected : expectedAnswer;
-    const itemId = `gender_${grammarItem.word}_${grammarItem.article}`;
 
     setUserInput(expectedAnswer); 
     setFeedback({ message: `The correct answer is: ${displayCorrect}`, type: 'info' });
     setIsRevealed(true);
-    progress.scheduleReview(itemId, 'grammar-article', false); // Mark as incorrect if revealed
   };
 
   const handlePronounceQuestion = () => {
