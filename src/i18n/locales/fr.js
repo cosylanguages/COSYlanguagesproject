@@ -205,7 +205,15 @@ const frTranslations = {
     writingOptions: 'Options d’écriture',
     playSound: 'Jouer le son',
     resetTiles: 'Réinitialiser les tuiles'
-  }
+  },
+  // --- Boutons SubPractice Vocabulaire ---
+  "subPractice.vocabulary.randomWord": "🔤 Mot aléatoire",
+  "subPractice.vocabulary.randomImage": "🖼️ Image aléatoire",
+  "subPractice.vocabulary.matchImageWord": "🖼️ Associer image et mot",
+  "subPractice.vocabulary.listening": "🎧 Écoute",
+  "subPractice.vocabulary.typeOpposite": "⇄ Taper l’opposé",
+  "subPractice.vocabulary.matchOpposites": "⇄ Associer les opposés",
+  "subPractice.vocabulary.buildWord": "🔡 Construire un mot"
 };
 
 export default frTranslations;
