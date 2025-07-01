@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { loadOppositesData } from '../../../../utils/exerciseDataService';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
