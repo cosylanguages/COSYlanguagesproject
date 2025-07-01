@@ -37,17 +37,26 @@ const LanguageSelector = () => {
 
     useEffect(() => {
         const body = document.body;
-        
-        // Clear previous language classes
-        const classesToRemove = Array.from(body.classList).filter(cls => cls.endsWith('-bg') || cls === 'lang-bg');
+        // Supprimer les anciennes classes de fond
+        const classesToRemove = Array.from(body.classList).filter(cls => cls.endsWith('-bg') || cls === 'lang-bg' || cls === 'lang-bg-fallback');
         classesToRemove.forEach(cls => body.classList.remove(cls));
 
         if (currentLangKey) {
-            // currentLangKey is expected to be like 'COSYenglish', 'COSYfrançais', etc.
-            // These directly map to CSS class prefixes defined in src/index.css
             const langClassName = `${currentLangKey}-bg`;
-            body.classList.add(langClassName);
-            body.classList.add('lang-bg'); // Add base class for shared properties
+            // Test si la classe existe dans les feuilles de style chargées
+            const classExists = Array.from(document.styleSheets).some(sheet => {
+                try {
+                  return Array.from(sheet.cssRules || []).some(rule => rule.selectorText === `.${langClassName}`);
+                } catch (e) { return false; }
+            });
+            if (classExists) {
+                body.classList.add(langClassName);
+                body.classList.add('lang-bg');
+            } else {
+                body.classList.add('lang-bg-fallback');
+            }
+        } else {
+            body.classList.add('lang-bg-fallback');
         }
     }, [currentLangKey]); // Effect depends on currentLangKey from context
 
