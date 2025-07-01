@@ -19,27 +19,9 @@
   margin-bottom: var(--spacing-md, 0.75rem);
 }
 
-.lesson-score-summary {
-  background-color: var(--color-surface-light, #e9ecef);
-  padding: var(--spacing-md, 1rem);
-  border-radius: var(--border-radius-md, 0.25rem);
-  text-align: center;
-  margin-top: var(--spacing-sm, 0.5rem);
-}
-
-.lesson-score-summary h3 {
-  margin-top: 0;
-  margin-bottom: var(--spacing-sm, 0.5rem);
-  font-size: var(--font-size-lg, 1.2rem); /* Slightly larger for summary title */
-  color: var(--color-text-headings, #343a40);
-}
-
-.lesson-score-summary p {
-  margin: 0;
-  font-size: var(--font-size-base, 1rem);
-  font-weight: bold;
-  color: var(--color-text-secondary, #495057);
-}
+/* .lesson-score-summary was removed as the component logic is gone */
+/* .lesson-score-summary h3 was removed */
+/* .lesson-score-summary p was removed */
 
 .lesson-content-student-view {
   display: flex;
@@ -78,16 +60,7 @@
   text-align: center;
 }
 
-.block-score-feedback {
-  margin-top: var(--spacing-sm, 0.5rem);
-  padding: var(--spacing-xs, 0.25rem) var(--spacing-sm, 0.5rem);
-  background-color: var(--color-surface-info, #e7f3fe);
-  color: var(--color-text-info, #0c5460);
-  border: 1px solid var(--color-border-info, #b8daff);
-  border-radius: var(--border-radius-sm, 0.2rem);
-  font-size: var(--font-size-sm, 0.875rem);
-  text-align: right;
-}
+/* .block-score-feedback was removed as the component logic is gone */
 
 /* Message when no content is available */
 .student-dashboard-container > p {

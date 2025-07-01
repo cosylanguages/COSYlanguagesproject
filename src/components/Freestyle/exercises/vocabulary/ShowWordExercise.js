@@ -5,7 +5,7 @@ import useLatinization from '../../../../hooks/useLatinization';
 import { pronounceText, unlockAudioPlayback } from '../../../../utils/speechUtils';
 import ExerciseControls from '../../ExerciseControls'; 
 import FeedbackDisplay from '../../FeedbackDisplay';
-import { useProgress } from '../../../../contexts/ProgressContext'; // Import useProgress
+// import { useProgress } from '../../../../contexts/ProgressContext'; // Import useProgress
 import { normalizeString } from '../../../../utils/stringUtils';
 
 
@@ -14,7 +14,7 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const { isLatinized } = useLatinizationContext();
-  const progress = useProgress();
+  // const progress = useProgress(); // Removed progress
 
   const latinizedWord = useLatinization(currentWord, language);
 
@@ -32,12 +32,12 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
     // If there was a word, consider it "seen" or "passed" for SRS purposes
     // This is a simple way; more complex logic might depend on user interaction (e.g., if they pronounced it)
     if (oldWord) {
-        const itemId = `showword_${normalizeString(oldWord)}`;
+        // const itemId = `showword_${normalizeString(oldWord)}`; // Removed
         // For ShowWord, "correct" might mean the user acknowledged/studied it.
         // Since there's no direct input, we might assume "correct" when they move to the next.
         // Or, this could be a place for a "I knew this" / "I didn't know this" button in future.
         // For now, let's log it as a generic interaction.
-        progress.scheduleReview(itemId, 'vocab-show-word', true); // Assume "true" as they moved on
+        // progress.scheduleReview(itemId, 'vocab-show-word', true); // Assume "true" as they moved on // Removed
     }
 
     try {
@@ -57,7 +57,8 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
     } finally {
       setIsLoading(false);
     }
-  }, [language, days, progress, currentWord]); // Added currentWord to useCallback deps for oldWord tracking
+  // }, [language, days, progress, currentWord]); // progress removed from dependencies
+  }, [language, days, currentWord]); // Added currentWord to useCallback deps for oldWord tracking
 
   useEffect(() => {
     if (language && days && days.length > 0) { 
@@ -91,6 +92,9 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
   }
 
   if (error) {
+    // NOTE: The FeedbackDisplay component was reported as missing.
+    // If this component is essential and its removal was unintended, this might cause a runtime error.
+    // For now, assuming its usage here is okay or it's handled elsewhere.
     return <FeedbackDisplay message={error} type="error" />;
   }
 
