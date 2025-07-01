@@ -13,10 +13,12 @@
     },
     {
       "id": "day2",
-      "title": "Day 2: Around Town",
+      "title": {
+        "COSYenglish": "Day 2: Around Town"
+      },
       "sections": [
-        { "id": "d2s1", "title": "Places" },
-        { "id": "d2s2", "title": "Directions" }
+        { "id": "d2s1", "title": { "COSYenglish": "Places" } },
+        { "id": "d2s2", "title": { "COSYenglish": "Directions" } }
       ]
     },
     {
@@ -28,6 +30,55 @@
         { "id": "d3s1", "title": { "COSYenglish": "Fruits & Vegetables" } },
         { "id": "d3s2", "title": { "COSYenglish": "Ordering a Meal" } }
       ]
+    },
+    {
+      "id": "new_day1",
+      "title": {
+        "COSYenglish": "DAY 1 | Basic Words"
+      },
+      "sections": []
+    },
+    {
+      "id": "new_day2",
+      "title": {
+        "COSYenglish": "DAY 2 | Who are you?"
+      },
+      "sections": []
+    },
+    {
+      "id": "new_day3",
+      "title": {
+        "COSYenglish": "DAY 3 | My family and I"
+      },
+      "sections": []
+    },
+    {
+      "id": "new_day4",
+      "title": {
+        "COSYenglish": "DAY 4 | What is your phone number?"
+      },
+      "sections": []
+    },
+    {
+      "id": "new_day5",
+      "title": {
+        "COSYenglish": "DAY 5 | It is important and big"
+      },
+      "sections": []
+    },
+    {
+      "id": "new_day6",
+      "title": {
+        "COSYenglish": "DAY 6 | I don't like red wine"
+      },
+      "sections": []
+    },
+    {
+      "id": "new_day7",
+      "title": {
+        "COSYenglish": "DAY 7 | Where are you from?"
+      },
+      "sections": []
     }
   ],
   "studySets": [
