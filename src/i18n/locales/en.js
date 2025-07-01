@@ -179,7 +179,43 @@ const enTranslations = {
   // For TextBlock.js (if not already present or for consistency)
   "pronounceTitle": "Pronounce title",
   "pronounceContent": "Pronounce content",
-  "noTextContentProvided": "No text content provided."
+  "noTextContentProvided": "No text content provided.",
+
+  // --- SubPractice Vocabulary Buttons ---
+  "subPractice.vocabulary.randomWord": "🔤 Random Word",
+  "subPractice.vocabulary.randomImage": "🖼️ Random Image",
+  "subPractice.vocabulary.matchImageWord": "🖼️ Match Image & Word",
+  "subPractice.vocabulary.listening": "🎧 Listening",
+  "subPractice.vocabulary.typeOpposite": "⇄ Type the Opposite",
+  "subPractice.vocabulary.matchOpposites": "⇄ Match Opposites",
+  "subPractice.vocabulary.buildWord": "🔡 Build a Word",
+  "subPractice.vocabulary.fillInTheBlanks": "📝 Fill in the Blanks",
+  "subPractice.vocabulary.speakAndTranslate": "🗣️ Speak and Translate",
+  "subPractice.vocabulary.writeAndTranslate": "✍️ Write and Translate",
+  "subPractice.vocabulary.audioFlashcards": "🎧 Audio Flashcards",
+  "subPractice.vocabulary.phraseBuilder": "🛠️ Phrase Builder",
+  "subPractice.vocabulary.conversationPractice": "💬 Conversation Practice",
+  "subPractice.vocabulary.rolePlay": "🎭 Role Play",
+  "subPractice.vocabulary.storytelling": "📜 Storytelling",
+  "subPractice.vocabulary.diary": "📔 Diary",
+  "subPractice.vocabulary.practiceAll": "🔄 Practice All Vocabulary",
+  "subPractice.vocabulary.selectDay": "Select a day",
+  "subPractice.vocabulary.check": "Check",
+  "subPractice.vocabulary.trySentence": "Try to use this word in a sentence!",
+  "subPractice.vocabulary.noImages": "No images available!",
+  "subPractice.vocabulary.noVerbs": "No verbs available!",
+  "subPractice.vocabulary.noVerbForms": "No verb forms!",
+  "subPractice.vocabulary.noGender": "No gender data!",
+  "subPractice.vocabulary.funFacts": [
+    'Did you know? Spaced repetition boosts memory! 🧠',
+    'Mnemonic: Make a silly story with your word!',
+    'Practice a little every day for best results!',
+    'Visualize the word in a funny scene!',
+    'Say it out loud with a different accent!',
+    'Teach the word to someone else!',
+    'Use gestures or draw the word!',
+    'Recall is stronger if you test yourself after a break!'
+  ]
 };
 
 export default enTranslations;

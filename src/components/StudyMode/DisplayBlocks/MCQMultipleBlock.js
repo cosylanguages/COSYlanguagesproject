@@ -100,6 +100,13 @@ const MCQMultipleBlock = ({ blockData, onAnswer }) => {
     //     return option.texts?.[effectiveLang] || option.texts?.COSYenglish || `Option ${option.id}`;
     // };
 
+    // Fonction utilitaire pour obtenir le texte localisé d'une option
+    function getLocalizedText(option, fallbackKey = 'COSYenglish') {
+        if (!option || !option.texts) return '';
+        // Utilise la langue effective si possible
+        const lang = option.lang || option.langOverride || fallbackKey;
+        return option.texts[lang] || option.texts[fallbackKey] || option.texts[Object.keys(option.texts)[0]] || '';
+    }
 
     if (!options || options.length === 0) {
         return <div className="mcq-multiple-block display-simple-block"><p>{t('noOptionsConfiguredMCQ') || 'No options configured for this question.'}</p></div>;
