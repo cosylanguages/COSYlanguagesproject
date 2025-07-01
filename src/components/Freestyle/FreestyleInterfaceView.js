@@ -49,46 +49,48 @@ const FreestyleInterfaceView = ({
           </div>
         )}
         {/* Navigation des catégories */}
-        {selectedLanguage && selectedDays && selectedDays.length > 0 && (
-          currentMainCategory ? (
-            <>
-              <div className="selector-container" style={{ marginBottom: '10px' }}>
-                <button
-                  onClick={() => onCategorySelect(currentMainCategory)}
-                  style={{
-                    padding: '10px 15px',
-                    fontSize: '1.1rem',
-                    cursor: 'pointer',
-                    backgroundColor: '#007bff',
-                    color: 'white',
-                    border: '1px solid #007bff',
-                    borderRadius: '5px',
-                    fontWeight: 'bold',
-                    width: '100%',
-                    maxWidth: '380px'
-                  }}
-                >
-                  {(allTranslations[i18nLanguage]?.mainCategory?.[currentMainCategory] ||
-                    allTranslations.COSYenglish?.mainCategory?.[currentMainCategory] ||
-                    currentMainCategory)}
-                </button>
-              </div>
+        {selectedLanguage && (
+          selectedDays && selectedDays.length > 0 ? (
+            currentMainCategory ? (
+              <>
+                <div className="selector-container" style={{ marginBottom: '10px' }}>
+                  <button
+                    onClick={() => onCategorySelect(currentMainCategory)}
+                    style={{
+                      padding: '10px 15px',
+                      fontSize: '1.1rem',
+                      cursor: 'pointer',
+                      backgroundColor: '#007bff',
+                      color: 'white',
+                      border: '1px solid #007bff',
+                      borderRadius: '5px',
+                      fontWeight: 'bold',
+                      width: '100%',
+                      maxWidth: '380px'
+                    }}
+                  >
+                    {(allTranslations[i18nLanguage]?.mainCategory?.[currentMainCategory] ||
+                      allTranslations.COSYenglish?.mainCategory?.[currentMainCategory] ||
+                      currentMainCategory)}
+                  </button>
+                </div>
+                <div className="selector-container">
+                  <SubPracticeMenu
+                    mainCategory={currentMainCategory}
+                    activeSubPractice={currentSubPractice}
+                    onSubPracticeSelect={onSubPracticeSelect}
+                  />
+                </div>
+              </>
+            ) : (
               <div className="selector-container">
-                <SubPracticeMenu
-                  mainCategory={currentMainCategory}
-                  activeSubPractice={currentSubPractice}
-                  onSubPracticeSelect={onSubPracticeSelect}
+                <PracticeCategoryNav
+                  activeCategory={null}
+                  onCategorySelect={onCategorySelect}
                 />
               </div>
-            </>
-          ) : (
-            <div className="selector-container">
-              <PracticeCategoryNav
-                activeCategory={null}
-                onCategorySelect={onCategorySelect}
-              />
-            </div>
-          )
+            )
+          ) : null
         )}
       </div>
       <div className="freestyle-mode-exercise-host">
