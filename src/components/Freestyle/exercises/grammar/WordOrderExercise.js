@@ -8,7 +8,6 @@ import { normalizeString } from '../../../../utils/stringUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
 import { useI18n } from '../../../../i18n/I18nContext';
-import { useProgress } from '../../../../contexts/ProgressContext'; // Import useProgress
 
 const WordOrderExercise = ({ language, days, exerciseKey }) => {
   const [exerciseData, setExerciseData] = useState(null); 
@@ -24,7 +23,6 @@ const WordOrderExercise = ({ language, days, exerciseKey }) => {
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
   const { t, allTranslations } = useI18n();
-  const progress = useProgress();
 
   useEffect(() => {
     if (allTranslations) {
@@ -110,10 +108,8 @@ const WordOrderExercise = ({ language, days, exerciseKey }) => {
     if (normalizeString(userAnswerSentence) === normalizeString(correctAnswerSentence)) {
       setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
       setIsCorrect(true);
-      progress.awardCorrectAnswer(itemId, 'grammar-wordorder');
     } else {
       setFeedback({ message: t('feedback.incorrectWordOrder', `Incorrect order. The correct sentence is: "${getLatinizedText(exerciseData.correctSentence, language)}"`, {correctSentence: getLatinizedText(exerciseData.correctSentence, language)}), type: 'incorrect' });
-      progress.awardIncorrectAnswer(itemId, 'grammar-wordorder');
     }
   };
 
@@ -133,7 +129,6 @@ const WordOrderExercise = ({ language, days, exerciseKey }) => {
     setFeedback({ message: t('feedback.revealedWordOrder', `The correct order is: "${getLatinizedText(exerciseData.correctSentence, language)}"`, {correctSentence: getLatinizedText(exerciseData.correctSentence, language)}), type: 'info' });
     setIsRevealed(true);
     setIsCorrect(true);
-    progress.scheduleReview(itemId, 'grammar-wordorder', false);
   };
 
   const handleReset = () => {

@@ -5,7 +5,6 @@ import ExerciseControls from '../../ExerciseControls';
 import { useLatinizationContext } from '../../../../contexts/LatinizationContext';
 import useLatinization from '../../../../hooks/useLatinization';
 import { normalizeString } from '../../../../utils/stringUtils';
-import { useProgress } from '../../../../contexts/ProgressContext';
 import { useI18n } from '../../../../i18n/I18nContext';
 
 const PossessivesExercise = ({ language, days, exerciseKey }) => {
@@ -19,7 +18,6 @@ const PossessivesExercise = ({ language, days, exerciseKey }) => {
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization();
-  const progress = useProgress();
   const { t } = useI18n();
 
   const pickNewExercise = useCallback((data) => {
@@ -80,14 +78,11 @@ const PossessivesExercise = ({ language, days, exerciseKey }) => {
     const normalizedCorrectAnswer = normalizeString(correctAnswer);
     
     const displayAnswer = isLatinized ? getLatinizedText(correctAnswer, language) : correctAnswer;
-    const itemId = `possessive_${normalizeString(currentExercise.sentence.split(" ")[0])}_${normalizeString(correctAnswer)}`;
 
     if (normalizedUserInput === normalizedCorrectAnswer) {
       setFeedback({ message: t('feedback.correct'), type: 'correct' });
-      progress.awardCorrectAnswer(itemId, 'grammar-possessive');
     } else {
       setFeedback({ message: t('feedback.incorrectAnswerIs', { correctAnswer: displayAnswer }), type: 'incorrect' });
-      progress.awardIncorrectAnswer(itemId, 'grammar-possessive');
     }
   };
 
@@ -103,12 +98,10 @@ const PossessivesExercise = ({ language, days, exerciseKey }) => {
     if (!currentExercise) return;
     const correctAnswer = currentExercise.answer;
     const displayAnswer = isLatinized ? getLatinizedText(correctAnswer, language) : correctAnswer;
-    const itemId = `possessive_${normalizeString(currentExercise.sentence.split(" ")[0])}_${normalizeString(correctAnswer)}`;
 
     setUserInput(correctAnswer); // Show the full answer in the input
     setFeedback({ message: t('feedback.correctAnswerIs', { correctAnswer: displayAnswer }), type: 'info' });
     setIsRevealed(true);
-    progress.scheduleReview(itemId, 'grammar-possessive', false);
   };
 
   const handleNext = () => {

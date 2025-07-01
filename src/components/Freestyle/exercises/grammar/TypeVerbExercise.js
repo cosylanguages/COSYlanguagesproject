@@ -8,7 +8,6 @@ import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
 import { pronounceText } from '../../../../utils/speechUtils'; 
 import { useI18n } from '../../../../i18n/I18nContext';
-import { useProgress } from '../../../../contexts/ProgressContext';
 
 const TypeVerbExercise = ({ language, days, exerciseKey }) => {
   const [exerciseData, setExerciseData] = useState(null); 
@@ -22,7 +21,6 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
   const { t, allTranslations } = useI18n();
-  const progress = useProgress();
 
   useEffect(() => {
     if (allTranslations) {
@@ -102,7 +100,6 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
 
     if (isCorrectNow) {
       setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
-      progress.awardCorrectAnswer(itemId, 'grammar-type-verb', language);
       setIsAnsweredCorrectly(true);
       setTimeout(() => {
         setupNewExercise();
@@ -112,7 +109,6 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
         message: t('feedback.incorrectVerb', `Incorrect. The correct answer is: ${displayCorrect}. Full sentence: ${getLatinizedText(exerciseData.correctSentence, language)}`, { correctAnswer: displayCorrect, correctSentence: getLatinizedText(exerciseData.correctSentence, language) }), 
         type: 'incorrect' 
       });
-      progress.awardIncorrectAnswer(itemId, 'grammar-type-verb', language);
     }
   };
 
@@ -140,7 +136,6 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
     });
     setIsRevealed(true);
     setIsAnsweredCorrectly(true); // Consider revealed as "done" for progression
-    progress.scheduleReview(itemId, 'grammar-type-verb', language, false);
     
     if(!isAnsweredCorrectly) { // Only auto-progress if not already solved before reveal
         setTimeout(() => {

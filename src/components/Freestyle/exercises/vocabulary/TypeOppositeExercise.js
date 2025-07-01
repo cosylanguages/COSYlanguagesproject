@@ -5,7 +5,6 @@ import useLatinization from '../../../../hooks/useLatinization';
 import { pronounceText } from '../../../../utils/speechUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
-import { useProgress } from '../../../../contexts/ProgressContext';
 import { normalizeString } from '../../../../utils/stringUtils';
 import { useI18n } from '../../../../i18n/I18nContext';
 
@@ -22,7 +21,6 @@ const TypeOppositeExercise = ({ language, days, exerciseKey }) => {
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
-  const progress = useProgress();
   const { t } = useI18n();
 
   const displayCurrentWord = getLatinizedText(currentWord, language);
@@ -90,7 +88,6 @@ const TypeOppositeExercise = ({ language, days, exerciseKey }) => {
 
     if (isCorrect) {
       setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
-      progress.awardCorrectAnswer(itemId, 'vocab-type-opposite', language);
       setIsAnsweredCorrectly(true); // Mark as correctly answered
       // Auto-progress after a short delay
       setTimeout(() => {
@@ -98,7 +95,6 @@ const TypeOppositeExercise = ({ language, days, exerciseKey }) => {
       }, 1500); // 1.5-second delay
     } else {
       setFeedback({ message: t('feedback.incorrectOpposite', `Incorrect. The opposite of "${displayCurrentWord}" is "${displayCorrectOpposite}".`, { word: displayCurrentWord, opposite: displayCorrectOpposite }), type: 'incorrect' });
-      progress.awardIncorrectAnswer(itemId, 'vocab-type-opposite', language);
     }
   };
 
@@ -114,7 +110,6 @@ const TypeOppositeExercise = ({ language, days, exerciseKey }) => {
     setUserInput(correctOpposite);
     setFeedback({ message: t('feedback.revealedOpposite', `The opposite of "${displayCurrentWord}" is "${displayCorrectOpposite}".`, { word: displayCurrentWord, opposite: displayCorrectOpposite }), type: 'info' });
     setIsRevealed(true);
-    progress.scheduleReview(itemId, 'vocab-type-opposite', language, false); // Ensure language is passed
      // Auto-progress after showing revealed answer
     setTimeout(() => {
         fetchNewOppositePair();
