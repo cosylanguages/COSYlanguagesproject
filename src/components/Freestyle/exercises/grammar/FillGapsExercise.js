@@ -8,7 +8,6 @@ import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
 import { pronounceText } from '../../../../utils/speechUtils';
 import { useI18n } from '../../../../i18n/I18nContext';
-import { useProgress } from '../../../../contexts/ProgressContext'; // Import useProgress
 
 const FillGapsExercise = ({ language, days, exerciseKey }) => {
   const [exerciseData, setExerciseData] = useState(null); 
@@ -21,7 +20,6 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
   const { t, allTranslations } = useI18n();
-  const progress = useProgress();
 
   useEffect(() => {
     if (allTranslations) {
@@ -98,13 +96,11 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
 
     if (possibleAnswers.includes(normalizeString(userInput))) {
       setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
-      progress.awardCorrectAnswer(itemId, 'grammar-fillgaps');
     } else {
       setFeedback({ 
         message: t('feedback.incorrectFillGaps', `Incorrect. The correct answer is: ${displayCorrect}. Full sentence: ${getLatinizedText(exerciseData.correctSentence, language)}`, { correctAnswer: displayCorrect, correctSentence: getLatinizedText(exerciseData.correctSentence, language) }), 
         type: 'incorrect' 
       });
-      progress.awardIncorrectAnswer(itemId, 'grammar-fillgaps');
     }
   };
 
@@ -131,7 +127,6 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
       type: 'info' 
     });
     setIsRevealed(true);
-    progress.scheduleReview(itemId, 'grammar-fillgaps', false);
   };
   
   const handlePronounceSentence = () => {

@@ -5,7 +5,6 @@ import useLatinization from '../../../../hooks/useLatinization';
 import { shuffleArray } from '../../../../utils/arrayUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
-import { useProgress } from '../../../../contexts/ProgressContext'; // Import useProgress
 
 const MatchArticlesWordsExercise = ({ language, days, exerciseKey }) => {
   const [actualPairs, setActualPairs] = useState([]); 
@@ -24,7 +23,6 @@ const MatchArticlesWordsExercise = ({ language, days, exerciseKey }) => {
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
-  const progress = useProgress(); // Get progress functions
 
   const NUM_PAIRS_TO_DISPLAY = 4;
 
@@ -123,10 +121,8 @@ const MatchArticlesWordsExercise = ({ language, days, exerciseKey }) => {
         setFeedback({ message: 'Correct Match!', type: 'correct' });
         setMatchedPairs(prev => ({ ...prev, [currentArticleValue]: true, [currentWordValue]: true }));
         setNumCorrectMatches(prev => prev + 1);
-        progress.awardCorrectAnswer(itemId, 'grammar-match-article');
       } else {
         setFeedback({ message: 'Incorrect Match. Try again.', type: 'incorrect' });
-        progress.awardIncorrectAnswer(itemId, 'grammar-match-article');
         if (selectedArticle.elementRef) selectedArticle.elementRef.classList.add('incorrect-flash');
         if (selectedWord.elementRef) selectedWord.elementRef.classList.add('incorrect-flash');
         setTimeout(() => {
@@ -137,7 +133,7 @@ const MatchArticlesWordsExercise = ({ language, days, exerciseKey }) => {
       setSelectedArticle(null);
       setSelectedWord(null);
     }
-  }, [selectedArticle, selectedWord, actualPairs, language, progress]);
+  }, [selectedArticle, selectedWord, actualPairs, language]);
 
   useEffect(() => {
     if (actualPairs.length > 0 && numCorrectMatches === actualPairs.length && !isRevealed) {
@@ -165,8 +161,6 @@ const MatchArticlesWordsExercise = ({ language, days, exerciseKey }) => {
     actualPairs.forEach(p => {
       allMatched[p.article] = true;
       allMatched[p.word] = true;
-      const itemId = `gender_${p.word}_${p.article}`;
-      progress.scheduleReview(itemId, 'grammar-match-article', false); // Mark revealed as incorrect for SRS
     });
     setMatchedPairs(allMatched);
     setNumCorrectMatches(actualPairs.length);

@@ -7,7 +7,6 @@ import { shuffleArray } from '../../../../utils/arrayUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
 import { useI18n } from '../../../../i18n/I18nContext';
-import { useProgress } from '../../../../contexts/ProgressContext'; // Import useProgress
 
 const MatchVerbsPronounsExercise = ({ language, days, exerciseKey }) => {
   const [targetVerbInfinitive, setTargetVerbInfinitive] = useState('');
@@ -28,7 +27,6 @@ const MatchVerbsPronounsExercise = ({ language, days, exerciseKey }) => {
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
   const { t } = useI18n();
-  const progress = useProgress();
 
   const NUM_PAIRS_TO_DISPLAY = 6;
 
@@ -126,10 +124,8 @@ const MatchVerbsPronounsExercise = ({ language, days, exerciseKey }) => {
         setFeedback({ message: t('feedback.correctMatch', 'Correct Match!'), type: 'correct' });
         setMatchedItems(prev => ({ ...prev, [currentPronounValue]: true, [currentFormValue]: true }));
         setNumCorrectMatches(prev => prev + 1);
-        progress.awardCorrectAnswer(itemId, 'grammar-match-verb');
       } else {
         setFeedback({ message: t('feedback.incorrectMatch', 'Incorrect Match. Try again.'), type: 'incorrect' });
-        progress.awardIncorrectAnswer(itemId, 'grammar-match-verb');
         if (selectedPronoun.elementRef) selectedPronoun.elementRef.classList.add('incorrect-flash');
         if (selectedForm.elementRef) selectedForm.elementRef.classList.add('incorrect-flash');
         setTimeout(() => {
@@ -140,7 +136,7 @@ const MatchVerbsPronounsExercise = ({ language, days, exerciseKey }) => {
       setSelectedPronoun(null);
       setSelectedForm(null);
     }
-  }, [selectedPronoun, selectedForm, actualPairs, t, language, progress, targetVerbInfinitive]);
+  }, [selectedPronoun, selectedForm, actualPairs, t, language, targetVerbInfinitive]);
 
   useEffect(() => {
     if (actualPairs.length > 0 && numCorrectMatches === actualPairs.length && !isRevealed) {
@@ -168,8 +164,6 @@ const MatchVerbsPronounsExercise = ({ language, days, exerciseKey }) => {
     actualPairs.forEach(p => {
       allMatched[p.pronoun] = true;
       allMatched[p.form] = true;
-      const itemId = `verbmatch_${targetVerbInfinitive}_${p.pronoun}_${p.form}`;
-      progress.scheduleReview(itemId, 'grammar-match-verb', false);
     });
     setMatchedItems(allMatched);
     setNumCorrectMatches(actualPairs.length);
