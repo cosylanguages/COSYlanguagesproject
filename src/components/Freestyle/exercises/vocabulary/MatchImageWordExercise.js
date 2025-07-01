@@ -5,7 +5,6 @@ import ExerciseControls from '../../ExerciseControls';
 import { useLatinizationContext } from '../../../../contexts/LatinizationContext';
 import useLatinization from '../../../../hooks/useLatinization';
 import { shuffleArray } from '../../../../utils/arrayUtils';
-import { useProgress } from '../../../../contexts/ProgressContext';
 import { normalizeString } from '../../../../utils/stringUtils';
 
 const MatchImageWordExercise = ({ language, days, exerciseKey }) => {
@@ -21,7 +20,6 @@ const MatchImageWordExercise = ({ language, days, exerciseKey }) => {
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
-  const progress = useProgress();
 
   const itemRefs = useRef({}); // To store refs for each clickable item
   const gridContainerRef = useRef(null); // Ref for the grid container
@@ -129,11 +127,9 @@ const MatchImageWordExercise = ({ language, days, exerciseKey }) => {
         setFeedback({ message: 'Correct Match!', type: 'correct' });
         setMatchedPairs(prev => ({ ...prev, [item1.pairId]: true }));
         drawLineBetweenItems(item1.id, item2.id);
-        progress.awardCorrectAnswer(itemIdForProgress, 'vocab-match-image-word', language);
         setSelectedItems([]);
       } else {
         setFeedback({ message: 'Incorrect Match. Try again.', type: 'incorrect' });
-        progress.awardIncorrectAnswer(itemIdForProgress, 'vocab-match-image-word', language);
         
         const el1 = itemRefs.current[item1.id];
         const el2 = itemRefs.current[item2.id];
@@ -147,7 +143,7 @@ const MatchImageWordExercise = ({ language, days, exerciseKey }) => {
         }, 1000);
       }
     }
-  }, [selectedItems, progress, language, drawLineBetweenItems]);
+  }, [selectedItems, drawLineBetweenItems]);
 
   useEffect(() => {
     if (numPairs > 0 && Object.keys(matchedPairs).length === numPairs && !isRevealed) {
@@ -191,13 +187,6 @@ const MatchImageWordExercise = ({ language, days, exerciseKey }) => {
       const itemsInPair = gameItems.filter(item => item.pairId === pairId);
       if (itemsInPair.length === 2) {
         drawLineBetweenItems(itemsInPair[0].id, itemsInPair[1].id);
-        
-        const wordItem = itemsInPair.find(pi => pi.type === 'word');
-        const imageItem = itemsInPair.find(pi => pi.type === 'image');
-        if(wordItem && imageItem){
-            const itemIdForProgress = `matchimg_${normalizeString(imageItem.value)}_${normalizeString(wordItem.value)}`;
-            progress.scheduleReview(itemIdForProgress, 'vocab-match-image-word', language, false);
-        }
       }
     });
     setMatchedPairs(allPairsRevealed);

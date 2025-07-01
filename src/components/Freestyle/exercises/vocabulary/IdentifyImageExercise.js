@@ -5,7 +5,6 @@ import useLatinization from '../../../../hooks/useLatinization';
 import { pronounceText } from '../../../../utils/speechUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
-import { useProgress } from '../../../../contexts/ProgressContext';
 import { normalizeString } from '../../../../utils/stringUtils';
 import { useI18n } from '../../../../i18n/I18nContext'; // Assuming you use i18n for texts
 
@@ -20,7 +19,6 @@ const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
-  const progress = useProgress();
   const { t } = useI18n(); // For internationalized strings
 
   const correctAnswerText = currentImageItem ? currentImageItem.translations[language] : '';
@@ -76,14 +74,12 @@ const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
 
     if (isCorrect) {
       setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
-      progress.awardCorrectAnswer(itemId, 'vocab-identify-image', language);
       setIsAnsweredCorrectly(true);
       setTimeout(() => {
         fetchAndSetNewImage();
       }, 1500); // 1.5-second delay
     } else {
       setFeedback({ message: t('feedback.incorrectAnswerWas', `Incorrect. The correct answer is: ${latinizedCorrectAnswer || correctAnswer}`, { answer: latinizedCorrectAnswer || correctAnswer }), type: 'incorrect' });
-      progress.awardIncorrectAnswer(itemId, 'vocab-identify-image', language);
     }
   };
 
@@ -100,7 +96,6 @@ const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
     setUserInput(correctAnswer);
     setFeedback({ message: t('feedback.answerIs', `The correct answer is: ${latinizedCorrectAnswer || correctAnswer}`, { answer: latinizedCorrectAnswer || correctAnswer }), type: 'info' });
     setIsRevealed(true);
-    progress.scheduleReview(itemId, 'vocab-identify-image', language, false); // Ensure language is passed
     setTimeout(() => {
         fetchAndSetNewImage();
     }, 2000); // Slightly longer delay for revealed answers
