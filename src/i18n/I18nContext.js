@@ -110,6 +110,7 @@ export function I18nProvider({ children }) {
 
     const value = {
         language,
+        currentLangKey: language, // Expose language as currentLangKey
         changeLanguage,
         t,
         allTranslations: translations,
