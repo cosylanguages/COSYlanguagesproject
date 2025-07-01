@@ -1,0 +1,59 @@
+/* LessonSectionsPanel.css */
+
+.lesson-sections-panel {
+  /* Uses styles from StudyModePage.css layout-left-panel for background, padding etc. */
+  /* Additional specific styles can go here if needed */
+}
+
+.lesson-sections-panel h4 {
+  /* Styling for the panel title is inherited or can be customized here */
+  /* margin-top: 0; (already in StudyModePage.css) */
+}
+
+.sections-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 400px; /* Example max height, make scrollable */
+  overflow-y: auto;
+}
+
+.section-item {
+  margin-bottom: var(--spacing-xs, 0.25rem);
+}
+
+.section-link-button {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-sm, 0.5rem);
+  background-color: transparent;
+  border: 1px solid transparent; /* Transparent border to maintain size on hover/focus */
+  color: var(--color-text-primary, #212529);
+  text-align: left;
+  cursor: pointer;
+  border-radius: var(--border-radius-sm, 0.2rem);
+  font-size: var(--font-size-sm, 0.875rem);
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Show ellipsis for very long titles */
+}
+
+.section-link-button:hover,
+.section-link-button:focus {
+  background-color: var(--color-surface-hover, #f0f0f0);
+  border-color: var(--color-border-light, #ced4da);
+  color: var(--color-primary-dark, #0056b3);
+  outline: none;
+}
+
+.section-link-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus ring */
+}
+
+.no-sections-message {
+  font-style: italic;
+  color: var(--color-text-muted, #6c757d);
+  font-size: var(--font-size-sm, 0.875rem);
+  padding: var(--spacing-sm, 0.5rem) 0;
+}

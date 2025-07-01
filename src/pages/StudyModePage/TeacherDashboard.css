@@ -17,10 +17,54 @@
 .dashboard-header h2 {
   margin: 0;
   color: var(--color-primary, #007bff);
+  flex-grow: 1; /* Allow title to take space */
 }
 
-.add-block-btn {
+.dashboard-main-actions {
+  display: flex;
+  gap: var(--spacing-sm, 0.5rem);
+}
+
+.add-block-btn,
+.save-lesson-btn,
+.load-lesson-btn {
   font-size: var(--font-size-base, 1rem);
+  padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem); /* Consistent padding */
+}
+
+/* Specific button colors can be handled by their existing btn-primary, btn-success, btn-info classes */
+
+.feedback-message {
+  padding: var(--spacing-md, 1rem);
+  margin: var(--spacing-md, 1rem) 0;
+  border-radius: var(--border-radius-md, 0.25rem);
+  text-align: center;
+  font-weight: bold;
+}
+
+.feedback-success {
+  background-color: var(--color-surface-success-light, #d4edda);
+  color: var(--color-text-success, #155724);
+  border: 1px solid var(--color-border-success, #c3e6cb);
+}
+
+.feedback-error {
+  background-color: var(--color-surface-danger-light, #f8d7da);
+  color: var(--color-text-danger, #721c24);
+  border: 1px solid var(--color-border-danger, #f5c6cb);
+}
+
+.dashboard-utility-actions {
+  margin-top: var(--spacing-md, 1rem);
+  margin-bottom: var(--spacing-md, 1rem);
+  padding-top: var(--spacing-sm, 0.5rem);
+  border-top: 1px solid var(--color-border-extralight, #e9ecef);
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+}
+
+.clear-saved-lesson-btn {
+  /* Uses btn-sm and btn-warning already for sizing and color */
 }
 
 .no-blocks-message {
@@ -47,26 +91,68 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));
+  /* Removed direct flex display from item, now it's a container */
 }
 
-.lesson-block-item .block-info {
-  flex-grow: 1;
+/* New container for each block in the list */
+.lesson-block-item-container {
+  background-color: var(--color-surface-extralight, #fcfdff);
+  border: 1px solid var(--color-border, #dee2e6);
+  border-radius: var(--border-radius-md, 0.25rem);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));
+  display: flex;
+  flex-direction: column; /* Stack header and content preview */
 }
 
-.lesson-block-item .block-info strong {
-  color: var(--color-text-headings, #343a40);
+.lesson-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem);
+  background-color: var(--color-surface-light, #e9ecef); /* Light header background */
+  border-bottom: 1px solid var(--color-border-light, #ced4da);
+  border-top-left-radius: var(--border-radius-md, 0.25rem); /* Match container radius */
+  border-top-right-radius: var(--border-radius-md, 0.25rem);
 }
 
-.lesson-block-item .block-info span {
-  color: var(--color-text-secondary, #6c757d);
+.lesson-block-header .block-type-name {
+  font-weight: bold;
+  color: var(--color-text-secondary, #495057);
   font-size: var(--font-size-sm, 0.875rem);
-  margin-left: var(--spacing-xs, 0.25rem);
 }
 
-.lesson-block-item .block-actions {
+.lesson-block-header .block-actions {
   display: flex;
   gap: var(--spacing-sm, 0.5rem);
-  margin-left: var(--spacing-md, 1rem); /* Space between info and actions */
+}
+
+.lesson-block-content-preview {
+  padding: var(--spacing-md, 1rem);
+  /* Styles for the preview area of the block */
+}
+
+.lesson-block-content-preview .block-info { /* For fallback text if no component */
+  font-style: italic;
+  color: var(--color-text-muted, #6c757d);
+}
+.lesson-block-content-preview .block-info p {
+    margin: var(--spacing-xs, 0.25rem) 0;
+}
+
+
+/* Ensure DisplayBlock components have some default styling if not already present */
+/* For example, .display-simple-block used by TextBlock and MCQMultipleBlock */
+.display-simple-block {
+  border: 1px dashed var(--color-border-light, #ced4da);
+  padding: var(--spacing-md, 1rem);
+  margin: 0; /* Reset margin if they have their own */
+  border-radius: var(--border-radius-sm, 0.2rem);
+  background-color: var(--color-background, #fff); /* Ensure background for visibility */
+}
+
+.display-simple-block h4 {
+    margin-top: 0;
+    font-size: var(--font-size-lg, 1.25rem); /* Example size for block titles in preview */
 }
 
 .btn-sm {

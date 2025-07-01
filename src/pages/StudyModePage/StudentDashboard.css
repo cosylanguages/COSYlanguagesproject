@@ -1,0 +1,124 @@
+/* StudentDashboard.css */
+
+.student-dashboard-container {
+  padding: var(--spacing-md, 1rem);
+  text-align: left; /* Default alignment for content */
+}
+
+/* Header for the lesson including title and score summary */
+.lesson-header {
+  margin-bottom: var(--spacing-lg, 1.5rem);
+  padding-bottom: var(--spacing-md, 0.75rem);
+  border-bottom: 1px solid var(--color-border-light, #dee2e6);
+}
+
+.lesson-header h2 { /* Main lesson title */
+  color: var(--color-primary-dark, #0056b3); 
+  text-align: center; 
+  margin-top: 0;
+  margin-bottom: var(--spacing-md, 0.75rem);
+}
+
+.lesson-score-summary {
+  background-color: var(--color-surface-light, #e9ecef);
+  padding: var(--spacing-md, 1rem);
+  border-radius: var(--border-radius-md, 0.25rem);
+  text-align: center;
+  margin-top: var(--spacing-sm, 0.5rem);
+}
+
+.lesson-score-summary h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm, 0.5rem);
+  font-size: var(--font-size-lg, 1.2rem); /* Slightly larger for summary title */
+  color: var(--color-text-headings, #343a40);
+}
+
+.lesson-score-summary p {
+  margin: 0;
+  font-size: var(--font-size-base, 1rem);
+  font-weight: bold;
+  color: var(--color-text-secondary, #495057);
+}
+
+.lesson-content-student-view {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg, 1.5rem); /* Space between blocks */
+}
+
+.student-lesson-block {
+  background-color: var(--color-surface-extralight, #fdfdff); /* Light background for each block */
+  border: 1px solid var(--color-border-light, #e0e0e0);
+  border-radius: var(--border-radius-md, 0.25rem);
+  padding: var(--spacing-md, 1rem);
+  box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.07));
+}
+
+/* Ensure DisplayBlock components like TextBlock, MCQMultipleBlock have consistent styling */
+/* .display-simple-block is already defined in TeacherDashboard.css, ensure it's general enough or duplicate/move */
+.student-lesson-block .display-simple-block {
+  border: none; /* Remove the dashed border from teacher preview if it was specific */
+  padding: 0; /* Reset padding if the student-lesson-block provides it */
+  box-shadow: none; /* Remove shadow if student-lesson-block provides it */
+}
+.student-lesson-block .display-simple-block h4 {
+    /* Styles for titles within blocks on student view if different from teacher's */
+    /* For example, smaller margin or different color */
+    margin-bottom: var(--spacing-sm, 0.5rem);
+}
+
+
+.student-lesson-block-fallback {
+  padding: var(--spacing-md, 1rem);
+  background-color: var(--color-surface-warning, #fff3cd);
+  border: 1px solid var(--color-border-warning, #ffeeba);
+  color: var(--color-text-warning, #856404);
+  border-radius: var(--border-radius-md, 0.25rem);
+  text-align: center;
+}
+
+.block-score-feedback {
+  margin-top: var(--spacing-sm, 0.5rem);
+  padding: var(--spacing-xs, 0.25rem) var(--spacing-sm, 0.5rem);
+  background-color: var(--color-surface-info, #e7f3fe);
+  color: var(--color-text-info, #0c5460);
+  border: 1px solid var(--color-border-info, #b8daff);
+  border-radius: var(--border-radius-sm, 0.2rem);
+  font-size: var(--font-size-sm, 0.875rem);
+  text-align: right;
+}
+
+/* Message when no content is available */
+.student-dashboard-container > p {
+  font-style: italic;
+  color: var(--color-text-secondary, #6c757d);
+  text-align: center;
+  padding: var(--spacing-xl, 2rem);
+  border: 2px dashed var(--color-border-light, #dee2e6);
+  border-radius: var(--border-radius-md, 0.25rem);
+}
+
+/* Block Navigation Actions (Prev/Next buttons) */
+.block-navigation-actions {
+  margin-top: var(--spacing-lg, 1.5rem); /* Space above the nav buttons */
+  padding-top: var(--spacing-md, 1rem); /* Space within the nav area, above buttons */
+  border-top: 1px solid var(--color-border-light, #e0e0e0); /* Separator line */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block-navigation-actions .prev-block-btn,
+.block-navigation-actions .next-block-btn {
+  /* Uses .btn, .btn-sm, .btn-outline-secondary from global/bootstrap-like styles */
+  /* Add any specific overrides if needed */
+  min-width: 100px; /* Ensure buttons have a decent minimum width */
+  text-align: center;
+}
+
+.block-navigation-actions .block-nav-page-info {
+  font-size: var(--font-size-sm, 0.875rem);
+  color: var(--color-text-muted, #6c757d);
+  font-style: italic;
+}

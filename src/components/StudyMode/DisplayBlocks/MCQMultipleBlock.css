@@ -111,3 +111,32 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+
+/* Styling for option-specific feedback messages */
+.option-specific-feedback {
+    font-size: 0.9em;
+    color: var(--text-muted, #6c757d); /* Default color, can be overridden by parent's color if needed */
+    margin-top: 8px; /* Space between option text and its feedback */
+    padding: 8px;
+    background-color: var(--surface-light, #f8f9fa); /* Light background for the feedback box */
+    border-radius: 4px;
+    border-left: 3px solid var(--border-color-muted, #ced4da); /* Accent border */
+    width: 100%; /* Make it take the full width of the option container */
+    box-sizing: border-box;
+}
+
+/* Adjust feedback text color based on parent mcq-option state for better context */
+.mcq-option.correct-answer .option-specific-feedback {
+    border-left-color: var(--success-color, #198754);
+    background-color: var(--success-color-xxlight, #e6f5ea); /* Even lighter success background */
+}
+
+.mcq-option.incorrect-answer .option-specific-feedback {
+    border-left-color: var(--danger-color, #dc3545);
+    background-color: var(--danger-color-xxlight, #fdedee); /* Even lighter danger background */
+}
+
+.mcq-option.missed-answer .option-specific-feedback {
+    border-left-color: var(--warning-color, #ffc107); /* Or success, depending on desired emphasis */
+    background-color: var(--warning-color-xxlight, #fff8e1);
+}
