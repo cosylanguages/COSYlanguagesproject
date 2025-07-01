@@ -254,6 +254,12 @@ body {
   background-image: url('https://flagcdn.com/pt.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
+/* Fallback for unknown language backgrounds */
+.lang-bg-fallback {
+  background-image: linear-gradient(135deg, #bdbdbd 0%, #e0e0e0 100%) !important;
+  background-color: #e0e0e0 !important;
+}
+
 /* Style for ToggleLatinizationButton */
 .toggle-latinization-btn {
   padding: 8px 18px;
