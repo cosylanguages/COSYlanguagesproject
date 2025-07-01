@@ -1,0 +1,391 @@
+{
+  "language_code": "fr",
+  "language_name": "French",
+  "verbs": [
+    {
+      "infinitive": "être",
+      "translation_en": "to be",
+      "tags": ["irregular", "auxiliary"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "suis", "tu": "es", "il/elle/on": "est", "nous": "sommes", "vous": "êtes", "ils/elles": "sont" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "été",
+          "forms": { "j'": "ai été", "tu": "as été", "il/elle/on": "a été", "nous": "avons été", "vous": "avez été", "ils/elles": "ont été" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "j'": "étais", "tu": "étais", "il/elle/on": "était", "nous": "étions", "vous": "étiez", "ils/elles": "étaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "je": "serai", "tu": "seras", "il/elle/on": "sera", "nous": "serons", "vous": "serez", "ils/elles": "seront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "je": "fus", "tu": "fus", "il/elle/on": "fut", "nous": "fûmes", "vous": "fûtes", "ils/elles": "furent" }
+        }
+      }
+    },
+    {
+      "infinitive": "avoir",
+      "translation_en": "to have",
+      "tags": ["irregular", "auxiliary"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "j'": "ai", "tu": "as", "il/elle/on": "a", "nous": "avons", "vous": "avez", "ils/elles": "ont" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "eu",
+          "forms": { "j'": "ai eu", "tu": "as eu", "il/elle/on": "a eu", "nous": "avons eu", "vous": "avez eu", "ils/elles": "ont eu" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "j'": "avais", "tu": "avais", "il/elle/on": "avait", "nous": "avions", "vous": "aviez", "ils/elles": "avaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "j'": "aurai", "tu": "auras", "il/elle/on": "aura", "nous": "aurons", "vous": "aurez", "ils/elles": "auront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "j'": "eus", "tu": "eus", "il/elle/on": "eut", "nous": "eûmes", "vous": "eûtes", "ils/elles": "eurent" }
+        }
+      }
+    },
+    {
+      "infinitive": "parler",
+      "translation_en": "to speak",
+      "verb_group": "-er",
+      "tags": ["regular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "parle", "tu": "parles", "il/elle/on": "parle", "nous": "parlons", "vous": "parlez", "ils/elles": "parlent" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "parlé",
+          "forms": { "j'": "ai parlé", "tu": "as parlé", "il/elle/on": "a parlé", "nous": "avons parlé", "vous": "avez parlé", "ils/elles": "ont parlé" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "je": "parlais", "tu": "parlais", "il/elle/on": "parlait", "nous": "parlions", "vous": "parliez", "ils/elles": "parlaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "je": "parlerai", "tu": "parleras", "il/elle/on": "parlera", "nous": "parlerons", "vous": "parlerez", "ils/elles": "parleront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "je": "parlai", "tu": "parlas", "il/elle/on": "parla", "nous": "parlâmes", "vous": "parlâtes", "ils/elles": "parlèrent" }
+        }
+      }
+    },
+    {
+      "infinitive": "aller",
+      "translation_en": "to go",
+      "tags": ["irregular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "vais", "tu": "vas", "il/elle/on": "va", "nous": "allons", "vous": "allez", "ils/elles": "vont" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "être", "past_participle": "allé(e)(s)",
+          "forms": { "je": "suis allé(e)", "tu": "es allé(e)", "il/elle/on": "est allé(e)(s)", "nous": "sommes allé(e)s", "vous": "êtes allé(e)(s)", "ils/elles": "sont allé(e)s" },
+          "agreement_rules": "Past participle agrees in gender and number with the subject when auxiliary is 'être'."
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "j'": "allais", "tu": "allais", "il/elle/on": "allait", "nous": "allions", "vous": "alliez", "ils/elles": "allaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "j'": "irai", "tu": "iras", "il/elle/on": "ira", "nous": "irons", "vous": "irez", "ils/elles": "iront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "j'": "allai", "tu": "allas", "il/elle/on": "alla", "nous": "allâmes", "vous": "allâtes", "ils/elles": "allèrent" }
+        }
+      }
+    },
+    {
+      "infinitive": "aimer",
+      "translation_en": "to like",
+      "verb_group": "-er",
+      "tags": ["regular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "j'": "aime", "tu": "aimes", "il/elle/on": "aime", "nous": "aimons", "vous": "aimez", "ils/elles": "aiment" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "aimé",
+          "forms": { "j'": "ai aimé", "tu": "as aimé", "il/elle/on": "a aimé", "nous": "avons aimé", "vous": "avez aimé", "ils/elles": "ont aimé" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "j'": "aimais", "tu": "aimais", "il/elle/on": "aimait", "nous": "aimions", "vous": "aimiez", "ils/elles": "aimaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "j'": "aimerai", "tu": "aimeras", "il/elle/on": "aimera", "nous": "aimerons", "vous": "aimerez", "ils/elles": "aimeront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "j'": "aimai", "tu": "aimas", "il/elle/on": "aima", "nous": "aimâmes", "vous": "aimâtes", "ils/elles": "aimèrent" }
+        }
+      }
+    },
+    {
+      "infinitive": "penser",
+      "translation_en": "to think",
+      "verb_group": "-er",
+      "tags": ["regular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "pense", "tu": "penses", "il/elle/on": "pense", "nous": "pensons", "vous": "pensez", "ils/elles": "pensent" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "pensé",
+          "forms": { "j'": "ai pensé", "tu": "as pensé", "il/elle/on": "a pensé", "nous": "avons pensé", "vous": "avez pensé", "ils/elles": "ont pensé" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "je": "pensais", "tu": "pensais", "il/elle/on": "pensait", "nous": "pensions", "vous": "pensiez", "ils/elles": "pensaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "je": "penserai", "tu": "penseras", "il/elle/on": "pensera", "nous": "penserons", "vous": "penserez", "ils/elles": "penseront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "je": "pensai", "tu": "pensas", "il/elle/on": "pensa", "nous": "pensâmes", "vous": "pensâtes", "ils/elles": "pensèrent" }
+        }
+      }
+    },
+    {
+      "infinitive": "savoir",
+      "translation_en": "to know (facts/how to)",
+      "tags": ["irregular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "sais", "tu": "sais", "il/elle/on": "sait", "nous": "savons", "vous": "savez", "ils/elles": "savent" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "su",
+          "forms": { "j'": "ai su", "tu": "as su", "il/elle/on": "a su", "nous": "avons su", "vous": "avez su", "ils/elles": "ont su" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "je": "savais", "tu": "savais", "il/elle/on": "savait", "nous": "savions", "vous": "saviez", "ils/elles": "savaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "je": "saurai", "tu": "sauras", "il/elle/on": "saura", "nous": "saurons", "vous": "saurez", "ils/elles": "sauront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "je": "sus", "tu": "sus", "il/elle/on": "sut", "nous": "sûmes", "vous": "sûtes", "ils/elles": "surent" }
+        }
+      }
+    },
+    {
+      "infinitive": "connaître",
+      "translation_en": "to know (be acquainted with)",
+      "tags": ["irregular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "connais", "tu": "connais", "il/elle/on": "connaît", "nous": "connaissons", "vous": "connaissez", "ils/elles": "connaissent" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "connu",
+          "forms": { "j'": "ai connu", "tu": "as connu", "il/elle/on": "a connu", "nous": "avons connu", "vous": "avez connu", "ils/elles": "ont connu" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "je": "connaissais", "tu": "connaissais", "il/elle/on": "connaissait", "nous": "connaissions", "vous": "connaissiez", "ils/elles": "connaissaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "je": "connaîtrai", "tu": "connaîtras", "il/elle/on": "connaîtra", "nous": "connaîtrons", "vous": "connaîtrez", "ils/elles": "connaîtront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "je": "connus", "tu": "connus", "il/elle/on": "connut", "nous": "connûmes", "vous": "connûtes", "ils/elles": "connurent" }
+        }
+      }
+    },
+    {
+      "infinitive": "vouloir",
+      "translation_en": "to want",
+      "tags": ["irregular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "veux", "tu": "veux", "il/elle/on": "veut", "nous": "voulons", "vous": "voulez", "ils/elles": "veulent" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "voulu",
+          "forms": { "j'": "ai voulu", "tu": "as voulu", "il/elle/on": "a voulu", "nous": "avons voulu", "vous": "avez voulu", "ils/elles": "ont voulu" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "je": "voulais", "tu": "voulais", "il/elle/on": "voulait", "nous": "voulions", "vous": "vouliez", "ils/elles": "voulaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "je": "voudrai", "tu": "voudras", "il/elle/on": "voudra", "nous": "voudrons", "vous": "voudrez", "ils/elles": "voudront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "je": "voulus", "tu": "voulus", "il/elle/on": "voulut", "nous": "voulûmes", "vous": "voulûtes", "ils/elles": "voulurent" }
+        }
+      }
+    },
+    {
+      "infinitive": "travailler",
+      "translation_en": "to work",
+      "verb_group": "-er",
+      "tags": ["regular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "travaille", "tu": "travailles", "il/elle/on": "travaille", "nous": "travaillons", "vous": "travaillez", "ils/elles": "travaillent" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "travaillé",
+          "forms": { "j'": "ai travaillé", "tu": "as travaillé", "il/elle/on": "a travaillé", "nous": "avons travaillé", "vous": "avez travaillé", "ils/elles": "ont travaillé" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "je": "travaillais", "tu": "travaillais", "il/elle/on": "travaillait", "nous": "travaillions", "vous": "travailliez", "ils/elles": "travaillaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "je": "travaillerai", "tu": "travailleras", "il/elle/on": "travaillera", "nous": "travaillerons", "vous": "travaillerez", "ils/elles": "travailleront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "je": "travaillai", "tu": "travaillas", "il/elle/on": "travailla", "nous": "travaillâmes", "vous": "travaillâtes", "ils/elles": "travaillèrent" }
+        }
+      }
+    },
+    {
+      "infinitive": "étudier",
+      "translation_en": "to study",
+      "verb_group": "-er",
+      "tags": ["regular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "j'": "étudie", "tu": "étudies", "il/elle/on": "étudie", "nous": "étudions", "vous": "étudiez", "ils/elles": "étudient" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "étudié",
+          "forms": { "j'": "ai étudié", "tu": "as étudié", "il/elle/on": "a étudié", "nous": "avons étudié", "vous": "avez étudié", "ils/elles": "ont étudié" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "j'": "étudiais", "tu": "étudiais", "il/elle/on": "étudiait", "nous": "étudiions", "vous": "étudiiez", "ils/elles": "étudiaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "j'": "étudierai", "tu": "étudieras", "il/elle/on": "étudiera", "nous": "étudierons", "vous": "étudierez", "ils/elles": "étudieront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "j'": "étudiai", "tu": "étudias", "il/elle/on": "étudia", "nous": "étudiâmes", "vous": "étudiâtes", "ils/elles": "étudièrent" }
+        }
+      }
+    },
+    {
+      "infinitive": "pouvoir",
+      "translation_en": "to be able to (can)",
+      "tags": ["irregular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "peux", "tu": "peux", "il/elle/on": "peut", "nous": "pouvons", "vous": "pouvez", "ils/elles": "peuvent" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "pu",
+          "forms": { "j'": "ai pu", "tu": "as pu", "il/elle/on": "a pu", "nous": "avons pu", "vous": "avez pu", "ils/elles": "ont pu" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "je": "pouvais", "tu": "pouvais", "il/elle/on": "pouvait", "nous": "pouvions", "vous": "pouviez", "ils/elles": "pouvaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "je": "pourrai", "tu": "pourras", "il/elle/on": "pourra", "nous": "pourrons", "vous": "pourrez", "ils/elles": "pourront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "je": "pus", "tu": "pus", "il/elle/on": "put", "nous": "pûmes", "vous": "pûtes", "ils/elles": "purent" }
+        }
+      }
+    },
+    {
+      "infinitive": "manger",
+      "translation_en": "to eat",
+      "verb_group": "-er",
+      "tags": ["regular", "g-sound-change"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "mange", "tu": "manges", "il/elle/on": "mange", "nous": "mangeons", "vous": "mangez", "ils/elles": "mangent" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "mangé",
+          "forms": { "j'": "ai mangé", "tu": "as mangé", "il/elle/on": "a mangé", "nous": "avons mangé", "vous": "avez mangé", "ils/elles": "ont mangé" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "je": "mangeais", "tu": "mangeais", "il/elle/on": "mangeait", "nous": "mangions", "vous": "mangiez", "ils/elles": "mangeaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "je": "mangerai", "tu": "mangeras", "il/elle/on": "mangera", "nous": "mangerons", "vous": "mangerez", "ils/elles": "mangeront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "je": "mangeai", "tu": "mangeas", "il/elle/on": "mangea", "nous": "mangeâmes", "vous": "mangeâtes", "ils/elles": "mangèrent" }
+        }
+      }
+    },
+    {
+      "infinitive": "boire",
+      "translation_en": "to drink",
+      "tags": ["irregular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "bois", "tu": "bois", "il/elle/on": "boit", "nous": "buvons", "vous": "buvez", "ils/elles": "boivent" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "bu",
+          "forms": { "j'": "ai bu", "tu": "as bu", "il/elle/on": "a bu", "nous": "avons bu", "vous": "avez bu", "ils/elles": "ont bu" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "je": "buvais", "tu": "buvais", "il/elle/on": "buvait", "nous": "buvions", "vous": "buviez", "ils/elles": "buvaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "je": "boirai", "tu": "boiras", "il/elle/on": "boira", "nous": "boirons", "vous": "boirez", "ils/elles": "boiront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "je": "bus", "tu": "bus", "il/elle/on": "but", "nous": "bûmes", "vous": "bûtes", "ils/elles": "burent" }
+        }
+      }
+    }
+  ]
+}
