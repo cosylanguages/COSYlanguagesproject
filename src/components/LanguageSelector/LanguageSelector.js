@@ -14,6 +14,9 @@ const LanguageSelector = () => {
         if (nativeName) {
             name = nativeName; // Prioritize native name
         } else {
+            // DEV_NOTE: If languageNameNative and languageNameInEnglish are consistently populated
+            // in all locale files, the following complex key parsing and specific overrides
+            // could be significantly simplified or removed.
             // Fallback to English name or parsed key
             name = allTranslations[langKey]?.languageNameInEnglish ||
                    langKey.replace('COSY', '').replace('ТАКОЙ', '').replace('ΚΟΖΥ', '').replace('ԾՈՍՅ', ''); // General cleanup for display name

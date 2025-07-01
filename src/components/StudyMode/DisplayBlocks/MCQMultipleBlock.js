@@ -160,6 +160,12 @@ const MCQMultipleBlock = ({ blockData, onAnswer }) => {
                             {showResults && feedback[opt.id] === 'correct' && <span className="feedback-icon"> ✅</span>}
                             {showResults && feedback[opt.id] === 'incorrect-selected' && <span className="feedback-icon"> ❌</span>}
                             {showResults && feedback[opt.id] === 'incorrect-missed' && <span className="feedback-icon"> (Correct)</span>}
+                            
+                            {showResults && opt.feedback && (
+                                <div className="option-specific-feedback">
+                                    <TransliterableText text={opt.feedback} langOverride={effectiveLang} />
+                                </div>
+                            )}
                         </div>
                     );
                 })}
