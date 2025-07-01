@@ -6,7 +6,7 @@ import { shuffleArray } from '../../../../utils/arrayUtils';
 import { pronounceText } from '../../../../utils/speechUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
-import { useProgress } from '../../../../contexts/ProgressContext'; // Import useProgress
+// import { useProgress } from '../../../../contexts/ProgressContext'; // Removed useProgress
 import { useI18n } from '../../../../i18n/I18nContext';
 
 const SelectArticleExercise = ({ language, days, exerciseKey }) => {
@@ -20,7 +20,7 @@ const SelectArticleExercise = ({ language, days, exerciseKey }) => {
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
-  const progress = useProgress();
+  // const progress = useProgress(); // Removed progress
   const { t } = useI18n();
 
   const NUM_ARTICLE_OPTIONS = 4;
@@ -91,14 +91,14 @@ const SelectArticleExercise = ({ language, days, exerciseKey }) => {
     const correctArticle = currentItem.article;
     const latinizedCorrect = getLatinizedText(correctArticle, language);
     const displayCorrect = isLatinized ? latinizedCorrect : correctArticle;
-    const itemId = `gender_${currentItem.word}_${correctArticle}`;
+    // const itemId = `gender_${currentItem.word}_${correctArticle}`; // Removed
 
     if (selectedArticleValue === correctArticle) {
       setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
-      progress.awardCorrectAnswer(itemId, 'grammar-select-article');
+      // progress.awardCorrectAnswer(itemId, 'grammar-select-article'); // Removed
     } else {
       setFeedback({ message: t('feedback.incorrectArticle', `Incorrect. The correct article is: ${displayCorrect}`, { correctAnswer: displayCorrect }), type: 'incorrect' });
-      progress.awardIncorrectAnswer(itemId, 'grammar-select-article');
+      // progress.awardIncorrectAnswer(itemId, 'grammar-select-article'); // Removed
     }
   };
 
@@ -120,12 +120,12 @@ const SelectArticleExercise = ({ language, days, exerciseKey }) => {
     const correctArticle = currentItem.article;
     const latinizedCorrect = getLatinizedText(correctArticle, language);
     const displayCorrect = isLatinized ? latinizedCorrect : correctArticle;
-    const itemId = `gender_${currentItem.word}_${correctArticle}`;
+    // const itemId = `gender_${currentItem.word}_${correctArticle}`; // Removed
     
     setFeedback({ message: t('feedback.revealedArticle', `The correct article for "${getLatinizedText(currentItem.word, language)}" is: ${displayCorrect}`, { word: getLatinizedText(currentItem.word, language), correctAnswer: displayCorrect }), type: 'info' });
     setIsRevealed(true);
     setSelectedOption(correctArticle); 
-    progress.scheduleReview(itemId, 'grammar-select-article', false);
+    // progress.scheduleReview(itemId, 'grammar-select-article', false); // Removed
   };
 
   const handlePronounceWord = () => {
@@ -138,8 +138,8 @@ const SelectArticleExercise = ({ language, days, exerciseKey }) => {
   };
 
   if (isLoading) return <p>{t('loading.selectArticleExercise', 'Loading select article exercise...')}</p>;
-  if (error) return <FeedbackDisplay message={error} type="error" />;
-  if (!currentItem && !isLoading) return <FeedbackDisplay message={t('exercises.noData', "No exercise data available. Try different selections.")} type="info" />;
+  if (error) return <FeedbackDisplay message={error} type="error" />; // FeedbackDisplay might be an issue if not present
+  if (!currentItem && !isLoading) return <FeedbackDisplay message={t('exercises.noData', "No exercise data available. Try different selections.")} type="info" />; // FeedbackDisplay might be an issue
   
   const wordToDisplay = currentItem ? getLatinizedText(currentItem.word, language) : "";
 

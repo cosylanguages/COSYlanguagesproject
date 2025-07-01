@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState } from 'react'; // Removed useMemo, useEffect
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../../components/Common/TransliterableText';
 
@@ -14,48 +14,49 @@ import './StudentDashboard.css';
 const displayComponentMap = {
   'reading/text': TextBlock,
   'utility/note': TextBlock, 
-  'comprehension/mcq-multiple': MCQMultipleBlock,
+  'comprehension/mcq-multiple': MCQMultipleBlock, // This component might need internal changes if it used progress
 };
 
-const isBlockScoreable = (block) => {
-  return block.typePath === 'comprehension/mcq-multiple';
-};
+// const isBlockScoreable = (block) => { // Removed as scoring is removed
+//   return block.typePath === 'comprehension/mcq-multiple';
+// };
 
-const LESSON_PROGRESS_STORAGE_KEY_PREFIX = 'studentLessonProgress_';
-const MOCK_LESSON_ID = 'mockLesson123'; 
+// const LESSON_PROGRESS_STORAGE_KEY_PREFIX = 'studentLessonProgress_'; // Removed
+const MOCK_LESSON_ID = 'mockLesson123'; // This might be irrelevant now
 
 const StudentDashboard = ({ lessonBlocks = [], lessonId = MOCK_LESSON_ID, onNavigateToBlock }) => { // Added onNavigateToBlock prop
   const { t } = useI18n();
   
-  const getStorageKey = (id) => `${LESSON_PROGRESS_STORAGE_KEY_PREFIX}${id}`;
+  // const getStorageKey = (id) => `${LESSON_PROGRESS_STORAGE_KEY_PREFIX}${id}`; // Removed
 
-  const [blockAnswers, setBlockAnswers] = useState(() => {
-    const savedAnswers = localStorage.getItem(getStorageKey(lessonId));
-    try {
-      return savedAnswers ? JSON.parse(savedAnswers) : {};
-    } catch (error) {
-      console.error("Error parsing saved answers from localStorage:", error);
-      return {};
-    }
-  }); 
+  // const [blockAnswers, setBlockAnswers] = useState(() => { // Removed blockAnswers state
+  //   // const savedAnswers = localStorage.getItem(getStorageKey(lessonId));
+  //   // try {
+  //   //   return savedAnswers ? JSON.parse(savedAnswers) : {};
+  //   // } catch (error) {
+  //   //   console.error("Error parsing saved answers from localStorage:", error);
+  //   //   return {};
+  //   // }
+  //   return {}; // Default to empty if state was kept for other reasons, but it's tied to progress
+  // }); 
 
-  useEffect(() => {
-    try {
-      localStorage.setItem(getStorageKey(lessonId), JSON.stringify(blockAnswers));
-    } catch (error) {
-      console.error("Error saving answers to localStorage:", error);
-    }
-  }, [blockAnswers, lessonId]);
+  // useEffect(() => { // Removed useEffect for saving answers
+  //   // try {
+  //   //   localStorage.setItem(getStorageKey(lessonId), JSON.stringify(blockAnswers));
+  //   // } catch (error) {
+  //   //   console.error("Error saving answers to localStorage:", error);
+  //   // }
+  // }, [blockAnswers, lessonId]);
 
-  const handleBlockAnswer = (answerData) => {
-    setBlockAnswers(prev => ({
-      ...prev,
-      [answerData.blockId]: {
-        score: answerData.score,
-        total: answerData.total,
-      }
-    }));
-  };
+  // const handleBlockAnswer = (answerData) => { // Removed handleBlockAnswer
+  //   // setBlockAnswers(prev => ({
+  //   //   ...prev,
+  //   //   [answerData.blockId]: {
+  //   //     score: answerData.score,
+  //   //     total: answerData.total,
+  //   //   }
+  //   // }));
+  // };
 
   const handleNavigateBlock = (direction, currentIndex) => {
     let targetIndex;
@@ -77,23 +78,23 @@ const StudentDashboard = ({ lessonBlocks = [], lessonId = MOCK_LESSON_ID, onNavi
     }
   };
 
-  const scoreSummary = useMemo(() => {
-    let achievedScore = 0;
-    let totalPossibleScore = 0;
-    lessonBlocks.forEach(block => {
-      if (isBlockScoreable(block)) {
-        totalPossibleScore += 1; 
-        if (blockAnswers[block.id]) {
-          achievedScore += blockAnswers[block.id].score;
-        }
-      }
-    });
-    return {
-      achieved: achievedScore,
-      possible: totalPossibleScore,
-      percentage: totalPossibleScore > 0 ? Math.round((achievedScore / totalPossibleScore) * 100) : 0,
-    };
-  }, [lessonBlocks, blockAnswers]);
+  // const scoreSummary = useMemo(() => { // Removed scoreSummary
+  //   let achievedScore = 0;
+  //   let totalPossibleScore = 0;
+  //   lessonBlocks.forEach(block => {
+  //     // if (isBlockScoreable(block)) { // isBlockScoreable is also removed
+  //     //   totalPossibleScore += 1; 
+  //     //   if (blockAnswers[block.id]) {
+  //     //     achievedScore += blockAnswers[block.id].score;
+  //     //   }
+  //     // }
+  //   });
+  //   return {
+  //     achieved: achievedScore,
+  //     possible: totalPossibleScore,
+  //     percentage: totalPossibleScore > 0 ? Math.round((achievedScore / totalPossibleScore) * 100) : 0,
+  //   };
+  // }, [lessonBlocks, blockAnswers]); // blockAnswers is also removed
 
   if (!lessonBlocks || lessonBlocks.length === 0) {
     return (
@@ -108,7 +109,7 @@ const StudentDashboard = ({ lessonBlocks = [], lessonId = MOCK_LESSON_ID, onNavi
     <div className="student-dashboard-container">
       <div className="lesson-header">
         <h2><TransliterableText text={t('studyMode.lessonTitlePlaceholder', 'Current Lesson')} /></h2>
-        {scoreSummary.possible > 0 && (
+        {/* {scoreSummary.possible > 0 && ( // scoreSummary removed
           <div className="lesson-score-summary">
             <h3><TransliterableText text={t('studentDashboard.scoreSummaryTitle', 'Lesson Summary')} /></h3>
             <p><TransliterableText 
@@ -118,7 +119,7 @@ const StudentDashboard = ({ lessonBlocks = [], lessonId = MOCK_LESSON_ID, onNavi
                   percentage: scoreSummary.percentage,
                 })} /></p>
           </div>
-        )}
+        )} */}
       </div>
       
       <div className="lesson-content-student-view">
@@ -129,9 +130,9 @@ const StudentDashboard = ({ lessonBlocks = [], lessonId = MOCK_LESSON_ID, onNavi
               <div key={block.id} id={getBlockElementId(block.id)} className="student-lesson-block">
                 <DisplayComponent 
                   blockData={block.data} 
-                  onAnswer={isBlockScoreable(block) ? handleBlockAnswer : undefined}
+                  // onAnswer={isBlockScoreable(block) ? handleBlockAnswer : undefined} // onAnswer and related logic removed
                 />
-                {blockAnswers[block.id] && isBlockScoreable(block) && (
+                {/* {blockAnswers[block.id] && isBlockScoreable(block) && ( // blockAnswers and isBlockScoreable removed
                   <div className="block-score-feedback">
                     <TransliterableText 
                       text={t('studentDashboard.blockScore', 'Score: {score}/{total}', { 
@@ -140,7 +141,7 @@ const StudentDashboard = ({ lessonBlocks = [], lessonId = MOCK_LESSON_ID, onNavi
                       })} 
                     />
                   </div>
-                )}
+                )} */}
                 <div className="block-navigation-actions">
                   <button 
                     onClick={() => handleNavigateBlock('previous', index)} 
