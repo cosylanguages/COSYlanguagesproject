@@ -1,0 +1,85 @@
+.exercise-action-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  justify-content: center; /* Center buttons in the container */
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px; /* Space above the button group */
+  padding: 10px 0; /* Padding within the container */
+  border-top: 1px solid #eee; /* Optional: a separator line */
+}
+
+.action-button {
+  padding: 10px 15px;
+  font-size: 1em; /* Relative font size */
+  border-radius: 5px;
+  border: 1px solid transparent; /* Base border */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  display: inline-flex; /* Helps align emoji and text */
+  align-items: center;
+  gap: 5px; /* Space between emoji and text if emoji is part of text */
+  background-color: #f8f9fa; /* Default light background */
+  color: #333; /* Default text color */
+  border-color: #ddd; /* Default border */
+}
+
+.action-button:hover:not(:disabled) {
+  opacity: 0.85;
+  transform: translateY(-1px); /* Slight lift on hover */
+}
+
+.action-button:active:not(:disabled) {
+  transform: translateY(0px); /* Press down effect */
+}
+
+.action-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-color: #e9ecef; /* Slightly different background for disabled */
+}
+
+/* Specific button styling (examples, can be adjusted) */
+.action-button-check {
+  background-color: #28a745; /* Green */
+  color: white;
+  border-color: #28a745;
+}
+.action-button-check:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.action-button-reveal {
+  background-color: #17a2b8; /* Info/Teal */
+  color: white;
+  border-color: #17a2b8;
+}
+.action-button-reveal:hover:not(:disabled) {
+  background-color: #138496;
+}
+
+.action-button-hint {
+  background-color: #ffc107; /* Yellow */
+  color: #212529; /* Dark text for yellow */
+  border-color: #ffc107;
+}
+.action-button-hint:hover:not(:disabled) {
+  background-color: #e0a800;
+}
+
+.action-button-randomize {
+  background-color: #6c757d; /* Secondary/Grey */
+  color: white;
+  border-color: #6c757d;
+}
+.action-button-randomize:hover:not(:disabled) {
+  background-color: #5a6268;
+}
+
+.action-button-next {
+  background-color: #007bff; /* Primary/Blue */
+  color: white;
+  border-color: #007bff;
+}
+.action-button-next:hover:not(:disabled) {
+  background-color: #0069d9;
+}
