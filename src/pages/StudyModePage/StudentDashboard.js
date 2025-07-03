@@ -2,25 +2,18 @@ import React from 'react'; // Removed useState as it's no longer used after remo
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../../components/Common/TransliterableText';
 
-// Import Display Block Components
-import TextBlock from '../../components/StudyMode/DisplayBlocks/TextBlock';
-import MCQMultipleBlock from '../../components/StudyMode/DisplayBlocks/MCQMultipleBlock';
+// Import the centralized displayComponentMap
+import { displayComponentMap } from '../../components/StudyMode/common/displayComponentMap';
 
 // Import the helper function for consistent ID generation
 import { getBlockElementId } from './StudyModePage'; 
 
 import './StudentDashboard.css'; 
 
-const displayComponentMap = {
-  'reading/text': TextBlock,
-  'utility/note': TextBlock, 
-  'comprehension/mcq-multiple': MCQMultipleBlock, 
-};
-
 // const MOCK_LESSON_ID = 'mockLesson123'; // This might be irrelevant now if lessonId prop is always provided
 
-// Props: lessonBlocks, lessonId (optional, with default MOCK_LESSON_ID), onNavigateToBlock
-const StudentDashboard = ({ lessonBlocks = [], /* lessonId = MOCK_LESSON_ID, */ onNavigateToBlock }) => {
+// Props: lessonBlocks
+const StudentDashboard = ({ lessonBlocks = [] }) => {
   const { t } = useI18n();
   
   // All state (blockAnswers) and effects related to progress/scoring have been removed.
@@ -37,12 +30,8 @@ const StudentDashboard = ({ lessonBlocks = [], /* lessonId = MOCK_LESSON_ID, */ 
 
     if (targetIndex >= 0 && targetIndex < lessonBlocks.length) {
       const targetBlockId = lessonBlocks[targetIndex].id;
-      if (onNavigateToBlock) {
-        onNavigateToBlock(targetBlockId);
-      } else {
-        const elementId = getBlockElementId(targetBlockId);
-        document.getElementById(elementId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      const elementId = getBlockElementId(targetBlockId);
+      document.getElementById(elementId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
