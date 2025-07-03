@@ -2,211 +2,238 @@
   display: flex; /* Use flexbox to manage layout */
   flex-direction: column; /* Stack children vertically */
   align-items: center; /* Center children horizontally */
-  padding: 20px;
+  padding: var(--spacing-lg, 20px); /* Use theme variable */
   margin: 0 auto;
   min-height: 100vh; /* Ensure container takes at least full viewport height */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .main-menu-box {
-  background-color: #f8f9fa; /* Light background for the box */
-  padding: 25px; /* Increased padding */
-  border-radius: 10px; /* Slightly larger border radius */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  background-image: linear-gradient(to bottom, var(--color-surface, #f8f9fa) 0%, var(--color-surface-medium, #e9ecef) 100%); /* Subtle gradient */
+  padding: var(--spacing-xl, 30px); /* Increased padding, use theme variable */
+  border-radius: var(--border-radius-xl, 12px); /* Use XL radius */
+  box-shadow: var(--shadow-md, 0 8px 16px rgba(0, 0, 0, 0.15)); /* Enhanced shadow for depth */
   width: 100%; 
-  max-width: 550px; /* Adjusted max width for a more compact menu */
-  margin-bottom: 35px; /* Increased space between menu box and exercise host */
+  max-width: 600px; /* Adjusted max width for a more spacious menu */
+  margin-bottom: var(--spacing-xl, 30px); /* Increased space, use theme variable */
   display: flex;
   flex-direction: column;
   align-items: center; 
+  gap: var(--spacing-md, 1rem); /* Add gap between items in the menu box */
+  animation: fadeInUp 0.5s ease-out 0.1s forwards; /* Stagger animation slightly */
 }
 
 .freestyle-mode-header {
   text-align: center;
-  color: #2c3e50; /* Darker, more modern color */
-  margin-bottom: 25px; 
-  font-size: 2.2rem; /* Larger font size */
+  color: var(--color-text-headings, #2c3e50); /* Use theme variable */
+  margin-bottom: var(--spacing-lg, 20px); 
+  font-size: var(--font-size-h1, 2.4rem); /* Larger font size */
   font-weight: 600; /* Bolder */
 }
 
-/* General styling for selector containers for consistent spacing */
+/* General styling for selector containers for consistent spacing and alignment */
 .selector-container {
   width: 100%;
   display: flex;
-  justify-content: center;
-  margin-bottom: 18px; /* Consistent margin for selector containers */
+  flex-direction: column; /* Stack label and control vertically */
+  align-items: center; /* Center items horizontally */
+  gap: var(--spacing-sm, 0.5rem); /* Space between label and selector */
+  margin-bottom: var(--spacing-lg, 20px); /* Consistent margin for selector containers */
+  padding: var(--spacing-xs, 0.25rem) 0;
 }
 
-.selector-container > * { /* Target the actual selector component */
+.selector-container > * { /* Target the actual selector component (dropdown, button group, etc.) */
   width: 100%;
-  max-width: 380px; /* Max width for individual selectors */
+  max-width: 400px; /* Max width for individual selectors */
+  transition: all 0.2s ease-in-out; /* Smooth transitions */
+}
+
+/* Style for labels within selector-container if they are not using .unified-label yet */
+.selector-container .unified-label { /* Assuming .unified-label is applied */
+  text-align: center; /* Center the label text above the selector */
+  width: 100%;
+  max-width: 400px; /* Match selector width */
 }
 
 
 .study-mode-button {
-  background-color: #007bff; /* Bootstrap primary blue */
-  color: white;
-  padding: 12px 30px; /* Adjusted padding for a better look */
-  border-radius: 8px;
+  background-color: var(--color-primary, #007bff); 
+  color: var(--color-text-on-dark, white);
+  padding: var(--spacing-md, 12px) var(--spacing-lg, 30px);
+  border-radius: var(--border-radius-lg, 8px);
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.15rem; /* Slightly increased font size */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Refined shadow */
+  font-size: var(--font-size-lg, 1.15rem); 
+  box-shadow: var(--shadow-sm, 0 4px 8px rgba(0,0,0,0.1)); 
   cursor: pointer;
   border: none;
-  transition: background-color 0.2s ease-in-out, transform 0.1s ease; /* Added transform transition */
+  transition: background-color 0.2s ease-in-out, transform 0.15s ease, box-shadow 0.15s ease; 
 }
 
 .study-mode-button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-  transform: translateY(-2px); /* Slight lift on hover */
+  background-color: var(--color-primary-dark, #0056b3); 
+  transform: translateY(-4px) scale(1.05); /* More lift and scale */
+  box-shadow: var(--shadow-lg, 0 8px 15px rgba(0,0,0,0.2)); /* Stronger shadow */
 }
 
 .study-mode-button:active {
-  transform: translateY(1px); /* Button press effect */
+  transform: translateY(0px) scale(1); 
+  box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.1));
 }
 
 
 .freestyle-mode-exercise-host {
-  margin-top: 20px; 
-  padding: 25px; /* Increased padding */
-  border-top: 3px solid #007bff; /* Thicker border */
+  margin-top: var(--spacing-lg, 20px); 
+  padding: var(--spacing-xl, 30px); 
+  border-top: 4px solid var(--color-primary, #007bff); 
   width: 100%;
-  max-width: 750px; /* Adjusted max width */
-  background-color: #ffffff; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
+  max-width: 800px; 
+  background-color: var(--color-background, #ffffff); 
+  border-radius: var(--border-radius-xl, 12px); /* Use XL radius */
+  box-shadow: var(--shadow-md, 0 4px 10px rgba(0,0,0,0.08)); 
+  animation: scaleIn 0.4s ease-out 0.3s forwards; /* Stagger animation */
 }
 
 .freestyle-mode-message {
   text-align: center;
   font-style: italic;
-  color: #5a6570; /* Softer, more readable color */
-  padding: 25px; 
-  font-size: 1.05rem; /* Slightly larger font size */
+  color: var(--color-text-secondary, #5a6570); 
+  padding: var(--spacing-xl, 30px); 
+  font-size: var(--font-size-lg, 1.1rem); 
 }
 
 /* Global elements styles */
 .freestyle-mode-root {
-  min-height: 100vh; /* Ensure it can fill height if content is short */
-  width: 100%; /* Take full width of its parent (app-main-content) */
+  min-height: 100vh; 
+  width: 100%; 
   position: relative;
-  /* background: none; /* Body background will show through */
-
-  /* Added Flex properties to center its direct children (e.g., FreestyleInterfaceView) */
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center children horizontally */
-  /* justify-content: center; /* Optional: if vertical centering of content within this page is desired */
-  
-  padding: var(--spacing-md, 20px); /* Use theme variable or a default */
+  flex-direction: column; 
+  align-items: center; 
+  padding: var(--spacing-md, 20px); 
   box-sizing: border-box;
 }
 
 #cosy-gamestats {
   position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: var(--color-primary, #007bff);
+  top: 15px; /* More spacing from top */
+  right: 15px; /* More spacing from right */
+  background: linear-gradient(135deg, var(--color-primary, #007bff), var(--color-primary-dark, #0056b3)); /* Gradient background */
   color: var(--color-text-on-dark, #fff);
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 10px 15px; /* Increased padding */
+  border-radius: var(--border-radius-md, 6px); /* Softer radius */
+  font-size: 0.9rem; /* Slightly larger font */
+  box-shadow: var(--shadow-sm, 0 2px 5px rgba(0,0,0,0.2));
   z-index: 1000;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 #cosy-gamestats.levelup {
-  animation: gamestatsLevelUp 1.2s ease-out;
+  animation: gamestatsLevelUp 1.2s ease-out forwards; /* Ensure it stays at the end state of animation if needed */
 }
 
 .cosy-toast {
   position: fixed;
-  bottom: 20px;
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(20, 20, 20, 0.9); /* Darker, more modern toast */
   color: #fff;
-  padding: 12px 22px;
-  border-radius: 25px;
-  font-size: 0.9rem;
+  padding: 12px 25px;
+  border-radius: var(--border-radius-lg, 30px); /* Pill shape */
+  font-size: 0.95rem;
   z-index: 1001;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
   transition: opacity 0.3s, transform 0.3s;
 }
 
 #floating-help-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: var(--color-primary, #007bff);
+  bottom: 25px;
+  right: 25px;
+  width: 55px; /* Slightly larger */
+  height: 55px; /* Slightly larger */
+  background: linear-gradient(135deg, var(--color-secondary, #6c757d), var(--color-secondary-dark, #5a6268));
   color: var(--color-text-on-dark, #fff);
   border: none;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Larger icon */
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: var(--shadow-md, 0 3px 8px rgba(0,0,0,0.25));
   cursor: pointer;
   z-index: 999;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 #floating-help-btn:hover {
-  background-color: var(--color-primary-dark, #0056b3);
-  transform: scale(1.1);
+  background: linear-gradient(135deg, var(--color-secondary-dark, #5a6268), var(--color-secondary, #6c757d));
+  transform: scale(1.12) rotate(15deg); /* More playful hover */
+  box-shadow: var(--shadow-lg, 0 5px 15px rgba(0,0,0,0.3));
 }
 
 @keyframes gamestatsLevelUp {
-  0% { transform: scale(1); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-  50% { transform: scale(1.15) rotate(-3deg); box-shadow: 0 4px 10px rgba(0,123,255,0.5); }
-  100% { transform: scale(1); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  0% { transform: scale(1) rotate(0deg); box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+  30% { transform: scale(1.2) rotate(-5deg); box-shadow: 0 6px 15px rgba(var(--color-primary, #007bff), 0.5); }
+  60% { transform: scale(1.1) rotate(5deg); }
+  100% { transform: scale(1.15); box-shadow: 0 4px 10px rgba(var(--color-primary, #007bff),0.3); } /* End slightly larger for emphasis */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .freestyle-mode-header {
-    font-size: 1.8rem; /* Adjust header font size for smaller screens */
+    font-size: var(--font-size-h2, 1.8rem); /* Adjust header font size for smaller screens */
   }
 
   .main-menu-box {
-    padding: 20px;
-    margin-bottom: 25px;
+    padding: var(--spacing-lg, 20px);
+    margin-bottom: var(--spacing-lg, 25px);
+    gap: var(--spacing-sm, 0.75rem);
   }
 
   .study-mode-button {
-    padding: 10px 25px;
-    font-size: 1.1rem;
+    padding: var(--spacing-sm, 10px) var(--spacing-md, 25px);
+    font-size: var(--font-size-base, 1.1rem);
   }
 
   .freestyle-mode-exercise-host {
-    padding: 20px;
+    padding: var(--spacing-lg, 20px);
+    max-width: 95%;
   }
 
   .freestyle-mode-message {
-    padding: 20px;
-    font-size: 1rem;
+    padding: var(--spacing-lg, 20px);
+    font-size: var(--font-size-base, 1rem);
+  }
+  .selector-container {
+    margin-bottom: var(--spacing-md, 15px);
   }
 }
 
 @media (max-width: 480px) {
   .freestyle-mode-container {
-    padding: 15px;
+    padding: var(--spacing-md, 15px);
   }
   .main-menu-box {
-    max-width: 95%; /* Allow box to be more fluid on very small screens */
-    padding: 15px;
+    max-width: 95%; 
+    padding: var(--spacing-md, 15px);
   }
   .freestyle-mode-header {
-    font-size: 1.6rem;
+    font-size: var(--font-size-h3, 1.6rem);
   }
   .study-mode-button {
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: var(--spacing-sm, 10px) var(--spacing-md, 20px);
+    font-size: var(--font-size-base, 1rem);
   }
   .selector-container > * {
-    max-width: 300px; /* Further reduce max-width for selectors */
+    max-width: 90%; /* Allow selectors to be more fluid */
+  }
+  #cosy-gamestats {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+  #floating-help-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
   }
 }
