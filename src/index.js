@@ -6,7 +6,6 @@ import { PlanProvider } from './PlanContext';
 import { AuthProvider } from './AuthContext';
 import { I18nProvider } from './i18n/I18nContext';
 import { LatinizationProvider } from './contexts/LatinizationContext';
-// import { ProgressProvider } from './contexts/ProgressContext'; // Removed
 import { UserProfileProvider } from './contexts/UserProfileContext'; // Added UserProfileProvider
 import './index.css'; 
 
@@ -23,11 +22,9 @@ if (rootElement) {
             <LatinizationProvider>
               <AuthProvider>
                 <UserProfileProvider>
-                  {/* <ProgressProvider> */}
                     <PlanProvider>
                       <AppRoutes /> 
                     </PlanProvider>
-                  {/* </ProgressProvider> */}
                 </UserProfileProvider>
               </AuthProvider>
             </LatinizationProvider>
@@ -39,11 +36,9 @@ if (rootElement) {
             <LatinizationProvider>
               <AuthProvider>
                 <UserProfileProvider>
-                  {/* <ProgressProvider> */}
                     <PlanProvider>
                       <AppRoutes /> 
                     </PlanProvider>
-                  {/* </ProgressProvider> */}
                 </UserProfileProvider>
               </AuthProvider>
             </LatinizationProvider>
