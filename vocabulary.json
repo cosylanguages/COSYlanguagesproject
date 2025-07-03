@@ -1,0 +1,4976 @@
+[
+  {
+    "term": "a, an",
+    "level": "A1",
+    "definition": "used before a singular countable noun when you are talking about one person or thing that has not been mentioned before",
+    "example": "I see a cat. She has an apple."
+  },
+  {
+    "term": "a few",
+    "level": "A1",
+    "definition": "",
+    "example": "a few minutes, a few times, a few years"
+  },
+  {
+    "term": "a good idea",
+    "level": "A1",
+    "definition": "",
+    "example": "Good idea!, It’s a good idea to…, That’s a good idea!"
+  },
+  {
+    "term": "a little",
+    "level": "A1",
+    "definition": "",
+    "example": "a little help, a little money, a little sugar"
+  },
+  {
+    "term": "a lot",
+    "level": "A1",
+    "definition": "",
+    "example": "a lot to do"
+  },
+  {
+    "term": "a lot of sth",
+    "level": "A1",
+    "definition": "a large number or amount of something",
+    "example": "There are a lot of books on the table."
+  },
+  {
+    "term": "all day",
+    "level": "A1",
+    "definition": "for the entire day",
+    "example": "We played outside all day."
+  },
+  {
+    "term": "all night",
+    "level": "A1",
+    "definition": "for the entire night",
+    "example": "He studied all night for the test."
+  },
+  {
+    "term": "all over the world",
+    "level": "A1",
+    "definition": "in all parts of the earth.",
+    "example": "She has been all over the world."
+  },
+  {
+    "term": "anything else",
+    "level": "A1",
+    "definition": "any additional or different thing (used in questions or negative statements).",
+    "example": "Would you like anything else?"
+  },
+  {
+    "term": "anyone else",
+    "level": "A1",
+    "definition": "any other person (used in questions or negative statements).",
+    "example": "Does anyone else want to go?"
+  },
+  {
+    "term": "a period of time",
+    "level": "A1",
+    "definition": "a length of time.",
+    "example": "We waited for a short period of time."
+  },
+  {
+    "term": "around the world",
+    "level": "A1",
+    "definition": "in or to many parts of the world.",
+    "example": "He wants to travel around the world."
+  },
+  {
+    "term": "arrive at…",
+    "level": "A1",
+    "definition": "to get to a specific point or smaller place (like a station, building, or event).",
+    "example": "We will arrive at the cinema at 7 o'clock."
+  },
+  {
+    "term": "arrive in…",
+    "level": "A1",
+    "definition": "to get to a larger area like a city or country.",
+    "example": "My friends arrive in Paris next week."
+  },
+  {
+    "term": "ask for sth",
+    "level": "A1",
+    "definition": "to say that you would like to have something; to request something.",
+    "example": "If you are hungry, ask for a sandwich."
+  },
+  {
+    "term": "at home",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at school",
+    "level": "A1",
+    "definition": "attending school; being present in the school building for learning.",
+    "example": "The children are at school from 9 a.m. to 3 p.m."
+  },
+  {
+    "term": "at the beginning of sth",
+    "level": "A1",
+    "definition": "at the start of something.",
+    "example": "We sing a song at the beginning of the class."
+  },
+  {
+    "term": "at the end",
+    "level": "A1",
+    "definition": "in the final part of an event or activity.",
+    "example": "At the end, everyone clapped."
+  },
+  {
+    "term": "at the end of sth",
+    "level": "A1",
+    "definition": "in the final part of something (like a period of time, a story, or a place).",
+    "example": "They get paid at the end of the month."
+  },
+  {
+    "term": "at the moment",
+    "level": "A1",
+    "definition": "now; at the present time.",
+    "example": "Sorry, she's not here at the moment."
+  },
+  {
+    "term": "at the same time",
+    "level": "A1",
+    "definition": "happening together; at the identical moment.",
+    "example": "They both started talking at the same time."
+  },
+  {
+    "term": "at the weekend/at the weekend (AE)",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at university",
+    "level": "A1",
+    "definition": "studying at a university.",
+    "example": "My older sister is at university."
+  },
+  {
+    "term": "at work",
+    "level": "A1",
+    "definition": "at the place where you do your job.",
+    "example": "My dad is at work now."
+  },
+  {
+    "term": "away from sb/sth",
+    "level": "A1",
+    "definition": "not near someone or something; at a distance from someone or something.",
+    "example": "Please keep the dog away from the food."
+  },
+  {
+    "term": "bad for sb/sth",
+    "level": "A1",
+    "definition": "harmful to someone or something; likely to cause damage or problems.",
+    "example": "Eating too much sugar is bad for your teeth."
+  },
+  {
+    "term": "bad news",
+    "level": "A1",
+    "definition": "information about something unpleasant that has happened or will happen.",
+    "example": "I'm afraid I have some bad news for you."
+  },
+  {
+    "term": "bad thing",
+    "level": "A1",
+    "definition": "the bad things about sth",
+    "example": ""
+  },
+  {
+    "term": "because of",
+    "level": "A1",
+    "definition": "as a result of; used to give a reason for something.",
+    "example": "The game was cancelled because of the rain."
+  },
+  {
+    "term": "begin with sth",
+    "level": "A1",
+    "definition": "to start an activity or process with a particular thing or action.",
+    "example": "Let's begin with the first exercise."
+  },
+  {
+    "term": "be going to do sth",
+    "level": "A1",
+    "definition": "used to talk about future plans or intentions, or to predict that something will happen soon.",
+    "example": "I am going to visit my grandmother tomorrow. / Look at those clouds! It's going to rain."
+  },
+  {
+    "term": "best friend",
+    "level": "A1",
+    "definition": "a very close friend that you like more than any other.",
+    "example": "She told her best friend all her secrets."
+  },
+  {
+    "term": "black and white",
+    "level": "A1",
+    "definition": "using only black, white, and shades of grey; not in colour.",
+    "example": "The old movie was in black and white."
+  },
+  {
+    "term": "car park/parking lot (AE)",
+    "level": "A1",
+    "definition": "an area or building where cars can be parked.",
+    "example": "We left the car in the multi-storey car park."
+  },
+  {
+    "term": "cell phone",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "city centre/city center (AE)",
+    "level": "A1",
+    "definition": "in the city centre/center (AE)",
+    "example": ""
+  },
+  {
+    "term": "come from…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "come into sth",
+    "level": "A1",
+    "definition": "",
+    "example": "He came into the room."
+  },
+  {
+    "term": "differences between A and B",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "difficult for sb",
+    "level": "A1",
+    "definition": "it is difficult for sb to do sth",
+    "example": ""
+  },
+  {
+    "term": "each other",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "end in sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "every day",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "every week",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "every year",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "excuse me",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "family member",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "find out",
+    "level": "A1",
+    "definition": "find out about sth, find out more",
+    "example": ""
+  },
+  {
+    "term": "for a long time",
+    "level": "A1",
+    "definition": "a long time",
+    "example": ""
+  },
+  {
+    "term": "for a moment",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for example",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for lunch",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for many years",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for the first time",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get home",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get married",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get off",
+    "level": "A1",
+    "definition": "get off the bus",
+    "example": "I’m getting off here."
+  },
+  {
+    "term": "get on",
+    "level": "A1",
+    "definition": "get on the bus",
+    "example": "Are you getting on?"
+  },
+  {
+    "term": "get ready",
+    "level": "A1",
+    "definition": "get ready for sth, get ready to do sth",
+    "example": ""
+  },
+  {
+    "term": "get there",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get to…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get up",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go back",
+    "level": "A1",
+    "definition": "go back to…",
+    "example": ""
+  },
+  {
+    "term": "go home",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go into sth",
+    "level": "A1",
+    "definition": "",
+    "example": "She went into her room."
+  },
+  {
+    "term": "good at sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "good for sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Good morning",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Good afternoon",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Good evening",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "good news",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "good thing",
+    "level": "A1",
+    "definition": "the good things about sth",
+    "example": ""
+  },
+  {
+    "term": "go out",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go to bed",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go to school",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go to work",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "grow up",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Guess what…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "half an hour",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "hard work",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "have fun",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "have got",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "have time",
+    "level": "A1",
+    "definition": "have time for sth, have time to do sth",
+    "example": ""
+  },
+  {
+    "term": "he or she",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "high school",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "his or her",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "How about…?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "How are you?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "How long…?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "How many…?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "How much…?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "How often…?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "important for sb/sth",
+    "level": "A1",
+    "definition": "It is important for sb/sth to do sth",
+    "example": ""
+  },
+  {
+    "term": "I’m sorry",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in April",
+    "level": "A1",
+    "definition": "in July, etc.",
+    "example": ""
+  },
+  {
+    "term": "in bed",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in class",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in fact",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in front of",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in my opinion",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in school",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in space",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in summer",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in winter",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the centre/in the center (AE)",
+    "level": "A1",
+    "definition": "in the centre/center (AE) of sth",
+    "example": ""
+  },
+  {
+    "term": "in the country",
+    "level": "A1",
+    "definition": "the best… in the country",
+    "example": "I live in the country."
+  },
+  {
+    "term": "in the future",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the morning",
+    "level": "A1",
+    "definition": "in the afternoon, in the evening",
+    "example": ""
+  },
+  {
+    "term": "in the north",
+    "level": "A1",
+    "definition": "in the south, in the east, in the west",
+    "example": ""
+  },
+  {
+    "term": "in the past",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the street",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the summer",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the winter",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in town",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "it is important to do sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "It takes…",
+    "level": "A1",
+    "definition": "",
+    "example": "It takes an hour to get there."
+  },
+  {
+    "term": "kind of sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": "What kind of music do you like?"
+  },
+  {
+    "term": "know how",
+    "level": "A1",
+    "definition": "know how to do sth",
+    "example": ""
+  },
+  {
+    "term": "last time",
+    "level": "A1",
+    "definition": "the last time",
+    "example": ""
+  },
+  {
+    "term": "last year",
+    "level": "A1",
+    "definition": "last month, last summer, last week, last weekend",
+    "example": ""
+  },
+  {
+    "term": "learn how to do sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "listen to sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "live with sb",
+    "level": "A1",
+    "definition": "to have the same opinion as someone",
+    "example": "I agree with you."
+  },
+  {
+    "term": "living room",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "look at sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "look for sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "look like sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "lots of…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "millions of…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "mobile phone/cell phone (AE)",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "more than…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "next time",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "next year",
+    "level": "A1",
+    "definition": "next month, next week",
+    "example": ""
+  },
+  {
+    "term": "No problem",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "of course",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Oh no!",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Oh yes",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "old friend",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "once a…",
+    "level": "A1",
+    "definition": "once a month, once a week, once a year",
+    "example": ""
+  },
+  {
+    "term": "one day",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on holiday/on vacation (AE)",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on Monday",
+    "level": "A1",
+    "definition": "on Tuesday, etc.",
+    "example": ""
+  },
+  {
+    "term": "on television",
+    "level": "A1",
+    "definition": "on the television",
+    "example": ""
+  },
+  {
+    "term": "on the beach",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on the floor",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on the internet",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on the left",
+    "level": "A1",
+    "definition": "on the right",
+    "example": ""
+  },
+  {
+    "term": "on the phone",
+    "level": "A1",
+    "definition": "be on the phone, talk on the phone",
+    "example": ""
+  },
+  {
+    "term": "on TV",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "out of sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "over there",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "pay for sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "phone call",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "phone number",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "plan for sth",
+    "level": "A1",
+    "definition": "make plans for sth",
+    "example": "What are your plans for next year?"
+  },
+  {
+    "term": "play with sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "post office",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "pretty good",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "really enjoy",
+    "level": "A1",
+    "definition": "",
+    "example": "I really enjoyed it."
+  },
+  {
+    "term": "really good",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "really like",
+    "level": "A1",
+    "definition": "",
+    "example": "I’d really like to…"
+  },
+  {
+    "term": "right now",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "See you",
+    "level": "A1",
+    "definition": "See you around, See you later, See you soon",
+    "example": ""
+  },
+  {
+    "term": "sit down",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "someone else",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "something else",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "speak to sb",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "spend time",
+    "level": "A1",
+    "definition": "spend time doing sth, spend time with sb",
+    "example": ""
+  },
+  {
+    "term": "stand up",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "stay in",
+    "level": "A1",
+    "definition": "stay in a hotel, stay in bed",
+    "example": "I’m staying in tonight."
+  },
+  {
+    "term": "such as",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "swimming pool",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "talk about sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "thank you",
+    "level": "A1",
+    "definition": "thank you very much",
+    "example": ""
+  },
+  {
+    "term": "that day",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "the 20th century",
+    "level": "A1",
+    "definition": "the 21st century, the 19th century",
+    "example": ""
+  },
+  {
+    "term": "the next day",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "there is",
+    "level": "A1",
+    "definition": "there are, there was, there were",
+    "example": ""
+  },
+  {
+    "term": "think about sb/sth",
+    "level": "A1",
+    "definition": "think of sb/sth",
+    "example": ""
+  },
+  {
+    "term": "This is…",
+    "level": "A1",
+    "definition": "",
+    "example": "This is my dad."
+  },
+  {
+    "term": "this kind of…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "this morning",
+    "level": "A1",
+    "definition": "this afternoon, this evening",
+    "example": ""
+  },
+  {
+    "term": "this time",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "this year",
+    "level": "A1",
+    "definition": "this summer, this weekend",
+    "example": ""
+  },
+  {
+    "term": "thousands of…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "too long",
+    "level": "A1",
+    "definition": "too far, too hard",
+    "example": ""
+  },
+  {
+    "term": "too much",
+    "level": "A1",
+    "definition": "too many",
+    "example": ""
+  },
+  {
+    "term": "town centre/town center (AE)",
+    "level": "A1",
+    "definition": "in the town centre/center (AE)",
+    "example": ""
+  },
+  {
+    "term": "TV show",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "wait for sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "wake up",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "welcome to sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "What about…?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "work as sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "work for sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "work hard",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "work together",
+    "level": "A1",
+    "definition": "work together for sth, work together to do sth",
+    "example": ""
+  },
+  {
+    "term": "work with sb",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "would like",
+    "level": "A1",
+    "definition": "I would like…, I would like to…, Would you like…?",
+    "example": ""
+  },
+  {
+    "term": "X hours a day",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "X times a…",
+    "level": "A1",
+    "definition": "X times a day, X times a week",
+    "example": ""
+  },
+  {
+    "term": "X years ago",
+    "level": "A1",
+    "definition": "X days ago, X months ago, X weeks ago",
+    "example": ""
+  },
+  {
+    "term": "X years later",
+    "level": "A1",
+    "definition": "X days later, X minutes later",
+    "example": ""
+  },
+  {
+    "term": "X years old",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "You’re welcome",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a bit",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "able to do sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a couple of sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "add to sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "again and again",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "all about…",
+    "level": "A2",
+    "definition": "",
+    "example": "Tell me all about it."
+  },
+  {
+    "term": "all kinds of…",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "all over…",
+    "level": "A2",
+    "definition": "all over the world",
+    "example": ""
+  },
+  {
+    "term": "all sorts of…",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "all the time",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a long time ago",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a long way",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a number of sth",
+    "level": "A2",
+    "definition": "a large number of sth",
+    "example": ""
+  },
+  {
+    "term": "apply for sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "art gallery",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as a result",
+    "level": "A2",
+    "definition": "as a result of sth",
+    "example": ""
+  },
+  {
+    "term": "as part of sth",
+    "level": "A2",
+    "definition": "as part of a team",
+    "example": ""
+  },
+  {
+    "term": "as soon as",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as well",
+    "level": "A2",
+    "definition": "as well as sb/sth",
+    "example": ""
+  },
+  {
+    "term": "at first",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at least",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at the age of…",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at the start of sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at the time",
+    "level": "A2",
+    "definition": "at that time, at the time of sth",
+    "example": ""
+  },
+  {
+    "term": "at the top",
+    "level": "A2",
+    "definition": "at the top of sth",
+    "example": ""
+  },
+  {
+    "term": "based on sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be allowed to do sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "believe in sb/sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "belong to sb",
+    "level": "A2",
+    "definition": "belong to sth",
+    "example": ""
+  },
+  {
+    "term": "be made of sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "by the end of sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "care about sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "carry on",
+    "level": "A2",
+    "definition": "carry on with sth",
+    "example": ""
+  },
+  {
+    "term": "carry sth out",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "check in",
+    "level": "A2",
+    "definition": "check in at…, check sth in",
+    "example": ""
+  },
+  {
+    "term": "check out",
+    "level": "A2",
+    "definition": "check out of sth",
+    "example": ""
+  },
+  {
+    "term": "climate change",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "close to sb/sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "come back",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Come on!",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "connected to sth",
+    "level": "A2",
+    "definition": "connected with sb/sth",
+    "example": ""
+  },
+  {
+    "term": "credit card",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "deal with sb",
+    "level": "A2",
+    "definition": "deal with sth",
+    "example": ""
+  },
+  {
+    "term": "depend on sb/sth",
+    "level": "A2",
+    "definition": "depend on sb/sth for sth, depend on sth",
+    "example": ""
+  },
+  {
+    "term": "do well",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "each one",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "end with sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "even more…",
+    "level": "A2",
+    "definition": "even more difficult, even more exciting",
+    "example": ""
+  },
+  {
+    "term": "everyone else",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "except for",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "fall in love",
+    "level": "A2",
+    "definition": "fall in love with sb",
+    "example": ""
+  },
+  {
+    "term": "fall off",
+    "level": "A2",
+    "definition": "fall off sth",
+    "example": ""
+  },
+  {
+    "term": "far away",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "feel good",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "feel like sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "fill sth in",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "find it difficult to do sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "first of all",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "focus on sb/sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "followed by sb/sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for the rest of sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for this reason",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get back",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get better",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get lost",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get out",
+    "level": "A2",
+    "definition": "get out of sth",
+    "example": ""
+  },
+  {
+    "term": "give up",
+    "level": "A2",
+    "definition": "give sth up",
+    "example": ""
+  },
+  {
+    "term": "go and…",
+    "level": "A2",
+    "definition": "go and get help",
+    "example": ""
+  },
+  {
+    "term": "go away",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go down",
+    "level": "A2",
+    "definition": "Prices are going down.",
+    "example": ""
+  },
+  {
+    "term": "go down sth",
+    "level": "A2",
+    "definition": "",
+    "example": "Go down the road."
+  },
+  {
+    "term": "go for sth",
+    "level": "A2",
+    "definition": "go for a walk",
+    "example": ""
+  },
+  {
+    "term": "go up",
+    "level": "A2",
+    "definition": "Prices are going up.",
+    "example": ""
+  },
+  {
+    "term": "good luck",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "happen to sb/sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "happy with sb/sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "have a look",
+    "level": "A2",
+    "definition": "have a look at sth",
+    "example": ""
+  },
+  {
+    "term": "have got to",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Have you ever…?",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "health problems",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "hear about sb/sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "I don’t care",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "if necessary",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "if you want to",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "I guess",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "I’m afraid…",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "I mean",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in business",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in danger",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in history",
+    "level": "A2",
+    "definition": "the first time in history",
+    "example": ""
+  },
+  {
+    "term": "in hospital",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in love",
+    "level": "A2",
+    "definition": "in love with sb",
+    "example": ""
+  },
+  {
+    "term": "in prison",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in some cases",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "instead of",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the air",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the end",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the middle",
+    "level": "A2",
+    "definition": "in the middle of sth",
+    "example": ""
+  },
+  {
+    "term": "in the same way",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in this way",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "it depends",
+    "level": "A2",
+    "definition": "it all depends",
+    "example": ""
+  },
+  {
+    "term": "I think so",
+    "level": "A2",
+    "definition": "I don’t think so",
+    "example": ""
+  },
+  {
+    "term": "lead to sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "less than…",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Let me…",
+    "level": "A2",
+    "definition": "",
+    "example": "Let me help you."
+  },
+  {
+    "term": "let me know",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "look after sb/sth/yourself",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "look back at sth",
+    "level": "A2",
+    "definition": "",
+    "example": "Look back at your notes."
+  },
+  {
+    "term": "look sth up",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "make a mistake",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "make money",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "make sense",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "make sure",
+    "level": "A2",
+    "definition": "make sure of sth, make sure that…",
+    "example": ""
+  },
+  {
+    "term": "much better",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "not at all",
+    "level": "A2",
+    "definition": "",
+    "example": "I didn’t enjoy it at all."
+  },
+  {
+    "term": "no way",
+    "level": "A2",
+    "definition": "There is no way (that)…",
+    "example": "No way!"
+  },
+  {
+    "term": "Oh dear",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Oh well",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on earth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on the ground",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on the other side",
+    "level": "A2",
+    "definition": "on the other side of sth",
+    "example": ""
+  },
+  {
+    "term": "on the wall",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on time",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on top of sth/sb",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "one or two",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "ordinary people",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "pay attention",
+    "level": "A2",
+    "definition": "pay attention to sb/sth",
+    "example": ""
+  },
+  {
+    "term": "per hour",
+    "level": "A2",
+    "definition": "kilometres per hour, miles per hour",
+    "example": ""
+  },
+  {
+    "term": "pick sb/sth up",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "police officer",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "police station",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "public transport",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "put sth on",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "quite a lot",
+    "level": "A2",
+    "definition": "quite a lot of sth",
+    "example": ""
+  },
+  {
+    "term": "reasons why",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "refer to sb/sth",
+    "level": "A2",
+    "definition": "refer to sb/sth as sth",
+    "example": ""
+  },
+  {
+    "term": "report on sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "respond to sth/sb",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "save money",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "science fiction",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "search for sth/sb",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "so that…",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "solution to sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "sort of sth",
+    "level": "A2",
+    "definition": "",
+    "example": "What sorts of things do you do?"
+  },
+  {
+    "term": "sound like sb/sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "start with sb/sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "such a/an…",
+    "level": "A2",
+    "definition": "",
+    "example": "such a good idea"
+  },
+  {
+    "term": "take care of sb/sth/yourself",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "take off",
+    "level": "A2",
+    "definition": "take sth off",
+    "example": ""
+  },
+  {
+    "term": "take part",
+    "level": "A2",
+    "definition": "take part in sth",
+    "example": ""
+  },
+  {
+    "term": "take place",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "the best thing",
+    "level": "A2",
+    "definition": "the best thing to do",
+    "example": ""
+  },
+  {
+    "term": "the first thing",
+    "level": "A2",
+    "definition": "the first thing I did",
+    "example": ""
+  },
+  {
+    "term": "the following…",
+    "level": "A2",
+    "definition": "the following day",
+    "example": ""
+  },
+  {
+    "term": "the important thing",
+    "level": "A2",
+    "definition": "the most important thing",
+    "example": ""
+  },
+  {
+    "term": "the other side of sth",
+    "level": "A2",
+    "definition": "the other side of the world",
+    "example": ""
+  },
+  {
+    "term": "the rest of sth",
+    "level": "A2",
+    "definition": "the rest of the world",
+    "example": ""
+  },
+  {
+    "term": "these days",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "they say…",
+    "level": "A2",
+    "definition": "",
+    "example": "They say you can’t buy happiness."
+  },
+  {
+    "term": "throw sth away",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "turn sth off",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "turn sth on",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "up and down",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Why not…?",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "work out",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "worried about sb/sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "would love to do sth",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "write sth down",
+    "level": "A2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a bit more",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a bit of sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "access to sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "after all",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a great deal",
+    "level": "B1",
+    "definition": "a great deal better, a great deal of sth",
+    "example": ""
+  },
+  {
+    "term": "aim to do sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a kind of…",
+    "level": "B1",
+    "definition": "",
+    "example": "I had a kind of feeling this might happen."
+  },
+  {
+    "term": "a little bit",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a little more",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "along with sb/sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a lot more",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "alternative to sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "and so on",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "apart from",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a range of sth",
+    "level": "B1",
+    "definition": "a wide range of sth",
+    "example": ""
+  },
+  {
+    "term": "as if…",
+    "level": "B1",
+    "definition": "",
+    "example": "as if nothing had happened"
+  },
+  {
+    "term": "as much as",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as soon as possible",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at last",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at risk",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at times",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "attached to sb/sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a variety of sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be about to do sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be going on",
+    "level": "B1",
+    "definition": "",
+    "example": "What’s going on?"
+  },
+  {
+    "term": "be known as sb/sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "benefit from sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be supposed to do sth",
+    "level": "B1",
+    "definition": "be supposed to be sth",
+    "example": ""
+  },
+  {
+    "term": "break up",
+    "level": "B1",
+    "definition": "break up with sb",
+    "example": ""
+  },
+  {
+    "term": "by the time (that)…",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "can’t afford sth",
+    "level": "B1",
+    "definition": "can’t afford to do sth",
+    "example": ""
+  },
+  {
+    "term": "care for sb",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "caused by sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "check sb/sth out",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "choose to do sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "clean up",
+    "level": "B1",
+    "definition": "clean sth up",
+    "example": ""
+  },
+  {
+    "term": "click on sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "come up with sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "compared with sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "concentrate on sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "consist of sb/sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "decide on sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "depending on",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "developing countries",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "due to sb/sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "economic growth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "end up",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "even if",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "even though",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "exactly the same",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "experience in sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "fail to do sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "fall asleep",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "far more",
+    "level": "B1",
+    "definition": "far more important, far more opportunities",
+    "example": ""
+  },
+  {
+    "term": "far too",
+    "level": "B1",
+    "definition": "",
+    "example": "far too much homework"
+  },
+  {
+    "term": "fed up",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for a while",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for free",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for instance",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for life",
+    "level": "B1",
+    "definition": "",
+    "example": "a job for life"
+  },
+  {
+    "term": "for long",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for some time",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get on with sb",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get to know sb",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get used to sth",
+    "level": "B1",
+    "definition": "get used to doing sth",
+    "example": ""
+  },
+  {
+    "term": "global warming",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go ahead",
+    "level": "B1",
+    "definition": "go ahead with sth",
+    "example": ""
+  },
+  {
+    "term": "go wrong",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "growth in sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "have no idea",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "have sth in common",
+    "level": "B1",
+    "definition": "have sth in common with sb, have sth in common with sth",
+    "example": ""
+  },
+  {
+    "term": "hear of sb/sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "heart disease",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "high street",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "higher education",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "if I were you",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in addition",
+    "level": "B1",
+    "definition": "in addition to sb/sth",
+    "example": ""
+  },
+  {
+    "term": "in a way that...",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in case…",
+    "level": "B1",
+    "definition": "just in case…",
+    "example": ""
+  },
+  {
+    "term": "in charge of sb/sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in contrast",
+    "level": "B1",
+    "definition": "in contrast to sb/sth",
+    "example": ""
+  },
+  {
+    "term": "in favour of sb/sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in general",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in order of sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in order to do sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in other words",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in particular",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in public",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in recent years",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in response to sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in terms of sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the case of sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the form of sb/sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the way (that)…",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in this case",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in time",
+    "level": "B1",
+    "definition": "in time for sth, in time to do sth",
+    "example": ""
+  },
+  {
+    "term": "in touch",
+    "level": "B1",
+    "definition": "be in touch, get in touch, keep in touch, in touch with sb",
+    "example": ""
+  },
+  {
+    "term": "I wonder if…",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "leave sb/sth out",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "likely to do sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "look forward to sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "look out",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "make a difference",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "make sth up",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "manage to do sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "mean to do sth",
+    "level": "B1",
+    "definition": "",
+    "example": "I didn’t mean to."
+  },
+  {
+    "term": "more and more",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "move on",
+    "level": "B1",
+    "definition": "move on to sth",
+    "example": ""
+  },
+  {
+    "term": "no longer",
+    "level": "B1",
+    "definition": "not any longer",
+    "example": ""
+  },
+  {
+    "term": "no more than…",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "not even",
+    "level": "B1",
+    "definition": "",
+    "example": "I didn’t even see it."
+  },
+  {
+    "term": "not necessarily",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "not only",
+    "level": "B1",
+    "definition": "not only… but also…",
+    "example": ""
+  },
+  {
+    "term": "on a regular basis",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on my own",
+    "level": "B1",
+    "definition": "on their own, on your own",
+    "example": ""
+  },
+  {
+    "term": "on the other hand",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on the street",
+    "level": "B1",
+    "definition": "on the streets",
+    "example": ""
+  },
+  {
+    "term": "on the way",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "or something",
+    "level": "B1",
+    "definition": "or somebody, or somewhere",
+    "example": ""
+  },
+  {
+    "term": "or two",
+    "level": "B1",
+    "definition": "a day or two, a moment or two, a pound or two",
+    "example": ""
+  },
+  {
+    "term": "ought to",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "out there",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "over the years",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "over time",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "participate in sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "point of view",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "point out",
+    "level": "B1",
+    "definition": "point sth out, point out that…",
+    "example": ""
+  },
+  {
+    "term": "prepared to do sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "primary school",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "prime minister",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "put sth up",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "quite a…",
+    "level": "B1",
+    "definition": "quite a good player, quite a long time",
+    "example": ""
+  },
+  {
+    "term": "raise money",
+    "level": "B1",
+    "definition": "raise money for sth",
+    "example": ""
+  },
+  {
+    "term": "rather than",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "reaction to sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "relate to sth/sb",
+    "level": "B1",
+    "definition": "relating to sth/sb, related to sth/sb",
+    "example": ""
+  },
+  {
+    "term": "respect for sb/sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "result in sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "rise in sth",
+    "level": "B1",
+    "definition": "",
+    "example": "a rise in the number of visitors"
+  },
+  {
+    "term": "run out",
+    "level": "B1",
+    "definition": "run out of sth",
+    "example": ""
+  },
+  {
+    "term": "search engine",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "secondary school",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "set sth up",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "slow down",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "so far",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "some kind of…",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "succeed in doing sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "suffer from sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "sure to do sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "take sb/sth on",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "take up sth",
+    "level": "B1",
+    "definition": "take up too much room, take sth up, take up golf",
+    "example": ""
+  },
+  {
+    "term": "tell the truth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "tend to do sth",
+    "level": "B1",
+    "definition": "tend to be sth",
+    "example": ""
+  },
+  {
+    "term": "thanks to sb/sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "that’s it",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "the case",
+    "level": "B1",
+    "definition": "be the case that…",
+    "example": ""
+  },
+  {
+    "term": "the fact that…",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "those who…",
+    "level": "B1",
+    "definition": "",
+    "example": "There are those who say…"
+  },
+  {
+    "term": "to do with sb/sth",
+    "level": "B1",
+    "definition": "be to do with sb/sth, have to do with sb/sth",
+    "example": ""
+  },
+  {
+    "term": "together with",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "too bad",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "try and…",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "turn out",
+    "level": "B1",
+    "definition": "turn out to be sth",
+    "example": ""
+  },
+  {
+    "term": "turn sth up",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "unable to do sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "up to sth",
+    "level": "B1",
+    "definition": "",
+    "example": "up to 60 miles per hour"
+  },
+  {
+    "term": "way of life",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "well known",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "work on sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "work sth out",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "wrong with sb/sth",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "you see",
+    "level": "B1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a bit of a…",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "account for sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "accused of sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "act as sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "aimed at sb",
+    "level": "B2",
+    "definition": "aimed at doing sth",
+    "example": ""
+  },
+  {
+    "term": "all the way",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "a means of sth",
+    "level": "B2",
+    "definition": "a means of communication, a means of transport",
+    "example": ""
+  },
+  {
+    "term": "appeal to sb",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "apply to sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as a whole",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as far as I am concerned",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as follows…",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as for sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as long as…",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "associated with sth",
+    "level": "B2",
+    "definition": "associated with doing sth",
+    "example": ""
+  },
+  {
+    "term": "as though…",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at once",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at present",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at some point",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at the end of the day",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at this point",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at this stage",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "awareness of sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "back sb/sth up",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be charged with sth",
+    "level": "B2",
+    "definition": "be charged with doing sth",
+    "example": ""
+  },
+  {
+    "term": "be derived from sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be expected to do sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be known to do sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be made up of sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be surrounded by sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be to blame",
+    "level": "B2",
+    "definition": "be to blame for sth",
+    "example": ""
+  },
+  {
+    "term": "both sides",
+    "level": "B2",
+    "definition": "both sides of the argument, on both sides",
+    "example": ""
+  },
+  {
+    "term": "bound to do sth",
+    "level": "B2",
+    "definition": "bound to be sth",
+    "example": ""
+  },
+  {
+    "term": "bring sb up",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "by now",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "call for sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "case study",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "come across sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "come true",
+    "level": "B2",
+    "definition": "",
+    "example": "a dream come true"
+  },
+  {
+    "term": "concerned about sth",
+    "level": "B2",
+    "definition": "concerned with sth",
+    "example": ""
+  },
+  {
+    "term": "confidence in sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "contribute to sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "control over sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "cope with sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "decline in sth",
+    "level": "B2",
+    "definition": "",
+    "example": "a decline in student numbers"
+  },
+  {
+    "term": "dependent on sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "despite the fact that…",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "draw attention to sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "engage in sth",
+    "level": "B2",
+    "definition": "engaged in sth",
+    "example": ""
+  },
+  {
+    "term": "ever since(…)",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "exposure to sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "far from sth",
+    "level": "B2",
+    "definition": "far from doing sth",
+    "example": ""
+  },
+  {
+    "term": "figure sb/sth out",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "find yourself doing sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get in",
+    "level": "B2",
+    "definition": "get into sth",
+    "example": "The train got in late."
+  },
+  {
+    "term": "get over sth/sb",
+    "level": "B2",
+    "definition": "",
+    "example": "You’ll get over it."
+  },
+  {
+    "term": "get rid of sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go off",
+    "level": "B2",
+    "definition": "",
+    "example": "She went off to get a drink. A bomb went off. The alarm went off. The lights went off."
+  },
+  {
+    "term": "go on to do sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go through sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "had better",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "hang on",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "human being",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "human rights",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "if only…",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "I have to say…",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in action",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in advance",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in an attempt to do sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in part",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in place",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in relation to sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in spite of sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the first place",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the near future",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in turn",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "investment in sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "I would say...",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "loads of sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "mental health",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "more or less",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "no doubt",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "no matter…",
+    "level": "B2",
+    "definition": "no matter how…, no matter what…",
+    "example": ""
+  },
+  {
+    "term": "nothing but",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on board",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "once again",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "one another",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on the basis of sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on the one hand",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "opposed to sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "or so",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "other than",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "potential for sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "pretty much",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "prior to",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "prove to be sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "put sth forward",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "put sth together",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "quality of life",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "ranging from",
+    "level": "B2",
+    "definition": "",
+    "example": "prices ranging from €25 to €60"
+  },
+  {
+    "term": "regarded as sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "relevant to sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "rely on sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "role model",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "set out",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "short of sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "so as to do sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "something like…",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "sort sb/sth/yourself out",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "stick to sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "subject to sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "sum up",
+    "level": "B2",
+    "definition": "sum sth up",
+    "example": ""
+  },
+  {
+    "term": "take advantage of sb/sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "take sth into account",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "take over",
+    "level": "B2",
+    "definition": "take over from sb",
+    "example": ""
+  },
+  {
+    "term": "that is",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "the vast majority of sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "turn into sth",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "up to sb",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "when it comes to sth",
+    "level": "B2",
+    "definition": "when it comes to doing sth",
+    "example": ""
+  },
+  {
+    "term": "whether or not…",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "would rather…",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "above all",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "all but",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "all the more",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as far as sb/sth is concerned",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as of…",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as opposed to",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as such",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "as to sth",
+    "level": "C1",
+    "definition": "as to how…, as to whether…",
+    "example": ""
+  },
+  {
+    "term": "at the expense of sb/sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at the hands of sb",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "back and forth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "bear sb/sth in mind",
+    "level": "C1",
+    "definition": "bear in mind that…, keep sb/sth in mind, keep in mind that…",
+    "example": ""
+  },
+  {
+    "term": "be attributed to sb",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be entitled to sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be found to do sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be meant to do sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "be reported to be sth",
+    "level": "C1",
+    "definition": "be reported to have sth",
+    "example": ""
+  },
+  {
+    "term": "be said to be sth",
+    "level": "C1",
+    "definition": "be said to have sth",
+    "example": ""
+  },
+  {
+    "term": "bring sth about",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "bring sth up",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "by means of sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "by no means",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "call on sb",
+    "level": "C1",
+    "definition": "call on sb to do sth",
+    "example": ""
+  },
+  {
+    "term": "consistent with sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "dedicated to sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "deprive sb/sth of sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "dispose of sb/sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "follow sth up",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for that matter",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for the benefit of sb",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for the sake of sb/sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get away with sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "given that…",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "have sb/sth in mind",
+    "level": "C1",
+    "definition": "have sb/sth in mind for sth",
+    "example": ""
+  },
+  {
+    "term": "have nothing to do with sb/sth",
+    "level": "C1",
+    "definition": "be nothing to do with sb/sth",
+    "example": ""
+  },
+  {
+    "term": "in accordance with sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in any case",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in a position to do sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in conjunction with sb/sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in connection with sb/sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in effect",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in full",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in line with sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in practice",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in respect of sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in such a way (that)…",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the absence of sb/sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the course of…",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the event of sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the face of sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the hands of sb",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the light of sth",
+    "level": "C1",
+    "definition": "in light of sth",
+    "example": ""
+  },
+  {
+    "term": "in the meantime",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the midst of sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the presence of sb",
+    "level": "C1",
+    "definition": "in the presence of sth",
+    "example": ""
+  },
+  {
+    "term": "in the wake of sb/sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "involvement in sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "let alone",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "little more than…",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "live on sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "may well",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "nothing like",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "not to mention",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on behalf of sb",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on the part of sb",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "over the course of…",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "put it",
+    "level": "C1",
+    "definition": "",
+    "example": "How shall I put it?"
+  },
+  {
+    "term": "seek to do sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "set to do sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "the extent to which…",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "to date",
+    "level": "C1",
+    "definition": "",
+    "example": "his best work to date"
+  },
+  {
+    "term": "up against sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "with regard to sb/sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "with respect to sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "with the exception of sb/sth",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "aged",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "accommodation",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "ambitious",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "apparel",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "athletic",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "autumn/fall (AE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "bankruptcy",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "behavioral",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "beverage",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "castle",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "catalog/catalogue (BrE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "center/centre (BrE)",
+    "level": "A1",
+    "definition": "in the city center/centre (BrE)",
+    "example": ""
+  },
+  {
+    "term": "cowboy",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "delighted",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "dime",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "felony",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "freshman",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "honey",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "incarcerate",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "incarceration",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "inquire/enquire (BrE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "intersection",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "keen",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "kindergarten",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "lawmaker",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "lineup/line-up (BrE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "mobile",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "module",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "mosquito",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "nickel",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "parliament",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "pension",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "pharmacy",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "rookie",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "roster",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "rumor/rumour (BrE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "secondly",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "setup/set-up (BrE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "sidewalk",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "sophomore",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "tumor/tumour (BrE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "unconstitutional",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "wolf",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "aged",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "accommodation",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "ambitious",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "apparel",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "athletic",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "autumn/fall (AE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "bankruptcy",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "behavioral",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "beverage",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "castle",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "catalog/catalogue (BrE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "cowboy",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "delighted",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "dime",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "felony",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "freshman",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "honey",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "incarcerate",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "incarceration",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "inquire/enquire (BrE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "intersection",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "keen",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "kindergarten",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "lawmaker",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "lineup/line-up (BrE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "mobile",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "module",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "mosquito",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "nickel",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "parliament",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "pension",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "pharmacy",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "rookie",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "roster",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "rumor/rumour (BrE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "secondly",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "setup/set-up (BrE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "sidewalk",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "sophomore",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "tumor/tumour (BrE)",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "unconstitutional",
+    "level": "C1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "wolf",
+    "level": "B2",
+    "definition": "",
+    "example": ""
+  }
+]
