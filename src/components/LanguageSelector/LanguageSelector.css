@@ -9,10 +9,15 @@
 }
 
 .language-select-label {
-    font-size: 1.2rem; /* For the emoji */
-    color: var(--color-text-primary, #333); /* Default text color */
-    margin-right: 10px; 
-    font-weight: 500; 
+    /* Inherits from .unified-label: font-weight, color, margin-bottom */
+    /* Specific overrides for LanguageSelector label: */
+    font-size: 1.2rem; /* Keep for the emoji if desired, or adjust .unified-label */
+    margin-right: var(--spacing-sm, 0.5rem); /* Standardized margin */
+    /* font-weight: 500; /* .unified-label is 600, this could be an override if needed */
+    /* color: var(--color-text-primary, #333); /* .unified-label uses --color-text-secondary */
+    /* Ensure it aligns well with the dropdown if .unified-label's display:block is too aggressive here */
+    display: inline-block; /* Override .unified-label's display:block if it causes layout issues here */
+    margin-bottom: 0; /* Override .unified-label's margin-bottom if it's not desired next to the dropdown */
 }
 
 .language-select-dropdown {
