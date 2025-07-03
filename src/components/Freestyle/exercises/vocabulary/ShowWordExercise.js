@@ -5,8 +5,8 @@ import useLatinization from '../../../../hooks/useLatinization';
 import { pronounceText, unlockAudioPlayback } from '../../../../utils/speechUtils';
 import ExerciseControls from '../../ExerciseControls'; 
 import FeedbackDisplay from '../../FeedbackDisplay';
-// import { useProgress } from '../../../../contexts/ProgressContext'; // Import useProgress
-import { normalizeString } from '../../../../utils/stringUtils';
+// import { normalizeString } from '../../../../utils/stringUtils'; // Not used after progress removal
+import { useI18n } from '../../../../i18n/I18nContext';
 
 
 const ShowWordExercise = ({ language, days, exerciseKey }) => {
@@ -14,7 +14,7 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const { isLatinized } = useLatinizationContext();
-  // const progress = useProgress(); // Removed progress
+  const { t } = useI18n();
 
   const latinizedWord = useLatinization(currentWord, language);
 
@@ -26,19 +26,8 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
   const fetchAndSetNewWord = useCallback(async () => {
     setIsLoading(true);
     setError(null);
-    const oldWord = currentWord; // Keep track of the word being replaced
+    // const oldWord = currentWord; // No longer needed without progress context
     setCurrentWord(''); 
-
-    // If there was a word, consider it "seen" or "passed" for SRS purposes
-    // This is a simple way; more complex logic might depend on user interaction (e.g., if they pronounced it)
-    if (oldWord) {
-        // const itemId = `showword_${normalizeString(oldWord)}`; // Removed
-        // For ShowWord, "correct" might mean the user acknowledged/studied it.
-        // Since there's no direct input, we might assume "correct" when they move to the next.
-        // Or, this could be a place for a "I knew this" / "I didn't know this" button in future.
-        // For now, let's log it as a generic interaction.
-        // progress.scheduleReview(itemId, 'vocab-show-word', true); // Assume "true" as they moved on // Removed
-    }
 
     try {
       const { data: words, error: fetchError } = await loadVocabularyData(language, days);
@@ -49,30 +38,25 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
         const randomIndex = Math.floor(Math.random() * words.length);
         setCurrentWord(words[randomIndex]);
       } else {
-        setError('No vocabulary words found for the selected criteria.');
+        setError(t('exercises.noVocabWords', 'No vocabulary words found for the selected criteria.'));
       }
     } catch (err) {
       console.error("ShowWordExercise - Error fetching word:", err);
-      setError(err.message || 'An unexpected error occurred.');
+      setError(err.message || t('errors.unexpectedError', 'An unexpected error occurred.'));
     } finally {
       setIsLoading(false);
     }
-  // }, [language, days, progress, currentWord]); // progress removed from dependencies
-  }, [language, days, currentWord]); // Added currentWord to useCallback deps for oldWord tracking
+  }, [language, days, t]); // Removed currentWord from deps
 
   useEffect(() => {
     if (language && days && days.length > 0) { 
         fetchAndSetNewWord();
     } else {
         setIsLoading(false);
-        setError("Please select a language and day(s).");
+        setError(t('errors.selectLangDay', "Please select a language and day(s)."));
         setCurrentWord('');
     }
-  }, [fetchAndSetNewWord, exerciseKey, language, days]); // fetchAndSetNewWord is already memoized
-
-  const handleNextWord = () => {
-    fetchAndSetNewWord(); // This will also trigger the progress tracking for the "oldWord" inside fetchAndSetNewWord
-  };
+  }, [fetchAndSetNewWord, exerciseKey, language, days]); 
 
   const handlePronounce = async () => {
     if (currentWord && language) {
@@ -80,7 +64,8 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
         await pronounceText(currentWord, language);
       } catch (speechError) {
         console.error("Error pronouncing word:", speechError);
-        setError("Could not pronounce the word. Please ensure your browser supports speech synthesis and audio is enabled.");
+        // Use FeedbackDisplay for errors if available and appropriate, or keep alert/console
+        setError(t('errors.pronunciationError', "Could not pronounce the word. Please ensure your browser supports speech synthesis and audio is enabled."));
       }
     }
   };
@@ -88,35 +73,24 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
   const wordStyle = (isLatinized && currentWord !== latinizedWord) ? { fontFamily: 'Arial, sans-serif', fontStyle: 'italic' } : {};
 
   if (isLoading) {
-    return <p>Loading word...</p>;
+    return <p>{t('loading.wordExercise', 'Loading word...')}</p>;
   }
 
   if (error) {
-    // NOTE: The FeedbackDisplay component was reported as missing.
-    // If this component is essential and its removal was unintended, this might cause a runtime error.
-    // For now, assuming its usage here is okay or it's handled elsewhere.
     return <FeedbackDisplay message={error} type="error" />;
   }
 
   if (!currentWord && !isLoading) { 
-    return <FeedbackDisplay message="No word to display. Try different selections or check data." type="info" />;
+    return <FeedbackDisplay message={t('exercises.noWordToDisplay', "No word to display. Try different selections or check data.")} type="info" />;
   }
   
-  const pronounceButtonStyle = {
-    padding: '10px 15px',
-    fontSize: '1rem',
-    cursor: 'pointer',
-    backgroundColor: '#007bff',
-    color: 'white',
-    border: 'none',
-    borderRadius: '5px',
-    marginRight: '10px', 
-  };
-
+  // Pronounce button will use the .action-button style from ExerciseControls.css by adding the class
+  // Or it can remain custom if preferred, but for unification, using common styles is better.
+  // For this refactor, I'll make it use the action-button style.
 
   return (
     <div style={{ textAlign: 'center', padding: '20px', border: '1px solid #eee', borderRadius: '8px' }}>
-      <h3>Random Word</h3>
+      <h3>{t('titles.randomWord', 'Random Word')}</h3>
       {currentWord && ( 
         <>
           <div
@@ -125,18 +99,19 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
           >
             {latinizedWord || currentWord}
           </div>
-          <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px' }}>
-            <button onClick={handlePronounce} style={pronounceButtonStyle} disabled={!currentWord}>
-              🔊 Pronounce
+          <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '15px' }}>
+            <button onClick={handlePronounce} className="action-button" disabled={!currentWord}>
+              🔊 {t('buttons.pronounce', 'Pronounce')}
             </button>
             <ExerciseControls 
-              onNextExercise={handleNextWord}
+              onRandomize={fetchAndSetNewWord} // Randomize shows a new word
+              onNextExercise={fetchAndSetNewWord} // Next exercise also shows a new word
               config={{
                 showNext: true,
                 showCheck: false,
                 showHint: false,
                 showReveal: false,
-                showRandomize: false, 
+                showRandomize: true, 
               }}
             />
           </div>
