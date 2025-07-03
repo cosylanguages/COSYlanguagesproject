@@ -173,3 +173,42 @@
   margin-top: 0;
   color: var(--color-primary-dark, #0056b3);
 }
+
+/* New Grid Layout Styles */
+.teacher-dashboard-container-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Sidebar width and main content */
+    gap: 20px;
+    /* padding: 20px; */ /* Existing .teacher-dashboard-container might handle this or StudyModePage */
+    /* background-color: #f9f9f9; */ /* Let main page background show through or set one */
+}
+
+.teacher-dashboard-sidebar {
+    padding: var(--spacing-md, 1rem);
+    background-color: var(--color-surface, #fff); /* Sidebar background */
+    border-radius: var(--border-radius-lg, 0.3rem);
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.08));
+    height: fit-content; /* Adjust as needed, or make it scrollable */
+    /* overflow-y: auto; */ /* Add if content is expected to exceed height */
+}
+
+.teacher-dashboard-sidebar > div:not(:last-child) { /* Space between DayManager and LessonSectionManager */
+    margin-bottom: var(--spacing-lg, 1.5rem);
+}
+
+.teacher-dashboard-main-content {
+    /* The existing .teacher-dashboard-container styles might largely apply here if we rename it or ensure this div gets them */
+    /* For now, let's assume it's a distinct area */
+    background-color: var(--color-surface, #fff);
+    border-radius: var(--border-radius-lg, 0.3rem);
+    padding: var(--spacing-lg, 1.5rem); /* Add padding if it doesn't inherit */
+    box-shadow: var(--shadow-md, 0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* Adjust .teacher-dashboard-container if it's still the outer wrapper and not teacher-dashboard-main-content */
+/* If teacher-dashboard-container-grid is the new top-level, then .teacher-dashboard-container might be redundant or need repurposing */
+
+.no-blocks-message { /* Ensure this is distinct for section selection vs general empty lesson */
+    background-color: var(--color-surface-info-light, #e6f7ff); /* Example different background */
+    border: 1px dashed var(--color-border-info, #91d5ff);
+}
