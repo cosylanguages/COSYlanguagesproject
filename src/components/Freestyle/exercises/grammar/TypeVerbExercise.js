@@ -89,13 +89,13 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
   };
 
   const checkAnswer = () => {
-    if (!exerciseData || isRevealed || isAnsweredCorrectly) return;
+    if (!exerciseData) return; // Should be handled by ExerciseControls
     
     const correctAnswer = exerciseData.answer;
     const latinizedCorrect = getLatinizedText(correctAnswer, language);
     const displayCorrect = isLatinized ? latinizedCorrect : correctAnswer;
     let possibleAnswers = correctAnswer.split('/').map(ans => normalizeString(ans.trim()));
-    const itemId = `verb_${normalizeString(exerciseData.verbInfinitive || exerciseData.correctSentence)}_${normalizeString(correctAnswer)}`;
+    // const itemId = `verb_${normalizeString(exerciseData.verbInfinitive || exerciseData.correctSentence)}_${normalizeString(correctAnswer)}`; // Not used
     const isCorrectNow = possibleAnswers.includes(normalizeString(userInput));
 
     if (isCorrectNow) {
@@ -113,7 +113,7 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
   };
 
   const showHint = () => {
-    if (!exerciseData || isRevealed || isAnsweredCorrectly) return;
+    if (!exerciseData) return; // Should be handled by ExerciseControls
     const answerForHint = exerciseData.answer.split('/')[0].trim();
     let hintLetter = '';
     if (answerForHint && answerForHint.length > 0) {
@@ -122,12 +122,12 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
     setFeedback({ message: t('feedback.hintVerb', `Hint: The answer starts with '${getLatinizedText(hintLetter, language)}'.`, { letter: getLatinizedText(hintLetter, language) }), type: 'hint' });
   };
 
-  const revealTheAnswer = () => { // Renamed from revealAnswer
-    if (!exerciseData || isAnsweredCorrectly) return;
+  const revealTheAnswer = () => { 
+    if (!exerciseData) return; // Should be handled by ExerciseControls
     const correctAnswer = exerciseData.answer.split('/')[0].trim();
     const latinizedCorrect = getLatinizedText(correctAnswer, language);
     const displayCorrect = isLatinized ? latinizedCorrect : correctAnswer;
-    const itemId = `verb_${normalizeString(exerciseData.verbInfinitive || exerciseData.correctSentence)}_${normalizeString(exerciseData.answer)}`;
+    // const itemId = `verb_${normalizeString(exerciseData.verbInfinitive || exerciseData.correctSentence)}_${normalizeString(exerciseData.answer)}`; // Not used
 
     setUserInput(correctAnswer); 
     setFeedback({ 
@@ -135,13 +135,14 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
       type: 'info' 
     });
     setIsRevealed(true);
-    setIsAnsweredCorrectly(true); // Consider revealed as "done" for progression
+    setIsAnsweredCorrectly(true); 
     
-    if(!isAnsweredCorrectly) { // Only auto-progress if not already solved before reveal
-        setTimeout(() => {
-            setupNewExercise();
-        }, 2000);
-    }
+    // Only auto-progress if not already solved before reveal - this logic might be complex with the current isAnsweredCorrectly state
+    // For simplicity, if revealed, it just shows the answer and user can click Next/Randomize.
+    // Or, keep the timeout to move to next:
+    setTimeout(() => {
+        setupNewExercise();
+    }, 2500); // Longer timeout for revealed answer
   };
   
   const handlePronounceSentence = () => {
@@ -191,7 +192,8 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
             <button 
                 onClick={handlePronounceSentence} 
                 title={t('tooltips.pronounceSentence',`Pronounce sentence`)}
-                style={{background:'none', border:'none', fontSize:'1.5rem', cursor:'pointer', marginLeft:'10px'}}
+                className="action-button" // Using common style
+                style={{marginLeft:'10px'}} // Keep specific margin if needed
             >
             🔊
           </button>
@@ -201,14 +203,18 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
       <FeedbackDisplay message={feedback.message} type={feedback.type} language={language} />
       
       <ExerciseControls
-        onCheckAnswer={!isRevealed && !isAnsweredCorrectly && exerciseData ? checkAnswer : undefined}
-        onShowHint={!isRevealed && !isAnsweredCorrectly && exerciseData ? showHint : undefined}
-        onRevealAnswer={!isRevealed && !isAnsweredCorrectly && exerciseData ? revealTheAnswer : undefined}
+        onCheckAnswer={checkAnswer}
+        onShowHint={showHint}
+        onRevealAnswer={revealTheAnswer}
+        onRandomize={setupNewExercise}
         onNextExercise={setupNewExercise}
+        isAnswerCorrect={isAnsweredCorrectly}
+        isRevealed={isRevealed}
         config={{ 
-            showCheck: !isRevealed && !isAnsweredCorrectly && !!exerciseData, 
-            showHint: !isRevealed && !isAnsweredCorrectly && !!exerciseData, 
-            showReveal: !isRevealed && !isAnsweredCorrectly && !!exerciseData,
+            showCheck: !!exerciseData, 
+            showHint: !!exerciseData, 
+            showReveal: !!exerciseData,
+            showRandomize: true,
             showNext: true,
         }}
       />
