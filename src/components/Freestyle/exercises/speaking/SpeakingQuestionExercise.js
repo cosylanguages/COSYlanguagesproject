@@ -6,10 +6,9 @@ import { mapLanguageToSpeechCode } from '../../../../utils/speechUtils'; // For 
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
 import { useI18n } from '../../../../i18n/I18nContext';
-import { shuffleArray } from '../../../../utils/arrayUtils'; // Import shuffleArray
+import { shuffleArray } from '../../../../utils/arrayUtils'; 
 
 // TODO: Implement a proper useSpeechRecognition hook or service for STT
-// This mock function is a placeholder.
 const mockStartSpeechRecognition = ({
   language,
   onStart,
@@ -22,7 +21,6 @@ const mockStartSpeechRecognition = ({
   setTimeout(() => {
     const mockTranscript = "This is a mocked transcript.";
     onResult(mockTranscript);
-    // onError({ error: "no-speech" }); // Uncomment to test error handling
     onEnd();
   }, 2000);
 };
@@ -47,6 +45,7 @@ const SpeakingQuestionExercise = ({ language, days, exerciseKey }) => {
     setCurrentQuestionIndex(0);
     setTranscript('');
     setFeedback({ message: '', type: '' });
+    setIsRecording(false); // Ensure recording state is reset
 
     try {
       const { data, error: fetchError } = await loadSpeakingPromptsData(language, days);
@@ -54,7 +53,7 @@ const SpeakingQuestionExercise = ({ language, days, exerciseKey }) => {
         throw new Error(fetchError.message || fetchError.error || 'Failed to load speaking questions.');
       }
       if (data && data.length > 0) {
-        setQuestions(shuffleArray(data)); // Shuffle questions
+        setQuestions(shuffleArray(data)); 
       } else {
         setError(t('exercises.noSpeakingQuestions', 'No speaking questions found for the selected criteria.'));
       }
@@ -64,7 +63,7 @@ const SpeakingQuestionExercise = ({ language, days, exerciseKey }) => {
     } finally {
       setIsLoading(false);
     }
-  }, [language, days, t, shuffleArray]); // Added shuffleArray to dependencies
+  }, [language, days, t]); // shuffleArray is a pure function, not needed in deps if not changing
 
   useEffect(() => {
     if (language && days && days.length > 0) {
@@ -77,7 +76,6 @@ const SpeakingQuestionExercise = ({ language, days, exerciseKey }) => {
 
   const handleRecord = () => {
     if (isRecording) {
-      // TODO: Call a stop function from the speech recognition hook if it's active
       console.log("Stopping mocked recording (if applicable)");
       setIsRecording(false);
       return;
@@ -89,12 +87,9 @@ const SpeakingQuestionExercise = ({ language, days, exerciseKey }) => {
 
     mockStartSpeechRecognition({
       language: mapLanguageToSpeechCode(language),
-      onStart: () => {
-        console.log("Mocked STT started");
-      },
+      onStart: () => console.log("Mocked STT started"),
       onResult: (text) => {
         setTranscript(text);
-        // Basic feedback based on transcript length
         if (text.trim().length > 0) {
             setFeedback({ message: t('feedback.answerRecorded', 'Answer recorded!'), type: 'success' });
         } else {
@@ -112,7 +107,7 @@ const SpeakingQuestionExercise = ({ language, days, exerciseKey }) => {
       },
       onEnd: () => {
         setIsRecording(false);
-         console.log("Mocked STT ended");
+        console.log("Mocked STT ended");
       }
     });
   };
@@ -138,7 +133,7 @@ const SpeakingQuestionExercise = ({ language, days, exerciseKey }) => {
   
   const showHint = () => {
     setFeedback({ message: t('feedback.hintSpeaking', 'Try to understand the question fully. Use relevant vocabulary and aim for a complete sentence.'), type: 'hint'});
-  }
+  };
 
   if (isLoading) return <p>{t('loading.speakingExercise', 'Loading speaking questions...')}</p>;
   if (error) return <FeedbackDisplay message={error} type="error" />;
@@ -172,12 +167,15 @@ const SpeakingQuestionExercise = ({ language, days, exerciseKey }) => {
 
       <ExerciseControls
         onShowHint={showHint}
-        onNextExercise={fetchQuestions} // To get a new set of potentially different questions
+        onRandomize={fetchQuestions} // Randomize gets a new set of questions
+        onNextExercise={fetchQuestions} // Next Exercise also gets a new set of questions
+        // isAnswerCorrect and isRevealed are not typically used in this exercise type for controls
         config={{
-          showCheck: false, // No explicit check, feedback is based on recording
-          showReveal: false, // No answer to reveal
+          showCheck: false, 
+          showReveal: false, 
           showHint: true,
-          showNext: true, // "Next Exercise" button to refresh all questions
+          showRandomize: true, // Allow fetching a new set of questions
+          showNext: true, 
         }}
       />
     </div>
