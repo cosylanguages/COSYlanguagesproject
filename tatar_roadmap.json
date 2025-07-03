@@ -1,0 +1,595 @@
+{
+  "language_name": "Tatar",
+  "levels": [
+    {
+      "level_code": "A0",
+      "level_name": "Беренче Адымнар (First Steps)",
+      "approximate_vocabulary_size": "approx. 300-500 words",
+      "learning_outcomes": [
+        "Recognize and reproduce the basic sounds of the Tatar alphabet (Cyrillic).",
+        "Understand and use familiar everyday expressions and very basic phrases (e.g., greetings, introductions).",
+        "Introduce him/herself and others simply (e.g., Минем исемем... - My name is...).",
+        "Ask and answer simple questions about personal details (name, origin - basic).",
+        "Interact in a very simple way if the other person speaks slowly, clearly, and is prepared to help.",
+        "Recognize familiar names, words, and very simple sentences in Tatar."
+      ],
+      "language_focus_topics": [
+        "The Tatar Alphabet (Cyrillic script: specific letters like Ә, Ө, Ү, Җ, Ң, Һ).",
+        "Basic pronunciation: Vowel sounds (front/back harmony basics), key consonant sounds.",
+        "Nouns: Concept of nouns, no grammatical gender. Basic plural formation (-лар/-ләр, -нар/-нәр). Nominative case (subject).",
+        "Pronouns: Personal pronouns in nominative singular (мин, син, ул). Possessive suffixes (1st person singular: -ым/-ем, -м, e.g., китабым - my book).",
+        "Verbs: Basic concept of verbs. Present tense of 'булырга' (to be) - often implied or uses predicative endings. Simple statement structure (e.g., Мин студент - I am a student).",
+        "Sentence Structure: Basic Subject-Object-Verb (SOV) tendency.",
+        "Negation: Basic negative particle 'түгел' (not - for nouns/adjectives), 'юк' (there isn't/no).",
+        "Simple Questions: Intonation. Basic question particles (-мы/-ме). Question words (Кем? Нәрсә? Кайда? Кайчан?)."
+      ],
+      "vocabulary_topics": [
+        "Greetings: Исәнме(сез), Сәлам, Хәерле иртә/көн/кич, Сау бул(ыгыз).",
+        "Introductions & Personal Information: Синең исемең ничек? Минем исемем... Таныш булыйк. Мин...тан. Милләт (basic).",
+        "Courtesy: Рәхмәт, Зинһар, Гафу итегез.",
+        "Basic responses: Әйе, Юк.",
+        "Numbers: 0-10 (ноль-ун).",
+        "Colors: кызыл, зәңгәр, яшел, сары, кара, ак (basic).",
+        "Family: әни, әти, абый, апа, эне, сеңел (basic).",
+        "Common Objects: китап, каләм, өстәл, урындык, телефон, өй, машина.",
+        "Basic Food & Drink: икмәк, су, сөт, чәй, алма, шикәр.",
+        "Classroom language: Кабатлагыз, зинһар. Мин аңламыйм."
+      ],
+      "pronunciation_focus_topics": [
+        "Mastering sounds of the Tatar Cyrillic alphabet, including specific Tatar letters (Ә, Ө, Ү, Җ, Ң, Һ).",
+        "Vowel harmony (front/back vowels) - basic concept and examples.",
+        "Pronunciation of common consonant sounds.",
+        "Word stress (usually final, but with exceptions - basic awareness).",
+        "Basic intonation for statements and simple questions."
+      ],
+      "listening_comprehension_skills": [
+        "Recognize familiar Tatar words and very basic phrases when spoken slowly and clearly.",
+        "Understand simple greetings and introductions.",
+        "Follow very simple instructions (e.g., 'Кара!' - Look!)."
+      ],
+      "reading_comprehension_skills": [
+        "Read and identify all letters of the Tatar Cyrillic alphabet.",
+        "Read and understand familiar names, words, and very simple sentences.",
+        "Understand numbers 0-10 written as words."
+      ],
+      "spoken_interaction_skills": [
+        "Greet and respond to greetings.",
+        "Introduce oneself and ask for someone's name.",
+        "Ask and answer simple questions about personal information (name, where from - basic).",
+        "Use basic courtesy phrases."
+      ],
+      "spoken_production_skills": [
+        "Say the letters of the Tatar alphabet.",
+        "Pronounce basic Tatar vocabulary with comprehensible pronunciation.",
+        "Produce simple isolated phrases and sentences (e.g., 'Мин Айгөл').",
+        "State name and origin simply."
+      ],
+      "written_interaction_skills": [
+        "Recognize own name and familiar words when written in Tatar."
+      ],
+      "written_production_skills": [
+        "Write all letters of the Tatar Cyrillic alphabet.",
+        "Write one's name and other simple familiar words in Tatar.",
+        "Copy familiar words and short sentences."
+      ],
+      "cultural_competence_topics": [
+        "Common greeting customs among Tatars.",
+        "Basic awareness of respectful address.",
+        "Importance of hospitality (basic concept).",
+        "Key cultural symbols (e.g., tulip as a Tatar symbol - awareness)."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice writing Cyrillic letters daily, focusing on unique Tatar letters.",
+        "Use flashcards with pictures and Tatar words (stress marked if possible).",
+        "Listen to Tatar children's songs or simple audio.",
+        "Pay attention to vowel harmony in new words."
+      ]
+    },
+    {
+      "level_code": "A1",
+      "level_name": "Яшь Сәяхәтче (Young Traveler)",
+      "approximate_vocabulary_size": "approx. 500-700 words",
+      "learning_outcomes": [
+        "Understand and use familiar everyday expressions and frequently used phrases related to areas of most immediate relevance (e.g., basic personal and family information, shopping, local geography).",
+        "Communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar matters.",
+        "Describe in simple terms aspects of his/her background, immediate environment, and matters in areas of immediate need.",
+        "Read very short, simple texts, e.g., simple signs, menus, personal messages.",
+        "Write short, simple notes and messages."
+      ],
+      "language_focus_topics": [
+        "Review A0: Alphabet, basic pronunciation, nominative case, basic verbs, question particles.",
+        "Nouns: Cases - Accusative (-ны/-не), Genitive (-ның/-нең), Dative (-га/-гә, -ка/-кә), Locative (-да/-дә, -та/-тә), Ablative (-дан/-дән, -тан/-тән, -нан/-нән). Singular forms.",
+        "Pronouns: Personal pronouns in basic cases. Possessive suffixes (all persons singular: -ым/-ем, -ың/-ең, -ы/-е, -сы/-се).",
+        "Verbs: Present tense (definite future meaning for some verbs) - common verb conjugations (e.g., -а/-ә, -ый/-и endings). Past tense (definite past: -ды/-де, -ты/-те). Basic future tense ('-ачак/-әчәк, -ячак/-ячәк').",
+        "Adjectives: Basic use, no gender agreement, typically precede nouns.",
+        "Postpositions: Basic postpositions corresponding to prepositions in other languages (белән - with, өчен - for, турында - about).",
+        "Numbers: 0-100. Basic ordinal numbers (беренче, икенче...).",
+        "Sentence structure: SOV. Questions with interrogative words and particles.",
+        "Vowel Harmony: Consistent application in suffixes."
+      ],
+      "vocabulary_topics": [
+        "Review A0 vocabulary.",
+        "Personal information: Family members (extended), age, profession (common ones).",
+        "Daily routine: Common daily activities, telling time.",
+        "Food & Drink: Common food items, drinks, ordering in a café (чәй, каһвә, аш).",
+        "Shopping: Types of shops (кибет), common items, prices, asking 'how much?' (күпме тора?).",
+        "Places in town: урам, мәйдан, бакча, почта, банк, даруханә, кунакханә.",
+        "Transport: автобус, трамвай, машина, поезд. Buying tickets (билет).",
+        "Time: Days of the week, months, seasons.",
+        "Weather: Basic weather expressions (җылы, салкын, яңгыр ява, кар ява, кояшлы).",
+        "Hobbies & interests (basic: укырга, телевизор карарга, музыка тыңларга).",
+        "Clothing: Common items (күлмәк, чалбар, итәк, куртка)."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A0 sounds and vowel harmony.",
+        "Pronunciation of case endings and possessive suffixes, maintaining vowel harmony.",
+        "Word stress (usually final syllable, but important exceptions with certain suffixes).",
+        "Intonation of different sentence types.",
+        "Distinguishing specific Tatar sounds from similar sounds in other languages (e.g., a learner might speak)."
+      ],
+      "listening_comprehension_skills": [
+        "Understand frequently used words and phrases related to personal details, family, shopping, local area, when spoken slowly and clearly.",
+        "Grasp the main point in short, clear, simple messages and announcements.",
+        "Understand simple questions and instructions related to everyday situations."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short, simple texts on familiar matters (e.g., simple menus, public signs, short personal messages).",
+        "Find specific, predictable information in everyday material.",
+        "Understand short, simple personal notes or postcards."
+      ],
+      "spoken_interaction_skills": [
+        "Interact in simple, routine situations (e.g., basic shopping, ordering food, asking for simple directions).",
+        "Ask and answer questions about familiar topics (daily life, family, hobbies).",
+        "Make and respond to simple suggestions or invitations.",
+        "Ask for and give basic information (e.g., 'Бу нәрсә?' - What is this?)."
+      ],
+      "spoken_production_skills": [
+        "Describe his/her family, living conditions, daily routine in simple terms.",
+        "Talk about past events using basic past tense.",
+        "Talk about simple future plans.",
+        "Express likes and dislikes (Миңа ошый / Мин яратам...)."
+      ],
+      "written_interaction_skills": [
+        "Write a simple reply to a personal message or invitation (e.g., a short SMS or email)."
+      ],
+      "written_production_skills": [
+        "Write short, simple notes and messages (e.g., a shopping list, a simple postcard with greetings).",
+        "Describe a familiar place or person in a few simple sentences.",
+        "Fill in simple forms with personal details."
+      ],
+      "cultural_competence_topics": [
+        "Forms of address (using names, respectful forms for elders).",
+        "Basic Tatar customs related to hospitality.",
+        "Awareness of key Tatar holidays or festivals (e.g., Sabantuy - basic recognition).",
+        "Tatar cuisine: common dishes (e.g., чәкчәк, өчпочмак, бәлеш - recognition)."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice applying vowel harmony rules to suffixes consistently.",
+        "Use language learning apps focusing on Tatar vocabulary and basic grammar.",
+        "Listen to Tatar music and try to identify familiar words.",
+        "Try to form simple sentences about everyday objects and actions, applying case endings."
+      ]
+    },
+    {
+      "level_code": "A2",
+      "level_name": "Белемле Тикшерүче (Knowledgeable Investigator)",
+      "approximate_vocabulary_size": "approx. 1000-1500 words",
+      "learning_outcomes": [
+        "Understand sentences and frequently used expressions related to areas of immediate personal relevance in Tatar (e.g., personal and family information, shopping, local area, employment).",
+        "Communicate in simple and routine tasks in Tatar requiring a simple and direct exchange of information on familiar matters.",
+        "Describe in simple Tatar terms aspects of his/her background, immediate environment, and matters in areas of immediate need, using present, past, and future tenses.",
+        "Understand short texts such as personal letters, brochures, and simplified articles on familiar subjects in Tatar.",
+        "Write short, simple notes, messages, and personal letters in Tatar (e.g., thanking, inviting, giving news)."
+      ],
+      "language_focus_topics": [
+        "Review A1: Noun cases (all 6, singular), possessive suffixes, present/past/future tenses, vowel harmony.",
+        "Nouns: Plural forms in all 6 cases.",
+        "Verbs: Imperfective/Perfective aspects - introduction and basic usage in past and future (e.g., укырга - to read (imp.), укып чыгарга - to read through (perf.)).",
+        "Verbs: Conditional mood (-са/-сә). Modal verbs/constructions (кирәк - necessary, мөмкин - possible, тиеш - must).",
+        "Adjectives: Basic comparative and superlative forms (-рак/-рәк for comparative).",
+        "Pronouns: Demonstrative pronouns (бу, шул, теге) and their basic declension. Interrogative pronouns (кем, нәрсә, кайсы, ничек, күпме).",
+        "Postpositions: Wider range of postpositions and their usage with different cases.",
+        "Conjunctions: More conjunctions for connecting clauses (чөнки - because, әгәр - if, ләкин - but, шуңа күрә - therefore).",
+        "Numerals: Declension of cardinal numbers when used with nouns (basic)."
+      ],
+      "vocabulary_topics": [
+        "Review A1 vocabulary.",
+        "Describing people: Appearance, character, relationships (more detail).",
+        "Housing: Describing one's home, furniture, amenities, simple problems.",
+        "Food & Drink: More variety, discussing preferences, simple recipes.",
+        "Shopping: Types of shops, clothing items, discussing quality, returning items (simple).",
+        "Travel & Transport: Planning journeys, asking for travel information, at the station/airport.",
+        "Health & Body: Common illnesses, symptoms, visiting a doctor, parts of the body.",
+        "Work & Study: Describing job/studies, daily tasks, colleagues/classmates.",
+        "Leisure & Hobbies: Discussing interests, inviting others, opinions on films/books/music.",
+        "Nature & Weather: Describing landscapes, weather conditions and forecasts.",
+        "Feelings & Emotions: Expressing joy, sadness, surprise, worry with more variety.",
+        "Services: Using post office, bank, making appointments."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A1: Tatar sounds, vowel harmony, stress.",
+        "Intonation in more complex sentences (e.g., conditional sentences, compound sentences).",
+        "Pronunciation of consonant clusters and longer words.",
+        "Maintaining vowel harmony across longer words with multiple suffixes.",
+        "Rhythm of spoken Tatar."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear, standard speech on familiar everyday topics.",
+        "Follow short, simple narratives or descriptions if the topic is familiar.",
+        "Identify specific information in public announcements or short news items if delivered clearly."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short, simple personal letters, emails, or blog posts on familiar topics.",
+        "Find specific, predictable information in everyday materials like brochures, event programs, simple instructions.",
+        "Understand the gist of short, simplified newspaper articles or website texts on familiar subjects."
+      ],
+      "spoken_interaction_skills": [
+        "Engage in conversations on familiar topics, exchanging information, opinions, and feelings.",
+        "Handle common everyday situations (e.g., making inquiries, asking for help, simple problem-solving).",
+        "Make and respond to invitations, suggestions, apologies, and thanks.",
+        "Discuss past events and future plans with others, providing some detail."
+      ],
+      "spoken_production_skills": [
+        "Give simple, connected descriptions of people, places, events, or personal experiences.",
+        "Narrate a simple story or recount events in sequence using appropriate past tenses and aspects.",
+        "Talk about future plans and intentions using different future constructions.",
+        "Express opinions, likes/dislikes, and preferences with reasons."
+      ],
+      "written_interaction_skills": [
+        "Write simple personal emails or messages to exchange information, make arrangements, invite, thank, or apologize, providing some details."
+      ],
+      "written_production_skills": [
+        "Write short, connected texts on familiar topics (e.g., describing a holiday, a festival, a friend).",
+        "Write a simple personal letter giving news or describing experiences in some detail.",
+        "Write short instructions or a simple report on a familiar procedure."
+      ],
+      "cultural_competence_topics": [
+        "Tatar family structure and values (basic understanding).",
+        "Significance of certain traditions and customs (e.g., respect for elders, community events).",
+        "Introduction to Tatar folklore or famous tales (e.g., Shurale - awareness).",
+        "Understanding of Tatar national identity and symbols.",
+        "Basic knowledge of Tatarstan as a region."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice using verb aspects (imperfective/perfective) in context.",
+        "Read adapted Tatar texts or simple original materials for children/young adults.",
+        "Watch Tatar cartoons, TV programs for young audiences, or vlogs with subtitles if available.",
+        "Try to write longer paragraphs or short stories in Tatar.",
+        "Find opportunities for conversation with native speakers or learners."
+      ]
+    },
+    {
+      "level_code": "B1",
+      "level_name": "Тәҗрибәле Күзәтүче (Experienced Observer)",
+      "approximate_vocabulary_size": "approx. 2000-2500 words",
+      "learning_outcomes": [
+        "Understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc., in Tatar.",
+        "Deal with most situations likely to arise whilst travelling in a Tatar-speaking area.",
+        "Produce simple connected text on topics which are familiar or of personal interest in Tatar.",
+        "Describe experiences and events, dreams, hopes & ambitions and briefly give reasons and explanations for opinions and plans in Tatar."
+      ],
+      "language_focus_topics": [
+        "Review of A2 grammar: All noun cases (singular/plural), verb aspects, tenses, moods (conditional).",
+        "Verbs: Participles (сыйфат фигыль) - present, past, future; their adjectival use.",
+        "Verbs: Gerunds (хәл фигыль) - various forms and their use to denote accompanying actions, manner, time, cause.",
+        "Verbs: Voice - passive voice (-ыл/-ел, -л), causative voice (-дыр/-дер, -тыр/-тер, -гыз/-гез etc.), reflexive voice (-ын/-ен, -н), reciprocal voice (-ыш/-еш, -ш).",
+        "Complex sentences: More subordinate clauses (time, place, reason, purpose, condition, concession) with appropriate conjunctions and constructions.",
+        "Reported speech (basic indirect statements and questions).",
+        "Degrees of comparison for adjectives and adverbs (more forms).",
+        "Modal expressions and their nuances.",
+        "Word order variations for emphasis and stylistic purposes."
+      ],
+      "vocabulary_topics": [
+        "Work and career: Job roles, responsibilities, skills, work environment, career development, simple business correspondence.",
+        "Education: Educational system, subjects, exams, university life, research (basic).",
+        "Travel and tourism: Planning detailed itineraries, cultural tourism, independent travel, dealing with unexpected situations.",
+        "Media and news: Understanding main points of news reports, articles on current events, expressing opinions on news.",
+        "Culture and arts: Discussing films, books, music, theatre in more detail; genres, artists, personal impressions.",
+        "Health and lifestyle: Discussing health issues, treatments, healthy living, sports, fitness in detail.",
+        "Social issues: Discussing environmental problems, social trends, community life (with appropriate vocabulary).",
+        "Personal relationships: Friendship, family dynamics, expressing emotions and feelings with more complexity.",
+        "Technology and communication: Discussing pros and cons of technology, internet usage, digital literacy.",
+        "Abstract concepts: freedom, justice, tradition, progress (basic understanding and vocabulary)."
+      ],
+      "pronunciation_focus_topics": [
+        "Review of A2 pronunciation: vowel harmony, stress, intonation.",
+        "Intonation in complex sentences, conveying nuances like doubt, certainty, surprise.",
+        "Fluency and rhythm in connected speech, reducing hesitation.",
+        "Pronunciation of less frequent sound combinations and loanwords.",
+        "Awareness of different speech styles (formal vs. informal)."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear standard speech on familiar matters encountered in daily life, work, or school.",
+        "Understand the main points of radio or TV programs on current affairs or topics of personal interest when the delivery is relatively clear.",
+        "Follow a lecture or talk on a familiar topic if the structure is clear."
+      ],
+      "reading_comprehension_skills": [
+        "Understand texts written primarily in high-frequency everyday or job-related language.",
+        "Understand the description of events, feelings, and wishes in personal correspondence.",
+        "Read straightforward factual texts, articles, and interviews on topics of personal or professional interest."
+      ],
+      "spoken_interaction_skills": [
+        "Enter unprepared into conversations on familiar topics or topics of personal interest.",
+        "Deal with most situations likely to arise while travelling in a Tatar-speaking region.",
+        "Express and sustain personal opinions, providing explanations, arguments, and comments.",
+        "Participate in discussions, making points clearly and responding to others."
+      ],
+      "spoken_production_skills": [
+        "Produce connected discourse on topics which are familiar or of personal interest.",
+        "Narrate a story, describe an experience, or relate the plot of a book/film, detailing reactions and impressions.",
+        "Describe dreams, hopes, and ambitions, giving reasons.",
+        "Explain plans and arrangements, justifying choices."
+      ],
+      "written_interaction_skills": [
+        "Write personal letters or emails giving and asking for news, describing experiences, feelings, and events in detail.",
+        "Respond to formal/informal written communications, providing required information or expressing views."
+      ],
+      "written_production_skills": [
+        "Write clear, connected texts on a range of familiar subjects or topics of personal interest.",
+        "Write descriptions of real or imaginary events and experiences.",
+        "Write a short formal letter or email for practical purposes (e.g., inquiry, request, simple complaint).",
+        "Express personal viewpoints and arguments on familiar topics in a structured way (e.g., a blog entry, a short essay)."
+      ],
+      "cultural_competence_topics": [
+        "Understanding nuances in formal vs. informal communication in Tatar contexts.",
+        "Knowledge of significant Tatar historical figures, writers, poets (e.g., Ğabdulla Tuqay).",
+        "Tatar traditions in music, dance, and crafts.",
+        "Social etiquette in more formal settings (e.g., official meetings, celebrations).",
+        "Understanding the role of language and culture in Tatar identity.",
+        "Awareness of contemporary Tatarstan and its cultural life."
+      ],
+      "learning_strategies_suggestions": [
+        "Read authentic Tatar materials like newspapers, magazines, and contemporary fiction.",
+        "Practice using participles and gerunds to make written and spoken Tatar more sophisticated.",
+        "Watch Tatar films, documentaries, and TV programs, trying to understand without subtitles or with Tatar subtitles.",
+        "Engage in more complex discussions, focusing on expressing and defending opinions.",
+        "Write longer, structured texts and seek detailed feedback."
+      ]
+    },
+    {
+      "level_code": "B2",
+      "level_name": " оста Сүз остасы (Word Master)",
+      "approximate_vocabulary_size": "approx. 3500-4500 words",
+      "learning_outcomes": [
+        "Understand the main ideas of complex texts on both concrete and abstract topics in Tatar, including technical discussions in his/her field of specialisation.",
+        "Interact with a degree of fluency and spontaneity that makes regular interaction with native Tatar speakers quite possible without strain for either party.",
+        "Produce clear, detailed text on a wide range of subjects in Tatar.",
+        "Explain a viewpoint on a topical issue in Tatar, giving the advantages and disadvantages of various options."
+      ],
+      "language_focus_topics": [
+        "Comprehensive review of verb aspects, tenses, moods, and voices.",
+        "Advanced use of participles and gerunds, including complex participial and gerund phrases.",
+        "Complex sentence syntax: various types of subordinate clauses and their connectors, including concessive, result, and comparative clauses.",
+        "Nuances of case usage, including idiomatic uses and less common functions.",
+        "Reported speech: reporting complex statements, questions, commands, and exclamations with appropriate tense shifts and conjunctions.",
+        "Modal verbs and expressions: expressing degrees of certainty, probability, obligation, permission with precision.",
+        "Figurative language: understanding and using basic metaphors and similes.",
+        "Stylistic variations in word order and sentence structure for emphasis and effect.",
+        "Discourse markers for structuring arguments, ensuring cohesion and coherence in longer texts and speech."
+      ],
+      "vocabulary_topics": [
+        "Abstract concepts: In-depth discussion of societal issues, politics, economics, environment, education, culture, arts, science, technology.",
+        "Expressing nuanced opinions, arguments, justifications, and counter-arguments.",
+        "Vocabulary for formal discussions, debates, and presentations.",
+        "Idioms, proverbs, and set expressions common in contemporary Tatar media and literature.",
+        "Understanding and using different registers of Tatar (formal, neutral, informal, colloquial, elements of professional jargon).",
+        "Word formation: productive prefixes and suffixes for expanding vocabulary actively.",
+        "Synonyms, antonyms, and paronyms for precise expression and stylistic variation.",
+        "Collocations: a wide range of common and less common collocations.",
+        "Vocabulary related to one's field of specialization or academic interest, including technical terms."
+      ],
+      "pronunciation_focus_topics": [
+        "Fine-tuning intonation to convey subtle attitudes, emotions, and pragmatic nuances.",
+        "Mastery of connected speech phenomena (assimilation, elision, linking) for natural and fluent delivery.",
+        "Recognition and understanding of various regional Tatar dialects and sociolects.",
+        "Maintaining clear articulation and appropriate prosody in extended speech, presentations, and debates."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech and lectures in Tatar and follow even complex lines of argument, provided the topic is reasonably familiar.",
+        "Understand most TV news, current affairs programs, and documentaries in Tatar.",
+        "Understand the majority of Tatar films and plays in standard dialect, including those with idiomatic language or cultural references."
+      ],
+      "reading_comprehension_skills": [
+        "Read articles and reports concerned with contemporary problems in which Tatar writers adopt particular stances or viewpoints.",
+        "Understand contemporary Tatar literary prose, drama, and poetry.",
+        "Understand specialized articles or texts related to one's field of interest with good comprehension."
+      ],
+      "spoken_interaction_skills": [
+        "Interact with fluency and spontaneity, making regular interaction with native Tatar speakers comfortable for both parties.",
+        "Take an active part in discussions on a wide range of topics, accounting for and sustaining viewpoints effectively.",
+        "Handle linguistic aspects of negotiation, problem-solving, and expressing complaints or compliments persuasively."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed descriptions and arguments on a wide range of subjects.",
+        "Explain a viewpoint on a topical issue, outlining advantages and disadvantages of various options, and supporting arguments with relevant evidence.",
+        "Develop an argument systematically, structuring information logically and highlighting significant points."
+      ],
+      "written_interaction_skills": [
+        "Write clear, detailed letters or emails on complex subjects, conveying information, ideas, or opinions effectively and adapting style and register appropriately.",
+        "Respond to complex inquiries, arguments, or proposals in writing, addressing all points comprehensively."
+      ],
+      "written_production_skills": [
+        "Write clear, detailed texts (essays, reports, articles) on a wide range of subjects relevant to personal, academic, or professional interests.",
+        "Summarize information from different spoken and written sources, and present arguments and counter-arguments coherently.",
+        "Write reviews of films, books, or cultural events, expressing well-justified opinions.",
+        "Develop a reasoned argument in an essay or report, presenting different viewpoints and drawing logical conclusions."
+      ],
+      "cultural_competence_topics": [
+        "Deeper understanding of Tatar society, history, values, and contemporary issues.",
+        "Ability to understand and appreciate cultural references, humor, irony, and allusions in Tatar media, literature, and conversation.",
+        "Nuances of social and professional etiquette in various Tatar contexts.",
+        "Understanding diverse perspectives within Tatar society and current cultural trends.",
+        "Knowledge of significant Tatar historical events, cultural movements, and their impact."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage regularly with a variety of authentic Tatar media (news, analytical articles, podcasts, films, contemporary literature, academic texts).",
+        "Participate actively in discussions, debates, or presentations in Tatar, focusing on fluency, accuracy, and argumentation.",
+        "Write longer and more complex texts (analytical essays, reports, research papers - basic), focusing on structure, cohesion, and appropriate style.",
+        "Seek detailed feedback on writing and speaking from native speakers or advanced instructors.",
+        "Explore Tatar online resources, forums, and social media to engage with contemporary language and culture."
+      ]
+    },
+    {
+      "level_code": "C1",
+      "level_name": " оста Гыйлем Иясе (Wise Scholar)",
+      "approximate_vocabulary_size": "approx. 7000-8000 words",
+      "learning_outcomes": [
+        "Can understand a wide range of demanding, longer texts in Tatar, and recognise implicit meaning, irony, and stylistic nuances.",
+        "Can express him/herself fluently and spontaneously in Tatar without much obvious searching for expressions, using complex sentence structures.",
+        "Can use language flexibly and effectively for social, academic and professional purposes in Tatar.",
+        "Can produce clear, well-structured, detailed text on complex subjects in Tatar, showing controlled use of organisational patterns, connectors and cohesive devices."
+      ],
+      "language_focus_topics": [
+        "Mastery of the Tatar grammatical system, including all verb aspects, tenses, moods, voices, and complex case constructions.",
+        "Sophisticated use of participles, gerunds, and their respective phrases for concise and stylistically varied expression.",
+        "Advanced use of impersonal and passive constructions, understanding their stylistic implications.",
+        "Mastery of complex sentence syntax, including all types of subordinate clauses, non-finite constructions, and their interplay.",
+        "Stylistic use of word order, inversion, ellipsis, and other rhetorical devices for emphasis, nuance, and effect.",
+        "Understanding and occasional use of archaic or literary grammatical forms for specific stylistic purposes.",
+        "Deep understanding of the interaction between morphology and syntax in Tatar.",
+        "Advanced use of discourse markers and cohesive devices for structuring sophisticated arguments and narratives."
+      ],
+      "vocabulary_topics": [
+        "Extensive vocabulary covering abstract, specialized, technical, and culturally specific topics across a wide range of domains.",
+        "Nuanced understanding and precise use of synonyms, antonyms, hyponyms, hypernyms, and related lexical items to convey fine shades of meaning and stylistic effects.",
+        "Rich repertoire of idiomatic expressions, proverbs, aphorisms, colloquialisms, and cultural allusions, with a deep understanding of their appropriate context, register, and connotations.",
+        "Vocabulary for advanced academic and professional purposes, including specialized terminology for research, analysis, and high-level communication.",
+        "Advanced word formation: understanding etymology, roots (including Arabic/Persian influences), and complex affixation to deduce meaning and expand vocabulary actively.",
+        "Ability to use language creatively, including wordplay, and to understand subtle humor.",
+        "Differentiating and appropriately using various stylistic layers of vocabulary (neutral, formal, informal, literary, technical, historical)."
+      ],
+      "pronunciation_focus_topics": [
+        "Near-native pronunciation, intonation, rhythm, and stress across various speech styles and registers, with high accuracy.",
+        "Using prosody effectively and subtly to convey complex meanings, attitudes, irony, and emotions.",
+        "Understanding and adapting to a wide range of regional Tatar accents and sociolects, recognizing fine phonetic distinctions.",
+        "Maintaining clarity, precision, and natural flow in rapid, complex, or formal speech, including public speaking and academic presentations."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech in Tatar even when it is not clearly structured and when relationships are only implied and not explicitly signaled.",
+        "Understand a wide range of television programs, films, plays, public speeches, and academic lectures in Tatar without too much effort.",
+        "Understand complex technical or academic discussions, even on unfamiliar or highly specialized topics.",
+        "Recognize and understand a wide range of idiomatic expressions, colloquialisms, cultural references, and stylistic variations in spoken Tatar."
+      ],
+      "reading_comprehension_skills": [
+        "Understand long and complex factual and literary texts in Tatar, appreciating distinctions of style, register, authorial intent, and literary technique.",
+        "Understand specialized articles, academic papers, official documents, and longer technical instructions, even outside one's own field.",
+        "Recognize implicit meaning, writer's stance, irony, persuasive techniques, and rhetorical strategies in diverse and challenging text types."
+      ],
+      "spoken_interaction_skills": [
+        "Express him/herself fluently, spontaneously, accurately, and appropriately, using complex language and structures without much obvious searching for expressions.",
+        "Use language flexibly and effectively for all social, academic, and professional purposes, adapting register, style, and tone to the situation and audience with ease and precision.",
+        "Formulate ideas and opinions with precision, structure arguments logically and persuasively, and relate contributions skilfully and constructively to those of other speakers in discussions, debates, and formal meetings.",
+        "Mediate, negotiate, and lead discussions effectively in complex or sensitive situations."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed, well-structured, and engaging descriptions or arguments on complex subjects, integrating sub-themes, developing particular points coherently and persuasively, and rounding off with an appropriate and impactful conclusion.",
+        "Give clear, well-structured, and compelling presentations or speeches on complex subjects, expanding and supporting ideas with sophisticated reasoning, relevant evidence, and appropriate rhetorical devices.",
+        "Adapt style, register, and delivery to any audience and communicative purpose with sophistication and effectiveness."
+      ],
+      "written_interaction_skills": [
+        "Write clear, well-structured, and stylistically sophisticated letters, emails, reports, or proposals on complex subjects, adapting style, tone, and register to the intended reader and purpose with precision and cultural appropriateness.",
+        "Respond effectively, persuasively, and diplomatically to complex written communications, addressing all nuances and achieving desired outcomes."
+      ],
+      "written_production_skills": [
+        "Write clear, well-structured, detailed, engaging, and stylistically refined texts on complex subjects in various genres (essays, reports, articles, critiques, research papers, official documents), demonstrating command of appropriate academic, professional, or literary conventions.",
+        "Write insightful summaries, analyses, and critical reviews of professional, academic, or literary works, demonstrating advanced critical thinking and analytical skills.",
+        "Show controlled and sophisticated use of organisational patterns, connectors, and cohesive devices to produce coherent, elegant, and impactful text at a high level.",
+        "Employ a wide range of stylistic and rhetorical devices appropriate to the text type and communicative goal, demonstrating a mature command of register and style."
+      ],
+      "cultural_competence_topics": [
+        "In-depth and critical understanding of contemporary Tatar society, including complex social, political, economic, and ethical issues, and their historical and global contexts.",
+        "Critical appreciation and analysis of Tatar literature (classical and modern), folklore, music, arts, philosophy, and intellectual traditions.",
+        "Ability to interpret, discuss, and critique cultural subtext, humor, irony, allusions, and socio-cultural references with profound insight.",
+        "Understanding of diverse cultural perspectives, regional variations, and social dynamics within Tatarstan, other Tatar communities, and the broader Turkic world."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage with a wide variety of highly authentic, complex, and challenging Tatar texts and media from diverse fields, including academic research and classical literature.",
+        "Practice writing different genres of complex texts, focusing on stylistic mastery, persuasive argumentation, and rhetorical effectiveness.",
+        "Participate actively and confidently in high-level academic or professional discussions, presentations, and debates in Tatar.",
+        "Focus on advanced stylistic aspects of the Tatar language, including register, tone, rhetorical devices, nuanced vocabulary, and complex syntax, possibly through comparative analysis with other languages.",
+        "Conduct independent research or undertake significant projects requiring advanced analytical and communicative use of the Tatar language."
+      ]
+    },
+    {
+      "level_code": "C2",
+      "level_name": "Тел Остазы (Language Sage)",
+      "approximate_vocabulary_size": "approx. 15000+ words",
+      "learning_outcomes": [
+        "Can understand with ease virtually everything heard or read in Tatar, including dialectal variations and highly colloquial speech.",
+        "Can summarise information from different spoken and written Tatar sources, reconstructing arguments and accounts in a coherent, nuanced, and critical presentation.",
+        "Can express him/herself spontaneously, very fluently, precisely, and creatively in Tatar, differentiating finer shades of meaning even in the most complex and sensitive situations.",
+        "Can use Tatar effectively, appropriately, and artistically for all social, academic, and professional purposes with a high degree of precision, style, cultural attunement, and often originality."
+      ],
+      "language_focus_topics": [
+        "Complete and intuitive mastery of all Tatar grammatical structures, including rare, complex, archaic, literary, and dialectal forms, and their stylistic and pragmatic implications.",
+        "Sophisticated, flexible, and creative use of syntax for optimal stylistic effect, emphasis, nuance, and rhetorical impact across all genres.",
+        "Full command of all moods and their subtle applications in expressing complex hypothetical reasoning, subjective stance, politeness, and emotional coloring.",
+        "Nuanced understanding and application of aspectual distinctions and the interplay of tense, aspect, and mood in complex discourse.",
+        "Advanced, flexible, and often innovative use of nominalization, participial constructions, and infinitive/gerund clauses for sophisticated, concise, and elegant expression.",
+        "Complete and intuitive control over a vast range of discourse markers, conjunctions, and cohesive devices to create highly articulate, fluent, logically structured, and stylistically varied texts and speech of any genre and complexity.",
+        "Understanding, appreciation, critical analysis, and creative use of a wide array of rhetorical figures and stylistic devices common in Tatar literature, formal discourse, journalism, oratory, and folklore.",
+        "Ability to analyze, deconstruct, explain, critique, and manipulate the most complex grammatical structures encountered in any authentic Tatar text or discourse with expert precision and insight."
+      ],
+      "vocabulary_topics": [
+        "Extensive, profound, dynamic, and often specialized vocabulary approaching or exceeding that of an educated native Tatar speaker, including low-frequency words, specialized terminology across diverse academic and professional fields, neologisms, and historical lexis.",
+        "Full command of idiomatic language: idioms, proverbs, aphorisms, colloquialisms, cultural sayings, and fixed expressions, with a deep understanding of their origins, evolution, connotations, regional variations, and appropriate nuanced usage in any context.",
+        "Ability to understand, use, and differentiate the finest shades of meaning, connotations, and register for virtually any lexical item, including formal, literary, specialized, historical, archaic, and dialectal vocabulary.",
+        "Mastery of word formation processes, including understanding of Turkic, Arabic, Persian, and Russian influences, to interpret, analyze, and creatively use complex words and coin new terms where appropriate.",
+        "Vocabulary for discussing any abstract, philosophical, scientific, literary, artistic, and highly specialized topic with precision, depth, eloquence, originality, and authority.",
+        "Appreciation and deep understanding of etymology, semantic evolution, and sociolinguistic variation of Tatar words.",
+        "Recognition, understanding, and appropriate use or interpretation of a wide range of regionalisms, dialectal features, and sociolects within the Tatar-speaking world."
+      ],
+      "pronunciation_focus_topics": [
+        "Native-like or indistinguishable-from-native pronunciation, intonation, stress, and rhythm across all registers and styles of Tatar, with effortless control and naturalness.",
+        "Ability to subtly, effectively, creatively, and authentically vary prosody to convey complex attitudes, emotions, irony, humor, and other pragmatic meanings with native-like precision and naturalness.",
+        "Effortless and natural handling of all aspects of connected speech, even at very rapid native speed, in challenging acoustic conditions, or with overlapping and highly colloquial speech.",
+        "Ability to understand, analyze, and, if desired, accurately reproduce or playfully imitate various regional Tatar accents and sociolectal variations with high fidelity, cultural awareness, and linguistic insight."
+      ],
+      "listening_comprehension_skills": [
+        "Understand any kind of spoken Tatar, whether live or broadcast, even when delivered at fast native speed, with significant background noise, multiple speakers, dialectal variations, or on unfamiliar, abstract, or highly specialized topics.",
+        "Follow complex interactions between multiple speakers in any setting, identifying subtle cues, implicit meanings, speaker intentions, interpersonal dynamics, cultural undertones, and rhetorical strategies.",
+        "Appreciate stylistic nuances, register shifts, irony, humor, sarcasm, and implicit meaning in any spoken discourse, including culturally specific references, wordplay, and advanced rhetoric."
+      ],
+      "reading_comprehension_skills": [
+        "Understand, critically interpret, and analyze all forms of written Tatar, including highly abstract, structurally or linguistically complex texts such as legal codes, philosophical treatises, advanced scientific articles, and literary works from various periods (including historical texts and diverse genres).",
+        "Appreciate and analyze fine distinctions of style, tone, authorial intent, narrative technique, and literary or rhetorical devices across all genres and historical periods.",
+        "Read and understand texts from different historical periods and diverse cultural contexts within the Tatar-speaking world, including texts with significant linguistic, stylistic, or conceptual challenges."
+      ],
+      "spoken_interaction_skills": [
+        "Take part effortlessly, fluently, engagingly, persuasively, and often leadingly in any conversation, discussion, or debate, using idiomatic expressions, colloquialisms, and cultural references naturally, appropriately, creatively, and often humorously or with rhetorical skill.",
+        "Express him/herself with precision, eloquence, charisma, and often originality, differentiating the finest shades of meaning, and reformulating ideas to overcome any communication difficulty smoothly, imperceptibly, and effectively, often enhancing the discourse.",
+        "Argue a complex case, negotiate, persuade, mediate, and lead discussions effectively, diplomatically, strategically, and often inspirationally in any formal or informal setting, adapting strategies dynamically and with exceptional cultural astuteness.",
+        "Adapt language, style, and communicative strategies appropriately, dynamically, and creatively to any audience, context, and purpose with complete flexibility, sophistication, and impact."
+      ],
+      "spoken_production_skills": [
+        "Present a clear, smoothly-flowing, well-structured, engaging, persuasive, and often memorable or inspiring description, argument, or narrative in an appropriate and compelling style on any complex subject, demonstrating exceptional depth of thought and originality.",
+        "Develop points cohesively, logically, and persuasively, with masterful use of organizational patterns, a wide range of sophisticated cohesive devices, and impactful rhetorical strategies tailored to the audience.",
+        "Deliver presentations, lectures, or speeches with clarity, precision, eloquence, charisma, and engaging style, adapting to audience feedback, managing questions adeptly, inspiring action or thought, and demonstrating subject matter expertise.",
+        "Use rhetorical devices effectively, creatively, and with significant impact, demonstrating oratorical skill."
+      ],
+      "written_interaction_skills": [
+        "Write any type of correspondence or document with complete command of style, tone, register, persuasive techniques, and cultural nuances appropriate to the recipient, purpose, and context, achieving specific communicative and strategic goals with precision and impact.",
+        "Engage in complex written discussions, collaborations, or negotiations, conveying nuanced ideas effectively, persuasively, diplomatically, and with strategic foresight and intellectual rigor."
+      ],
+      "written_production_skills": [
+        "Write clear, smoothly-flowing, complex, sophisticated, and potentially publishable texts (academic research, literary works, critical analyses, policy papers, journalistic investigations) in an appropriate and effective style, demonstrating originality, critical insight, intellectual depth, and stylistic mastery.",
+        "Select and use a vast range of linguistic resources to express ideas precisely, persuasively, artistically, or humorously, with stylistic versatility, creativity, and elegance.",
+        "Demonstrate mastery of organizational patterns, paragraphing, and cohesive devices to ensure clarity, coherence, logical flow, and aesthetic impact at the highest professional, academic, or literary level.",
+        "Write insightful summaries, critiques, or syntheses of complex information from multiple sources, adding original perspectives, critical analysis, and demonstrating intellectual leadership or creative interpretation."
+      ],
+      "cultural_competence_topics": [
+        "Profound, nuanced, critical, comparative, and often scholarly understanding of the diversity of Tatar and Turkic cultures, societies, histories, arts, literatures, philosophical traditions, and intellectual movements, including their evolution, global impact, and contemporary manifestations.",
+        "Ability to function with complete ease, cultural sensitivity, adaptability, leadership, and often as a cultural authority or bridge in any Tatar-speaking environment or context, navigating complex social and intercultural dynamics with exceptional astuteness and empathy.",
+        "Capacity to act as a cultural interpreter, mediator, critic, or scholar, explaining subtle and complex cultural nuances effectively and insightfully to diverse audiences, fostering deep cross-cultural understanding and contributing to cultural discourse.",
+        "Deep and critical understanding of contemporary socio-political issues, cultural debates, intellectual currents, and historical narratives in Tatarstan, Russia, and the wider Turkic world, with the ability to engage critically, contribute meaningfully, offer original perspectives, and potentially influence discourse."
+      ],
+      "learning_strategies_suggestions": [
+        "Maintain and expand language proficiency through continuous, high-level intellectual and creative engagement with diverse and complex authentic Tatar materials, interactions, and original production.",
+        "Engage in scholarly research, critical analysis, literary creation, or translation involving sophisticated Tatar texts from diverse fields.",
+        "Contribute to Tatar-language publications, academic conferences, or professional activities at an expert or leadership level, potentially shaping discourse in a chosen field.",
+        "Reflect critically on and refine personal language use for optimal effectiveness, stylistic innovation, persuasive power, and artistic expression, possibly through teaching at advanced levels, mentoring, or public intellectual engagement.",
+        "Explore highly specialized or interdisciplinary areas of interest in great depth in Tatar, contributing original research, analysis, creative work, or policy that advances knowledge or cultural expression."
+      ]
+    }
+  ]
+}
