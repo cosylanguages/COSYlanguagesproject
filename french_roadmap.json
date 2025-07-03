@@ -1,0 +1,534 @@
+{
+  "language_name": "French",
+  "levels": [
+    {
+      "level_code": "A0",
+      "level_name": "Le Petit Poussin",
+      "approximate_vocabulary_size": "",
+      "learning_outcomes": [],
+      "language_focus_topics": [],
+      "vocabulary_topics": [],
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
+    },
+    {
+      "level_code": "A1",
+      "level_name": "Le Jeune Explorateur",
+      "approximate_vocabulary_size": "approx. 500-700 words",
+      "learning_outcomes": [
+        "Understand sentences and frequently used French expressions related to areas of most immediate relevance (e.g., basic personal and family information, shopping, local geography, basic employment).",
+        "Communicate in simple and routine tasks in French requiring a simple and direct exchange of information on familiar and routine matters.",
+        "Describe in simple French terms aspects of his/her background, immediate environment, and matters in areas of immediate need.",
+        "Read very short, simple French texts and find specific, predictable information in simple everyday material.",
+        "Write short, simple notes and messages in French relating to matters in areas of immediate need."
+      ],
+      "language_focus_topics": [
+        "Review A0: être, avoir, gender, articles, negation, basic questions.",
+        "Present tense of more regular -er verbs, and common -ir (like finir) and -re (like attendre) verbs.",
+        "Key irregular verbs: aller, faire, venir, pouvoir, vouloir, devoir, prendre, boire, dire, lire, écrire (present tense).",
+        "Possessive adjectives (mon, ton, son, notre, votre, leur - agreement).",
+        "Demonstrative adjectives (ce, cet, cette, ces).",
+        "Partitive articles (du, de la, de l', des).",
+        "Immediate future: `aller` + infinitive (e.g., Je vais manger).",
+        "Recent past: `venir de` + infinitive (e.g., Je viens de manger).",
+        "Passé composé: Introduction with `avoir` for common regular -er verbs and key irregulars. Introduction of `être` verbs for movement/reflexive (common ones). Basic agreement of past participle with `être`.",
+        "Adjectives: Agreement and placement (common patterns, BAGS).",
+        "Adverbs: Common adverbs of frequency (souvent, toujours, parfois), manner (bien, mal, vite).",
+        "Prepositions of place (sur, sous, dans, devant, derrière, à côté de, entre).",
+        "More question words: pourquoi, comment, combien, quand."
+      ],
+      "vocabulary_topics": [
+        "Review A0 vocabulary.",
+        "Numbers: 0-100 (cent).",
+        "Telling the time.",
+        "Daily routine activities (se réveiller, se lever, manger, aller à l'école/travail).",
+        "Hobbies and leisure activities (sport, musique, lire, cinéma).",
+        "Food & Drink: More items, meals (petit déjeuner, déjeuner, dîner), ordering in a café.",
+        "Places in town: la poste, la banque, le supermarché, la boulangerie, la pharmacie.",
+        "Clothing: Common items (chemise, pantalon, robe, jupe, chaussures).",
+        "Weather: Basic expressions (Il fait beau/chaud/froid, Il pleut).",
+        "Transportation: le bus, le train, le métro, le vélo.",
+        "Months of the year, seasons.",
+        "Professions (common ones)."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A0 sounds.",
+        "Distinction between similar vowel sounds (e.g., u vs ou, é vs è).",
+        "Practice with nasal vowels.",
+        "Liaison and enchaînement (common examples).",
+        "Basic sentence-level intonation for questions and statements."
+      ],
+      "listening_comprehension_skills": [
+        "Understand frequently used French words and phrases related to personal details, family, shopping, local area, employment when spoken slowly and clearly.",
+        "Grasp the main point in short, clear, simple messages and announcements."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short, simple texts on familiar matters (e.g., simple menus, advertisements, personal messages).",
+        "Find specific, predictable information in everyday material."
+      ],
+      "spoken_interaction_skills": [
+        "Interact in simple, routine situations (e.g., simple shopping, ordering food, asking for directions).",
+        "Ask and answer questions about familiar topics (daily life, hobbies, work, family).",
+        "Make and respond to simple suggestions."
+      ],
+      "spoken_production_skills": [
+        "Describe his/her family and other people, living conditions, his/her educational background and his/her present or most recent job in simple terms.",
+        "Talk about daily routine and hobbies.",
+        "Recount a very simple past event (using Passé Composé for key actions)."
+      ],
+      "written_interaction_skills": [
+        "Write very simple personal messages or emails (e.g., to thank someone, to arrange a meeting)."
+      ],
+      "written_production_skills": [
+        "Write short, simple notes and messages (e.g., a shopping list, a simple postcard).",
+        "Describe a familiar place or person in a few simple sentences."
+      ],
+      "cultural_competence_topics": [
+        "Politeness formulas in common situations (shopping, café, asking for help).",
+        "French meal structure (basic awareness: entrée, plat, dessert).",
+        "Understanding and using `tu` and `vous` in common A1 situations."
+      ],
+      "learning_strategies_suggestions": [
+        "Start labeling objects at home in French.",
+        "Practice with a language exchange partner or tutor for simple conversations.",
+        "Watch short French cartoons or videos for beginners."
+      ]
+    },
+    {
+      "level_code": "A2",
+      "level_name": "L'Apprenti Sorcier",
+      "approximate_vocabulary_size": "approx. 1000-1200 words",
+      "learning_outcomes": [
+        "Understand frequently used French sentences and expressions related to areas of immediate personal relevance (e.g., personal and family information, shopping, local area, employment).",
+        "Communicate in simple and routine tasks in French requiring a simple and direct exchange of information on familiar matters.",
+        "Describe in simple French terms aspects of his/her background, immediate environment, and matters in areas of immediate need, using both present and past tenses (Passé Composé and Imparfait).",
+        "Understand short, simple texts such as personal letters, brochures, and short newspaper articles on familiar subjects.",
+        "Write short, simple notes, messages, and personal letters (e.g., thanking, inviting, giving simple news)."
+      ],
+      "language_focus_topics": [
+        "Review A1: Present tense, Passé Composé (avoir/être), Futur Proche, articles, possessives, demonstratives, negation.",
+        "Imparfait (Imperfect tense): Formation and use for descriptions, past habits, ongoing past actions; contrast with Passé Composé.",
+        "Futur Simple (Simple Future tense): Formation and use for future plans, predictions.",
+        "Object Pronouns: Direct (le, la, l', les) and Indirect (lui, leur) - placement in present, futur proche, passé composé.",
+        "Reflexive Verbs (Verbes pronominaux): Common verbs in present, passé composé (with être), imparfait, futur simple.",
+        "Relative Clauses: Introduction with `qui` (subject) and `que` (direct object).",
+        "Adverbs: Formation from adjectives (-ment), common adverbs of manner, time, place.",
+        "Comparatives and Superlatives: Review and expansion.",
+        "Prepositions: Wider range (e.g., chez, pendant, depuis, avant, après, vers, entre).",
+        "Pronouns `y` and `en`: Basic introduction (replacing places or quantities).",
+        "Expressions of quantity: un peu de, beaucoup de, assez de, trop de.",
+        "Question forms: `quel/quelle/quels/quelles`."
+      ],
+      "vocabulary_topics": [
+        "Review A1 vocabulary.",
+        "Daily life & routines (more detail).",
+        "Family & friends (describing relationships, personalities).",
+        "Housing (describing rooms, furniture, location in more detail).",
+        "Food & drink (specific items, simple recipes, expressing preferences).",
+        "Shopping (clothes, food - detailed interactions, asking for advice, sizes, colors).",
+        "Travel & Transportation (planning trips, buying tickets, types of accommodation).",
+        "Health & body (describing simple symptoms).",
+        "Work & study (describing job/studies, workplace/school).",
+        "Leisure & Hobbies (specific activities, opinions).",
+        "Weather (detailed descriptions, simple forecast).",
+        "Describing people (physical appearance, character traits).",
+        "Expressing feelings and opinions (simple forms: je pense que, je crois que, à mon avis)."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A1 sounds, liaisons, enchaînement.",
+        "Rhythm and intonation of longer sentences and questions.",
+        "Distinction between similar sounds (e.g., ou vs u, é vs è vs e caduc).",
+        "Common pronunciation of Imparfait and Futur Simple endings."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of short, clear, simple announcements and messages on familiar topics.",
+        "Follow short conversations about everyday life, provided speech is clear and relatively slow.",
+        "Identify specific information in simple recorded material (e.g., weather forecast, travel information)."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short, simple personal letters or emails.",
+        "Find specific information in everyday materials like advertisements, brochures, menus, timetables.",
+        "Understand the gist of short, simple newspaper articles or web pages on familiar topics."
+      ],
+      "spoken_interaction_skills": [
+        "Handle short social exchanges (greetings, introductions, leave-taking, thanking, apologising).",
+        "Engage in simple conversations on familiar topics (family, hobbies, work, daily life, travel).",
+        "Make and respond to suggestions and invitations.",
+        "Perform simple transactions in shops, post offices, or banks.",
+        "Ask for and provide simple directions or information."
+      ],
+      "spoken_production_skills": [
+        "Give a simple description of a person, place, or object.",
+        "Describe past activities and personal experiences using Passé Composé and Imparfait.",
+        "Talk about future plans and intentions using Futur Simple and Futur Proche.",
+        "Express simple opinions and preferences with reasons."
+      ],
+      "written_interaction_skills": [
+        "Write simple personal emails or messages to exchange information, make arrangements, or thank someone."
+      ],
+      "written_production_skills": [
+        "Write short, simple texts describing familiar people, places, or events (e.g., a recent holiday).",
+        "Write a simple personal letter or postcard.",
+        "Describe daily routines or habits."
+      ],
+      "cultural_competence_topics": [
+        "Aspects of daily life in France (e.g., typical school/work day, meal times).",
+        "Common French customs and traditions (e.g., la Fête Nationale - Bastille Day, common holidays).",
+        "Social etiquette in common situations (e.g., table manners, punctuality).",
+        "Understanding and using appropriate forms of address (tu/vous) in more contexts."
+      ],
+      "learning_strategies_suggestions": [
+        "Start watching French TV shows or films with subtitles.",
+        "Try to narrate your day or simple past events in French (to yourself or a partner).",
+        "Read graded readers or simple articles in French."
+      ]
+    },
+    {
+      "level_code": "B1",
+      "level_name": "Le Globe-trotteur",
+      "approximate_vocabulary_size": "approx. 2000-2500 words",
+      "learning_outcomes": [
+        "Understands the main points of clear standard French input on familiar matters regularly encountered in work, school, leisure, etc.",
+        "Can deal with most situations likely to arise whilst travelling in an area where French is spoken.",
+        "Can produce simple connected text in French on topics which are familiar or of personal interest.",
+        "Can describe experiences and events, dreams, hopes & ambitions and briefly give reasons and explanations for opinions and plans in French."
+      ],
+      "language_focus_topics": [
+        "Review of A2 grammar: Tenses (Présent, Passé Composé, Imparfait, Futur Simple), object pronouns, reflexive verbs, basic relative clauses.",
+        "Subjonctif Présent (Present Subjunctive): Formation and use after expressions of will, emotion, doubt, necessity, opinion (e.g., il faut que, je veux que, je suis content que, je ne pense pas que).",
+        "Conditionnel Présent (Present Conditional): Formation and use for polite requests, advice, hypothetical situations, future in the past.",
+        "`Si` Clauses (Conditional sentences): Type 1 (Si + présent, futur simple/impératif), Type 2 (Si + imparfait, conditionnel présent).",
+        "Relative Pronouns: `qui`, `que`, `où`, `dont`.",
+        "Object Pronouns: `en` and `y` (expanded use); order of multiple object pronouns.",
+        "Passive Voice (Voix Passive): Present and Passé Composé (e.g., Le livre est écrit par..., La lettre a été envoyée).",
+        "Reported Speech (Discours Indirect): Simple statements and questions in present and past (changes in tense, pronouns, time/place expressions).",
+        "Expressions of cause (parce que, car, comme, puisque, grâce à, à cause de) and consequence (donc, alors, c'est pourquoi, par conséquent).",
+        "Expressions of purpose (pour, afin de + infinitive; pour que, afin que + subjonctif).",
+        "Gerund (Le gérondif: en + participe présent - e.g., en mangeant) for simultaneity, manner, cause.",
+        "More prepositions and prepositional phrases."
+      ],
+      "vocabulary_topics": [
+        "Review A2 vocabulary.",
+        "Expressing opinions, agreement, disagreement (à mon avis, je suis d'accord, je ne suis pas d'accord, je pense/crois que).",
+        "Expressing feelings and emotions (joie, tristesse, surprise, peur, colère - with more nuance).",
+        "Talking about work and studies (professions, daily tasks, studies, career plans).",
+        "Travel and tourism (planning trips, accommodation, transport, activities, problems).",
+        "Media and news (understanding main points of simple articles, news broadcasts).",
+        "Culture and leisure (films, books, music, art - discussing preferences and experiences).",
+        "Health and well-being (describing symptoms, discussing healthy habits).",
+        "Environment and social issues (basic vocabulary related to common topics).",
+        "Describing hopes, dreams, and ambitions.",
+        "Connectors for structuring discourse (d'abord, ensuite, enfin, de plus, cependant, pourtant)."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A2 pronunciation.",
+        "Intonation in complex sentences (e.g., conditional sentences, reported speech).",
+        "Distinguishing and producing more subtle vowel and consonant sounds.",
+        "Rhythm and flow in connected speech."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear standard speech on familiar matters regularly encountered.",
+        "Understand the main points of many radio or TV programs on current affairs or topics of personal or professional interest when the delivery is relatively slow and clear.",
+        "Follow a lecture or talk within his/her own field, provided the subject matter is familiar and the presentation straightforward and clearly structured."
+      ],
+      "reading_comprehension_skills": [
+        "Understand texts that consist mainly of high frequency everyday or job-related language.",
+        "Understand the description of events, feelings and wishes in personal letters.",
+        "Read straightforward factual texts on subjects related to his/her field and interest with a satisfactory level of comprehension."
+      ],
+      "spoken_interaction_skills": [
+        "Enter unprepared into conversation on topics that are familiar, of personal interest or pertinent to everyday life (e.g. family, hobbies, work, travel and current events).",
+        "Deal with most situations likely to arise whilst travelling in an area where French is spoken.",
+        "Express and sustain personal opinions and ideas in discussion.",
+        "Make and respond to suggestions, agree and disagree politely."
+      ],
+      "spoken_production_skills": [
+        "Produce simple connected text on topics which are familiar or of personal interest.",
+        "Narrate a story or relate the plot of a book or film and describe reactions.",
+        "Describe experiences, events, dreams, hopes and ambitions.",
+        "Briefly give reasons and explanations for opinions and plans."
+      ],
+      "written_interaction_skills": [
+        "Write personal letters/emails describing experiences, feelings, and events in some detail.",
+        "Respond to simple formal/informal inquiries or requests via email/letter."
+      ],
+      "written_production_skills": [
+        "Write simple connected text on a range of familiar subjects.",
+        "Write a description of an event, a recent personal experience.",
+        "Write a short formal letter (e.g., a simple complaint or request).",
+        "Express viewpoints on a familiar topic in a short essay or report."
+      ],
+      "cultural_competence_topics": [
+        "Understanding of different levels of formality in French communication.",
+        "Knowledge of major French-speaking regions and some of their cultural characteristics.",
+        "Common social conventions and etiquette in France (e.g., gift-giving, invitations).",
+        "Awareness of current events or common topics of discussion in French-speaking countries (from media)."
+      ],
+      "learning_strategies_suggestions": [
+        "Start reading short articles or news items in French.",
+        "Practice writing short essays or diary entries in French.",
+        "Engage in online forums or language exchange to discuss familiar topics.",
+        "Watch French films/series with French subtitles to improve listening and vocabulary."
+      ]
+    },
+    {
+      "level_code": "B2",
+      "level_name": "L'Artiste des Mots",
+      "approximate_vocabulary_size": "approx. 4000-6000 words",
+      "learning_outcomes": [
+        "Can understand the main ideas of complex French text on both concrete and abstract topics, including technical discussions in his/her field of specialisation.",
+        "Can interact with a degree of fluency and spontaneity in French that makes regular interaction with native speakers quite possible without strain for either party.",
+        "Can produce clear, detailed text in French on a wide range of subjects.",
+        "Can explain a viewpoint on a topical issue in French, giving the advantages and disadvantages of various options."
+      ],
+      "language_focus_topics": [
+        "Comprehensive review and nuanced application of all tenses (Présent, Imparfait, Passé Composé, Plus-que-parfait, Futur Simple, Futur Antérieur, Conditionnel Présent & Passé, Subjonctif Présent & Passé), Active and Passive voice.",
+        "Subjunctive: Expanded uses (after conjunctions of concession, purpose, time; in relative clauses with superlative/negative antecedents; Past Subjunctive - recognition/formal use).",
+        "Conditional: Present and Past Conditional for hypotheses, regrets, polite suggestions, future in the past; `au cas où` + conditionnel.",
+        "`Si` Clauses: All types reviewed (0, 1, 2, 3); mixed conditionals.",
+        "Reported Speech (Discours Indirect): Complex transformations (reporting verbs, questions, commands, exclamations; concordance des temps).",
+        "Passive Voice: All tenses, including with modal verbs; impersonal passives.",
+        "Relative Pronouns: Mastery of `qui, que, où, dont`; use of complex relative pronouns (`lequel, auquel, duquel`, etc., with prepositions).",
+        "Pronouns: Mastery of all object pronouns (`y, en`, combined), disjunctive pronouns for emphasis.",
+        "Gerund and Participles: `Gérondif` (expanded uses for condition, cause, manner), present/past participles in adjectival/adverbial roles, participial clauses.",
+        "Conjunctions and Connectors (Discourse Markers): Wide range for structuring arguments, debates, formal writing (e.g., en effet, par ailleurs, en revanche, de surcroît, ainsi, néanmoins, toutefois, pourvu que, à condition que, bien que, quoique).",
+        "Stylistic Inversions: For emphasis, formal register, or after certain adverbs.",
+        "Expressions of concession (bien que, quoique, même si), opposition (contrairement à, par contre), hypothesis (au cas où, à supposer que), cause (étant donné que, du fait de), consequence (de sorte que, si bien que)."
+      ],
+      "vocabulary_topics": [
+        "Review B1 vocabulary.",
+        "Abstract concepts: Society, politics, economics, environment, education, culture, arts, science, technology (in greater depth).",
+        "Expressing nuanced opinions, agreement, disagreement, doubt, certainty, probability, possibility.",
+        "Vocabulary for argumentation: Structuring an argument, supporting points with evidence, refuting arguments, concluding, hedging.",
+        "Idioms and fixed expressions (common and some more specialized or formal).",
+        "Understanding and using different registers of French (formal, standard, informal, awareness of some slang/colloquialisms).",
+        "Word families and word formation (prefixes, suffixes - advanced understanding for vocabulary expansion).",
+        "Synonyms and antonyms for precise meaning, stylistic variation, and register.",
+        "Collocations: Advanced verb-noun, adjective-noun, adverb-adjective combinations.",
+        "Vocabulary related to one's field of specialization or interest (more technical terms).",
+        "Figurative language, metaphors."
+      ],
+      "pronunciation_focus_topics": [
+        "Fine-tuning intonation for expressing attitude, emotion, and emphasis.",
+        "Mastery of connected speech phenomena (liaison, elision, enchaînement) for natural flow.",
+        "Awareness and basic recognition of main regional French accents.",
+        "Maintaining clear articulation during extended speech and presentations."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech and lectures and follow even complex lines of argument provided the topic is reasonably familiar.",
+        "Understand most TV news and current affairs programmes.",
+        "Understand the majority of films in standard dialect."
+      ],
+      "reading_comprehension_skills": [
+        "Read articles and reports concerned with contemporary problems in which the writers adopt particular stances or viewpoints.",
+        "Understand contemporary literary prose.",
+        "Understand specialized articles outside one's field with occasional use of a dictionary."
+      ],
+      "spoken_interaction_skills": [
+        "Interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
+        "Take an active part in discussion in familiar contexts, accounting for and sustaining viewpoints.",
+        "Handle linguistic aspects of negotiation, e.g., making a case, managing disagreement."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed descriptions on a wide range of subjects related to his/her field of interest.",
+        "Explain a viewpoint on a topical issue giving the advantages and disadvantages of various options.",
+        "Develop an argument systematically with appropriate highlighting of significant points and relevant supporting detail."
+      ],
+      "written_interaction_skills": [
+        "Write clear, detailed letters or emails conveying information, ideas or opinions effectively, adapting to formal or informal contexts.",
+        "Respond to complex inquiries or arguments in writing."
+      ],
+      "written_production_skills": [
+        "Write clear, detailed text (essays, reports, articles) on a wide range of subjects related to his/her interests.",
+        "Summarise information from different sources and present arguments coherently.",
+        "Write reviews of films, books or plays.",
+        "Develop a reasoned argument, highlighting the advantages and disadvantages of various options."
+      ],
+      "cultural_competence_topics": [
+        "Deeper understanding of French and Francophone societies (social structures, current affairs, political landscape, and cultural debates).",
+        "Ability to understand and appreciate cultural references, humor, and irony in French media and literature.",
+        "Nuances of social and professional etiquette in various contexts.",
+        "Understanding different perspectives within Francophone cultures."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage regularly with authentic French media (news, podcasts, films, books) without subtitles if possible.",
+        "Participate in debates or discussion groups in French.",
+        "Write analytical essays or summaries of complex texts.",
+        "Seek feedback on writing and speaking from native speakers or advanced learners."
+      ]
+    },
+    {
+      "level_code": "C1",
+      "level_name": "L'Étoile Filante",
+      "approximate_vocabulary_size": "approx. 8000-10000 words",
+      "learning_outcomes": [
+        "Can understand a wide range of demanding, longer French texts, and recognise implicit meaning.",
+        "Can express him/herself fluently and spontaneously in French without much obvious searching for expressions.",
+        "Can use language flexibly and effectively for social, academic and professional purposes in French.",
+        "Can produce clear, well-structured, detailed text in French on complex subjects, showing controlled use of organisational patterns, connectors and cohesive devices."
+      ],
+      "language_focus_topics": [
+        "Mastery of tense system: nuanced application of all tenses and moods (indicative, subjunctive, conditional, imperative), including literary tenses (Passé Simple, Imparfait du Subjonctif - primarily for reading comprehension).",
+        "Advanced Subjunctive: All uses, including after expressions of opinion/doubt in negative/interrogative, concessive clauses, and in formal style.",
+        "Complex Sentence Structures: Mastery of all types of subordinate clauses (relative, temporal, causal, concessive, conditional, consecutive, purpose, comparative); use of participial and infinitive clauses for conciseness.",
+        "Advanced Passive Voice: All tenses and forms, including with modals and in complex clauses; stylistic choices for using passive.",
+        "Advanced Reported Speech: Nuanced reporting, including stylistic variations and indirect free style.",
+        "Nominalization: Transforming clauses into noun phrases for formal and academic style.",
+        "Stylistic Inversions and Detachment (Mise en relief): For emphasis, focus, and stylistic effect.",
+        "Advanced Discourse Markers & Connectors: Wide range for sophisticated logical articulation, argumentation, and structuring complex texts/speeches (e.g., certes, en dépit de, pour autant que, il s'ensuit que, force est de constater que, qui plus est, en l'occurrence).",
+        "Figures of Speech: Recognition and appropriate use of common figures of speech (metaphor, simile, hyperbole, litotes, irony, euphemism).",
+        "Register and Style: Adapting grammatical structures and lexical choices to different registers (formal, informal, literary, technical)."
+      ],
+      "vocabulary_topics": [
+        "Review B2 vocabulary.",
+        "Extensive vocabulary covering abstract, specialized, and technical topics across various domains (current affairs, social issues, politics, economics, science, arts, literature).",
+        "Nuanced understanding and use of synonyms, antonyms, hyponyms, hypernyms for precision and stylistic effect.",
+        "Rich repertoire of idiomatic expressions, proverbs, colloquialisms, and cultural allusions, with understanding of appropriate context and register.",
+        "Vocabulary for academic and professional purposes: presentations, reports, debates, negotiations, specialized fields.",
+        "Advanced word formation: complex prefixes, suffixes, neologisms, loanwords.",
+        "Understanding and using different levels of formality, politeness, and directness.",
+        "Lexical fields related to expressing subtle emotions, attitudes, and judgments."
+      ],
+      "pronunciation_focus_topics": [
+        "Mastery of French phonetics, intonation, rhythm, and connected speech for highly fluent, natural, and expressive delivery.",
+        "Using prosody (stress, rhythm, intonation) effectively to convey subtle meanings, attitudes, and emotions.",
+        "Understanding and adapting to a wider range of regional accents and sociolects.",
+        "Maintaining clarity and precision in rapid or complex speech."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech even when it is not clearly structured and when relationships are only implied and not signalled explicitly.",
+        "Understand television programmes and films without too much effort.",
+        "Understand complex technical or academic presentations and discussions in one's field.",
+        "Recognize a wide range of idiomatic expressions and colloquialisms."
+      ],
+      "reading_comprehension_skills": [
+        "Understand long and complex factual and literary texts, appreciating distinctions of style.",
+        "Understand specialised articles and longer technical instructions, even when they do not relate to his/her field.",
+        "Recognize implicit meaning, writer's stance, and irony."
+      ],
+      "spoken_interaction_skills": [
+        "Express him/herself fluently and spontaneously without much obvious searching for expressions.",
+        "Use language flexibly and effectively for social, academic and professional purposes.",
+        "Formulate ideas and opinions with precision and relate his/her contribution skilfully to those of other speakers.",
+        "Participate effectively in formal discussions and debates on complex topics."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed descriptions of complex subjects integrating sub-themes, developing particular points and rounding off with an appropriate conclusion.",
+        "Give clear, well-structured presentations on complex subjects, expanding and supporting ideas with subsidiary points, reasons and relevant examples.",
+        "Adapt style and register to the audience and situation."
+      ],
+      "written_interaction_skills": [
+        "Write clear, well-structured letters, emails, or reports on complex subjects, adapting style and tone to the intended reader and purpose.",
+        "Respond effectively to complex written communications."
+      ],
+      "written_production_skills": [
+        "Write clear, well-structured, detailed text on complex subjects in an essay, report, or article, underlining the relevant salient issues.",
+        "Write summaries and reviews of professional or literary works.",
+        "Show controlled use of organisational patterns, connectors and cohesive devices to produce coherent and sophisticated text.",
+        "Employ a range of stylistic devices appropriate to the text type."
+      ],
+      "cultural_competence_topics": [
+        "In-depth understanding of contemporary French and Francophone societies, including complex social, political, economic, and ethical issues.",
+        "Critical appreciation of French and Francophone literature, cinema, arts, philosophy, and intellectual movements.",
+        "Ability to interpret and discuss cultural subtext, humor, irony, allusions, and socio-cultural references.",
+        "Understanding of diverse cultural perspectives and norms within the global Francophone world and their historical context."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage with a wide variety of authentic, complex French texts and media (literature, academic articles, documentaries, debates).",
+        "Practice writing different genres of complex texts (essays, reports, critical reviews).",
+        "Participate in academic or professional discussions and presentations in French.",
+        "Focus on stylistic aspects of language, including register, tone, and rhetorical devices.",
+        "Seek opportunities for extended immersion and interaction in diverse French-speaking environments."
+      ]
+    },
+    {
+      "level_code": "C2",
+      "level_name": "Le Caméléon Linguistique",
+      "approximate_vocabulary_size": "approx. 16000-20000+ words",
+      "learning_outcomes": [
+        "Can understand with ease virtually everything heard or read in French.",
+        "Can summarise information from different spoken and written French sources, reconstructing arguments and accounts in a coherent presentation.",
+        "Can express him/herself spontaneously, very fluently and precisely in French, differentiating finer shades of meaning even in more complex situations.",
+        "Can use French effectively for all social, academic, and professional purposes with a high degree of precision, appropriateness, and style."
+      ],
+      "language_focus_topics": [
+        "Complete mastery of all French grammatical structures, including rare, complex, and archaic forms (for comprehension).",
+        "Sophisticated use of syntax for stylistic effect, emphasis, and nuance (e.g., complex inversions, varied clause structures, rhetorical devices).",
+        "Full command of the subjunctive mood in all its tenses (present, past, imperfect, pluperfect) and applications, including literary uses.",
+        "Mastery of all conditional forms and their subtle implications.",
+        "Nuanced understanding and application of aspectual differences in verb tenses.",
+        "Advanced use of nominalization, participial constructions, and infinitive clauses for sophisticated and concise expression.",
+        "Complete control over discourse markers, conjunctions, and cohesive devices to create highly articulate, fluent, and logically structured texts and speech of any genre.",
+        "Understanding and occasional use of rhetorical figures and stylistic devices common in French literature and formal discourse.",
+        "Ability to analyze and deconstruct complex grammatical structures encountered in authentic texts."
+      ],
+      "vocabulary_topics": [
+        "Extensive and profound vocabulary approaching that of an educated native speaker, including low-frequency words, specialized terminology across diverse academic and professional fields.",
+        "Full command of idiomatic language: idioms, proverbs, colloquialisms, cultural sayings, and fixed expressions, with an understanding of their origins and appropriate usage.",
+        "Ability to understand and use fine shades of meaning, connotations, and register for virtually any lexical item.",
+        "Mastery of word formation processes (derivation, compounding, conversion) to understand and create new words.",
+        "Vocabulary for discussing abstract, philosophical, scientific, literary, and highly specialized topics.",
+        "Appreciation and understanding of etymology and semantic evolution of words.",
+        "Recognition and understanding of regionalisms and sociolects within the Francophone world."
+      ],
+      "pronunciation_focus_topics": [
+        "Near-native or native-like pronunciation, intonation, stress, and rhythm across all registers.",
+        "Ability to subtly vary prosody to convey complex attitudes, emotions, irony, and other pragmatic meanings.",
+        "Effortless and natural handling of all aspects of connected speech.",
+        "Ability to understand and, if desired, accurately reproduce various regional French accents and sociolectal variations."
+      ],
+      "listening_comprehension_skills": [
+        "Understand any kind of spoken language, whether live or broadcast, even when delivered at fast native speed and on unfamiliar or abstract topics.",
+        "Follow complex interactions between multiple speakers in group discussions or debates, even on abstract, complex, and unfamiliar topics.",
+        "Appreciate stylistic nuances, register shifts, irony, humor, and implicit meaning in spoken discourse."
+      ],
+      "reading_comprehension_skills": [
+        "Understand and critically interpret all forms of written language including abstract, structurally or linguistically complex texts such as manuals, specialised articles, and literary works (classical and contemporary).",
+        "Appreciate fine distinctions of style, tone, and authorial intent.",
+        "Read and understand texts from different historical periods and diverse cultural contexts within the Francophone world."
+      ],
+      "spoken_interaction_skills": [
+        "Take part effortlessly and fluently in any conversation or discussion, using idiomatic expressions and colloquialisms naturally and appropriately.",
+        "Express him/herself with precision, differentiating finer shades of meaning, and reformulating ideas to overcome any communication difficulty smoothly.",
+        "Argue a complex case, negotiate, and mediate effectively in formal and informal settings.",
+        "Adapt language and style appropriately to the audience, context, and purpose of the interaction."
+      ],
+      "spoken_production_skills": [
+        "Present a clear, smoothly-flowing, and well-structured description or argument in an appropriate style on any complex subject.",
+        "Develop points cohesively and logically, with effective use of organizational patterns and a wide range of cohesive devices.",
+        "Deliver presentations, lectures, or speeches with clarity, precision, and engaging style.",
+        "Use rhetorical devices effectively."
+      ],
+      "written_interaction_skills": [
+        "Write any type of correspondence (letters, emails, messages) with complete command of style, tone, and register appropriate to the recipient and purpose.",
+        "Engage in complex written discussions or collaborations, conveying nuanced ideas effectively."
+      ],
+      "written_production_skills": [
+        "Write clear, smoothly-flowing, complex texts (essays, reports, articles, reviews, creative writing) in an appropriate and effective style.",
+        "Select and use a wide range of linguistic resources to express ideas precisely, persuasively, or artistically.",
+        "Demonstrate mastery of organizational patterns, paragraphing, and cohesive devices to ensure clarity and impact.",
+        "Write summaries, critiques, or syntheses of complex information from multiple sources."
+      ],
+      "cultural_competence_topics": [
+        "Profound, nuanced, and critical understanding of the diversity of French and Francophone cultures, societies, histories, arts, literatures, and intellectual traditions.",
+        "Ability to function with complete ease and cultural sensitivity in any French-speaking environment.",
+        "Capacity to act as a cultural interpreter or mediator, explaining subtle cultural nuances.",
+        "Deep understanding of contemporary socio-political issues, cultural debates, and intellectual currents in the Francophone world."
+      ],
+      "learning_strategies_suggestions": [
+        "Maintain and expand language proficiency through continuous engagement with diverse and complex authentic materials and interactions at the highest level.",
+        "Engage in critical reading and analysis of sophisticated French texts (literary, academic, journalistic).",
+        "Contribute to French-language discussions, publications, or professional activities.",
+        "Reflect on and refine personal language use for optimal effectiveness and stylistic appropriateness.",
+        "Explore specialized areas of interest (e.g., specific literary genres, academic disciplines, professional fields) in French."
+      ]
+    }
+  ]
+}
