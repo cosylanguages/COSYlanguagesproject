@@ -79,7 +79,7 @@ const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
       <div className="mcq-multiple-config-form block-config-form">
         {/* Title */}
         <div className="form-group">
-          <label><TransliterableText text={t('config.titleDefaultLabel', 'Title (Default)')} />:</label>
+          <label className="unified-label"><TransliterableText text={t('config.titleDefaultLabel', 'Title (Default)')} />:</label>
           <input
             type="text"
             value={title.default || ''}
@@ -88,7 +88,7 @@ const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
         </div>
         {currentGlobalLang !== 'default' && (
           <div className="form-group">
-            <label><TransliterableText text={t('config.titleLangLabel', { lang: currentGlobalLang }, `Title (${currentGlobalLang})`)} />:</label>
+            <label className="unified-label"><TransliterableText text={t('config.titleLangLabel', { lang: currentGlobalLang }, `Title (${currentGlobalLang})`)} />:</label>
             <input
               type="text"
               value={title[currentGlobalLang] || ''}
@@ -99,7 +99,7 @@ const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
 
         {/* Question */}
         <div className="form-group">
-          <label><TransliterableText text={t('config.questionDefaultLabel', 'Question (Default)')} />:</label>
+          <label className="unified-label"><TransliterableText text={t('config.questionDefaultLabel', 'Question (Default)')} />:</label>
           <textarea
             value={question.default || ''}
             onChange={(e) => handleMultilingualChange(setQuestion, question, 'default', e.target.value)}
@@ -108,7 +108,7 @@ const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
         </div>
         {currentGlobalLang !== 'default' && (
           <div className="form-group">
-            <label><TransliterableText text={t('config.questionLangLabel', { lang: currentGlobalLang }, `Question (${currentGlobalLang})`)} />:</label>
+            <label className="unified-label"><TransliterableText text={t('config.questionLangLabel', { lang: currentGlobalLang }, `Question (${currentGlobalLang})`)} />:</label>
             <textarea
               value={question[currentGlobalLang] || ''}
               onChange={(e) => handleMultilingualChange(setQuestion, question, currentGlobalLang, e.target.value)}
@@ -125,7 +125,7 @@ const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
               <div className="option-inputs">
                 {/* Option Text */}
                 <div className="form-group option-text-group">
-                  <label htmlFor={`option-text-default-${index}`}><TransliterableText text={t('config.optionTextDefaultLabel', 'Option Text (Default)')} />:</label>
+                  <label htmlFor={`option-text-default-${index}`} className="unified-label"><TransliterableText text={t('config.optionTextDefaultLabel', 'Option Text (Default)')} />:</label>
                   <input
                     type="text"
                     id={`option-text-default-${index}`}
@@ -135,7 +135,7 @@ const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
                 </div>
                 {currentGlobalLang !== 'default' && (
                   <div className="form-group option-text-group">
-                    <label htmlFor={`option-text-${currentGlobalLang}-${index}`}><TransliterableText text={t('config.optionTextLangLabel', { lang: currentGlobalLang }, `Option Text (${currentGlobalLang})`)} />:</label>
+                    <label htmlFor={`option-text-${currentGlobalLang}-${index}`} className="unified-label"><TransliterableText text={t('config.optionTextLangLabel', { lang: currentGlobalLang }, `Option Text (${currentGlobalLang})`)} />:</label>
                     <input
                       type="text"
                       id={`option-text-${currentGlobalLang}-${index}`}
@@ -147,7 +147,7 @@ const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
 
                 {/* Option Feedback */}
                 <div className="form-group option-feedback-group">
-                  <label htmlFor={`option-feedback-default-${index}`}><TransliterableText text={t('config.optionFeedbackDefaultLabel', 'Feedback (Default)')} />:</label>
+                  <label htmlFor={`option-feedback-default-${index}`} className="unified-label"><TransliterableText text={t('config.optionFeedbackDefaultLabel', 'Feedback (Default)')} />:</label>
                   <textarea
                     id={`option-feedback-default-${index}`}
                     value={option.feedback?.default || ''}
@@ -158,7 +158,7 @@ const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
                 </div>
                 {currentGlobalLang !== 'default' && (
                   <div className="form-group option-feedback-group">
-                    <label htmlFor={`option-feedback-${currentGlobalLang}-${index}`}><TransliterableText text={t('config.optionFeedbackLangLabel', { lang: currentGlobalLang }, `Feedback (${currentGlobalLang})`)} />:</label>
+                    <label htmlFor={`option-feedback-${currentGlobalLang}-${index}`} className="unified-label"><TransliterableText text={t('config.optionFeedbackLangLabel', { lang: currentGlobalLang }, `Feedback (${currentGlobalLang})`)} />:</label>
                     <textarea
                       id={`option-feedback-${currentGlobalLang}-${index}`}
                       value={option.feedback?.[currentGlobalLang] || ''}
@@ -171,7 +171,7 @@ const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
 
                 {/* Is Correct Checkbox */}
                 <div className="form-group option-correct-group">
-                  <label htmlFor={`option-correct-${index}`} className="checkbox-label">
+                  <label htmlFor={`option-correct-${index}`} className="checkbox-label unified-label"> {/* Also apply unified-label here, though it's a checkbox label */}
                     <input
                       type="checkbox"
                       id={`option-correct-${index}`}
@@ -194,7 +194,7 @@ const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
 
         {/* Block Language Override */}
         <div className="form-group">
-          <label><TransliterableText text={t('config.blockLangLabel', 'Language Override (e.g., COSYenglish)')} />:</label>
+          <label className="unified-label"><TransliterableText text={t('config.blockLangLabel', 'Language Override (e.g., COSYenglish)')} />:</label>
           <input
             type="text"
             value={blockLang}
