@@ -9,8 +9,10 @@ import hy from './locales/hy.js';
 import it from './locales/it.js';
 import pt from './locales/pt.js';
 import tt from './locales/tt.js';
+import el from './locales/el.js'; // Import Greek
 
 const translations = {
+  COSYgreek: el, // Add Greek
   COSYenglish: en,
   COSYfrench: fr,
   COSYspanish: es,
