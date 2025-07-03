@@ -1,0 +1,611 @@
+{
+  "language_name": "Portuguese",
+  "levels": [
+    {
+      "level_code": "A0",
+      "level_name": "Primeiros Passos (First Steps)",
+      "approximate_vocabulary_size": "approx. 300-500 words",
+      "learning_outcomes": [
+        "Recognize and reproduce basic sounds of the Portuguese alphabet.",
+        "Understand and use familiar everyday expressions and very basic phrases (e.g., greetings, introductions).",
+        "Introduce him/herself and others simply (e.g., Eu sou... / Chamo-me...).",
+        "Ask and answer simple questions about personal details (name, nationality).",
+        "Interact in a very simple way if the other person speaks slowly, clearly, and is prepared to help.",
+        "Recognize familiar names, words, and very simple sentences on signs or posters."
+      ],
+      "language_focus_topics": [
+        "The Portuguese Alphabet (O alfabeto) and pronunciation of letters.",
+        "Basic pronunciation rules: Vowel sounds (oral and basic nasal vowels like -ão, -ãe). Consonant sounds (including lh, nh, ch, ss, ç).",
+        "Nouns: Introduction to grammatical gender (masculine/feminine - o/a with simple nouns). Singular nouns.",
+        "Articles: Definite articles (o, a - singular). Indefinite articles (um, uma - singular).",
+        "Pronouns: Subject pronouns (eu, tu, você/ele/ela - singular).",
+        "Verbs: Present tense of 'ser' (to be - identity, characteristics) and 'estar' (to be - location, temporary states) - eu, tu, você/ele/ela forms.",
+        "Verbs: Present tense of common regular -ar verbs (e.g., falar - to speak) - eu, tu, você/ele/ela forms.",
+        "Basic Sentence Structure: Subject-Verb-Object (e.g., Eu falo português). Adjective placement (usually after noun).",
+        "Negation: 'não' before the verb (e.g., Eu não falo inglês).",
+        "Simple Questions: Intonation for yes/no questions. Basic question words (Quem? Quê? Onde? Quando? Como?)."
+      ],
+      "vocabulary_topics": [
+        "Greetings: Olá, Oi (Brazil), Adeus, Tchau, Bom dia, Boa tarde, Boa noite, Até logo.",
+        "Introductions & Personal Information: Como te chamas?/Como se chama? Chamo-me... / Meu nome é... Muito prazer. De onde és/é? Sou de... Nacionalidade (basic).",
+        "Courtesy: Obrigado/Obrigada, De nada, Por favor, Desculpe, Com licença.",
+        "Basic responses: Sim, Não.",
+        "Numbers: 0-10 (zero-dez).",
+        "Colors: vermelho, azul, verde, amarelo, preto, branco (basic).",
+        "Family: mãe, pai, irmão, irmã (basic).",
+        "Common Objects: livro, mesa, cadeira, casa, carro, telefone.",
+        "Basic Food & Drink: água, pão, leite, café, chá, queijo, maçã.",
+        "Classroom language: Repita, por favor. Não compreendo."
+      ],
+      "pronunciation_focus_topics": [
+        "The Portuguese vowel sounds (oral: a, e, i, o, u; recognizing open/closed e/o).",
+        "Basic nasal vowels (e.g., pão, mãe, sim).",
+        "Consonant sounds, including 'lh', 'nh', 'ch', 'ç'.",
+        "Pronunciation of 'r' (e.g., initial/double 'rr' vs. single 'r' between vowels).",
+        "Silent 'h' at the beginning of words.",
+        "Word stress (oxítonas, paroxítonas, proparoxítonas - basic rules).",
+        "Basic intonation for statements and simple questions."
+      ],
+      "listening_comprehension_skills": [
+        "Recognize familiar Portuguese words and very basic phrases when spoken slowly and clearly.",
+        "Understand simple greetings, introductions, and farewells.",
+        "Follow very simple instructions (e.g., 'Olhe!' - Look!, 'Escute!' - Listen!)."
+      ],
+      "reading_comprehension_skills": [
+        "Read and identify all letters of the Portuguese alphabet.",
+        "Read and understand familiar names, words, and very simple sentences on signs or labels.",
+        "Understand numbers 0-10 written as words."
+      ],
+      "spoken_interaction_skills": [
+        "Greet and respond to greetings appropriately.",
+        "Introduce oneself and ask for someone's name.",
+        "Ask and answer simple questions about personal information.",
+        "Use basic courtesy phrases."
+      ],
+      "spoken_production_skills": [
+        "Say the letters of the Portuguese alphabet.",
+        "Pronounce basic Portuguese vocabulary comprehensibly.",
+        "Produce simple isolated phrases and sentences (e.g., 'Eu sou a Ana.', 'Isto é uma mesa.').",
+        "State name and nationality simply."
+      ],
+      "written_interaction_skills": [
+        "Recognize own name and familiar words when written."
+      ],
+      "written_production_skills": [
+        "Write all letters of the Portuguese alphabet.",
+        "Write one's name and other simple familiar words.",
+        "Copy familiar words and short sentences."
+      ],
+      "cultural_competence_topics": [
+        "Common greeting customs in Portuguese-speaking countries.",
+        "Basic awareness of formal ('o senhor'/'a senhora', 'você' in EP for formal) vs. informal ('tu' in EP, 'você' in BP for informal) address.",
+        "Importance of politeness.",
+        "General awareness of Portugal, Brazil, and other Lusophone countries."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice Portuguese vowel sounds, especially nasal ones.",
+        "Use flashcards for new vocabulary.",
+        "Listen to simple Portuguese songs or children's stories.",
+        "Focus on the gender of common nouns with their articles."
+      ]
+    },
+    {
+      "level_code": "A1",
+      "level_name": "Jovem Navegador(a) (Young Navigator)",
+      "approximate_vocabulary_size": "approx. 500-700 words",
+      "learning_outcomes": [
+        "Understand and use familiar everyday expressions and frequently used phrases related to areas of most immediate relevance (e.g., basic personal and family information, shopping, local geography, telling time).",
+        "Communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar matters.",
+        "Describe in simple terms aspects of his/her background, immediate environment, and matters in areas of immediate need.",
+        "Read very short, simple texts (e.g., advertisements, simple menus, personal messages).",
+        "Write short, simple notes and messages."
+      ],
+      "language_focus_topics": [
+        "Review A0: Alphabet, basic pronunciation, ser/estar, -ar verbs (present), articles, gender.",
+        "Nouns: Plural of nouns (-s, -es, -ães, -ãos, -ões). Agreement with articles and adjectives.",
+        "Adjectives: Agreement in gender and number. Position (usually after noun, some common exceptions).",
+        "Verbs: Present tense of regular -er and -ir verbs (e.g., comer, abrir).",
+        "Verbs: Common irregular verbs in present tense (ter - to have, ir - to go, querer - to want, poder - can/be able to, fazer - to do/make, dizer - to say, vir - to come, pôr - to put).",
+        "Verbs: 'Gostar de' for likes. 'Haver' (há - there is/are).",
+        "Pronouns: Subject pronouns (nós, vós/vocês, eles/elas). Object pronouns (me, te, o/a, nos, vos, os/as - direct, basic placement).",
+        "Possessive adjectives/pronouns (meu, teu, seu, nosso, vosso, seu - with gender/number agreement).",
+        "Demonstrative adjectives and pronouns (este, esse, aquele and feminine/plural forms).",
+        "Prepositions of place (em, sobre, debaixo de, ao lado de, entre, perto de, longe de). Contractions of prepositions with definite articles (e.g., do, da, no, na, ao, à).",
+        "Adverbs of frequency (sempre, muitas vezes, às vezes, nunca).",
+        "Numbers: 0-100+. Basic ordinal numbers (primeiro, segundo...)."
+      ],
+      "vocabulary_topics": [
+        "Review A0 vocabulary.",
+        "Personal information: Family members (extended), age, professions (common).",
+        "Daily routine: Describing typical daily activities (acordar, tomar o pequeno-almoço/café da manhã, ir para o trabalho/escola, almoçar, jantar, deitar-se).",
+        "Food & Drink: Common food items, drinks, meals, ordering in a restaurant/café.",
+        "Shopping: Types of shops (loja, supermercado, mercado), common items, prices, quantities.",
+        "Places in town: rua, praça, parque, cinema, museu, igreja, câmara municipal/prefeitura, correios, banco, farmácia, hotel, estação, aeroporto.",
+        "Transport: autocarro/ônibus, comboio/trem, metro, táxi, avião, bicicleta. Buying tickets, schedules.",
+        "Time: Telling the time, days of the week, months, seasons, dates.",
+        "Weather: Describing weather conditions (faz calor/frio, chove, neva, está nublado, faz sol/vento).",
+        "Hobbies & interests (ler, ver televisão, ouvir música, dançar, cozinhar, viajar, desportos/esportes).",
+        "Clothing: Common items and accessories."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A0 sounds, nasal vowels, stress.",
+        "Distinction between open and closed 'e' and 'o' sounds (e.g., avó vs avô).",
+        "Pronunciation of 's' at the end of words or before consonants (can be /ʃ/ in EP, /s/ or /z/ in BP).",
+        "Nasal diphthongs (e.g., pão, cães, mãe, limões).",
+        "Linking sounds (liaison) in common phrases.",
+        "Intonation of different sentence types and simple exclamations."
+      ],
+      "listening_comprehension_skills": [
+        "Understand frequently used words and phrases related to personal details, family, shopping, local area, when spoken relatively slowly and clearly.",
+        "Grasp the main point in short, clear, simple messages and announcements.",
+        "Understand simple questions and instructions related to everyday situations."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short, simple texts on familiar matters (e.g., simple menus, advertisements, public signs, short personal messages).",
+        "Find specific, predictable information in everyday material.",
+        "Understand short, simple personal letters or postcards."
+      ],
+      "spoken_interaction_skills": [
+        "Interact in simple, routine situations (e.g., basic shopping, ordering food, asking for directions).",
+        "Ask and answer questions about familiar topics (daily life, hobbies, family, preferences).",
+        "Make and respond to simple suggestions, invitations, or offers.",
+        "Ask for and give basic information about time, quantity, and price."
+      ],
+      "spoken_production_skills": [
+        "Describe his/her family, other people, living conditions, and daily routine in simple terms.",
+        "Talk about likes and dislikes.",
+        "Describe simple past events using 'ser'/'estar' in imperfect and basic verbs in Pretérito Perfeito Simples (if introduced).",
+        "Express simple future plans using 'ir' + infinitive."
+      ],
+      "written_interaction_skills": [
+        "Write a simple reply to a personal message, email, or invitation.",
+      ],
+      "written_production_skills": [
+        "Write short, simple notes, messages, or postcards.",
+        "Describe a familiar place, person, or daily routine in a few simple, connected sentences.",
+        "Fill in simple forms with personal details."
+      ],
+      "cultural_competence_topics": [
+        "Forms of address: 'tu' (EP informal, some BP regions) vs. 'você' (BP common informal, EP more formal or distant). 'O senhor/a senhora' for formal.",
+        "Meal times and typical foods in Portugal and Brazil (e.g., bacalhau in Portugal, feijoada in Brazil).",
+        "Awareness of major holidays (Carnaval in Brazil, São João in Portugal).",
+        "Importance of coffee (cafezinho) as a social ritual.",
+        "General knowledge about famous landmarks (e.g., Christ the Redeemer, Belém Tower)."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice conjugating key irregular verbs in the present tense.",
+        "Listen to Brazilian and European Portuguese music to get a feel for different accents and rhythms.",
+        "Use language apps with dialogues focusing on everyday situations.",
+        "Try to form simple sentences about your daily life and preferences."
+      ]
+    },
+    {
+      "level_code": "A2",
+      "level_name": "Navegador(a) Confiante (Confident Navigator)",
+      "approximate_vocabulary_size": "approx. 1000-1500 words",
+      "learning_outcomes": [
+        "Understand sentences and frequently used expressions related to areas of immediate personal relevance in Portuguese.",
+        "Communicate in simple and routine tasks in Portuguese requiring a simple and direct exchange of information on familiar matters.",
+        "Describe in simple Portuguese terms aspects of his/her background, immediate environment, and matters in areas of immediate need, using present, past, and future tenses.",
+        "Understand short texts such as personal letters, brochures, and simplified articles on familiar subjects in Portuguese.",
+        "Write short, simple notes, messages, and personal letters in Portuguese."
+      ],
+      "language_focus_topics": [
+        "Review A1: Present tense (regular & common irregulars), ser/estar/ter/ir, articles, possessives, demonstratives.",
+        "Past Tenses: Pretérito Perfeito Simples (Simple Past/Preterite) for completed past actions (regular and more irregulars). Pretérito Imperfeito (Imperfect) for descriptions, habits, ongoing actions in the past. Contrast between Pretérito Perfeito and Imperfeito.",
+        "Future: Futuro do Presente (Simple Future - falarei) for predictions, promises. Continued use of 'ir' + infinitive for near future/plans.",
+        "Conditional: Condicional Simples (falaria) for polite requests, advice, hypothetical situations (basic).",
+        "Pronouns: Direct and Indirect object pronouns (me, te, o/a, lhe, nos, vos, os/as, lhes). Placement rules (proclisis, enclisis, mesoclisis - basic awareness of EP mesoclisis).",
+        "Reflexive verbs (verbos reflexivos/pronominais) in present and past tenses.",
+        "Comparative and Superlative adjectives and adverbs (mais...do que, menos...do que, tão...como, o/a mais...). Irregular comparatives (melhor, pior, maior, menor).",
+        "Obligation and necessity: 'ter de/que' + infinitive, 'dever' + infinitive, 'precisar de' + noun/infinitive.",
+        "Gerund (-ndo) for progressive tenses (estar + gerund). EP alternative 'estar a' + infinitive.",
+        "Conjunctions: Common coordinating and subordinating conjunctions (e, ou, mas, porque, quando, se, embora, para que)."
+      ],
+      "vocabulary_topics": [
+        "Review A1 vocabulary.",
+        "Describing people: More detailed physical appearance, personality traits, character, relationships.",
+        "Housing: Describing different types of housing, rooms, furniture, household chores, common problems and solutions.",
+        "Food & Drink: Specific dishes, ingredients, simple recipes, expressing opinions about food, restaurant interactions, dietary needs.",
+        "Shopping: Clothing, accessories, electronics, gifts; discussing quality, prices, sizes, colors; making complaints or returns.",
+        "Travel & Transport: Planning trips, types of accommodation, booking tickets, asking for/giving detailed directions, at the airport/station, describing travel experiences.",
+        "Health & Body: Describing symptoms, common illnesses, visiting a doctor/dentist/pharmacy, parts of the body, giving simple health advice.",
+        "Work & Study: Describing job/studies in more detail, workplace/school environment, daily tasks and responsibilities, future career plans (simple).",
+        "Leisure & Hobbies: Specific activities, equipment, expressing opinions, making arrangements, discussing past and future leisure activities.",
+        "Nature & Weather: Describing landscapes, flora, fauna, weather conditions and forecasts in more detail, discussing climate.",
+        "Feelings & Emotions: Expressing a wider range of feelings and emotions (joy, sadness, anger, fear, surprise, hope, disappointment).",
+        "Public Services & Daily Life: Using public services, making phone calls, dealing with simple administrative tasks."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A1/A0: Vowel sounds (oral/nasal), consonants, stress, basic intonation.",
+        "Intonation patterns in longer sentences and different types of clauses.",
+        "Pronunciation of verb endings in Pretérito Perfeito, Imperfeito, Futuro.",
+        "Distinguishing sounds that can be confused (e.g., 's' vs 'z' between vowels, 'x' with its various sounds).",
+        "Continued practice with nasal vowels and diphthongs.",
+        "Awareness of EP vs BP pronunciation differences (e.g., unstressed 'e' and 'o', pronunciation of 'd' and 't' before 'i' or final 'e' in BP)."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear, standard speech on familiar everyday topics.",
+        "Follow short, simple narratives or descriptions about familiar subjects.",
+        "Identify specific information in public announcements, simple news reports, or weather forecasts if the language is relatively clear."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short, simple personal letters, emails, or blog posts on familiar topics, including descriptions of events and feelings.",
+        "Find specific, predictable information in everyday materials like brochures, event programs, classified ads, and simple instructions.",
+        "Understand the gist and some details of short, simplified newspaper articles or website texts on familiar subjects."
+      ],
+      "spoken_interaction_skills": [
+        "Engage in conversations on familiar topics, exchanging information, opinions, feelings, and preferences.",
+        "Handle most common everyday situations when travelling or shopping.",
+        "Make and respond to invitations, suggestions, apologies, and thanks with more confidence and detail.",
+        "Discuss past events and future plans with others, providing explanations and reasons.",
+        "Express agreement and disagreement politely, giving simple justifications."
+      ],
+      "spoken_production_skills": [
+        "Give simple, connected descriptions of people, places, objects, events, or personal experiences.",
+        "Narrate a simple story or recount events in sequence, using appropriate past tenses (Pretérito Perfeito and Imperfeito) and linking words.",
+        "Talk about future plans, intentions, and predictions using appropriate verb forms.",
+        "Express opinions, likes/dislikes, and preferences with reasons and simple justifications."
+      ],
+      "written_interaction_skills": [
+        "Write simple personal emails, messages, or forum posts to exchange information, make arrangements, invite, thank, apologize, or express feelings."
+      ],
+      "written_production_skills": [
+        "Write short, connected texts on familiar topics (e.g., describing a memorable holiday, a person one admires, a typical weekend).",
+        "Write a simple personal letter or email giving news, describing experiences, or sharing plans.",
+        "Write short instructions, simple reports on familiar procedures, or summaries of simple texts."
+      ],
+      "cultural_competence_topics": [
+        "Understanding the appropriate use of 'tu' vs. 'você' in different regions and social contexts.",
+        "Social customs related to meals, invitations, and celebrations in Portugal and Brazil.",
+        "Awareness of important cultural traditions, festivals (e.g., Festas Juninas in Brazil, Santos Populares in Portugal).",
+        "Introduction to famous figures in Lusophone music, literature, or sports.",
+        "Common gestures and their meanings (being aware of regional differences).",
+        "Diversity within the Lusophone world (Portugal, Brazil, African Portuguese-speaking countries - basic differences)."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice distinguishing and using Pretérito Perfeito vs. Imperfeito for past narrations.",
+        "Read graded readers or simplified authentic texts (news, blogs) in Portuguese.",
+        "Watch Portuguese-language TV shows, series, or films with subtitles, paying attention to dialogues.",
+        "Try to write short diary entries, blog posts, or summaries in Portuguese, focusing on connecting ideas.",
+        "Engage in conversations with native speakers or language partners, trying to use a wider range of vocabulary and grammar."
+      ]
+    },
+    {
+      "level_code": "B1",
+      "level_name": "Navegador(a) Experiente (Experienced Navigator)",
+      "approximate_vocabulary_size": "approx. 2000-2500 words",
+      "learning_outcomes": [
+        "Understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc., in Portuguese.",
+        "Deal with most situations likely to arise whilst travelling in a Portuguese-speaking area.",
+        "Produce simple connected text on topics which are familiar or of personal interest in Portuguese.",
+        "Describe experiences and events, dreams, hopes & ambitions and briefly give reasons and explanations for opinions and plans in Portuguese."
+      ],
+      "language_focus_topics": [
+        "Review of A2 grammar: All past tenses, Future, Conditional, object pronouns, reflexive verbs.",
+        "Subjunctive Mood: Present Subjunctive (Presente do Conjuntivo/Subjuntivo) - formation and use after expressions of will, emotion, doubt, uncertainty, necessity (é preciso que, espero que). Use with conjunctions like 'para que', 'antes que', 'quando' (for future actions).",
+        "Imperative Mood (Imperativo): Affirmative and negative commands for all persons (regular and common irregulars).",
+        "Perfect Tenses: Pretérito Mais-que-Perfeito Composto (Pluperfect Indicative - tinha falado) for actions preceding another past action. Futuro Perfeito (Future Perfect - terei falado). Condicional Perfeito (Conditional Perfect - teria falado).",
+        "Personal Infinitive (Infinitivo Pessoal): Formation and use (e.g., para eu fazer, antes de tu ires).",
+        "Passive Voice (Voz Passiva): 'ser' + past participle; passive 'se' constructions.",
+        "Reported Speech (Discurso Indireto): Reporting statements, questions, and commands in present and past contexts (basic tense shifts).",
+        "Relative Pronouns: 'que', 'quem', 'onde', 'cujo/a/os/as'.",
+        "Conjunctions: Wider range of subordinating conjunctions (embora, enquanto, logo que, desde que, caso).",
+        "Por vs Para: Further distinctions and more complex uses."
+      ],
+      "vocabulary_topics": [
+        "Work and career: Job descriptions, responsibilities, work environment, applying for jobs, interviews, discussing career paths and ambitions.",
+        "Education: Educational systems, academic subjects, university life, research, debates, presentations.",
+        "Travel and tourism: Planning complex trips, cultural tourism, adventure travel, independent travel, dealing with problems, sharing detailed travelogues, discussing cultural differences.",
+        "Media and news: Understanding and discussing news articles, TV/radio news, opinion pieces on current events and social issues.",
+        "Culture and arts: Discussing various genres of films, books, music, theatre; analyzing themes, characters, styles; famous artists and their works from Lusophone countries.",
+        "Health and lifestyle: Discussing health problems, treatments, prevention, mental well-being, fitness routines, nutrition, public health issues.",
+        "Social and environmental issues: Discussing pollution, climate change, social justice, human rights, volunteering, community projects, global issues.",
+        "Personal relationships: Describing friendships, family dynamics, romantic relationships, conflicts, and resolutions with more depth.",
+        "Technology and communication: Discussing the impact of technology, social media, digital ethics, online communication, and innovation.",
+        "Abstract concepts: Expressing ideas related to society, politics, ethics, personal values, beliefs, and aspirations."
+      ],
+      "pronunciation_focus_topics": [
+        "Review of A2 pronunciation: intonation, rhythm, connected speech, regional variations.",
+        "Intonation in complex sentences, including those with subjunctive and conditional clauses, and reported speech, to convey attitude.",
+        "Nuances of EP vs BP pronunciation (e.g., vowel qualities in unstressed syllables, pronunciation of final 's', 'l').",
+        "Maintaining fluency and clear articulation in longer stretches of speech and discussions.",
+        "Stress and intonation in idiomatic expressions and fixed phrases."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear standard speech on familiar matters regularly encountered in work, school, leisure, etc.",
+        "Understand the main points of many radio or TV programs on current affairs or topics of personal or professional interest when the delivery is relatively clear and at a normal pace.",
+        "Follow a lecture or talk on a familiar topic if the presentation is straightforward and clearly structured."
+      ],
+      "reading_comprehension_skills": [
+        "Understand texts that consist mainly of high-frequency everyday or job-related language, as well as some specialized vocabulary in familiar contexts.",
+        "Understand the description of events, feelings, wishes, and opinions in personal letters, emails, and online discussions.",
+        "Read straightforward factual texts, articles, and interviews on topics of personal or professional interest with a good level of comprehension."
+      ],
+      "spoken_interaction_skills": [
+        "Enter unprepared into conversation on topics that are familiar, of personal interest, or pertinent to everyday life with relative ease.",
+        "Deal with most situations likely to arise whilst travelling in a Portuguese-speaking area (e.g., transport, accommodation, shopping, health, emergencies, making complaints).",
+        "Express and sustain personal opinions, providing explanations, arguments, and comments in a clear and coherent manner.",
+        "Participate actively in discussions on familiar topics, making points clearly, responding to others' views, asking for clarification, and politely disagreeing."
+      ],
+      "spoken_production_skills": [
+        "Produce simple connected text on topics which are familiar or of personal interest, linking ideas with appropriate connectors.",
+        "Narrate a story, describe an experience, or relate the plot of a book or film, detailing reactions, impressions, and main events with some elaboration.",
+        "Describe dreams, hopes, ambitions, and hypothetical situations, giving reasons and explanations.",
+        "Explain plans and arrangements, justifying choices and decisions with some detail and foresight."
+      ],
+      "written_interaction_skills": [
+        "Write personal letters, emails, or messages describing experiences, feelings, events, and opinions in some detail, asking for and giving news or advice.",
+        "Respond to formal or informal written communications, providing relevant information, expressing views, or making requests clearly and appropriately."
+      ],
+      "written_production_skills": [
+        "Write clear, connected texts on a range of familiar subjects or topics of personal interest (e.g., an account of a trip, a film review, a description of a cultural tradition).",
+        "Write descriptions of real or imaginary events and experiences, providing details, personal reflections, and structuring the narrative.",
+        "Write a short formal letter or email for practical purposes (e.g., a letter of inquiry, a request for information, a simple job application, a letter of complaint).",
+        "Express personal viewpoints and arguments on familiar topics in a structured text (e.g., a blog post, a short essay with clear paragraphs and supporting points)."
+      ],
+      "cultural_competence_topics": [
+        "Understanding different levels of formality and politeness in various social and professional contexts across the Lusophone world.",
+        "Knowledge of important historical and cultural figures from Portugal, Brazil, and African Lusophone countries and their contributions.",
+        "Awareness of diverse cultural traditions, customs, and social norms (e.g., family life, work culture, celebrations).",
+        "Social etiquette in more formal settings, such as business meetings or academic environments.",
+        "Understanding the role of regional identities, languages (creoles), and dialects within Portuguese-speaking nations.",
+        "Awareness of current events, common topics of discussion, and social sensitivities in the Lusophone world through media."
+      ],
+      "learning_strategies_suggestions": [
+        "Read authentic Portuguese-language materials regularly (news articles, short stories, blogs, magazine articles from different Lusophone countries).",
+        "Practice using the subjunctive mood in various clauses and contexts through targeted exercises and real communication.",
+        "Watch Portuguese-language films, TV series, or documentaries (from both Portugal and Brazil) with Portuguese subtitles to improve listening comprehension and exposure to natural speech patterns and cultural nuances.",
+        "Engage in more complex discussions with native speakers or language partners, focusing on expressing and defending opinions, understanding different viewpoints, and using discourse markers.",
+        "Write longer, structured texts like essays, reviews, or detailed personal narratives, and seek feedback on grammar, vocabulary, coherence, and style."
+      ]
+    },
+    {
+      "level_code": "B2",
+      "level_name": "Diplomata Cultural (Cultural Diplomat)",
+      "approximate_vocabulary_size": "approx. 4000-6000 words",
+      "learning_outcomes": [
+        "Understand the main ideas of complex texts on both concrete and abstract topics in Portuguese, including technical discussions in his/her field of specialisation.",
+        "Interact with a degree of fluency and spontaneity that makes regular interaction with native Portuguese speakers quite possible without strain for either party.",
+        "Produce clear, detailed text on a wide range of subjects in Portuguese, expressing viewpoints and arguments effectively.",
+        "Explain a viewpoint on a topical issue in Portuguese, giving the advantages and disadvantages of various options, and supporting arguments with relevant evidence."
+      ],
+      "language_focus_topics": [
+        "Comprehensive review and nuanced application of all indicative and subjunctive tenses, including perfect and pluperfect forms.",
+        "Subjunctive Mood: All tenses (Presente, Imperfeito, Futuro, Pretérito Perfeito, Pretérito Mais-que-Perfeito do Conjuntivo/Subjuntivo). All uses in subordinate clauses and independent clauses.",
+        "Conditional Mood: Simple and Perfect, including use in complex hypothetical sentences and expressing probability or conjecture in the past.",
+        "If-Clauses (Orações Condicionais): All types, including mixed conditionals and variations with different conjunctions.",
+        "Passive Voice: All tenses of 'ser' + past participle; passive 'se' and impersonal 'se' constructions with a wider range of verbs and more complex structures. Agent of the passive.",
+        "Reported Speech (Discurso Indireto): Reporting complex statements, questions, commands, suggestions, and exclamations, with accurate tense shifts, changes in pronouns/adverbs, and choice of reporting verbs.",
+        "Relative Clauses: All relative pronouns and adverbs, including 'o qual', 'cujo', 'quanto', and prepositional constructions with relatives.",
+        "Verbal Periphrasis: Mastery of a wide range of periphrases to express aspect, modality, and other nuances.",
+        "Conjunctions and Connectors: Advanced discourse markers for structuring complex arguments, debates, formal writing, and ensuring cohesion and coherence.",
+        "Prepositions: Complex uses, idiomatic prepositional phrases, verbs and adjectives requiring specific prepositions.",
+        "Word order: Stylistic variations for emphasis and focus."
+      ],
+      "vocabulary_topics": [
+        "Abstract concepts: In-depth discussion of societal issues, politics, economics, environment, education, culture, arts, science, technology, philosophy, ethics, with specialized terminology.",
+        "Expressing nuanced opinions, arguments, justifications, counter-arguments, hypotheses, speculations, evaluations, and critiques.",
+        "Vocabulary for formal discussions, debates, academic presentations, professional reports, and official correspondence.",
+        "A wide range of idioms, proverbs, set expressions, and colloquialisms common in contemporary Portuguese across different regions and registers.",
+        "Understanding and using different registers of Portuguese (formal, neutral, informal, colloquial, technical, academic, literary) with appropriateness and precision.",
+        "Word families and word formation: complex prefixes, suffixes, compounding, derivation for active vocabulary expansion and understanding sophisticated words.",
+        "Synonyms, antonyms, and paronyms for precise meaning, stylistic variation, register sensitivity, and avoiding repetition effectively.",
+        "Collocations: a broad repertoire of common and less common collocations, including those specific to particular fields, genres, or stylistic effects.",
+        "Vocabulary related to one's field of specialization or academic interest, including advanced terminology, concepts, and theoretical frameworks."
+      ],
+      "pronunciation_focus_topics": [
+        "Fine-tuning intonation for expressing complex attitudes, emotions, and pragmatic functions (e.g., irony, sarcasm, diplomacy, persuasion, enthusiasm, doubt).",
+        "Mastery of connected speech phenomena (assimilation, elision, linking, reduction of unstressed vowels) for natural, fluent, and rapid delivery.",
+        "Recognition and understanding of a wider range of regional Portuguese accents (European, Brazilian, African) and sociolects, and their key phonetic and prosodic features.",
+        "Maintaining clear articulation, appropriate prosody, and natural rhythm in extended speech, formal presentations, debates, and fast-paced conversations."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech and lectures in Portuguese and follow even complex lines of argument, even on unfamiliar topics if clear.",
+        "Understand most TV news, current affairs programs, documentaries, interviews, and talk shows in Portuguese, including different accents.",
+        "Understand the majority of Portuguese-language films and plays in standard and some non-standard dialects, including those with idiomatic language, cultural references, or rapid dialogue."
+      ],
+      "reading_comprehension_skills": [
+        "Read articles and reports concerned with contemporary problems in which Portuguese-speaking writers adopt particular stances or viewpoints, identifying attitude, tone, bias, and implicit meanings.",
+        "Understand contemporary Portuguese and Lusophone literary prose, drama, and some poetry, appreciating stylistic features, cultural context, and literary devices.",
+        "Understand specialized articles or texts related to one's field of interest or study with excellent comprehension of details, arguments, and implications."
+      ],
+      "spoken_interaction_skills": [
+        "Interact with a high degree of fluency, spontaneity, and accuracy, making regular interaction with native Portuguese speakers comfortable, natural, and engaging for both parties.",
+        "Take an active and constructive part in discussions on a wide range of familiar and unfamiliar or abstract topics, accounting for and sustaining viewpoints effectively, persuasively, and with nuance.",
+        "Handle linguistic aspects of negotiation, problem-solving, expressing complaints or compliments persuasively, managing disagreements constructively, and building consensus in various contexts."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed descriptions and arguments on a wide range of complex subjects, structuring information logically, effectively, and often engagingly.",
+        "Explain a viewpoint on a topical issue, outlining advantages and disadvantages of various options, supporting arguments with relevant evidence and examples, and addressing counter-arguments with confidence.",
+        "Develop an argument systematically and persuasively, structuring information logically, highlighting significant points, and using appropriate linking devices and rhetorical strategies."
+      ],
+      "written_interaction_skills": [
+        "Write clear, detailed, well-structured, and stylistically appropriate letters, emails, or reports on complex subjects, conveying information, ideas, or opinions effectively, persuasively, and adapting style and register to the recipient and purpose.",
+        "Respond to complex inquiries, arguments, proposals, or complaints in writing, addressing all points comprehensively, persuasively, diplomatically, and with appropriate formality."
+      ],
+      "written_production_skills": [
+        "Write clear, detailed texts (essays, reports, articles, formal letters, proposals) on a wide range of subjects relevant to personal, academic, or professional interests, demonstrating good control of structure, argumentation, and style.",
+        "Summarize information from different spoken and written sources, evaluating and synthesizing arguments coherently, critically, and with appropriate citation.",
+        "Write reviews of films, books, cultural events, or academic works, expressing well-justified opinions, critical evaluations, and insightful analysis.",
+        "Develop a reasoned and well-supported argument in an essay or report, presenting different viewpoints, analyzing them critically, and drawing logical, insightful, and well-substantiated conclusions."
+      ],
+      "cultural_competence_topics": [
+        "Deeper understanding of the societies, histories, values, and contemporary issues of various Portuguese-speaking countries (Portugal, Brazil, Angola, Mozambique, etc.).",
+        "Ability to understand, appreciate, and discuss cultural references, humor, irony, satire, and allusions in Portuguese-language media, literature, and conversation from diverse Lusophone contexts.",
+        "Nuances of social and professional etiquette in diverse contexts across the Lusophone world, including business, academic, and formal social settings.",
+        "Understanding different perspectives within Portuguese-speaking societies (e.g., regionalism, political views, social class, post-colonial issues, indigenous cultures) and current cultural trends and debates.",
+        "Knowledge of significant historical events, cultural movements, and their impact on the identity and contemporary life of Lusophone nations."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage regularly with a variety of authentic Portuguese-language media from different Lusophone countries (news, analytical articles and programs, podcasts, films without subtitles, contemporary literature, academic texts).",
+        "Participate actively in debates, discussions, or presentations in Portuguese, focusing on fluency, accuracy, complex argumentation, appropriate register, and persuasive techniques.",
+        "Write analytical essays, reports, research papers (basic), or summaries of complex texts in Portuguese, focusing on structure, cohesion, critical analysis, and appropriate academic or professional style.",
+        "Seek detailed feedback on writing and speaking from native speakers or advanced instructors, focusing on idiomaticity, stylistic appropriateness, rhetorical effectiveness, and nuance.",
+        "Explore specific areas of interest (e.g., a particular literary genre, a historical period, the culture of a specific Lusophone country) in depth through Portuguese-language resources and research."
+      ]
+    },
+    {
+      "level_code": "C1",
+      "level_name": "Mestre da Lusofonia (Master of Lusophony)",
+      "approximate_vocabulary_size": "approx. 8000-10000 words",
+      "learning_outcomes": [
+        "Can understand a wide range of demanding, longer texts in Portuguese, and recognise implicit meaning, irony, and stylistic nuances with ease.",
+        "Can express him/herself fluently, spontaneously, and precisely in Portuguese without much obvious searching for expressions, using complex sentence structures and varied vocabulary with mastery.",
+        "Can use language flexibly, effectively, and creatively for social, academic, and professional purposes in Portuguese, adapting style and register with skill and sophistication.",
+        "Can produce clear, well-structured, detailed, and often persuasive text on complex subjects in Portuguese, showing controlled use of organisational patterns, connectors, cohesive devices, and rhetorical strategies."
+      ],
+      "language_focus_topics": [
+        "Mastery of the Portuguese grammatical system, including all verb aspects, tenses, moods, voices, and intricate case uses (with pronouns and prepositions), and their stylistic variations.",
+        "Sophisticated and flexible use of non-finite verb forms (infinitives - personal and impersonal, gerunds, participles) and verbal periphrases for concise, nuanced, and stylistically varied expression in formal, academic, and literary contexts.",
+        "Advanced use and understanding of impersonal and passive constructions, and their stylistic and pragmatic implications across different genres and registers.",
+        "Mastery of complex sentence syntax, including all types of subordinate clauses, non-finite constructions, and their interplay for logical coherence, rhetorical effect, and stylistic elegance.",
+        "Stylistic use of word order, inversion, ellipsis, cleft sentences, and other rhetorical figures for emphasis, nuance, focus, and artistic or persuasive effect.",
+        "Understanding and occasional use of archaic, literary, or highly formal grammatical forms for specific stylistic purposes, characterization, or intertextual reference.",
+        "Deep understanding of the interaction between morphology, syntax, semantics, and pragmatics in Portuguese, including historical linguistic awareness.",
+        "Advanced use of a wide range of discourse markers, conjunctions, and cohesive devices for structuring sophisticated arguments, narratives, academic texts, and formal speeches with clarity, elegance, and persuasive power."
+      ],
+      "vocabulary_topics": [
+        "Extensive vocabulary covering abstract, specialized, technical, and culturally specific topics across a wide range of academic, professional, literary, and artistic domains in the Lusophone world.",
+        "Nuanced understanding and precise use of synonyms, antonyms, hyponyms, hypernyms, and related lexical items to convey the finest shades of meaning, stylistic effects, and register appropriateness with sophistication.",
+        "Rich repertoire of idiomatic expressions, proverbs, aphorisms, colloquialisms, regionalisms (from various Lusophone countries), and cultural allusions, with a deep understanding of their appropriate context, register, connotations, historical origins, and pragmatic functions.",
+        "Vocabulary for advanced academic and professional purposes, including specialized terminology for research, critical analysis, policy-making, legal discourse, scientific writing, and high-level international communication.",
+        "Advanced word formation: understanding etymology, roots (including Latin, Greek, Arabic, and indigenous influences), and complex affixation to deduce meaning, expand vocabulary actively, and appreciate linguistic creativity and evolution within Portuguese.",
+        "Ability to use language creatively, including sophisticated wordplay, and to understand and produce subtle humor, satire, and irony effectively.",
+        "Differentiating and appropriately using various stylistic layers of vocabulary (neutral, formal, informal, literary, technical, historical, poetic, slang from different regions) with precision, cultural sensitivity, and stylistic flair."
+      ],
+      "pronunciation_focus_topics": [
+        "Near-native pronunciation, intonation, rhythm, and stress across all speech styles and registers, with high accuracy, naturalness, expressiveness, and adaptability to different Lusophone accents.",
+        "Using prosody effectively, subtly, and often artfully to convey complex meanings, attitudes, irony, emotions, and pragmatic functions in a manner appropriate to native-speaker norms and specific communicative goals.",
+        "Understanding and adapting to a wide range of regional Portuguese accents (European, Brazilian, various African, Asian) and sociolects, recognizing fine phonetic distinctions and their social or regional implications.",
+        "Maintaining clarity, precision, and natural flow in rapid, complex, or formal speech, including public speaking, academic presentations, artistic performances, and challenging interactive situations, with the ability to modulate delivery for effect."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech in Portuguese even when it is not clearly structured, contains diverse regional accents, rapid colloquialisms, or when relationships are only implied and not explicitly signaled.",
+        "Understand a wide range of television programs, films, plays, public speeches, academic lectures, and complex discussions in Portuguese without too much effort, including those with significant regional variations, rapid dialogue, complex linguistic and cultural content, or specialized jargon.",
+        "Understand complex technical or academic discussions, even on unfamiliar or highly specialized topics, recognizing speaker's stance, underlying assumptions, nuanced arguments, and rhetorical strategies.",
+        "Recognize, understand, and appreciate a wide range of idiomatic expressions, colloquialisms, cultural references, stylistic variations, and rhetorical devices in spoken Portuguese from various Lusophone contexts."
+      ],
+      "reading_comprehension_skills": [
+        "Understand long and complex factual, academic, and literary texts in Portuguese, appreciating distinctions of style, register, authorial intent, narrative technique, and literary or rhetorical technique from diverse Lusophone traditions.",
+        "Understand specialized articles, academic papers, official documents, legal texts, and longer technical instructions, even outside one's own field of expertise, grasping fine details, implications, and critical perspectives.",
+        "Recognize and interpret implicit meaning, writer's stance, irony, satire, persuasive techniques, intertextuality, and rhetorical strategies in diverse and challenging text types, including classical and modern literature from various Portuguese-speaking regions and historical periods."
+      ],
+      "spoken_interaction_skills": [
+        "Express him/herself fluently, spontaneously, accurately, appropriately, and often eloquently or persuasively, using complex language, varied structures, and nuanced vocabulary without obvious searching for expressions.",
+        "Use language flexibly, effectively, creatively, and often persuasively for all social, academic, and professional purposes, adapting register, style, and tone to any situation and audience with ease, precision, cultural tact, and strategic awareness.",
+        "Formulate ideas and opinions with precision, depth, originality, and critical insight, structure arguments logically and persuasively, and relate contributions skilfully, constructively, and often insightfully to those of other speakers in discussions, debates, and formal meetings.",
+        "Mediate, negotiate, persuade, and lead discussions effectively, diplomatically, and strategically in complex or sensitive situations, demonstrating strong intercultural competence, communication skills, and leadership qualities."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed, well-structured, engaging, persuasive, and often inspiring or memorable descriptions or arguments on complex subjects, integrating sub-themes, developing particular points coherently and persuasively, and rounding off with an appropriate, impactful, and thought-provoking conclusion.",
+        "Give clear, well-structured, compelling, and engaging presentations or speeches on complex subjects, expanding and supporting ideas with sophisticated reasoning, relevant evidence, nuanced analysis, appropriate rhetorical devices, and tailored delivery to the audience.",
+        "Adapt style, register, and delivery to any audience and communicative purpose with sophistication, effectiveness, and often charisma, creativity, or artistic flair."
+      ],
+      "written_interaction_skills": [
+        "Write clear, well-structured, stylistically sophisticated, and contextually appropriate letters, emails, reports, proposals, or other documents on complex subjects, adapting style, tone, and register to the intended reader and purpose with precision, cultural appropriateness, persuasive skill, and often a distinctive and effective authorial voice.",
+        "Respond effectively, persuasively, diplomatically, and comprehensively to complex written communications, addressing all nuances, anticipating counter-arguments, and achieving desired strategic, academic, or professional outcomes."
+      ],
+      "written_production_skills": [
+        "Write clear, well-structured, detailed, engaging, and stylistically refined texts on complex subjects in various genres (essays, research papers, articles, critiques, official reports, literary analyses, creative writing), demonstrating mastery of appropriate academic, professional, or literary conventions and often contributing original thought or artistic merit.",
+        "Write insightful summaries, analyses, critical reviews, or syntheses of professional, academic, or literary works, demonstrating advanced critical thinking, analytical skills, original perspectives, deep subject matter understanding, and scholarly rigor.",
+        "Show controlled and sophisticated use of organisational patterns, connectors, and cohesive devices to produce coherent, elegant, impactful, and potentially publishable text at a high intellectual or artistic level.",
+        "Employ a wide range of stylistic and rhetorical devices appropriate to the text type and communicative goal, demonstrating a mature command of register, style, linguistic creativity, and persuasive power."
+      ],
+      "cultural_competence_topics": [
+        "In-depth, critical, and comparative understanding of contemporary societies in the Lusophone world (Portugal, Brazil, African Lusophone countries, etc.), including complex social, political, economic, and ethical issues, their historical roots, regional variations, and global interconnections.",
+        "Critical appreciation, analysis, and interpretation of Portuguese-language literature (from various periods and genres), cinema, music, arts, philosophy, and intellectual traditions, understanding their context, significance, and influence.",
+        "Ability to interpret, discuss, critique, and potentially create cultural subtext, humor, irony, satire, allusions, and socio-cultural references with profound insight, cultural fluency, and often originality.",
+        "Understanding of diverse cultural perspectives, regional identities, linguistic variations (dialects, sociolects, creoles), and social dynamics within the Lusophone world, and their historical development and contemporary relevance."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage with a wide variety of highly authentic, complex, and challenging Portuguese-language texts and media from diverse fields and Lusophone regions, including academic research, classical and contemporary literature, specialized professional publications, and avant-garde artistic expressions.",
+        "Practice writing different genres of complex and sophisticated texts, focusing on stylistic mastery, persuasive argumentation, rhetorical effectiveness, original thought, and potential for publication or significant impact.",
+        "Participate actively and confidently in high-level academic, professional, or public discussions, presentations, and debates in Portuguese, aiming for precision, eloquence, leadership, and intellectual contribution.",
+        "Focus on advanced stylistic aspects of the Portuguese language, including register, tone, rhetorical devices, nuanced vocabulary, complex syntax, and comparative analysis with other Romance languages or linguistic theory.",
+        "Conduct independent research, undertake significant projects, or engage in creative work requiring advanced analytical, communicative, critical, and innovative use of the Portuguese language, potentially contributing to Lusophone studies or arts."
+      ]
+    },
+    {
+      "level_code": "C2",
+      "level_name": "Sábio/a Universal (Universal Sage)",
+      "approximate_vocabulary_size": "approx. 15000+ words",
+      "learning_outcomes": [
+        "Can understand with ease virtually everything heard or read in Portuguese, including diverse dialectal variations, highly colloquial speech, specialized jargon, and rapid, nuanced discourse.",
+        "Can summarise information from different spoken and written Portuguese sources, reconstructing arguments and accounts in a coherent, nuanced, critical, and often original and insightful presentation.",
+        "Can express him/herself spontaneously, very fluently, precisely, eloquently, and creatively in Portuguese, differentiating the finest shades of meaning even in the most complex, abstract, or sensitive situations, often with wit or rhetorical skill.",
+        "Can use Portuguese effectively, appropriately, artistically, and often authoritatively for all social, academic, and professional purposes with the highest degree of precision, style, cultural attunement, intellectual depth, and communicative impact."
+      ],
+      "language_focus_topics": [
+        "Complete and intuitive mastery of all Portuguese grammatical structures, including rare, complex, archaic, literary, and dialectal forms, and their stylistic, pragmatic, and historical implications, allowing for creative and unconventional usage.",
+        "Sophisticated, flexible, creative, and often innovative use of syntax for optimal stylistic effect, emphasis, nuance, and rhetorical impact across all genres and communicative contexts, including manipulation of standard structures for artistic or persuasive ends.",
+        "Full command of all moods (Indicative, Subjunctive, Conditional, Imperative, Personal Infinitive) and their subtle applications in expressing complex hypothetical reasoning, subjective stance, politeness, emotional coloring, persuasive intent, and literary effects.",
+        "Nuanced understanding and masterful application of aspectual distinctions, the interplay of tense, aspect, and mood, and their role in complex discourse, narrative structure, and conveying subtle temporal or psychological perspectives.",
+        "Advanced, flexible, and often innovative use of nominalization, participial constructions (including absolute constructions), and infinitive/gerund clauses for sophisticated, concise, elegant, and impactful expression, demonstrating a deep understanding of syntactic possibilities.",
+        "Complete and intuitive control over a vast range of discourse markers, conjunctions, and cohesive devices to create highly articulate, fluent, logically structured, stylistically varied, and rhetorically powerful texts and speech of any genre and complexity, often with elegance and originality.",
+        "Understanding, appreciation, critical analysis, and creative or scholarly use of a wide array of rhetorical figures and stylistic devices common in Portuguese literature, formal discourse, journalism, oratory, folklore, and everyday wit, potentially inventing new forms.",
+        "Ability to analyze, deconstruct, explain, critique, and manipulate the most complex grammatical structures encountered in any authentic Portuguese text or discourse with expert precision, linguistic insight, often pedagogical skill, and comparative linguistic awareness."
+      ],
+      "vocabulary_topics": [
+        "Extensive, profound, dynamic, and often specialized vocabulary that equals or surpasses that of an educated native Portuguese speaker, including very low-frequency words, cutting-edge terminology across diverse academic and professional fields, neologisms, and historical/archaic lexis relevant to cultural heritage and literary scholarship.",
+        "Full command of idiomatic language: idioms, proverbs, aphorisms, colloquialisms, regionalisms (from various Lusophone countries), cultural sayings, and fixed expressions, with a deep understanding of their origins, evolution, connotations, regional variations, and appropriate, nuanced, and often creative or humorous usage in any context.",
+        "Ability to understand, use, and differentiate the finest shades of meaning, connotations, and register for virtually any lexical item, including formal, literary, specialized, historical, archaic, dialectal, and newly coined vocabulary, often with etymological awareness.",
+        "Mastery of word formation processes, including understanding of Latin, Greek, Arabic, African, and indigenous influences, and the principles of Portuguese morphology, to interpret, analyze, and creatively use complex words and coin new terms where appropriate and effective.",
+        "Vocabulary for discussing any abstract, philosophical, scientific, literary, artistic, and highly specialized topic with precision, depth, eloquence, originality, authority, and often interdisciplinary insight and critical perspective.",
+        "Appreciation and deep understanding of etymology, semantic evolution, sociolinguistic variation, lexicographical principles, and the history of the Portuguese language and its global varieties.",
+        "Recognition, understanding, critical assessment, and appropriate use or interpretation of a wide range of regionalisms, dialectal features, and sociolects within the Lusophone world, potentially contributing to their study, preservation, or creative use."
+      ],
+      "pronunciation_focus_topics": [
+        "Indistinguishable-from-native or exceptionally high-level native-like pronunciation, intonation, stress, and rhythm across all registers and styles of Portuguese, with effortless control, naturalness, and often expressive artistry or regional authenticity (e.g., mastering nuances of EP or BP).",
+        "Ability to subtly, effectively, creatively, and authentically vary prosody to convey complex attitudes, emotions, irony, humor, sarcasm, and other pragmatic meanings with native-like precision, naturalness, and often performative or rhetorical skill.",
+        "Effortless and natural handling of all aspects of connected speech, even at very rapid native speed, in challenging acoustic conditions, or with overlapping, highly colloquial, or diverse dialectal speech.",
+        "Ability to understand, analyze, and, if desired, accurately reproduce, playfully imitate, or teach various regional Portuguese accents and sociolectal variations with high fidelity, cultural awareness, linguistic insight, and phonetic precision."
+      ],
+      "listening_comprehension_skills": [
+        "Understand any kind of spoken Portuguese, whether live or broadcast, even when delivered at fast native speed, with significant background noise, multiple speakers, strong dialectal variations, highly specialized content, or on unfamiliar, abstract, or highly complex topics, including implied or unstated information.",
+        "Follow and critically evaluate complex interactions between multiple speakers in any setting, identifying subtle cues, implicit meanings, speaker intentions, interpersonal dynamics, cultural undertones, rhetorical strategies, and logical fallacies.",
+        "Appreciate and analyze stylistic nuances, register shifts, irony, humor, sarcasm, and implicit meaning in any spoken discourse, including culturally specific references, wordplay, advanced rhetoric, artistic performances, and historical recordings from across the Lusophone world."
+      ],
+      "reading_comprehension_skills": [
+        "Understand, critically interpret, and analyze all forms of written Portuguese, including highly abstract, structurally or linguistically complex texts such as legal codes, philosophical treatises, advanced scientific articles, historical documents, and literary works from various periods and genres (including classical, modern, contemporary, experimental, and dialectal literature from all Lusophone countries).",
+        "Appreciate and analyze fine distinctions of style, tone, authorial intent, narrative technique, literary or rhetorical devices, and intertextuality across all genres and historical periods.",
+        "Read and understand texts from different historical periods and diverse cultural contexts within the Portuguese-speaking world, including texts with significant linguistic, stylistic, conceptual, paleographic, or philological challenges."
+      ],
+      "spoken_interaction_skills": [
+        "Take part effortlessly, fluently, engagingly, persuasively, articulately, and often leadingly or inspiringly in any conversation, discussion, or debate, using idiomatic expressions, colloquialisms, and cultural references naturally, appropriately, creatively, humorously, or with rhetorical skill and intellectual depth.",
+        "Express him/herself with precision, eloquence, charisma, originality, and often profound insight, differentiating the finest shades of meaning, and reformulating ideas to overcome any communication difficulty smoothly, imperceptibly, effectively, and often by enhancing the discourse, leading it in new directions, or resolving complex issues.",
+        "Argue a complex case, negotiate, persuade, mediate, and lead discussions effectively, diplomatically, strategically, and often inspirationally in any formal or informal setting, adapting strategies dynamically and with exceptional cultural astuteness, intellectual agility, and ethical consideration.",
+        "Adapt language, style, and communicative strategies appropriately, dynamically, creatively, and masterfully to any audience, context, and purpose with complete flexibility, sophistication, impact, and often artistic or intellectual flair."
+      ],
+      "spoken_production_skills": [
+        "Present a clear, smoothly-flowing, well-structured, engaging, persuasive, and often memorable, inspiring, or transformative description, argument, or narrative in an appropriate and compelling style on any complex subject, demonstrating exceptional depth of thought, originality, critical insight, and intellectual command.",
+        "Develop points cohesively, logically, and persuasively, with masterful use of organizational patterns, a wide range of sophisticated cohesive devices, and impactful rhetorical strategies tailored to the audience and achieving specific communicative, persuasive, or artistic goals.",
+        "Deliver presentations, lectures, or speeches with clarity, precision, eloquence, charisma, and engaging style, adapting to audience feedback, managing questions adeptly, inspiring action or thought, demonstrating subject matter expertise, and potentially contributing new knowledge, perspectives, or artistic interpretations.",
+        "Use rhetorical devices effectively, creatively, strategically, and with significant impact, demonstrating exceptional oratorical skill and linguistic artistry."
+      ],
+      "written_interaction_skills": [
+        "Write any type of correspondence or document with complete command of style, tone, register, persuasive techniques, rhetorical strategies, and cultural nuances appropriate to the recipient, purpose, and context, achieving specific communicative and strategic goals with precision, impact, and often elegance, authority, or creative flair.",
+        "Engage in complex written discussions, collaborations, or negotiations, conveying nuanced ideas effectively, persuasively, diplomatically, strategically, and with intellectual rigor, potentially shaping outcomes, policy, or scholarly discourse."
+      ],
+      "written_production_skills": [
+        "Write clear, smoothly-flowing, complex, sophisticated, and potentially publishable or canonical texts (academic research, literary works, critical analyses, policy papers, journalistic investigations, philosophical treatises, legal arguments) in an appropriate and effective style, demonstrating originality, critical insight, intellectual depth, stylistic mastery, and potentially lasting value or influence.",
+        "Select and use a vast range of linguistic resources to express ideas precisely, persuasively, artistically, or humorously, with stylistic versatility, creativity, elegance, and often profound impact or originality.",
+        "Demonstrate mastery of organizational patterns, paragraphing, and cohesive devices to ensure clarity, coherence, logical flow, and aesthetic impact at the highest professional, academic, or literary level, potentially setting new standards or innovating within genres.",
+        "Write insightful summaries, critiques, or syntheses of complex information from multiple sources, adding original perspectives, critical analysis, demonstrating intellectual leadership, contributing to knowledge, offering creative reinterpretation, or formulating new theories."
+      ],
+      "cultural_competence_topics": [
+        "Profound, nuanced, critical, comparative, and often scholarly or creative understanding of the diversity of Lusophone cultures, societies, histories, arts, literatures, philosophical traditions, and intellectual movements, including their evolution, global impact, contemporary manifestations, and future possibilities.",
+        "Ability to function with complete ease, cultural sensitivity, adaptability, leadership, and often as a cultural authority, innovator, or bridge in any Portuguese-speaking environment or context, navigating complex social and intercultural dynamics with exceptional astuteness, empathy, and influence.",
+        "Capacity to act as a cultural interpreter, mediator, critic, scholar, or artist, explaining subtle and complex cultural nuances effectively and insightfully to diverse audiences, fostering deep cross-cultural understanding, contributing to cultural discourse, or creating new cultural forms within or about Lusophone cultures.",
+        "Deep and critical understanding of contemporary socio-political issues, cultural debates, intellectual currents, and historical narratives in Portugal, Brazil, African Lusophone countries, and other Portuguese-speaking communities, with the ability to engage critically, contribute meaningfully, offer original perspectives, influence discourse, and potentially shape policy or cultural production."
+      ],
+      "learning_strategies_suggestions": [
+        "Maintain and expand language proficiency through continuous, high-level intellectual, professional, or creative engagement with diverse and complex authentic Portuguese-language materials, interactions, and original production, often at a pioneering or leadership level.",
+        "Engage in original scholarly research, critical analysis, literary creation, translation, or policy development involving sophisticated Portuguese language and cultural understanding, potentially publishing or presenting work to international and Lusophone audiences.",
+        "Contribute to Portuguese-language publications, academic conferences, professional organizations, or cultural institutions at an expert, leadership, or creative innovator level, potentially shaping the future of the language, its study, or its artistic expression within the global Lusophone community.",
+        "Reflect critically on and refine personal language use for optimal effectiveness, stylistic innovation, persuasive power, and artistic expression, possibly through teaching at advanced university levels, mentoring future scholars/artists, or engaging in public intellectual discourse on Lusophone topics.",
+        "Explore highly specialized, interdisciplinary, or emerging areas of interest in great depth in Portuguese, contributing original research, analysis, creative work, or policy that advances knowledge, cultural expression, or societal well-being within the Lusophone world or globally through the medium of Portuguese."
+      ]
+    }
+  ]
+}
