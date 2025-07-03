@@ -6,7 +6,7 @@ import { pronounceText } from '../../../../utils/speechUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
 import { normalizeString } from '../../../../utils/stringUtils';
-import { useI18n } from '../../../../i18n/I18nContext'; // Assuming you use i18n for texts
+import { useI18n } from '../../../../i18n/I18nContext';
 
 const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
   const [currentImageItem, setCurrentImageItem] = useState(null);
@@ -19,7 +19,7 @@ const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
-  const { t } = useI18n(); // For internationalized strings
+  const { t } = useI18n();
 
   const correctAnswerText = currentImageItem ? currentImageItem.translations[language] : '';
   const latinizedCorrectAnswer = useLatinization(correctAnswerText, language);
@@ -67,9 +67,9 @@ const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
   };
 
   const checkAnswer = () => {
-    if (!currentImageItem || isRevealed || isAnsweredCorrectly) return;
+    if (!currentImageItem) return; // Should be handled by ExerciseControls disabled state
     const correctAnswer = currentImageItem.translations[language];
-    const itemId = `image_${currentImageItem.id || normalizeString(correctAnswer)}`;
+    // const itemId = `image_${currentImageItem.id || normalizeString(correctAnswer)}`; // Not used for feedback
     const isCorrect = normalizeString(userInput) === normalizeString(correctAnswer);
 
     if (isCorrect) {
@@ -77,33 +77,34 @@ const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
       setIsAnsweredCorrectly(true);
       setTimeout(() => {
         fetchAndSetNewImage();
-      }, 1500); // 1.5-second delay
+      }, 1500); 
     } else {
       setFeedback({ message: t('feedback.incorrectAnswerWas', `Incorrect. The correct answer is: ${latinizedCorrectAnswer || correctAnswer}`, { answer: latinizedCorrectAnswer || correctAnswer }), type: 'incorrect' });
     }
   };
 
   const showHint = () => {
-    if (!currentImageItem || isRevealed || isAnsweredCorrectly) return;
+    if (!currentImageItem) return; // Should be handled by ExerciseControls disabled state
     const correctAnswer = currentImageItem.translations[language];
     setFeedback({ message: t('feedback.hintStartsWith', `Hint: The word starts with '${getLatinizedText(correctAnswer[0], language)}'.`, { letter: getLatinizedText(correctAnswer[0], language) }), type: 'hint' });
   };
 
   const revealAnswer = () => {
-    if (!currentImageItem || isAnsweredCorrectly) return;
+    if (!currentImageItem) return; // Should be handled by ExerciseControls disabled state
     const correctAnswer = currentImageItem.translations[language];
-    const itemId = `image_${currentImageItem.id || normalizeString(correctAnswer)}`;
+    // const itemId = `image_${currentImageItem.id || normalizeString(correctAnswer)}`; // Not used for feedback
     setUserInput(correctAnswer);
     setFeedback({ message: t('feedback.answerIs', `The correct answer is: ${latinizedCorrectAnswer || correctAnswer}`, { answer: latinizedCorrectAnswer || correctAnswer }), type: 'info' });
     setIsRevealed(true);
+    setIsAnsweredCorrectly(true); // Revealing implies it's "correctly" completed
     setTimeout(() => {
         fetchAndSetNewImage();
-    }, 2000); // Slightly longer delay for revealed answers
+    }, 2000); 
   };
 
-  const handleNext = () => {
-    fetchAndSetNewImage();
-  };
+  // For this exercise, "Randomize" and "Next Exercise" do the same: get a new image.
+  const handleRandomizeOrNext = fetchAndSetNewImage;
+
 
   const handlePronounceCorrectAnswer = () => {
     if (currentImageItem && language) {
@@ -155,14 +156,18 @@ const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
       <FeedbackDisplay message={feedback.message} type={feedback.type} language={language} />
 
       <ExerciseControls
-        onCheckAnswer={!isRevealed && !isAnsweredCorrectly && currentImageItem ? checkAnswer : undefined}
-        onShowHint={!isRevealed && !isAnsweredCorrectly && currentImageItem ? showHint : undefined}
-        onRevealAnswer={!isRevealed && !isAnsweredCorrectly && currentImageItem ? revealAnswer : undefined}
-        onNextExercise={handleNext}
+        onCheckAnswer={checkAnswer}
+        onShowHint={showHint}
+        onRevealAnswer={revealAnswer}
+        onRandomize={handleRandomizeOrNext} // New image
+        onNextExercise={handleRandomizeOrNext} // New image
+        isAnswerCorrect={isAnsweredCorrectly}
+        isRevealed={isRevealed}
         config={{
-            showCheck: !isRevealed && !isAnsweredCorrectly && !!currentImageItem,
-            showHint: !isRevealed && !isAnsweredCorrectly && !!currentImageItem,
-            showReveal: !isRevealed && !isAnsweredCorrectly && !!currentImageItem,
+            showCheck: !!currentImageItem, // Show if there's an item
+            showHint: !!currentImageItem,  // Show if there's an item
+            showReveal: !!currentImageItem, // Show if there's an item
+            showRandomize: true,
             showNext: true,
         }}
       />
