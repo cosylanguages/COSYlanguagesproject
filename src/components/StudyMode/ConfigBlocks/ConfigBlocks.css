@@ -14,11 +14,23 @@
   gap: var(--spacing-xs, 0.25rem);
 }
 
-.form-group label {
-  font-weight: bold;
-  color: var(--color-text-secondary, #495057);
-  font-size: var(--font-size-sm, 0.875rem);
+/* .form-group label will now use .unified-label class applied directly in JS components */
+/* We can keep this for very specific overrides if .unified-label is too general, */
+/* but the goal is to rely on .unified-label. */
+.form-group .unified-label { /* If we need to tweak .unified-label specifically within .form-group */
+  font-size: var(--font-size-sm, 0.9rem); /* Example: Make labels slightly smaller in forms */
+  margin-bottom: var(--spacing-xs, 0.25rem); /* Reduce space below label in forms */
 }
+
+/* Styling for legend elements to match unified labels */
+.options-fieldset legend {
+  font-size: var(--font-size-base, 1rem); /* Match .unified-label size */
+  font-weight: 600; /* Match .unified-label weight */
+  color: var(--color-text-secondary, #6c757d); /* Match .unified-label color */
+  padding: 0 var(--spacing-xs, 0.25rem); 
+  margin-bottom: var(--spacing-sm, 0.5rem); /* Consistent spacing */
+}
+
 
 .form-group input[type="text"],
 .form-group textarea {
@@ -43,9 +55,11 @@
 }
 
 .input-hint {
-  font-size: var(--font-size-xs, 0.75rem);
-  color: var(--color-text-muted, #6c757d);
-  margin-top: var(--spacing-xxs, 0.125rem);
+  font-size: var(--font-size-sm, 0.85rem); /* Slightly larger for better readability */
+  color: var(--color-text-secondary, #5a6268); /* Consistent secondary text color */
+  margin-top: var(--spacing-xs, 0.3rem); /* Consistent small top margin */
+  line-height: 1.5; /* Improved line height */
+  font-style: italic; /* Italicize hints for distinction */
 }
 
 /* Modal actions are usually styled by Modal.css or overridden if needed */
