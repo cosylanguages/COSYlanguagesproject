@@ -1,0 +1,109 @@
+/* Styles for DaySelectorFreestyle component */
+.day-selector-card {
+  margin: var(--spacing-lg, 20px) auto;
+  padding: var(--spacing-lg, 24px) var(--spacing-xl, 32px);
+  border: 1px solid var(--color-border-light, #e0e0e0);
+  border-radius: var(--border-radius-xl, 12px); /* Use XL radius */
+  background-color: var(--color-background, #fff);
+  box-shadow: var(--shadow-md); /* Use theme variable directly */
+  max-width: 450px; /* Slightly wider */
+  min-width: 300px;
+  text-align: center;
+}
+
+.day-selector-title {
+  margin-bottom: var(--spacing-lg, 24px); /* More space below title */
+  font-weight: 700;
+  font-size: var(--font-size-h4, 1.3rem); /* Larger title */
+  color: var(--color-primary, #007bff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm, 8px);
+}
+
+.radio-group {
+  margin-bottom: var(--spacing-lg, 24px);
+  display: flex;
+  gap: var(--spacing-lg, 30px); /* Increased gap */
+  justify-content: center;
+  align-items: center; /* Align items vertically */
+}
+
+.radio-label {
+  margin-right: var(--spacing-xs, 5px);
+  color: var(--color-text-primary, #222);
+  font-weight: 500;
+  font-size: 1.05em;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs, 4px);
+  cursor: pointer;
+  padding: var(--spacing-sm, 8px);
+  border-radius: var(--border-radius-md, 6px);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.radio-label input[type="radio"] {
+  margin-right: var(--spacing-xs, 5px);
+  accent-color: var(--color-primary, #007bff); /* Style the radio button itself */
+}
+
+.radio-label:hover {
+  background-color: var(--color-surface-medium, #e9ecef);
+}
+
+.day-select-dropdown-container {
+  text-align: center;
+  margin-top: var(--spacing-md, 10px);
+}
+
+.day-select-dropdown {
+  padding: var(--spacing-sm, 10px) var(--spacing-md, 12px);
+  border-radius: var(--border-radius-md, 6px);
+  border: 1.5px solid var(--color-primary, #007bff);
+  min-width: 140px; /* Slightly wider */
+  margin-right: var(--spacing-sm, 10px);
+  font-size: 1em;
+  background: var(--color-surface-light, #f8faff); /* Light background for select */
+  color: var(--color-text-primary);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.day-select-dropdown:hover {
+  border-color: var(--color-primary-dark, #0056b3);
+  box-shadow: 0 0 5px rgba(0,123,255,0.2);
+}
+.day-select-dropdown:focus {
+  outline: none;
+  border-color: var(--color-primary-dark, #0056b3);
+  box-shadow: 0 0 8px rgba(0,123,255,0.3);
+}
+
+
+.day-range-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align items to bottom for label alignment */
+  gap: var(--spacing-lg, 24px); /* Increased gap */
+  margin-top: var(--spacing-md, 10px);
+}
+
+.day-range-group label { /* For "From:" and "To:" labels */
+  display: block;
+  margin-bottom: var(--spacing-xs, 7px);
+  font-weight: 600;
+  color: var(--color-text-secondary, #333);
+  font-size: 1em;
+  text-align: left; /* Align labels to the left of their dropdown */
+}
+
+.thematic-name-display {
+  margin-top: var(--spacing-md, 15px); /* More space */
+  font-size: 1em; /* Slightly larger */
+  color: var(--color-primary-dark, #0056b3); /* Darker blue */
+  font-style: italic;
+  font-weight: 600; /* Bolder */
+  padding: var(--spacing-sm, 8px);
+  background-color: var(--color-surface-light, #e6f2ff); /* Very light blue background */
+  border-radius: var(--border-radius-sm, 4px);
+}
