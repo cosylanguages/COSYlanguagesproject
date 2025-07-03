@@ -1,26 +1,32 @@
 import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
-import './LessonSectionsPanel.css'; // Create this CSS file
+import './LessonSectionsPanel.css'; 
 
-const LessonSectionsPanel = ({ lessonBlocks = [], onSectionSelect }) => {
-  const { t, currentLangKey } = useI18n();
+const LessonSectionsPanel = ({ 
+  apiLessonSections = [], 
+  onSectionSelect, 
+  selectedSectionId,
+  currentLangKey // Passed from StudyModePage for consistency, though useI18n also provides it
+}) => {
+  const { t } = useI18n(); // currentLangKey from hook can also be used if not passed as prop
 
-  const getBlockTitle = (block) => {
-    if (block.data && block.data.title) {
-      return block.data.title[currentLangKey] || block.data.title.default || block.typeName || `Block ${block.id}`;
+  const getSectionTitle = (section) => {
+    const langKeyToUse = currentLangKey || 'default'; // Fallback to 'default' if currentLangKey is undefined
+    if (section.title) {
+      return section.title[langKeyToUse] || section.title.COSYenglish || section.title.default || t('lessonSectionsPanel.untitledSection', 'Untitled Section');
     }
-    return block.typeName || `Block ${block.id}`;
+    return t('lessonSectionsPanel.untitledSection', 'Untitled Section');
   };
 
-  if (!lessonBlocks || lessonBlocks.length === 0) {
+  if (!apiLessonSections || apiLessonSections.length === 0) {
     return (
       <div className="lesson-sections-panel">
         <h4>
-          <TransliterableText text={t('studyMode.lessonSectionsTitle', 'Lessons & Sections')} />
+          <TransliterableText text={t('studyMode.lessonSectionsTitle', 'Lesson Sections')} />
         </h4>
         <p className="no-sections-message">
-          <TransliterableText text={t('studyMode.noSectionsAvailable', 'No sections in this lesson.')} />
+          <TransliterableText text={t('studyMode.noSectionsAvailableForDay', 'No sections available for the selected day.')} />
         </p>
       </div>
     );
@@ -29,17 +35,21 @@ const LessonSectionsPanel = ({ lessonBlocks = [], onSectionSelect }) => {
   return (
     <div className="lesson-sections-panel">
       <h4>
-        <TransliterableText text={t('studyMode.lessonSectionsTitle', 'Lessons & Sections')} />
+        <TransliterableText text={t('studyMode.lessonSectionsTitle', 'Lesson Sections')} />
       </h4>
       <ul className="sections-list">
-        {lessonBlocks.map((block) => (
-          <li key={block.id} className="section-item">
+        {apiLessonSections.map((section) => (
+          <li 
+            key={section.id} 
+            className={`section-item ${section.id === selectedSectionId ? 'active-section' : ''}`}
+          >
             <button 
-              onClick={() => onSectionSelect(block.id)} 
+              onClick={() => onSectionSelect(section.id)} 
               className="section-link-button"
-              title={getBlockTitle(block)} // Tooltip with full title
+              title={getSectionTitle(section)} 
+              aria-pressed={section.id === selectedSectionId}
             >
-              <TransliterableText text={getBlockTitle(block)} />
+              <TransliterableText text={getSectionTitle(section)} />
             </button>
           </li>
         ))}
