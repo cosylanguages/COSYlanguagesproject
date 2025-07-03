@@ -6,7 +6,6 @@ import { shuffleArray } from '../../../../utils/arrayUtils';
 import { pronounceText } from '../../../../utils/speechUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
-// import { useProgress } from '../../../../contexts/ProgressContext'; // Removed useProgress
 import { useI18n } from '../../../../i18n/I18nContext';
 
 const SelectArticleExercise = ({ language, days, exerciseKey }) => {
@@ -20,7 +19,6 @@ const SelectArticleExercise = ({ language, days, exerciseKey }) => {
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
-  // const progress = useProgress(); // Removed progress
   const { t } = useI18n();
 
   const NUM_ARTICLE_OPTIONS = 4;
