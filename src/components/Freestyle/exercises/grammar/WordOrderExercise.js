@@ -100,10 +100,12 @@ const WordOrderExercise = ({ language, days, exerciseKey }) => {
   };
   
   const checkAnswer = () => {
-    if (!exerciseData || isRevealed || isCorrect) return;
+    // This function will only be called if the button is active,
+    // ExerciseControls handles disabling based on isCorrect/isRevealed.
+    if (!exerciseData) return; 
     const userAnswerSentence = constructedSentence.map(item => item.word).join(' ').trim();
     const correctAnswerSentence = exerciseData.correctSentence.replace(/[.?]$/, "").trim();
-    const itemId = `wordorder_${normalizeString(correctAnswerSentence)}`;
+    // const itemId = `wordorder_${normalizeString(correctAnswerSentence)}`; // itemId not used currently for feedback
 
     if (normalizeString(userAnswerSentence) === normalizeString(correctAnswerSentence)) {
       setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
@@ -114,25 +116,28 @@ const WordOrderExercise = ({ language, days, exerciseKey }) => {
   };
 
   const showHint = () => {
-    if (!exerciseData || isRevealed || isCorrect || constructedSentence.length >= exerciseData.sentenceComponents.length) return;
+    // This function will only be called if the button is active.
+    if (!exerciseData || constructedSentence.length >= exerciseData.sentenceComponents.length) return;
     const nextCorrectWordIndex = constructedSentence.length;
     const nextCorrectWordObject = exerciseData.sentenceComponents[nextCorrectWordIndex];
     setFeedback({ message: t('feedback.hintWordOrder', `Hint: The next word is "${getLatinizedText(nextCorrectWordObject, language)}".`, {word: getLatinizedText(nextCorrectWordObject, language)}), type: 'hint' });
   };
 
   const revealTheAnswer = () => {
+    // This function will only be called if the button is active.
     if (!exerciseData) return;
-    const correctAnswerSentence = exerciseData.correctSentence.replace(/[.?]$/, "").trim();
-    const itemId = `wordorder_${normalizeString(correctAnswerSentence)}`;
+    // const correctAnswerSentence = exerciseData.correctSentence.replace(/[.?]$/, "").trim(); // Not directly used for itemId
+    // const itemId = `wordorder_${normalizeString(correctAnswerSentence)}`; // itemId not used currently for feedback
     setConstructedSentence(exerciseData.sentenceComponents.map((word, index) => ({word, id: index})));
     setWordPool([]);
     setFeedback({ message: t('feedback.revealedWordOrder', `The correct order is: "${getLatinizedText(exerciseData.correctSentence, language)}"`, {correctSentence: getLatinizedText(exerciseData.correctSentence, language)}), type: 'info' });
     setIsRevealed(true);
-    setIsCorrect(true);
+    setIsCorrect(true); // Revealing implies it's "correctly" completed by reveal
   };
 
-  const handleReset = () => {
-    if (!exerciseData) return;
+  // This function will be passed as onRandomize to ExerciseControls
+  const handleResetForRandomize = () => {
+    if (!exerciseData) return; // Should not happen if button is active
     setConstructedSentence([]);
     setWordPool(shuffleArray(exerciseData.sentenceComponents.map((word, index) => ({ word, id: index }))));
     setFeedback({ message: '', type: '' });
@@ -172,20 +177,22 @@ const WordOrderExercise = ({ language, days, exerciseKey }) => {
       <FeedbackDisplay message={feedback.message} type={feedback.type} language={language} />
       
       <ExerciseControls
-        onCheckAnswer={!isRevealed && !isCorrect && constructedSentence.length === exerciseData.sentenceComponents.length ? checkAnswer : undefined}
-        onShowHint={!isRevealed && !isCorrect && constructedSentence.length < exerciseData.sentenceComponents.length ? showHint : undefined}
-        onRevealAnswer={!isRevealed && !isCorrect ? revealTheAnswer : undefined}
+        onCheckAnswer={checkAnswer}
+        onShowHint={showHint}
+        onRevealAnswer={revealTheAnswer}
+        onRandomize={handleResetForRandomize} 
         onNextExercise={setupNewExercise}
-        config={{ 
-            showCheck: !isRevealed && !isCorrect && constructedSentence.length === exerciseData.sentenceComponents.length, 
-            showHint: !isRevealed && !isCorrect && constructedSentence.length < exerciseData.sentenceComponents.length, 
-            showReveal: !isRevealed && !isCorrect,
-            showNext: true,
+        isAnswerCorrect={isCorrect}
+        isRevealed={isRevealed}
+        config={{
+          showCheck: (exerciseData?.sentenceComponents?.length > 0 && constructedSentence.length === exerciseData.sentenceComponents.length),
+          showHint: (exerciseData?.sentenceComponents?.length > 0 && constructedSentence.length < exerciseData.sentenceComponents.length),
+          showReveal: true, 
+          showRandomize: true, 
+          showNext: true,
         }}
       />
-      <button onClick={handleReset} style={{...tileStyle, backgroundColor: '#6c757d', color: 'white', marginTop:'10px'}} disabled={isRevealed || isCorrect}>
-        🔄 {t('buttons.reset', 'Reset')}
-      </button>
+      {/* Custom Reset button removed */}
     </div>
   );
 };
