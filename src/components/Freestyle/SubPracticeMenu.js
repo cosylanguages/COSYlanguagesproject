@@ -5,13 +5,10 @@ import { useI18n } from '../../i18n/I18nContext'; // Import useI18n
 // These keys should exist in the translations.js file
 const SUB_PRACTICE_OPTIONS = {
   vocabulary: [
-    { id: 'random-word', labelKey: 'subPractice.vocabulary.randomWord' }, 
-    { id: 'random-image', labelKey: 'subPractice.vocabulary.randomImage' }, 
-    { id: 'match-image-word', labelKey: 'subPractice.vocabulary.matchImageWord' },
-    { id: 'listening', labelKey: 'subPractice.vocabulary.listening' }, 
-    { id: 'type-opposite', labelKey: 'subPractice.vocabulary.typeOpposite' }, 
-    { id: 'match-opposites', labelKey: 'subPractice.vocabulary.matchOpposites' },
-    { id: 'build-word', labelKey: 'subPractice.vocabulary.buildWord' },
+    { id: 'random-word', labelKey: 'subPractice.vocabulary.randomWord' },
+    { id: 'random-image', labelKey: 'subPractice.vocabulary.randomImage' },
+    { id: 'listening', labelKey: 'subPractice.vocabulary.listening' },
+    { id: 'practice-all', labelKey: 'subPractice.vocabulary.practiceAll' },
   ],
   grammar: [
     { id: 'gender-articles', labelKey: 'subPractice.grammar.genderArticles' },
