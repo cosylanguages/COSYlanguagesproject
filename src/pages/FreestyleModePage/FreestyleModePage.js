@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react'; // Added useRef
 import FreestyleInterfaceView from '../../components/Freestyle/FreestyleInterfaceView';
 import './FreestyleModePage.css';
 import { useI18n } from '../../i18n/I18nContext'; // Import useI18n
@@ -17,11 +17,8 @@ const FreestyleModePage = () => {
     streak: 0
   });
   const [levelUp, setLevelUp] = useState(false);
-
-  // Réinitialise la sélection des jours à chaque chargement de la page
-  useEffect(() => {
-    setSelectedDays([]);
-  }, []);
+  const [isDaySelectionLocked, setIsDaySelectionLocked] = useState(false); // New state for latching
+  const lockTimeoutRef = useRef(null); // Ref for timeout
 
   // The useEffect block for updating body class has been removed from here.
   // LanguageSelector.js is now solely responsible for this.
@@ -42,10 +39,41 @@ const FreestyleModePage = () => {
     showToast(t('freestyle.languageChangedToast', `Language changed: ${languageName}`, { languageName }));
   };
 
-  const handleDaysChange = (days) => { 
-    setSelectedDays(days); 
-    setExerciseKey(prevKey => prevKey + 1);
+  const handleDaysChange = (newDays) => { 
+    if (lockTimeoutRef.current) {
+      clearTimeout(lockTimeoutRef.current);
+    }
+
+    if (newDays && newDays.length > 0) {
+      // Valid selection
+      setSelectedDays(newDays);
+      setExerciseKey(prevKey => prevKey + 1);
+      setIsDaySelectionLocked(true);
+      lockTimeoutRef.current = setTimeout(() => {
+        setIsDaySelectionLocked(false);
+        lockTimeoutRef.current = null;
+      }, 100); // Lock for 100ms
+    } else {
+      // Attempting to clear selection (newDays is empty or null)
+      if (!isDaySelectionLocked) {
+        const oldSelectedDays = selectedDays; // Capture state before update for comparison
+        setSelectedDays([]); // Allow clear only if not locked
+        if (oldSelectedDays.length > 0) { // Only change exerciseKey if selectedDays was not already empty
+            setExerciseKey(prevKey => prevKey + 1);
+        }
+      }
+      // If locked, this clear attempt is ignored.
+    }
   };
+  
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (lockTimeoutRef.current) {
+        clearTimeout(lockTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleCategorySelect = (category) => {
     setCurrentMainCategory(category);
