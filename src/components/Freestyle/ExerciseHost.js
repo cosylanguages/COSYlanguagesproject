@@ -1,6 +1,12 @@
 import React from 'react';
 
-// Vocabulary Exercise Components
+// New Vocabulary Host Components
+import RandomWordPracticeHost from './exercises/vocabulary/RandomWordPracticeHost';
+import RandomImagePracticeHost from './exercises/vocabulary/RandomImagePracticeHost';
+import ListeningPracticeHost from './exercises/vocabulary/ListeningPracticeHost';
+import PracticeAllVocabHost from './exercises/vocabulary/PracticeAllVocabHost';
+
+// Existing Specific Vocabulary Exercise Components (may be refactored or used by new hosts)
 import ShowWordExercise from './exercises/vocabulary/ShowWordExercise';
 import IdentifyImageExercise from './exercises/vocabulary/IdentifyImageExercise';
 import TranscribeWordExercise from './exercises/vocabulary/TranscribeWordExercise';
