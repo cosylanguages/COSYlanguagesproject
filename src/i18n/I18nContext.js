@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
-import translations from './translationsData'; // Changed to translationsData.js
+import translations from './translationsData'; 
 
 const I18nContext = createContext();
 
@@ -9,75 +9,77 @@ export function useI18n() {
 
 export function I18nProvider({ children }) {
     const [language, setLanguage] = useState(() => {
-        // Initialize language from localStorage or default to 'COSYenglish'
         const savedLanguage = localStorage.getItem('cosyLanguage');
-        // Ensure the saved language is valid, otherwise default
-        return (savedLanguage && translations[savedLanguage]) ? savedLanguage : 'COSYenglish';
+        if (savedLanguage === "null" || savedLanguage === null || savedLanguage === undefined) {
+            return null; // Explicitly handle "null" string from localStorage or no value
+        }
+        return (translations[savedLanguage]) ? savedLanguage : 'COSYenglish'; // Fallback for invalid keys
     });
     
-    // currentTranslations will be derived from `language` and `translations` in useEffect
-    // Initialize with an empty object or default to English to avoid issues during first render
-    const [currentTranslations, setCurrentTranslations] = useState(() => {
-        const initialLang = localStorage.getItem('cosyLanguage') || 'COSYenglish';
-        if (translations && translations[initialLang]) {
-            return translations[initialLang];
-        } else if (translations && translations.COSYenglish) {
-            return translations.COSYenglish;
-        }
-        return {}; // Fallback to empty object if all else fails
-    });
+    const [currentTranslations, setCurrentTranslations] = useState({});
 
     useEffect(() => {
-        // Update localStorage when language changes
-        localStorage.setItem('cosyLanguage', language);
-
-        // Update currentTranslations based on the new language
-        // Ensure translations object itself is available and the specific language pack exists
-        if (translations && translations[language]) {
+        if (language === null) {
+            localStorage.removeItem('cosyLanguage'); // Remove item if language is null
+            setCurrentTranslations({}); // No translations for null language
+            document.documentElement.lang = 'en'; // Default doc lang
+        } else if (translations && translations[language]) {
+            localStorage.setItem('cosyLanguage', language);
             setCurrentTranslations(translations[language]);
-        } else if (translations && translations.COSYenglish) {
-            // Fallback to English if the selected language pack is missing
-            setCurrentTranslations(translations.COSYenglish);
-            // Optionally, reset language to 'COSYenglish' if desired language is truly unavailable
-            // and the current language is not already COSYenglish
-            if (language !== 'COSYenglish') {
-                 console.warn(`Translations for language key "${language}" not found. Defaulting to English translations and setting language to COSYenglish.`);
-                 setLanguage('COSYenglish'); // This will trigger the effect again with COSYenglish
+            if (typeof language === 'string' && language.length > 4) {
+                 // Ensure language is a string and long enough
+                const langCode = language.replace(/^(COSY|ТАКОЙ|ΚΟΖΥ|ԾՈՍՅ)/, '').toLowerCase();
+                document.documentElement.lang = langCode;
             } else {
-                console.warn(`Translations for language key "${language}" not found. Using English translations.`);
+                document.documentElement.lang = 'en'; // Fallback doc lang
             }
+        } else if (translations && translations.COSYenglish) {
+            // This case handles if language is an invalid key but not null
+            console.warn(`Translations for language key "${language}" not found. Defaulting to English.`);
+            setCurrentTranslations(translations.COSYenglish);
+            localStorage.setItem('cosyLanguage', 'COSYenglish'); // Persist the fallback
+            document.documentElement.lang = 'en';
+            // setLanguage('COSYenglish'); // This would trigger a re-render and effect loop.
+                                        // The above localStorage.setItem and setCurrentTranslations handle the state for current cycle.
+                                        // If direct state update is desired, ensure it doesn't loop infinitely.
+                                        // For now, allowing an invalid key to temporarily exist in state but use English resources.
+                                        // Or, more strictly:
+            // if (language !== 'COSYenglish') setLanguage('COSYenglish');
         } else {
-            // Fallback if COSYenglish is also missing (should not happen if en.js is correct and exported)
-            setCurrentTranslations({}); 
-            console.error(`Critical: Default English translations (COSYenglish) not found. Translations will not work.`);
-        }
-        
-        // Optionally, update document language attribute
-        // Ensure language is a string and long enough before substring
-        if (typeof language === 'string' && language.length > 4) {
-            document.documentElement.lang = language.substring(4).toLowerCase(); // e.g., "en" from "COSYenglish"
+            setCurrentTranslations({});
+            localStorage.removeItem('cosyLanguage');
+            document.documentElement.lang = 'en';
+            console.error(`Critical: Default English translations (COSYenglish) not found.`);
         }
     }, [language]);
 
     const changeLanguage = useCallback((langKey) => {
-        // Check against the main translations object to see if the langKey is valid
-        if (translations && translations[langKey]) {
+        if (langKey === null) {
+            setLanguage(null);
+        } else if (translations && translations[langKey]) {
             setLanguage(langKey);
         } else {
-            console.warn(`Attempted to change to invalid language key "${langKey}". Defaulting to English.`);
-            setLanguage('COSYenglish'); // Fallback to English if the key is invalid
+            console.warn(`Attempted to change to invalid language key "${langKey}". Setting to null (no selection).`);
+            setLanguage(null); // Fallback to null if the key is invalid
         }
-    }, []); // `translations` is stable as it's a top-level import
+    }, []);
 
-    const t = useCallback((key, options = {}) => {
+    const t = useCallback((key, defaultValueOrOptions, optionsOnly) => {
+        let defaultValue = typeof defaultValueOrOptions === 'string' ? defaultValueOrOptions : key;
+        let options = typeof defaultValueOrOptions === 'object' ? defaultValueOrOptions : optionsOnly;
+        if (typeof optionsOnly === 'object' && typeof defaultValueOrOptions === 'string') {
+            options = optionsOnly; // Correctly assign options if defaultvalue is also provided
+        }
+
+
         let translationString;
-
-        if (currentTranslations && currentTranslations[key] !== undefined) {
+        if (language && currentTranslations && currentTranslations[key] !== undefined) {
             translationString = currentTranslations[key];
         } else if (translations && translations.COSYenglish && translations.COSYenglish[key] !== undefined) {
+            // Fallback to English if current language is null or key is missing
             translationString = translations.COSYenglish[key];
         } else {
-            translationString = key; // Final fallback to the key itself
+            translationString = defaultValue; // Use provided default or the key itself
         }
         
         if (options && typeof translationString === 'string') {
@@ -90,14 +92,13 @@ export function I18nProvider({ children }) {
                 try {
                     tempString = tempString.replace(new RegExp(`{${escapedPlaceholder}}`, 'g'), String(value));
                 } catch (e) {
-                    // Ignore invalid regex
                     continue;
                 }
             }
             translationString = tempString;
         }
         return translationString;
-    }, [currentTranslations]); // Depend on currentTranslations
+    }, [language, currentTranslations]);
 
     const getTranslationsForLang = useCallback((langKey, translationKey) => {
         if (translations && translations[langKey] && translations[langKey][translationKey] !== undefined) {
@@ -105,12 +106,12 @@ export function I18nProvider({ children }) {
         } else if (translations && translations.COSYenglish && translations.COSYenglish[translationKey] !== undefined) {
             return translations.COSYenglish[translationKey];
         }
-        return {}; // Return empty object if the key or language isn't found
-    }, []); // `translations` is stable
+        return {};
+    }, []);
 
     const value = {
-        language,
-        currentLangKey: language, // Expose language as currentLangKey
+        language, // This can be null now
+        currentLangKey: language, 
         changeLanguage,
         t,
         allTranslations: translations,
