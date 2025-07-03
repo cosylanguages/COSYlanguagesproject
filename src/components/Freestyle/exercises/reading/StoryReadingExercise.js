@@ -49,10 +49,6 @@ const StoryReadingExercise = ({ language, days, exerciseKey }) => {
     }
   }, [fetchNewStory, exerciseKey, language, days, t]);
 
-  // For reading exercises, "Hint", "Check Answer", "Reveal Answer" might not be directly applicable
-  // or would require more complex logic (e.g., comprehension questions, vocabulary popups).
-  // For this migration, we'll focus on displaying the story and providing a "Next" button.
-
   if (isLoading) return <p>{t('loading.readingExercise', 'Loading story...')}</p>;
   if (error) return <FeedbackDisplay message={error} type="error" />;
   if (!currentStory && !isLoading) return <FeedbackDisplay message={t('exercises.noStoryToDisplay', 'No story to display. Try different selections.')} type="info" />;
@@ -76,11 +72,14 @@ const StoryReadingExercise = ({ language, days, exerciseKey }) => {
         </>
       )}
       <ExerciseControls
-        onNextExercise={fetchNewStory}
+        onRandomize={fetchNewStory} // "Randomize" fetches a new story
+        onNextExercise={fetchNewStory} // "Next Exercise" also fetches a new story
+        // isAnswerCorrect and isRevealed are not relevant here, defaults to false in ExerciseControls
         config={{
           showCheck: false,
           showHint: false, 
           showReveal: false,
+          showRandomize: true, // Enable Randomize button
           showNext: true,
         }}
       />
