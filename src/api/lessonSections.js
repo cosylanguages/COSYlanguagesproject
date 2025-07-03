@@ -97,3 +97,27 @@ export async function deleteLessonSection(token, sectionId) {
         return await res.json().catch(()=> null); 
     }
 }
+
+/**
+ * Fetches a single lesson section by its ID.
+ * @param {string} token - The authentication token.
+ * @param {string} sectionId - The ID of the lesson section.
+ * @returns {Promise<object>} A promise that resolves to the lesson section object.
+ */
+export async function getLessonSectionDetails(token, sectionId) {
+    if (!sectionId) {
+        console.warn("getLessonSectionDetails: sectionId is required.");
+        throw new Error("Section ID is required.");
+    }
+    const res = await fetch(`${BASE_URL}/sections/${sectionId}`, {
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json',
+        },
+    });
+    if (!res.ok) {
+        const errorData = await res.json().catch(() => ({ message: `Failed to fetch lesson section ${sectionId}` }));
+        throw new Error(errorData.message || `Failed to fetch lesson section. Status: ${res.status}`);
+    }
+    return await res.json();
+}
