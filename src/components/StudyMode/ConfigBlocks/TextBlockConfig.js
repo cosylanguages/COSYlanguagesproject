@@ -49,10 +49,10 @@ const TextBlockConfig = ({ block, onSave, onClose }) => {
         onClose={onClose}
         title={t('configureBlockTitle', { blockName: block.typeName }) || `Configure ${block.typeName}`}
     >
-        <div className="text-block-config-form">
+        <div className="text-block-config-form block-config-form"> {/* Added block-config-form */}
             {/* Title Inputs */}
             <div className="form-group">
-                <label htmlFor={`title-default-${block.id}`}>
+                <label htmlFor={`title-default-${block.id}`} className="unified-label">
                     <TransliterableText text={t('config.titleDefaultLabel', 'Title (Default)')} />:
                 </label>
                 <input
@@ -65,7 +65,7 @@ const TextBlockConfig = ({ block, onSave, onClose }) => {
             </div>
             {currentGlobalLang !== 'default' && (
                  <div className="form-group">
-                    <label htmlFor={`title-${currentGlobalLang}-${block.id}`}>
+                    <label htmlFor={`title-${currentGlobalLang}-${block.id}`} className="unified-label">
                         <TransliterableText text={t('config.titleLangLabel', { lang: currentGlobalLang } , `Title (${currentGlobalLang})`)} />:
                     </label>
                     <input
@@ -80,7 +80,7 @@ const TextBlockConfig = ({ block, onSave, onClose }) => {
 
             {/* Content Inputs */}
             <div className="form-group">
-                <label htmlFor={`content-default-${block.id}`}>
+                <label htmlFor={`content-default-${block.id}`} className="unified-label">
                     <TransliterableText text={t('config.contentDefaultLabel', 'Content (Default)')} />:
                 </label>
                 <textarea
@@ -93,7 +93,7 @@ const TextBlockConfig = ({ block, onSave, onClose }) => {
             </div>
             {currentGlobalLang !== 'default' && (
                 <div className="form-group">
-                    <label htmlFor={`content-${currentGlobalLang}-${block.id}`}>
+                    <label htmlFor={`content-${currentGlobalLang}-${block.id}`} className="unified-label">
                         <TransliterableText text={t('config.contentLangLabel', { lang: currentGlobalLang }, `Content (${currentGlobalLang})`)} />:
                     </label>
                     <textarea
@@ -108,7 +108,7 @@ const TextBlockConfig = ({ block, onSave, onClose }) => {
 
             {/* Block Language Override */}
             <div className="form-group">
-                <label htmlFor={`block-lang-${block.id}`}>
+                <label htmlFor={`block-lang-${block.id}`} className="unified-label">
                     <TransliterableText text={t('config.blockLangLabel', 'Language Override (e.g., COSYenglish)')} />:
                 </label>
                 <input
