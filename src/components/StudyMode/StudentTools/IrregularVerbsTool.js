@@ -10,6 +10,7 @@ const IrregularVerbsTool = () => {
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
     const [isConjugationData, setIsConjugationData] = useState(false);
+    const [noDataForLanguage, setNoDataForLanguage] = useState(false); // New state for missing data
 
     useEffect(() => {
         const loadVerbs = async () => {
@@ -17,6 +18,7 @@ const IrregularVerbsTool = () => {
             setError(null);
             setVerbs([]);
             setIsConjugationData(false);
+            setNoDataForLanguage(false); // Reset this state on each load attempt
 
             let filePath = '';
             let dataIsConjugations = false;
@@ -38,23 +40,29 @@ const IrregularVerbsTool = () => {
                 const response = await fetch(filePath);
                 if (!response.ok) {
                     if (response.status === 404) {
-                        throw new Error(t('irregularVerbsFileError', { lang: currentUILanguage }) || `Irregular verbs data not found for ${currentUILanguage}.`);
+                        setNoDataForLanguage(true); // Set specific state for 404
+                        console.warn(`Irregular verbs data not found for ${currentUILanguage} at ${filePath}.`);
+                        setVerbs([]); // Ensure verbs list is empty
+                        // No error thrown here for 404, will be handled by conditional rendering
+                    } else {
+                        // For other HTTP errors, still treat as a general error
+                        throw new Error(t('irregularVerbsLoadHttpError', { status: response.status }) || `Failed to load data: ${response.status}`);
                     }
-                    throw new Error(t('irregularVerbsLoadHttpError', { status: response.status }) || `Failed to load data: ${response.status}`);
+                } else { // response.ok, proceed to parse JSON
+                    const data = await response.json();
+                    if (dataIsConjugations) {
+                        setVerbs(data.verbs || []);
+                    } else {
+                        setVerbs(Array.isArray(data) ? data : []);
+                    }
                 }
-                const data = await response.json();
-                
-                if (dataIsConjugations) {
-                    // Assuming French conjugation data structure is { verbs: [ {infinitive: "", tenses: { ... }} ] }
-                    setVerbs(data.verbs || []);
-                } else {
-                    // Assuming irregular verbs are an array of objects: [ { base: "", pastSimple: "", pastParticiple: "", translation: "" } ]
-                    setVerbs(Array.isArray(data) ? data : []);
-                }
-
-            } catch (err) {
+            } catch (err) { // This will now primarily catch non-404 fetch errors or JSON parsing errors
                 console.error(`Error loading irregular verbs for ${currentUILanguage} from ${filePath}:`, err);
-                setError(err.message);
+                // Only set general error if not already handled as noDataForLanguage
+                // (though 404s are now handled before they would throw to here)
+                if (!noDataForLanguage) { 
+                    setError(err.message);
+                }
                 setVerbs([]);
             } finally {
                 setIsLoading(false);
@@ -64,7 +72,7 @@ const IrregularVerbsTool = () => {
         if (currentUILanguage) {
             loadVerbs();
         }
-    }, [currentUILanguage, t]);
+    }, [currentUILanguage, t]); // noDataForLanguage is an outcome, not an input dependency for this effect.
 
     const filteredVerbs = useMemo(() => {
         if (!searchTerm) return verbs;
@@ -86,11 +94,30 @@ const IrregularVerbsTool = () => {
     }, [verbs, searchTerm, currentUILanguage, isConjugationData]);
 
     if (isLoading) return <p>{t('loadingIrregularVerbs') || 'Loading irregular verbs...'}</p>;
+    
+    // Display message if no data is available for the language
+    if (noDataForLanguage) {
+        const titleText = currentUILanguage === 'COSYenglish' 
+            ? t('irregularVerbsToolTitle', 'Irregular Verbs List') 
+            : t('conjugationsToolTitle', 'Conjugations List');
+        return (
+            <div className="irregular-verbs-tool">
+                <h3>{titleText} ({currentUILanguage.replace('COSY','')})</h3>
+                <p>{t('irregularVerbsNotAvailableForLang', { lang: currentUILanguage.replace('COSY','') }) || `Irregular verbs data is not yet available for ${currentUILanguage.replace('COSY','')}.`}</p>
+            </div>
+        );
+    }
+
+    // Display general error message if one occurred (and not handled by noDataForLanguage)
     if (error) return <p className="error-message">{error}</p>;
+
+    const titleText = currentUILanguage === 'COSYenglish' 
+        ? t('irregularVerbsToolTitle', 'Irregular Verbs List') 
+        : t('conjugationsToolTitle', 'Conjugations List');
 
     return (
         <div className="irregular-verbs-tool">
-            <h3>{t('irregularVerbsToolTitle') || 'Irregular Verbs List'} ({currentUILanguage.replace('COSY','')})</h3>
+            <h3>{titleText} ({currentUILanguage.replace('COSY','')})</h3>
             <input 
                 type="text"
                 className="search-irregular-verbs"
