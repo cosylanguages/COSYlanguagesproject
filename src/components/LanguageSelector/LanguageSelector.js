@@ -1,77 +1,89 @@
-import React, { useEffect } from 'react'; // Added useEffect
+import React, { useEffect } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import './LanguageSelector.css';
 import TransliterableText from '../Common/TransliterableText';
 
 const LanguageSelector = () => {
-    // Assuming currentLangKey is provided by useI18n and represents the actual language key string
-    const { language, changeLanguage, allTranslations, currentLangKey } = useI18n();
+    const { language, changeLanguage, allTranslations, currentLangKey, t } = useI18n();
 
     const availableLanguages = Object.keys(allTranslations).map(langKey => {
+        // Skip "null" key if it appears, ensure the langKey actual entry exists
+        if (langKey === "null" || !allTranslations[langKey]) return null; 
+
         const nativeName = allTranslations[langKey]?.languageNameNative;
         let name;
 
         if (nativeName) {
-            name = nativeName; // Prioritize native name
+            name = nativeName;
         } else {
-            // DEV_NOTE: If languageNameNative and languageNameInEnglish are consistently populated
-            // in all locale files, the following complex key parsing and specific overrides
-            // could be significantly simplified or removed.
-            // Fallback to English name or parsed key
             name = allTranslations[langKey]?.languageNameInEnglish ||
-                   langKey.replace('COSY', '').replace('ТАКОЙ', '').replace('ΚΟΖΥ', '').replace('ԾՈՍՅ', ''); // General cleanup for display name
-            
-            // Specific overrides for English names if nativeName is not available
-            if (langKey === 'ΚΟΖΥελληνικά') name = 'Greek';
-            else if (langKey === 'ТАКОЙрусский') name = 'Russian';
-            else if (langKey === 'ԾՈՍՅհայկական') name = 'Armenian';
-            // Add other specific overrides if necessary
+                   langKey.replace(/^(COSY|ТАКОЙ|ΚΟΖΥ|ԾՈՍՅ)/, '');
         }
+        // Combine native and English names if different, for clarity
+        if (allTranslations[langKey]?.languageNameNative && 
+            allTranslations[langKey]?.languageNameInEnglish && 
+            allTranslations[langKey]?.languageNameNative !== allTranslations[langKey]?.languageNameInEnglish) {
+            name = `${allTranslations[langKey]?.languageNameNative} (${allTranslations[langKey]?.languageNameInEnglish})`;
+        }
+
         return { key: langKey, name: name };
-    });
+    }).filter(Boolean); // Filter out any null entries from map
 
     const handleChange = (event) => {
         const newLangKey = event.target.value;
-        changeLanguage(newLangKey); // This function should update currentLangKey in the I18nContext
+        // If the placeholder "-- Select Language --" is chosen, its value is "", pass null.
+        // Otherwise, pass the selected language key.
+        changeLanguage(newLangKey === "" ? null : newLangKey);
     };
 
+    // This useEffect for body class management should be reviewed for potential conflicts
+    // if LanguageSelectorFreestyle also manages it. Ideally, one component or a higher-level
+    // one should manage global body classes based on language.
     useEffect(() => {
         const body = document.body;
-        // Supprimer les anciennes classes de fond
-        const classesToRemove = Array.from(body.classList).filter(cls => cls.endsWith('-bg') || cls === 'lang-bg' || cls === 'lang-bg-fallback');
+        const classesToRemove = Array.from(body.classList).filter(cls => 
+            cls.endsWith('-bg') || 
+            cls === 'lang-bg' || 
+            cls === 'lang-bg-fallback' || 
+            cls.startsWith('COSY') || cls.startsWith('ТАКОЙ') || cls.startsWith('ΚΟΖΥ') || cls.startsWith('ԾՈՍՅ') ||
+            cls === 'no-language-selected-bg'
+        );
         classesToRemove.forEach(cls => body.classList.remove(cls));
 
-        if (currentLangKey) {
+        if (currentLangKey && currentLangKey !== "null") { // Ensure currentLangKey is valid and not the string "null"
             const langClassName = `${currentLangKey}-bg`;
-            // Test si la classe existe dans les feuilles de style chargées
+            // Check if class exists (optional, for robustness against missing CSS)
             const classExists = Array.from(document.styleSheets).some(sheet => {
                 try {
                   return Array.from(sheet.cssRules || []).some(rule => rule.selectorText === `.${langClassName}`);
                 } catch (e) { return false; }
             });
+
             if (classExists) {
                 body.classList.add(langClassName);
-                body.classList.add('lang-bg');
+                body.classList.add('lang-bg'); // General class for shared background properties
             } else {
-                body.classList.add('lang-bg-fallback');
+                body.classList.add('lang-bg-fallback'); // Fallback if specific class is missing
             }
         } else {
-            body.classList.add('lang-bg-fallback');
+            body.classList.add('no-language-selected-bg'); // Class when no language is selected
         }
-    }, [currentLangKey]); // Effect depends on currentLangKey from context
+    }, [currentLangKey]);
 
     return (
         <div className="language-selector-container">
             <label htmlFor="language-select" className="language-select-label">
-                🌎:
+                <TransliterableText text={t('languageSelector.label', '🌎:')} />
             </label>
-            {/* The select's value should be the currentLangKey from context */}
             <select 
                 id="language-select" 
-                value={currentLangKey || language || ''} // Use currentLangKey, fallback to language, then to empty string
+                value={currentLangKey || ''} // Handles null currentLangKey by selecting the placeholder
                 onChange={handleChange} 
                 className="language-select-dropdown"
+                aria-label={t('languageSelector.ariaLabel', 'Select language')}
             >
+                {/* Add a placeholder option for when no language is selected */}
+                <option value="">{t('languageSelector.selectPlaceholder', '-- Select Language --')}</option>
                 {availableLanguages.map(lang => (
                     <option key={lang.key} value={lang.key}>
                         <TransliterableText text={lang.name} />
