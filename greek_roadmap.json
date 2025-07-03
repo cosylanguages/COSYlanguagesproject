@@ -1,0 +1,252 @@
+{
+  "language_name": "Greek",
+  "levels": [
+    {
+      "level_code": "A0",
+      "level_name": "Το Πρώτο Βήμα",
+      "approximate_vocabulary_size": "approx. 300-500 words",
+      "learning_outcomes": [
+        "Understand and use familiar everyday Greek expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.",
+        "Introduce him/herself and others in Greek and can ask and answer simple questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
+        "Interact in a very simple way in Greek provided the other person talks slowly and clearly and is prepared to help.",
+        "Recognize the Greek alphabet and familiar Greek names, words, and very simple sentences."
+      ],
+      "language_focus_topics": [
+        "The Greek Alphabet (uppercase and lowercase letters, letter names).",
+        "Nouns: Introduction to gender (masculine, feminine, neuter). Introduction to cases: Nominative (subject) and Accusative (direct object) for common nouns.",
+        "Articles: Definite articles (ο, η, το; τον, την, το; οι, οι, τα - nominative/accusative singular & plural basics). Indefinite articles (ένας, μία, ένα - nominative/accusative singular basics).",
+        "Subject Pronouns: εγώ, εσύ, αυτός/αυτή/αυτό, εμείς, εσείς, αυτοί/αυτές/αυτά.",
+        "Verbs: `είμαι` (to be) - present tense. `έχω` (to have) - present tense.",
+        "Verbs: Present tense of common Type A verbs (conjugation ending in -ω, e.g., μιλάω - I speak, μένω - I live - 1st/2nd/3rd person singular).",
+        "Basic Sentence Structure: Subject-Verb-Object.",
+        "Negation: `δεν` (den) before the verb.",
+        "Simple Questions: Intonation, question words (Ποιος; Τι; Πού; Πότε; Πώς; Γιατί; Πόσο;).",
+        "Adjectives: Basic agreement with nouns in gender, number, and case (nominative/accusative for common adjectives like καλός, μεγάλος)."
+      ],
+      "vocabulary_topics": [
+        "Greetings & Politeness: Γεια σου/σας, Καλημέρα, Καλησπέρα, Καληνύχτα, Αντίο (Goodbye), Ευχαριστώ, Παρακαλώ, Συγγνώμη, Ναι, Όχι, Κύριος/Κυρία (Mr./Mrs.).",
+        "Personal Information: όνομα, εθνικότητα. Phrases: Με λένε..., Είμαι από..., Είμαι [nationality], Πώς είσαι/είστε; (How are you?), Καλά/Πολύ καλά (Well/Very well).",
+        "Numbers: 0-20 (μηδέν - είκοσι).",
+        "Colors: κόκκινο, μπλε, πράσινο, κίτρινο, μαύρο, άσπρο.",
+        "Days of the week: Δευτέρα, Τρίτη, Τετάρτη, Πέμπτη, Παρασκευή, Σάββατο, Κυριακή.",
+        "Family: πατέρας, μητέρα, αδελφός, αδελφή.",
+        "Common Objects: βιβλίο, στυλό, τραπέζι, καρέκλα, τηλέφωνο, σπίτι, αυτοκίνητο.",
+        "Basic Food & Drink: ψωμί, νερό, γάλα, καφές, τσάι, τυρί, φρούτο, λαχανικό.",
+        "Classroom Language: Διαβάστε (Read), Γράψτε (Write), Ακούστε (Listen), Μιλήστε (Speak)."
+      ],
+      "pronunciation_focus_topics": [
+        "The 24 Greek letters: names and sounds.",
+        "Vowel sounds (α, ε, η, ι, ο, υ, ω) and common diphthongs (αι, ει, οι, ου, αυ, ευ).",
+        "Key consonant sounds (β [v], γ [ɣ/ʝ], δ [ð], ζ [z], θ [θ], ξ [ks], ρ (rolled), σ/ς [s], φ [f], χ [x], ψ [ps]).",
+        "Consonant digraphs (μπ [b/mb], ντ [d/nd], γκ [g/ŋg], τσ [ts], τζ [dz]).",
+        "Stress accent (τόνος) and its importance for pronunciation.",
+        "The Greek question mark (`;`)."
+      ],
+      "listening_comprehension_skills": [
+        "Recognize the sounds of the Greek alphabet.",
+        "Understand familiar Greek words and very basic phrases when spoken slowly and clearly."
+      ],
+      "reading_comprehension_skills": [
+        "Read and identify all Greek letters (uppercase and lowercase).",
+        "Read and understand familiar Greek names, words, and simple signs/labels."
+      ],
+      "spoken_interaction_skills": [
+        "Greet and respond to greetings.",
+        "Introduce oneself and ask for someone's name.",
+        "Ask and answer simple questions about personal information (nationality, origin)."
+      ],
+      "spoken_production_skills": [
+        "Say the letters of the Greek alphabet.",
+        "Pronounce basic Greek vocabulary.",
+        "Produce simple isolated phrases and sentences (e.g., Είμαι καλά - I am well)."
+      ],
+      "written_interaction_skills": [],
+      "written_production_skills": [
+        "Write all letters of the Greek alphabet (uppercase and lowercase).",
+        "Write one's name and other simple words in Greek."
+      ],
+      "cultural_competence_topics": [
+        "Common greeting customs.",
+        "Basic awareness of formal (εσείς) vs. informal (εσύ) 'you'.",
+        "Understanding common gestures (e.g., for 'yes' and 'no')."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice writing the Greek letters daily.",
+        "Associate Greek letter sounds with known words or sounds.",
+        "Use flashcards with Greek letters and simple words."
+      ]
+    },
+    {
+      "level_code": "A1",
+      "level_name": "Ο Μικρός Εξερευνητής",
+      "approximate_vocabulary_size": "approx. 600-800 words",
+      "learning_outcomes": [
+        "Can understand and use familiar everyday Greek expressions and very basic phrases aimed at the satisfaction of concrete needs.",
+        "Can introduce him/herself and others in Greek, and can ask and answer questions about personal details such as where he/she lives, people he/she knows, and things he/she possesses.",
+        "Can interact in a simple way in Greek provided the other person talks slowly and clearly and is prepared to help.",
+        "Can exchange information about him/herself and familiar people, and respond to everyday needs (e.g., shopping, contact with services).",
+        "Can understand the main points of short, clear, simple messages, announcements, and instructions on familiar matters.",
+        "Can read and understand very short, simple texts (e.g., public signs, shop names, simple notes, postcards, basic information in brochures or timetables).",
+        "Can write a short, simple postcard or message, and fill in forms with personal details."
+      ],
+      "language_focus_topics": [
+        "Review A0: Alphabet, basic pronunciation, `είμαι`, `έχω`, definite/indefinite articles (Nom/Acc), basic noun gender/case (Nom/Acc), `δεν` negation, basic question words.",
+        "Nouns: Genitive case (singular, for possession - e.g., το βιβλίο του Γιάννη). Plural of common nouns (Nominative, Accusative, Genitive - common patterns).",
+        "Adjectives: Agreement with nouns in gender, number, and case (Nominative, Accusative, Genitive - common patterns for -ος, -η/α, -ο and -ης, -α, -ικο).",
+        "Verbs: Present Tense - Conjugation of regular verbs Group A (-ω) and Group B1 (-άω/-ώ e.g. αγαπάω/αγαπώ). Common irregular verbs in present tense (e.g., πηγαίνω, κάνω, λέω, βλέπω, ξέρω, θέλω, μπορώ).",
+        "Verbs: Simple Past (Aorist) - Introduction to active voice for common regular verbs (e.g., -σα endings for -ω verbs, -ησα for -άω verbs) and key irregulars (e.g., είπα, έκανα, πήγα, είδα).",
+        "Verbs: Simple Future - Formation with `θα` + present subjunctive form (effectively present tense form for many verbs at A1) (e.g., θα μιλήσω, θα κάνω).",
+        "Possessive Adjectives/Pronouns (weak forms used as adjectives): μου, σου, του, της, του, μας, σας, τους (e.g., το βιβλίο μου).",
+        "Demonstrative Pronouns/Adjectives: αυτός/αυτή/αυτό (this/that), αυτοί/αυτές/αυτά (these/those) - basic forms and agreement.",
+        "Prepositions: Common prepositions of place (σε, από, με, για, χωρίς, μετά, πριν, κοντά σε, μακριά από), time (σε, μετά, πριν), and manner.",
+        "Conjunctions: και (and), ή (or), αλλά (but), γιατί (because), ότι (that).",
+        "Adverbs: Common adverbs of time (τώρα, μετά, χθες, αύριο, σήμερα), place (εδώ, εκεί, έξω, μέσα), frequency (πάντα, συχνά, μερικές φορές, ποτέ), manner (καλά, γρήγορα, αργά)."
+      ],
+      "vocabulary_topics": [
+        "Review A0 vocabulary.",
+        "Personal Identity: expanded family (παππούς, γιαγιά, άντρας, γυναίκα), marital status (παντρεμένος/η), describing people's appearance (ψηλός, κοντός, ξανθός).",
+        "Housing: types of dwellings (διαμέρισμα), rooms, basic furniture & amenities (φως, νερό, τηλέφωνο).",
+        "Location & Environment: βουνό, θάλασσα, ποτάμι, λίμνη, παραλία, δέντρα, λουλούδια, common animals, weather conditions (έχει ήλιο, βρέχει, χιονίζει, φυσάει, κάνει κρύο/ζέστη).",
+        "Free Time & Entertainment: cinema, theatre, concert, museum, music, sports (ποδόσφαιρο, μπάσκετ), hobbies.",
+        "Social Relations: party, celebration, birthday, friends, colleagues, letter, postcard, email, phone call.",
+        "Health: parts of the body (κεφάλι, μάτια, χέρια, πόδια), common ailments (πονάω, έχω πυρετό, βήχω), doctor, hospital.",
+        "Daily Life & Routine Activities: at home (ξυπνάω, κοιμάμαι, τρώω, πλένω, καθαρίζω, μαγειρεύω), days of the week, telling time.",
+        "Shopping: shop names (φούρνος, κρεοπωλείο), items in shops, asking for prices, paying, fresh food.",
+        "Food & Drink: ordering in a taverna/restaurant (μεζές, σαλάτα, ποτό), asking for the bill.",
+        "Education/Work: simple announcements, job titles (δάσκαλος, γιατρός), workplace (γραφείο, μαγαζί).",
+        "Public Services: bank ( κατάθεση, ανάληψη), post office (γράμμα, γραμματόσημο), telephone.",
+        "Travel & Transportation: public transport (τρένο, αεροπλάνο, πλοίο, λεωφορείο), tickets, timetables, directions, hotel (μονόκλινο, δίκλινο δωμάτιο).",
+        "Numbers: 0-100+."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A0 sounds and stress.",
+        "Pronunciation of common verb endings in present and simple past.",
+        "Intonation patterns for questions, statements, and exclamations.",
+        "Practicing difficult sound combinations and diphthongs."
+      ],
+      "listening_comprehension_skills": [
+        "Understand short, clear dialogues about everyday situations (e.g., shopping, ordering food, asking for directions).",
+        "Identify specific information (times, prices, names) in simple announcements."
+      ],
+      "reading_comprehension_skills": [
+        "Understand simple personal letters, postcards, or emails about familiar topics.",
+        "Follow short, simple written instructions or directions.",
+        "Get the gist of short news items or simple stories with visual support."
+      ],
+      "spoken_interaction_skills": [
+        "Engage in simple conversations about daily life, family, work, hobbies.",
+        "Make simple transactions in shops or restaurants.",
+        "Ask for and give directions.",
+        "Make and respond to simple invitations or suggestions."
+      ],
+      "spoken_production_skills": [
+        "Describe people, places, and things in simple terms.",
+        "Talk about past events using basic Past Tense (Aorist).",
+        "Express simple future plans (θα + verb).",
+        "Express basic needs and preferences."
+      ],
+      "written_interaction_skills": [
+        "Write a simple reply to a personal message or invitation."
+      ],
+      "written_production_skills": [
+        "Write a short, simple postcard or email about everyday topics (e.g., a holiday, daily activities).",
+        "Write simple sentences to describe a past event or future plans."
+      ],
+      "cultural_competence_topics": [
+        "Greek café and taverna culture (basic etiquette).",
+        "Common Greek holidays and celebrations (e.g., Easter, name days - basic awareness).",
+        "Politeness in different social contexts (e.g., visiting someone's home)."
+      ],
+      "learning_strategies_suggestions": [
+        "Start making simple sentences about your day.",
+        "Use Greek learning apps with dialogues and vocabulary builders.",
+        "Try to read very simple Greek texts or children's stories."
+      ]
+    },
+    {
+      "level_code": "A2",
+      "level_name": "Ο Μαθητευόμενος Μάγος",
+      "approximate_vocabulary_size": "",
+      "learning_outcomes": [],
+      "language_focus_topics": [],
+      "vocabulary_topics": [],
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
+    },
+    {
+      "level_code": "B1",
+      "level_name": "Ο Ταξιδευτής των Ονείρων",
+      "approximate_vocabulary_size": "",
+      "learning_outcomes": [],
+      "language_focus_topics": [],
+      "vocabulary_topics": [],
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
+    },
+    {
+      "level_code": "B2",
+      "level_name": "Ο Τεχνίτης των Λέξεων",
+      "approximate_vocabulary_size": "",
+      "learning_outcomes": [],
+      "language_focus_topics": [],
+      "vocabulary_topics": [],
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
+    },
+    {
+      "level_code": "C1",
+      "level_name": "Το Φωτεινό Αστέρι",
+      "approximate_vocabulary_size": "",
+      "learning_outcomes": [],
+      "language_focus_topics": [],
+      "vocabulary_topics": [],
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
+    },
+    {
+      "level_code": "C2",
+      "level_name": "Ο Γλωσσικός Χαμαιλέων",
+      "approximate_vocabulary_size": "",
+      "learning_outcomes": [],
+      "language_focus_topics": [],
+      "vocabulary_topics": [],
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
+    }
+  ]
+}
