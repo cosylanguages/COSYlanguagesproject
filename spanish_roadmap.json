@@ -1,0 +1,612 @@
+{
+  "language_name": "Spanish",
+  "levels": [
+    {
+      "level_code": "A0",
+      "level_name": "Primeros Pasos (First Steps)",
+      "approximate_vocabulary_size": "approx. 300-500 words",
+      "learning_outcomes": [
+        "Recognize and reproduce basic sounds of the Spanish alphabet.",
+        "Understand and use familiar everyday expressions and very basic phrases (e.g., greetings, introductions, asking for name).",
+        "Introduce him/herself and others simply.",
+        "Ask and answer simple questions about personal details (name, nationality, origin).",
+        "Interact in a very simple way if the other person speaks slowly, clearly, and is prepared to help.",
+        "Recognize familiar names, words, and very simple sentences on signs or posters."
+      ],
+      "language_focus_topics": [
+        "The Spanish Alphabet (El alfabeto) and pronunciation of letters.",
+        "Basic pronunciation rules: Vowel sounds (a, e, i, o, u - generally pure sounds). Consonant sounds (including ñ, ll, rr, soft/hard c & g).",
+        "Nouns: Introduction to grammatical gender (masculine/feminine - el/la with simple nouns). Singular nouns.",
+        "Articles: Definite articles (el, la - singular). Indefinite articles (un, una - singular).",
+        "Pronouns: Subject pronouns (yo, tú, él, ella, usted - singular).",
+        "Verbs: Present tense of 'ser' (to be - for identity, characteristics) and 'estar' (to be - for location, temporary states) - yo, tú, él/ella/usted forms.",
+        "Verbs: Present tense of common regular -ar verbs (e.g., hablar - to speak) - yo, tú, él/ella/usted forms.",
+        "Basic Sentence Structure: Subject-Verb-Object (e.g., Yo hablo español). Adjective placement (usually after noun).",
+        "Negation: 'no' before the verb (e.g., No hablo inglés).",
+        "Simple Questions: Intonation for yes/no questions. Basic question words (¿Quién? ¿Qué? ¿Dónde? ¿Cuándo? ¿Cómo?)."
+      ],
+      "vocabulary_topics": [
+        "Greetings: Hola, Adiós, Buenos días, Buenas tardes, Buenas noches, Hasta luego, Hasta mañana.",
+        "Introductions & Personal Information: ¿Cómo te llamas? Me llamo... Mucho gusto / Encantado/a. ¿De dónde eres? Soy de... Nacionalidad (basic).",
+        "Courtesy: Gracias, De nada, Por favor, Perdón, Con permiso.",
+        "Basic responses: Sí, No.",
+        "Numbers: 0-10 (cero-diez).",
+        "Colors: rojo, azul, verde, amarillo, negro, blanco (basic).",
+        "Family: madre, padre, hermano, hermana (basic).",
+        "Common Objects: libro, mesa, silla, casa, coche (Spain) / carro (LatAm), teléfono.",
+        "Basic Food & Drink: agua, pan, leche, café, té, queso, manzana.",
+        "Classroom language: Repite, por favor. No entiendo. ¿Cómo se dice...?"
+      ],
+      "pronunciation_focus_topics": [
+        "The five pure vowel sounds (a, e, i, o, u).",
+        "Consonant sounds, including 'ñ', 'll', 'rr'.",
+        "Distinction between 'b' and 'v' (often pronounced similarly in many dialects).",
+        "Soft 'c' (ce, ci) and 'z' vs. hard 'c' (ca, co, cu). Soft 'g' (ge, gi) vs. hard 'g' (ga, go, gu).",
+        "Silent 'h'.",
+        "Word stress (agudas, llanas, esdrújulas - basic rules for identifying stressed syllable).",
+        "Basic intonation for statements and simple questions (rising intonation for yes/no questions)."
+      ],
+      "listening_comprehension_skills": [
+        "Recognize familiar Spanish words and very basic phrases concerning oneself and immediate surroundings when spoken slowly and clearly.",
+        "Understand simple greetings, introductions, and farewells.",
+        "Follow very simple instructions (e.g., 'Mira' - Look, 'Escucha' - Listen)."
+      ],
+      "reading_comprehension_skills": [
+        "Read and identify all letters of the Spanish alphabet.",
+        "Read and understand familiar names, words, and very simple sentences on signs, labels, or in picture books.",
+        "Understand numbers 0-10 written as words."
+      ],
+      "spoken_interaction_skills": [
+        "Greet and respond to greetings appropriately.",
+        "Introduce oneself and ask for someone's name.",
+        "Ask and answer simple questions about personal information (name, nationality).",
+        "Use basic courtesy phrases."
+      ],
+      "spoken_production_skills": [
+        "Say the letters of the Spanish alphabet.",
+        "Pronounce basic Spanish vocabulary with comprehensible pronunciation.",
+        "Produce simple isolated phrases and sentences (e.g., 'Soy Ana.', 'Esto es una mesa.').",
+        "State name, nationality in simple terms."
+      ],
+      "written_interaction_skills": [
+        "Recognize own name and familiar words when written."
+      ],
+      "written_production_skills": [
+        "Write all letters of the Spanish alphabet (uppercase and lowercase).",
+        "Write one's name and other simple familiar words in Spanish.",
+        "Copy familiar words and short sentences."
+      ],
+      "cultural_competence_topics": [
+        "Common greeting customs in Spanish-speaking countries (e.g., handshakes, 'dos besos' in Spain - awareness).",
+        "Basic awareness of formal (usted) vs. informal (tú) 'you'.",
+        "Importance of politeness and courtesy.",
+        "General awareness of Spain and Latin America as Spanish-speaking regions."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice Spanish vowel sounds to ensure clarity.",
+        "Use flashcards with pictures and Spanish words.",
+        "Listen to simple Spanish songs for children or basic dialogues.",
+        "Label objects in your home with their Spanish names."
+      ]
+    },
+    {
+      "level_code": "A1",
+      "level_name": "Joven Explorador / Exploradora (Young Explorer)",
+      "approximate_vocabulary_size": "approx. 500-700 words",
+      "learning_outcomes": [
+        "Understand and use familiar everyday expressions and frequently used phrases related to areas of most immediate relevance (e.g., basic personal and family information, shopping, local geography, telling time).",
+        "Communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar matters.",
+        "Describe in simple terms aspects of his/her background, immediate environment, and matters in areas of immediate need (e.g., likes/dislikes, daily routine).",
+        "Read very short, simple texts, e.g., advertisements, simple menus, personal messages.",
+        "Write short, simple notes and messages, like a postcard or a simple email."
+      ],
+      "language_focus_topics": [
+        "Review A0: Alphabet, basic pronunciation, ser/estar, -ar verbs (present), articles, gender.",
+        "Nouns: Plural of nouns (-s, -es). Agreement with articles and adjectives.",
+        "Adjectives: Agreement in gender and number with nouns. Position of adjectives (usually after the noun).",
+        "Verbs: Present tense of regular -er and -ir verbs (e.g., comer, vivir).",
+        "Verbs: Common irregular verbs in present tense (tener - to have, ir - to go, querer - to want, poder - can/be able to, hacer - to do/make).",
+        "Verbs: 'Gustar' and similar verbs (e.g., Me gusta el chocolate).",
+        "Pronouns: Subject pronouns (nosotros, vosotros, ellos, ellas, ustedes). Object pronouns (me, te, lo/la - direct, singular - basic introduction).",
+        "Possessive adjectives (mi, tu, su, nuestro, vuestro, su - singular and plural forms).",
+        "Demonstrative adjectives and pronouns (este, ese, aquel and their feminine/plural forms).",
+        "Prepositions of place (en, sobre, debajo de, al lado de, entre, cerca de, lejos de).",
+        "Adverbs of frequency (siempre, a veces, nunca).",
+        "Numbers: 0-100."
+      ],
+      "vocabulary_topics": [
+        "Review A0 vocabulary.",
+        "Personal information: Family members (more detail: abuelo/a, tío/a, primo/a), age, profession (common ones).",
+        "Daily routine: Describing typical daily activities (levantarse, desayunar, ir al trabajo/escuela, almorzar, cenar, acostarse).",
+        "Food & Drink: Common food items, drinks, meals (desayuno, almuerzo, cena), ordering in a restaurant.",
+        "Shopping: Types of shops (tienda, supermercado, mercado), common items, prices, quantities, asking for things.",
+        "Places in town: calle, plaza, parque, cine, museo, iglesia, ayuntamiento, correos, banco, farmacia, hotel, estación, aeropuerto.",
+        "Transport: autobús, tren, metro, taxi, avión, bicicleta. Buying tickets, asking for departure/arrival times.",
+        "Time: Telling the time, days of the week, months, seasons, dates.",
+        "Weather: Describing weather conditions (hace calor/frío, llueve, nieva, está nublado, hace sol/viento).",
+        "Hobbies & interests (leer, ver la tele, escuchar música, bailar, cocinar, viajar, deportes).",
+        "Clothing: Common items of clothing and accessories (camisa, pantalones, falda, vestido, zapatos, sombrero, chaqueta)."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A0 sounds and stress rules.",
+        "Diphthongs and triphthongs (e.g., bien, ciudad, buey).",
+        "Linking sounds between words (sinalefa).",
+        "Intonation of exclamatory sentences and more varied question types.",
+        "Regional variations (brief mention of seseo/ceceo/distinción if applicable to learning context, e.g., Peninsular vs Latin American Spanish)."
+      ],
+      "listening_comprehension_skills": [
+        "Understand frequently used words and phrases related to personal details, family, shopping, local area, when spoken relatively slowly and clearly.",
+        "Grasp the main point in short, clear, simple messages and announcements (e.g., in a shop, on public transport).",
+        "Understand simple questions and instructions related to everyday situations and familiar topics."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short, simple texts on familiar matters (e.g., simple menus, advertisements, public signs, short personal messages or emails).",
+        "Find specific, predictable information in everyday material (e.g., times, prices, names on a list).",
+        "Understand short, simple personal letters or postcards from friends or family."
+      ],
+      "spoken_interaction_skills": [
+        "Interact in simple, routine situations (e.g., basic shopping, ordering food, asking for directions, checking into a hotel).",
+        "Ask and answer questions about familiar topics (daily life, hobbies, work, family, preferences).",
+        "Make and respond to simple suggestions, invitations, or offers.",
+        "Ask for and give basic information about time, quantity, and price."
+      ],
+      "spoken_production_skills": [
+        "Describe his/her family and other people, living conditions, educational background, and daily routine in simple terms.",
+        "Talk about likes and dislikes.",
+        "Describe simple past events using 'ser'/'estar' in imperfect and basic -ar verbs in preterite (if introduced very simply).",
+        "Express simple future plans using 'ir a' + infinitive."
+      ],
+      "written_interaction_skills": [
+        "Write a simple reply to a personal message, email, or invitation (e.g., accepting/declining, giving simple information)."
+      ],
+      "written_production_skills": [
+        "Write short, simple notes, messages, or postcards (e.g., holiday greetings, thank you note, shopping list).",
+        "Describe a familiar place, person, or daily routine in a few simple, connected sentences.",
+        "Fill in simple forms with personal details (name, address, nationality, date of birth, etc.)."
+      ],
+      "cultural_competence_topics": [
+        "Common forms of address (tú vs. usted in different contexts/regions - basic).",
+        "Meal times and typical foods in Spanish-speaking countries (e.g., tapas in Spain, late dinners).",
+        "Awareness of major holidays and celebrations (e.g., Navidad, Semana Santa in Spain; Día de Muertos in Mexico - basic recognition).",
+        "Importance of family in Hispanic cultures.",
+        "General knowledge about famous landmarks or cities in Spain and Latin America."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice verb conjugations for ser, estar, tener, ir, and regular -ar, -er, -ir verbs.",
+        "Use language learning apps with interactive dialogues and vocabulary exercises.",
+        "Watch Spanish-language cartoons or simple educational videos for children.",
+        "Try to form simple sentences describing your surroundings and daily activities."
+      ]
+    },
+    {
+      "level_code": "A2",
+      "level_name": "Explorador/a Entusiasta (Enthusiastic Explorer)",
+      "approximate_vocabulary_size": "approx. 1000-1500 words",
+      "learning_outcomes": [
+        "Understand sentences and frequently used expressions related to areas of immediate personal relevance (e.g., personal and family information, shopping, local area, employment, past experiences).",
+        "Communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar matters and routine situations.",
+        "Describe in simple terms aspects of his/her background, immediate environment, and matters in areas of immediate need, including past events and future plans.",
+        "Understand short texts such as personal letters, emails, brochures, and simplified articles on familiar subjects.",
+        "Write short, simple notes, messages, and personal letters (e.g., thanking, inviting, giving news, describing experiences)."
+      ],
+      "language_focus_topics": [
+        "Review A1: Present tense (regular & common irregulars), ser/estar, gustar, articles, possessives, demonstratives.",
+        "Past Tenses: Pretérito Perfecto (Present Perfect - he hablado) for recent past/life experiences. Pretérito Indefinido (Simple Past/Preterite) for completed past actions (regular -ar, -er, -ir verbs and common irregulars like ser/ir, dar, ver, hacer, tener, estar, poder, poner, querer, venir, decir, traer). Pretérito Imperfecto (Imperfect) for descriptions, habits, ongoing actions in the past.",
+        "Contrast between Preterite and Imperfect.",
+        "Future: Futuro Simple (Simple Future - hablaré) for predictions, promises, future plans.",
+        "Conditional: Condicional Simple (hablaría) for polite requests, advice, hypothetical situations (basic).",
+        "Pronouns: Direct object pronouns (me, te, lo, la, nos, os, los, las) and Indirect object pronouns (me, te, le, nos, os, les). Placement with conjugated verbs, infinitives, and gerunds. Basic combined object pronouns (e.g., se lo).",
+        "Reflexive verbs (verbos reflexivos) in present and past tenses (e.g., levantarse, ducharse).",
+        "Comparative and Superlative adjectives and adverbs (más...que, menos...que, tan...como, el/la/los/las más...).",
+        "Obligation and necessity: 'tener que' + infinitive, 'hay que' + infinitive, 'deber' + infinitive.",
+        "Prepositions: Wider range of prepositions (por vs. para - basic distinctions).",
+        "Conjunctions: Common coordinating and subordinating conjunctions (y, o, pero, porque, cuando, si, aunque)."
+      ],
+      "vocabulary_topics": [
+        "Review A1 vocabulary.",
+        "Describing people: Physical appearance, personality traits, character, relationships in more detail.",
+        "Housing: Describing different types of housing, rooms, furniture, household chores, simple problems and repairs.",
+        "Food & Drink: More specific food items, ingredients, simple recipes, expressing opinions about food, restaurant interactions.",
+        "Shopping: Clothing, accessories, electronics, gifts; discussing quality, prices, sizes, colors; making complaints or returns.",
+        "Travel & Transport: Planning trips, types of accommodation, booking tickets, asking for/giving directions, at the airport/station, describing travel experiences.",
+        "Health & Body: Describing symptoms, common illnesses, visiting a doctor/dentist/pharmacy, parts of the body, giving simple health advice.",
+        "Work & Study: Describing job/studies in more detail, workplace/school environment, daily tasks and responsibilities, future career plans.",
+        "Leisure & Hobbies: Specific activities, equipment, expressing opinions, making arrangements, discussing past and future leisure activities.",
+        "Nature & Weather: Describing landscapes, flora, fauna, weather conditions and forecasts in more detail, discussing climate.",
+        "Feelings & Emotions: Expressing a wider range of feelings and emotions (joy, sadness, anger, fear, surprise, hope, disappointment).",
+        "Public Services & Daily Life: Using public services (post office, bank), making phone calls, dealing with simple administrative tasks."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A1/A0: Vowel sounds, consonants, stress, basic intonation, diphthongs, sinalefa.",
+        "Intonation patterns in longer sentences and different types of clauses (e.g., conditional, temporal).",
+        "Pronunciation of verb endings in different tenses (Preterite, Imperfect, Future, Conditional).",
+        "Distinguishing between similar-sounding words (homophones or near-homophones if applicable).",
+        "Continued practice with 'rr' and consonant clusters.",
+        "Further awareness of regional pronunciation differences (e.g., 'll'/'y' as yeísmo, aspiration of /s/).",
+        "Rhythm and flow of spoken Spanish."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear, standard speech on familiar everyday topics (e.g., conversations about personal experiences, plans, work, school).",
+        "Follow short, simple narratives or descriptions about familiar subjects.",
+        "Identify specific information in public announcements, simple news reports, or weather forecasts if the language is relatively clear and slow."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short, simple personal letters, emails, or blog posts on familiar topics, including descriptions of events and feelings.",
+        "Find specific, predictable information in everyday materials like brochures, event programs, classified ads, and simple instructions.",
+        "Understand the gist and some details of short, simplified newspaper articles, magazine articles, or website texts on familiar subjects."
+      ],
+      "spoken_interaction_skills": [
+        "Engage in conversations on familiar topics, exchanging information, opinions, feelings, and preferences.",
+        "Handle most common everyday situations when travelling or shopping (e.g., making inquiries, asking for help, dealing with simple problems, making reservations).",
+        "Make and respond to invitations, suggestions, apologies, and thanks with more confidence and detail.",
+        "Discuss past events, experiences, and future plans with others, providing explanations and reasons.",
+        "Express agreement and disagreement politely, giving simple justifications."
+      ],
+      "spoken_production_skills": [
+        "Give simple, connected descriptions of people, places, objects, events, or personal experiences.",
+        "Narrate a simple story or recount events in sequence, using appropriate past tenses (Preterite and Imperfect) and linking words.",
+        "Talk about future plans, intentions, and predictions using appropriate verb forms (ir a + inf, Future Simple).",
+        "Express opinions, likes/dislikes, and preferences with reasons and simple justifications."
+      ],
+      "written_interaction_skills": [
+        "Write simple personal emails, messages, or forum posts to exchange information, make arrangements, invite, thank, apologize, or express feelings."
+      ],
+      "written_production_skills": [
+        "Write short, connected texts on familiar topics (e.g., describing a memorable holiday, a person one admires, a typical weekend).",
+        "Write a simple personal letter or email giving news, describing experiences, or sharing plans.",
+        "Write short instructions, simple reports on familiar procedures, or summaries of simple texts."
+      ],
+      "cultural_competence_topics": [
+        "Understanding and using appropriate forms of address (tú, usted, vosotros/ustedes) in different social contexts and regions.",
+        "Social customs related to meals, invitations, and celebrations in Spanish-speaking countries.",
+        "Awareness of important cultural traditions, festivals, and public holidays (e.g., specific regional festivals, national days).",
+        "Introduction to famous artists, writers, or musicians from Spanish-speaking countries (e.g., Cervantes, Picasso, Frida Kahlo - basic name recognition and main work).",
+        "Understanding common gestures and body language.",
+        "Diversity within the Spanish-speaking world (Spain vs. Latin America - general differences)."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice distinguishing and using Preterite vs. Imperfect for past narrations.",
+        "Read graded readers or simplified authentic texts (news, blogs) in Spanish.",
+        "Watch Spanish-language TV shows, series, or films with subtitles (Spanish if possible), focusing on understanding dialogues.",
+        "Try to write short diary entries, blog posts, or summaries in Spanish, focusing on connecting ideas.",
+        "Engage in conversations with native speakers or language partners, trying to use a wider range of vocabulary and grammar."
+      ]
+    },
+    {
+      "level_code": "B1",
+      "level_name": "Viajero/a Elocuente (Eloquent Traveler)",
+      "approximate_vocabulary_size": "approx. 2000-2500 words",
+      "learning_outcomes": [
+        "Understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc., in Spanish.",
+        "Deal with most situations likely to arise whilst travelling in an area where Spanish is spoken.",
+        "Produce simple connected text on topics which are familiar or of personal interest in Spanish.",
+        "Describe experiences and events, dreams, hopes & ambitions and briefly give reasons and explanations for opinions and plans in Spanish."
+      ],
+      "language_focus_topics": [
+        "Review of A2 grammar: All past tenses (Preterite, Imperfect, Present Perfect), Future, Conditional, object pronouns, reflexive verbs.",
+        "Subjunctive Mood: Present Subjunctive (Presente de Subjuntivo) - formation and use after expressions of will, emotion, doubt, uncertainty, negation, impersonal expressions (es necesario que, es importante que). Use with conjunctions like 'para que', 'antes de que', 'cuando' (for future).",
+        "Imperative Mood (Imperativo): Affirmative and negative commands for tú, usted, nosotros, vosotros, ustedes (regular and common irregulars).",
+        "Past Perfect (Pluscuamperfecto de Indicativo - había hablado) for actions preceding another past action.",
+        "Conditional Perfect (Condicional Perfecto - habría hablado) for unrealized past possibilities/regrets.",
+        "Passive Voice (Voz Pasiva): 'ser' + past participle; passive 'se' constructions (Se venden casas).",
+        "Reported Speech (Estilo Indirecto): Reporting statements, questions, and commands in present and past contexts (basic tense shifts).",
+        "Relative Pronouns: 'que', 'quien/quienes', 'el que/la que/los que/las que', 'cuyo/a/os/as', 'donde'.",
+        "Conjunctions: Wider range of subordinating conjunctions (aunque, mientras, para que, sin que, a pesar de que).",
+        "Adverbs: Formation of adverbs in -mente. Adverbs of manner, degree, time, place.",
+        "Por vs. Para: Further distinctions and uses."
+      ],
+      "vocabulary_topics": [
+        "Work and career: Job descriptions, responsibilities, work environment, applying for jobs, interviews, discussing career paths.",
+        "Education: Educational systems, academic subjects, university life, research, debates, presentations.",
+        "Travel and tourism: Planning complex trips, cultural tourism, adventure travel, independent travel, dealing with problems, sharing detailed travelogues.",
+        "Media and news: Understanding and discussing news articles, TV/radio news, opinion pieces on current events and social issues.",
+        "Culture and arts: Discussing various genres of films, books, music, theatre; analyzing themes, characters, styles; famous artists and their works.",
+        "Health and lifestyle: Discussing health problems, treatments, prevention, mental well-being, fitness routines, nutrition.",
+        "Social and environmental issues: Discussing pollution, climate change, social justice, human rights, volunteering, community projects.",
+        "Personal relationships: Describing friendships, family dynamics, romantic relationships, conflicts, and resolutions.",
+        "Technology and communication: Discussing the impact of technology, social media, digital ethics, online communication.",
+        "Abstract concepts: Expressing ideas related to society, politics, ethics, personal values, beliefs."
+      ],
+      "pronunciation_focus_topics": [
+        "Review of A2 pronunciation: intonation, rhythm, connected speech.",
+        "Intonation in complex sentences, including those with subjunctive and conditional clauses, and reported speech.",
+        "Nuances of regional pronunciation: continued awareness and understanding of common variations (e.g., aspiration of /s/, variations in /x/ (j,g)).",
+        "Maintaining fluency and clear articulation in longer stretches of speech and discussions.",
+        "Stress and intonation in idiomatic expressions and fixed phrases."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear standard speech on familiar matters regularly encountered in work, school, leisure, etc.",
+        "Understand the main points of many radio or TV programs on current affairs or topics of personal or professional interest when the delivery is relatively clear and at a normal pace.",
+        "Follow a lecture or talk on a familiar topic, provided the subject matter is clearly structured and the language is straightforward."
+      ],
+      "reading_comprehension_skills": [
+        "Understand texts that consist mainly of high-frequency everyday or job-related language, as well as some specialized vocabulary in familiar contexts.",
+        "Understand the description of events, feelings, wishes, and opinions in personal letters, emails, and online discussions.",
+        "Read straightforward factual texts, articles, and interviews on topics of personal or professional interest with a good level of comprehension."
+      ],
+      "spoken_interaction_skills": [
+        "Enter unprepared into conversation on topics that are familiar, of personal interest, or pertinent to everyday life with relative ease.",
+        "Deal with most situations likely to arise whilst travelling in a Spanish-speaking area (e.g., transport, accommodation, shopping, health, emergencies).",
+        "Express and sustain personal opinions, providing explanations, arguments, and comments in a clear and coherent manner.",
+        "Participate actively in discussions on familiar topics, making points clearly, responding to others' views, and asking for clarification."
+      ],
+      "spoken_production_skills": [
+        "Produce simple connected text on topics which are familiar or of personal interest, linking ideas with appropriate connectors.",
+        "Narrate a story, describe an experience, or relate the plot of a book or film, detailing reactions, impressions, and main events.",
+        "Describe dreams, hopes, ambitions, and hypothetical situations, giving reasons and explanations.",
+        "Explain plans and arrangements, justifying choices and decisions with some detail."
+      ],
+      "written_interaction_skills": [
+        "Write personal letters, emails, or messages describing experiences, feelings, events, and opinions in some detail, asking for and giving news or advice.",
+        "Respond to formal or informal written communications, providing necessary information, expressing views, or making requests clearly."
+      ],
+      "written_production_skills": [
+        "Write clear, connected texts on a range of familiar subjects or topics of personal interest (e.g., an account of a trip, a film review, a description of a cultural tradition).",
+        "Write descriptions of real or imaginary events and experiences, providing details and personal reflections.",
+        "Write a short formal letter or email for practical purposes (e.g., a letter of complaint, a request for information, a simple job application).",
+        "Express personal viewpoints and arguments on familiar topics in a structured text (e.g., a blog post, a short essay with clear paragraphs)."
+      ],
+      "cultural_competence_topics": [
+        "Understanding different levels of formality and politeness in various social and professional contexts across the Spanish-speaking world.",
+        "Knowledge of important historical and cultural figures from various Spanish-speaking countries and their contributions.",
+        "Awareness of diverse cultural traditions, customs, and social norms in Spain and different Latin American countries.",
+        "Social etiquette in more formal settings, such as business meetings or academic environments.",
+        "Understanding the role of regional identities, languages, and dialects within Spanish-speaking nations.",
+        "Awareness of current events and common topics of discussion in the Hispanic world through media."
+      ],
+      "learning_strategies_suggestions": [
+        "Read authentic Spanish-language materials regularly (news articles, short stories, blogs, magazine articles).",
+        "Practice using the subjunctive mood in different contexts through exercises and real communication.",
+        "Watch Spanish-language films, TV series, or documentaries with Spanish subtitles to improve listening comprehension and exposure to natural speech.",
+        "Engage in more complex discussions with native speakers or language partners, focusing on expressing and defending opinions, and understanding different viewpoints.",
+        "Write longer, structured texts like essays, reviews, or detailed personal narratives, and seek feedback on grammar, vocabulary, and coherence."
+      ]
+    },
+    {
+      "level_code": "B2",
+      "level_name": "Orador/a Perspicaz (Insightful Speaker)",
+      "approximate_vocabulary_size": "approx. 4000-6000 words",
+      "learning_outcomes": [
+        "Understand the main ideas of complex texts on both concrete and abstract topics in Spanish, including technical discussions in his/her field of specialisation.",
+        "Interact with a degree of fluency and spontaneity that makes regular interaction with native Spanish speakers quite possible without strain for either party.",
+        "Produce clear, detailed text on a wide range of subjects in Spanish, expressing viewpoints and arguments.",
+        "Explain a viewpoint on a topical issue in Spanish, giving the advantages and disadvantages of various options, and supporting arguments effectively."
+      ],
+      "language_focus_topics": [
+        "Comprehensive review and nuanced application of all indicative tenses, including perfect tenses.",
+        "Subjunctive Mood: Present, Imperfect (Pretérito Imperfecto de Subjuntivo - hablara/hablase), Present Perfect (Pretérito Perfecto de Subjuntivo - haya hablado), and Pluperfect (Pretérito Pluscuamperfecto de Subjuntivo - hubiera/hubiese hablado). All uses in subordinate clauses (noun, adjective, adverbial) and independent clauses (wishes, doubts). Sequence of tenses with subjunctive.",
+        "Conditional Mood: Simple and Perfect, including use in hypothetical past situations.",
+        "If-Clauses (Oraciones Condicionales): All types, including mixed conditionals.",
+        "Passive Voice: All tenses of 'ser' + past participle; passive 'se' and impersonal 'se' constructions with more complex verbs and structures.",
+        "Reported Speech (Estilo Indirecto): Reporting complex statements, questions, commands, suggestions, and exclamations, with accurate tense shifts and changes in pronouns/adverbs.",
+        "Relative Clauses: Restrictive and non-restrictive clauses with all relative pronouns and adverbs (que, quien, el que, el cual, cuyo, donde, cuando, como).",
+        "Verbal Periphrasis (Perífrasis Verbales): Wider range (e.g., estar a punto de, acabar de, volver a, dejar de, seguir + gerund, llevar + gerund).",
+        "Conjunctions and Connectors: Advanced discourse markers for structuring arguments, debates, and formal writing (e.g., sin embargo, no obstante, por consiguiente, en cambio, es decir, además).",
+        "Prepositions: Complex uses, fixed prepositional phrases, verbs that require specific prepositions."
+      ],
+      "vocabulary_topics": [
+        "Abstract concepts: In-depth discussion of societal issues, politics, economics, environment, education, culture, arts, science, technology, philosophy, ethics.",
+        "Expressing nuanced opinions, arguments, justifications, counter-arguments, hypotheses, speculations, and evaluations.",
+        "Vocabulary for formal discussions, debates, presentations, academic writing, and professional communication.",
+        "A wide range of idioms, proverbs, set expressions, and colloquialisms common in contemporary Spanish across different regions.",
+        "Understanding and using different registers of Spanish (formal, neutral, informal, colloquial, elements of technical or academic jargon) with appropriateness.",
+        "Word families and word formation: prefixes, suffixes, compounding, derivation for active vocabulary expansion and understanding complex words.",
+        "Synonyms, antonyms, and paronyms for precise meaning, stylistic variation, register sensitivity, and avoiding repetition.",
+        "Collocations: a broad repertoire of common and less common collocations, including those specific to particular fields or text types.",
+        "Vocabulary related to one's field of specialization or academic interest, including specific terminology, concepts, and theories."
+      ],
+      "pronunciation_focus_topics": [
+        "Fine-tuning intonation for expressing complex attitudes, emotions, and pragmatic functions (e.g., irony, sarcasm, diplomacy, persuasion).",
+        "Mastery of connected speech phenomena (assimilation, elision, linking) for natural, fluent, and rapid delivery.",
+        "Recognition and understanding of a wider range of regional Spanish accents and sociolects, and their key phonetic and prosodic features.",
+        "Maintaining clear articulation, appropriate prosody, and natural rhythm in extended speech, formal presentations, debates, and fast-paced conversations."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech and lectures in Spanish and follow even complex lines of argument, provided the topic is reasonably familiar or related to one's field.",
+        "Understand most TV news, current affairs programs, documentaries, interviews, and talk shows in Spanish.",
+        "Understand the majority of Spanish-language films and plays in standard dialects, including those with idiomatic language, cultural references, or some regional variations."
+      ],
+      "reading_comprehension_skills": [
+        "Read articles and reports concerned with contemporary problems in which Spanish-speaking writers adopt particular stances or viewpoints, identifying attitude, tone, and bias.",
+        "Understand contemporary Spanish and Latin American literary prose, drama, and some poetry, appreciating stylistic features and cultural context.",
+        "Understand specialized articles or texts related to one's field of interest or study with good comprehension of details, arguments, and implications."
+      ],
+      "spoken_interaction_skills": [
+        "Interact with a high degree of fluency and spontaneity, making regular interaction with native Spanish speakers comfortable, natural, and engaging for both parties.",
+        "Take an active and constructive part in discussions on a wide range of familiar and some unfamiliar or abstract topics, accounting for and sustaining viewpoints effectively and persuasively.",
+        "Handle linguistic aspects of negotiation, problem-solving, expressing complaints or compliments persuasively, managing disagreements constructively, and building consensus."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed descriptions and arguments on a wide range of complex subjects, structuring information logically and effectively.",
+        "Explain a viewpoint on a topical issue, outlining advantages and disadvantages of various options, supporting arguments with relevant evidence and examples, and addressing counter-arguments.",
+        "Develop an argument systematically and persuasively, structuring information logically, highlighting significant points, and using appropriate linking devices and rhetorical strategies."
+      ],
+      "written_interaction_skills": [
+        "Write clear, detailed, well-structured, and stylistically appropriate letters or emails on complex subjects, conveying information, ideas, or opinions effectively, persuasively, and adapting style and register to the recipient and purpose.",
+        "Respond to complex inquiries, arguments, proposals, or complaints in writing, addressing all points comprehensively, persuasively, and diplomatically."
+      ],
+      "written_production_skills": [
+        "Write clear, detailed texts (essays, reports, articles, formal letters, proposals) on a wide range of subjects relevant to personal, academic, or professional interests, demonstrating good control of structure and argumentation.",
+        "Summarize information from different spoken and written sources, evaluating and synthesizing arguments coherently and critically.",
+        "Write reviews of films, books, cultural events, or academic works, expressing well-justified opinions and critical evaluations.",
+        "Develop a reasoned and well-supported argument in an essay or report, presenting different viewpoints, analyzing them critically, and drawing logical, insightful conclusions."
+      ],
+      "cultural_competence_topics": [
+        "Deeper understanding of the societies, histories, values, and contemporary issues of various Spanish-speaking countries.",
+        "Ability to understand, appreciate, and discuss cultural references, humor, irony, satire, and allusions in Spanish-language media, literature, and conversation.",
+        "Nuances of social and professional etiquette in diverse contexts across the Hispanic world.",
+        "Understanding different perspectives within Spanish-speaking societies (e.g., regionalism, political views, social class, indigenous cultures) and current cultural trends and debates.",
+        "Knowledge of significant historical events, cultural movements, and their impact on the identity and contemporary life of Spanish-speaking nations."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage regularly with a variety of authentic Spanish-language media (news from different countries, analytical articles and programs, podcasts, films without subtitles, contemporary literature, academic texts).",
+        "Participate actively in debates, discussions, or presentations in Spanish, focusing on fluency, accuracy, complex argumentation, and appropriate register.",
+        "Write analytical essays, reports, research papers (basic), or summaries of complex texts in Spanish, focusing on structure, cohesion, critical analysis, and appropriate academic or professional style.",
+        "Seek detailed feedback on writing and speaking from native speakers or advanced instructors, focusing on idiomaticity, stylistic appropriateness, and rhetorical effectiveness.",
+        "Explore specific areas of interest (e.g., a particular literary genre, a historical period, a specific Latin American country's culture) in depth through Spanish-language resources."
+      ]
+    },
+    {
+      "level_code": "C1",
+      "level_name": "Maestro/a de la Palabra (Master of the Word)",
+      "approximate_vocabulary_size": "approx. 8000-10000 words",
+      "learning_outcomes": [
+        "Can understand a wide range of demanding, longer texts in Spanish, and recognise implicit meaning, irony, and stylistic nuances.",
+        "Can express him/herself fluently and spontaneously in Spanish without much obvious searching for expressions, using complex sentence structures and varied vocabulary with precision.",
+        "Can use language flexibly and effectively for social, academic, and professional purposes in Spanish, adapting style and register with skill.",
+        "Can produce clear, well-structured, detailed text on complex subjects in Spanish, showing controlled use of organisational patterns, connectors, cohesive devices, and rhetorical strategies."
+      ],
+      "language_focus_topics": [
+        "Mastery of the Spanish grammatical system, including all verb aspects, tenses, moods (Indicative, Subjunctive, Conditional, Imperative), voices, and intricate case uses with pronouns and prepositions.",
+        "Sophisticated use of non-finite verb forms (infinitives, gerunds, participles) and verbal periphrases for concise, nuanced, and stylistically varied expression in formal, academic, and literary contexts.",
+        "Advanced use and understanding of impersonal and passive constructions, and their stylistic implications across different genres and registers.",
+        "Mastery of complex sentence syntax, including all types of subordinate clauses (noun, adjective, adverbial - temporal, causal, concessive, conditional, consecutive, final, modal), non-finite constructions, and their interplay for logical coherence and rhetorical effect.",
+        "Stylistic use of word order, inversion, ellipsis, cleft sentences, and other rhetorical figures for emphasis, nuance, focus, and artistic effect.",
+        "Understanding and occasional use of archaic, literary, or highly formal grammatical forms for specific stylistic purposes or characterization.",
+        "Deep understanding of the interaction between morphology, syntax, semantics, and pragmatics in Spanish.",
+        "Advanced use of a wide range of discourse markers, conjunctions, and cohesive devices for structuring sophisticated arguments, narratives, academic texts, and formal speeches with clarity and elegance."
+      ],
+      "vocabulary_topics": [
+        "Extensive vocabulary covering abstract, specialized, technical, and culturally specific topics across a wide range of academic, professional, literary, and artistic domains.",
+        "Nuanced understanding and precise use of synonyms, antonyms, hyponyms, hypernyms, and related lexical items to convey the finest shades of meaning, stylistic effects, and register appropriateness.",
+        "Rich repertoire of idiomatic expressions, proverbs, aphorisms, colloquialisms, regionalisms, and cultural allusions, with a deep understanding of their appropriate context, register, connotations, historical origins, and pragmatic functions.",
+        "Vocabulary for advanced academic and professional purposes, including specialized terminology for research, critical analysis, policy-making, legal discourse, and high-level international communication.",
+        "Advanced word formation: understanding etymology, roots (including Latin and Arabic influences), and complex affixation to deduce meaning, expand vocabulary actively, and appreciate linguistic creativity and evolution.",
+        "Ability to use language creatively, including sophisticated wordplay, and to understand and produce subtle humor, satire, and irony.",
+        "Differentiating and appropriately using various stylistic layers of vocabulary (neutral, formal, informal, literary, technical, historical, poetic, slang) with precision and cultural sensitivity."
+      ],
+      "pronunciation_focus_topics": [
+        "Near-native pronunciation, intonation, rhythm, and stress across all speech styles and registers, with high accuracy, naturalness, and expressiveness.",
+        "Using prosody effectively, subtly, and often artfully to convey complex meanings, attitudes, irony, emotions, and pragmatic functions in a manner appropriate to native-speaker norms.",
+        "Understanding and adapting to a wide range of regional Spanish accents and sociolects, recognizing fine phonetic distinctions and their social or regional implications.",
+        "Maintaining clarity, precision, and natural flow in rapid, complex, or formal speech, including public speaking, academic presentations, artistic performances, and challenging interactive situations."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech in Spanish even when it is not clearly structured, contains dialectal features, rapid colloquialisms, or when relationships are only implied and not explicitly signaled.",
+        "Understand a wide range of television programs, films, plays, public speeches, academic lectures, and complex discussions in Spanish without too much effort, including those with significant regional variations, rapid dialogue, or complex linguistic and cultural content.",
+        "Understand complex technical or academic discussions, even on unfamiliar or highly specialized topics, recognizing speaker's stance, underlying assumptions, and nuanced arguments.",
+        "Recognize, understand, and appreciate a wide range of idiomatic expressions, colloquialisms, cultural references, stylistic variations, and rhetorical devices in spoken Spanish."
+      ],
+      "reading_comprehension_skills": [
+        "Understand long and complex factual, academic, and literary texts in Spanish, appreciating distinctions of style, register, authorial intent, narrative technique, and literary or rhetorical devices.",
+        "Understand specialized articles, academic papers, official documents, legal texts, and longer technical instructions, even outside one's own field of expertise, grasping fine details and implications.",
+        "Recognize and interpret implicit meaning, writer's stance, irony, satire, persuasive techniques, intertextuality, and rhetorical strategies in diverse and challenging text types, including classical and modern literature from various Spanish-speaking regions."
+      ],
+      "spoken_interaction_skills": [
+        "Express him/herself fluently, spontaneously, accurately, appropriately, and often eloquently, using complex language, varied structures, and nuanced vocabulary without obvious searching for expressions.",
+        "Use language flexibly, effectively, creatively, and often persuasively for all social, academic, and professional purposes, adapting register, style, and tone to any situation and audience with ease, precision, and cultural tact.",
+        "Formulate ideas and opinions with precision, depth, and originality, structure arguments logically and persuasively, and relate contributions skilfully, constructively, and often insightfully to those of other speakers in discussions, debates, and formal meetings.",
+        "Mediate, negotiate, persuade, and lead discussions effectively, diplomatically, and strategically in complex or sensitive situations, demonstrating strong intercultural competence and communication skills."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed, well-structured, engaging, persuasive, and often inspiring or memorable descriptions or arguments on complex subjects, integrating sub-themes, developing particular points coherently and persuasively, and rounding off with an appropriate, impactful, and thought-provoking conclusion.",
+        "Give clear, well-structured, compelling, and engaging presentations or speeches on complex subjects, expanding and supporting ideas with sophisticated reasoning, relevant evidence, nuanced analysis, and appropriate rhetorical devices tailored to the audience.",
+        "Adapt style, register, and delivery to any audience and communicative purpose with sophistication, effectiveness, and often charisma or artistic flair."
+      ],
+      "written_interaction_skills": [
+        "Write clear, well-structured, stylistically sophisticated, and contextually appropriate letters, emails, reports, proposals, or other documents on complex subjects, adapting style, tone, and register to the intended reader and purpose with precision, cultural appropriateness, persuasive skill, and often a distinctive voice.",
+        "Respond effectively, persuasively, diplomatically, and comprehensively to complex written communications, addressing all nuances, anticipating counter-arguments, and achieving desired strategic or communicative outcomes."
+      ],
+      "written_production_skills": [
+        "Write clear, well-structured, detailed, engaging, and stylistically refined texts on complex subjects in various genres (essays, research papers, articles, critiques, official reports, literary analyses, creative writing), demonstrating mastery of appropriate academic, professional, or literary conventions and often contributing original thought.",
+        "Write insightful summaries, analyses, critical reviews, or syntheses of professional, academic, or literary works, demonstrating advanced critical thinking, analytical skills, original perspectives, and deep subject matter understanding.",
+        "Show controlled and sophisticated use of organisational patterns, connectors, and cohesive devices to produce coherent, elegant, impactful, and potentially publishable text at a high intellectual or artistic level.",
+        "Employ a wide range of stylistic and rhetorical devices appropriate to the text type and communicative goal, demonstrating a mature command of register, style, linguistic creativity, and persuasive power."
+      ],
+      "cultural_competence_topics": [
+        "In-depth, critical, and comparative understanding of contemporary societies in Spain and Latin America, including complex social, political, economic, and ethical issues, their historical roots, regional variations, and global interconnections.",
+        "Critical appreciation, analysis, and interpretation of Spanish and Latin American literature (from various periods and genres), cinema, arts, music, philosophy, and intellectual traditions, understanding their context, significance, and influence.",
+        "Ability to interpret, discuss, critique, and potentially create cultural subtext, humor, irony, satire, allusions, and socio-cultural references with profound insight, cultural fluency, and often originality.",
+        "Understanding of diverse cultural perspectives, regional identities, linguistic variations (dialects, sociolects), and social dynamics within the Hispanic world, and their historical development and contemporary relevance."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage with a wide variety of highly authentic, complex, and challenging Spanish-language texts and media from diverse fields and regions, including academic research, classical and contemporary literature, specialized professional publications, and avant-garde artistic expressions.",
+        "Practice writing different genres of complex and sophisticated texts, focusing on stylistic mastery, persuasive argumentation, rhetorical effectiveness, original thought, and potential for publication or significant impact.",
+        "Participate actively and confidently in high-level academic, professional, or public discussions, presentations, and debates in Spanish, aiming for precision, eloquence, leadership, and intellectual contribution.",
+        "Focus on advanced stylistic aspects of the Spanish language, including register, tone, rhetorical devices, nuanced vocabulary, complex syntax, and comparative analysis with other Romance languages or linguistic theory.",
+        "Conduct independent research, undertake significant projects, or engage in creative work requiring advanced analytical, communicative, critical, and innovative use of the Spanish language."
+      ]
+    },
+    {
+      "level_code": "C2",
+      "level_name": "Sabio/a Universal (Universal Sage)",
+      "approximate_vocabulary_size": "approx. 15000+ words",
+      "learning_outcomes": [
+        "Can understand with ease virtually everything heard or read in Spanish, including dialectal variations, highly colloquial speech, specialized jargon, and rapid, nuanced discourse.",
+        "Can summarise information from different spoken and written Spanish sources, reconstructing arguments and accounts in a coherent, nuanced, critical, and often original and insightful presentation.",
+        "Can express him/herself spontaneously, very fluently, precisely, eloquently, and creatively in Spanish, differentiating the finest shades of meaning even in the most complex, abstract, or sensitive situations, often with wit or rhetorical skill.",
+        "Can use Spanish effectively, appropriately, artistically, and often authoritatively for all social, academic, and professional purposes with the highest degree of precision, style, cultural attunement, intellectual depth, and communicative impact."
+      ],
+      "language_focus_topics": [
+        "Complete and intuitive mastery of all Spanish grammatical structures, including rare, complex, archaic, literary, and dialectal forms, and their stylistic, pragmatic, and historical implications, allowing for creative and unconventional usage.",
+        "Sophisticated, flexible, creative, and often innovative use of syntax for optimal stylistic effect, emphasis, nuance, and rhetorical impact across all genres and communicative contexts, including manipulation of standard structures for artistic or persuasive ends.",
+        "Full command of all moods (Indicative, Subjunctive, Conditional, Imperative) and their subtle applications in expressing complex hypothetical reasoning, subjective stance, politeness, emotional coloring, persuasive intent, and literary effects.",
+        "Nuanced understanding and masterful application of aspectual distinctions, the interplay of tense, aspect, and mood, and their role in complex discourse, narrative structure, and conveying subtle temporal or psychological perspectives.",
+        "Advanced, flexible, and often innovative use of nominalization, participial constructions (including absolute constructions), and infinitive/gerund clauses for sophisticated, concise, elegant, and impactful expression, demonstrating a deep understanding of syntactic possibilities.",
+        "Complete and intuitive control over a vast range of discourse markers, conjunctions, and cohesive devices to create highly articulate, fluent, logically structured, stylistically varied, and rhetorically powerful texts and speech of any genre and complexity, often with elegance and originality.",
+        "Understanding, appreciation, critical analysis, and creative or scholarly use of a wide array of rhetorical figures and stylistic devices common in Spanish literature, formal discourse, journalism, oratory, folklore, and everyday wit, potentially inventing new forms.",
+        "Ability to analyze, deconstruct, explain, critique, and manipulate the most complex grammatical structures encountered in any authentic Spanish text or discourse with expert precision, linguistic insight, often pedagogical skill, and comparative linguistic awareness."
+      ],
+      "vocabulary_topics": [
+        "Extensive, profound, dynamic, and often specialized vocabulary that equals or surpasses that of an educated native Spanish speaker, including very low-frequency words, cutting-edge terminology across diverse academic and professional fields, neologisms, and historical/archaic lexis relevant to cultural heritage and literary scholarship.",
+        "Full command of idiomatic language: idioms, proverbs, aphorisms, colloquialisms, regionalisms, cultural sayings, and fixed expressions, with a deep understanding of their origins, evolution, connotations, regional variations, and appropriate, nuanced, and often creative or humorous usage in any context.",
+        "Ability to understand, use, and differentiate the finest shades of meaning, connotations, and register for virtually any lexical item, including formal, literary, specialized, historical, archaic, dialectal, and newly coined vocabulary, often with etymological awareness.",
+        "Mastery of word formation processes, including understanding of Latin, Arabic, and indigenous influences, and the principles of Spanish morphology, to interpret, analyze, and creatively use complex words and coin new terms where appropriate and effective.",
+        "Vocabulary for discussing any abstract, philosophical, scientific, literary, artistic, and highly specialized topic with precision, depth, eloquence, originality, authority, and often interdisciplinary insight and critical perspective.",
+        "Appreciation and deep understanding of etymology, semantic evolution, sociolinguistic variation, lexicographical principles, and the history of the Spanish language.",
+        "Recognition, understanding, critical assessment, and appropriate use or interpretation of a wide range of regionalisms, dialectal features, and sociolects within the Spanish-speaking world, potentially contributing to their study, preservation, or creative use."
+      ],
+      "pronunciation_focus_topics": [
+        "Indistinguishable-from-native or exceptionally high-level native-like pronunciation, intonation, stress, and rhythm across all registers and styles of Spanish, with effortless control, naturalness, and often expressive artistry or regional authenticity.",
+        "Ability to subtly, effectively, creatively, and authentically vary prosody to convey complex attitudes, emotions, irony, humor, sarcasm, and other pragmatic meanings with native-like precision, naturalness, and often performative or rhetorical skill.",
+        "Effortless and natural handling of all aspects of connected speech, even at very rapid native speed, in challenging acoustic conditions, or with overlapping, highly colloquial, or diverse dialectal speech.",
+        "Ability to understand, analyze, and, if desired, accurately reproduce, playfully imitate, or teach various regional Spanish accents and sociolectal variations with high fidelity, cultural awareness, linguistic insight, and phonetic precision."
+      ],
+      "listening_comprehension_skills": [
+        "Understand any kind of spoken Spanish, whether live or broadcast, even when delivered at fast native speed, with significant background noise, multiple speakers, strong dialectal variations, highly specialized content, or on unfamiliar, abstract, or highly complex topics, including implied or unstated information.",
+        "Follow and critically evaluate complex interactions between multiple speakers in any setting, identifying subtle cues, implicit meanings, speaker intentions, interpersonal dynamics, cultural undertones, rhetorical strategies, logical fallacies, and manipulative language.",
+        "Appreciate and analyze stylistic nuances, register shifts, irony, humor, sarcasm, and implicit meaning in any spoken discourse, including culturally specific references, wordplay, advanced rhetoric, artistic performances, and historical recordings."
+      ],
+      "reading_comprehension_skills": [
+        "Understand, critically interpret, and analyze all forms of written Spanish, including highly abstract, structurally or linguistically complex texts such as legal codes, philosophical treatises, advanced scientific articles, historical documents, and literary works from various periods and genres (including classical, modern, contemporary, experimental, and dialectal literature).",
+        "Appreciate and analyze fine distinctions of style, tone, authorial intent, narrative technique, literary or rhetorical devices, intertextuality, and historical context across all genres and historical periods.",
+        "Read and understand texts from different historical periods and diverse cultural contexts within the Spanish-speaking world, including texts with significant linguistic, stylistic, conceptual, paleographic, or philological challenges."
+      ],
+      "spoken_interaction_skills": [
+        "Take part effortlessly, fluently, engagingly, persuasively, articulately, and often leadingly or inspiringly in any conversation, discussion, debate, or negotiation, using idiomatic expressions, colloquialisms, and cultural references naturally, appropriately, creatively, humorously, or with rhetorical skill and intellectual depth.",
+        "Express him/herself with precision, eloquence, charisma, originality, and often profound insight, differentiating the finest shades of meaning, and reformulating ideas to overcome any communication difficulty smoothly, imperceptibly, effectively, and often by enhancing the discourse, leading it in new directions, or resolving complex issues.",
+        "Argue a complex case, negotiate, persuade, mediate, and lead discussions effectively, diplomatically, strategically, and often inspirationally in any formal or informal setting, adapting strategies dynamically and with exceptional cultural astuteness, intellectual agility, and ethical consideration.",
+        "Adapt language, style, and communicative strategies appropriately, dynamically, creatively, and masterfully to any audience, context, and purpose with complete flexibility, sophistication, impact, and often artistic or intellectual flair."
+      ],
+      "spoken_production_skills": [
+        "Present a clear, smoothly-flowing, well-structured, engaging, persuasive, and often memorable, inspiring, or transformative description, argument, or narrative in an appropriate and compelling style on any complex subject, demonstrating exceptional depth of thought, originality, critical insight, and intellectual command.",
+        "Develop points cohesively, logically, and persuasively, with masterful use of organizational patterns, a wide range of sophisticated cohesive devices, and impactful rhetorical strategies tailored to the audience and achieving specific communicative, persuasive, or artistic goals.",
+        "Deliver presentations, lectures, or speeches with clarity, precision, eloquence, charisma, and engaging style, adapting to audience feedback, managing questions adeptly, inspiring action or thought, demonstrating subject matter expertise, and potentially contributing new knowledge, perspectives, or artistic interpretations.",
+        "Use rhetorical devices effectively, creatively, strategically, and with significant impact, demonstrating exceptional oratorical skill, linguistic artistry, and intellectual leadership."
+      ],
+      "written_interaction_skills": [
+        "Write any type of correspondence or document with complete command of style, tone, register, persuasive techniques, rhetorical strategies, and cultural nuances appropriate to the recipient, purpose, and context, achieving specific communicative and strategic goals with precision, impact, and often elegance, authority, or creative flair.",
+        "Engage in complex written discussions, collaborations, or negotiations, conveying nuanced ideas effectively, persuasively, diplomatically, strategically, and with intellectual rigor, potentially shaping outcomes, policy, or scholarly discourse."
+      ],
+      "written_production_skills": [
+        "Write clear, smoothly-flowing, complex, sophisticated, and potentially publishable or canonical texts (academic research, literary works, critical analyses, policy papers, journalistic investigations, philosophical treatises, legal arguments) in an appropriate and effective style, demonstrating originality, critical insight, intellectual depth, stylistic mastery, and potentially lasting value or influence.",
+        "Select and use a vast range of linguistic resources to express ideas precisely, persuasively, artistically, or humorously, with stylistic versatility, creativity, elegance, and often profound impact or originality.",
+        "Demonstrate mastery of organizational patterns, paragraphing, and cohesive devices to ensure clarity, coherence, logical flow, and aesthetic impact at the highest professional, academic, or literary level, potentially setting new standards or innovating within genres.",
+        "Write insightful summaries, critiques, or syntheses of complex information from multiple sources, adding original perspectives, critical analysis, demonstrating intellectual leadership, contributing to knowledge, offering creative reinterpretation, or formulating new theories."
+      ],
+      "cultural_competence_topics": [
+        "Profound, nuanced, critical, comparative, and often scholarly or creative understanding of the diversity of Spanish-speaking and Hispanic cultures, societies, histories, arts, literatures, philosophical traditions, and intellectual movements, including their evolution, global impact, contemporary manifestations, and future possibilities.",
+        "Ability to function with complete ease, cultural sensitivity, adaptability, leadership, and often as a cultural authority, innovator, or bridge in any Spanish-speaking environment or context, navigating complex social and intercultural dynamics with exceptional astuteness, empathy, and influence.",
+        "Capacity to act as a cultural interpreter, mediator, critic, scholar, or artist, explaining subtle and complex cultural nuances effectively and insightfully to diverse audiences, fostering deep cross-cultural understanding, contributing to cultural discourse, or creating new cultural forms within or about Hispanic cultures.",
+        "Deep and critical understanding of contemporary socio-political issues, cultural debates, intellectual currents, and historical narratives in Spain, Latin America, and other Hispanic communities, with the ability to engage critically, contribute meaningfully, offer original perspectives, influence discourse, and potentially shape policy or cultural production."
+      ],
+      "learning_strategies_suggestions": [
+        "Maintain and expand language proficiency through continuous, high-level intellectual, professional, or creative engagement with diverse and complex authentic Spanish-language materials, interactions, and original production, often at a pioneering or leadership level.",
+        "Engage in original scholarly research, critical analysis, literary creation, translation, or policy development involving sophisticated Spanish language and cultural understanding, potentially publishing or presenting work to international audiences.",
+        "Contribute to Spanish-language publications, academic conferences, professional organizations, or cultural institutions at an expert, leadership, or creative innovator level, potentially shaping the future of the language, its study, or its artistic expression.",
+        "Reflect critically on and refine personal language use for optimal effectiveness, stylistic innovation, persuasive power, and artistic expression, possibly through teaching at advanced university levels, mentoring future scholars/artists, or engaging in public intellectual discourse.",
+        "Explore highly specialized, interdisciplinary, or emerging areas of interest in great depth in Spanish, contributing original research, analysis, creative work, or policy that advances knowledge, cultural expression, or societal well-being within the Hispanic world or globally."
+      ]
+    }
+  ]
+}
