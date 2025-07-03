@@ -14,6 +14,9 @@ const WritingQuestionExercise = ({ language, days, exerciseKey }) => {
   const [feedback, setFeedback] = useState({ message: '', type: '' });
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  // isAnswerCorrect and isRevealed are not strictly necessary for disabling ExerciseControls
+  // as this exercise type doesn't have a single "correct" answer or a "reveal" state.
+  // However, passing them (e.g., as false) won't harm.
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
@@ -64,11 +67,9 @@ const WritingQuestionExercise = ({ language, days, exerciseKey }) => {
       setFeedback({ message: t('feedback.pleaseWriteAnswer', 'Please write an answer before submitting.'), type: 'warning' });
       return;
     }
-    // In a real app, this might submit to a backend or local storage.
-    // For now, just acknowledge submission.
     setFeedback({ message: t('feedback.answerSubmittedWriting', 'Answer submitted. Remember to check for grammar and clarity.'), type: 'success' });
-    // Consider if the text area should be cleared or disabled after submission.
-    // For now, it remains editable for self-review.
+    // The ExerciseControls 'Check' button (Submit) will not be automatically disabled by isAnswerCorrect
+    // as we don't set isAnswerCorrect=true here. This is fine for a submit button.
   };
   
   const currentQuestionText = questions[currentQuestionIndex] || "";
@@ -133,15 +134,18 @@ const WritingQuestionExercise = ({ language, days, exerciseKey }) => {
       <FeedbackDisplay message={feedback.message} type={feedback.type} />
       
       <ExerciseControls
-        onCheckAnswer={handleSubmitAnswer} // "Check" button will act as "Submit"
+        onCheckAnswer={handleSubmitAnswer} 
         onShowHint={showHint}
-        onNextExercise={fetchQuestionsForWriting} // To get a new set of questions
+        onRandomize={fetchQuestionsForWriting} // Randomize gets a new set of questions
+        onNextExercise={fetchQuestionsForWriting} // Next Exercise also gets a new set of questions
+        // isAnswerCorrect and isRevealed are not used to disable controls here, as "Submit" should remain active.
         config={{
           showCheck: true, 
-          checkButtonText: t('buttons.submitAnswer', 'Submit Answer'), // Custom text for check button
-          showReveal: false, // No direct answer to reveal for this type
+          checkButtonText: t('buttons.submitAnswer', 'Submit Answer'), 
+          showReveal: false, 
           showHint: true,
-          showNext: true, // "Next Exercise" button to refresh all questions
+          showRandomize: true, // Allow fetching new questions
+          showNext: true, 
         }}
       />
     </div>
