@@ -9,10 +9,11 @@
 }
 
 .practice-category-label {
-  font-size: var(--font-size-h4, 1.125rem); /* A bit smaller than h3 */
-  color: var(--color-text-headings, #343a40);
-  margin-bottom: var(--spacing-sm, 0.5rem); /* Space below the label itself */
-  text-align: center;
+  /* Inherits from .unified-label: font-size, font-weight, color, margin-bottom */
+  /* Specific overrides for PracticeCategoryNav label: */
+  text-align: center; /* Keep this centered */
+  /* font-size: var(--font-size-h4, 1.125rem); /* Optionally override if needed, but unified aims for consistency */
+  /* color: var(--color-text-headings, #343a40); /* Optionally override */
 }
 
 .practice-category-buttons {
@@ -37,12 +38,14 @@
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.1s ease;
   min-width: 100px; /* Ensure buttons have some minimum width */
   text-align: center;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.1));
 }
 
 .practice-category-btn:hover {
-  background-color: var(--color-primary-dark, #0056b3); /* --primary-hover-color */
-  border-color: var(--color-primary-dark, #0056b3); /* --primary-hover-color */
-  transform: translateY(-1px);
+  background-color: var(--color-primary-dark, #0056b3); 
+  border-color: var(--color-primary-dark, #0056b3); 
+  transform: translateY(-3px) scale(1.07) rotate(-2deg); /* More dynamic: lift, scale, rotate */
+  box-shadow: var(--shadow-lg, 0 6px 12px rgba(0,0,0,0.2)); /* Stronger shadow */
 }
 
 .practice-category-btn.active {
