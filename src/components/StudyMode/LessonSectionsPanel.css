@@ -57,3 +57,16 @@
   font-size: var(--font-size-sm, 0.875rem);
   padding: var(--spacing-sm, 0.5rem) 0;
 }
+
+.section-item.active-section .section-link-button {
+  background-color: var(--color-primary, #007bff);
+  color: var(--color-text-on-primary, #fff);
+  border-color: var(--color-primary-dark, #0056b3);
+  font-weight: bold;
+}
+
+.section-item.active-section .section-link-button:hover,
+.section-item.active-section .section-link-button:focus {
+  background-color: var(--color-primary-dark, #0056b3); /* Darken on hover/focus for active */
+  border-color: var(--color-primary-darker, #004085);
+}
