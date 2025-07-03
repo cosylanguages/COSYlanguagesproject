@@ -119,6 +119,7 @@ const enTranslations = {
   "studyMode.toolsTitle": "Tools",
   "studyMode.toolNotes": "📝 Notes",
   "studyMode.toolIrregularVerbs": "📚 Irregular Verbs",
+  "studyMode.toolConjugations": "📚 Conjugations", // New key for ToolsPanel
   "studyMode.toolDictionary": "📖 Dictionary (Soon)",
 
   // For NotesPanel.js
@@ -215,7 +216,28 @@ const enTranslations = {
     'Teach the word to someone else!',
     'Use gestures or draw the word!',
     'Recall is stronger if you test yourself after a break!'
-  ]
+  ],
+
+  // For IrregularVerbsTool.js
+  "loadingIrregularVerbs": "Loading irregular verbs...",
+  "irregularVerbsFileError": "Irregular verbs data not found for {lang}.", // Kept for other potential errors, though 404 is now handled differently
+  "irregularVerbsLoadHttpError": "Failed to load irregular verbs data: {status}.",
+  "irregularVerbsNotAvailableForLang": "Irregular verbs data is not yet available for {lang}.",
+  "irregularVerbsToolTitle": "Irregular Verbs List",
+  "conjugationsToolTitle": "Conjugations List", // New key for IrregularVerbsTool title
+  "searchVerbsPlaceholder": "Search verbs...",
+  "noIrregularVerbsFound": "No irregular verbs found for this language or search term.",
+  "verbHeaderBase": "Base",
+  "verbHeaderPastSimple": "Past Simple",
+  "verbHeaderPastParticiple": "Past Participle",
+  "verbHeaderTranslation": "Translation",
+
+  // For ExerciseControls.js in Freestyle mode
+  "freestyle.controls.check": "✔️ Check",
+  "freestyle.controls.reveal": "🤫 Reveal Answer",
+  "freestyle.controls.hint": "💡 Hint",
+  "freestyle.controls.randomize": "🎲 Randomize",
+  "freestyle.controls.next": "➡️ Next Exercise"
 };
 
 export default enTranslations;
