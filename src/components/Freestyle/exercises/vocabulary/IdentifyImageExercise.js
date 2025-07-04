@@ -135,7 +135,7 @@ const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
       <h3>{t('titles.whatIsThis', 'What is this?')}</h3>
       <img
         src={imagePath}
-        alt={currentImageItem.alt || "Identify this image"}
+        alt={currentImageItem.alt || t('altText.identifyImage', "Identify this image")}
         style={{ maxWidth: '300px', maxHeight: '300px', margin: '15px auto', display: 'block', border: '1px solid #ccc' }}
       />
       <input
