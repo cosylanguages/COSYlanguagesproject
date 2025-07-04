@@ -1,646 +1,402 @@
 [
   {
-    "term": "heart attack",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Health and illness"
+    "id": "attachment",
+    "word": "attachment",
+    "partOfSpeech": "n",
+    "definition": "A computer file appended to an email.",
+    "example": "I’m sending an attachment with this email.",
+    "level": "b1"
+  },
+  {
+    "id": "beautifully",
+    "word": "beautifully",
+    "partOfSpeech": "adv",
+    "definition": "In a way that pleases the senses or mind aesthetically.",
+    "example": "My niece plays the piano beautifully.",
+    "level": "b1"
+  },
+  {
+    "id": "become",
+    "word": "become",
+    "partOfSpeech": "v",
+    "definition": "Begin to be.",
+    "example": "I wish my brother hadn’t become a Goth.",
+    "level": "b1"
+  },
+  {
+    "id": "bite",
+    "word": "bite",
+    "partOfSpeech": "v",
+    "definition": "(Of a person or animal) use the teeth to cut into something in order to eat it or grip it.",
+    "example": "I bite my nails when I’m nervous.",
+    "level": "b1"
+  },
+  {
+    "id": "carefully",
+    "word": "carefully",
+    "partOfSpeech": "adv",
+    "definition": "In a way that deliberately avoids harm or errors; cautiously.",
+    "example": "He wrote down the phone number carefully.",
+    "level": "b1"
+  },
+  {
+    "id": "casually",
+    "word": "casually",
+    "partOfSpeech": "adv",
+    "definition": "In a relaxed and informal way.",
+    "example": "She dresses casually at the weekends.",
+    "level": "b1"
+  },
+  {
+    "id": "choose",
+    "word": "choose",
+    "partOfSpeech": "v",
+    "definition": "Pick out (someone or something) as being the best or most appropriate of two or more alternatives.",
+    "example": "Choose the recipes that you’d like to try.",
+    "level": "b1"
+  },
+  {
+    "id": "climb",
+    "word": "climb",
+    "partOfSpeech": "v",
+    "definition": "Go or come up (a slope, stairs, or other upright structure).",
+    "example": "I’d like to climb a mountain next year.",
+    "level": "b1"
+  },
+  {
+    "id": "download",
+    "word": "download",
+    "partOfSpeech": "v",
+    "definition": "Copy (data) from one computer system to another, typically over the internet.",
+    "example": "When I find a good song I like to download the lyrics.",
+    "level": "b1"
+  },
+  {
+    "id": "fashionably",
+    "word": "fashionably",
+    "partOfSpeech": "adv",
+    "definition": "In a way that conforms to the current style.",
+    "example": "He dresses fashionably.",
+    "level": "b1"
+  },
+  {
+    "id": "go_on_a_safari",
+    "word": "go on a safari",
+    "partOfSpeech": "v phr",
+    "definition": "Undertake an expedition to observe or hunt animals in their natural habitat, especially in East Africa.",
+    "example": "Would you like to go on a safari?",
+    "level": "b1"
+  },
+  {
+    "id": "incredibly_slowly",
+    "word": "incredibly slowly",
+    "partOfSpeech": "adv phr",
+    "definition": "At a speed that is difficult to believe.",
+    "example": "People in this city speak incredibly slowly.",
+    "level": "b1"
+  },
+  {
+    "id": "learn",
+    "word": "learn",
+    "partOfSpeech": "v",
+    "definition": "Gain or acquire knowledge of or skill in (something) by study, experience, or being taught.",
+    "example": "I want to learn to cook before I leave home.",
+    "level": "b1"
   },
   {
-    "term": "memory stick",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Communications"
+    "id": "log_in",
+    "word": "log in",
+    "partOfSpeech": "phr v",
+    "definition": "Go through the procedures to begin use of a computer system.",
+    "example": "You need to log in before you can use the internet.",
+    "level": "b1"
   },
   {
-    "term": "voicemail",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Your phone"
+    "id": "online",
+    "word": "online",
+    "partOfSpeech": "adj",
+    "definition": "Connected to, served by, or available through a system and especially a computer system or telecommunications system (such as the internet).",
+    "example": "How often do you go online?",
+    "level": "b1"
   },
   {
-    "term": "package holiday",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Holidays"
+    "id": "perfectly",
+    "word": "perfectly",
+    "partOfSpeech": "adv",
+    "definition": "In a manner or way that could not be better.",
+    "example": "My sister speaks Spanish perfectly.",
+    "level": "b1"
   },
   {
-    "term": "western",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Cinema"
+    "id": "politely",
+    "word": "politely",
+    "partOfSpeech": "adv",
+    "definition": "In a respectful and considerate manner.",
+    "example": "You must speak politely when working with customers.",
+    "level": "b1"
   },
   {
-    "term": "roast beef",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "UK culture"
+    "id": "quite_dangerously",
+    "word": "quite dangerously",
+    "partOfSpeech": "adv phr",
+    "definition": "In a manner that is somewhat likely to cause harm or injury.",
+    "example": "I think people drive quite dangerously in my country.",
+    "level": "b1"
   },
   {
-    "term": "murder",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Crime"
+    "id": "search_for",
+    "word": "search for",
+    "partOfSpeech": "v",
+    "definition": "Try to find something by looking or otherwise seeking carefully and thoroughly.",
+    "example": "You should search for a job on the internet.",
+    "level": "b1"
   },
   {
-    "term": "guilty",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Crime"
+    "id": "social_network",
+    "word": "social network",
+    "partOfSpeech": "n",
+    "definition": "A network of social interactions and personal relationships.",
+    "example": "Have you ever used a social network?",
+    "level": "b1"
   },
   {
-    "term": "talk show",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The media"
+    "id": "upload",
+    "word": "upload",
+    "partOfSpeech": "v",
+    "definition": "Transfer (data) from one computer to another, typically to one that is larger or remote from the user or functioning as a server.",
+    "example": "How do I upload the program?",
+    "level": "b1"
   },
   {
-    "term": "in a bad mood",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Problems at home and work"
+    "id": "wifi",
+    "word": "wifi",
+    "partOfSpeech": "n",
+    "definition": "A facility allowing computers, smartphones, or other devices to connect to the Internet or communicate with one another wirelessly within a particular area.",
+    "example": "Is there wifi in this hotel?",
+    "level": "b1"
   },
   {
-    "term": "hurricane",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Global problems"
+    "id": "can_i_pay_by_credit_card",
+    "word": "Can I pay by credit card?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking if payment by credit card is accepted.",
+    "example": "Can I pay by credit card? I don’t have any cash.",
+    "level": "b1"
   },
   {
-    "term": "strike",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Global problems"
+    "id": "coach",
+    "word": "coach",
+    "partOfSpeech": "n",
+    "definition": "A comfortably equipped single-decker bus used for longer journeys.",
+    "example": "We use a coach to take the children on school days out.",
+    "level": "b1"
   },
   {
-    "term": "ex- wife",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Prefixes"
+    "id": "have_a_good_journey",
+    "word": "Have a good journey.",
+    "partOfSpeech": "phrase",
+    "definition": "A parting wish for a pleasant trip.",
+    "example": "Have a good journey and see you next month.",
+    "level": "b1"
   },
   {
-    "term": "unsafe",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Prefixes"
+    "id": "how_much_is_it_to_go",
+    "word": "How much is it?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking the cost of travel.",
+    "example": "How much is it to go from London to Manchester?",
+    "level": "b1"
   },
   {
-    "term": "useless",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Suffixes"
+    "id": "i_cant_believe_it",
+    "word": "I can’t believe it!",
+    "partOfSpeech": "phrase",
+    "definition": "An expression of surprise or disbelief.",
+    "example": "I can’t believe it! I won the competition!",
+    "level": "b1"
   },
   {
-    "term": "absolutely",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conversations 2: Useful words and expressions"
+    "id": "see_you_in_new_york",
+    "word": "See you in [New York].",
+    "partOfSpeech": "phrase",
+    "definition": "Expressing an intention to meet someone in a specific place.",
+    "example": "See you in New York in September.",
+    "level": "b1"
   },
   {
-    "term": "air pollution",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Global problems"
+    "id": "single_or_return",
+    "word": "Single or return?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking whether a one-way or round-trip ticket is required.",
+    "example": "Single or return? ~ Single, please.",
+    "level": "b1"
   },
   {
-    "term": "apologise for",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Words and prepositions"
+    "id": "standard_or_first_class",
+    "word": "Standard or first class?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking about the preferred class of travel.",
+    "example": "Standard or first class? ~ Standard, please.",
+    "level": "b1"
   },
   {
-    "term": "arrest",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Crime"
+    "id": "tram",
+    "word": "tram",
+    "partOfSpeech": "n",
+    "definition": "A passenger vehicle powered by electricity conveying passengers in towns and cities along routes laid with rails.",
+    "example": "I like to travel by tram when I am in Germany.",
+    "level": "b1"
   },
   {
-    "term": "asthma",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Health and illness"
+    "id": "dangerously",
+    "word": "dangerously",
+    "partOfSpeech": "adv",
+    "definition": "In a way that is likely to cause harm or injury.",
+    "example": "My mum drives really dangerously.",
+    "level": "b1"
   },
   {
-    "term": "average-looking",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Describing people"
+    "id": "formal",
+    "word": "formal",
+    "partOfSpeech": "adj",
+    "definition": "Done in accordance with rules of convention or etiquette; suitable for or constituting an official or important situation or occasion.",
+    "example": "You need to wear formal clothes for the dinner party.",
+    "level": "b1"
   },
   {
-    "term": "bank holiday",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "UK culture"
+    "id": "healthcare",
+    "word": "healthcare",
+    "partOfSpeech": "n",
+    "definition": "The maintenance and improvement of physical and mental health, especially through the provision of medical services.",
+    "example": "Healthcare in the UK is free.",
+    "level": "b1"
   },
   {
-    "term": "basement",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
+    "id": "healthily",
+    "word": "healthily",
+    "partOfSpeech": "adv",
+    "definition": "In a way that promotes good health.",
+    "example": "Frank eats very healthily.",
+    "level": "b1"
   },
   {
-    "term": "be used to",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Words and prepositions"
+    "id": "informal",
+    "word": "informal",
+    "partOfSpeech": "adj",
+    "definition": "Having a relaxed, friendly, or unofficial style, manner, or nature.",
+    "example": "Emails are often more informal than letters.",
+    "level": "b1"
   },
   {
-    "term": "beauty salon",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Jobs"
+    "id": "insurance",
+    "word": "insurance",
+    "partOfSpeech": "n",
+    "definition": "An arrangement by which a company or the state undertakes to provide a guarantee of compensation for specified loss, damage, illness, or death in return for payment of a specified premium.",
+    "example": "You need to have health insurance in the US.",
+    "level": "b1"
   },
   {
-    "term": "bonfire",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "UK culture"
-  },
-  {
-    "term": "Bonfire Night",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "UK culture"
-  },
-  {
-    "term": "break into",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Crime"
-  },
-  {
-    "term": "bridegroom",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Birth, marriage and death"
-  },
-  {
-    "term": "burglar",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Crime"
-  },
-  {
-    "term": "burglary",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Crime"
-  },
-  {
-    "term": "butcher(’ s)",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
-  },
-  {
-    "term": "by ferry",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Holidays"
-  },
-  {
-    "term": "calf",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
-  },
-  {
-    "term": "call back",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Communications"
-  },
-  {
-    "term": "can’t stand",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Music and musical instruments"
-  },
-  {
-    "term": "cancer",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Health and illness"
-  },
-  {
-    "term": "car crash",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Global problems"
-  },
-  {
-    "term": "cello",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Music and musical instruments"
-  },
-  {
-    "term": "cheque",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
-  },
-  {
-    "term": "chest of drawers",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
-  },
-  {
-    "term": "clarinet",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Music and musical instruments"
-  },
-  {
-    "term": "coach tour",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Holidays"
-  },
-  {
-    "term": "come along",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Come / came / come"
-  },
-  {
-    "term": "come to stay",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Free time at home"
-  },
-  {
-    "term": "computer crashed",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Problems at home and work"
-  },
-  {
-    "term": "computer magazine",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The media"
-  },
-  {
-    "term": "cottage",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the countryside"
-  },
-  {
-    "term": "country road",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the countryside"
-  },
-  {
-    "term": "criminal",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Crime"
-  },
-  {
-    "term": "customs",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Travelling"
-  },
-  {
-    "term": "depart",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Travelling"
-  },
-  {
-    "term": "disaster",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Global problems"
-  },
-  {
-    "term": "do business with",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Do / did / done"
-  },
-  {
-    "term": "drawing pin",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At school and university"
-  },
-  {
-    "term": "dreadful",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Common adjectives: Good and bad things"
-  },
-  {
-    "term": "dressing table",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
-  },
-  {
-    "term": "earthquake",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Global problems"
-  },
-  {
-    "term": "elderly",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Describing people"
-  },
-  {
-    "term": "electricals",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
-  },
-  {
-    "term": "expect",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Words you may confuse"
-  },
-  {
-    "term": "ex-boyfriend",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Prefixes"
-  },
-  {
-    "term": "fill up with",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Travelling"
-  },
-  {
-    "term": "flood",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Global problems"
-  },
-  {
-    "term": "flute",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Music and musical instruments"
-  },
-  {
-    "term": "flute-player",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Music and musical instruments"
-  },
-  {
-    "term": "folk music",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Music and musical instruments"
-  },
-  {
-    "term": "fortnight",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Days, months, seasons"
-  },
-  {
-    "term": "funeral",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Birth, marriage and death"
-  },
-  {
-    "term": "get a degree",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At school and university"
-  },
-  {
-    "term": "give a lift",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Travelling"
-  },
-  {
-    "term": "global",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Global problems"
-  },
-  {
-    "term": "a bit",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Adverbs"
-  },
-  {
-    "term": "-able",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Suffixes: forming new words"
-  },
-  {
-    "term": "access (v.)",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The media: internet and email"
-  },
-  {
-    "term": "access online",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Cramming for success: study and academic work"
-  },
-  {
-    "term": "ache",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Illness: feeling under the weather"
-  },
-  {
-    "term": "address",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Academic writing: text structure"
-  },
-  {
-    "term": "admit",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Modality: expressing facts, opinions, desires"
-  },
-  {
-    "term": "alarm",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Negative feelings"
-  },
-  {
-    "term": "alcoholic",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At work: colleagues and routines"
-  },
-  {
-    "term": "amber",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "All the colours of the rainbow"
-  },
-  {
-    "term": "ambition",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Modality: expressing facts, opinions, desires"
-  },
-  {
-    "term": "an item",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Socialising and networking"
-  },
-  {
-    "term": "apology",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Apology, regret and reconciliation"
-  },
-  {
-    "term": "applicant",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Suffixes: forming new words"
-  },
-  {
-    "term": "ASAP",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Abbreviations and acronyms"
-  },
-  {
-    "term": "assignment",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Cramming for success: study and academic work"
-  },
-  {
-    "term": "ATM",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Personal finance: making ends meet"
-  },
-  {
-    "term": "attachment",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The media: internet and email"
-  },
-  {
-    "term": "award",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The performance arts: reviews and critiques"
-  },
-  {
-    "term": "avoid",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Prepositions: place and movement"
+    "id": "on_the_other_hand",
+    "word": "on the other hand",
+    "partOfSpeech": "phrase",
+    "definition": "Used to present a contrasting point of view.",
+    "example": "British people are quite reserved, but on the other hand it is harder to make friends in the US than in the UK.",
+    "level": "b1"
+  },
+  {
+    "id": "pessimistic",
+    "word": "pessimistic",
+    "partOfSpeech": "adj",
+    "definition": "Tending to see the worst aspect of things or believe that the worst will happen.",
+    "example": "I find British people quite pessimistic.",
+    "level": "b1"
+  },
+  {
+    "id": "portion",
+    "word": "portion",
+    "partOfSpeech": "n",
+    "definition": "A part of a whole; an amount, section, or piece of something.",
+    "example": "I’m not hungry, so I’ll just have a small portion.",
+    "level": "b1"
+  },
+  {
+    "id": "professional",
+    "word": "professional",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or belonging to a profession.",
+    "example": "It’s my dream to become a professional actor.",
+    "level": "b1"
+  },
+  {
+    "id": "promise",
+    "word": "promise",
+    "partOfSpeech": "v",
+    "definition": "Assure someone that one will certainly do something or that something will happen.",
+    "example": "Promise that you’ll send me a postcard from your holiday.",
+    "level": "b1"
+  },
+  {
+    "id": "queue",
+    "word": "queue",
+    "partOfSpeech": "n",
+    "definition": "A line or sequence of people or vehicles awaiting their turn to be attended to or to proceed.",
+    "example": "I talk to everyone – even people next to me in the queue.",
+    "level": "b1"
+  },
+  {
+    "id": "real",
+    "word": "real",
+    "partOfSpeech": "adj",
+    "definition": "Actually existing as a thing or occurring in fact; not imagined or supposed.",
+    "example": "Real friends are hard to find.",
+    "level": "b1"
+  },
+  {
+    "id": "reserved",
+    "word": "reserved",
+    "partOfSpeech": "adj",
+    "definition": "Slow to reveal emotion or opinions.",
+    "example": "Some people say that British people are too reserved.",
+    "level": "b1"
+  },
+  {
+    "id": "the_cost_of_living",
+    "word": "the cost of living",
+    "partOfSpeech": "n phr",
+    "definition": "The level of prices relating to a range of everyday items.",
+    "example": "The cost of living is really high in London.",
+    "level": "b1"
+  },
+  {
+    "id": "unhealthily",
+    "word": "unhealthily",
+    "partOfSpeech": "adv",
+    "definition": "In a way that is not conducive to good health.",
+    "example": "Julia eats really unhealthily.",
+    "level": "b1"
+  },
+  {
+    "id": "website",
+    "word": "website",
+    "partOfSpeech": "n",
+    "definition": "A set of related web pages located under a single domain name.",
+    "example": "What’s your favourite website?",
+    "level": "b1"
+  },
+  {
+    "id": "wide_variety",
+    "word": "wide variety",
+    "partOfSpeech": "n phr",
+    "definition": "A broad range of different things.",
+    "example": "In the UK you can buy a wide variety.",
+    "level": "b1"
+  },
+  {
+    "id": "worst",
+    "word": "worst",
+    "partOfSpeech": "adj",
+    "definition": "Of the poorest quality or the lowest standard; less good than any other person or thing of the same kind.",
+    "example": "The worst thing was living away from home.",
+    "level": "b1"
   }
 ]
