@@ -287,13 +287,6 @@
     "theme": "In the bedroom and bathroom"
   },
   {
-    "term": "cholera",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Health and illness"
-  },
-  {
     "term": "clarinet",
     "level": "B1",
     "definition": "TODO: Definition",
@@ -406,20 +399,6 @@
     "theme": "In the bedroom and bathroom"
   },
   {
-    "term": "drug dealer",
-    "level": "B2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Crime"
-  },
-  {
-    "term": "drug dealing",
-    "level": "B2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Crime"
-  },
-  {
     "term": "earthquake",
     "level": "B1",
     "definition": "TODO: Definition",
@@ -483,32 +462,11 @@
     "theme": "Music and musical instruments"
   },
   {
-    "term": "foal",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
-  },
-  {
     "term": "folk music",
     "level": "B1",
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "Music and musical instruments"
-  },
-  {
-    "term": "football hooligan",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Crime"
-  },
-  {
-    "term": "football hooliganism",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Crime"
   },
   {
     "term": "fortnight",
@@ -530,13 +488,6 @@
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "At school and university"
-  },
-  {
-    "term": "get used to",
-    "level": "B1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Words and prepositions"
   },
   {
     "term": "give a lift",
