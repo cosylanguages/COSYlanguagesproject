@@ -602,6 +602,13 @@
     "theme": "Describing people: personality and character traits"
   },
   {
+    "term": "APR",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Personal finance: making ends meet"
+  },
+  {
     "term": "arbitrary",
     "level": "C1",
     "definition": "TODO: Definition",
@@ -698,13 +705,6 @@
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "Academic writing: text structure"
-  },
-  {
-    "term": "assessment of risk",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At work: careers"
   },
   {
     "term": "asterisk",
