@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/COSYlanguagesproject/static/css/main.d8969fcd.css",
-    "main.js": "/COSYlanguagesproject/static/js/main.917330fb.js",
+    "main.js": "/COSYlanguagesproject/static/js/main.56d7a61e.js",
     "static/media/Flag_of_Brittany.png": "/COSYlanguagesproject/static/media/Flag_of_Brittany.84b981fe6c89698ceeab.png",
     "static/media/Flag_of_Bashkortostan.png": "/COSYlanguagesproject/static/media/Flag_of_Bashkortostan.1cd8a83298aaa54ba536.png",
     "static/media/Flag_of_Tatarstan.png": "/COSYlanguagesproject/static/media/Flag_of_Tatarstan.99455ff699f291d20b27.png",
     "index.html": "/COSYlanguagesproject/index.html",
     "main.d8969fcd.css.map": "/COSYlanguagesproject/static/css/main.d8969fcd.css.map",
-    "main.917330fb.js.map": "/COSYlanguagesproject/static/js/main.917330fb.js.map"
+    "main.56d7a61e.js.map": "/COSYlanguagesproject/static/js/main.56d7a61e.js.map"
   },
   "entrypoints": [
     "static/css/main.d8969fcd.css",
-    "static/js/main.917330fb.js"
+    "static/js/main.56d7a61e.js"
   ]
 }
