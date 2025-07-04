@@ -232,12 +232,28 @@ const enTranslations = {
   "verbHeaderPastParticiple": "Past Participle",
   "verbHeaderTranslation": "Translation",
 
-  // For ExerciseControls.js in Freestyle mode
-  "freestyle.controls.check": "✔️ Check",
-  "freestyle.controls.reveal": "🤫 Reveal Answer",
-  "freestyle.controls.hint": "💡 Hint",
-  "freestyle.controls.randomize": "🎲 Randomize",
-  "freestyle.controls.next": "➡️ Next Exercise",
+  // For ExerciseControls.js in Freestyle mode (and potentially other places)
+  "buttons": {
+    "check": "✔️ Check",
+    "revealAnswer": "🤫 Reveal Answer",
+    "help": "💡 Hint", // Used for Hint button in ExerciseControls
+    "randomize": "🎲 Randomize",
+    "next": "➡️ Next Exercise",
+    "previous": "⬅️ Previous",
+    "done": "Done",
+    "submitAnswer": "Submit Answer",
+    "stopRecording": "Stop",
+    // Add other common button texts here if they exist in other lang files under 'buttons'
+    // For example, from it.js:
+    "newExercise": "New Exercise",
+    "newWord": "New Word",
+    "back": "Back",
+    "continue": "Continue",
+    "reset": "Reset",
+    "close": "Close",
+    "translate": "Translate"
+    // Note: 'help' from it.js was 'Aiuto', here used for 'Hint'. If a separate 'Help' is needed, add key.
+  },
 
   // Keys for ExerciseHost.js
   "exercises.placeholder.title": "{name} Exercise",
