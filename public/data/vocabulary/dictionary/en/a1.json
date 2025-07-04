@@ -1,3721 +1,3746 @@
 [
   {
-    "term": "a, an",
-    "level": "A1",
-    "definition": "used before a singular countable noun when you are talking about one person or thing that has not been mentioned before",
-    "example": "I see a cat. She has an apple."
+    "id": "zero",
+    "word": "zero",
+    "partOfSpeech": "n",
+    "definition": "The number 0; the figure 0.",
+    "example": "The password is zero- five-four-seven.",
+    "level": "a1"
+  },
+  {
+    "id": "one",
+    "word": "one",
+    "partOfSpeech": "n",
+    "definition": "The number 1; the figure 1.",
+    "example": "I have one pound.",
+    "level": "a1"
+  },
+  {
+    "id": "two",
+    "word": "two",
+    "partOfSpeech": "n",
+    "definition": "The number 2; the figure 2.",
+    "example": "I live in flat number two.",
+    "level": "a1"
+  },
+  {
+    "id": "three",
+    "word": "three",
+    "partOfSpeech": "n",
+    "definition": "The number 3; the figure 3.",
+    "example": "Please turn to page three.",
+    "level": "a1"
+  },
+  {
+    "id": "four",
+    "word": "four",
+    "partOfSpeech": "n",
+    "definition": "The number 4; the figure 4.",
+    "example": "He has four sisters.",
+    "level": "a1"
+  },
+  {
+    "id": "five",
+    "word": "five",
+    "partOfSpeech": "n",
+    "definition": "The number 5; the figure 5.",
+    "example": "She lives at number five Ball Street.",
+    "level": "a1"
+  },
+  {
+    "id": "six",
+    "word": "six",
+    "partOfSpeech": "n",
+    "definition": "The number 6; the figure 6.",
+    "example": "The book costs six pounds.",
+    "level": "a1"
+  },
+  {
+    "id": "seven",
+    "word": "seven",
+    "partOfSpeech": "n",
+    "definition": "The number 7; the figure 7.",
+    "example": "This is the number seven bus.",
+    "level": "a1"
+  },
+  {
+    "id": "eight",
+    "word": "eight",
+    "partOfSpeech": "n",
+    "definition": "The number 8; the figure 8.",
+    "example": "Breakfast is at eight o’clock.",
+    "level": "a1"
+  },
+  {
+    "id": "nine",
+    "word": "nine",
+    "partOfSpeech": "n",
+    "definition": "The number 9; the figure 9.",
+    "example": "She is nine years old.",
+    "level": "a1"
+  },
+  {
+    "id": "ten",
+    "word": "ten",
+    "partOfSpeech": "n",
+    "definition": "The number 10; the figure 10.",
+    "example": "The shirt is ten pounds.",
+    "level": "a1"
+  },
+  {
+    "id": "brazil",
+    "word": "Brazil",
+    "partOfSpeech": "n",
+    "definition": "A country in South America.",
+    "example": "She’s from Brazil.",
+    "level": "a1"
+  },
+  {
+    "id": "china",
+    "word": "China",
+    "partOfSpeech": "n",
+    "definition": "A country in East Asia.",
+    "example": "I’m from China.",
+    "level": "a1"
   },
   {
-    "term": "a few",
-    "level": "A1",
-    "definition": "",
-    "example": "a few minutes, a few times, a few years"
+    "id": "egypt",
+    "word": "Egypt",
+    "partOfSpeech": "n",
+    "definition": "A country in North Africa.",
+    "example": "Where is Giza? ~ It’s in Egypt.",
+    "level": "a1"
   },
   {
-    "term": "a good idea",
-    "level": "A1",
-    "definition": "",
-    "example": "Good idea!, It’s a good idea to…, That’s a good idea!"
+    "id": "england",
+    "word": "England",
+    "partOfSpeech": "n",
+    "definition": "A country that is part of the United Kingdom.",
+    "example": "Is he from England?",
+    "level": "a1"
   },
   {
-    "term": "a little",
-    "level": "A1",
-    "definition": "",
-    "example": "a little help, a little money, a little sugar"
+    "id": "france",
+    "word": "France",
+    "partOfSpeech": "n",
+    "definition": "A country in Western Europe.",
+    "example": "We’re from France.",
+    "level": "a1"
   },
   {
-    "term": "a lot",
-    "level": "A1",
-    "definition": "",
-    "example": "a lot to do"
+    "id": "germany",
+    "word": "Germany",
+    "partOfSpeech": "n",
+    "definition": "A country in Central Europe.",
+    "example": "Berlin is in Germany.",
+    "level": "a1"
   },
   {
-    "term": "a lot of sth",
-    "level": "A1",
-    "definition": "a large number or amount of something",
-    "example": "There are a lot of books on the table."
+    "id": "italy",
+    "word": "Italy",
+    "partOfSpeech": "n",
+    "definition": "A country in Southern Europe.",
+    "example": "She’s from Italy.",
+    "level": "a1"
   },
   {
-    "term": "all day",
-    "level": "A1",
-    "definition": "for the entire day",
-    "example": "We played outside all day."
+    "id": "japan",
+    "word": "Japan",
+    "partOfSpeech": "n",
+    "definition": "An island country in East Asia.",
+    "example": "Are you from Japan?",
+    "level": "a1"
   },
   {
-    "term": "all night",
-    "level": "A1",
-    "definition": "for the entire night",
-    "example": "He studied all night for the test."
+    "id": "mexico",
+    "word": "Mexico",
+    "partOfSpeech": "n",
+    "definition": "A country in North America.",
+    "example": "They’re from Mexico.",
+    "level": "a1"
   },
   {
-    "term": "all over the world",
-    "level": "A1",
-    "definition": "in all parts of the earth.",
-    "example": "She has been all over the world."
+    "id": "poland",
+    "word": "Poland",
+    "partOfSpeech": "n",
+    "definition": "A country in Central Europe.",
+    "example": "Marcus is from Poland.",
+    "level": "a1"
   },
   {
-    "term": "anything else",
-    "level": "A1",
-    "definition": "any additional or different thing (used in questions or negative statements).",
-    "example": "Would you like anything else?"
+    "id": "russia",
+    "word": "Russia",
+    "partOfSpeech": "n",
+    "definition": "A transcontinental country spanning Eastern Europe and Northern Asia.",
+    "example": "It’s from Russia.",
+    "level": "a1"
   },
   {
-    "term": "anyone else",
-    "level": "A1",
-    "definition": "any other person (used in questions or negative statements).",
-    "example": "Does anyone else want to go?"
+    "id": "spain",
+    "word": "Spain",
+    "partOfSpeech": "n",
+    "definition": "A country in Southwestern Europe.",
+    "example": "We’re from Spain.",
+    "level": "a1"
   },
   {
-    "term": "a period of time",
-    "level": "A1",
-    "definition": "a length of time.",
-    "example": "We waited for a short period of time."
+    "id": "switzerland",
+    "word": "Switzerland",
+    "partOfSpeech": "n",
+    "definition": "A mountainous Central European country.",
+    "example": "Is she from Switzerland?",
+    "level": "a1"
   },
   {
-    "term": "around the world",
-    "level": "A1",
-    "definition": "in or to many parts of the world.",
-    "example": "He wants to travel around the world."
+    "id": "the_uk",
+    "word": "the UK (United Kingdom)",
+    "partOfSpeech": "n",
+    "definition": "A country in Northwestern Europe, made up of England, Scotland, Wales and Northern Ireland.",
+    "example": "Celia’s from the UK.",
+    "level": "a1"
   },
   {
-    "term": "arrive at…",
-    "level": "A1",
-    "definition": "to get to a specific point or smaller place (like a station, building, or event).",
-    "example": "We will arrive at the cinema at 7 o'clock."
+    "id": "the_us",
+    "word": "the US (United States)",
+    "partOfSpeech": "n",
+    "definition": "A country of 50 states covering a vast swath of North America.",
+    "example": "Josh is from the US.",
+    "level": "a1"
   },
   {
-    "term": "arrive in…",
-    "level": "A1",
-    "definition": "to get to a larger area like a city or country.",
-    "example": "My friends arrive in Paris next week."
+    "id": "turkey",
+    "word": "Turkey",
+    "partOfSpeech": "n",
+    "definition": "A transcontinental country located mainly on the Anatolian Peninsula in Western Asia, with a smaller portion on the Balkan Peninsula in Southeastern Europe.",
+    "example": "Where is Istanbul? ~ It’s in Turkey.",
+    "level": "a1"
   },
   {
-    "term": "ask for sth",
-    "level": "A1",
-    "definition": "to say that you would like to have something; to request something.",
-    "example": "If you are hungry, ask for a sandwich."
+    "id": "board",
+    "word": "board",
+    "partOfSpeech": "n",
+    "definition": "A flat surface in a classroom that a teacher writes on.",
+    "example": "Look at the board, please.",
+    "level": "a1"
   },
   {
-    "term": "at home",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "chair",
+    "word": "chair",
+    "partOfSpeech": "n",
+    "definition": "A seat for one person, with a back and typically four legs.",
+    "example": "Sit down on this chair.",
+    "level": "a1"
   },
   {
-    "term": "at school",
-    "level": "A1",
-    "definition": "attending school; being present in the school building for learning.",
-    "example": "The children are at school from 9 a.m. to 3 p.m."
+    "id": "coat",
+    "word": "coat",
+    "partOfSpeech": "n",
+    "definition": "An outer garment worn outdoors, having sleeves and typically extending below the hips.",
+    "example": "Is that your coat?",
+    "level": "a1"
   },
   {
-    "term": "at the beginning of sth",
-    "level": "A1",
-    "definition": "at the start of something.",
-    "example": "We sing a song at the beginning of the class."
+    "id": "dictionary",
+    "word": "dictionary",
+    "partOfSpeech": "n",
+    "definition": "A book or electronic resource that lists the words of a language and gives their meaning.",
+    "example": "Find the word in a dictionary.",
+    "level": "a1"
   },
   {
-    "term": "at the end",
-    "level": "A1",
-    "definition": "in the final part of an event or activity.",
-    "example": "At the end, everyone clapped."
+    "id": "door",
+    "word": "door",
+    "partOfSpeech": "n",
+    "definition": "A hinged or sliding barrier used to close off an entrance or way out of a room, building, or vehicle.",
+    "example": "Please close the door.",
+    "level": "a1"
   },
   {
-    "term": "at the end of sth",
-    "level": "A1",
-    "definition": "in the final part of something (like a period of time, a story, or a place).",
-    "example": "They get paid at the end of the month."
+    "id": "laptop",
+    "word": "laptop",
+    "partOfSpeech": "n",
+    "definition": "A portable computer small enough to use on your lap.",
+    "example": "The laptop is in her bag.",
+    "level": "a1"
   },
   {
-    "term": "at the moment",
-    "level": "A1",
-    "definition": "now; at the present time.",
-    "example": "Sorry, she's not here at the moment."
+    "id": "paper",
+    "word": "paper",
+    "partOfSpeech": "n",
+    "definition": "Material manufactured in thin sheets from the pulp of wood or other fibrous substances, used for writing, drawing, or printing on, or as wrapping material.",
+    "example": "Can I have some paper, please?",
+    "level": "a1"
   },
   {
-    "term": "at the same time",
-    "level": "A1",
-    "definition": "happening together; at the identical moment.",
-    "example": "They both started talking at the same time."
+    "id": "pen",
+    "word": "pen",
+    "partOfSpeech": "n",
+    "definition": "An instrument for writing or drawing with ink.",
+    "example": "Please write with a pen.",
+    "level": "a1"
   },
   {
-    "term": "at the weekend/at the weekend (AE)",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "table",
+    "word": "table",
+    "partOfSpeech": "n",
+    "definition": "A piece of furniture with a flat top and one or more legs, providing a level surface for eating, writing, or placing things on.",
+    "example": "The books are on the table.",
+    "level": "a1"
   },
   {
-    "term": "at university",
-    "level": "A1",
-    "definition": "studying at a university.",
-    "example": "My older sister is at university."
+    "id": "window",
+    "word": "window",
+    "partOfSpeech": "n",
+    "definition": "An opening in the wall or roof of a building or vehicle, fitted with glass or other transparent material in a frame to admit light or air and allow people to see out.",
+    "example": "Can I open the window?",
+    "level": "a1"
   },
   {
-    "term": "at work",
-    "level": "A1",
-    "definition": "at the place where you do your job.",
-    "example": "My dad is at work now."
+    "id": "can_you_repeat_that_please",
+    "word": "Can you repeat that, please?",
+    "partOfSpeech": "phrase",
+    "definition": "A polite way to ask someone to say something again.",
+    "example": "We are on page 19. ~ Can you repeat that, please? ~ Yes. We are on page 19.",
+    "level": "a1"
   },
   {
-    "term": "away from sb/sth",
-    "level": "A1",
-    "definition": "not near someone or something; at a distance from someone or something.",
-    "example": "Please keep the dog away from the food."
+    "id": "close_your_books",
+    "word": "Close your books.",
+    "partOfSpeech": "phrase",
+    "definition": "An instruction to shut your books.",
+    "example": "Close your books and look at the board, please.",
+    "level": "a1"
   },
   {
-    "term": "bad for sb/sth",
-    "level": "A1",
-    "definition": "harmful to someone or something; likely to cause damage or problems.",
-    "example": "Eating too much sugar is bad for your teeth."
+    "id": "go_to_page",
+    "word": "Go to page…",
+    "partOfSpeech": "phrase",
+    "definition": "An instruction to turn to a specific page in a book.",
+    "example": "Open your books. Go to page ten.",
+    "level": "a1"
   },
   {
-    "term": "bad news",
-    "level": "A1",
-    "definition": "information about something unpleasant that has happened or will happen.",
-    "example": "I'm afraid I have some bad news for you."
+    "id": "how_do_you_spell",
+    "word": "How do you spell...?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask for the spelling of a word.",
+    "example": "How do you spell it? ~ B-O-O-K.",
+    "level": "a1"
   },
   {
-    "term": "bad thing",
-    "level": "A1",
-    "definition": "the bad things about sth",
-    "example": ""
+    "id": "i_dont_know",
+    "word": "I don’t know.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to say that you do not have the information someone is asking for.",
+    "example": "What's the time? ~ I don’t know, sorry.",
+    "level": "a1"
   },
   {
-    "term": "because of",
-    "level": "A1",
-    "definition": "as a result of; used to give a reason for something.",
-    "example": "The game was cancelled because of the rain."
+    "id": "i_dont_understand",
+    "word": "I don’t understand.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to say that you cannot comprehend something.",
+    "example": "Can you repeat that, please? I don’t understand.",
+    "level": "a1"
   },
   {
-    "term": "begin with sth",
-    "level": "A1",
-    "definition": "to start an activity or process with a particular thing or action.",
-    "example": "Let's begin with the first exercise."
+    "id": "look_at",
+    "word": "Look at…",
+    "partOfSpeech": "phrase",
+    "definition": "An instruction to direct your gaze towards something.",
+    "example": "Look at page 12.",
+    "level": "a1"
   },
   {
-    "term": "be going to do sth",
-    "level": "A1",
-    "definition": "used to talk about future plans or intentions, or to predict that something will happen soon.",
-    "example": "I am going to visit my grandmother tomorrow. / Look at those clouds! It's going to rain."
+    "id": "open_your_books",
+    "word": "Open your books.",
+    "partOfSpeech": "phrase",
+    "definition": "An instruction to open your books.",
+    "example": "Open your books. We are on page 19.",
+    "level": "a1"
   },
   {
-    "term": "best friend",
-    "level": "A1",
-    "definition": "a very close friend that you like more than any other.",
-    "example": "She told her best friend all her secrets."
+    "id": "sit_down",
+    "word": "Sit down.",
+    "partOfSpeech": "phrase",
+    "definition": "An instruction to take a seat.",
+    "example": "Sit down and open your books, please.",
+    "level": "a1"
   },
   {
-    "term": "black and white",
-    "level": "A1",
-    "definition": "using only black, white, and shades of grey; not in colour.",
-    "example": "The old movie was in black and white."
+    "id": "sorry_im_late",
+    "word": "Sorry I'm late.",
+    "partOfSpeech": "phrase",
+    "definition": "An apology for arriving after the expected time.",
+    "example": "Sorry I'm late. The bus was late.",
+    "level": "a1"
   },
   {
-    "term": "car park/parking lot (AE)",
-    "level": "A1",
-    "definition": "an area or building where cars can be parked.",
-    "example": "We left the car in the multi-storey car park."
+    "id": "stand_up_please",
+    "word": "Stand up, please.",
+    "partOfSpeech": "phrase",
+    "definition": "A polite instruction to rise to one's feet.",
+    "example": "Stand up, please.",
+    "level": "a1"
   },
   {
-    "term": "cell phone",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "whats_in_english",
+    "word": "What’s…in English?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask for the English translation or term for something.",
+    "example": "What’s this in English? ~ I don’t know.",
+    "level": "a1"
   },
   {
-    "term": "city centre/city center (AE)",
-    "level": "A1",
-    "definition": "in the city centre/center (AE)",
-    "example": ""
+    "id": "monday",
+    "word": "Monday",
+    "partOfSpeech": "n",
+    "definition": "The first day of the week.",
+    "example": "I have a table reservation for Monday.",
+    "level": "a1"
   },
   {
-    "term": "come from…",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "tuesday",
+    "word": "Tuesday",
+    "partOfSpeech": "n",
+    "definition": "The second day of the week.",
+    "example": "My music exam is on Tuesday.",
+    "level": "a1"
   },
   {
-    "term": "come into sth",
-    "level": "A1",
-    "definition": "",
-    "example": "He came into the room."
+    "id": "wednesday",
+    "word": "Wednesday",
+    "partOfSpeech": "n",
+    "definition": "The third day of the week.",
+    "example": "See you on Wednesday.",
+    "level": "a1"
   },
   {
-    "term": "differences between A and B",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "thursday",
+    "word": "Thursday",
+    "partOfSpeech": "n",
+    "definition": "The fourth day of the week.",
+    "example": "My dance class is on Thursday.",
+    "level": "a1"
   },
   {
-    "term": "difficult for sb",
-    "level": "A1",
-    "definition": "it is difficult for sb to do sth",
-    "example": ""
+    "id": "friday",
+    "word": "Friday",
+    "partOfSpeech": "n",
+    "definition": "The fifth day of the week.",
+    "example": "The concert is on Friday.",
+    "level": "a1"
   },
   {
-    "term": "each other",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "saturday",
+    "word": "Saturday",
+    "partOfSpeech": "n",
+    "definition": "The sixth day of the week.",
+    "example": "I go shopping every Saturday.",
+    "level": "a1"
   },
   {
-    "term": "end in sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "sunday",
+    "word": "Sunday",
+    "partOfSpeech": "n",
+    "definition": "The seventh day of the week.",
+    "example": "I visit my grandparents every Sunday.",
+    "level": "a1"
   },
   {
-    "term": "every day",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "the_weekend",
+    "word": "the weekend",
+    "partOfSpeech": "n",
+    "definition": "Saturday and Sunday, especially regarded as a time for leisure.",
+    "example": "What do you usually do at the weekend?",
+    "level": "a1"
   },
   {
-    "term": "every week",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "today",
+    "word": "today",
+    "partOfSpeech": "n",
+    "definition": "This present day.",
+    "example": "It's her birthday today. Happy birthday!",
+    "level": "a1"
   },
   {
-    "term": "every year",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "tomorrow",
+    "word": "tomorrow",
+    "partOfSpeech": "n",
+    "definition": "The day after today.",
+    "example": "Today is Friday. Tomorrow is Saturday.",
+    "level": "a1"
   },
   {
-    "term": "excuse me",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "first_name",
+    "word": "first name",
+    "partOfSpeech": "n",
+    "definition": "A personal name given to someone at birth or baptism and used before a family name.",
+    "example": "My first name is Rob.",
+    "level": "a1"
   },
   {
-    "term": "family member",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "last_name",
+    "word": "last name",
+    "partOfSpeech": "n",
+    "definition": "A surname.",
+    "example": "My last name is Walker.",
+    "level": "a1"
   },
   {
-    "term": "find out",
-    "level": "A1",
-    "definition": "find out about sth, find out more",
-    "example": ""
+    "id": "good_afternoon",
+    "word": "Good afternoon.",
+    "partOfSpeech": "phrase",
+    "definition": "A greeting used in the afternoon.",
+    "example": "Good afternoon, Mr Walker. How are you today?",
+    "level": "a1"
   },
   {
-    "term": "for a long time",
-    "level": "A1",
-    "definition": "a long time",
-    "example": ""
+    "id": "good_evening",
+    "word": "Good evening.",
+    "partOfSpeech": "phrase",
+    "definition": "A greeting used in the evening.",
+    "example": "Good evening. I have a reservation for tonight.",
+    "level": "a1"
   },
   {
-    "term": "for a moment",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "good_morning",
+    "word": "Good morning.",
+    "partOfSpeech": "phrase",
+    "definition": "A greeting used in the morning.",
+    "example": "Good morning, class. Please open your books.",
+    "level": "a1"
   },
   {
-    "term": "for example",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "a_table_for_tomorrow_please",
+    "word": "A table for…tomorrow, please.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to request a table reservation.",
+    "example": "A table for 7 p.m. tomorrow, please.",
+    "level": "a1"
   },
   {
-    "term": "for lunch",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "how_can_i_help_you",
+    "word": "How can I help you?",
+    "partOfSpeech": "phrase",
+    "definition": "A question used to offer assistance.",
+    "example": "Good afternoon. How can I help you?",
+    "level": "a1"
   },
   {
-    "term": "for many years",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "i_have_a_reservation",
+    "word": "I have a reservation",
+    "partOfSpeech": "phrase",
+    "definition": "Used to inform someone that you have a booking.",
+    "example": "My name is Rob Walker. I have a reservation.",
+    "level": "a1"
   },
   {
-    "term": "for the first time",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "sorry_question",
+    "word": "Sorry?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask someone to repeat something.",
+    "example": "Sorry? Can you repeat that, please?",
+    "level": "a1"
   },
   {
-    "term": "get home",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "thank_you",
+    "word": "thank you",
+    "partOfSpeech": "phrase",
+    "definition": "A polite expression used when acknowledging a gift, service, or compliment, or accepting or refusing an offer.",
+    "example": "Here is your table. ~ Thank you.",
+    "level": "a1"
   },
   {
-    "term": "get married",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "thats_right",
+    "word": "that's right",
+    "partOfSpeech": "phrase",
+    "definition": "Used to confirm that something is correct.",
+    "example": "Do you spell your name R-O-B? ~ Yes, that's right.",
+    "level": "a1"
   },
   {
-    "term": "get off",
-    "level": "A1",
-    "definition": "get off the bus",
-    "example": "I’m getting off here."
+    "id": "a_cappuccino_please",
+    "word": "A cappuccino, please.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to order a cappuccino.",
+    "example": "A cappuccino, please. ~ That's £1.20.",
+    "level": "a1"
   },
   {
-    "term": "get on",
-    "level": "A1",
-    "definition": "get on the bus",
-    "example": "Are you getting on?"
+    "id": "a_tea",
+    "word": "A tea.",
+    "partOfSpeech": "n",
+    "definition": "A cup of tea.",
+    "example": "Tea or coffee? ~ I'd like a tea, please.",
+    "level": "a1"
   },
   {
-    "term": "get ready",
-    "level": "A1",
-    "definition": "get ready for sth, get ready to do sth",
-    "example": ""
+    "id": "bye",
+    "word": "Bye.",
+    "partOfSpeech": "phrase",
+    "definition": "A short way of saying goodbye.",
+    "example": "Bye! See you on Friday.",
+    "level": "a1"
   },
   {
-    "term": "get there",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "goodbye",
+    "word": "Goodbye.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to express good wishes when parting or at the end of a conversation.",
+    "example": "Goodbye! See you tomorrow.",
+    "level": "a1"
   },
   {
-    "term": "get to…",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "hi",
+    "word": "Hi.",
+    "partOfSpeech": "phrase",
+    "definition": "A friendly greeting.",
+    "example": "Hi. I'm Daniel.",
+    "level": "a1"
   },
   {
-    "term": "get up",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "just_a_minute",
+    "word": "Just a minute.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask someone to wait for a short period.",
+    "example": "Just a minute, please.",
+    "level": "a1"
   },
   {
-    "term": "go back",
-    "level": "A1",
-    "definition": "go back to…",
-    "example": ""
+    "id": "nice_to_meet_you",
+    "word": "Nice to meet you.",
+    "partOfSpeech": "phrase",
+    "definition": "A polite phrase said when you are introduced to someone.",
+    "example": "I'm Alexandra. Nice to meet you.",
+    "level": "a1"
   },
   {
-    "term": "go home",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "no",
+    "word": "No.",
+    "partOfSpeech": "det",
+    "definition": "Used to give a negative reply.",
+    "example": "Do you live here? ~ No.",
+    "level": "a1"
   },
   {
-    "term": "go into sth",
-    "level": "A1",
-    "definition": "",
-    "example": "She went into her room."
+    "id": "ok",
+    "word": "OK.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to express agreement or acceptance.",
+    "example": "Just a minute, please. ~ OK.",
+    "level": "a1"
   },
   {
-    "term": "good at sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "see_you_on_friday",
+    "word": "See you on Friday.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to say goodbye when you expect to meet again on Friday.",
+    "example": "Bye! See you on Friday.",
+    "level": "a1"
   },
   {
-    "term": "good for sb/sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "see_you_tomorrow",
+    "word": "See you tomorrow.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to say goodbye when you expect to meet again the next day.",
+    "example": "Goodbye! See you tomorrow.",
+    "level": "a1"
   },
   {
-    "term": "Good morning",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "sorry_apology",
+    "word": "Sorry.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to apologize for something.",
+    "example": "Hi Victoria. ~ My name's Valeria. ~ Sorry!",
+    "level": "a1"
   },
   {
-    "term": "Good afternoon",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "thanks",
+    "word": "Thanks.",
+    "partOfSpeech": "phrase",
+    "definition": "A short way of saying thank you.",
+    "example": "This is your classroom. ~ Thanks.",
+    "level": "a1"
   },
   {
-    "term": "Good evening",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "whats_your_name",
+    "word": "What's your name?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask someone's name.",
+    "example": "Hi! I'm Maria. What's your name?",
+    "level": "a1"
   },
   {
-    "term": "good news",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "yes",
+    "word": "Yes.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to give an affirmative reply.",
+    "example": "Are you 17? ~ Yes.",
+    "level": "a1"
   },
   {
-    "term": "good thing",
-    "level": "A1",
-    "definition": "the good things about sth",
-    "example": ""
+    "id": "i_think_its_in_turkey",
+    "word": "I think it's in Turkey.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to express an opinion about location.",
+    "example": "Where's Izmir? ~ I think it's in Turkey.",
+    "level": "a1"
   },
   {
-    "term": "go out",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "im_from_spain",
+    "word": "I'm from Spain.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to state your country of origin.",
+    "example": "I'm from Spain. I live in Madrid.",
+    "level": "a1"
   },
   {
-    "term": "go to bed",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "its_a_nice_city",
+    "word": "It's a nice city.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to describe a city positively.",
+    "example": "What's Izmir like? ~ It's a nice city.",
+    "level": "a1"
   },
   {
-    "term": "go to school",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "very_good",
+    "word": "Very good.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to express approval or that something is of high quality.",
+    "example": "Is my spelling good? ~ Very good.",
+    "level": "a1"
   },
   {
-    "term": "go to work",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "where_are_you_from",
+    "word": "Where are you from?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask someone's country or place of origin.",
+    "example": "Where are you from? ~ I'm from Argentina.",
+    "level": "a1"
   },
   {
-    "term": "grow up",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "wheres_izmir",
+    "word": "Where's Izmir?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask for the location of Izmir.",
+    "example": "Yusef is from Izmir. ~ Where's Izmir?",
+    "level": "a1"
   },
   {
-    "term": "Guess what…",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "wow",
+    "word": "Wow!",
+    "partOfSpeech": "phrase",
+    "definition": "Used to express astonishment or admiration.",
+    "example": "Wow! That's a great photo.",
+    "level": "a1"
   },
   {
-    "term": "half an hour",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "american",
+    "word": "American",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of the United States or its inhabitants.",
+    "example": "Josh is American.",
+    "level": "a1"
   },
   {
-    "term": "hard work",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "brazilian",
+    "word": "Brazilian",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of Brazil or its inhabitants.",
+    "example": "She’s Brazilian.",
+    "level": "a1"
   },
   {
-    "term": "have fun",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "british",
+    "word": "British",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of Great Britain or its inhabitants.",
+    "example": "Celia’s British.",
+    "level": "a1"
   },
   {
-    "term": "have got",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "chinese",
+    "word": "Chinese",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of China or its inhabitants.",
+    "example": "I’m Chinese.",
+    "level": "a1"
   },
   {
-    "term": "have time",
-    "level": "A1",
-    "definition": "have time for sth, have time to do sth",
-    "example": ""
+    "id": "egyptian",
+    "word": "Egyptian",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of Egypt or its inhabitants.",
+    "example": "They’re Egyptian.",
+    "level": "a1"
   },
   {
-    "term": "he or she",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "english_nationality",
+    "word": "English",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of England or its inhabitants.",
+    "example": "He’s English.",
+    "level": "a1"
   },
   {
-    "term": "high school",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "french",
+    "word": "French",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of France or its inhabitants.",
+    "example": "We’re French.",
+    "level": "a1"
   },
   {
-    "term": "his or her",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "german",
+    "word": "German",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of Germany or its inhabitants.",
+    "example": "Paul’s German.",
+    "level": "a1"
   },
   {
-    "term": "How about…?",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "italian",
+    "word": "Italian",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of Italy or its inhabitants.",
+    "example": "She’s Italian.",
+    "level": "a1"
   },
   {
-    "term": "How are you?",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "japanese",
+    "word": "Japanese",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of Japan or its inhabitants.",
+    "example": "I’m Japanese.",
+    "level": "a1"
   },
   {
-    "term": "How long…?",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "mexican",
+    "word": "Mexican",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of Mexico or its inhabitants.",
+    "example": "They’re Mexican.",
+    "level": "a1"
   },
   {
-    "term": "How many…?",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "polish",
+    "word": "Polish",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of Poland or its inhabitants.",
+    "example": "Marcus is Polish.",
+    "level": "a1"
   },
   {
-    "term": "How much…?",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "russian",
+    "word": "Russian",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of Russia or its inhabitants.",
+    "example": "It’s Russian.",
+    "level": "a1"
   },
   {
-    "term": "How often…?",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "spanish",
+    "word": "Spanish",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of Spain or its inhabitants.",
+    "example": "We’re Spanish.",
+    "level": "a1"
   },
   {
-    "term": "important for sb/sth",
-    "level": "A1",
-    "definition": "It is important for sb/sth to do sth",
-    "example": ""
+    "id": "swiss",
+    "word": "Swiss",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of Switzerland or its inhabitants.",
+    "example": "She’s Swiss.",
+    "level": "a1"
   },
   {
-    "term": "I’m sorry",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "turkish",
+    "word": "Turkish",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or characteristic of Turkey or its inhabitants.",
+    "example": "I’m from Istanbul. I’m Turkish.",
+    "level": "a1"
   },
   {
-    "term": "in April",
-    "level": "A1",
-    "definition": "in July, etc.",
-    "example": ""
+    "id": "eleven",
+    "word": "eleven",
+    "partOfSpeech": "n",
+    "definition": "The number 11.",
+    "example": "It is eleven o’clock.",
+    "level": "a1"
   },
   {
-    "term": "in bed",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "twelve",
+    "word": "twelve",
+    "partOfSpeech": "n",
+    "definition": "The number 12.",
+    "example": "She is twelve years old today.",
+    "level": "a1"
   },
   {
-    "term": "in class",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "thirteen",
+    "word": "thirteen",
+    "partOfSpeech": "n",
+    "definition": "The number 13.",
+    "example": "Look at page thirteen.",
+    "level": "a1"
   },
   {
-    "term": "in fact",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "fourteen",
+    "word": "fourteen",
+    "partOfSpeech": "n",
+    "definition": "The number 14.",
+    "example": "I am fourteen today.",
+    "level": "a1"
   },
   {
-    "term": "in front of",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "fifteen",
+    "word": "fifteen",
+    "partOfSpeech": "n",
+    "definition": "The number 15.",
+    "example": "This T-shirt is fifteen pounds.",
+    "level": "a1"
   },
   {
-    "term": "in my opinion",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "sixteen",
+    "word": "sixteen",
+    "partOfSpeech": "n",
+    "definition": "The number 16.",
+    "example": "Is he sixteen years old?",
+    "level": "a1"
   },
   {
-    "term": "in school",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "seventeen",
+    "word": "seventeen",
+    "partOfSpeech": "n",
+    "definition": "The number 17.",
+    "example": "I have seventeen computer games.",
+    "level": "a1"
   },
   {
-    "term": "in space",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "eighteen",
+    "word": "eighteen",
+    "partOfSpeech": "n",
+    "definition": "The number 18.",
+    "example": "There are eighteen computers in the classroom.",
+    "level": "a1"
   },
   {
-    "term": "in summer",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "nineteen",
+    "word": "nineteen",
+    "partOfSpeech": "n",
+    "definition": "The number 19.",
+    "example": "Phillip is nineteen tomorrow.",
+    "level": "a1"
   },
   {
-    "term": "in winter",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "twenty",
+    "word": "twenty",
+    "partOfSpeech": "n",
+    "definition": "The number 20.",
+    "example": "A hamburger is twenty pounds here!",
+    "level": "a1"
   },
   {
-    "term": "in the centre/in the center (AE)",
-    "level": "A1",
-    "definition": "in the centre/center (AE) of sth",
-    "example": ""
+    "id": "twenty-one",
+    "word": "twenty-one",
+    "partOfSpeech": "n",
+    "definition": "The number 21.",
+    "example": "Are you twenty or twenty-one?",
+    "level": "a1"
   },
   {
-    "term": "in the country",
-    "level": "A1",
-    "definition": "the best… in the country",
-    "example": "I live in the country."
+    "id": "twenty-two",
+    "word": "twenty-two",
+    "partOfSpeech": "n",
+    "definition": "The number 22.",
+    "example": "The train to London is at twenty-two minutes past three.",
+    "level": "a1"
   },
   {
-    "term": "in the future",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "thirty",
+    "word": "thirty",
+    "partOfSpeech": "n",
+    "definition": "The number 30.",
+    "example": "Some people think they are old at thirty.",
+    "level": "a1"
   },
   {
-    "term": "in the morning",
-    "level": "A1",
-    "definition": "in the afternoon, in the evening",
-    "example": ""
+    "id": "thirty-three",
+    "word": "thirty-three",
+    "partOfSpeech": "n",
+    "definition": "The number 33.",
+    "example": "I’m Mark. I’m thirty-three.",
+    "level": "a1"
   },
   {
-    "term": "in the north",
-    "level": "A1",
-    "definition": "in the south, in the east, in the west",
-    "example": ""
+    "id": "forty",
+    "word": "forty",
+    "partOfSpeech": "n",
+    "definition": "The number 40.",
+    "example": "I’m forty. I’m from Munich.",
+    "level": "a1"
   },
   {
-    "term": "in the past",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "forty-four",
+    "word": "forty-four",
+    "partOfSpeech": "n",
+    "definition": "The number 44.",
+    "example": "Is Sam forty-four? ~ No, he’s forty-five.",
+    "level": "a1"
   },
   {
-    "term": "in the street",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "fifty",
+    "word": "fifty",
+    "partOfSpeech": "n",
+    "definition": "The number 50.",
+    "example": "Can I borrow fifty dollars?",
+    "level": "a1"
   },
   {
-    "term": "in the summer",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "fifty-five",
+    "word": "fifty-five",
+    "partOfSpeech": "n",
+    "definition": "The number 55.",
+    "example": "This T-shirt is expensive. It’s fifty-five dollars!",
+    "level": "a1"
   },
   {
-    "term": "in the winter",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "sixty",
+    "word": "sixty",
+    "partOfSpeech": "n",
+    "definition": "The number 60.",
+    "example": "I have sixty pounds in my wallet.",
+    "level": "a1"
   },
   {
-    "term": "in town",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "sixty-six",
+    "word": "sixty-six",
+    "partOfSpeech": "n",
+    "definition": "The number 66.",
+    "example": "I live at number sixty-six Elm Street.",
+    "level": "a1"
   },
   {
-    "term": "it is important to do sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "seventy",
+    "word": "seventy",
+    "partOfSpeech": "n",
+    "definition": "The number 70.",
+    "example": "My grandmother is seventy years old today.",
+    "level": "a1"
   },
   {
-    "term": "It takes…",
-    "level": "A1",
-    "definition": "",
-    "example": "It takes an hour to get there."
+    "id": "seventy-seven",
+    "word": "seventy-seven",
+    "partOfSpeech": "n",
+    "definition": "The number 77.",
+    "example": "This watch costs seventy-seven pounds.",
+    "level": "a1"
   },
   {
-    "term": "kind of sb/sth",
-    "level": "A1",
-    "definition": "",
-    "example": "What kind of music do you like?"
+    "id": "eighty",
+    "word": "eighty",
+    "partOfSpeech": "n",
+    "definition": "The number 80.",
+    "example": "This dress costs eighty pounds!",
+    "level": "a1"
   },
   {
-    "term": "know how",
-    "level": "A1",
-    "definition": "know how to do sth",
-    "example": ""
+    "id": "eighty-eight",
+    "word": "eighty-eight",
+    "partOfSpeech": "n",
+    "definition": "The number 88.",
+    "example": "Bus number eighty-eight goes to my house.",
+    "level": "a1"
   },
   {
-    "term": "last time",
-    "level": "A1",
-    "definition": "the last time",
-    "example": ""
+    "id": "ninety",
+    "word": "ninety",
+    "partOfSpeech": "n",
+    "definition": "The number 90.",
+    "example": "A good theatre ticket costs ninety dollars.",
+    "level": "a1"
   },
   {
-    "term": "last year",
-    "level": "A1",
-    "definition": "last month, last summer, last week, last weekend",
-    "example": ""
+    "id": "ninety-nine",
+    "word": "ninety-nine",
+    "partOfSpeech": "n",
+    "definition": "The number 99.",
+    "example": "This pen is ninety-nine pence.",
+    "level": "a1"
   },
   {
-    "term": "learn how to do sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "a_hundred",
+    "word": "a hundred",
+    "partOfSpeech": "n",
+    "definition": "The number 100.",
+    "example": "It’s about a hundred kilometres.",
+    "level": "a1"
   },
   {
-    "term": "listen to sb/sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "are_they_free",
+    "word": "Are they free?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask if something costs money or is available without charge.",
+    "example": "Excuse me. Are they free? ~ The small bags are free.",
+    "level": "a1"
   },
   {
-    "term": "live with sb",
-    "level": "A1",
-    "definition": "to have the same opinion as someone",
-    "example": "I agree with you."
+    "id": "are_you_on_holiday",
+    "word": "Are you on holiday?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask if someone is on vacation.",
+    "example": "Are you on holiday? ~ Yes, for two weeks.",
+    "level": "a1"
   },
   {
-    "term": "living room",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "dogs",
+    "word": "dogs",
+    "partOfSpeech": "pl n",
+    "definition": "Domesticated carnivorous mammals that typically have a long snout, an acute sense of smell, and a barking, howling, or whining voice.",
+    "example": "Are these your dogs?",
+    "level": "a1"
   },
   {
-    "term": "look at sb/sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "excuse_me",
+    "word": "Excuse me.",
+    "partOfSpeech": "phrase",
+    "definition": "A polite expression used to get someone's attention, to apologize for interrupting, or to ask someone to move so that you can pass.",
+    "example": "Excuse me. Is this your bag?",
+    "level": "a1"
   },
   {
-    "term": "look for sb/sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "have_a_nice_day",
+    "word": "Have a nice day!",
+    "partOfSpeech": "phrase",
+    "definition": "A polite expression used to wish someone a pleasant day.",
+    "example": "Have a nice day! ~ Thanks, see you tomorrow.",
+    "level": "a1"
   },
   {
-    "term": "look like sb/sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "its_a_beautiful_city",
+    "word": "It's a beautiful city.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to describe a city as very attractive.",
+    "example": "Do you like Oxford? ~ Yes, it's a beautiful city.",
+    "level": "a1"
   },
   {
-    "term": "lots of…",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "over_there",
+    "word": "over there",
+    "partOfSpeech": "adv",
+    "definition": "In a place a short distance away from you.",
+    "example": "Look over there. That's the musuem.",
+    "level": "a1"
   },
   {
-    "term": "millions of…",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "tourists",
+    "word": "tourists",
+    "partOfSpeech": "pl n",
+    "definition": "People who are travelling or visiting a place for pleasure.",
+    "example": "They are tourists.",
+    "level": "a1"
   },
   {
-    "term": "mobile phone/cell phone (AE)",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "were_on_business",
+    "word": "We're on business.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to say that the purpose of a trip is work-related.",
+    "example": "Are you on holiday? ~ No, we're on business.",
+    "level": "a1"
   },
   {
-    "term": "more than…",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "whats_that",
+    "word": "What's that?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask about something you see or hear.",
+    "example": "What's that? ~ It's our bus!",
+    "level": "a1"
   },
   {
-    "term": "next time",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "bedroom",
+    "word": "bedroom",
+    "partOfSpeech": "n",
+    "definition": "A room for sleeping in.",
+    "example": "This is a picture of my bedroom at home.",
+    "level": "a1"
   },
   {
-    "term": "next year",
-    "level": "A1",
-    "definition": "next month, next week",
-    "example": ""
+    "id": "big",
+    "word": "big",
+    "partOfSpeech": "adj",
+    "definition": "Of considerable size, extent, or intensity.",
+    "example": "This is a big garden.",
+    "level": "a1"
   },
   {
-    "term": "No problem",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "garden",
+    "word": "garden",
+    "partOfSpeech": "n",
+    "definition": "A piece of ground adjoining a house, in which grass, flowers, and shrubs may be grown.",
+    "example": "Do you like our garden?",
+    "level": "a1"
   },
   {
-    "term": "of course",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "hes_very_good-looking",
+    "word": "He's very good-looking.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to say that a man is physically attractive.",
+    "example": "He's very good-looking. ~ Yes, he is.",
+    "level": "a1"
   },
   {
-    "term": "Oh no!",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "how_are_you",
+    "word": "How are you?",
+    "partOfSpeech": "phrase",
+    "definition": "A polite greeting or inquiry about someone's well-being.",
+    "example": "How are you? ~ I'm fine, thanks.",
+    "level": "a1"
   },
   {
-    "term": "Oh yes",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "how_old_is_he",
+    "word": "How old is he?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask someone's age.",
+    "example": "How old is he? He's two.",
+    "level": "a1"
   },
   {
-    "term": "old friend",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "im_fine",
+    "word": "I'm fine.",
+    "partOfSpeech": "phrase",
+    "definition": "A common response to 'How are you?'.",
+    "example": "How are you? ~ I'm fine, thanks.",
+    "level": "a1"
   },
   {
-    "term": "once a…",
-    "level": "A1",
-    "definition": "once a month, once a week, once a year",
-    "example": ""
+    "id": "in_the_south_of_england",
+    "word": "in the south of England",
+    "partOfSpeech": "phrase",
+    "definition": "Located in the southern part of England.",
+    "example": "We live in the south of England.",
+    "level": "a1"
   },
   {
-    "term": "one day",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "kitchen",
+    "word": "kitchen",
+    "partOfSpeech": "n",
+    "definition": "A room or area where food is prepared and cooked.",
+    "example": "I'm in the kitchen.",
+    "level": "a1"
   },
   {
-    "term": "on holiday/on vacation (AE)",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "see_you_later",
+    "word": "See you later.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to say goodbye when you expect to meet again soon.",
+    "example": "See you later! ~ Yes, see you tomorrow.",
+    "level": "a1"
   },
   {
-    "term": "on Monday",
-    "level": "A1",
-    "definition": "on Tuesday, etc.",
-    "example": ""
+    "id": "small",
+    "word": "small",
+    "partOfSpeech": "adj",
+    "definition": "Of a size that is less than normal or usual.",
+    "example": "Their house is small.",
+    "level": "a1"
   },
   {
-    "term": "on television",
-    "level": "A1",
-    "definition": "on the television",
-    "example": ""
+    "id": "thats_my_bus",
+    "word": "That's my bus.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to indicate that the bus arriving or present is the one you intend to take.",
+    "example": "That's my bus. See you on Friday!",
+    "level": "a1"
   },
   {
-    "term": "on the beach",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "this_is_alex",
+    "word": "This is Alex.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to introduce someone named Alex.",
+    "example": "This is Alex. ~ Nice to meet you, Alex.",
+    "level": "a1"
   },
   {
-    "term": "on the floor",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "this_is_my_bus_stop",
+    "word": "This is my bus stop.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to indicate that you have arrived at your designated bus stop.",
+    "example": "This is my bus stop. See you tomorrow!",
+    "level": "a1"
   },
   {
-    "term": "on the internet",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "what_class_are_you_in",
+    "word": "What class are you in?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask about someone's class or group in a school setting.",
+    "example": "What class are you in? I'm in David's class.",
+    "level": "a1"
   },
   {
-    "term": "on the left",
-    "level": "A1",
-    "definition": "on the right",
-    "example": ""
+    "id": "whats_your_phone_number",
+    "word": "What's your phone number?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask for someone's telephone number.",
+    "example": "What's your phone number? ~ It's 07495 339245",
+    "level": "a1"
   },
   {
-    "term": "on the phone",
-    "level": "A1",
-    "definition": "be on the phone, talk on the phone",
-    "example": ""
+    "id": "whos_that",
+    "word": "Who's that?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask about the identity of a person.",
+    "example": "Who's that? ~ That's Mia.",
+    "level": "a1"
   },
   {
-    "term": "on TV",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "bag",
+    "word": "bag",
+    "partOfSpeech": "n",
+    "definition": "A container made of paper, plastic, or cloth, with an opening at the top, used for holding or carrying things.",
+    "example": "Is this your bag?",
+    "level": "a1"
   },
   {
-    "term": "out of sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "camera",
+    "word": "camera",
+    "partOfSpeech": "n",
+    "definition": "A device for recording visual images in the form of photographs, film, or video signals.",
+    "example": "This is a great camera!",
+    "level": "a1"
   },
   {
-    "term": "over there",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "phone_charger",
+    "word": "(phone) charger",
+    "partOfSpeech": "n",
+    "definition": "A device for charging a mobile phone's battery.",
+    "example": "Where is my charger?",
+    "level": "a1"
   },
   {
-    "term": "pay for sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "credit_card",
+    "word": "credit card",
+    "partOfSpeech": "n",
+    "definition": "A small plastic card issued by a bank, building society, etc., allowing the holder to purchase goods or services on credit.",
+    "example": "Do you have a credit card?",
+    "level": "a1"
   },
   {
-    "term": "phone call",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "debit_card",
+    "word": "debit card",
+    "partOfSpeech": "n",
+    "definition": "A card allowing the holder to transfer money electronically from their bank account when making a purchase.",
+    "example": "I have a debit card.",
+    "level": "a1"
   },
   {
-    "term": "phone number",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "glasses",
+    "word": "glasses",
+    "partOfSpeech": "pl n",
+    "definition": "A pair of lenses set in a frame resting on the nose and ears, used to correct or assist defective eyesight or protect the eyes.",
+    "example": "Are these your glasses?",
+    "level": "a1"
   },
   {
-    "term": "plan for sth",
-    "level": "A1",
-    "definition": "make plans for sth",
-    "example": "What are your plans for next year?"
+    "id": "id_card",
+    "word": "ID card",
+    "partOfSpeech": "n",
+    "definition": "An identity card.",
+    "example": "Do you have your ID card?",
+    "level": "a1"
   },
   {
-    "term": "play with sb/sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "key",
+    "word": "key",
+    "partOfSpeech": "n",
+    "definition": "A small piece of shaped metal with incisions cut to fit the wards of a particular lock, which is inserted into a lock and turned to open or close it.",
+    "example": "I have my key, five pounds, and my mobile phone.",
+    "level": "a1"
   },
   {
-    "term": "post office",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "newspaper",
+    "word": "newspaper",
+    "partOfSpeech": "n",
+    "definition": "A printed publication consisting of folded unstapled sheets and containing news, articles, advertisements, and correspondence.",
+    "example": "I want to buy a newspaper today.",
+    "level": "a1"
   },
   {
-    "term": "pretty good",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "notebook",
+    "word": "notebook",
+    "partOfSpeech": "n",
+    "definition": "A small book with blank or ruled pages for writing notes in.",
+    "example": "This is my notebook for English class.",
+    "level": "a1"
   },
   {
-    "term": "really enjoy",
-    "level": "A1",
-    "definition": "",
-    "example": "I really enjoyed it."
+    "id": "passport",
+    "word": "passport",
+    "partOfSpeech": "n",
+    "definition": "An official document issued by a government, certifying the holder's identity and citizenship and entitling them to travel under its protection to and from foreign countries.",
+    "example": "Oh no! My passport is on the plane!",
+    "level": "a1"
   },
   {
-    "term": "really good",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "pencil",
+    "word": "pencil",
+    "partOfSpeech": "n",
+    "definition": "An instrument for writing or drawing, consisting of a thin stick of graphite or a similar solid pigment encased in a cylinder of wood or plastic.",
+    "example": "I write with a pencil.",
+    "level": "a1"
   },
   {
-    "term": "really like",
-    "level": "A1",
-    "definition": "",
-    "example": "I’d really like to…"
+    "id": "mobile_phone",
+    "word": "(mobile) phone",
+    "partOfSpeech": "n",
+    "definition": "A telephone with access to a cellular radio system so it can be used over a wide area, without a physical connection to a network.",
+    "example": "My phone is in my bag.",
+    "level": "a1"
   },
   {
-    "term": "right now",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "photo",
+    "word": "photo",
+    "partOfSpeech": "n",
+    "definition": "A photograph.",
+    "example": "This is a photo of my family.",
+    "level": "a1"
   },
   {
-    "term": "See you",
-    "level": "A1",
-    "definition": "See you around, See you later, See you soon",
-    "example": ""
+    "id": "purse",
+    "word": "purse",
+    "partOfSpeech": "n",
+    "definition": "A small bag used especially by a woman to carry personal belongings.",
+    "example": "My purse is in my pocket.",
+    "level": "a1"
   },
   {
-    "term": "sit down",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "tablet",
+    "word": "tablet",
+    "partOfSpeech": "n",
+    "definition": "A small portable computer that accepts input directly on to its screen rather than via a keyboard or mouse.",
+    "example": "Is that a tablet or a laptop?",
+    "level": "a1"
   },
   {
-    "term": "someone else",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "umbrella",
+    "word": "umbrella",
+    "partOfSpeech": "n",
+    "definition": "A device consisting of a circular canopy of cloth on a folding metal frame supported by a central rod, used for protection against rain.",
+    "example": "This is her umbrella.",
+    "level": "a1"
   },
   {
-    "term": "something else",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "wallet",
+    "word": "wallet",
+    "partOfSpeech": "n",
+    "definition": "A flat, folding pocket-book, especially one for holding banknotes and credit cards.",
+    "example": "Is this your wallet?",
+    "level": "a1"
   },
   {
-    "term": "speak to sb",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "watch",
+    "word": "watch",
+    "partOfSpeech": "n",
+    "definition": "A small timepiece worn typically on a strap on one's wrist.",
+    "example": "This is a nice watch.",
+    "level": "a1"
   },
   {
-    "term": "spend time",
-    "level": "A1",
-    "definition": "spend time doing sth, spend time with sb",
-    "example": ""
+    "id": "a_coke_please",
+    "word": "A Coke, please.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to order a Coca-Cola.",
+    "example": "A Coke, please. ~ That's £1.50.",
+    "level": "a1"
   },
   {
-    "term": "stand up",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "anything_else",
+    "word": "Anything else?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask if a customer wants to order or buy more items.",
+    "example": "Anything else? ~ A tuna sandwich, please.",
+    "level": "a1"
   },
   {
-    "term": "stay in",
-    "level": "A1",
-    "definition": "stay in a hotel, stay in bed",
-    "example": "I’m staying in tonight."
+    "id": "can_i_have_a",
+    "word": "Can I have a…?",
+    "partOfSpeech": "phrase",
+    "definition": "A polite way to ask for something.",
+    "example": "Can I have a cheese sandwich?",
+    "level": "a1"
   },
   {
-    "term": "such as",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "great_idea",
+    "word": "Great idea.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to express strong approval of a suggestion.",
+    "example": "Let's have a coffee. ~ Great idea.",
+    "level": "a1"
   },
   {
-    "term": "swimming pool",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "here_you_are",
+    "word": "Here you are.",
+    "partOfSpeech": "phrase",
+    "definition": "Said when giving something to someone.",
+    "example": "A Coke, please. ~ Here you are.",
+    "level": "a1"
   },
   {
-    "term": "talk about sb/sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "heres_your_change",
+    "word": "Here's your change.",
+    "partOfSpeech": "phrase",
+    "definition": "Said when giving someone the money remaining after they have paid for something.",
+    "example": "£4, please. ~ Here's £5. ~ Here's your change, £1.",
+    "level": "a1"
   },
   {
-    "term": "thank you",
-    "level": "A1",
-    "definition": "thank you very much",
-    "example": ""
+    "id": "how_much_is_it",
+    "word": "How much is it?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask the price of something.",
+    "example": "How much is it? ~ £2.99, please.",
+    "level": "a1"
   },
   {
-    "term": "that day",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "ice_and_lemon",
+    "word": "Ice and lemon?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask if someone wants ice and lemon in their drink.",
+    "example": "A Coke, please? ~ Would you like ice and lemon?",
+    "level": "a1"
   },
   {
-    "term": "the 20th century",
-    "level": "A1",
-    "definition": "the 21st century, the 19th century",
-    "example": ""
+    "id": "im_fine_too",
+    "word": "I'm fine, too.",
+    "partOfSpeech": "phrase",
+    "definition": "A response indicating that you are also well.",
+    "example": "How are you? ~ I'm fine, thank you. And you? ~ I'm fine, too.",
+    "level": "a1"
   },
   {
-    "term": "the next day",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "oh_no",
+    "word": "Oh no!",
+    "partOfSpeech": "phrase",
+    "definition": "An expression of dismay or disappointment.",
+    "example": "Oh no! Where's my phone?",
+    "level": "a1"
   },
   {
-    "term": "there is",
-    "level": "A1",
-    "definition": "there are, there was, there were",
-    "example": ""
+    "id": "how_much_is_this_mug",
+    "word": "How much is this mug?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask the price of a specific mug.",
+    "example": "How much is this mug? ~ £2.99, please.",
+    "level": "a1"
   },
   {
-    "term": "think about sb/sth",
-    "level": "A1",
-    "definition": "think of sb/sth",
-    "example": ""
+    "id": "i_have_two_credit_cards",
+    "word": "I have two credit cards.",
+    "partOfSpeech": "phrase",
+    "definition": "A statement about possessing two credit cards.",
+    "example": "What's in your bag? ~ I have two credit cards and my phone.",
+    "level": "a1"
   },
   {
-    "term": "This is…",
-    "level": "A1",
-    "definition": "",
-    "example": "This is my dad."
+    "id": "i_think_its_an_id_card",
+    "word": "I think it's an ID card.",
+    "partOfSpeech": "phrase",
+    "definition": "Expressing an opinion that an object is an ID card.",
+    "example": "What's this in English? ~ I think it's an ID card.",
+    "level": "a1"
   },
   {
-    "term": "this kind of…",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "i_think_theyre_keys",
+    "word": "I think they're keys.",
+    "partOfSpeech": "phrase",
+    "definition": "Expressing an opinion that objects are keys.",
+    "example": "What are these in English? ~ I think they're keys.",
+    "level": "a1"
   },
   {
-    "term": "this morning",
-    "level": "A1",
-    "definition": "this afternoon, this evening",
-    "example": ""
+    "id": "what_are_they",
+    "word": "What are they?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask about the identity of multiple objects.",
+    "example": "What are they? ~ They're souvenirs.",
+    "level": "a1"
   },
   {
-    "term": "this time",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "what_is_it",
+    "word": "What is it?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask about the identity of a single object.",
+    "example": "What is it? ~ It's my ID card.",
+    "level": "a1"
   },
   {
-    "term": "this year",
-    "level": "A1",
-    "definition": "this summer, this weekend",
-    "example": ""
+    "id": "whats_in_your_bag",
+    "word": "What's in your bag?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask about the contents of someone's bag.",
+    "example": "What's in your bag? ~ My phone, keys, and some money.",
+    "level": "a1"
   },
   {
-    "term": "thousands of…",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "where_are_my_glasses",
+    "word": "Where are my glasses?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask about the location of one's glasses.",
+    "example": "Where are my glasses? ~ They're on the table.",
+    "level": "a1"
   },
   {
-    "term": "too long",
-    "level": "A1",
-    "definition": "too far, too hard",
-    "example": ""
+    "id": "wheres_my_phone",
+    "word": "Where's my phone?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask about the location of one's phone.",
+    "example": "Where's my phone? It isn't in my bag.",
+    "level": "a1"
   },
   {
-    "term": "too much",
-    "level": "A1",
-    "definition": "too many",
-    "example": ""
+    "id": "a_t-shirt_please",
+    "word": "A T-shirt, please.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to request a T-shirt.",
+    "example": "A T-shirt, please. ~ That's £5.",
+    "level": "a1"
   },
   {
-    "term": "town centre/town center (AE)",
-    "level": "A1",
-    "definition": "in the town centre/center (AE)",
-    "example": ""
+    "id": "here",
+    "word": "here",
+    "partOfSpeech": "adv",
+    "definition": "In, at, or to this place or position.",
+    "example": "Where do you live? ~ I live here in Oxford.",
+    "level": "a1"
   },
   {
-    "term": "TV show",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "how_much_are_these_key_rings",
+    "word": "How much are these key rings?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask the price of specific key rings.",
+    "example": "How much are these key rings? ~ They're £3.",
+    "level": "a1"
   },
   {
-    "term": "wait for sb/sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "is_this_your_phone",
+    "word": "Is this your phone?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask if a phone belongs to someone.",
+    "example": "Is this your phone? ~ Yes, that's my phone, thanks.",
+    "level": "a1"
   },
   {
-    "term": "wake up",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "souvenirs",
+    "word": "souvenirs",
+    "partOfSpeech": "pl n",
+    "definition": "Things that are kept as a reminder of a person, place, or event.",
+    "example": "Do you want to buy some souvenirs from London?",
+    "level": "a1"
   },
   {
-    "term": "welcome to sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "thank_you_very_much",
+    "word": "Thank you very much.",
+    "partOfSpeech": "phrase",
+    "definition": "A polite and emphatic expression of gratitude.",
+    "example": "Your English is good. ~ Thank you very much.",
+    "level": "a1"
   },
   {
-    "term": "What about…?",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "there",
+    "word": "there",
+    "partOfSpeech": "adv",
+    "definition": "In, at, or to that place or position.",
+    "example": "Where's my bus stop? ~ It's over there.",
+    "level": "a1"
   },
   {
-    "term": "work as sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "theyre_twenty_pounds",
+    "word": "They're twenty pounds.",
+    "partOfSpeech": "phrase",
+    "definition": "Stating the price of items as twenty pounds.",
+    "example": "How much are these four T-shirts? They're twenty pounds.",
+    "level": "a1"
   },
   {
-    "term": "work for sb/sth",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "wait_for_me",
+    "word": "Wait for me.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask someone to not leave without you.",
+    "example": "Wait for me, please.",
+    "level": "a1"
   },
   {
-    "term": "work hard",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "youre_welcome",
+    "word": "You're welcome.",
+    "partOfSpeech": "phrase",
+    "definition": "A polite response to thanks.",
+    "example": "Thank you very much. ~ You're welcome.",
+    "level": "a1"
   },
   {
-    "term": "work together",
-    "level": "A1",
-    "definition": "work together for sth, work together to do sth",
-    "example": ""
+    "id": "boyfriend",
+    "word": "boyfriend",
+    "partOfSpeech": "n",
+    "definition": "A person's regular male companion with whom they have a romantic or sexual relationship.",
+    "example": "This is my sister’s boyfriend, Kurt.",
+    "level": "a1"
   },
   {
-    "term": "work with sb",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "brother",
+    "word": "brother",
+    "partOfSpeech": "n",
+    "definition": "A man or boy with one or both parents in common with another person.",
+    "example": "This is my brother, Scott.",
+    "level": "a1"
   },
   {
-    "term": "would like",
-    "level": "A1",
-    "definition": "I would like…, I would like to…, Would you like…?",
-    "example": ""
+    "id": "child",
+    "word": "child",
+    "partOfSpeech": "n",
+    "definition": "A young human being below the age of puberty or below the legal age of majority.",
+    "example": "Is this girl your child?",
+    "level": "a1"
   },
   {
-    "term": "X hours a day",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "children",
+    "word": "children",
+    "partOfSpeech": "pl n",
+    "definition": "Plural of child.",
+    "example": "These are my children.",
+    "level": "a1"
   },
   {
-    "term": "X times a…",
-    "level": "A1",
-    "definition": "X times a day, X times a week",
-    "example": ""
+    "id": "daughter",
+    "word": "daughter",
+    "partOfSpeech": "n",
+    "definition": "A girl or woman in relation to her parents.",
+    "example": "They have one daughter, Liz.",
+    "level": "a1"
   },
   {
-    "term": "X years ago",
-    "level": "A1",
-    "definition": "X days ago, X months ago, X weeks ago",
-    "example": ""
+    "id": "family",
+    "word": "family",
+    "partOfSpeech": "n",
+    "definition": "A group consisting of parents and children living together in a household.",
+    "example": "My family lives in Krakow.",
+    "level": "a1"
   },
   {
-    "term": "X years later",
-    "level": "A1",
-    "definition": "X days later, X minutes later",
-    "example": ""
+    "id": "father",
+    "word": "father",
+    "partOfSpeech": "n",
+    "definition": "A man in relation to his natural child or children.",
+    "example": "My father is from Brazil.",
+    "level": "a1"
   },
   {
-    "term": "X years old",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "friend",
+    "word": "friend",
+    "partOfSpeech": "n",
+    "definition": "A person whom one knows and with whom one has a bond of mutual affection, typically exclusive of sexual or family relations.",
+    "example": "My friend is at my house.",
+    "level": "a1"
   },
   {
-    "term": "You’re welcome",
-    "level": "A1",
-    "definition": "",
-    "example": ""
+    "id": "girl",
+    "word": "girl",
+    "partOfSpeech": "n",
+    "definition": "A female child or young woman.",
+    "example": "Who’s that girl? ~ Her name’s Emily.",
+    "level": "a1"
   },
   {
-    "term": "center/centre (BrE)",
-    "level": "A1",
-    "definition": "in the city center/centre (BrE)",
-    "example": ""
+    "id": "girlfriend",
+    "word": "girlfriend",
+    "partOfSpeech": "n",
+    "definition": "A person's regular female companion with whom they have a romantic or sexual relationship.",
+    "example": "This is my brother’s girlfriend, Sue.",
+    "level": "a1"
   },
   {
-    "term": "mother",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The family"
+    "id": "grandfather",
+    "word": "grandfather",
+    "partOfSpeech": "n",
+    "definition": "The father of one's father or mother.",
+    "example": "My grandfather is 68 years old.",
+    "level": "a1"
   },
   {
-    "term": "uncle",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The family"
+    "id": "grandmother",
+    "word": "grandmother",
+    "partOfSpeech": "n",
+    "definition": "The mother of one's father or mother.",
+    "example": "My grandmother has three sons.",
+    "level": "a1"
   },
   {
-    "term": "birthday",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Birth, marriage and death"
+    "id": "grandparents",
+    "word": "grandparents",
+    "partOfSpeech": "pl n",
+    "definition": "The parents of one's father or mother.",
+    "example": "I see my grandparents every Sunday.",
+    "level": "a1"
   },
   {
-    "term": "married",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Birth, marriage and death"
+    "id": "husband",
+    "word": "husband",
+    "partOfSpeech": "n",
+    "definition": "A married man considered in relation to his spouse.",
+    "example": "My husband is a teacher.",
+    "level": "a1"
   },
   {
-    "term": "head",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Parts of the body"
+    "id": "man",
+    "word": "man",
+    "partOfSpeech": "n",
+    "definition": "An adult male human being.",
+    "example": "Who’s that man? Is he your brother?",
+    "level": "a1"
   },
   {
-    "term": "foot",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Parts of the body"
+    "id": "men",
+    "word": "men",
+    "partOfSpeech": "pl n",
+    "definition": "Plural of man.",
+    "example": "There are three men in that car.",
+    "level": "a1"
   },
   {
-    "term": "shoulder",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Parts of the body"
+    "id": "mother",
+    "word": "mother",
+    "partOfSpeech": "n",
+    "definition": "A woman in relation to her child or children.",
+    "example": "My mother is French.",
+    "level": "a1"
   },
   {
-    "term": "hat",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
+    "id": "people",
+    "word": "people",
+    "partOfSpeech": "pl n",
+    "definition": "Human beings in general or considered collectively.",
+    "example": "I don’t know many people here.",
+    "level": "a1"
   },
   {
-    "term": "shirt",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
+    "id": "person",
+    "word": "person",
+    "partOfSpeech": "n",
+    "definition": "A human being regarded as an individual.",
+    "example": "Who is the person in this photo?",
+    "level": "a1"
   },
   {
-    "term": "trousers",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
+    "id": "sister",
+    "word": "sister",
+    "partOfSpeech": "n",
+    "definition": "A woman or girl with one or both parents in common with another person.",
+    "example": "This is my sister, Luisa.",
+    "level": "a1"
   },
   {
-    "term": "tall",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Describing people"
+    "id": "son",
+    "word": "son",
+    "partOfSpeech": "n",
+    "definition": "A boy or man in relation to either or both of his parents.",
+    "example": "They have one son, Aidan.",
+    "level": "a1"
   },
   {
-    "term": "dark",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Describing people"
+    "id": "wife",
+    "word": "wife",
+    "partOfSpeech": "n",
+    "definition": "A married woman considered in relation to her spouse.",
+    "example": "My wife is a doctor.",
+    "level": "a1"
   },
   {
-    "term": "headache",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Health and illness"
+    "id": "woman",
+    "word": "woman",
+    "partOfSpeech": "n",
+    "definition": "An adult female human being.",
+    "example": "Is the woman over there your teacher?",
+    "level": "a1"
   },
   {
-    "term": "exercise",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Health and illness"
+    "id": "women",
+    "word": "women",
+    "partOfSpeech": "pl n",
+    "definition": "Plural of woman.",
+    "example": "Who are the women in the photo? ~ They’re my sisters.",
+    "level": "a1"
   },
   {
-    "term": "love",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Feelings"
+    "id": "awful",
+    "word": "awful",
+    "partOfSpeech": "adj",
+    "definition": "Very bad or unpleasant.",
+    "example": "Is the weather good? ~ No, it's awful!",
+    "level": "a1"
   },
   {
-    "term": "tired",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Feelings"
+    "id": "bad",
+    "word": "bad",
+    "partOfSpeech": "adj",
+    "definition": "Of poor quality or a low standard.",
+    "example": "The weather is bad today. It’s raining.",
+    "level": "a1"
   },
   {
-    "term": "thirsty",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Feelings"
+    "id": "beautiful",
+    "word": "beautiful",
+    "partOfSpeech": "adj",
+    "definition": "Pleasing the senses or mind aesthetically.",
+    "example": "This hat is beautiful.",
+    "level": "a1"
   },
   {
-    "term": "Happy New Year",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conversations 1: Greetings and wishes"
+    "id": "black",
+    "word": "black",
+    "partOfSpeech": "adj",
+    "definition": "Of the darkest colour, like coal or night.",
+    "example": "The bag is black.",
+    "level": "a1"
   },
   {
-    "term": "well done",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conversations 1: Greetings and wishes"
+    "id": "blue",
+    "word": "blue",
+    "partOfSpeech": "adj",
+    "definition": "Of a colour intermediate between green and violet, as of the sky on a sunny day.",
+    "example": "The boots are blue.",
+    "level": "a1"
   },
   {
-    "term": "let’s",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conversations 2: Useful words and expressions"
+    "id": "brown",
+    "word": "brown",
+    "partOfSpeech": "adj",
+    "definition": "Of a colour produced by mixing red, yellow, and blue, as of dark wood or rich soil.",
+    "example": "The coat is brown.",
+    "level": "a1"
   },
   {
-    "term": "rice",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
+    "id": "cheap",
+    "word": "cheap",
+    "partOfSpeech": "adj",
+    "definition": "Low in price; worth more than its cost.",
+    "example": "That is a cheap watch.",
+    "level": "a1"
   },
   {
-    "term": "tea",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
+    "id": "clean",
+    "word": "clean",
+    "partOfSpeech": "adj",
+    "definition": "Free from dirt, marks, or stains.",
+    "example": "My car is clean.",
+    "level": "a1"
   },
   {
-    "term": "vegetables",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
+    "id": "colour",
+    "word": "colour",
+    "partOfSpeech": "n",
+    "definition": "The property possessed by an object of producing different sensations on the eye as a result of the way it reflects or emits light.",
+    "example": "Green is my favourite colour.",
+    "level": "a1"
   },
   {
-    "term": "fridge",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the kitchen"
+    "id": "difficult",
+    "word": "difficult",
+    "partOfSpeech": "adj",
+    "definition": "Needing much effort or skill to accomplish, deal with, or understand.",
+    "example": "This maths exercise is difficult.",
+    "level": "a1"
   },
   {
-    "term": "glass",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the kitchen"
+    "id": "dirty",
+    "word": "dirty",
+    "partOfSpeech": "adj",
+    "definition": "Covered or marked with an unclean substance.",
+    "example": "Those shoes are dirty.",
+    "level": "a1"
   },
   {
-    "term": "wardrobe",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
+    "id": "easy",
+    "word": "easy",
+    "partOfSpeech": "adj",
+    "definition": "Achieved without great effort; presenting few difficulties.",
+    "example": "This maths exercise is easy.",
+    "level": "a1"
   },
   {
-    "term": "shampoo",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
+    "id": "expensive",
+    "word": "expensive",
+    "partOfSpeech": "adj",
+    "definition": "Costing a lot of money.",
+    "example": "That watch is expensive.",
+    "level": "a1"
   },
   {
-    "term": "mirror",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
+    "id": "fantastic",
+    "word": "fantastic",
+    "partOfSpeech": "adj",
+    "definition": "Extraordinarily good or attractive.",
+    "example": "This is a fantastic book!",
+    "level": "a1"
   },
   {
-    "term": "bookshelf",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the living room"
+    "id": "fast",
+    "word": "fast",
+    "partOfSpeech": "adj",
+    "definition": "Moving or capable of moving at high speed.",
+    "example": "That car is fast.",
+    "level": "a1"
   },
   {
-    "term": "lamp",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the living room"
+    "id": "good",
+    "word": "good",
+    "partOfSpeech": "adj",
+    "definition": "To be desired or approved of.",
+    "example": "That's a good idea.",
+    "level": "a1"
   },
   {
-    "term": "nurse",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Jobs"
+    "id": "great",
+    "word": "great",
+    "partOfSpeech": "adj",
+    "definition": "Of an extent, amount, or intensity considerably above the normal or average.",
+    "example": "That is a great idea!",
+    "level": "a1"
   },
   {
-    "term": "notebook",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At school and university"
+    "id": "green",
+    "word": "green",
+    "partOfSpeech": "adj",
+    "definition": "Of the colour between blue and yellow in the spectrum; coloured like grass or emeralds.",
+    "example": "The ball is green.",
+    "level": "a1"
   },
   {
-    "term": "address",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Communications"
+    "id": "grey",
+    "word": "grey",
+    "partOfSpeech": "adj",
+    "definition": "Of a colour intermediate between black and white, as of ashes or lead.",
+    "example": "The chair is grey.",
+    "level": "a1"
   },
   {
-    "term": "computer",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Communications"
+    "id": "long",
+    "word": "long",
+    "partOfSpeech": "adj",
+    "definition": "Measuring a great distance from end to end.",
+    "example": "The street is long.",
+    "level": "a1"
   },
   {
-    "term": "text",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Your phone"
+    "id": "new",
+    "word": "new",
+    "partOfSpeech": "adj",
+    "definition": "Produced, introduced, or discovered recently or now for the first time; not existing before.",
+    "example": "The jacket is new.",
+    "level": "a1"
   },
   {
-    "term": "basket",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Online shopping"
+    "id": "old",
+    "word": "old",
+    "partOfSpeech": "adj",
+    "definition": "Having lived for a long time; no longer young.",
+    "example": "The suit is old.",
+    "level": "a1"
   },
   {
-    "term": "single room",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In a hotel"
+    "id": "orange_colour",
+    "word": "orange",
+    "partOfSpeech": "adj",
+    "definition": "Of a colour intermediate between red and yellow.",
+    "example": "The clock is orange.",
+    "level": "a1"
   },
   {
-    "term": "key",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In a hotel"
+    "id": "pink",
+    "word": "pink",
+    "partOfSpeech": "adj",
+    "definition": "Of a colour intermediate between red and white, as of coral or salmon.",
+    "example": "The cups are pink.",
+    "level": "a1"
   },
   {
-    "term": "café",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Eating out"
+    "id": "red",
+    "word": "red",
+    "partOfSpeech": "adj",
+    "definition": "Of a colour at the end of the spectrum next to orange and opposite violet, as of blood, fire, or rubies.",
+    "example": "The car is red.",
+    "level": "a1"
   },
   {
-    "term": "menu",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Eating out"
+    "id": "short",
+    "word": "short",
+    "partOfSpeech": "adj",
+    "definition": "Measuring a small distance from end to end.",
+    "example": "The class is very short.",
+    "level": "a1"
   },
   {
-    "term": "table tennis",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Sports"
+    "id": "slow",
+    "word": "slow",
+    "partOfSpeech": "adj",
+    "definition": "Moving or operating at a low speed; not fast.",
+    "example": "This car is slow.",
+    "level": "a1"
   },
   {
-    "term": "gardening",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Free time at home"
+    "id": "tall",
+    "word": "tall",
+    "partOfSpeech": "adj",
+    "definition": "Of great or more than average height, especially (with reference to an object) relative to width.",
+    "example": "He is a tall man.",
+    "level": "a1"
   },
   {
-    "term": "listening to CDs",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Free time at home"
+    "id": "terrible",
+    "word": "terrible",
+    "partOfSpeech": "adj",
+    "definition": "Extremely bad or serious.",
+    "example": "The traffic is terrible this morning.",
+    "level": "a1"
   },
   {
-    "term": "programme",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Free time at home"
+    "id": "ugly",
+    "word": "ugly",
+    "partOfSpeech": "adj",
+    "definition": "Unpleasant or repulsive, especially in appearance.",
+    "example": "That dog is ugly.",
+    "level": "a1"
   },
   {
-    "term": "guitar",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Music and musical instruments"
+    "id": "what_colour_is_it",
+    "word": "What colour is it?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask about the colour of something.",
+    "example": "What colour is it? ~ It’s blue.",
+    "level": "a1"
   },
   {
-    "term": "Spain",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "what_is_the_opposite_of",
+    "word": "What is the opposite of…?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask for the antonym of a word.",
+    "example": "What is the opposite of long? ~ It’s short.",
+    "level": "a1"
   },
   {
-    "term": "Chinese",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "white",
+    "word": "white",
+    "partOfSpeech": "adj",
+    "definition": "Of the colour of milk or fresh snow, due to the reflection of all visible rays of light; the opposite of black.",
+    "example": "The bike is white.",
+    "level": "a1"
   },
   {
-    "term": "cold",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Weather"
+    "id": "yellow",
+    "word": "yellow",
+    "partOfSpeech": "adj",
+    "definition": "Of the colour between green and orange in the spectrum, as of egg yolk or ripe lemons.",
+    "example": "The umbrella is yellow.",
+    "level": "a1"
   },
   {
-    "term": "rain",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Weather"
+    "id": "babysitter",
+    "word": "babysitter",
+    "partOfSpeech": "n",
+    "definition": "A person who looks after a child or children while the parents are out.",
+    "example": "I'm a babysitter for two children.",
+    "level": "a1"
   },
   {
-    "term": "railway station",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the town"
+    "id": "be_good",
+    "word": "Be good!",
+    "partOfSpeech": "phrase",
+    "definition": "An instruction to behave well.",
+    "example": "This is your babysitter. Be good!",
+    "level": "a1"
   },
   {
-    "term": "bank",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the town"
+    "id": "can_i_see",
+    "word": "Can I see?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask for permission to look at something.",
+    "example": "What's that? Can I see?",
+    "level": "a1"
   },
   {
-    "term": "hill",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the countryside"
+    "id": "come_in",
+    "word": "Come in.",
+    "partOfSpeech": "phrase",
+    "definition": "An invitation to enter a place.",
+    "example": "Come in! It's good to see you.",
+    "level": "a1"
   },
   {
-    "term": "farm",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the countryside"
+    "id": "dad",
+    "word": "Dad",
+    "partOfSpeech": "n",
+    "definition": "An informal term for father.",
+    "example": "Hi Dad. Can you help me with this?",
+    "level": "a1"
   },
   {
-    "term": "river",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the countryside"
+    "id": "i_remember",
+    "word": "I remember.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to indicate that you recall something.",
+    "example": "When is his birthday? Oh, yes, I remember. It's the 9th.",
+    "level": "a1"
   },
   {
-    "term": "horse",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
+    "id": "in_my_phone",
+    "word": "in my phone",
+    "partOfSpeech": "phrase",
+    "definition": "Located within one's mobile phone, typically referring to stored information.",
+    "example": "I have your number in my phone.",
+    "level": "a1"
   },
   {
-    "term": "pet",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
+    "id": "lets_order_pizza",
+    "word": "Let's order pizza.",
+    "partOfSpeech": "phrase",
+    "definition": "A suggestion to have pizza delivered or to go out for pizza.",
+    "example": "I'm tired. Let's order pizza tonight.",
+    "level": "a1"
   },
   {
-    "term": "train",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Travelling"
+    "id": "mum",
+    "word": "Mum",
+    "partOfSpeech": "n",
+    "definition": "An informal term for mother.",
+    "example": "Mum, I'm going to school now.",
+    "level": "a1"
   },
   {
-    "term": "map",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Travelling"
+    "id": "on_the_table",
+    "word": "on the table",
+    "partOfSpeech": "phrase",
+    "definition": "Positioned on the surface of a table.",
+    "example": "My phone is on the table.",
+    "level": "a1"
   },
   {
-    "term": "flight",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Travelling"
+    "id": "perhaps",
+    "word": "perhaps",
+    "partOfSpeech": "adv",
+    "definition": "Used to express uncertainty or possibility.",
+    "example": "Perhaps we can get pizza on Friday night.",
+    "level": "a1"
   },
   {
-    "term": "Christmas",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "UK culture"
+    "id": "what_a_lovely_card",
+    "word": "What a lovely card!",
+    "partOfSpeech": "phrase",
+    "definition": "An exclamation of appreciation for a greeting card.",
+    "example": "Happy birthday! ~ Thanks! What a lovely card!",
+    "level": "a1"
   },
   {
-    "term": "magazine",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The media"
+    "id": "come_with_me",
+    "word": "Come with me.",
+    "partOfSpeech": "phrase",
+    "definition": "An invitation or instruction to accompany the speaker.",
+    "example": "Come with me. I will show you more cars.",
+    "level": "a1"
   },
   {
-    "term": "have breakfast",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Have / had / had"
+    "id": "easy_to_park",
+    "word": "easy to park",
+    "partOfSpeech": "adj",
+    "definition": "Not difficult to manoeuvre into a parking space.",
+    "example": "This car is small and easy to park.",
+    "level": "a1"
   },
   {
-    "term": "have a swim",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Have / had / had"
+    "id": "electric_car",
+    "word": "electric car",
+    "partOfSpeech": "n",
+    "definition": "A car that is propelled by one or more electric motors, using energy stored in rechargeable batteries.",
+    "example": "This is an electric car. It's very quiet.",
+    "level": "a1"
   },
   {
-    "term": "go shopping",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Go / went / gone"
+    "id": "famous",
+    "word": "famous",
+    "partOfSpeech": "adj",
+    "definition": "Known about by many people.",
+    "example": "He's a famous football player.",
+    "level": "a1"
   },
   {
-    "term": "do an exercise",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Do / did / done"
+    "id": "i_love_it",
+    "word": "I love it!",
+    "partOfSpeech": "phrase",
+    "definition": "An expression of strong affection or enthusiasm for something.",
+    "example": "Do you like this car? ~ I love it!",
+    "level": "a1"
   },
   {
-    "term": "do the washing",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Do / did / done"
+    "id": "i_prefer_this_red_car",
+    "word": "I prefer this red car.",
+    "partOfSpeech": "phrase",
+    "definition": "Expressing a preference for a specific red car.",
+    "example": "Do you like that car? ~ I prefer this red car.",
+    "level": "a1"
   },
   {
-    "term": "make coffee",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Make / made / made"
+    "id": "in_her_opinion",
+    "word": "in her (my, your…) opinion",
+    "partOfSpeech": "phrase",
+    "definition": "According to what someone thinks or believes.",
+    "example": "In her opinion, a small car is better to use in the city.",
+    "level": "a1"
   },
   {
-    "term": "make a mistake",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Make / made / made"
+    "id": "is_the_car_for_you",
+    "word": "Is the car for you?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking if the car is intended for the person being addressed.",
+    "example": "Is the car for you? ~ Yes, to go to university.",
+    "level": "a1"
   },
   {
-    "term": "make a noise",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Make / made / made"
+    "id": "madam",
+    "word": "madam",
+    "partOfSpeech": "n",
+    "definition": "A polite and formal way of addressing a woman.",
+    "example": "Good morning, madam. How can I help you?",
+    "level": "a1"
   },
   {
-    "term": "come in",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Come / came / come"
+    "id": "motorbike",
+    "word": "motorbike",
+    "partOfSpeech": "n",
+    "definition": "A motorcycle.",
+    "example": "I ride a motorbike.",
+    "level": "a1"
   },
   {
-    "term": "come back",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Come / came / come"
+    "id": "museum",
+    "word": "museum",
+    "partOfSpeech": "n",
+    "definition": "A building in which objects of historical, scientific, artistic, or cultural interest are stored and exhibited.",
+    "example": "This is a very old museum.",
+    "level": "a1"
   },
   {
-    "term": "take the bus",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Take / took / taken"
+    "id": "perfect",
+    "word": "perfect",
+    "partOfSpeech": "adj",
+    "definition": "Having all the required or desirable elements, qualities, or characteristics; as good as it is possible to be.",
+    "example": "I think it's perfect. How much is it?",
+    "level": "a1"
   },
   {
-    "term": "take a photo",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Take / took / taken"
+    "id": "sir",
+    "word": "sir",
+    "partOfSpeech": "n",
+    "definition": "A polite and formal way of addressing a man.",
+    "example": "Good afternoon, sir. Do you have a reservation?",
+    "level": "a1"
   },
   {
-    "term": "take an exam",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Take / took / taken"
+    "id": "sports_car",
+    "word": "sports car",
+    "partOfSpeech": "n",
+    "definition": "A low, fast car, typically with seating for only two people.",
+    "example": "I like this sports car. It's very fast!",
+    "level": "a1"
   },
   {
-    "term": "take",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Bring / brought / brought"
+    "id": "village",
+    "word": "village",
+    "partOfSpeech": "n",
+    "definition": "A group of houses and associated buildings, larger than a hamlet and smaller than a town, situated in a rural area.",
+    "example": "I live in a small village of 200 people.",
+    "level": "a1"
   },
   {
-    "term": "get tired",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Get / got / got"
+    "id": "beer",
+    "word": "beer",
+    "partOfSpeech": "n",
+    "definition": "An alcoholic drink made from yeast-fermented malt flavoured with hops.",
+    "example": "Two beers, please.",
+    "level": "a1"
   },
   {
-    "term": "get better",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Get / got / got"
+    "id": "bread",
+    "word": "bread",
+    "partOfSpeech": "n",
+    "definition": "Food made of flour, water, and yeast mixed together and baked.",
+    "example": "I don’t eat a lot of bread or pasta.",
+    "level": "a1"
   },
   {
-    "term": "put on",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Phrasal verbs"
+    "id": "breakfast",
+    "word": "breakfast",
+    "partOfSpeech": "n",
+    "definition": "A meal eaten in the morning, the first of the day.",
+    "example": "I eat breakfast at home every morning.",
+    "level": "a1"
   },
   {
-    "term": "watch TV",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Everyday things"
+    "id": "butter",
+    "word": "butter",
+    "partOfSpeech": "n",
+    "definition": "A pale yellow edible fatty substance made by churning cream and used as a spread or in cooking.",
+    "example": "I like toast with butter.",
+    "level": "a1"
   },
   {
-    "term": "wash clothes",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Everyday things"
+    "id": "cereal",
+    "word": "cereal",
+    "partOfSpeech": "n",
+    "definition": "A grain used for food, such as wheat, oats, or corn, or a breakfast food made from roasted grain, typically eaten with milk.",
+    "example": "I often have cereal for breakfast.",
+    "level": "a1"
   },
   {
-    "term": "go for a walk",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Everyday things"
+    "id": "cheese",
+    "word": "cheese",
+    "partOfSpeech": "n",
+    "definition": "A food made from pressed curds of milk.",
+    "example": "Roquefort is a French cheese.",
+    "level": "a1"
   },
   {
-    "term": "say",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Talking"
+    "id": "chocolate",
+    "word": "chocolate",
+    "partOfSpeech": "n",
+    "definition": "A food preparation in the form of a paste or solid block made from roasted and ground cacao seeds, typically sweetened.",
+    "example": "I eat chocolate every day.",
+    "level": "a1"
   },
   {
-    "term": "tell",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Talking"
+    "id": "coffee",
+    "word": "coffee",
+    "partOfSpeech": "n",
+    "definition": "A hot drink made from the roasted and ground seeds (coffee beans) of a tropical shrub.",
+    "example": "I drink coffee with hot milk.",
+    "level": "a1"
   },
   {
-    "term": "ask",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Talking"
+    "id": "dinner",
+    "word": "dinner",
+    "partOfSpeech": "n",
+    "definition": "The main meal of the day, taken either around midday or in the evening.",
+    "example": "Dinner is usually a big meal.",
+    "level": "a1"
   },
   {
-    "term": "walk",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Moving"
+    "id": "eggs",
+    "word": "eggs",
+    "partOfSpeech": "pl n",
+    "definition": "An oval or round object laid by a female bird, reptile, fish, etc., containing a developing embryo.",
+    "example": "I have eggs for breakfast.",
+    "level": "a1"
   },
   {
-    "term": "drive",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Moving"
+    "id": "fish",
+    "word": "fish",
+    "partOfSpeech": "n",
+    "definition": "A limbless cold-blooded vertebrate animal with gills and fins living wholly in water.",
+    "example": "I have fish and vegetables for dinner.",
+    "level": "a1"
   },
   {
-    "term": "fly",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Moving"
+    "id": "fruit",
+    "word": "fruit",
+    "partOfSpeech": "n",
+    "definition": "The sweet and fleshy product of a tree or other plant that contains seed and can be eaten as food.",
+    "example": "My favourite fruit is oranges.",
+    "level": "a1"
   },
   {
-    "term": "because",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conjunctions and connecting words"
+    "id": "lunch",
+    "word": "lunch",
+    "partOfSpeech": "n",
+    "definition": "A meal eaten in the middle of the day.",
+    "example": "We have lunch at 1.00 p.m.",
+    "level": "a1"
   },
   {
-    "term": "only",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conjunctions and connecting words"
+    "id": "meat",
+    "word": "meat",
+    "partOfSpeech": "n",
+    "definition": "The flesh of animals, especially mammals, as food.",
+    "example": "They don’t have meat for lunch.",
+    "level": "a1"
   },
   {
-    "term": "before",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conjunctions and connecting words"
+    "id": "milk",
+    "word": "milk",
+    "partOfSpeech": "n",
+    "definition": "An opaque white fluid rich in fat and protein, secreted by female mammals for the nourishment of their young.",
+    "example": "I put milk in tea, but not in coffee.",
+    "level": "a1"
   },
   {
-    "term": "Monday",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Days, months, seasons"
+    "id": "orange_juice",
+    "word": "orange juice",
+    "partOfSpeech": "n",
+    "definition": "Juice from oranges.",
+    "example": "Do you prefer orange juice or coffee with your breakfast?",
+    "level": "a1"
   },
   {
-    "term": "July",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Days, months, seasons"
+    "id": "pasta",
+    "word": "pasta",
+    "partOfSpeech": "n",
+    "definition": "A dish originally from Italy consisting of dough made from durum wheat and water, extruded or stamped into various shapes and typically cooked in boiling water.",
+    "example": "I like pasta with tomato sauce.",
+    "level": "a1"
   },
   {
-    "term": "winter",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Days, months, seasons"
+    "id": "potatoes",
+    "word": "potatoes",
+    "partOfSpeech": "pl n",
+    "definition": "Starchy plant tubers that are one of the most important food crops, cooked and eaten as a vegetable.",
+    "example": "I have eggs, potatoes, and sausages for breakfast.",
+    "level": "a1"
   },
   {
-    "term": "often",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Time words"
+    "id": "rice",
+    "word": "rice",
+    "partOfSpeech": "n",
+    "definition": "A swamp grass which is widely cultivated as a source of food, especially in Asia.",
+    "example": "We have rice and fish for lunch.",
+    "level": "a1"
   },
   {
-    "term": "once a week",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Time words"
+    "id": "salad",
+    "word": "salad",
+    "partOfSpeech": "n",
+    "definition": "A cold dish of mixed raw vegetables, typically dressed with oil, vinegar, or other dressing.",
+    "example": "I have salad for lunch.",
+    "level": "a1"
   },
   {
-    "term": "middle",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Places"
+    "id": "sandwich",
+    "word": "sandwich",
+    "partOfSpeech": "n",
+    "definition": "An item of food consisting of two pieces of bread with a filling between them, eaten as a light meal.",
+    "example": "How much is the cheese sandwich?",
+    "level": "a1"
   },
   {
-    "term": "front",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Places"
+    "id": "sugar",
+    "word": "sugar",
+    "partOfSpeech": "n",
+    "definition": "A sweet crystalline substance obtained from various plants, especially sugar cane and sugar beet, consisting essentially of sucrose, and used as a sweetener in food and drink.",
+    "example": "I have coffee with sugar in the morning.",
+    "level": "a1"
   },
   {
-    "term": "fast",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Manner"
+    "id": "tea",
+    "word": "tea",
+    "partOfSpeech": "n",
+    "definition": "A hot drink made by infusing the dried crushed leaves of the tea plant in boiling water.",
+    "example": "Do you prefer coffee or tea with your breakfast?",
+    "level": "a1"
   },
   {
-    "term": "money",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Common uncountable nouns"
+    "id": "vegetable",
+    "word": "vegetable",
+    "partOfSpeech": "n",
+    "definition": "A plant or part of a plant used as food.",
+    "example": "Is a tomato a fruit or a vegetable?",
+    "level": "a1"
   },
   {
-    "term": "bread",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Common uncountable nouns"
+    "id": "water",
+    "word": "water",
+    "partOfSpeech": "n",
+    "definition": "A colourless, transparent, odourless liquid that forms the seas, lakes, rivers, and rain and is the basis of the fluids of living organisms.",
+    "example": "I drink two litres of water every day.",
+    "level": "a1"
   },
   {
-    "term": "information",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Common uncountable nouns"
+    "id": "wine",
+    "word": "wine",
+    "partOfSpeech": "n",
+    "definition": "An alcoholic drink made from fermented grape juice.",
+    "example": "Do you drink wine?",
+    "level": "a1"
   },
   {
-    "term": "nice",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Common adjectives: Good and bad things"
+    "id": "yoghurt",
+    "word": "yoghurt",
+    "partOfSpeech": "n",
+    "definition": "A semi-solid sourish food prepared from milk fermented by added bacteria, often sweetened and flavoured.",
+    "example": "I like yoghurt with fruit.",
+    "level": "a1"
   },
   {
-    "term": "lovely",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Common adjectives: Good and bad things"
+    "id": "drink",
+    "word": "drink",
+    "partOfSpeech": "v",
+    "definition": "Take (a liquid) into the mouth and swallow.",
+    "example": "I drink tea in the afternoon.",
+    "level": "a1"
   },
   {
-    "term": "wait for",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Words and prepositions"
+    "id": "eat",
+    "word": "eat",
+    "partOfSpeech": "v",
+    "definition": "Put (food) into the mouth and chew and swallow it.",
+    "example": "I sometimes eat fast food at the weekend.",
+    "level": "a1"
   },
   {
-    "term": "good at",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Words and prepositions"
+    "id": "go",
+    "word": "go",
+    "partOfSpeech": "v",
+    "definition": "Move from one place to another; travel.",
+    "example": "I go to English classes on Mondays.",
+    "level": "a1"
   },
   {
-    "term": "swimmer",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Suffixes"
+    "id": "have",
+    "word": "have",
+    "partOfSpeech": "v",
+    "definition": "Possess, own, or hold.",
+    "example": "I have a cat and a dog.",
+    "level": "a1"
   },
   {
-    "term": "sunny",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Suffixes"
+    "id": "like",
+    "word": "like",
+    "partOfSpeech": "v",
+    "definition": "Find agreeable, enjoyable, or satisfactory.",
+    "example": "Do you like dogs?",
+    "level": "a1"
   },
   {
-    "term": "cook / cooker",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Words you may confuse"
+    "id": "listen",
+    "word": "listen",
+    "partOfSpeech": "v",
+    "definition": "Give one's attention to a sound.",
+    "example": "We listen to the radio in the car.",
+    "level": "a1"
   },
   {
-    "term": "about",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Free time at home"
+    "id": "live",
+    "word": "live",
+    "partOfSpeech": "v",
+    "definition": "Remain alive; make one's home in a particular place or with a particular person.",
+    "example": "I live in a flat in New York.",
+    "level": "a1"
   },
   {
-    "term": "advice",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Common uncountable nouns"
+    "id": "need",
+    "word": "need",
+    "partOfSpeech": "v",
+    "definition": "Require (something) because it is essential or very important.",
+    "example": "My car is very old. I need a new car.",
+    "level": "a1"
   },
   {
-    "term": "Africa",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "no_i_dont_verb",
+    "word": "No, I don’t.",
+    "partOfSpeech": "phrase",
+    "definition": "A negative response to a yes/no question using 'do'.",
+    "example": "Do you like fast food? ~ No, I don’t.",
+    "level": "a1"
   },
   {
-    "term": "after",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conjunctions and connecting words"
+    "id": "read",
+    "word": "read",
+    "partOfSpeech": "v",
+    "definition": "Look at and comprehend the meaning of (written or printed matter) by mentally interpreting the characters or symbols of which it is composed.",
+    "example": "I read the newspaper every morning.",
+    "level": "a1"
   },
   {
-    "term": "afternoon",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Days, months, seasons"
+    "id": "speak",
+    "word": "speak",
+    "partOfSpeech": "v",
+    "definition": "Say something in order to convey information or to express a feeling.",
+    "example": "We always speak English at my school.",
+    "level": "a1"
   },
   {
-    "term": "age",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Describing people"
+    "id": "study",
+    "word": "study",
+    "partOfSpeech": "v",
+    "definition": "Devote time and attention to acquiring knowledge on (an academic subject), especially by means of books.",
+    "example": "We study Spanish at my school.",
+    "level": "a1"
   },
   {
-    "term": "ago",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Time words"
+    "id": "want",
+    "word": "want",
+    "partOfSpeech": "v",
+    "definition": "Have a desire to possess or do (something); wish for.",
+    "example": "Do you want a coffee or a cup of tea?",
+    "level": "a1"
   },
   {
-    "term": "air",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Common uncountable nouns"
+    "id": "watch_verb",
+    "word": "watch",
+    "partOfSpeech": "v",
+    "definition": "Look at or observe visually over a period of time.",
+    "example": "I watch TV in the evening.",
+    "level": "a1"
   },
   {
-    "term": "alarm clock",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
+    "id": "work",
+    "word": "work",
+    "partOfSpeech": "v",
+    "definition": "Be engaged in physical or mental activity in order to achieve a result.",
+    "example": "I work in a bank in London.",
+    "level": "a1"
   },
   {
-    "term": "also",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conjunctions and connecting words"
+    "id": "yes_i_do",
+    "word": "Yes, I do.",
+    "partOfSpeech": "phrase",
+    "definition": "An affirmative response to a yes/no question using 'do'.",
+    "example": "Do you like dogs? ~ Yes, I do.",
+    "level": "a1"
   },
   {
-    "term": "always",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Time words"
+    "id": "three_oclock",
+    "word": "three o'clock",
+    "partOfSpeech": "phrase",
+    "definition": "The time when the clock shows 3:00.",
+    "example": "It's three o' clock.",
+    "level": "a1"
   },
   {
-    "term": "American",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "five_past_three",
+    "word": "five past three",
+    "partOfSpeech": "phrase",
+    "definition": "The time 3:05.",
+    "example": "It's five past three.",
+    "level": "a1"
   },
   {
-    "term": "and",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conjunctions and connecting words"
+    "id": "ten_past_three",
+    "word": "ten past three",
+    "partOfSpeech": "phrase",
+    "definition": "The time 3:10.",
+    "example": "It's ten past three.",
+    "level": "a1"
   },
   {
-    "term": "angry",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Feelings"
+    "id": "a_quarter_past_three",
+    "word": "(a) quarter past three",
+    "partOfSpeech": "phrase",
+    "definition": "The time 3:15.",
+    "example": "It's a quarter past three.",
+    "level": "a1"
   },
   {
-    "term": "animal",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
+    "id": "twenty_past_three",
+    "word": "twenty past three",
+    "partOfSpeech": "phrase",
+    "definition": "The time 3:20.",
+    "example": "It's twenty past three.",
+    "level": "a1"
   },
   {
-    "term": "answer",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Talking"
+    "id": "twenty-five_past_three",
+    "word": "twenty-five past three",
+    "partOfSpeech": "phrase",
+    "definition": "The time 3:25.",
+    "example": "It's twenty-five past three.",
+    "level": "a1"
   },
   {
-    "term": "apple",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
+    "id": "half_past_three",
+    "word": "half past three",
+    "partOfSpeech": "phrase",
+    "definition": "The time 3:30.",
+    "example": "It's half past three.",
+    "level": "a1"
   },
   {
-    "term": "April",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Days, months, seasons"
+    "id": "twenty-five_to_four",
+    "word": "twenty-five to four",
+    "partOfSpeech": "phrase",
+    "definition": "The time 3:35.",
+    "example": "It's twenty-five to four.",
+    "level": "a1"
   },
   {
-    "term": "Arabic",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "twenty_to_four",
+    "word": "twenty to four",
+    "partOfSpeech": "phrase",
+    "definition": "The time 3:40.",
+    "example": "It's twenty to four.",
+    "level": "a1"
   },
   {
-    "term": "Argentina",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "a_quarter_to_four",
+    "word": "(a) quarter to four",
+    "partOfSpeech": "phrase",
+    "definition": "The time 3:45.",
+    "example": "It's a quarter to four.",
+    "level": "a1"
   },
   {
-    "term": "Argentinian",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "ten_to_four",
+    "word": "ten to four",
+    "partOfSpeech": "phrase",
+    "definition": "The time 3:50.",
+    "example": "It's ten to four.",
+    "level": "a1"
   },
   {
-    "term": "arm",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Parts of the body"
+    "id": "five_to_four",
+    "word": "five to four",
+    "partOfSpeech": "phrase",
+    "definition": "The time 3:55.",
+    "example": "It's five to four.",
+    "level": "a1"
   },
   {
-    "term": "armchair",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the living room"
+    "id": "hour",
+    "word": "hour",
+    "partOfSpeech": "n",
+    "definition": "A period of time equal to a twenty-fourth part of a day and night and divided into 60 minutes.",
+    "example": "60 minutes is one hour.",
+    "level": "a1"
   },
   {
-    "term": "around",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conversations 2: Useful words and expressions"
+    "id": "cold",
+    "word": "cold",
+    "partOfSpeech": "adj",
+    "definition": "Of or at a low or relatively low temperature, especially when compared with the human body.",
+    "example": "It's cold. I'm going inside.",
+    "level": "a1"
   },
   {
-    "term": "arrive",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Travelling"
+    "id": "hot",
+    "word": "hot",
+    "partOfSpeech": "adj",
+    "definition": "Having a high degree of heat or a high temperature.",
+    "example": "I'm too hot! It's 35 °C today!",
+    "level": "a1"
   },
   {
-    "term": "arrive at",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Moving"
+    "id": "hungry",
+    "word": "hungry",
+    "partOfSpeech": "adj",
+    "definition": "Feeling or displaying the need for food.",
+    "example": "I'm hungry. Can we have lunch?",
+    "level": "a1"
   },
   {
-    "term": "arrive in",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Moving"
+    "id": "thirsty",
+    "word": "thirsty",
+    "partOfSpeech": "adj",
+    "definition": "Feeling a need to drink.",
+    "example": "I'm thirsty. Can I have some water?",
+    "level": "a1"
   },
   {
-    "term": "art",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At school and university"
+    "id": "tired",
+    "word": "tired",
+    "partOfSpeech": "adj",
+    "definition": "In need of sleep or rest; weary.",
+    "example": "It's 11 p.m. and I'm tired.",
+    "level": "a1"
   },
   {
-    "term": "as well",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conjunctions and connecting words"
+    "id": "come_on",
+    "word": "Come on!",
+    "partOfSpeech": "phrase",
+    "definition": "Used to encourage someone to hurry or make an effort.",
+    "example": "Our train leaves in 15 minutes. Come on!",
+    "level": "a1"
   },
   {
-    "term": "Asia",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "dont_worry",
+    "word": "Don't worry.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to reassure someone.",
+    "example": "I'm sorry. ~ Don't worry.",
+    "level": "a1"
   },
   {
-    "term": "ask (someone) the time",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Talking"
+    "id": "im_really_sorry",
+    "word": "I'm really sorry.",
+    "partOfSpeech": "phrase",
+    "definition": "A sincere apology.",
+    "example": "You're an hour late. ~ I'm really sorry.",
+    "level": "a1"
   },
   {
-    "term": "ask (someone) the way",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Talking"
+    "id": "i_need_to_go",
+    "word": "I need to go.",
+    "partOfSpeech": "phrase",
+    "definition": "Used to state that you must leave.",
+    "example": "I need to go. My train leaves in ten minutes.",
+    "level": "a1"
   },
   {
-    "term": "ask for",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Talking"
+    "id": "its_late_and_im_tired",
+    "word": "It's late and I'm tired.",
+    "partOfSpeech": "phrase",
+    "definition": "Giving reasons for needing to leave.",
+    "example": "I have to go home. It's late and I'm tired.",
+    "level": "a1"
   },
   {
-    "term": "ask someone for something",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Talking"
+    "id": "ok_lets_go",
+    "word": "OK. Let's go.",
+    "partOfSpeech": "phrase",
+    "definition": "Agreement to depart.",
+    "example": "The bus leaves in ten minutes. ~ OK. Let's go.",
+    "level": "a1"
   },
   {
-    "term": "ask someone to do something",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Talking"
+    "id": "what_a_great_show",
+    "word": "What a great show!",
+    "partOfSpeech": "phrase",
+    "definition": "An exclamation of appreciation for a performance.",
+    "example": "What a great show! ~ Yes, it's fantastic!",
+    "level": "a1"
   },
   {
-    "term": "at",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Places"
+    "id": "you_need_to_hurry",
+    "word": "You need to hurry.",
+    "partOfSpeech": "phrase",
+    "definition": "Advising someone to move quickly.",
+    "example": "You need to hurry! You have a meeting in five minutes.",
+    "level": "a1"
   },
   {
-    "term": "August",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Days, months, seasons"
+    "id": "youre_an_hour_late",
+    "word": "You're an hour late.",
+    "partOfSpeech": "phrase",
+    "definition": "Informing someone they have arrived an hour after the expected time.",
+    "example": "You're an hour late. ~ I'm really sorry.",
+    "level": "a1"
   },
   {
-    "term": "aunt",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The family"
+    "id": "a_lot_of_fruit",
+    "word": "a lot of (fruit)",
+    "partOfSpeech": "phrase",
+    "definition": "A large quantity of fruit.",
+    "example": "I eat a lot of fruit.",
+    "level": "a1"
   },
   {
-    "term": "Australia",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "at_home",
+    "word": "at home",
+    "partOfSpeech": "prep phr",
+    "definition": "In or to one's own house or place of residence.",
+    "example": "I eat breakfast at home in the morning.",
+    "level": "a1"
   },
   {
-    "term": "Australian",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "at_work",
+    "word": "at work",
+    "partOfSpeech": "prep phr",
+    "definition": "At one's place of employment.",
+    "example": "I eat lunch at work at 1 p.m.",
+    "level": "a1"
   },
   {
-    "term": "autumn",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Days, months, seasons"
+    "id": "different",
+    "word": "different",
+    "partOfSpeech": "adj",
+    "definition": "Not the same as another or each other; unlike in nature, form, or quality.",
+    "example": "I like to eat different food when I go on holiday.",
+    "level": "a1"
   },
   {
-    "term": "away",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Places"
+    "id": "doctor",
+    "word": "doctor",
+    "partOfSpeech": "n",
+    "definition": "A person who is qualified to treat people who are ill.",
+    "example": "He is a doctor. He works at a hospital.",
+    "level": "a1"
   },
   {
-    "term": "baby",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Birth, marriage and death"
+    "id": "early",
+    "word": "early",
+    "partOfSpeech": "adj",
+    "definition": "Happening or done before the usual or expected time.",
+    "example": "I get up early and go to the gym.",
+    "level": "a1"
   },
   {
-    "term": "back",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Parts of the body"
+    "id": "favourite",
+    "word": "favourite",
+    "partOfSpeech": "adj",
+    "definition": "Preferred to all others of the same kind.",
+    "example": "Chocolate is my favourite food.",
+    "level": "a1"
   },
   {
-    "term": "bacon",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
+    "id": "green_tea",
+    "word": "green tea",
+    "partOfSpeech": "n",
+    "definition": "Tea made from unfermented leaves that is pale in colour and slightly bitter in flavour, produced mainly in China and Japan.",
+    "example": "Green tea is healthy.",
+    "level": "a1"
   },
   {
-    "term": "bad",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Manner"
+    "id": "healthy",
+    "word": "healthy",
+    "partOfSpeech": "adj",
+    "definition": "In a good physical or mental condition; in good health.",
+    "example": "I like healthy food. I eat a lot of vegetables.",
+    "level": "a1"
   },
   {
-    "term": "badminton",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Sports"
+    "id": "im_not_hungry",
+    "word": "I'm not hungry.",
+    "partOfSpeech": "phrase",
+    "definition": "Stating that you do not feel the need for food.",
+    "example": "Do you want pizza? ~ No thanks, I'm not hungry.",
+    "level": "a1"
   },
   {
-    "term": "bag",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
+    "id": "important",
+    "word": "important",
+    "partOfSpeech": "adj",
+    "definition": "Of great significance or value.",
+    "example": "I think it's important to eat healthy food.",
+    "level": "a1"
   },
   {
-    "term": "banana",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
+    "id": "in_a_cafe",
+    "word": "in a café",
+    "partOfSpeech": "prep phr",
+    "definition": "Located inside a café.",
+    "example": "Where can we buy coffee? ~ In a café.",
+    "level": "a1"
   },
   {
-    "term": "band",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Music and musical instruments"
+    "id": "scientist",
+    "word": "scientist",
+    "partOfSpeech": "n",
+    "definition": "A person who is studying or has expert knowledge of one or more of the natural or physical sciences.",
+    "example": "She is a scientist. She works for an American research company.",
+    "level": "a1"
   },
   {
-    "term": "bar",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Eating out"
+    "id": "sometimes",
+    "word": "sometimes",
+    "partOfSpeech": "adv",
+    "definition": "Occasionally, rather than all of the time.",
+    "example": "I sometimes drink coffee.",
+    "level": "a1"
   },
   {
-    "term": "basketball",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Sports"
+    "id": "soup",
+    "word": "soup",
+    "partOfSpeech": "n",
+    "definition": "A liquid dish, typically made by boiling meat, fish, or vegetables with stock or water.",
+    "example": "I like to have soup when I am cold and hungry.",
+    "level": "a1"
   },
   {
-    "term": "bath",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Have / had / had"
+    "id": "toast",
+    "word": "toast",
+    "partOfSpeech": "n",
+    "definition": "Sliced bread browned on both sides by exposure to radiant heat.",
+    "example": "I like tea and toast in the morning.",
+    "level": "a1"
   },
   {
-    "term": "bathroom",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
+    "id": "traditional",
+    "word": "traditional",
+    "partOfSpeech": "adj",
+    "definition": "Existing in or as part of a tradition; long-established.",
+    "example": "We sometimes eat traditional food.",
+    "level": "a1"
   },
   {
-    "term": "be born",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Birth, marriage and death"
+    "id": "usually",
+    "word": "usually",
+    "partOfSpeech": "adv",
+    "definition": "Under normal conditions; generally.",
+    "example": "I usually eat cereal in the morning.",
+    "level": "a1"
   },
   {
-    "term": "Be careful",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conversations 2: Useful words and expressions"
+    "id": "at_school",
+    "word": "at school",
+    "partOfSpeech": "prep phr",
+    "definition": "Present in a school building or attending school.",
+    "example": "Are you at university? ~ No, I'm at school.",
+    "level": "a1"
   },
   {
-    "term": "beans",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
+    "id": "at_university",
+    "word": "at university",
+    "partOfSpeech": "prep phr",
+    "definition": "Attending a university as a student.",
+    "example": "What do you do? ~ I'm a student. I'm at university.",
+    "level": "a1"
   },
   {
-    "term": "beautiful",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Describing people"
+    "id": "british_company",
+    "word": "British company",
+    "partOfSpeech": "n",
+    "definition": "A company based in Britain.",
+    "example": "I work for a big British company.",
+    "level": "a1"
   },
   {
-    "term": "bed",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
+    "id": "can_i_see_your_passport_and_boarding_pass_please",
+    "word": "Can I see your passport and boarding pass, please?",
+    "partOfSpeech": "phrase",
+    "definition": "A request made by airport or airline staff.",
+    "example": "Can I see your passport and boarding pass, please? ~ Yes, here they are.",
+    "level": "a1"
   },
   {
-    "term": "bedroom",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
+    "id": "do_you_want_fish_or_pasta",
+    "word": "Do you want fish or pasta?",
+    "partOfSpeech": "phrase",
+    "definition": "Offering a choice between two meal options.",
+    "example": "Do you want fish or pasta? ~ Pasta, please.",
+    "level": "a1"
   },
   {
-    "term": "beef",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
+    "id": "flight",
+    "word": "flight",
+    "partOfSpeech": "n",
+    "definition": "A journey made by air, especially in an aircraft.",
+    "example": "Our flight arrives in Paris at 7 a.m.",
+    "level": "a1"
   },
   {
-    "term": "beer",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
+    "id": "gate",
+    "word": "gate",
+    "partOfSpeech": "n",
+    "definition": "An exit from an airport building to an aircraft.",
+    "example": "Your flight leaves from gate 14.",
+    "level": "a1"
   },
   {
-    "term": "beginning",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Places"
+    "id": "i_need_to_go_to_the_toilet",
+    "word": "I need to go to the toilet.",
+    "partOfSpeech": "phrase",
+    "definition": "Stating the need to use the restroom.",
+    "example": "Excuse me. I need to go to the toilet.",
+    "level": "a1"
   },
   {
-    "term": "belt",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
+    "id": "im_late",
+    "word": "I'm late.",
+    "partOfSpeech": "phrase",
+    "definition": "Stating that you have arrived after the expected time.",
+    "example": "Excuse me. I'm late. Can I go first?",
+    "level": "a1"
   },
   {
-    "term": "bicycle",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Travelling"
+    "id": "keep_the_change",
+    "word": "Keep the change.",
+    "partOfSpeech": "phrase",
+    "definition": "An instruction to a seller to retain the balance of money tendered in payment of a transaction.",
+    "example": "It's £4.25. ~ Thank you. Here's £5. Keep the change.",
+    "level": "a1"
   },
   {
-    "term": "bike",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Travelling"
+    "id": "taxi_driver",
+    "word": "taxi driver",
+    "partOfSpeech": "n",
+    "definition": "A person who drives a taxi.",
+    "example": "I don't know where we are. I can ask the taxi driver.",
+    "level": "a1"
   },
   {
-    "term": "bigger (size)",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
+    "id": "traffic",
+    "word": "traffic",
+    "partOfSpeech": "n",
+    "definition": "Vehicles moving on a road or public highway.",
+    "example": "The traffic is very bad in the morning.",
+    "level": "a1"
   },
   {
-    "term": "bill",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In a hotel"
+    "id": "what_a_nice_surprise",
+    "word": "What a nice surprise!",
+    "partOfSpeech": "phrase",
+    "definition": "An exclamation of pleasure at an unexpected pleasant event.",
+    "example": "It's great to see you! What a nice surprise!",
+    "level": "a1"
   },
   {
-    "term": "bin",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the kitchen"
+    "id": "what_time_do_we_arrive",
+    "word": "What time do we arrive?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking for the scheduled arrival time.",
+    "example": "What time do we arrive? At 4.30 p.m.",
+    "level": "a1"
   },
   {
-    "term": "bird",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
+    "id": "writer",
+    "word": "writer",
+    "partOfSpeech": "n",
+    "definition": "A person who has written a particular text, or who writes books or articles as a job or regular occupation.",
+    "example": "Who is a famous writer in your country?",
+    "level": "a1"
   },
   {
-    "term": "blonde",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Describing people"
+    "id": "at_home_job",
+    "word": "at home",
+    "partOfSpeech": "adv",
+    "definition": "Working from one's place of residence.",
+    "example": "I’m a writer. I work at home.",
+    "level": "a1"
   },
   {
-    "term": "blue",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Describing people"
+    "id": "factory_worker",
+    "word": "factory worker",
+    "partOfSpeech": "n",
+    "definition": "A person who works in a factory.",
+    "example": "He’s a factory worker. He makes cars.",
+    "level": "a1"
   },
   {
-    "term": "board",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At school and university"
+    "id": "i_study_subject",
+    "word": "I study…",
+    "partOfSpeech": "phrase",
+    "definition": "Used to state the academic subject one is learning.",
+    "example": "I'm at university. I study economics.",
+    "level": "a1"
   },
   {
-    "term": "boat",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Travelling"
+    "id": "i_work_for",
+    "word": "I work for…",
+    "partOfSpeech": "phrase",
+    "definition": "Used to state one's employer.",
+    "example": "I work for a big company.",
+    "level": "a1"
   },
   {
-    "term": "body",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Parts of the body"
+    "id": "in_a_factory",
+    "word": "in a factory",
+    "partOfSpeech": "prep phr",
+    "definition": "Located or working inside a factory.",
+    "example": "I work in a factory.",
+    "level": "a1"
   },
   {
-    "term": "book",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the living room"
+    "id": "in_a_hospital",
+    "word": "in a hospital",
+    "partOfSpeech": "prep phr",
+    "definition": "Located or working inside a hospital.",
+    "example": "I’m a nurse. I work with children in a hospital.",
+    "level": "a1"
   },
   {
-    "term": "bookshop",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
+    "id": "in_an_office",
+    "word": "in an office",
+    "partOfSpeech": "prep phr",
+    "definition": "Located or working inside an office.",
+    "example": "I sometimes work in an office – I’m a journalist.",
+    "level": "a1"
   },
   {
-    "term": "boots",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
+    "id": "in_a_restaurant",
+    "word": "in a restaurant",
+    "partOfSpeech": "prep phr",
+    "definition": "Located or working inside a restaurant.",
+    "example": "I work in a restaurant in the city.",
+    "level": "a1"
   },
   {
-    "term": "boring",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Cinema"
+    "id": "in_a_school",
+    "word": "in a school",
+    "partOfSpeech": "prep phr",
+    "definition": "Located or working inside a school.",
+    "example": "I’m a teacher. I teach English in a school.",
+    "level": "a1"
   },
   {
-    "term": "born",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Birth, marriage and death"
+    "id": "in_a_shop",
+    "word": "in a shop",
+    "partOfSpeech": "prep phr",
+    "definition": "Located or working inside a shop.",
+    "example": "I’m a shop assistant. I work in a shop.",
+    "level": "a1"
   },
   {
-    "term": "bottom",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Places"
+    "id": "in_the_street",
+    "word": "in the street",
+    "partOfSpeech": "prep phr",
+    "definition": "Located or working outdoors on a public road in a city or town.",
+    "example": "I’m a policewoman. I work in the street.",
+    "level": "a1"
   },
   {
-    "term": "bowl",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the kitchen"
+    "id": "journalist",
+    "word": "journalist",
+    "partOfSpeech": "n",
+    "definition": "A person who writes for newspapers, magazines, or news websites or prepares news to be broadcast.",
+    "example": "Paul’s a journalist. He writes for a newspaper.",
+    "level": "a1"
   },
   {
-    "term": "Brazil",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "nurse",
+    "word": "nurse",
+    "partOfSpeech": "n",
+    "definition": "A person trained to care for the sick or infirm, especially in a hospital.",
+    "example": "He’s a nurse. He works in a hospital.",
+    "level": "a1"
   },
   {
-    "term": "Brazilian",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "policeman",
+    "word": "policeman",
+    "partOfSpeech": "n",
+    "definition": "A male police officer.",
+    "example": "A policeman has a dangerous job.",
+    "level": "a1"
   },
   {
-    "term": "breakfast",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In a hotel"
+    "id": "policewoman",
+    "word": "policewoman",
+    "partOfSpeech": "n",
+    "definition": "A female police officer.",
+    "example": "She’s a policewoman. She drives a police car.",
+    "level": "a1"
   },
   {
-    "term": "bring",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Bring / brought / brought"
+    "id": "receptionist",
+    "word": "receptionist",
+    "partOfSpeech": "n",
+    "definition": "A person employed in an office or other establishment to answer the telephone, deal with clients, and greet visitors.",
+    "example": "He’s a receptionist in a hotel.",
+    "level": "a1"
   },
   {
-    "term": "British",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "retired",
+    "word": "retired",
+    "partOfSpeech": "adj",
+    "definition": "Having left one's job and ceased to work.",
+    "example": "She’s 70 years old. She’s retired.",
+    "level": "a1"
   },
   {
-    "term": "brother",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The family"
+    "id": "school_place",
+    "word": "school",
+    "partOfSpeech": "n",
+    "definition": "An institution for educating children.",
+    "example": "‘What do you do?’ ‘I’m at school.’",
+    "level": "a1"
   },
   {
-    "term": "brown",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Describing people"
+    "id": "shop_assistant",
+    "word": "shop assistant",
+    "partOfSpeech": "n",
+    "definition": "A person who serves customers in a shop.",
+    "example": "I’m a shop assistant in a clothes shop.",
+    "level": "a1"
   },
   {
-    "term": "burger",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Eating out"
+    "id": "student",
+    "word": "student",
+    "partOfSpeech": "n",
+    "definition": "A person who is studying at a school or college.",
+    "example": "I’m a student. I study English and French.",
+    "level": "a1"
   },
   {
-    "term": "bus",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the town"
+    "id": "teacher",
+    "word": "teacher",
+    "partOfSpeech": "n",
+    "definition": "A person who teaches, especially in a school.",
+    "example": "She’s a teacher. She teaches children.",
+    "level": "a1"
   },
   {
-    "term": "bus station",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the town"
+    "id": "university_place",
+    "word": "university",
+    "partOfSpeech": "n",
+    "definition": "A high-level educational institution in which students study for degrees and academic research is done.",
+    "example": "I'm a student. I'm at university.",
+    "level": "a1"
   },
   {
-    "term": "but",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conjunctions and connecting words"
+    "id": "waiter",
+    "word": "waiter",
+    "partOfSpeech": "n",
+    "definition": "A man whose job is to serve customers at their tables in a restaurant.",
+    "example": "He’s a waiter in a Japanese restaurant.",
+    "level": "a1"
   },
   {
-    "term": "butter",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Common uncountable nouns"
+    "id": "waitress",
+    "word": "waitress",
+    "partOfSpeech": "n",
+    "definition": "A woman whose job is to serve customers at their tables in a restaurant.",
+    "example": "She’s a waitress in an Italian restaurant.",
+    "level": "a1"
   },
   {
-    "term": "by bus",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Holidays"
+    "id": "what_does_he_she_do",
+    "word": "What does he/she do?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask about someone's job or profession.",
+    "example": "What does she do? ~ She’s a journalist.",
+    "level": "a1"
   },
   {
-    "term": "by car",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Holidays"
+    "id": "where_do_you_work",
+    "word": "Where do you work?",
+    "partOfSpeech": "phrase",
+    "definition": "Used to ask about someone's place of employment.",
+    "example": "Where do you work? ~ I work in an office.",
+    "level": "a1"
   },
   {
-    "term": "by plane",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Holidays"
+    "id": "do_housework",
+    "word": "do housework",
+    "partOfSpeech": "phr v",
+    "definition": "Perform routine tasks in a house, such as cleaning and cooking.",
+    "example": "When do you do housework?",
+    "level": "a1"
   },
   {
-    "term": "by train",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Holidays"
+    "id": "finish_work",
+    "word": "finish work",
+    "partOfSpeech": "phr v",
+    "definition": "Complete one's paid employment for the day or a period.",
+    "example": "I usually finish work at 6.00 p.m.",
+    "level": "a1"
   },
   {
-    "term": "call",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Communications"
+    "id": "get_up",
+    "word": "get up",
+    "partOfSpeech": "phr v",
+    "definition": "Rise from bed after sleeping.",
+    "example": "I get up at seven every morning.",
+    "level": "a1"
   },
   {
-    "term": "call a friend",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Everyday things"
+    "id": "go_home",
+    "word": "go home",
+    "partOfSpeech": "phr v",
+    "definition": "Travel to one's place of residence.",
+    "example": "I go home at five in the evening.",
+    "level": "a1"
   },
   {
-    "term": "camera",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Your phone"
+    "id": "go_shopping",
+    "word": "go shopping",
+    "partOfSpeech": "phr v",
+    "definition": "Visit shops to buy things.",
+    "example": "I go shopping on Saturdays.",
+    "level": "a1"
   },
   {
-    "term": "Can I...?",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the town"
+    "id": "go_to_bed",
+    "word": "go to bed",
+    "partOfSpeech": "phr v",
+    "definition": "Lie down in one's bed to sleep.",
+    "example": "I usually go to bed very late.",
+    "level": "a1"
   },
   {
-    "term": "Can I help with …?",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the kitchen"
+    "id": "go_to_the_gym",
+    "word": "go to the gym",
+    "partOfSpeech": "phr v",
+    "definition": "Visit a gymnasium for physical exercise.",
+    "example": "I go to the gym on Sunday mornings.",
+    "level": "a1"
   },
   {
-    "term": "Can you tell me the way …?",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the town"
+    "id": "go_to_work_by_bus_train_car",
+    "word": "go to work (by bus/train/car)",
+    "partOfSpeech": "phr v",
+    "definition": "Travel to one's place of employment using a specified mode of transport.",
+    "example": "I go to work by train every day.",
+    "level": "a1"
   },
   {
-    "term": "Canada",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "have_a_bath",
+    "word": "have a bath",
+    "partOfSpeech": "phr v",
+    "definition": "Wash oneself in a bathtub.",
+    "example": "I have a bath in the evening.",
+    "level": "a1"
   },
   {
-    "term": "Canadian",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "have_a_coffee",
+    "word": "have a coffee",
+    "partOfSpeech": "phr v",
+    "definition": "Drink a cup of coffee.",
+    "example": "I have a coffee in the morning.",
+    "level": "a1"
   },
   {
-    "term": "car",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Holidays"
+    "id": "have_a_shower",
+    "word": "have a shower",
+    "partOfSpeech": "phr v",
+    "definition": "Wash oneself in a shower.",
+    "example": "I have a shower at the gym.",
+    "level": "a1"
   },
   {
-    "term": "car park",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the town"
+    "id": "have_breakfast",
+    "word": "have breakfast",
+    "partOfSpeech": "phr v",
+    "definition": "Eat the first meal of the day.",
+    "example": "I sometimes have breakfast in a café.",
+    "level": "a1"
   },
   {
-    "term": "carrot(s)",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
+    "id": "have_dinner",
+    "word": "have dinner",
+    "partOfSpeech": "phr v",
+    "definition": "Eat the main meal of the day, typically in the evening.",
+    "example": "We usually have dinner at seven.",
+    "level": "a1"
   },
   {
-    "term": "carry",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
+    "id": "have_lunch",
+    "word": "have lunch",
+    "partOfSpeech": "phr v",
+    "definition": "Eat the meal in the middle of the day.",
+    "example": "I have lunch at my school.",
+    "level": "a1"
   },
   {
-    "term": "cash",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
+    "id": "make_dinner",
+    "word": "make dinner",
+    "partOfSpeech": "phr v",
+    "definition": "Prepare the main meal of the day, typically eaten in the evening.",
+    "example": "I make dinner for my family.",
+    "level": "a1"
   },
   {
-    "term": "cat",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
+    "id": "banker",
+    "word": "banker",
+    "partOfSpeech": "n",
+    "definition": "An officer or owner of a bank or group of banks.",
+    "example": "What do you do? ~ I'm a banker.",
+    "level": "a1"
   },
   {
-    "term": "catch",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Moving"
+    "id": "barman",
+    "word": "barman",
+    "partOfSpeech": "n",
+    "definition": "A man who serves drinks at a bar.",
+    "example": "What does he do? ~ He's a barman.",
+    "level": "a1"
   },
   {
-    "term": "chair",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the living room"
+    "id": "customers",
+    "word": "customers",
+    "partOfSpeech": "pl n",
+    "definition": "People who buy goods or services from a shop or business.",
+    "example": "Do they work here? ~ No, they are customers.",
+    "level": "a1"
   },
   {
-    "term": "change",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
+    "id": "dishes",
+    "word": "dishes",
+    "partOfSpeech": "pl n",
+    "definition": "Food prepared in a particular way as part of a meal.",
+    "example": "I want to try these dishes on holiday.",
+    "level": "a1"
   },
   {
-    "term": "chat",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Free time at home"
+    "id": "great_to_see_you",
+    "word": "Great to see you!",
+    "partOfSpeech": "phrase",
+    "definition": "An expression of pleasure at meeting someone.",
+    "example": "Great to see you! Thank you for coming to visit.",
+    "level": "a1"
   },
   {
-    "term": "check",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In a hotel"
+    "id": "her_hairs_blonde",
+    "word": "Her hair's blonde.",
+    "partOfSpeech": "phrase",
+    "definition": "Describing someone as having blonde hair.",
+    "example": "What does she look like? ~ Her hair's blonde.",
+    "level": "a1"
   },
   {
-    "term": "cheese",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Have / had / had"
+    "id": "hes_married_to",
+    "word": "He's married to….",
+    "partOfSpeech": "phrase",
+    "definition": "Stating that a man is the husband of a particular person.",
+    "example": "Do you know Peter? He's married to Sarah.",
+    "level": "a1"
   },
   {
-    "term": "chest",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Parts of the body"
+    "id": "how_awful",
+    "word": "How awful!",
+    "partOfSpeech": "phrase",
+    "definition": "An exclamation of dismay or sympathy.",
+    "example": "I have a 16-hour flight! ~ How awful!",
+    "level": "a1"
   },
   {
-    "term": "chicken",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
+    "id": "i_love_your_shoes",
+    "word": "I love your shoes.",
+    "partOfSpeech": "phrase",
+    "definition": "Expressing admiration for someone's footwear.",
+    "example": "I love your shoes. ~ Thanks!",
+    "level": "a1"
   },
   {
-    "term": "children",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The family"
+    "id": "intelligent",
+    "word": "intelligent",
+    "partOfSpeech": "adj",
+    "definition": "Having or showing intelligence, especially of a high level.",
+    "example": "You are very intelligent.",
+    "level": "a1"
   },
   {
-    "term": "Chile",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "meetings",
+    "word": "meetings",
+    "partOfSpeech": "pl n",
+    "definition": "Assemblies of people, especially the members of a society or committee, for discussion or entertainment.",
+    "example": "I have a lot of meetings every day.",
+    "level": "a1"
   },
   {
-    "term": "China",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
+    "id": "multinational_company",
+    "word": "multinational company",
+    "partOfSpeech": "n",
+    "definition": "A company operating in several countries.",
+    "example": "I work for a multinational company.",
+    "level": "a1"
   },
   {
-    "term": "chips",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
+    "id": "shes_a_journalist",
+    "word": "She's a journalist.",
+    "partOfSpeech": "phrase",
+    "definition": "Stating that a woman's profession is journalism.",
+    "example": "What does she do? ~ She's a journalist.",
+    "level": "a1"
   },
   {
-    "term": "chocolate",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Eating out"
+    "id": "where_does_he_teach",
+    "word": "Where does he teach?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking about the location where a male teacher works.",
+    "example": "Where does he teach? ~ At a school in London.",
+    "level": "a1"
   },
   {
-    "term": "cinema",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Cinema"
+    "id": "why_because",
+    "word": "Why? Because…",
+    "partOfSpeech": "phrase",
+    "definition": "A question asking for a reason, followed by the start of an explanation.",
+    "example": "Why do you like it ? ~ Because it's beautiful.",
+    "level": "a1"
   },
   {
-    "term": "clean",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
+    "id": "after_work",
+    "word": "after work",
+    "partOfSpeech": "adv phr",
+    "definition": "In the period following the end of one's working day.",
+    "example": "What do you do after work?",
+    "level": "a1"
   },
   {
-    "term": "clean the house",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Everyday things"
-  },
-  {
-    "term": "clean your teeth",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
-  },
-  {
-    "term": "climb",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Moving"
-  },
-  {
-    "term": "closed",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
-  },
-  {
-    "term": "clothes",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
-  },
-  {
-    "term": "cloud",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Weather"
-  },
-  {
-    "term": "cloudy",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Weather"
-  },
-  {
-    "term": "coat",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
-  },
-  {
-    "term": "coffee",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
-  },
-  {
-    "term": "Colombia",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
-  },
-  {
-    "term": "Colombian",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
-  },
-  {
-    "term": "colour",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
-  },
-  {
-    "term": "comb",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
-  },
-  {
-    "term": "come",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Free time at home"
-  },
-  {
-    "term": "concert",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Music and musical instruments"
-  },
-  {
-    "term": "cook",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the kitchen"
-  },
-  {
-    "term": "cooking",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Free time at home"
-  },
-  {
-    "term": "cost",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
-  },
-  {
-    "term": "course",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Eating out"
-  },
-  {
-    "term": "cousin",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The family"
-  },
-  {
-    "term": "cow",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
-  },
-  {
-    "term": "cup",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the kitchen"
-  },
-  {
-    "term": "cup of tea",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Have / had / had"
-  },
-  {
-    "term": "cupboard",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the kitchen"
-  },
-  {
-    "term": "cut",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Problems at home and work"
-  },
-  {
-    "term": "dance",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Moving"
-  },
-  {
-    "term": "date",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Communications"
-  },
-  {
-    "term": "daughter",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The family"
-  },
-  {
-    "term": "day",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Days, months, seasons"
-  },
-  {
-    "term": "December",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Days, months, seasons"
-  },
-  {
-    "term": "degrees",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Weather"
-  },
-  {
-    "term": "dentist",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Health and illness"
-  },
-  {
-    "term": "desk",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At school and university"
-  },
-  {
-    "term": "different (colour)",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
-  },
-  {
-    "term": "dinner",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Free time at home"
-  },
-  {
-    "term": "do",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Jobs"
-  },
-  {
-    "term": "do an exam",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At school and university"
-  },
-  {
-    "term": "do homework",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At school and university"
-  },
-  {
-    "term": "do nothing",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Free time at home"
-  },
-  {
-    "term": "do the housework",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Do / did / done"
-  },
-  {
-    "term": "do the washing-up",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Do / did / done"
-  },
-  {
-    "term": "Do you come from …?",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The family"
-  },
-  {
-    "term": "Do you do any...?",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Sports"
-  },
-  {
-    "term": "Do you have any …?",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
-  },
-  {
-    "term": "Do you like...?",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Feelings"
-  },
-  {
-    "term": "Do you play …?",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Sports"
-  },
-  {
-    "term": "doctor",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Health and illness"
-  },
-  {
-    "term": "dog",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
-  },
-  {
-    "term": "downstairs",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
-  },
-  {
-    "term": "dress",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
-  },
-  {
-    "term": "drink",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
-  },
-  {
-    "term": "dry",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the kitchen"
-  },
-  {
-    "term": "DVD",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Free time at home"
-  },
-  {
-    "term": "ear",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Parts of the body"
-  },
-  {
-    "term": "egg",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
-  },
-  {
-    "term": "Egypt",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
-  },
-  {
-    "term": "Egyptian",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
-  },
-  {
-    "term": "elephant",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
-  },
-  {
-    "term": "else",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conversations 2: Useful words and expressions"
-  },
-  {
-    "term": "email",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Communications"
-  },
-  {
-    "term": "email address",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Communications"
-  },
-  {
-    "term": "end",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Places"
-  },
-  {
-    "term": "English",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At school and university"
-  },
-  {
-    "term": "enjoy",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Holidays"
-  },
-  {
-    "term": "Europe",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
-  },
-  {
-    "term": "evening",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The media"
-  },
-  {
-    "term": "every",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the bedroom and bathroom"
-  },
-  {
-    "term": "exam",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At school and university"
-  },
-  {
-    "term": "Excuse me",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conversations 1: Greetings and wishes"
-  },
-  {
-    "term": "eye",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Parts of the body"
-  },
-  {
-    "term": "face",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Parts of the body"
-  },
-  {
-    "term": "fair",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Describing people"
-  },
-  {
-    "term": "fall",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Moving"
-  },
-  {
-    "term": "family",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The family"
-  },
-  {
-    "term": "farm animal",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
-  },
-  {
-    "term": "farmer",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Jobs"
-  },
-  {
-    "term": "fast food",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
-  },
-  {
-    "term": "fat",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Describing people"
-  },
-  {
-    "term": "father",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The family"
-  },
-  {
-    "term": "favourite",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Sports"
-  },
-  {
-    "term": "February",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Days, months, seasons"
-  },
-  {
-    "term": "feel",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Health and illness"
-  },
-  {
-    "term": "feelings",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Feelings"
-  },
-  {
-    "term": "feet",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Parts of the body"
-  },
-  {
-    "term": "field",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the countryside"
-  },
-  {
-    "term": "film",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Cinema"
-  },
-  {
-    "term": "fine",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Health and illness"
-  },
-  {
-    "term": "finger",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Parts of the body"
-  },
-  {
-    "term": "Finnish",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
-  },
-  {
-    "term": "fish",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
-  },
-  {
-    "term": "floor",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
-  },
-  {
-    "term": "food",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
-  },
-  {
-    "term": "football",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Sports"
-  },
-  {
-    "term": "forest",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the countryside"
-  },
-  {
-    "term": "fork",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the kitchen"
-  },
-  {
-    "term": "form",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In a hotel"
-  },
-  {
-    "term": "fourth",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Shops and shopping"
-  },
-  {
-    "term": "French",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
-  },
-  {
-    "term": "Friday",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Days, months, seasons"
-  },
-  {
-    "term": "friend",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Free time at home"
-  },
-  {
-    "term": "friendly",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Manner"
-  },
-  {
-    "term": "fruit",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
-  },
-  {
-    "term": "fruit juice",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Food and drink"
-  },
-  {
-    "term": "fruit salad",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Eating out"
-  },
-  {
-    "term": "future",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Time words"
-  },
-  {
-    "term": "game",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Have / had / had"
-  },
-  {
-    "term": "geography",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "At school and university"
-  },
-  {
-    "term": "German",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
-  },
-  {
-    "term": "Germany",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Countries and nationalities"
-  },
-  {
-    "term": "get",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Get / got / got"
-  },
-  {
-    "term": "get a bus",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the town"
-  },
-  {
-    "term": "get a train",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the town"
-  },
-  {
-    "term": "get dressed",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
-  },
-  {
-    "term": "get information",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the town"
-  },
-  {
-    "term": "get to",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Get / got / got"
-  },
-  {
-    "term": "get undressed",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
-  },
-  {
-    "term": "give",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Animals"
-  },
-  {
-    "term": "glasses",
-    "level": "A1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Clothes"
+    "id": "apartment",
+    "word": "apartment",
+    "partOfSpeech": "n",
+    "definition": "A suite of rooms forming one residence, typically in a building containing a number of these.",
+    "example": "Do you live in a house? ~ No, I live in an apartment.",
+    "level": "a1"
+  },
+  {
+    "id": "are_you_a_morning_person",
+    "word": "Are you a morning person?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking if someone functions well or feels energetic in the morning.",
+    "example": "Are you a morning person? ~ No, I like to get up at 11 a.m. at weekends.",
+    "level": "a1"
+  },
+  {
+    "id": "at_eight_oclock",
+    "word": "At eight o'clock.",
+    "partOfSpeech": "phrase",
+    "definition": "Specifying the time as 8:00.",
+    "example": "When does the film start? ~ At eight o'clock.",
+    "level": "a1"
+  },
+  {
+    "id": "every_morning",
+    "word": "every morning",
+    "partOfSpeech": "adv phr",
+    "definition": "On each morning without exception.",
+    "example": "I have coffee and cereal every morning.",
+    "level": "a1"
+  },
+  {
+    "id": "feel_tired",
+    "word": "feel tired",
+    "partOfSpeech": "v phr",
+    "definition": "Experience the sensation of needing sleep or rest.",
+    "example": "I feel tired. Can I have a coffee?",
+    "level": "a1"
+  },
+  {
+    "id": "he_gets_up_at_about_9_30",
+    "word": "He gets up at about 9.30.",
+    "partOfSpeech": "phrase",
+    "definition": "Stating the approximate time a male person wakes up.",
+    "example": "What time does he get up? ~ He gets up at about 9.30.",
+    "level": "a1"
+  },
+  {
+    "id": "its_delicious",
+    "word": "it's delicious",
+    "partOfSpeech": "phrase",
+    "definition": "Expressing that food or drink has a very pleasant taste.",
+    "example": "Is your salad good? ~ Yes, it's delicious.",
+    "level": "a1"
+  },
+  {
+    "id": "omelette",
+    "word": "omelette",
+    "partOfSpeech": "n",
+    "definition": "A dish of beaten eggs cooked in a frying pan until firm, often with a filling.",
+    "example": "I have eggs. I can make an omelette.",
+    "level": "a1"
+  },
+  {
+    "id": "on_the_way_to_work",
+    "word": "on the way to work",
+    "partOfSpeech": "prep phr",
+    "definition": "During the journey to one's place of employment.",
+    "example": "Where are you? ~ It's 8.30 and I am on the way to work.",
+    "level": "a1"
+  },
+  {
+    "id": "subway",
+    "word": "subway",
+    "partOfSpeech": "n",
+    "definition": "An underground electric railway.",
+    "example": "I always use the subway in New York.",
+    "level": "a1"
+  },
+  {
+    "id": "then",
+    "word": "then",
+    "partOfSpeech": "adv",
+    "definition": "After that; next; afterwards.",
+    "example": "I get up and have breakfast, and then I go to the gym.",
+    "level": "a1"
+  },
+  {
+    "id": "tour_guide",
+    "word": "tour guide",
+    "partOfSpeech": "n",
+    "definition": "A person employed to show tourists around places of interest.",
+    "example": "Our tour guide says that the university is 800 years old.",
+    "level": "a1"
+  },
+  {
+    "id": "what_time_do_you_get_up",
+    "word": "What time do you get up?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking about the time someone usually wakes up.",
+    "example": "What time do you get up? ~ At 6.30 a.m. in the week.",
+    "level": "a1"
   }
 ]
