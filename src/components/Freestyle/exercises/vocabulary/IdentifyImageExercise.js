@@ -7,22 +7,25 @@ import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
 import { normalizeString } from '../../../../utils/stringUtils';
 import { useI18n } from '../../../../i18n/I18nContext';
+import TransliterableText from '../../../Common/TransliterableText'; // Import
 
 const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
   const [currentImageItem, setCurrentImageItem] = useState(null);
   const [userInput, setUserInput] = useState('');
-  const [feedback, setFeedback] = useState({ message: '', type: '' });
+  const [feedback, setFeedback] = useState({ message: '', type: '' }); // Will store translated feedback
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null); // Will store translated error
   const [isRevealed, setIsRevealed] = useState(false);
   const [isAnsweredCorrectly, setIsAnsweredCorrectly] = useState(false);
 
-  const { isLatinized } = useLatinizationContext();
-  const getLatinizedText = useLatinization;
-  const { t } = useI18n();
+  const { isLatinized: isGlobalLatinized } = useLatinizationContext(); // Renamed to avoid conflict
+  const getLatinizedTextForDynamic = useLatinization; // For dynamic content in target language
+  const { t, language: i18nLanguage } = useI18n(); // Get UI language
+  const getLatinizedUiText = useLatinization; // For UI text in i18nLanguage
 
   const correctAnswerText = currentImageItem ? currentImageItem.translations[language] : '';
-  const latinizedCorrectAnswer = useLatinization(correctAnswerText, language);
+  // latinizedCorrectAnswer is for the dynamic exercise answer in the target learning language
+  const latinizedCorrectAnswer = getLatinizedTextForDynamic(correctAnswerText, language);
 
   const fetchAndSetNewImage = useCallback(async () => {
     setIsLoading(true);
@@ -67,9 +70,9 @@ const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
   };
 
   const checkAnswer = () => {
-    if (!currentImageItem) return; // Should be handled by ExerciseControls disabled state
+    if (!currentImageItem) return;
     const correctAnswer = currentImageItem.translations[language];
-    // const itemId = `image_${currentImageItem.id || normalizeString(correctAnswer)}`; // Not used for feedback
+    const displayCorrect = isGlobalLatinized ? latinizedCorrectAnswer : correctAnswer;
     const isCorrect = normalizeString(userInput) === normalizeString(correctAnswer);
 
     if (isCorrect) {
@@ -79,36 +82,35 @@ const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
         fetchAndSetNewImage();
       }, 1500); 
     } else {
-      setFeedback({ message: t('feedback.incorrectAnswerWas', `Incorrect. The correct answer is: ${latinizedCorrectAnswer || correctAnswer}`, { answer: latinizedCorrectAnswer || correctAnswer }), type: 'incorrect' });
+      setFeedback({ message: t('feedback.incorrectAnswerWas', `Incorrect. The correct answer is: {answer}`, { answer: displayCorrect }), type: 'incorrect' });
     }
   };
 
   const showHint = () => {
-    if (!currentImageItem) return; // Should be handled by ExerciseControls disabled state
+    if (!currentImageItem) return;
     const correctAnswer = currentImageItem.translations[language];
-    setFeedback({ message: t('feedback.hintStartsWith', `Hint: The word starts with '${getLatinizedText(correctAnswer[0], language)}'.`, { letter: getLatinizedText(correctAnswer[0], language) }), type: 'hint' });
+    const firstLetter = getLatinizedTextForDynamic(correctAnswer[0], language);
+    setFeedback({ message: t('feedback.hintStartsWith', `Hint: The word starts with '{letter}'.`, { letter: firstLetter }), type: 'hint' });
   };
 
   const revealAnswer = () => {
-    if (!currentImageItem) return; // Should be handled by ExerciseControls disabled state
+    if (!currentImageItem) return;
     const correctAnswer = currentImageItem.translations[language];
-    // const itemId = `image_${currentImageItem.id || normalizeString(correctAnswer)}`; // Not used for feedback
+    const displayCorrect = isGlobalLatinized ? latinizedCorrectAnswer : correctAnswer;
     setUserInput(correctAnswer);
-    setFeedback({ message: t('feedback.answerIs', `The correct answer is: ${latinizedCorrectAnswer || correctAnswer}`, { answer: latinizedCorrectAnswer || correctAnswer }), type: 'info' });
+    setFeedback({ message: t('feedback.answerIs', `The correct answer is: {answer}`, { answer: displayCorrect }), type: 'info' });
     setIsRevealed(true);
-    setIsAnsweredCorrectly(true); // Revealing implies it's "correctly" completed
+    setIsAnsweredCorrectly(true);
     setTimeout(() => {
         fetchAndSetNewImage();
     }, 2000); 
   };
 
-  // For this exercise, "Randomize" and "Next Exercise" do the same: get a new image.
   const handleRandomizeOrNext = fetchAndSetNewImage;
-
 
   const handlePronounceCorrectAnswer = () => {
     if (currentImageItem && language) {
-      const textToPronounce = currentImageItem.translations[language];
+      const textToPronounce = currentImageItem.translations[language]; // Original script for pronunciation
       pronounceText(textToPronounce, language).catch(err => {
           console.error("Pronunciation error:", err);
           setFeedback({message: t('errors.pronunciationError', 'Could not pronounce the word.'), type: 'error'});
@@ -117,32 +119,40 @@ const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
   };
 
   if (isLoading) {
-    return <p>{t('loading.imageExercise', 'Loading image exercise...')}</p>;
+    return <p><TransliterableText text={t('loading.imageExercise', 'Loading image exercise...')} langOverride={i18nLanguage} /></p>;
   }
 
   if (error) {
-    return <FeedbackDisplay message={error} type="error" />;
+    return <FeedbackDisplay message={error} type="error" language={i18nLanguage} />;
   }
 
   if (!currentImageItem && !isLoading) {
-    return <FeedbackDisplay message={t('exercises.noImageToDisplay', 'No image to display. Try different selections.')} type="info" />;
+    return <FeedbackDisplay message={t('exercises.noImageToDisplay', 'No image to display. Try different selections.')} type="info" language={i18nLanguage} />;
   }
 
   const imagePath = currentImageItem.src.startsWith('assets/') ? `/${currentImageItem.src}` : currentImageItem.src;
+  const altText = currentImageItem.alt || t('altText.identifyImage', "Identify this image");
+  const latinizedAltText = getLatinizedUiText(altText, i18nLanguage);
+
+  const placeholderText = t('placeholders.typeTheWord', "Type the word...");
+  const latinizedPlaceholder = getLatinizedUiText(placeholderText, i18nLanguage);
+  
+  const pronounceTooltipText = t('tooltips.pronounceCorrectAnswer', "Pronounce correct answer");
+  const latinizedPronounceTooltip = getLatinizedUiText(pronounceTooltipText, i18nLanguage);
 
   return (
     <div style={{ textAlign: 'center', padding: '20px', border: '1px solid #eee', borderRadius: '8px' }}>
-      <h3>{t('titles.whatIsThis', 'What is this?')}</h3>
+      <h3><TransliterableText text={t('titles.whatIsThis', 'What is this?')} langOverride={i18nLanguage} /></h3>
       <img
         src={imagePath}
-        alt={currentImageItem.alt || t('altText.identifyImage', "Identify this image")}
+        alt={latinizedAltText}
         style={{ maxWidth: '300px', maxHeight: '300px', margin: '15px auto', display: 'block', border: '1px solid #ccc' }}
       />
       <input
         type="text"
         value={userInput}
         onChange={handleInputChange}
-        placeholder={t('placeholders.typeTheWord', "Type the word...")}
+        placeholder={latinizedPlaceholder}
         disabled={isRevealed || isAnsweredCorrectly}
         style={{ padding: '10px', fontSize: '1rem', width: '250px', marginBottom: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
         onKeyPress={(event) => {
@@ -151,25 +161,26 @@ const IdentifyImageExercise = ({ language, days, exerciseKey }) => {
             }
         }}
       />
-      <button onClick={handlePronounceCorrectAnswer} disabled={!currentImageItem} title={t('tooltips.pronounceCorrectAnswer', "Pronounce correct answer")} style={{background:'none', border:'none', fontSize:'1.5rem', cursor:'pointer', verticalAlign:'middle', marginLeft:'5px'}}>🔊</button>
+      <button onClick={handlePronounceCorrectAnswer} disabled={!currentImageItem} title={latinizedPronounceTooltip} style={{background:'none', border:'none', fontSize:'1.5rem', cursor:'pointer', verticalAlign:'middle', marginLeft:'5px'}}>🔊</button>
 
-      <FeedbackDisplay message={feedback.message} type={feedback.type} language={language} />
+      <FeedbackDisplay message={feedback.message} type={feedback.type} language={i18nLanguage} />
 
       <ExerciseControls
         onCheckAnswer={checkAnswer}
         onShowHint={showHint}
         onRevealAnswer={revealAnswer}
-        onRandomize={handleRandomizeOrNext} // New image
-        onNextExercise={handleRandomizeOrNext} // New image
+        onRandomize={handleRandomizeOrNext}
+        onNextExercise={handleRandomizeOrNext}
         isAnswerCorrect={isAnsweredCorrectly}
         isRevealed={isRevealed}
         config={{
-            showCheck: !!currentImageItem, // Show if there's an item
-            showHint: !!currentImageItem,  // Show if there's an item
-            showReveal: !!currentImageItem, // Show if there's an item
+            showCheck: !!currentImageItem,
+            showHint: !!currentImageItem,
+            showReveal: !!currentImageItem,
             showRandomize: true,
             showNext: true,
         }}
+        // ExerciseControls needs its button texts handled
       />
     </div>
   );
