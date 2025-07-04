@@ -581,13 +581,6 @@
     "theme": "Travelling"
   },
   {
-    "term": "borrow",
-    "level": "A2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Words you may confuse"
-  },
-  {
     "term": "brain",
     "level": "A2",
     "definition": "TODO: Definition",
@@ -896,13 +889,6 @@
     "theme": "Free time at home"
   },
   {
-    "term": "Congratulations",
-    "level": "A2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conversations 1: Greetings and wishes"
-  },
-  {
     "term": "conservation area",
     "level": "B2",
     "definition": "TODO: Definition",
@@ -931,11 +917,11 @@
     "theme": "Common uncountable nouns"
   },
   {
-    "term": "countryside",
-    "level": "A2",
+    "term": "course",
+    "level": "A1",
     "definition": "TODO: Definition",
     "example": "TODO: Example",
-    "theme": "In the countryside"
+    "theme": "Eating out"
   },
   {
     "term": "court",
@@ -971,13 +957,6 @@
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "Eating out"
-  },
-  {
-    "term": "curtains",
-    "level": "A2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "In the living room"
   },
   {
     "term": "day after tomorrow",
@@ -1078,20 +1057,6 @@
     "theme": "At school and university"
   },
   {
-    "term": "do some exercise(s)",
-    "level": "A2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Do / did / done"
-  },
-  {
-    "term": "do the gardening",
-    "level": "A2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Do / did / done"
-  },
-  {
     "term": "documentary",
     "level": "A2",
     "definition": "TODO: Definition",
@@ -1188,13 +1153,6 @@
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "Communications"
-  },
-  {
-    "term": "even",
-    "level": "A2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Conjunctions and connecting words"
   },
   {
     "term": "everywhere",
