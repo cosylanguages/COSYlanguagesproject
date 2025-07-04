@@ -21,16 +21,21 @@ const DictionaryTool = () => {
 
             try {
                 for (const level of CEFR_LEVELS) {
-                    const filePath = `/data/vocabulary/en/${level}.json`; // Path within public directory
+                    // Updated file path
+                    const filePath = `/data/vocabulary/dictionary/en/${level}.json`; 
                     const response = await fetch(filePath);
                     if (!response.ok) {
-                        // For this tool, we'll log a warning but try to continue with other files.
-                        // A more robust solution might involve specific error handling per file.
-                        console.warn(`Failed to load vocabulary for level ${level}. Status: ${response.status}`);
-                        continue; // Skip to next level if one file fails
+                        console.warn(`Failed to load vocabulary for level ${level} from ${filePath}. Status: ${response.status}`);
+                        if (response.status === 404) {
+                            // If a specific level file is not found, we can choose to continue or show an error.
+                            // For now, let's continue, as some levels might not have words yet.
+                        } else {
+                            // For other errors, it might be more critical.
+                            // Throwing an error here would stop the loading of subsequent files.
+                        }
+                        continue; 
                     }
                     const levelData = await response.json();
-                    // Add level information to each item if not already present (it should be)
                     const vocabularyWithLevel = levelData.map(item => ({ ...item, level: item.level || level.toUpperCase() }));
                     combinedVocabulary = [...combinedVocabulary, ...vocabularyWithLevel];
                 }
@@ -38,15 +43,14 @@ const DictionaryTool = () => {
             } catch (err) {
                 console.error(`Error loading vocabulary:`, err);
                 setError(err.message || 'Failed to load vocabulary data.');
-                setAllVocabulary([]); // Clear any partial data
+                setAllVocabulary([]); 
             } finally {
                 setIsLoading(false);
             }
         };
 
-        // For now, we assume English dictionary. Language selection can be added later.
         loadAllVocabulary();
-    }, []); // Load once on mount
+    }, []); 
 
     const filteredVocabulary = useMemo(() => {
         return allVocabulary.filter(item => {
