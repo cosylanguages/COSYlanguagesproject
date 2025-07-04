@@ -4,6 +4,7 @@ import TransliterableText from '../Common/TransliterableText';
 import NotesPanel from './StudentTools/NotesPanel'; // Corrected path
 import IrregularVerbsTool from './StudentTools/IrregularVerbsTool'; // Corrected path
 import TimerTool from './StudentTools/TimerTool'; // Import TimerTool
+import DictionaryTool from './StudentTools/DictionaryTool'; // Import DictionaryTool
 
 // Basic styling can be added to StudyModePage.css or a dedicated file
 
@@ -12,14 +13,15 @@ const ToolsPanel = () => {
   const [isNotesOpen, setIsNotesOpen] = useState(false);
   const [isIrregularVerbsOpen, setIsIrregularVerbsOpen] = useState(false);
   const [isTimerOpen, setIsTimerOpen] = useState(false); // State for TimerTool
-  // Add state for dictionary when available
+  const [isDictionaryOpen, setIsDictionaryOpen] = useState(false); // State for DictionaryTool
 
   const toggleNotes = () => setIsNotesOpen(!isNotesOpen);
   const toggleIrregularVerbs = () => setIsIrregularVerbsOpen(!isIrregularVerbsOpen);
   const toggleTimer = () => setIsTimerOpen(!isTimerOpen); // Handler for TimerTool
+  const toggleDictionary = () => setIsDictionaryOpen(!isDictionaryOpen); // Handler for DictionaryTool
 
-  const verbsToolLabel = currentUILanguage === 'COSYenglish' 
-    ? t('studyMode.toolIrregularVerbs', '📚 Irregular Verbs') 
+  const verbsToolLabel = currentUILanguage === 'COSYenglish'
+    ? t('studyMode.toolIrregularVerbs', '📚 Irregular Verbs')
     : t('studyMode.toolConjugations', '📚 Conjugations');
 
   return (
@@ -44,8 +46,8 @@ const ToolsPanel = () => {
           </button>
         </li>
         <li>
-          <button className="btn-link" disabled>
-            <TransliterableText text={t('studyMode.toolDictionary', '📖 Dictionary (Soon)')} />
+          <button onClick={toggleDictionary} className="btn-link">
+            <TransliterableText text={t('studyMode.toolDictionary', '📖 Dictionary')} />
           </button>
         </li>
         {/* Add more tools as needed */}
@@ -54,7 +56,7 @@ const ToolsPanel = () => {
       {isNotesOpen && <NotesPanel isOpen={isNotesOpen} onClose={toggleNotes} />}
       {isIrregularVerbsOpen && <IrregularVerbsTool isOpen={isIrregularVerbsOpen} onClose={toggleIrregularVerbs} />}
       {isTimerOpen && <TimerTool isOpen={isTimerOpen} onClose={toggleTimer} />} {/* Render TimerTool */}
-      {/* Render DictionaryTool when available and isDictionaryOpen is true */}
+      {isDictionaryOpen && <DictionaryTool />} {/* Render DictionaryTool */}
     </div>
   );
 };
