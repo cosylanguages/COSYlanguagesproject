@@ -2630,5 +2630,437 @@
     "definition": "Activate a source of illumination.",
     "example": "Can you turn on a light? It's dark.",
     "level": "a2"
+  },
+  {
+    "id": "bike_elementary",
+    "word": "bike",
+    "partOfSpeech": "n",
+    "definition": "A bicycle.",
+    "example": "I go to work by bike.",
+    "level": "a2"
+  },
+  {
+    "id": "cat_elementary",
+    "word": "cat",
+    "partOfSpeech": "n",
+    "definition": "A small domesticated carnivorous mammal with soft fur, a short snout, and retractable claws.",
+    "example": "I have a cat at home.",
+    "level": "a2"
+  },
+  {
+    "id": "computer_elementary",
+    "word": "computer",
+    "partOfSpeech": "n",
+    "definition": "An electronic device for storing and processing data.",
+    "example": "There is a computer in the classroom.",
+    "level": "a2"
+  },
+  {
+    "id": "desk_elementary",
+    "word": "desk",
+    "partOfSpeech": "n",
+    "definition": "A piece of furniture with a flat or sloped surface and typically drawers or compartments, used for writing, reading, or working at.",
+    "example": "I write at a desk.",
+    "level": "a2"
+  },
+  {
+    "id": "i_think_its_elementary",
+    "word": "I think it’s...",
+    "partOfSpeech": "phrase",
+    "definition": "Expressing an opinion or belief.",
+    "example": "I think it’s in Italy.",
+    "level": "a2"
+  },
+  {
+    "id": "im_not_sure_elementary",
+    "word": "I’m not sure",
+    "partOfSpeech": "phrase",
+    "definition": "Expressing uncertainty.",
+    "example": "I think it’s Russian, but I’m not sure.",
+    "level": "a2"
+  },
+  {
+    "id": "name_elementary",
+    "word": "name",
+    "partOfSpeech": "n",
+    "definition": "A word or set of words by which a person or thing is known, addressed, or referred to.",
+    "example": "My name is Paul.",
+    "level": "a2"
+  },
+  {
+    "id": "this_elementary",
+    "word": "this",
+    "partOfSpeech": "det",
+    "definition": "Used to identify a specific person or thing close at hand or being indicated or experienced.",
+    "example": "This is my first time in the UK.",
+    "level": "a2"
+  },
+  {
+    "id": "train_elementary",
+    "word": "train",
+    "partOfSpeech": "n",
+    "definition": "A series of railway carriages or wagons moved by a locomotive or by integral motors.",
+    "example": "The train waiting at platform 13 is the Eurostar to Paris.",
+    "level": "a2"
+  },
+  {
+    "id": "tree_elementary",
+    "word": "tree",
+    "partOfSpeech": "n",
+    "definition": "A woody perennial plant, typically having a single stem or trunk growing to a considerable height and bearing lateral branches at some distance from the ground.",
+    "example": "There is a tree in my garden.",
+    "level": "a2"
+  },
+  {
+    "id": "weekday_elementary",
+    "word": "weekday",
+    "partOfSpeech": "n",
+    "definition": "Any day of the week except Sunday and Saturday.",
+    "example": "Monday is a weekday in most countries.",
+    "level": "a2"
+  },
+  {
+    "id": "well_elementary",
+    "word": "well",
+    "partOfSpeech": "adj",
+    "definition": "In a good or satisfactory way.",
+    "example": "Very well, thank you.",
+    "level": "a2"
+  },
+  {
+    "id": "address_elementary",
+    "word": "address",
+    "partOfSpeech": "n",
+    "definition": "The particulars of the place where someone lives or an organization is situated.",
+    "example": "What’s your address?",
+    "level": "a2"
+  },
+  {
+    "id": "age_elementary",
+    "word": "age",
+    "partOfSpeech": "n",
+    "definition": "The length of time that a person has lived or a thing has existed.",
+    "example": "I won’t tell you my age.",
+    "level": "a2"
+  },
+  {
+    "id": "airport_elementary",
+    "word": "airport",
+    "partOfSpeech": "n",
+    "definition": "A complex of runways and buildings for the take-off, landing, accommodation, and maintenance of aircraft, with facilities for passengers.",
+    "example": "People go to the airport before and after a holiday.",
+    "level": "a2"
+  },
+  {
+    "id": "answer_elementary",
+    "word": "answer",
+    "partOfSpeech": "v",
+    "definition": "Say or write something to deal with or as a reaction to a question, statement, or situation.",
+    "example": "Read the text and answer the questions.",
+    "level": "a2"
+  },
+  {
+    "id": "bar_elementary",
+    "word": "bar",
+    "partOfSpeech": "n",
+    "definition": "A counter where drinks are served.",
+    "example": "The bar closes at 11.30 p.m.",
+    "level": "a2"
+  },
+  {
+    "id": "basketball_elementary",
+    "word": "basketball",
+    "partOfSpeech": "n",
+    "definition": "A game played between two teams of five players in which goals are scored by throwing a ball through a netted hoop fixed above each end of the court.",
+    "example": "Basketball is a popular American sport.",
+    "level": "a2"
+  },
+  {
+    "id": "boot_elementary",
+    "word": "boot",
+    "partOfSpeech": "n",
+    "definition": "A sturdy item of footwear covering the foot and ankle, and sometimes also the lower leg.",
+    "example": "Where is my other boot?",
+    "level": "a2"
+  },
+  {
+    "id": "car_elementary",
+    "word": "car",
+    "partOfSpeech": "n",
+    "definition": "A road vehicle, typically with four wheels, powered by an internal combustion engine or electric motor and able to carry a small number of people.",
+    "example": "My car is old but fast.",
+    "level": "a2"
+  },
+  {
+    "id": "chess_elementary",
+    "word": "chess",
+    "partOfSpeech": "n",
+    "definition": "A board game of strategic skill for two players, played on a chequered board on which each playing piece is moved according to precise rules.",
+    "example": "Chess is a slow game.",
+    "level": "a2"
+  },
+  {
+    "id": "city_elementary",
+    "word": "city",
+    "partOfSpeech": "n",
+    "definition": "A large town.",
+    "example": "Is it a city or a country?",
+    "level": "a2"
+  },
+  {
+    "id": "class_elementary",
+    "word": "class",
+    "partOfSpeech": "n",
+    "definition": "A lesson or period of instruction in a school or college.",
+    "example": "Your first class is on Monday.",
+    "level": "a2"
+  },
+  {
+    "id": "close_elementary",
+    "word": "close",
+    "partOfSpeech": "v",
+    "definition": "Move (something) so as to cover an opening.",
+    "example": "Sorry, I close the shop at 5.00 p.m.",
+    "level": "a2"
+  },
+  {
+    "id": "country_elementary",
+    "word": "country",
+    "partOfSpeech": "n",
+    "definition": "A nation with its own government, occupying a particular territory.",
+    "example": "What country is pizza from?",
+    "level": "a2"
+  },
+  {
+    "id": "double_room_elementary",
+    "word": "double room",
+    "partOfSpeech": "n",
+    "definition": "A room in a hotel for two people.",
+    "example": "I’d like a double room for two nights, please.",
+    "level": "a2"
+  },
+  {
+    "id": "email_elementary",
+    "word": "email",
+    "partOfSpeech": "n",
+    "definition": "Messages distributed by electronic means from one computer user to one or more recipients via a network.",
+    "example": "What’s you email address?",
+    "level": "a2"
+  },
+  {
+    "id": "ground_floor_elementary",
+    "word": "ground floor",
+    "partOfSpeech": "n",
+    "definition": "The floor of a building at or nearest to ground level.",
+    "example": "Your room is on the ground floor.",
+    "level": "a2"
+  },
+  {
+    "id": "hotel_elementary",
+    "word": "hotel",
+    "partOfSpeech": "n",
+    "definition": "An establishment providing accommodation, meals, and other services for travellers and tourists.",
+    "example": "My hotel is near the museum.",
+    "level": "a2"
+  },
+  {
+    "id": "internet_elementary",
+    "word": "internet",
+    "partOfSpeech": "n",
+    "definition": "A global computer network providing a variety of information and communication facilities, consisting of interconnected networks using standardized communication protocols.",
+    "example": "I use the internet every day.",
+    "level": "a2"
+  },
+  {
+    "id": "jazz_elementary",
+    "word": "jazz",
+    "partOfSpeech": "n",
+    "definition": "A type of music of black American origin characterized by improvisation, syncopation, and usually a regular or forceful rhythm.",
+    "example": "I like jazz music.",
+    "level": "a2"
+  },
+  {
+    "id": "phone_elementary",
+    "word": "phone",
+    "partOfSpeech": "n",
+    "definition": "A telephone.",
+    "example": "What’s your phone number?",
+    "level": "a2"
+  },
+  {
+    "id": "phone_number_elementary",
+    "word": "phone number",
+    "partOfSpeech": "n",
+    "definition": "A sequence of digits assigned to a telephone line.",
+    "example": "What’s your phone number?",
+    "level": "a2"
+  },
+  {
+    "id": "picture_elementary",
+    "word": "picture",
+    "partOfSpeech": "n",
+    "definition": "A painting or drawing.",
+    "example": "Look at the picture of a classroom.",
+    "level": "a2"
+  },
+  {
+    "id": "postcode_elementary",
+    "word": "postcode",
+    "partOfSpeech": "n",
+    "definition": "A group of letters and/or numbers that are added to a postal address to assist the sorting of mail.",
+    "example": "My postcode is B4 6EU.",
+    "level": "a2"
+  },
+  {
+    "id": "school_elementary",
+    "word": "school",
+    "partOfSpeech": "n",
+    "definition": "An institution for educating children.",
+    "example": "School starts at 9.00 a.m.",
+    "level": "a2"
+  },
+  {
+    "id": "single_room_elementary",
+    "word": "single room",
+    "partOfSpeech": "n",
+    "definition": "A room in a hotel for one person.",
+    "example": "I’d like a single room, please.",
+    "level": "a2"
+  },
+  {
+    "id": "surname_elementary",
+    "word": "surname",
+    "partOfSpeech": "n",
+    "definition": "A hereditary name common to all members of a family, as distinct from a forename.",
+    "example": "My surname is Robertson.",
+    "level": "a2"
+  },
+  {
+    "id": "taxi_elementary",
+    "word": "taxi",
+    "partOfSpeech": "n",
+    "definition": "A motor vehicle licensed to transport passengers in return for payment of a fare.",
+    "example": "Take a taxi to the station.",
+    "level": "a2"
+  },
+  {
+    "id": "tennis_elementary",
+    "word": "tennis",
+    "partOfSpeech": "n",
+    "definition": "A game in which two or four players strike a ball with rackets over a net stretched across a court.",
+    "example": "I play tennis at the weekend.",
+    "level": "a2"
+  },
+  {
+    "id": "book_elementary",
+    "word": "book",
+    "partOfSpeech": "n",
+    "definition": "A written or printed work consisting of pages glued or sewn together along one side and bound in covers.",
+    "example": "I am looking for a book to read.",
+    "level": "a2"
+  },
+  {
+    "id": "coin_elementary",
+    "word": "coin",
+    "partOfSpeech": "n",
+    "definition": "A flat, round piece of metal or plastic used as money.",
+    "example": "There is a coin on the table.",
+    "level": "a2"
+  },
+  {
+    "id": "diary_elementary",
+    "word": "diary",
+    "partOfSpeech": "n",
+    "definition": "A book in which one keeps a daily record of events and experiences.",
+    "example": "I use a diary at work.",
+    "level": "a2"
+  },
+  {
+    "id": "file_elementary",
+    "word": "file",
+    "partOfSpeech": "n",
+    "definition": "A folder or box for holding loose papers that are typically arranged in a particular order for easy reference.",
+    "example": "I keep my work in a file.",
+    "level": "a2"
+  },
+  {
+    "id": "headphones_elementary",
+    "word": "headphones",
+    "partOfSpeech": "pl n",
+    "definition": "A pair of earphones typically joined by a band placed over the head, for listening to audio signals such as music or speech.",
+    "example": "He uses headphones to listen to music.",
+    "level": "a2"
+  },
+  {
+    "id": "identity_card_elementary",
+    "word": "identity card",
+    "partOfSpeech": "n",
+    "definition": "A card bearing identifying data about a person, such as name, address, date of birth, a photograph, and signature.",
+    "example": "I have a passport, but I don’t have an identity card.",
+    "level": "a2"
+  },
+  {
+    "id": "ipod_elementary",
+    "word": "iPod",
+    "partOfSpeech": "n",
+    "definition": "A portable electronic device for playing and storing digital audio and video files.",
+    "example": "I use an iPod to listen to music.",
+    "level": "a2"
+  },
+  {
+    "id": "magazine_elementary",
+    "word": "magazine",
+    "partOfSpeech": "n",
+    "definition": "A periodical publication containing articles and illustrations, typically covering a particular subject or area of interest.",
+    "example": "I buy a magazine every week.",
+    "level": "a2"
+  },
+  {
+    "id": "piece_of_paper_elementary",
+    "word": "piece of paper",
+    "partOfSpeech": "n",
+    "definition": "A single sheet of paper.",
+    "example": "Can I have a piece of paper to write on?",
+    "level": "a2"
+  },
+  {
+    "id": "scissors_elementary",
+    "word": "scissors",
+    "partOfSpeech": "pl n",
+    "definition": "An instrument used for cutting cloth, paper, and other thin material, consisting of two blades laid one on top of the other and fastened in the middle so as to allow them to be opened and closed by a thumb and finger inserted through rings on the end of their handles.",
+    "example": "I need some scissors to cut this paper.",
+    "level": "a2"
+  },
+  {
+    "id": "stamp_elementary",
+    "word": "stamp",
+    "partOfSpeech": "n",
+    "definition": "A small adhesive piece of paper stuck to something to show that an amount of money has been paid, in particular a postage stamp.",
+    "example": "I need a stamp to post this letter.",
+    "level": "a2"
+  },
+  {
+    "id": "sunglasses_elementary",
+    "word": "sunglasses",
+    "partOfSpeech": "pl n",
+    "definition": "Glasses tinted to protect the eyes from sunlight or glare.",
+    "example": "It’s really sunny. Where are my sunglasses?",
+    "level": "a2"
+  },
+  {
+    "id": "ticket_elementary",
+    "word": "ticket",
+    "partOfSpeech": "n",
+    "definition": "A piece of paper or card that gives the holder a certain right, especially to enter a place, travel by public transport, or participate in an event.",
+    "example": "A ticket to Oxford, please.",
+    "level": "a2"
+  },
+  {
+    "id": "tissue_elementary",
+    "word": "tissue",
+    "partOfSpeech": "n",
+    "definition": "A piece of soft absorbent paper, used especially as a handkerchief.",
+    "example": "Have you got a tissue?",
+    "level": "a2"
   }
 ]
