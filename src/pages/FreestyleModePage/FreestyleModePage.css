@@ -114,23 +114,6 @@
   box-sizing: border-box;
 }
 
-#cosy-gamestats {
-  position: fixed;
-  top: 15px; /* More spacing from top */
-  right: 15px; /* More spacing from right */
-  background: linear-gradient(135deg, var(--color-primary, #007bff), var(--color-primary-dark, #0056b3)); /* Gradient background */
-  color: var(--color-text-on-dark, #fff);
-  padding: 10px 15px; /* Increased padding */
-  border-radius: var(--border-radius-md, 6px); /* Softer radius */
-  font-size: 0.9rem; /* Slightly larger font */
-  box-shadow: var(--shadow-sm, 0 2px 5px rgba(0,0,0,0.2));
-  z-index: 1000;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-#cosy-gamestats.levelup {
-  animation: gamestatsLevelUp 1.2s ease-out forwards; /* Ensure it stays at the end state of animation if needed */
-}
-
 .cosy-toast {
   position: fixed;
   bottom: 25px;
@@ -169,13 +152,6 @@
   background: linear-gradient(135deg, var(--color-secondary-dark, #5a6268), var(--color-secondary, #6c757d));
   transform: scale(1.12) rotate(15deg); /* More playful hover */
   box-shadow: var(--shadow-lg, 0 5px 15px rgba(0,0,0,0.3));
-}
-
-@keyframes gamestatsLevelUp {
-  0% { transform: scale(1) rotate(0deg); box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-  30% { transform: scale(1.2) rotate(-5deg); box-shadow: 0 6px 15px rgba(var(--color-primary, #007bff), 0.5); }
-  60% { transform: scale(1.1) rotate(5deg); }
-  100% { transform: scale(1.15); box-shadow: 0 4px 10px rgba(var(--color-primary, #007bff),0.3); } /* End slightly larger for emphasis */
 }
 
 /* Responsive adjustments */
@@ -226,10 +202,6 @@
   }
   .selector-container > * {
     max-width: 90%; /* Allow selectors to be more fluid */
-  }
-  #cosy-gamestats {
-    padding: 8px 10px;
-    font-size: 0.8rem;
   }
   #floating-help-btn {
     width: 50px;
