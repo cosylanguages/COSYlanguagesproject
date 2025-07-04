@@ -1,0 +1,6990 @@
+[
+  {
+    "term": "a, an",
+    "level": "A1",
+    "definition": "used before a singular countable noun when you are talking about one person or thing that has not been mentioned before",
+    "example": "I see a cat. She has an apple."
+  },
+  {
+    "term": "a few",
+    "level": "A1",
+    "definition": "",
+    "example": "a few minutes, a few times, a few years"
+  },
+  {
+    "term": "a good idea",
+    "level": "A1",
+    "definition": "",
+    "example": "Good idea!, It’s a good idea to…, That’s a good idea!"
+  },
+  {
+    "term": "a little",
+    "level": "A1",
+    "definition": "",
+    "example": "a little help, a little money, a little sugar"
+  },
+  {
+    "term": "a lot",
+    "level": "A1",
+    "definition": "",
+    "example": "a lot to do"
+  },
+  {
+    "term": "a lot of sth",
+    "level": "A1",
+    "definition": "a large number or amount of something",
+    "example": "There are a lot of books on the table."
+  },
+  {
+    "term": "all day",
+    "level": "A1",
+    "definition": "for the entire day",
+    "example": "We played outside all day."
+  },
+  {
+    "term": "all night",
+    "level": "A1",
+    "definition": "for the entire night",
+    "example": "He studied all night for the test."
+  },
+  {
+    "term": "all over the world",
+    "level": "A1",
+    "definition": "in all parts of the earth.",
+    "example": "She has been all over the world."
+  },
+  {
+    "term": "anything else",
+    "level": "A1",
+    "definition": "any additional or different thing (used in questions or negative statements).",
+    "example": "Would you like anything else?"
+  },
+  {
+    "term": "anyone else",
+    "level": "A1",
+    "definition": "any other person (used in questions or negative statements).",
+    "example": "Does anyone else want to go?"
+  },
+  {
+    "term": "a period of time",
+    "level": "A1",
+    "definition": "a length of time.",
+    "example": "We waited for a short period of time."
+  },
+  {
+    "term": "around the world",
+    "level": "A1",
+    "definition": "in or to many parts of the world.",
+    "example": "He wants to travel around the world."
+  },
+  {
+    "term": "arrive at…",
+    "level": "A1",
+    "definition": "to get to a specific point or smaller place (like a station, building, or event).",
+    "example": "We will arrive at the cinema at 7 o'clock."
+  },
+  {
+    "term": "arrive in…",
+    "level": "A1",
+    "definition": "to get to a larger area like a city or country.",
+    "example": "My friends arrive in Paris next week."
+  },
+  {
+    "term": "ask for sth",
+    "level": "A1",
+    "definition": "to say that you would like to have something; to request something.",
+    "example": "If you are hungry, ask for a sandwich."
+  },
+  {
+    "term": "at home",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at school",
+    "level": "A1",
+    "definition": "attending school; being present in the school building for learning.",
+    "example": "The children are at school from 9 a.m. to 3 p.m."
+  },
+  {
+    "term": "at the beginning of sth",
+    "level": "A1",
+    "definition": "at the start of something.",
+    "example": "We sing a song at the beginning of the class."
+  },
+  {
+    "term": "at the end",
+    "level": "A1",
+    "definition": "in the final part of an event or activity.",
+    "example": "At the end, everyone clapped."
+  },
+  {
+    "term": "at the end of sth",
+    "level": "A1",
+    "definition": "in the final part of something (like a period of time, a story, or a place).",
+    "example": "They get paid at the end of the month."
+  },
+  {
+    "term": "at the moment",
+    "level": "A1",
+    "definition": "now; at the present time.",
+    "example": "Sorry, she's not here at the moment."
+  },
+  {
+    "term": "at the same time",
+    "level": "A1",
+    "definition": "happening together; at the identical moment.",
+    "example": "They both started talking at the same time."
+  },
+  {
+    "term": "at the weekend/at the weekend (AE)",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "at university",
+    "level": "A1",
+    "definition": "studying at a university.",
+    "example": "My older sister is at university."
+  },
+  {
+    "term": "at work",
+    "level": "A1",
+    "definition": "at the place where you do your job.",
+    "example": "My dad is at work now."
+  },
+  {
+    "term": "away from sb/sth",
+    "level": "A1",
+    "definition": "not near someone or something; at a distance from someone or something.",
+    "example": "Please keep the dog away from the food."
+  },
+  {
+    "term": "bad for sb/sth",
+    "level": "A1",
+    "definition": "harmful to someone or something; likely to cause damage or problems.",
+    "example": "Eating too much sugar is bad for your teeth."
+  },
+  {
+    "term": "bad news",
+    "level": "A1",
+    "definition": "information about something unpleasant that has happened or will happen.",
+    "example": "I'm afraid I have some bad news for you."
+  },
+  {
+    "term": "bad thing",
+    "level": "A1",
+    "definition": "the bad things about sth",
+    "example": ""
+  },
+  {
+    "term": "because of",
+    "level": "A1",
+    "definition": "as a result of; used to give a reason for something.",
+    "example": "The game was cancelled because of the rain."
+  },
+  {
+    "term": "begin with sth",
+    "level": "A1",
+    "definition": "to start an activity or process with a particular thing or action.",
+    "example": "Let's begin with the first exercise."
+  },
+  {
+    "term": "be going to do sth",
+    "level": "A1",
+    "definition": "used to talk about future plans or intentions, or to predict that something will happen soon.",
+    "example": "I am going to visit my grandmother tomorrow. / Look at those clouds! It's going to rain."
+  },
+  {
+    "term": "best friend",
+    "level": "A1",
+    "definition": "a very close friend that you like more than any other.",
+    "example": "She told her best friend all her secrets."
+  },
+  {
+    "term": "black and white",
+    "level": "A1",
+    "definition": "using only black, white, and shades of grey; not in colour.",
+    "example": "The old movie was in black and white."
+  },
+  {
+    "term": "car park/parking lot (AE)",
+    "level": "A1",
+    "definition": "an area or building where cars can be parked.",
+    "example": "We left the car in the multi-storey car park."
+  },
+  {
+    "term": "cell phone",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "city centre/city center (AE)",
+    "level": "A1",
+    "definition": "in the city centre/center (AE)",
+    "example": ""
+  },
+  {
+    "term": "come from…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "come into sth",
+    "level": "A1",
+    "definition": "",
+    "example": "He came into the room."
+  },
+  {
+    "term": "differences between A and B",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "difficult for sb",
+    "level": "A1",
+    "definition": "it is difficult for sb to do sth",
+    "example": ""
+  },
+  {
+    "term": "each other",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "end in sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "every day",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "every week",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "every year",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "excuse me",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "family member",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "find out",
+    "level": "A1",
+    "definition": "find out about sth, find out more",
+    "example": ""
+  },
+  {
+    "term": "for a long time",
+    "level": "A1",
+    "definition": "a long time",
+    "example": ""
+  },
+  {
+    "term": "for a moment",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for example",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for lunch",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for many years",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "for the first time",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get home",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get married",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get off",
+    "level": "A1",
+    "definition": "get off the bus",
+    "example": "I’m getting off here."
+  },
+  {
+    "term": "get on",
+    "level": "A1",
+    "definition": "get on the bus",
+    "example": "Are you getting on?"
+  },
+  {
+    "term": "get ready",
+    "level": "A1",
+    "definition": "get ready for sth, get ready to do sth",
+    "example": ""
+  },
+  {
+    "term": "get there",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get to…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "get up",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go back",
+    "level": "A1",
+    "definition": "go back to…",
+    "example": ""
+  },
+  {
+    "term": "go home",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go into sth",
+    "level": "A1",
+    "definition": "",
+    "example": "She went into her room."
+  },
+  {
+    "term": "good at sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "good for sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Good morning",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Good afternoon",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Good evening",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "good news",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "good thing",
+    "level": "A1",
+    "definition": "the good things about sth",
+    "example": ""
+  },
+  {
+    "term": "go out",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go to bed",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go to school",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "go to work",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "grow up",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Guess what…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "half an hour",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "hard work",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "have fun",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "have got",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "have time",
+    "level": "A1",
+    "definition": "have time for sth, have time to do sth",
+    "example": ""
+  },
+  {
+    "term": "he or she",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "high school",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "his or her",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "How about…?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "How are you?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "How long…?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "How many…?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "How much…?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "How often…?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "important for sb/sth",
+    "level": "A1",
+    "definition": "It is important for sb/sth to do sth",
+    "example": ""
+  },
+  {
+    "term": "I’m sorry",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in April",
+    "level": "A1",
+    "definition": "in July, etc.",
+    "example": ""
+  },
+  {
+    "term": "in bed",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in class",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in fact",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in front of",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in my opinion",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in school",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in space",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in summer",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in winter",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the centre/in the center (AE)",
+    "level": "A1",
+    "definition": "in the centre/center (AE) of sth",
+    "example": ""
+  },
+  {
+    "term": "in the country",
+    "level": "A1",
+    "definition": "the best… in the country",
+    "example": "I live in the country."
+  },
+  {
+    "term": "in the future",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the morning",
+    "level": "A1",
+    "definition": "in the afternoon, in the evening",
+    "example": ""
+  },
+  {
+    "term": "in the north",
+    "level": "A1",
+    "definition": "in the south, in the east, in the west",
+    "example": ""
+  },
+  {
+    "term": "in the past",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the street",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the summer",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in the winter",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "in town",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "it is important to do sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "It takes…",
+    "level": "A1",
+    "definition": "",
+    "example": "It takes an hour to get there."
+  },
+  {
+    "term": "kind of sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": "What kind of music do you like?"
+  },
+  {
+    "term": "know how",
+    "level": "A1",
+    "definition": "know how to do sth",
+    "example": ""
+  },
+  {
+    "term": "last time",
+    "level": "A1",
+    "definition": "the last time",
+    "example": ""
+  },
+  {
+    "term": "last year",
+    "level": "A1",
+    "definition": "last month, last summer, last week, last weekend",
+    "example": ""
+  },
+  {
+    "term": "learn how to do sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "listen to sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "live with sb",
+    "level": "A1",
+    "definition": "to have the same opinion as someone",
+    "example": "I agree with you."
+  },
+  {
+    "term": "living room",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "look at sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "look for sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "look like sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "lots of…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "millions of…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "mobile phone/cell phone (AE)",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "more than…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "next time",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "next year",
+    "level": "A1",
+    "definition": "next month, next week",
+    "example": ""
+  },
+  {
+    "term": "No problem",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "of course",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Oh no!",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "Oh yes",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "old friend",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "once a…",
+    "level": "A1",
+    "definition": "once a month, once a week, once a year",
+    "example": ""
+  },
+  {
+    "term": "one day",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on holiday/on vacation (AE)",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on Monday",
+    "level": "A1",
+    "definition": "on Tuesday, etc.",
+    "example": ""
+  },
+  {
+    "term": "on television",
+    "level": "A1",
+    "definition": "on the television",
+    "example": ""
+  },
+  {
+    "term": "on the beach",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on the floor",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on the internet",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "on the left",
+    "level": "A1",
+    "definition": "on the right",
+    "example": ""
+  },
+  {
+    "term": "on the phone",
+    "level": "A1",
+    "definition": "be on the phone, talk on the phone",
+    "example": ""
+  },
+  {
+    "term": "on TV",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "out of sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "over there",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "pay for sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "phone call",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "phone number",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "plan for sth",
+    "level": "A1",
+    "definition": "make plans for sth",
+    "example": "What are your plans for next year?"
+  },
+  {
+    "term": "play with sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "post office",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "pretty good",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "really enjoy",
+    "level": "A1",
+    "definition": "",
+    "example": "I really enjoyed it."
+  },
+  {
+    "term": "really good",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "really like",
+    "level": "A1",
+    "definition": "",
+    "example": "I’d really like to…"
+  },
+  {
+    "term": "right now",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "See you",
+    "level": "A1",
+    "definition": "See you around, See you later, See you soon",
+    "example": ""
+  },
+  {
+    "term": "sit down",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "someone else",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "something else",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "speak to sb",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "spend time",
+    "level": "A1",
+    "definition": "spend time doing sth, spend time with sb",
+    "example": ""
+  },
+  {
+    "term": "stand up",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "stay in",
+    "level": "A1",
+    "definition": "stay in a hotel, stay in bed",
+    "example": "I’m staying in tonight."
+  },
+  {
+    "term": "such as",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "swimming pool",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "talk about sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "thank you",
+    "level": "A1",
+    "definition": "thank you very much",
+    "example": ""
+  },
+  {
+    "term": "that day",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "the 20th century",
+    "level": "A1",
+    "definition": "the 21st century, the 19th century",
+    "example": ""
+  },
+  {
+    "term": "the next day",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "there is",
+    "level": "A1",
+    "definition": "there are, there was, there were",
+    "example": ""
+  },
+  {
+    "term": "think about sb/sth",
+    "level": "A1",
+    "definition": "think of sb/sth",
+    "example": ""
+  },
+  {
+    "term": "This is…",
+    "level": "A1",
+    "definition": "",
+    "example": "This is my dad."
+  },
+  {
+    "term": "this kind of…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "this morning",
+    "level": "A1",
+    "definition": "this afternoon, this evening",
+    "example": ""
+  },
+  {
+    "term": "this time",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "this year",
+    "level": "A1",
+    "definition": "this summer, this weekend",
+    "example": ""
+  },
+  {
+    "term": "thousands of…",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "too long",
+    "level": "A1",
+    "definition": "too far, too hard",
+    "example": ""
+  },
+  {
+    "term": "too much",
+    "level": "A1",
+    "definition": "too many",
+    "example": ""
+  },
+  {
+    "term": "town centre/town center (AE)",
+    "level": "A1",
+    "definition": "in the town centre/center (AE)",
+    "example": ""
+  },
+  {
+    "term": "TV show",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "wait for sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "wake up",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "welcome to sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "What about…?",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "work as sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "work for sb/sth",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "work hard",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "work together",
+    "level": "A1",
+    "definition": "work together for sth, work together to do sth",
+    "example": ""
+  },
+  {
+    "term": "work with sb",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "would like",
+    "level": "A1",
+    "definition": "I would like…, I would like to…, Would you like…?",
+    "example": ""
+  },
+  {
+    "term": "X hours a day",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "X times a…",
+    "level": "A1",
+    "definition": "X times a day, X times a week",
+    "example": ""
+  },
+  {
+    "term": "X years ago",
+    "level": "A1",
+    "definition": "X days ago, X months ago, X weeks ago",
+    "example": ""
+  },
+  {
+    "term": "X years later",
+    "level": "A1",
+    "definition": "X days later, X minutes later",
+    "example": ""
+  },
+  {
+    "term": "X years old",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "You’re welcome",
+    "level": "A1",
+    "definition": "",
+    "example": ""
+  },
+  {
+    "term": "center/centre (BrE)",
+    "level": "A1",
+    "definition": "in the city center/centre (BrE)",
+    "example": ""
+  },
+  {
+    "term": "mother",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The family"
+  },
+  {
+    "term": "uncle",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The family"
+  },
+  {
+    "term": "birthday",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "married",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "head",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "foot",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "shoulder",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "hat",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "shirt",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "trousers",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "tall",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "dark",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "good-looking",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "headache",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "heart attack",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "exercise",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "love",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Feelings"
+  },
+  {
+    "term": "tired",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Feelings"
+  },
+  {
+    "term": "thirsty",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Feelings"
+  },
+  {
+    "term": "Happy New Year",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 1: Greetings and wishes"
+  },
+  {
+    "term": "well done",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 1: Greetings and wishes"
+  },
+  {
+    "term": "I don’t mind",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 2: Useful words and expressions"
+  },
+  {
+    "term": "anyway",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 2: Useful words and expressions"
+  },
+  {
+    "term": "let’s",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 2: Useful words and expressions"
+  },
+  {
+    "term": "rice",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "tea",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "vegetables",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "fridge",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "glass",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "saucepan",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "wardrobe",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "shampoo",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "mirror",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "bookshelf",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the living room"
+  },
+  {
+    "term": "lamp",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the living room"
+  },
+  {
+    "term": "remote control",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the living room"
+  },
+  {
+    "term": "secretary",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Jobs"
+  },
+  {
+    "term": "factory",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Jobs"
+  },
+  {
+    "term": "nurse",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Jobs"
+  },
+  {
+    "term": "biology",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "notebook",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "pass an exam",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "address",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Communications"
+  },
+  {
+    "term": "computer",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Communications"
+  },
+  {
+    "term": "memory stick",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Communications"
+  },
+  {
+    "term": "apps",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Your phone"
+  },
+  {
+    "term": "voicemail",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Your phone"
+  },
+  {
+    "term": "text",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Your phone"
+  },
+  {
+    "term": "package holiday",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "currency",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "visa",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "chemist’s",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "department store",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "reviews",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Online shopping"
+  },
+  {
+    "term": "basket",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Online shopping"
+  },
+  {
+    "term": "delivery",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Online shopping"
+  },
+  {
+    "term": "single room",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "key",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "luggage",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "café",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "menu",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "fish and chips",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "table tennis",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "judo",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "volleyball",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "western",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cinema"
+  },
+  {
+    "term": "film star",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cinema"
+  },
+  {
+    "term": "director",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cinema"
+  },
+  {
+    "term": "gardening",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "listening to CDs",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "programme",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "guitar",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "jazz",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "orchestra",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "Spain",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "Chinese",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "continent",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "cold",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Weather"
+  },
+  {
+    "term": "rain",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Weather"
+  },
+  {
+    "term": "storm",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Weather"
+  },
+  {
+    "term": "railway station",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "bank",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "town hall",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "hill",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the countryside"
+  },
+  {
+    "term": "farm",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the countryside"
+  },
+  {
+    "term": "river",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the countryside"
+  },
+  {
+    "term": "horse",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "giraffe",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "pet",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "train",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "map",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "flight",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "fireworks",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "UK culture"
+  },
+  {
+    "term": "roast beef",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "UK culture"
+  },
+  {
+    "term": "Christmas",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "UK culture"
+  },
+  {
+    "term": "murder",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "prison",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "guilty",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "TV channel",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media"
+  },
+  {
+    "term": "magazine",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media"
+  },
+  {
+    "term": "talk show",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media"
+  },
+  {
+    "term": "repair",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Problems at home and work"
+  },
+  {
+    "term": "untidy",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Problems at home and work"
+  },
+  {
+    "term": "in a bad mood",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Problems at home and work"
+  },
+  {
+    "term": "hurricane",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Global problems"
+  },
+  {
+    "term": "war",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Global problems"
+  },
+  {
+    "term": "strike",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Global problems"
+  },
+  {
+    "term": "have breakfast",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Have / had / had"
+  },
+  {
+    "term": "have a swim",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Have / had / had"
+  },
+  {
+    "term": "go shopping",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Go / went / gone"
+  },
+  {
+    "term": "do an exercise",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Do / did / done"
+  },
+  {
+    "term": "do your best",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Do / did / done"
+  },
+  {
+    "term": "do the washing",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Do / did / done"
+  },
+  {
+    "term": "make coffee",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Make / made / made"
+  },
+  {
+    "term": "make a mistake",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Make / made / made"
+  },
+  {
+    "term": "make a noise",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Make / made / made"
+  },
+  {
+    "term": "come in",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Come / came / come"
+  },
+  {
+    "term": "come back",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Come / came / come"
+  },
+  {
+    "term": "take the bus",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Take / took / taken"
+  },
+  {
+    "term": "take a photo",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Take / took / taken"
+  },
+  {
+    "term": "take an exam",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Take / took / taken"
+  },
+  {
+    "term": "bring something here",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Bring / brought / brought"
+  },
+  {
+    "term": "bring back",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Bring / brought / brought"
+  },
+  {
+    "term": "take",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Bring / brought / brought"
+  },
+  {
+    "term": "get tired",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Get / got / got"
+  },
+  {
+    "term": "get better",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Get / got / got"
+  },
+  {
+    "term": "put on",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Phrasal verbs"
+  },
+  {
+    "term": "turn down",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Phrasal verbs"
+  },
+  {
+    "term": "watch TV",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Everyday things"
+  },
+  {
+    "term": "wash clothes",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Everyday things"
+  },
+  {
+    "term": "go for a walk",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Everyday things"
+  },
+  {
+    "term": "say",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking"
+  },
+  {
+    "term": "tell",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking"
+  },
+  {
+    "term": "ask",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking"
+  },
+  {
+    "term": "walk",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Moving"
+  },
+  {
+    "term": "drive",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Moving"
+  },
+  {
+    "term": "fly",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Moving"
+  },
+  {
+    "term": "because",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conjunctions and connecting words"
+  },
+  {
+    "term": "only",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conjunctions and connecting words"
+  },
+  {
+    "term": "before",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conjunctions and connecting words"
+  },
+  {
+    "term": "Monday",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "July",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "winter",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "often",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Time words"
+  },
+  {
+    "term": "once a week",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Time words"
+  },
+  {
+    "term": "middle",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Places"
+  },
+  {
+    "term": "front",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Places"
+  },
+  {
+    "term": "abroad",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Places"
+  },
+  {
+    "term": "fast",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Manner"
+  },
+  {
+    "term": "loud",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Manner"
+  },
+  {
+    "term": "the right way",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Manner"
+  },
+  {
+    "term": "money",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Common uncountable nouns"
+  },
+  {
+    "term": "bread",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Common uncountable nouns"
+  },
+  {
+    "term": "information",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Common uncountable nouns"
+  },
+  {
+    "term": "nice",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Common adjectives: Good and bad things"
+  },
+  {
+    "term": "awful",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Common adjectives: Good and bad things"
+  },
+  {
+    "term": "lovely",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Common adjectives: Good and bad things"
+  },
+  {
+    "term": "wait for",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words and prepositions"
+  },
+  {
+    "term": "belong to",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words and prepositions"
+  },
+  {
+    "term": "good at",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words and prepositions"
+  },
+  {
+    "term": "impossible",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Prefixes"
+  },
+  {
+    "term": "ex- wife",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Prefixes"
+  },
+  {
+    "term": "unsafe",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Prefixes"
+  },
+  {
+    "term": "swimmer",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes"
+  },
+  {
+    "term": "useless",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes"
+  },
+  {
+    "term": "sunny",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes"
+  },
+  {
+    "term": "quiet / quite",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words you may confuse"
+  },
+  {
+    "term": "lend / borrow",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words you may confuse"
+  },
+  {
+    "term": "cook / cooker",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words you may confuse"
+  },
+  {
+    "term": "about",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "absolutely",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 2: Useful words and expressions"
+  },
+  {
+    "term": "action film",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cinema"
+  },
+  {
+    "term": "actually",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 2: Useful words and expressions"
+  },
+  {
+    "term": "add to basket",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Online shopping"
+  },
+  {
+    "term": "advert",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media"
+  },
+  {
+    "term": "advertisement",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media"
+  },
+  {
+    "term": "advice",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Common uncountable nouns"
+  },
+  {
+    "term": "aeroplane",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "afraid of",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words and prepositions"
+  },
+  {
+    "term": "Africa",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "after",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conjunctions and connecting words"
+  },
+  {
+    "term": "afternoon",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "age",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "ago",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Time words"
+  },
+  {
+    "term": "agree",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 2: Useful words and expressions"
+  },
+  {
+    "term": "air",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Common uncountable nouns"
+  },
+  {
+    "term": "air pollution",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Global problems"
+  },
+  {
+    "term": "alarm clock",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "alcohol",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "also",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conjunctions and connecting words"
+  },
+  {
+    "term": "always",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Time words"
+  },
+  {
+    "term": "American",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "American football",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "and",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conjunctions and connecting words"
+  },
+  {
+    "term": "angry",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Feelings"
+  },
+  {
+    "term": "animal",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "answer",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking"
+  },
+  {
+    "term": "Antarctica",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "apologise",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Problems at home and work"
+  },
+  {
+    "term": "apologise for",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words and prepositions"
+  },
+  {
+    "term": "apple",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "apple pie",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "April",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "Arabic",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "Argentina",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "Argentinian",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "arm",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "armchair",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the living room"
+  },
+  {
+    "term": "around",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 2: Useful words and expressions"
+  },
+  {
+    "term": "arrest",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "arrive",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "arrive at",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Moving"
+  },
+  {
+    "term": "arrive in",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Moving"
+  },
+  {
+    "term": "art",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "as well",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conjunctions and connecting words"
+  },
+  {
+    "term": "Asia",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "ask (someone) the time",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking"
+  },
+  {
+    "term": "ask (someone) the way",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking"
+  },
+  {
+    "term": "ask for",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking"
+  },
+  {
+    "term": "ask someone for something",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking"
+  },
+  {
+    "term": "ask someone to do something",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking"
+  },
+  {
+    "term": "aspirin",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "asthma",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "at",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Places"
+  },
+  {
+    "term": "attack",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "August",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "aunt",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The family"
+  },
+  {
+    "term": "Australasia",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "Australia",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "Australian",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "autumn",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "average-looking",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "away",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Places"
+  },
+  {
+    "term": "baby",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "back",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "bacon",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "bad",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Manner"
+  },
+  {
+    "term": "bad at",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words and prepositions"
+  },
+  {
+    "term": "badly",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Manner"
+  },
+  {
+    "term": "badminton",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "bag",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "baker(’ s)",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "ball game",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "banana",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "band",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "bank clerk",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Jobs"
+  },
+  {
+    "term": "bank holiday",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "UK culture"
+  },
+  {
+    "term": "bar",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "baseball",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "basement",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "basin",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "basketball",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "bath",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Have / had / had"
+  },
+  {
+    "term": "bathroom",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "battery",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Your phone"
+  },
+  {
+    "term": "be born",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "Be careful",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 2: Useful words and expressions"
+  },
+  {
+    "term": "be used to",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words and prepositions"
+  },
+  {
+    "term": "beans",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "beard",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "beautiful",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "beauty",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "beauty salon",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Jobs"
+  },
+  {
+    "term": "bed",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "bedroom",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "bedside lamp",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "bedside table",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "beef",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "beer",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "beginning",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Places"
+  },
+  {
+    "term": "belt",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "bicycle",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "bike",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "bigger (size)",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "bill",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "bin",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "bird",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "birth",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "Bless you",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 1: Greetings and wishes"
+  },
+  {
+    "term": "blonde",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "blood",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "blue",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "board",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "board pen",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "board rubber",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "boarding card",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "boat",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "body",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "bonfire",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "UK culture"
+  },
+  {
+    "term": "Bonfire Night",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "UK culture"
+  },
+  {
+    "term": "book",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the living room"
+  },
+  {
+    "term": "book a seat",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "bookshop",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "boots",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "boring",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cinema"
+  },
+  {
+    "term": "born",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "borrow",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words you may confuse"
+  },
+  {
+    "term": "bottom",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Places"
+  },
+  {
+    "term": "bowl",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "brain",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "Brazil",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "Brazilian",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "break into",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "breakfast",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "bride",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "bridegroom",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "bring",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Bring / brought / brought"
+  },
+  {
+    "term": "British",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "broken",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Problems at home and work"
+  },
+  {
+    "term": "brother",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The family"
+  },
+  {
+    "term": "brown",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "burger",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "burglar",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "burglary",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "bus",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "bus station",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "but",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conjunctions and connecting words"
+  },
+  {
+    "term": "butcher(’ s)",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "butter",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Common uncountable nouns"
+  },
+  {
+    "term": "by bus",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "by car",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "by coach",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "by ferry",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "by plane",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "by train",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "calculator",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes"
+  },
+  {
+    "term": "calf",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "call",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Communications"
+  },
+  {
+    "term": "call a friend",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Everyday things"
+  },
+  {
+    "term": "call after",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "call back",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Communications"
+  },
+  {
+    "term": "camera",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Your phone"
+  },
+  {
+    "term": "camping",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "Can I...?",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "Can I help with …?",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "Can you tell me the way …?",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "can’t stand",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "Canada",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "Canadian",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "cancer",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "car",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "car crash",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Global problems"
+  },
+  {
+    "term": "car park",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "car theft",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "car thief",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "carpet",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the living room"
+  },
+  {
+    "term": "carrier bag",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "carrot(s)",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "carry",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "cartoon",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cinema"
+  },
+  {
+    "term": "cash",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "cash desk",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "cash machine",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "cat",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "catch",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Moving"
+  },
+  {
+    "term": "cello",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "century",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "chair",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the living room"
+  },
+  {
+    "term": "change",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "change trains",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "change the channel",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media"
+  },
+  {
+    "term": "change money",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "channel",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media"
+  },
+  {
+    "term": "charger",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Your phone"
+  },
+  {
+    "term": "chat",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "chat to friends online",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "check",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "check in online",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "check your bill",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "Cheers",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 1: Greetings and wishes"
+  },
+  {
+    "term": "cheese",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Have / had / had"
+  },
+  {
+    "term": "chemistry",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "cheque",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "chest",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "chest of drawers",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "chick",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "chicken",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "chicken tikka masala",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "UK culture"
+  },
+  {
+    "term": "children",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The family"
+  },
+  {
+    "term": "children’s department",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "Chile",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "China",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "chips",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "chocolate",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "cholera",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "chopsticks",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "Christmas tree",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "UK culture"
+  },
+  {
+    "term": "cinema",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cinema"
+  },
+  {
+    "term": "clarinet",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "classical music",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "clean",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "clean the house",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Everyday things"
+  },
+  {
+    "term": "clean your teeth",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "climb",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Moving"
+  },
+  {
+    "term": "close the curtains",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the living room"
+  },
+  {
+    "term": "closed",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "cloth",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "clothes",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "cloud",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Weather"
+  },
+  {
+    "term": "cloudy",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Weather"
+  },
+  {
+    "term": "coach",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "coach tour",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "coat",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "code",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "coffee",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "coffee maker",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "coffee table",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the living room"
+  },
+  {
+    "term": "Colombia",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "Colombian",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "colour",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "comb",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "come",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "come along",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Come / came / come"
+  },
+  {
+    "term": "come and see me",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Come / came / come"
+  },
+  {
+    "term": "come back from",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Come / came / come"
+  },
+  {
+    "term": "come from",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Come / came / come"
+  },
+  {
+    "term": "come home",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Come / came / come"
+  },
+  {
+    "term": "come into",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Come / came / come"
+  },
+  {
+    "term": "come on",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Phrasal verbs"
+  },
+  {
+    "term": "come out",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Come / came / come"
+  },
+  {
+    "term": "come out of",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Come / came / come"
+  },
+  {
+    "term": "come to",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words and prepositions"
+  },
+  {
+    "term": "come to stay",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "comedy",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cinema"
+  },
+  {
+    "term": "comic",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "computer crashed",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Problems at home and work"
+  },
+  {
+    "term": "computer magazine",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media"
+  },
+  {
+    "term": "concert",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "Congratulations",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 1: Greetings and wishes"
+  },
+  {
+    "term": "conservation area",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the countryside"
+  },
+  {
+    "term": "control",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words you may confuse"
+  },
+  {
+    "term": "cook",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "cooking",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "cost",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "cottage",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the countryside"
+  },
+  {
+    "term": "Could I have the bill?",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "countable",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Common uncountable nouns"
+  },
+  {
+    "term": "country",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "country road",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the countryside"
+  },
+  {
+    "term": "countryside",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the countryside"
+  },
+  {
+    "term": "course",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "court",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "cousin",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The family"
+  },
+  {
+    "term": "cow",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "crash",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Problems at home and work"
+  },
+  {
+    "term": "crime",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "criminal",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "crowded",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Global problems"
+  },
+  {
+    "term": "cup",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "cup of tea",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Have / had / had"
+  },
+  {
+    "term": "cupboard",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "curry",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "curtains",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the living room"
+  },
+  {
+    "term": "customs",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "cut",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Problems at home and work"
+  },
+  {
+    "term": "dance",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Moving"
+  },
+  {
+    "term": "date",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Communications"
+  },
+  {
+    "term": "daughter",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The family"
+  },
+  {
+    "term": "day",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "day after tomorrow",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "day before yesterday",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "dead",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "death",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "December",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "degree",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "degrees",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Weather"
+  },
+  {
+    "term": "delete",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Your phone"
+  },
+  {
+    "term": "delicious",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "dentist",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "depart",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "desk",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "dessert",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "diet",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "different (colour)",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "dinner",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "direct",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "directions",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "disaster",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Global problems"
+  },
+  {
+    "term": "dishwasher",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "divorced",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "do",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Jobs"
+  },
+  {
+    "term": "do a course",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "do an exam",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "do business with",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Do / did / done"
+  },
+  {
+    "term": "do homework",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "do nothing",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "do some exercise(s)",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Do / did / done"
+  },
+  {
+    "term": "do the gardening",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Do / did / done"
+  },
+  {
+    "term": "do the housework",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Do / did / done"
+  },
+  {
+    "term": "do the washing-up",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Do / did / done"
+  },
+  {
+    "term": "Do you come from …?",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The family"
+  },
+  {
+    "term": "Do you do any...?",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "Do you have any …?",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "Do you like...?",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Feelings"
+  },
+  {
+    "term": "Do you play …?",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "doctor",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "documentary",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media"
+  },
+  {
+    "term": "dog",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "dot",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Communications"
+  },
+  {
+    "term": "double room",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "download",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Your phone"
+  },
+  {
+    "term": "download an app",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Your phone"
+  },
+  {
+    "term": "downstairs",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "drawers",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "drawing pin",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "dreadful",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Common adjectives: Good and bad things"
+  },
+  {
+    "term": "dress",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "dressing table",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "drink",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "drug dealer",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "drug dealing",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "drugs",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "drums",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "dry",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "DVD",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "DVD player",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "ear",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "earthquake",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Global problems"
+  },
+  {
+    "term": "Easter",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "UK culture"
+  },
+  {
+    "term": "Easter eggs",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "UK culture"
+  },
+  {
+    "term": "egg",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "Egypt",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "Egyptian",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "elderly",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "electricals",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "elephant",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "else",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 2: Useful words and expressions"
+  },
+  {
+    "term": "email",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Communications"
+  },
+  {
+    "term": "email address",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Communications"
+  },
+  {
+    "term": "end",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Places"
+  },
+  {
+    "term": "endless",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes"
+  },
+  {
+    "term": "engineer",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Jobs"
+  },
+  {
+    "term": "English",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "enjoy",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "entrance",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "envelope",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Communications"
+  },
+  {
+    "term": "Europe",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "even",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conjunctions and connecting words"
+  },
+  {
+    "term": "evening",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media"
+  },
+  {
+    "term": "every",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the bedroom and bathroom"
+  },
+  {
+    "term": "everywhere",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Places"
+  },
+  {
+    "term": "exam",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "excellent",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Common adjectives: Good and bad things"
+  },
+  {
+    "term": "exchange",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "exchange some money",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "Excuse me",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Conversations 1: Greetings and wishes"
+  },
+  {
+    "term": "exit",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "expect",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words you may confuse"
+  },
+  {
+    "term": "ex-boyfriend",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Prefixes"
+  },
+  {
+    "term": "ex-wife",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Prefixes"
+  },
+  {
+    "term": "eye",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "face",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "fail an exam",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "fair",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "fall",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Moving"
+  },
+  {
+    "term": "family",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The family"
+  },
+  {
+    "term": "farm animal",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "farmer",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Jobs"
+  },
+  {
+    "term": "fast food",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "fast food restaurant",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "fat",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people"
+  },
+  {
+    "term": "father",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The family"
+  },
+  {
+    "term": "favourite",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "February",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "feed",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "feel",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "feelings",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Feelings"
+  },
+  {
+    "term": "feet",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "ferry",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Holidays"
+  },
+  {
+    "term": "festival",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "UK culture"
+  },
+  {
+    "term": "field",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the countryside"
+  },
+  {
+    "term": "fill in a form",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "fill up with",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "film",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cinema"
+  },
+  {
+    "term": "fine",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "finger",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Parts of the body"
+  },
+  {
+    "term": "Finnish",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "first floor",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "fish",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "flight attendant",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "flood",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Global problems"
+  },
+  {
+    "term": "floor",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "flute",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "flute-player",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "foal",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "fog",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Weather"
+  },
+  {
+    "term": "foggy",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Weather"
+  },
+  {
+    "term": "folk music",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Music and musical instruments"
+  },
+  {
+    "term": "food",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "football",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sports"
+  },
+  {
+    "term": "football hooligan",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "football hooliganism",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "forest",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the countryside"
+  },
+  {
+    "term": "forest fire",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Global problems"
+  },
+  {
+    "term": "fork",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "form",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In a hotel"
+  },
+  {
+    "term": "fortnight",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "fourth",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "freezer",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "French",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "Friday",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Days, months, seasons"
+  },
+  {
+    "term": "friend",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Free time at home"
+  },
+  {
+    "term": "friendly",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Manner"
+  },
+  {
+    "term": "fruit",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "fruit juice",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "fruit salad",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Eating out"
+  },
+  {
+    "term": "frying pan",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the kitchen"
+  },
+  {
+    "term": "funeral",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth, marriage and death"
+  },
+  {
+    "term": "furniture",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "future",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Time words"
+  },
+  {
+    "term": "game",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Have / had / had"
+  },
+  {
+    "term": "garlic",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food and drink"
+  },
+  {
+    "term": "geography",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "German",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "Germany",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Countries and nationalities"
+  },
+  {
+    "term": "get",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Get / got / got"
+  },
+  {
+    "term": "get a bus",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "get a degree",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At school and university"
+  },
+  {
+    "term": "get a train",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "get dressed",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "get information",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "In the town"
+  },
+  {
+    "term": "get to",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Get / got / got"
+  },
+  {
+    "term": "get undressed",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "get used to",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Words and prepositions"
+  },
+  {
+    "term": "gift shop",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Shops and shopping"
+  },
+  {
+    "term": "give",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "give a lift",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travelling"
+  },
+  {
+    "term": "glasses",
+    "level": "A1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Clothes"
+  },
+  {
+    "term": "global",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Global problems"
+  },
+  {
+    "term": "a bit",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Adverbs"
+  },
+  {
+    "term": "abhor",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "abhorrence",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "abhorrent",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "abject poverty",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Economy and finance"
+  },
+  {
+    "term": "-able",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes: forming new words"
+  },
+  {
+    "term": "absolute poverty",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The haves and the have-nots"
+  },
+  {
+    "term": "abstruse",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Difficulties and dilemmas"
+  },
+  {
+    "term": "academic journal",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cramming for success: study and academic work"
+  },
+  {
+    "term": "accede",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Permission: getting the go-ahead"
+  },
+  {
+    "term": "accelerate",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Speed: fast and slow"
+  },
+  {
+    "term": "access (v.)",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media: internet and email"
+  },
+  {
+    "term": "access online",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cramming for success: study and academic work"
+  },
+  {
+    "term": "accessory",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "All the rage: clothes and fashion"
+  },
+  {
+    "term": "Accidents will happen!",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Modality: expressing facts, opinions, desires"
+  },
+  {
+    "term": "acclaimed",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people: positive and negative qualities"
+  },
+  {
+    "term": "accommodating",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "accord",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Apology, regret and reconciliation"
+  },
+  {
+    "term": "account for",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: text structure"
+  },
+  {
+    "term": "ache",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Illness: feeling under the weather"
+  },
+  {
+    "term": "aches and pains",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Illness: feeling under the weather"
+  },
+  {
+    "term": "achieve economic growth",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Economy and finance"
+  },
+  {
+    "term": "acknowledge",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cramming for success: study and academic work"
+  },
+  {
+    "term": "acquaintance",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: ups and downs"
+  },
+  {
+    "term": "acquiesce",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Permission: getting the go-ahead"
+  },
+  {
+    "term": "acquit",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Apology, regret and reconciliation"
+  },
+  {
+    "term": "acquittal",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Apology, regret and reconciliation"
+  },
+  {
+    "term": "acronym",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Abbreviations and acronyms"
+  },
+  {
+    "term": "acupuncturist",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Healthcare"
+  },
+  {
+    "term": "acute",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Healthcare"
+  },
+  {
+    "term": "AD",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Abbreviations and acronyms"
+  },
+  {
+    "term": "addictive",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media: internet and email"
+  },
+  {
+    "term": "additive",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food: a recipe for disaster"
+  },
+  {
+    "term": "additive-free",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes: forming new words"
+  },
+  {
+    "term": "address",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: text structure"
+  },
+  {
+    "term": "adhere",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Beliefs"
+  },
+  {
+    "term": "adherence",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Beliefs"
+  },
+  {
+    "term": "adherent",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Beliefs"
+  },
+  {
+    "term": "adjoining",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Red tape"
+  },
+  {
+    "term": "administration",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: careers"
+  },
+  {
+    "term": "admit",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Modality: expressing facts, opinions, desires"
+  },
+  {
+    "term": "adoption leave",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: job satisfaction"
+  },
+  {
+    "term": "adoration",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: friends forever"
+  },
+  {
+    "term": "adoring",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: friends forever"
+  },
+  {
+    "term": "adverse",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Medical language"
+  },
+  {
+    "term": "advocate",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: making sense"
+  },
+  {
+    "term": "affection",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: friends forever"
+  },
+  {
+    "term": "affectionate",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: friends forever"
+  },
+  {
+    "term": "affinity",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: careers"
+  },
+  {
+    "term": "affluence",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The haves and the have-nots"
+  },
+  {
+    "term": "affluent",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The haves and the have-nots"
+  },
+  {
+    "term": "aforementioned",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Red tape"
+  },
+  {
+    "term": "age-conscious",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes: forming new words"
+  },
+  {
+    "term": "age-related",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes: forming new words"
+  },
+  {
+    "term": "aggregate (n.)",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Number: statistics and quantity"
+  },
+  {
+    "term": "aggregate (v.)",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Number: statistics and quantity"
+  },
+  {
+    "term": "agony aunt",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media: in print"
+  },
+  {
+    "term": "agony column",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media: in print"
+  },
+  {
+    "term": "agree to differ",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Agreement, disagreement and compromise"
+  },
+  {
+    "term": "ahead of its time",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people: positive and negative qualities"
+  },
+  {
+    "term": "AI",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Technology and its impact"
+  },
+  {
+    "term": "AIDS",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Abbreviations and acronyms"
+  },
+  {
+    "term": "ailing",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Economy and finance"
+  },
+  {
+    "term": "air views",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The news: gathering and delivering"
+  },
+  {
+    "term": "airline",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travel and accommodation"
+  },
+  {
+    "term": "airtime",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The news: gathering and delivering"
+  },
+  {
+    "term": "akin",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Spot the difference: making comparisons"
+  },
+  {
+    "term": "alarm",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "alarmed",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "alarming",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "alcoholic",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: colleagues and routines"
+  },
+  {
+    "term": "alibi",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Apology, regret and reconciliation"
+  },
+  {
+    "term": "all the ingredients of",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food: a recipe for disaster"
+  },
+  {
+    "term": "all the rage",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "All the rage: clothes and fashion"
+  },
+  {
+    "term": "all your born days",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Time: once in a blue moon"
+  },
+  {
+    "term": "allegation",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "British politics"
+  },
+  {
+    "term": "allege",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The letter of the law"
+  },
+  {
+    "term": "allergic",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food: a recipe for disaster"
+  },
+  {
+    "term": "allergy",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food: a recipe for disaster"
+  },
+  {
+    "term": "alleviate debt",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Economy and finance"
+  },
+  {
+    "term": "all-inclusive holiday",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Travel and accommodation"
+  },
+  {
+    "term": "allocate funds",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Economy and finance"
+  },
+  {
+    "term": "all-out",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "War and peace"
+  },
+  {
+    "term": "allowance",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Authorities: customs and police"
+  },
+  {
+    "term": "allude",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: text structure"
+  },
+  {
+    "term": "ally",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: ups and downs"
+  },
+  {
+    "term": "aloof",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people: personality and character traits"
+  },
+  {
+    "term": "alternative medicine",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Healthcare"
+  },
+  {
+    "term": "altruistic",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people: positive and negative qualities"
+  },
+  {
+    "term": "amateur",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: colleagues and routines"
+  },
+  {
+    "term": "amber",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "All the colours of the rainbow"
+  },
+  {
+    "term": "ambiguous",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: making sense"
+  },
+  {
+    "term": "ambition",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Modality: expressing facts, opinions, desires"
+  },
+  {
+    "term": "amble",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Motion: taking steps"
+  },
+  {
+    "term": "ambush (n. and v.)",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "War and peace"
+  },
+  {
+    "term": "amend",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The letter of the law"
+  },
+  {
+    "term": "amendment",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The letter of the law"
+  },
+  {
+    "term": "amiability",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: friends forever"
+  },
+  {
+    "term": "amiable",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: friends forever"
+  },
+  {
+    "term": "ample",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Space: no room to swing a cat"
+  },
+  {
+    "term": "an item",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Socialising and networking"
+  },
+  {
+    "term": "anaesthesia",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Healthcare"
+  },
+  {
+    "term": "anaesthetist",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Healthcare"
+  },
+  {
+    "term": "analogue",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Technology and its impact"
+  },
+  {
+    "term": "analogy",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Spot the difference: making comparisons"
+  },
+  {
+    "term": "ancestor",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: friends forever"
+  },
+  {
+    "term": "angle bracket",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Writing: style and format"
+  },
+  {
+    "term": "Anglo-Saxon",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "English: a global language"
+  },
+  {
+    "term": "animal (rescue) shelter",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The animal kingdom"
+  },
+  {
+    "term": "animal rights activist",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The animal kingdom"
+  },
+  {
+    "term": "animal welfare",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food: a recipe for disaster"
+  },
+  {
+    "term": "annual bonus",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: job satisfaction"
+  },
+  {
+    "term": "annul",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The letter of the law"
+  },
+  {
+    "term": "annulment",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The letter of the law"
+  },
+  {
+    "term": "-ant",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes: forming new words"
+  },
+  {
+    "term": "anthology",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking about books"
+  },
+  {
+    "term": "anticipate",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Promises and bets"
+  },
+  {
+    "term": "anti-corruption squad",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Authorities: customs and police"
+  },
+  {
+    "term": "antipathy",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "anti-social",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: colleagues and routines"
+  },
+  {
+    "term": "anti-virus software",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media: internet and email"
+  },
+  {
+    "term": "anxious",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Modality: expressing facts, opinions, desires"
+  },
+  {
+    "term": "apology",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Apology, regret and reconciliation"
+  },
+  {
+    "term": "appalling",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Easily confused words"
+  },
+  {
+    "term": "apparent",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Modality: expressing facts, opinions, desires"
+  },
+  {
+    "term": "appeal",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The letter of the law"
+  },
+  {
+    "term": "appease",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Emotions and reactions"
+  },
+  {
+    "term": "append",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: making sense"
+  },
+  {
+    "term": "applause",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The performance arts: reviews and critiques"
+  },
+  {
+    "term": "appliance",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Energy: from fossil fuels to windmills"
+  },
+  {
+    "term": "applicant",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes: forming new words"
+  },
+  {
+    "term": "approachable",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people: personality and character traits"
+  },
+  {
+    "term": "approval",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Agreement, disagreement and compromise"
+  },
+  {
+    "term": "approve of",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Agreement, disagreement and compromise"
+  },
+  {
+    "term": "approximately",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Give or take: more vague expressions"
+  },
+  {
+    "term": "APR",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Personal finance: making ends meet"
+  },
+  {
+    "term": "arbitrary",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: making sense"
+  },
+  {
+    "term": "arch rival",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: ups and downs"
+  },
+  {
+    "term": "archaeologist",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "History: since the dawn of civilisation"
+  },
+  {
+    "term": "archive",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The news: gathering and delivering"
+  },
+  {
+    "term": "arduous",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Difficulties and dilemmas"
+  },
+  {
+    "term": "arid",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing the world"
+  },
+  {
+    "term": "armistice",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Apology, regret and reconciliation"
+  },
+  {
+    "term": "armour",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "History: since the dawn of civilisation"
+  },
+  {
+    "term": "aromatherapist",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Healthcare"
+  },
+  {
+    "term": "article",
+    "level": "A2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cramming for success: study and academic work"
+  },
+  {
+    "term": "articulate (adj.)",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking about language"
+  },
+  {
+    "term": "artificial",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Language and gender"
+  },
+  {
+    "term": "artificial intelligence",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Technology and its impact"
+  },
+  {
+    "term": "as quiet as a mouse",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sounds: listen up!"
+  },
+  {
+    "term": "as thick as thieves",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: friends forever"
+  },
+  {
+    "term": "as things are",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Whatchamacallit: being indirect"
+  },
+  {
+    "term": "ASAP",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Abbreviations and acronyms"
+  },
+  {
+    "term": "ashes",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Birth and death: from cradle to grave"
+  },
+  {
+    "term": "aspiration",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Modality: expressing facts, opinions, desires"
+  },
+  {
+    "term": "assemble",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Industries: from manufacturing to service"
+  },
+  {
+    "term": "assent",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Permission: getting the go-ahead"
+  },
+  {
+    "term": "assert",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: text structure"
+  },
+  {
+    "term": "assess",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cramming for success: study and academic work"
+  },
+  {
+    "term": "assessment of risk",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: careers"
+  },
+  {
+    "term": "assignment",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cramming for success: study and academic work"
+  },
+  {
+    "term": "association",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Connotation: making associations"
+  },
+  {
+    "term": "asterisk",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Writing: style and format"
+  },
+  {
+    "term": "astute",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people: positive and negative qualities"
+  },
+  {
+    "term": "asylum",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Authorities: customs and police"
+  },
+  {
+    "term": "asylum-seeker",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Authorities: customs and police"
+  },
+  {
+    "term": "at a rate of knots",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Time: once in a blue moon"
+  },
+  {
+    "term": "at short notice",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Time: once in a blue moon"
+  },
+  {
+    "term": "at stake",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Promises and bets"
+  },
+  {
+    "term": "at your earliest convenience",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Red tape"
+  },
+  {
+    "term": "ATM",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Personal finance: making ends meet"
+  },
+  {
+    "term": "atmospheric",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Festivals in their cultural context"
+  },
+  {
+    "term": "attachment",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media: internet and email"
+  },
+  {
+    "term": "attain",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Red tape"
+  },
+  {
+    "term": "attempt",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Language variation"
+  },
+  {
+    "term": "attire",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "All the rage: clothes and fashion"
+  },
+  {
+    "term": "attribute (to)",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Beliefs"
+  },
+  {
+    "term": "auburn",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "All the colours of the rainbow"
+  },
+  {
+    "term": "auction",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: careers"
+  },
+  {
+    "term": "audition",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The performance arts: reviews and critiques"
+  },
+  {
+    "term": "authorise",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Permission: getting the go-ahead"
+  },
+  {
+    "term": "authoritative",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: making sense"
+  },
+  {
+    "term": "auto-",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Word-building and word-blending"
+  },
+  {
+    "term": "availability",
+    "level": "B2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "averse",
+    "level": "C2",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "aversion",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "avoid",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Prepositions: place and movement"
+  },
+  {
+    "term": "avoidable",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes: forming new words"
+  },
+  {
+    "term": "award",
+    "level": "B1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The performance arts: reviews and critiques"
+  },
+  {
+    "term": "award custody to",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The letter of the law"
+  },
+  {
+    "term": "awe-inspiring",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Attracting tourists"
+  }
+]
