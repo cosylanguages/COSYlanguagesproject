@@ -60,11 +60,9 @@
       "level_name": "Toddler",
       "approximate_vocabulary_size": "500-600 words",
       "learning_outcomes": [
-        "Understand sentences and frequently used expressions related to areas of most immediate relevance (e.g., basic personal and family information, shopping, local geography, basic employment).",
-        "Communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.",
-        "Describe in simple terms aspects of his/her background, immediate environment, and matters in areas of immediate need.",
-        "Read very short, simple texts and find specific, predictable information in simple everyday material such as advertisements, prospectuses, menus and timetables.",
-        "Write short, simple notes and messages relating to matters in areas of immediate need (e.g., a shopping list, a simple postcard)."
+        "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.",
+        "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
+        "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
       ],
       "language_focus_topics": [
         "Review & expand A0: am/is/are, subject pronouns, possessive adjectives",
@@ -132,11 +130,9 @@
       "level_name": "Child",
       "approximate_vocabulary_size": "1000-1200 words",
       "learning_outcomes": [
-        "to communicate with native speakers and express your opinions on topics that concern you personally, your family, your profession, and your hobbies;",
-        "use past and future tenses in sentences;",
-        "solve everyday and routine tasks (shopping at the store, filling up the car, going to the doctor, using public transport, etc.);",
-        "to read and understand the meaning of a short text written in simple words on familiar or related topics;",
-        "write letters, messages, and texts using familiar vocabulary."
+        "Can understand sentences and frequently used expressions related to areas of most immediate relevance (e.g. very basic personal and family information, shopping, local geography, employment).",
+        "Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.",
+        "Can describe in simple terms aspects of his/her background, immediate environment and matters in areas of immediate need."
       ],
       "language_focus_topics": [
         "to be – all forms – present & past",
@@ -159,7 +155,19 @@
         "compounds (something / nothing / anything / everything, someone / no one / anyone / everyone, somewhere / nowhere / anywhere / everywhere)",
         "going to future (for plans and predictions)",
         "infinitive of purpose (e.g., I went to the shop to buy bread.)",
-        "Present Perfect (ever / never / yet / just / for / since - for experiences and recent past)"
+        "Present Perfect (ever / never / yet / just / for / since - for experiences and recent past)",
+        "Clauses with 'that' (optional) (e.g., I think (that) it's interesting)",
+        "Descriptive phrases with past participles (e.g., a letter written in English)",
+        "Simple direct wh-questions in present and past (e.g., Where do you live? What did you do?)",
+        "Verb + infinitive structures (e.g., want to, like to, need to)",
+        "Noun/Pronoun + infinitive (e.g., something to do, a place to go)",
+        "Modals for possibility: may, might (e.g., It may rain)",
+        "Modals for obligation: must (e.g., You must finish your homework)",
+        "Modals for advice: should (e.g., You should see a doctor)",
+        "Simple intransitive clauses (NP-V) (e.g., You can get there by train.)",
+        "Simple transitive clauses (NP-V-NP) (e.g., I met a lot of interesting people.)",
+        "Ditransitive clauses (NP-V-NP-NP / NP-V-NP-PP) (e.g., I can give you my guitar; I'll give it to you.)",
+        "Double embedded genitive with 'of' (e.g., the colours of the back of the phone)"
       ],
       "vocabulary_topics": [
         "personal information (expanded: e.g., date of birth, marital status - simple)",
@@ -220,10 +228,10 @@
       "level_name": "Teenager",
       "approximate_vocabulary_size": "2000-2500 words",
       "learning_outcomes": [
-        "Understands the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc.",
+        "Can understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc.",
         "Can deal with most situations likely to arise whilst travelling in an area where the language is spoken.",
-        "Can produce simple connected text on topics which are familiar, or of personal interest.",
-        "Can describe experiences and events, dreams, hopes & ambitions and give simple reasons and explanations for opinions and plans."
+        "Can produce simple connected text on topics, which are familiar, or of personal interest.",
+        "Can describe experiences and events, dreams, hopes & ambitions and briefly give reasons and explanations for opinions and plans."
       ],
       "language_focus_topics": [
         "Present Simple (review and contrast with other tenses)",
@@ -243,7 +251,22 @@
         "Passives (Present Simple and Past Simple passives)",
         "Present Perfect Continuous (for duration of unfinished actions, recent continuous actions with present results)",
         "First conditional (if + Present Simple, will / might + infinitive - real future possibilities)",
-        "Second conditional (if + Past Simple, would + infinitive - hypothetical situations)"
+        "Second conditional (if + Past Simple, would + infinitive - hypothetical situations)",
+        "-ing clauses as object complements (e.g., I saw him running)",
+        "-ing clauses as adverbials (e.g., She walked away, singing a song)",
+        "Relative clauses with 'whose' (e.g., The man whose car was stolen)",
+        "Indirect questions (e.g., Can you tell me where it is?)",
+        "'What' clauses as subject or object (e.g., What I need is more time)",
+        "Specific verb/adjective + infinitive patterns (e.g., seem to, supposed to, expect to, easy to)",
+        "Complex auxiliaries: would rather, had better",
+        "Modal 'may' for permission (e.g., May I open the window?)",
+        "Modal 'must' for logical necessity (e.g., He's not here, he must be sick)",
+        "Modal 'should' for probability (e.g., They should arrive by noon)",
+        "Noun + descriptive phrase with present participle (-ing) (e.g., the man talking to John)",
+        "'It' + Verb + subordinate 'that' clause (Extraposition) (e.g., It's true that he's coming)",
+        "Verb + PP + 'that' clause (e.g., He said to me (that) he would come)",
+        "Indirect WH-questions with infinitive (e.g., I don't know what to do)",
+        "Double embedded genitive with 'of' and possessive 's (e.g., the cover of my friend's book)"
       ],
       "vocabulary_topics": [
         "verbs with similar meaning (e.g., make/do, speak/talk, say/tell, lend/borrow, see/look/watch, hear/listen)",
@@ -305,10 +328,9 @@
       "level_name": "Amateur",
       "approximate_vocabulary_size": "4000-6000 words",
       "learning_outcomes": [
-        "Understands the main ideas of complex texts on both concrete and abstract topics, including technical discussions in his/her field of specialisation.",
-        "Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers possible without strain for either party.",
-        "Can produce clear, detailed text on a wide range of subjects.",
-        "Can explain a viewpoint on a topical issue giving the advantages and disadvantages of various options."
+        "Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in his/her field of specialisation.",
+        "Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
+        "Can produce clear, detailed text on a wide range of subjects and explain a viewpoint on a topical issue giving the advantages and disadvantages of various options."
       ],
       "language_focus_topics": [
         "Review of the tense system (comprehensive understanding and application of all tenses)",
@@ -326,7 +348,13 @@
         "Conditionals (0, 1st, 2nd & 3rd conditionals, mixed conditionals, unless, in case, as long as)",
         "Modals of Probability (present and past: must be/have been, can't be/have been, may/might/could be/have been)",
         "Reported Speech, thoughts & questions (tense shifts, changes in pronouns/adverbs, reporting different types of sentences)",
-        "Parts of Speech (in-depth understanding of word classes and their functions, word formation: prefixes, suffixes)"
+        "Parts of Speech (in-depth understanding of word classes and their functions, word formation: prefixes, suffixes)",
+        "Adverbial -ing clauses preceding the main clause (e.g., Having finished his work, he went home)",
+        "'It' + verb + infinitive phrase (e.g., It is important to understand)",
+        "Wh-clauses as subject (e.g., Why he left is a mystery)",
+        "Expanded range of specific verbs/adjectives + infinitive patterns (e.g., prove to be, turn out to be, likely to, sure to, known to, obliged to)",
+        "Verb + object + adjective (Secondary predication) (e.g., He painted the car red)",
+        "Double genitive with possessive pronoun + 's (e.g., a friend of mine's house)"
       ],
       "vocabulary_topics": [
         "Positive & negative adjectives (wider range, nuanced meanings, prefixes/suffixes for forming opposites)",
@@ -387,7 +415,7 @@
       "level_name": "A-star",
       "approximate_vocabulary_size": "8000-10000 words",
       "learning_outcomes": [
-        "Understands a wide range of demanding, longer texts, and recognises implicit meaning.",
+        "Can understand a wide range of demanding, longer texts, and recognise implicit meaning.",
         "Can express him/herself fluently and spontaneously without much obvious searching for expressions.",
         "Can use language flexibly and effectively for social, academic and professional purposes.",
         "Can produce clear, well-structured, detailed text on complex subjects, showing controlled use of organisational patterns, connectors and cohesive devices."
@@ -405,7 +433,10 @@
         "Expressing habit (used to, would, be/get used to doing, Present Simple for habits - nuanced distinctions)",
         "Modals & related verbs (past situations - must have, can't have, might have, should have, would have for deduction, speculation, regret, criticism about the past)",
         "Hypothesizing (all conditionals including mixed, unreal past/present/future, wish/if only, other hypothetical structures)",
-        "Articles & Determiners (mastery of definite, indefinite, zero article; complex uses of determiners)"
+        "Articles & Determiners (mastery of definite, indefinite, zero article; complex uses of determiners)",
+        "Advanced verb + object + infinitive/to be patterns with specific lexical verbs (e.g., believe X to be, find X to be, assume X to do)",
+        "Double genitive (e.g., a friend of my sister's, the bride's family's house)",
+        "Modal 'might' for polite/formal permission (e.g., Might I ask a question?)"
       ],
       "vocabulary_topics": [
         "Compound nouns (advanced and less common compounds, understanding nuances in meaning)",
@@ -468,7 +499,7 @@
       "level_name": "Maestro",
       "approximate_vocabulary_size": "16000-20000 words",
       "learning_outcomes": [
-        "Understands with ease virtually everything heard or read.",
+        "Can understand with ease virtually everything heard or read.",
         "Can summarise information from different spoken and written sources, reconstructing arguments and accounts in a coherent presentation.",
         "Can express him/herself spontaneously, very fluently and precisely, differentiating finer shades of meaning even in more complex situations."
       ],
@@ -486,7 +517,7 @@
         "seem / appear (with infinitives, to be, that-clauses, for hedging and expressing perception)",
         "Modals – present, future & past - probability / obligation / permission / ability / habit (complete mastery of all forms and nuanced meanings)",
         "Past tenses to express unreal/unlikely situations (advanced use of Past Simple/Continuous/Perfect in hypothetical contexts beyond standard conditionals)",
-        "Verb patterns (comprehensive knowledge of verbs followed by gerunds, infinitives, that-clauses, objects + infinitives, etc.)",
+        "Verb patterns (comprehensive knowledge and expanding lexical range with verbs followed by gerunds, infinitives, that-clauses, objects + infinitives, etc.)",
         "Intensifying adverbs (wide range, including formal/informal, and their collocations)",
         "Relatives & participles (all types of relative clauses, reduced relative clauses, participle clauses for conciseness and style)",
         "Linking devices – conjunctions / adverbs / infinitives / relative pronouns / participles (mastery for creating sophisticated, cohesive, and coherent text)"
