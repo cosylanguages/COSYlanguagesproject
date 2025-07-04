@@ -1,0 +1,126 @@
+.dictionary-tool {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  max-height: 70vh; /* Max height for the tool */
+  display: flex;
+  flex-direction: column;
+}
+
+.dictionary-tool h3 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+}
+
+.dictionary-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap; /* Allow controls to wrap on smaller screens */
+}
+
+.search-dictionary {
+  flex-grow: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9em;
+  min-width: 200px; /* Minimum width before wrapping */
+}
+
+.level-filter {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.vocabulary-list {
+  overflow-y: auto; /* Make the list scrollable */
+  flex-grow: 1; /* Allow list to take available space */
+  padding-right: 5px; /* Space for scrollbar */
+}
+
+.vocabulary-item {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.vocabulary-item h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #0056b3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vocabulary-item p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.vocabulary-item strong {
+  color: #555;
+}
+
+.vocabulary-item em {
+  font-style: italic;
+  color: #444;
+}
+
+.vocabulary-item small {
+  font-size: 0.8em;
+  color: #777;
+}
+
+.error-message {
+  color: #d9534f; /* Bootstrap danger color */
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Inline pronounce button style, can be shared if used elsewhere */
+.pronounce-btn-inline {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 1em; /* Adjust size as needed */
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.pronounce-btn-inline:hover {
+  opacity: 0.7;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .dictionary-controls {
+    flex-direction: column;
+  }
+
+  .search-dictionary,
+  .level-filter {
+    width: 100%; /* Make controls full width on small screens */
+    margin-bottom: 10px; /* Add some space when stacked */
+  }
+
+  .level-filter {
+    margin-bottom: 0; /* Last item in stack */
+  }
+}
