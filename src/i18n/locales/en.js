@@ -237,7 +237,20 @@ const enTranslations = {
   "freestyle.controls.reveal": "🤫 Reveal Answer",
   "freestyle.controls.hint": "💡 Hint",
   "freestyle.controls.randomize": "🎲 Randomize",
-  "freestyle.controls.next": "➡️ Next Exercise"
+  "freestyle.controls.next": "➡️ Next Exercise",
+
+  // Keys for ExerciseHost.js
+  "exercises.placeholder.title": "{name} Exercise",
+  "exercises.placeholder.message1": "This is a placeholder for the <em>{name}</em> exercise.",
+  "exercises.placeholder.message2": "Implementation is pending.",
+  "errors.exerciseHost.title": "Exercise Error",
+  "errors.exerciseHost.notFound": "Exercise type \"<strong>{subPracticeType}</strong>\" not found or not yet implemented.",
+  "errors.exerciseHost.suggestion": "Please check the mapping in ExerciseHost.js or select another exercise.",
+  "exercises.selectExerciseHint": "Please select an exercise type above.",
+
+  // Keys for specific exercises UI elements
+  "altText.identifyImage": "Identify this image",
+  "tooltips.pronounceWord": "Pronounce \"{word}\""
 };
 
 export default enTranslations;
