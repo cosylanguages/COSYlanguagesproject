@@ -1,0 +1,821 @@
+[
+  {
+    "term": "cholera",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Health and illness"
+  },
+  {
+    "term": "foal",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Animals"
+  },
+  {
+    "term": "football hooligan",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "football hooliganism",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Crime"
+  },
+  {
+    "term": "abhor",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "abhorrence",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "abhorrent",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "abject poverty",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Economy and finance"
+  },
+  {
+    "term": "absolute poverty",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The haves and the have-nots"
+  },
+  {
+    "term": "academic journal",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cramming for success: study and academic work"
+  },
+  {
+    "term": "accelerate",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Speed: fast and slow"
+  },
+  {
+    "term": "Accidents will happen!",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Modality: expressing facts, opinions, desires"
+  },
+  {
+    "term": "acclaimed",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people: positive and negative qualities"
+  },
+  {
+    "term": "accommodating",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "accord",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Apology, regret and reconciliation"
+  },
+  {
+    "term": "achieve economic growth",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Economy and finance"
+  },
+  {
+    "term": "acknowledge",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Cramming for success: study and academic work"
+  },
+  {
+    "term": "acquit",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Apology, regret and reconciliation"
+  },
+  {
+    "term": "acquittal",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Apology, regret and reconciliation"
+  },
+  {
+    "term": "acronym",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Abbreviations and acronyms"
+  },
+  {
+    "term": "acupuncturist",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Healthcare"
+  },
+  {
+    "term": "acute",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Healthcare"
+  },
+  {
+    "term": "addictive",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media: internet and email"
+  },
+  {
+    "term": "additive-free",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes: forming new words"
+  },
+  {
+    "term": "adhere",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Beliefs"
+  },
+  {
+    "term": "adherence",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Beliefs"
+  },
+  {
+    "term": "adherent",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Beliefs"
+  },
+  {
+    "term": "adjoining",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Red tape"
+  },
+  {
+    "term": "adoption leave",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: job satisfaction"
+  },
+  {
+    "term": "adoration",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: friends forever"
+  },
+  {
+    "term": "adoring",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: friends forever"
+  },
+  {
+    "term": "adverse",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Medical language"
+  },
+  {
+    "term": "advocate",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: making sense"
+  },
+  {
+    "term": "affinity",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: careers"
+  },
+  {
+    "term": "affluence",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The haves and the have-nots"
+  },
+  {
+    "term": "affluent",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The haves and the have-nots"
+  },
+  {
+    "term": "aforementioned",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Red tape"
+  },
+  {
+    "term": "age-conscious",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes: forming new words"
+  },
+  {
+    "term": "age-related",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes: forming new words"
+  },
+  {
+    "term": "aggregate (n.)",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Number: statistics and quantity"
+  },
+  {
+    "term": "aggregate (v.)",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Number: statistics and quantity"
+  },
+  {
+    "term": "agony aunt",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media: in print"
+  },
+  {
+    "term": "agony column",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The media: in print"
+  },
+  {
+    "term": "agree to differ",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Agreement, disagreement and compromise"
+  },
+  {
+    "term": "ahead of its time",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people: positive and negative qualities"
+  },
+  {
+    "term": "AIDS",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Abbreviations and acronyms"
+  },
+  {
+    "term": "ailing",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Economy and finance"
+  },
+  {
+    "term": "air views",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The news: gathering and delivering"
+  },
+  {
+    "term": "airtime",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The news: gathering and delivering"
+  },
+  {
+    "term": "alarmed",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "alarming",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "alibi",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Apology, regret and reconciliation"
+  },
+  {
+    "term": "all the ingredients of",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Food: a recipe for disaster"
+  },
+  {
+    "term": "all the rage",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "All the rage: clothes and fashion"
+  },
+  {
+    "term": "allegation",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "British politics"
+  },
+  {
+    "term": "allege",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The letter of the law"
+  },
+  {
+    "term": "alleviate debt",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Economy and finance"
+  },
+  {
+    "term": "allocate funds",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Economy and finance"
+  },
+  {
+    "term": "all-out",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "War and peace"
+  },
+  {
+    "term": "allude",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: text structure"
+  },
+  {
+    "term": "ally",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: ups and downs"
+  },
+  {
+    "term": "alternative medicine",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Healthcare"
+  },
+  {
+    "term": "ambiguous",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: making sense"
+  },
+  {
+    "term": "ambush (n. and v.)",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "War and peace"
+  },
+  {
+    "term": "amend",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The letter of the law"
+  },
+  {
+    "term": "amendment",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The letter of the law"
+  },
+  {
+    "term": "amiable",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: friends forever"
+  },
+  {
+    "term": "ample",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Space: no room to swing a cat"
+  },
+  {
+    "term": "anaesthesia",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Healthcare"
+  },
+  {
+    "term": "anaesthetist",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Healthcare"
+  },
+  {
+    "term": "analogue",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Technology and its impact"
+  },
+  {
+    "term": "analogy",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Spot the difference: making comparisons"
+  },
+  {
+    "term": "angle bracket",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Writing: style and format"
+  },
+  {
+    "term": "Anglo-Saxon",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "English: a global language"
+  },
+  {
+    "term": "animal (rescue) shelter",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The animal kingdom"
+  },
+  {
+    "term": "animal rights activist",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The animal kingdom"
+  },
+  {
+    "term": "annual bonus",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: job satisfaction"
+  },
+  {
+    "term": "-ant",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes: forming new words"
+  },
+  {
+    "term": "anthology",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking about books"
+  },
+  {
+    "term": "anticipate",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Promises and bets"
+  },
+  {
+    "term": "anti-corruption squad",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Authorities: customs and police"
+  },
+  {
+    "term": "aversion",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Negative feelings"
+  },
+  {
+    "term": "appalling",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Easily confused words"
+  },
+  {
+    "term": "append",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: making sense"
+  },
+  {
+    "term": "applause",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The performance arts: reviews and critiques"
+  },
+  {
+    "term": "approachable",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing people: personality and character traits"
+  },
+  {
+    "term": "arbitrary",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: making sense"
+  },
+  {
+    "term": "arch rival",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: ups and downs"
+  },
+  {
+    "term": "archive",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The news: gathering and delivering"
+  },
+  {
+    "term": "arid",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Describing the world"
+  },
+  {
+    "term": "armistice",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Apology, regret and reconciliation"
+  },
+  {
+    "term": "armour",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "History: since the dawn of civilisation"
+  },
+  {
+    "term": "aromatherapist",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Healthcare"
+  },
+  {
+    "term": "articulate (adj.)",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Talking about language"
+  },
+  {
+    "term": "as quiet as a mouse",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Sounds: listen up!"
+  },
+  {
+    "term": "as thick as thieves",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Relationships: friends forever"
+  },
+  {
+    "term": "as things are",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Whatchamacallit: being indirect"
+  },
+  {
+    "term": "aspiration",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Modality: expressing facts, opinions, desires"
+  },
+  {
+    "term": "assemble",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Industries: from manufacturing to service"
+  },
+  {
+    "term": "assert",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: text structure"
+  },
+  {
+    "term": "assessment of risk",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: careers"
+  },
+  {
+    "term": "asterisk",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Writing: style and format"
+  },
+  {
+    "term": "asylum",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Authorities: customs and police"
+  },
+  {
+    "term": "asylum-seeker",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Authorities: customs and police"
+  },
+  {
+    "term": "at short notice",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Time: once in a blue moon"
+  },
+  {
+    "term": "at stake",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Promises and bets"
+  },
+  {
+    "term": "at your earliest convenience",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Red tape"
+  },
+  {
+    "term": "atmospheric",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Festivals in their cultural context"
+  },
+  {
+    "term": "attain",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Red tape"
+  },
+  {
+    "term": "attribute (to)",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Beliefs"
+  },
+  {
+    "term": "auburn",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "All the colours of the rainbow"
+  },
+  {
+    "term": "auction",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "At work: careers"
+  },
+  {
+    "term": "authorise",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Permission: getting the go-ahead"
+  },
+  {
+    "term": "authoritative",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Academic writing: making sense"
+  },
+  {
+    "term": "avoidable",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Suffixes: forming new words"
+  },
+  {
+    "term": "award custody to",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "The letter of the law"
+  },
+  {
+    "term": "awe-inspiring",
+    "level": "C1",
+    "definition": "TODO: Definition",
+    "example": "TODO: Example",
+    "theme": "Attracting tourists"
+  }
+]
