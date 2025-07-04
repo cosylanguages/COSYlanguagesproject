@@ -149,7 +149,7 @@ const SelectArticleExercise = ({ language, days, exerciseKey }) => {
         {currentItem && currentItem.word && (
           <button 
             onClick={handlePronounceWord} 
-            title={t('tooltips.pronounceWord', `Pronounce "${currentItem.word}"`)}
+            title={t('tooltips.pronounceWord', 'Pronounce "{word}"', { word: currentItem?.word || '' })}
             style={{background:'none', border:'none', fontSize:'1.5rem', cursor:'pointer', marginLeft:'10px'}}
           >
             🔊
