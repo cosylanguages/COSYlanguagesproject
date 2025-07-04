@@ -28,11 +28,12 @@ const DaySelectorFreestyle = ({ currentDays, onDaysChange, language }) => {
         setSingleDay('');
       }
     } else {
-      // Default to single day mode, no day selected
-      setMode('single');
+      // currentDays is empty. Clear the selections, but DO NOT change mode here.
+      // Mode is changed by user via handleModeChange.
       setSingleDay('');
       setDayFrom('');
       setDayTo('');
+      // setThematicName(''); // This is handled by its own useEffect based on singleDay
     }
   }, [currentDays]);
   
@@ -75,11 +76,12 @@ const DaySelectorFreestyle = ({ currentDays, onDaysChange, language }) => {
       if (from <= to) {
         onDaysChange(Array.from({ length: to - from + 1 }, (_, i) => from + i));
       } else {
-        onDaysChange([]); // Invalid range
+        onDaysChange([]); // Invalid range - this case is fine, from > to
       }
-    } else {
-      onDaysChange([]);
-    }
+    } // else: If one part is missing, don't call onDaysChange yet.
+      // Wait for both parts of the range to be selected.
+      // If the user clears a field, onDaysChange will be called with [] by that field's handler if needed,
+      // or if they switch mode.
   };
 
   const handleDayToChange = (e) => {
@@ -91,11 +93,10 @@ const DaySelectorFreestyle = ({ currentDays, onDaysChange, language }) => {
       if (from <= to) {
         onDaysChange(Array.from({ length: to - from + 1 }, (_, i) => from + i));
       } else {
-        onDaysChange([]); // Invalid range
+        onDaysChange([]); // Invalid range - this case is fine, from > to
       }
-    } else {
-      onDaysChange([]);
-    }
+    } // else: If one part is missing, don't call onDaysChange yet.
+      // Wait for both parts of the range to be selected.
   };
   
   return (
