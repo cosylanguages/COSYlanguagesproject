@@ -3742,5 +3742,61 @@
     "definition": "Asking about the time someone usually wakes up.",
     "example": "What time do you get up? ~ At 6.30 a.m. in the week.",
     "level": "a1"
+  },
+  {
+    "id": "jump",
+    "word": "jump",
+    "partOfSpeech": "v",
+    "definition": "push oneself off a surface and into the air by using the legs and feet.",
+    "example": "The cat can jump very high.",
+    "level": "a1"
+  },
+  {
+    "id": "sing",
+    "word": "sing",
+    "partOfSpeech": "v",
+    "definition": "make musical sounds with the voice.",
+    "example": "I like to sing in the shower.",
+    "level": "a1"
+  },
+  {
+    "id": "goodbye",
+    "word": "goodbye",
+    "partOfSpeech": "interjection",
+    "definition": "a word we say when we are leaving...",
+    "example": "It was a bit soon to say goodbye.",
+    "level": "a1"
+  },
+  {
+    "id": "ok",
+    "word": "OK",
+    "partOfSpeech": "interjection",
+    "definition": "said to show that we are agreeing...",
+    "example": "Ok, you can go out with your friends tonight.",
+    "level": "a1"
+  },
+  {
+    "id": "purple",
+    "word": "purple",
+    "partOfSpeech": "Adjective",
+    "definition": "having the color of most ripe eggplants",
+    "example": "purple grapes were ripe and juicy .",
+    "level": "a1"
+  },
+  {
+    "id": "cousin",
+    "word": "cousin",
+    "partOfSpeech": "noun",
+    "definition": "our aunt or uncle's child",
+    "example": "We always have a big family barbecue in the summer , and all cousins bring their favorite dishes to share .",
+    "level": "a1"
+  },
+  {
+    "id": "alarm_clock",
+    "word": "alarm clock",
+    "partOfSpeech": "noun",
+    "definition": "a clock that can be set to an exact time...",
+    "example": "alarm clock has a backup battery...",
+    "level": "a1"
   }
 ]
