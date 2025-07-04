@@ -1,4 +1,5 @@
 import React from 'react';
+import { useI18n } from '../../i18n/I18nContext';
 
 // New Vocabulary Host Components
 import RandomWordPracticeHost from './exercises/vocabulary/RandomWordPracticeHost';
@@ -39,13 +40,18 @@ import StorytellingExercise from './exercises/writing/StorytellingExercise'; // 
 import DiaryPracticeExercise from './exercises/writing/DiaryPracticeExercise'; // Newly added
 
 // Placeholder component for exercises not yet migrated
-const PlaceholderExercise = ({ name, subPracticeType }) => (
-  <div style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '5px', backgroundColor: '#f9f9f9' }}>
-    <h3>{name || subPracticeType} Exercise</h3>
-    <p>This is a placeholder for the <em>{name || subPracticeType}</em> exercise.</p>
-    <p>Implementation is pending.</p>
-  </div>
-);
+const PlaceholderExercise = ({ name, subPracticeType }) => {
+  const { t } = useI18n();
+  const exerciseName = name || subPracticeType;
+  return (
+    <div style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '5px', backgroundColor: '#f9f9f9' }}>
+      <h3>{t('exercises.placeholder.title', `${exerciseName} Exercise`, { name: exerciseName })}</h3>
+      {/* Using dangerouslySetInnerHTML for <em> tag, ensure content is safe or find alternative if needed */}
+      <p dangerouslySetInnerHTML={{ __html: t('exercises.placeholder.message1', `This is a placeholder for the <em>${exerciseName}</em> exercise.`, { name: exerciseName }) }} />
+      <p>{t('exercises.placeholder.message2', 'Implementation is pending.')}</p>
+    </div>
+  );
+};
 
 // Mapping of sub-practice IDs to their components
 const exerciseMap = {
@@ -79,8 +85,10 @@ const exerciseMap = {
 };
 
 const ExerciseHost = ({ subPracticeType, language, days, exerciseKey }) => {
+  const { t } = useI18n();
+
   if (!subPracticeType) {
-    return <p style={{ textAlign: 'center', fontStyle: 'italic', color: '#666' }}>Please select an exercise type above.</p>;
+    return <p style={{ textAlign: 'center', fontStyle: 'italic', color: '#666' }}>{t('exercises.selectExerciseHint', 'Please select an exercise type above.')}</p>;
   }
 
   let ExerciseComponent = exerciseMap[subPracticeType];
@@ -97,9 +105,10 @@ const ExerciseHost = ({ subPracticeType, language, days, exerciseKey }) => {
     if (!ExerciseComponent) {
         return (
           <div style={{ color: 'red', textAlign: 'center', padding: '20px', border: '1px solid red', borderRadius: '5px' }}>
-            <h3>Exercise Error</h3>
-            <p>Exercise type "<strong>{subPracticeType}</strong>" not found or not yet implemented.</p>
-            <p>Please check the mapping in ExerciseHost.js or select another exercise.</p>
+            <h3>{t('errors.exerciseHost.title', 'Exercise Error')}</h3>
+            {/* Using dangerouslySetInnerHTML for <strong> tag, ensure content is safe or find alternative */}
+            <p dangerouslySetInnerHTML={{ __html: t('errors.exerciseHost.notFound', `Exercise type "<strong>${subPracticeType}</strong>" not found or not yet implemented.`, { subPracticeType }) }} />
+            <p>{t('errors.exerciseHost.suggestion', 'Please check the mapping in ExerciseHost.js or select another exercise.')}</p>
           </div>
         );
     }
