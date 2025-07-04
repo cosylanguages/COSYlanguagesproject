@@ -1,6 +1,7 @@
 import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
-import './ExerciseControls.css'; // To be created
+import TransliterableText from '../Common/TransliterableText';
+import './ExerciseControls.css';
 
 const ExerciseControls = ({
   onCheckAnswer,
@@ -13,19 +14,21 @@ const ExerciseControls = ({
   isRevealed = false,
   customButton = null
 }) => {
-  const { t } = useI18n();
+  const { t, language: i18nLanguage } = useI18n();
 
+  // Use 'buttons.*' key pattern, assuming they exist in translation files.
+  // Default English text provided as fallback.
   const {
     showCheck = !!onCheckAnswer,
-    checkButtonText = t('freestyle.controls.check', '✔️ Check'),
+    checkButtonText = t('buttons.check', '✔️ Check'), // Changed key
     showReveal = !!onRevealAnswer,
-    revealButtonText = t('freestyle.controls.reveal', '🤫 Reveal Answer'),
+    revealButtonText = t('buttons.revealAnswer', '🤫 Reveal Answer'), // Changed key
     showHint = !!onShowHint,
-    hintButtonText = t('freestyle.controls.hint', '💡 Hint'),
+    hintButtonText = t('buttons.help', '💡 Hint'), // Changed key (it.js has 'Aiuto' for help, using this as hint)
     showRandomize = !!onRandomize,
-    randomizeButtonText = t('freestyle.controls.randomize', '🎲 Randomize'),
+    randomizeButtonText = t('buttons.randomize', '🎲 Randomize'), // Changed key
     showNext = !!onNextExercise,
-    nextButtonText = t('freestyle.controls.next', '➡️ Next Exercise'),
+    nextButtonText = t('buttons.next', '➡️ Next Exercise'), // Changed key
   } = config;
 
   const canInteract = !isAnswerCorrect && !isRevealed;
@@ -38,16 +41,16 @@ const ExerciseControls = ({
           onClick={onShowHint}
           disabled={!canInteract}
         >
-          {hintButtonText}
+          <TransliterableText text={hintButtonText} langOverride={i18nLanguage} />
         </button>
       )}
       {showRandomize && onRandomize && (
         <button
           className="action-button action-button-randomize"
           onClick={onRandomize}
-          disabled={!canInteract && !showNext} // Randomize might still be active if it means "new item"
+          disabled={!canInteract && !showNext} 
         >
-          {randomizeButtonText}
+          <TransliterableText text={randomizeButtonText} langOverride={i18nLanguage} />
         </button>
       )}
       {showCheck && onCheckAnswer && (
@@ -56,7 +59,7 @@ const ExerciseControls = ({
           onClick={onCheckAnswer}
           disabled={!canInteract}
         >
-          {checkButtonText}
+          <TransliterableText text={checkButtonText} langOverride={i18nLanguage} />
         </button>
       )}
       {showReveal && onRevealAnswer && (
@@ -65,7 +68,7 @@ const ExerciseControls = ({
           onClick={onRevealAnswer}
           disabled={!canInteract}
         >
-          {revealButtonText}
+          <TransliterableText text={revealButtonText} langOverride={i18nLanguage} />
         </button>
       )}
       {customButton} 
@@ -74,7 +77,7 @@ const ExerciseControls = ({
           className="action-button action-button-next"
           onClick={onNextExercise}
         >
-          {nextButtonText}
+          <TransliterableText text={nextButtonText} langOverride={i18nLanguage} />
         </button>
       )}
     </div>
