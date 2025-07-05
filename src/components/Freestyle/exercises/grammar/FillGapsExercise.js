@@ -9,13 +9,14 @@ import ExerciseControls from '../../ExerciseControls';
 import { pronounceText } from '../../../../utils/speechUtils';
 import { useI18n } from '../../../../i18n/I18nContext';
 
-const FillGapsExercise = ({ language, days, exerciseKey }) => {
+const FillGapsExercise = ({ language, days, exerciseKey, onComplete }) => { // Added onComplete
   const [exerciseData, setExerciseData] = useState(null); 
   const [userInput, setUserInput] = useState('');
   const [feedback, setFeedback] = useState({ message: '', type: '' });
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isRevealed, setIsRevealed] = useState(false);
+  const [isAttemptFinished, setIsAttemptFinished] = useState(false); // New state
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
@@ -33,28 +34,23 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
     setFeedback({ message: '', type: '' });
     setUserInput('');
     setIsRevealed(false);
+    setIsAttemptFinished(false); // Reset on new exercise
     setExerciseData(null);
 
     try {
       const { data: rawVerbItems, error: verbError } = await loadVerbGrammarData(language, days);
-      if (verbError) {
-        throw new Error(verbError.message || verbError.error || 'Failed to load verb grammar data.');
-      }
-
+      if (verbError) throw new Error(verbError.message || verbError.error || 'Failed to load verb grammar data.');
+      
       const { data: vocabItems, error: vocabError } = await loadVocabularyData(language, days);
-      if (vocabError) {
-        console.warn("FillGapsExercise: Failed to load vocabulary data. Sentence objects might be generic.");
-      }
+      if (vocabError) console.warn("FillGapsExercise: Failed to load vocabulary data.");
       
       if (rawVerbItems && rawVerbItems.length > 0) {
         const processedVerbItems = processVerbData(rawVerbItems, language);
         if (!processedVerbItems || processedVerbItems.length === 0) {
             setError(t('errors.noProcessableVerbData', 'No processable verb items found.'));
-            setIsLoading(false);
-            return;
+            setIsLoading(false); return;
         }
         const sentenceDetails = await generateGrammarExerciseSentence(language, days, processedVerbItems, vocabItems || []);
-        
         if (sentenceDetails && sentenceDetails.questionPrompt && sentenceDetails.answer) {
           setExerciseData(sentenceDetails);
         } else {
@@ -69,7 +65,7 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
     } finally {
       setIsLoading(false);
     }
-  }, [language, days, t]);
+  }, [language, days, t]); // Removed getLatinizedText as it's not used directly in useCallback here
 
   useEffect(() => {
     if (language && days && days.length > 0) {
@@ -82,18 +78,17 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
 
   const handleInputChange = (e) => {
     setUserInput(e.target.value);
-    if (feedback.message) setFeedback({ message: '', type: '' });
+    if (feedback.message) setFeedback({ message: '', type: '' }); // Clear feedback on new input
   };
 
   const checkAnswer = () => {
-    if (!exerciseData || isRevealed) return;
+    if (!exerciseData || isRevealed || isAttemptFinished) return;
     
-    const originalCorrectAnswerString = exerciseData.answer; // e.g., "réponse/reponse"
+    setIsAttemptFinished(true); // Mark attempt as finished
+    const originalCorrectAnswerString = exerciseData.answer;
     const normalizedUserInput = normalizeString(userInput);
-    // const itemId = `fillgaps_${normalizeString(exerciseData.correctSentence)}_${normalizeString(originalCorrectAnswerString)}`; // Not currently used
-
     let isCorrect = false;
-    let matchedOriginalAnswer = ''; // The specific original answer part that matched
+    let matchedOriginalAnswer = '';
 
     const possibleOriginalAnswers = originalCorrectAnswerString.split('/');
     for (const originalAnswerPart of possibleOriginalAnswers) {
@@ -105,33 +100,34 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
       }
     }
 
+    let timeoutDuration = 1500;
     if (isCorrect) {
-      // Use untrimmed userInput for exact match comparison against the matched original part
       if (userInput.trim() === matchedOriginalAnswer) {
         setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
       } else {
-        // User's input was correct after normalization, but different from the canonical form
         const feedbackMessage = t('feedback.correctAnswerIs', `Correct! The answer is: ${getLatinizedText(matchedOriginalAnswer, language)}`, { correctAnswer: getLatinizedText(matchedOriginalAnswer, language) });
         setFeedback({ message: feedbackMessage, type: 'correct' });
       }
     } else {
-      // Incorrect logic: display the first possible correct answer.
+      timeoutDuration = 1800; // Longer for incorrect to read
       const firstOriginalAnswerForDisplay = getLatinizedText(possibleOriginalAnswers[0].trim(), language);
-      // Reconstruct the correct sentence for display using the first original answer part.
-      let fullCorrectSentenceForDisplay = exerciseData.correctSentence; // Fallback
+      let fullCorrectSentenceForDisplay = exerciseData.correctSentence;
       if (exerciseData.questionPrompt && exerciseData.questionPrompt.includes('___')) {
           fullCorrectSentenceForDisplay = exerciseData.questionPrompt.replace('___', possibleOriginalAnswers[0].trim());
       }
-      
       setFeedback({ 
         message: t('feedback.incorrectFillGaps', `Incorrect. The correct answer is: ${firstOriginalAnswerForDisplay}. Full sentence: ${getLatinizedText(fullCorrectSentenceForDisplay, language)}`, { correctAnswer: firstOriginalAnswerForDisplay, correctSentence: getLatinizedText(fullCorrectSentenceForDisplay, language) }), 
         type: 'incorrect' 
       });
     }
+
+    if (onComplete) {
+      setTimeout(() => onComplete(), timeoutDuration);
+    }
   };
 
   const showHint = () => {
-    if (!exerciseData || isRevealed) return;
+    if (!exerciseData || isRevealed || isAttemptFinished) return;
     const answerForHint = exerciseData.answer.split('/')[0].trim();
     let hintLetter = '';
     if (answerForHint && answerForHint.length > 0) {
@@ -141,12 +137,10 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
   };
 
   const revealTheAnswer = () => {
-    if (!exerciseData) return;
-    const correctAnswer = exerciseData.answer.split('/')[0].trim(); // Show the first variant
+    if (!exerciseData || isRevealed) return; // Can reveal even if attempt was made but incorrect
+    const correctAnswer = exerciseData.answer.split('/')[0].trim();
     const latinizedCorrect = getLatinizedText(correctAnswer, language);
-    
-    // Reconstruct the correct sentence for display
-    let fullCorrectSentenceForDisplay = exerciseData.correctSentence; // Fallback
+    let fullCorrectSentenceForDisplay = exerciseData.correctSentence;
     if (exerciseData.questionPrompt && exerciseData.questionPrompt.includes('___')) {
         fullCorrectSentenceForDisplay = exerciseData.questionPrompt.replace('___', correctAnswer);
     }
@@ -157,11 +151,22 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
       type: 'info' 
     });
     setIsRevealed(true);
+    setIsAttemptFinished(true); // Revealing also finishes the attempt
+    if (onComplete) {
+      setTimeout(() => onComplete(), 2000);
+    }
   };
   
+  const handleNextRequest = () => {
+    if (onComplete) {
+      onComplete();
+    } else {
+      setupNewExercise(); // Fallback for standalone use
+    }
+  };
+
   const handlePronounceSentence = () => {
     if (exerciseData && exerciseData.correctSentence && language) {
-        // Pronounce the version of the sentence with the blank filled by the first correct option for consistency
         let sentenceToPronounce = exerciseData.correctSentence;
         if (exerciseData.questionPrompt && exerciseData.questionPrompt.includes('___') && exerciseData.answer) {
             const firstCorrectAnswer = exerciseData.answer.split('/')[0].trim();
@@ -175,8 +180,19 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
   };
 
   if (isLoading) return <p>{t('loading.fillGapsExercise', 'Loading fill the gaps exercise...')}</p>;
-  if (error) return <FeedbackDisplay message={error} type="error" />;
-  if (!exerciseData && !isLoading) return <FeedbackDisplay message={t('exercises.noData', "No exercise data available. Try different selections.")} type="info" />;
+  if (error) return (
+    <>
+      <FeedbackDisplay message={error} type="error" />
+      <ExerciseControls onNextExercise={handleNextRequest} onRandomize={handleNextRequest} config={{showNext: true, showRandomize: true}} />
+    </>
+  );
+  if (!exerciseData && !isLoading) return (
+    <>
+      <FeedbackDisplay message={t('exercises.noData', "No exercise data available. Try different selections.")} type="info" />
+      <ExerciseControls onNextExercise={handleNextRequest} onRandomize={handleNextRequest} config={{showNext: true, showRandomize: true}} />
+    </>
+  );
+
 
   const questionParts = exerciseData.questionPrompt.split('___');
   const questionDisplay = (
@@ -189,8 +205,13 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
             value={userInput}
             onChange={handleInputChange}
             placeholder={t('placeholders.typeHere', "type here")}
-            disabled={isRevealed}
+            disabled={isRevealed || isAttemptFinished} // Use isAttemptFinished
             style={{ margin: '0 5px', padding: '5px', fontSize: 'inherit', width: '120px', border: '1px solid #ccc', borderRadius: '4px', textAlign: 'center' }}
+            onKeyPress={(event) => {
+                if (event.key === 'Enter' && !isRevealed && !isAttemptFinished) {
+                  checkAnswer();
+                }
+            }}
           />
           {getLatinizedText(questionParts[1], language)}
         </>
@@ -203,7 +224,7 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
       <h3>{t('titles.fillTheGap', 'Fill in the Gap')}</h3>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0', fontSize: '1.3rem', flexWrap: 'wrap' }}>
         <div>{questionDisplay}</div>
-        {exerciseData.correctSentence && ( // Keep button if there's a sentence context
+        {exerciseData.correctSentence && (
             <button 
                 onClick={handlePronounceSentence} 
                 title={t('tooltips.pronounceSentence',`Pronounce sentence`)}
@@ -217,15 +238,19 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
       <FeedbackDisplay message={feedback.message} type={feedback.type} language={language} />
       
       <ExerciseControls
-        onCheckAnswer={!isRevealed ? checkAnswer : undefined}
-        onShowHint={!isRevealed ? showHint : undefined}
-        onRevealAnswer={!isRevealed ? revealTheAnswer : undefined}
-        onNextExercise={setupNewExercise}
+        onCheckAnswer={!isRevealed && !isAttemptFinished ? checkAnswer : undefined}
+        onShowHint={!isRevealed && !isAttemptFinished ? showHint : undefined}
+        onRevealAnswer={!isRevealed && !isAttemptFinished ? revealTheAnswer : undefined} // Can reveal even if attempt made but incorrect, if !isRevealed
+        onNextExercise={handleNextRequest}
+        onRandomize={handleNextRequest} // Randomize also calls onComplete via handleNextRequest
+        isAnswerCorrect={isAttemptFinished && feedback.type === 'correct'}
+        isRevealed={isRevealed}
         config={{ 
-            showCheck: !isRevealed, 
-            showHint: !isRevealed, 
-            showReveal: !isRevealed,
+            showCheck: !isRevealed && !isAttemptFinished, 
+            showHint: !isRevealed && !isAttemptFinished, 
+            showReveal: !isRevealed && !isAttemptFinished, // Only show reveal if not already revealed OR successfully answered
             showNext: true,
+            showRandomize: true, // Allow randomize to also mean "next item from host"
         }}
       />
     </div>
