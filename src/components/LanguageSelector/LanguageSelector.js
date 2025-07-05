@@ -6,6 +6,22 @@ import TransliterableText from '../Common/TransliterableText';
 const LanguageSelector = () => {
     const { language, changeLanguage, allTranslations, currentLangKey, t } = useI18n();
 
+    // Desired order of languages by popularity
+    const popularLanguageOrder = [
+      'COSYenglish',
+      'COSYspanish',
+      'COSYfrench',
+      'COSYportugese',
+      'COSYrussian',
+      'COSYgerman',
+      'COSYitalian',
+      'COSYgreek',
+      'COSYarmenian',
+      'COSYtatar',
+      'COSYbachkir',
+      'COSYbreton',
+    ];
+
     const availableLanguages = Object.keys(allTranslations).map(langKey => {
         // Skip "null" key if it appears, ensure the langKey actual entry exists
         if (langKey === "null" || !allTranslations[langKey]) return null; 
@@ -27,7 +43,26 @@ const LanguageSelector = () => {
         }
 
         return { key: langKey, name: name };
-    }).filter(Boolean); // Filter out any null entries from map
+    }).filter(Boolean) // Filter out any null entries from map
+      .sort((a, b) => {
+        const indexA = popularLanguageOrder.indexOf(a.key);
+        const indexB = popularLanguageOrder.indexOf(b.key);
+
+        // If both languages are in the popular list, sort by that order
+        if (indexA !== -1 && indexB !== -1) {
+            return indexA - indexB;
+        }
+        // If only A is in the popular list, it comes first
+        if (indexA !== -1) {
+            return -1;
+        }
+        // If only B is in the popular list, it comes first
+        if (indexB !== -1) {
+            return 1;
+        }
+        // If neither is in the popular list, sort alphabetically by name
+        return a.name.localeCompare(b.name);
+    });
 
     const handleChange = (event) => {
         const newLangKey = event.target.value;
