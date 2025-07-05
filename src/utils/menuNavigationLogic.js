@@ -184,7 +184,12 @@ export const allMenuItemsConfig = {
   },
   vocabulary: {
     parent: 'main_practice_categories_stage',
-    children: ['vocab_random_word', 'vocab_random_image', 'vocab_type_opposite', 'vocab_transcribe', 'vocab_build_word', 'vocab_practice_all_sub'],
+    children: [
+      'vocab_random_word_host', 
+      'vocab_random_image_host', 
+      // 'vocab_listening_host', // Removed: Listening exercises are under the "Listening" main category
+      'vocab_practice_all_sub_host'
+    ],
   },
   grammar: {
     parent: 'main_practice_categories_stage',
@@ -193,6 +198,15 @@ export const allMenuItemsConfig = {
   listening: { 
     parent: 'main_practice_categories_stage',
     // children: ['listening_sub_option1', ...] 
+    // For now, let's assume clicking 'listening' directly goes to 'vocab_listening_host' if it's the only one.
+    // Or, 'listening' itself becomes a host key if it has no sub-menu buttons.
+    // To be consistent, 'listening' button should lead to a state where 'vocab_listening_host' is the exercise.
+    // So, 'main_practice_categories_stage' could have 'listening_host_trigger' as a child,
+    // and 'listening_host_trigger' points to 'ListeningPracticeHost' in ExerciseHost.
+    // For simplicity now, 'SubPracticeMenu' will show 'vocab_listening_host' if 'listening' is selected.
+    // This implies 'listening' might need children like 'vocab_listening_host' in the config.
+    // Let's adjust 'listening' to have 'vocab_listening_host' as a child for consistency.
+    children: ['vocab_listening_host'] 
   },
   speaking: {
     parent: 'main_practice_categories_stage',
@@ -206,25 +220,16 @@ export const allMenuItemsConfig = {
     parent: 'main_practice_categories_stage',
     // children: [...]
   },
-  practice_all_main_cat: { 
+  practice_all_main_cat: { // This is the "Practice All" for ALL categories, different from vocab specific.
     parent: 'main_practice_categories_stage', 
   },
 
-  // Sub-options for Vocabulary
-  vocab_random_word: {
-    parent: 'vocabulary',
-    children: ['rw_show_word_mode', 'rw_guess_it_mode', 'rw_opposites_mode'], 
-  },
-  vocab_random_image: { parent: 'vocabulary' },
-  vocab_type_opposite: { parent: 'vocabulary' },
-  vocab_transcribe: { parent: 'vocabulary' },
-  vocab_build_word: { parent: 'vocabulary' },
-  vocab_practice_all_sub: { parent: 'vocabulary' },
-
-  // Sub-sub-options for Vocabulary > Random Word
-  rw_show_word_mode: { parent: 'vocab_random_word' },
-  rw_guess_it_mode: { parent: 'vocab_random_word' },
-  rw_opposites_mode: { parent: 'vocab_random_word' },
+  // These are now LEAF nodes in the menu button hierarchy, pointing to HOST components.
+  // The host components will then manage different exercise *types* internally.
+  vocab_random_word_host: { parent: 'vocabulary' },
+  vocab_random_image_host: { parent: 'vocabulary' },
+  vocab_listening_host: { parent: 'listening' }, // Child of 'listening' main category now
+  vocab_practice_all_sub_host: { parent: 'vocabulary' }, 
   
   // Sub-options for Grammar
   grammar_fill_gaps: { parent: 'grammar' },
