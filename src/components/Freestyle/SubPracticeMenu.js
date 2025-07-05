@@ -1,68 +1,79 @@
 import React from 'react';
-import { useI18n } from '../../i18n/I18nContext'; // Import useI18n
+import { useI18n } from '../../i18n/I18nContext';
+import TransliterableText from '../Common/TransliterableText'; // For consistency if needed
+import './PracticeCategoryNav.css'; // Can reuse or create specific styles
 
-// Translation keys for sub-practice options
-// These keys should exist in the translations.js file
-const SUB_PRACTICE_OPTIONS = {
-  vocabulary: [
-    { id: 'random-word', labelKey: 'subPractice.vocabulary.randomWord' },
-    { id: 'random-image', labelKey: 'subPractice.vocabulary.randomImage' },
-    { id: 'listening', labelKey: 'subPractice.vocabulary.listening' },
-    { id: 'practice-all', labelKey: 'subPractice.vocabulary.practiceAll' },
-  ],
-  grammar: [
-    { id: 'gender-articles', labelKey: 'subPractice.grammar.genderArticles' },
-    { id: 'verbs-conjugation', labelKey: 'subPractice.grammar.verbsConjugation' },
-    { id: 'possessives', labelKey: 'subPractice.grammar.possessives' },
-    { id: 'word-order', labelKey: 'subPractice.grammar.wordOrder' },
-  ],
-  reading: [
-    { id: 'story', labelKey: 'subPractice.reading.story' },
-    { id: 'interesting-fact', labelKey: 'subPractice.reading.interestingFact' },
-  ],
-  speaking: [
-    { id: 'question-practice', labelKey: 'subPractice.speaking.question' },
-    { id: 'monologue', labelKey: 'subPractice.speaking.monologue' },
-  ],
-  writing: [
-    { id: 'writing-question', labelKey: 'subPractice.writing.question' },
-    { id: 'storytelling', labelKey: 'subPractice.writing.storytelling' },
-  ],
-};
+// Props now include menu navigation logic utilities
+const SubPracticeMenu = ({
+  mainCategoryKey,      // e.g., 'vocabulary'
+  activeSubPracticeKey, // e.g., 'vocab_random_word' (key of the currently active sub-item)
+  activePath,
+  onMenuSelect,
+  isMenuItemVisible,
+  allMenuItemsConfig
+}) => {
+  const { t } = useI18n();
 
-const SubPracticeMenu = ({ mainCategory, activeSubPractice, onSubPracticeSelect }) => {
-  const { t } = useI18n(); // Initialize the t function
-
-  if (!mainCategory || !SUB_PRACTICE_OPTIONS[mainCategory]) {
-    return null;
+  if (!mainCategoryKey || !allMenuItemsConfig[mainCategoryKey] || !allMenuItemsConfig[mainCategoryKey].children) {
+    // This shouldn't happen if FreestyleInterfaceView controls visibility correctly,
+    // but as a safeguard:
+    return null; 
   }
 
-  const options = SUB_PRACTICE_OPTIONS[mainCategory];
-  const mainCategoryTitle = t(`mainCategory.${mainCategory.toLowerCase()}`, mainCategory.charAt(0).toUpperCase() + mainCategory.slice(1));
+  const subPracticeItemKeys = allMenuItemsConfig[mainCategoryKey].children || [];
 
+  // Define display properties for sub-practice items. 
+  // Ideally, this could also be part of allMenuItemsConfig or a related display config.
+  // For now, simple mapping based on common patterns.
+  const getSubPracticeItemLabel = (itemKey) => {
+    // Example: 'vocab_random_word' -> t('subPractice.vocab_random_word', 'Random Word')
+    // More robust mapping might be needed.
+    const fallbackLabel = itemKey.split('_').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    return t(`subPractice.${mainCategoryKey}.${itemKey}`, fallbackLabel); 
+  };
+  
+  const itemsToDisplay = subPracticeItemKeys
+    .filter(itemKey => isMenuItemVisible(activePath, itemKey, allMenuItemsConfig))
+    .map(itemKey => ({
+      id: itemKey,
+      label: getSubPracticeItemLabel(itemKey),
+      isActive: activeSubPracticeKey === itemKey // Or check activePath.includes(itemKey) and depth
+    }));
+
+  const mainCategoryDisplayInfo = {
+    vocabulary: { translationKey: 'vocabulary', defaultLabel: 'Vocabulary' },
+    grammar: { translationKey: 'grammar', defaultLabel: 'Grammar' },
+    reading: { translationKey: 'reading', defaultLabel: 'Reading' },
+    speaking: { translationKey: 'speaking', defaultLabel: 'Speaking' },
+    writing: { translationKey: 'writing', defaultLabel: 'Writing' },
+    listening: { translationKey: 'listening', defaultLabel: 'Listening' },
+  };
+  
+  const mainCategoryTitle = mainCategoryDisplayInfo[mainCategoryKey] 
+    ? t(mainCategoryDisplayInfo[mainCategoryKey].translationKey, mainCategoryDisplayInfo[mainCategoryKey].defaultLabel)
+    : mainCategoryKey;
+
+  if (itemsToDisplay.length === 0) {
+    // This case implies that a sub-practice item was selected and it, itself, has children,
+    // so this menu's items are correctly hidden by isMenuItemVisible.
+    // Or, the mainCategoryKey has no children defined.
+    return null; 
+  }
 
   return (
-    <div style={{ margin: '20px 0', padding: '10px', border: '1px solid #eee', borderRadius: '5px' }}>
-      <h3 style={{ marginTop: '0', textAlign: 'center' }}>{mainCategoryTitle} {t('titles.options', 'Options')}</h3>
-      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
-        {options.map((option) => (
+    <div className="sub-practice-menu-container practice-category-nav-container"> {/* Reusing some styles */}
+      <h4 className="sub-practice-menu-label practice-category-label"> {/* Reusing some styles */}
+        <TransliterableText text={`${mainCategoryTitle} - ${t('titles.options', 'Options')}`} />
+      </h4>
+      <div className="practice-category-buttons"> {/* Reusing some styles */}
+        {itemsToDisplay.map((item) => (
           <button
-            key={option.id}
-            onClick={() => onSubPracticeSelect(option.id)}
-            style={{
-              padding: '8px 12px',
-              fontSize: '0.9rem',
-              cursor: 'pointer',
-              backgroundColor: activeSubPractice === option.id ? '#28a745' : '#f8f9fa',
-              color: activeSubPractice === option.id ? 'white' : 'black',
-              border: '1px solid #ccc',
-              borderRadius: '4px',
-              minWidth: '150px', // Ensure buttons have a decent width
-              textAlign: 'center',
-            }}
-            aria-pressed={activeSubPractice === option.id}
+            key={item.id}
+            onClick={() => onMenuSelect(item.id)}
+            className={`practice-category-btn sub-practice-btn ${item.isActive ? 'active' : ''}`}
+            aria-pressed={item.isActive}
           >
-            {t(option.labelKey, option.id.replace(/-/g, ' '))} {/* Use t function for labels, with fallback */}
+            <TransliterableText text={item.label} />
           </button>
         ))}
       </div>
