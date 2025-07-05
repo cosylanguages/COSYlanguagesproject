@@ -1,109 +1,73 @@
-// src/components/Freestyle/exercises/vocabulary/RandomWordPracticeHost.js
+// @ts-check
 import React, { useState, useEffect, useCallback } from 'react';
-import { loadVocabularyData } from '../../../../utils/exerciseDataService';
-import ShowWordMode from './ShowWordMode'; 
-// Future: import MultipleChoiceWordMode from './MultipleChoiceWordMode';
+import { useI18n } from '../../../../i18n/I18nContext';
 
-const EXERCISE_MODES = ['show-details']; // Add more modes like 'multiple-choice-translation', 'type-translation'
+// Import the specific exercise components this host will manage
+import ShowWordExercise from './ShowWordExercise';
+import TypeOppositeExercise from './TypeOppositeExercise';
+import MatchOppositesExercise from './MatchOppositesExercise';
+import BuildWordExercise from './BuildWordExercise';
 
-const RandomWordPracticeHost = ({ language, days, exerciseKey }) => {
-  const [allWords, setAllWords] = useState([]);
-  const [currentWordObject, setCurrentWordObject] = useState(null);
-  const [currentMode, setCurrentMode] = useState(null);
+const managedExerciseComponents = [
+  { key: 'show_word', Component: ShowWordExercise, name: 'Show Word' },
+  { key: 'type_opposite', Component: TypeOppositeExercise, name: 'Type Opposite' },
+  { key: 'match_opposites', Component: MatchOppositesExercise, name: 'Match Opposites' },
+  { key: 'build_word', Component: BuildWordExercise, name: 'Build Word' },
+];
+
+const RandomWordPracticeHost = ({ language, days, exerciseKey: hostKey }) => {
+  const { t } = useI18n();
+  const [CurrentExercise, setCurrentExercise] = useState(null);
+  const [currentExerciseInfo, setCurrentExerciseInfo] = useState(null);
+  const [subExerciseKey, setSubExerciseKey] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [internalKey, setInternalKey] = useState(0); // For re-triggering ShowWordMode if needed
 
-  const selectNextExercise = useCallback(() => {
-    if (allWords.length === 0) {
-      setError("No words loaded to select from.");
-      setCurrentWordObject(null);
-      return;
-    }
-
-    const randomWordIndex = Math.floor(Math.random() * allWords.length);
-    const nextWord = allWords[randomWordIndex];
-    setCurrentWordObject(nextWord);
-
-    const randomModeIndex = Math.floor(Math.random() * EXERCISE_MODES.length);
-    setCurrentMode(EXERCISE_MODES[randomModeIndex]);
+  const selectAndLoadRandomExercise = useCallback(() => {
+    setIsLoading(true);
+    const randomIndex = Math.floor(Math.random() * managedExerciseComponents.length);
+    const selected = managedExerciseComponents[randomIndex];
     
-    setInternalKey(prevKey => prevKey + 1); // Ensure child component re-renders with new word/mode
-    console.log("RandomWordPracticeHost: Next word selected", nextWord, "Mode:", EXERCISE_MODES[randomModeIndex]);
-  }, [allWords]);
+    console.log(`RandomWordPracticeHost: Selecting exercise type: ${selected.name}`);
+    setCurrentExerciseInfo(selected);
+    setCurrentExercise(() => selected.Component); // Store the component constructor
+    setSubExerciseKey(prev => prev + 1);
+    setIsLoading(false);
+  }, []); // No dependencies needed here as it's meant to be called to reset
 
   useEffect(() => {
-    const fetchWords = async () => {
-      setIsLoading(true);
-      setError(null);
-      setCurrentWordObject(null); // Clear previous word
-      try {
-        const { data, error: fetchError } = await loadVocabularyData(language, days);
-        if (fetchError) {
-          throw new Error(fetchError.message || fetchError);
-        }
-        if (data && data.length > 0) {
-          setAllWords(data);
-        } else {
-          setAllWords([]);
-          setError('No word data found for the selected criteria.');
-        }
-      } catch (err) {
-        console.error("Error loading word data:", err);
-        setError(err.message || 'Failed to load words.');
-        setAllWords([]);
-      }
-      setIsLoading(false);
-    };
+    // This effect runs when the hostKey (passed from ExerciseHost) changes,
+    // or on initial mount. It signifies a new "session" for this host.
+    console.log(`RandomWordPracticeHost: hostKey changed to ${hostKey}, selecting new initial exercise.`);
+    selectAndLoadRandomExercise();
+  }, [hostKey, selectAndLoadRandomExercise]); // selectAndLoadRandomExercise is stable
 
-    if (language && days && days.length > 0) {
-      fetchWords();
-    }
-  }, [language, days, exerciseKey]); // Main data fetching effect
+  const handleSubExerciseComplete = useCallback(() => {
+    console.log(`RandomWordPracticeHost: Sub-exercise ${currentExerciseInfo?.name} completed. Selecting next one.`);
+    // After a sub-exercise completes, load another random one.
+    // Adding a small delay for smoother transition if needed, e.g. after success message.
+    setTimeout(() => {
+      selectAndLoadRandomExercise();
+    }, 500); // 0.5s delay
+  }, [selectAndLoadRandomExercise, currentExerciseInfo]);
 
-  useEffect(() => {
-    // Once words are loaded (or reloaded due to key change), select the first exercise
-    if (!isLoading && allWords.length > 0) {
-      selectNextExercise();
-    } else if (!isLoading && allWords.length === 0 && !error) {
-        // This case handles when data fetching is complete but no words were found
-        setError('No word data available for the selected criteria.');
-    }
-  }, [allWords, isLoading, selectNextExercise, error]); // Effect to select exercise after data load
-
-
-  const handleExerciseDone = () => {
-    console.log("RandomWordPracticeHost: Exercise mode reported done. Selecting next word/mode.");
-    selectNextExercise();
-  };
-
-  if (isLoading) {
-    return <p>Loading random word exercise...</p>;
-  }
-
-  if (error) {
-    return <p style={{ color: 'red' }}>Error: {error}</p>;
-  }
-
-  if (!currentWordObject || !currentMode) {
-    return <p>No word exercise available. Try adjusting selections or check data sources.</p>;
+  if (isLoading || !CurrentExercise) {
+    return <p>{t('loading.randomWordExercise', 'Loading Random Word Exercise...')}</p>;
   }
 
   return (
-    <div>
-      {currentMode === 'show-details' && currentWordObject && (
-        <ShowWordMode
-          key={internalKey} // Use key to force re-mount if word/mode changes
-          wordObject={currentWordObject}
-          language={language}
-          onNext={handleExerciseDone}
-        />
-      )}
-      {/* Placeholder for other modes */}
-      {/* {currentMode === 'multiple-choice-translation' && currentWordObject && (
-        <MultipleChoiceWordMode wordObject={currentWordObject} language={language} onDone={handleExerciseDone} />
-      )} */}
-      {/* Add more modes here */}
+    <div className="random-word-practice-host-container">
+      {/* Optional: Display the type of current random word exercise for debugging or clarity */}
+      {/* <p style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '0.9em' }}>
+        Current mode: {currentExerciseInfo?.name || 'N/A'}
+      </p> */}
+      <CurrentExercise
+        language={language}
+        days={days}
+        exerciseKey={subExerciseKey} // Use subExerciseKey to re-mount/reset the specific exercise
+        onComplete={handleSubExerciseComplete} // Pass the completion handler
+        // Note: Ensure all managed exercises accept and call onComplete when they are finished.
+        // MatchOppositesExercise already does. Others might need this prop added.
+      />
     </div>
   );
 };
