@@ -88,17 +88,43 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
   const checkAnswer = () => {
     if (!exerciseData || isRevealed) return;
     
-    const correctAnswer = exerciseData.answer;
-    const latinizedCorrect = getLatinizedText(correctAnswer, language);
-    const displayCorrect = isLatinized ? latinizedCorrect : correctAnswer;
-    let possibleAnswers = correctAnswer.split('/').map(ans => normalizeString(ans.trim()));
-    const itemId = `fillgaps_${normalizeString(exerciseData.correctSentence)}_${normalizeString(correctAnswer)}`;
+    const originalCorrectAnswerString = exerciseData.answer; // e.g., "réponse/reponse"
+    const normalizedUserInput = normalizeString(userInput);
+    // const itemId = `fillgaps_${normalizeString(exerciseData.correctSentence)}_${normalizeString(originalCorrectAnswerString)}`; // Not currently used
 
-    if (possibleAnswers.includes(normalizeString(userInput))) {
-      setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
+    let isCorrect = false;
+    let matchedOriginalAnswer = ''; // The specific original answer part that matched
+
+    const possibleOriginalAnswers = originalCorrectAnswerString.split('/');
+    for (const originalAnswerPart of possibleOriginalAnswers) {
+      const trimmedOriginalAnswerPart = originalAnswerPart.trim();
+      if (normalizeString(trimmedOriginalAnswerPart) === normalizedUserInput) {
+        isCorrect = true;
+        matchedOriginalAnswer = trimmedOriginalAnswerPart;
+        break;
+      }
+    }
+
+    if (isCorrect) {
+      // Use untrimmed userInput for exact match comparison against the matched original part
+      if (userInput.trim() === matchedOriginalAnswer) {
+        setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
+      } else {
+        // User's input was correct after normalization, but different from the canonical form
+        const feedbackMessage = t('feedback.correctAnswerIs', `Correct! The answer is: ${getLatinizedText(matchedOriginalAnswer, language)}`, { correctAnswer: getLatinizedText(matchedOriginalAnswer, language) });
+        setFeedback({ message: feedbackMessage, type: 'correct' });
+      }
     } else {
+      // Incorrect logic: display the first possible correct answer.
+      const firstOriginalAnswerForDisplay = getLatinizedText(possibleOriginalAnswers[0].trim(), language);
+      // Reconstruct the correct sentence for display using the first original answer part.
+      let fullCorrectSentenceForDisplay = exerciseData.correctSentence; // Fallback
+      if (exerciseData.questionPrompt && exerciseData.questionPrompt.includes('___')) {
+          fullCorrectSentenceForDisplay = exerciseData.questionPrompt.replace('___', possibleOriginalAnswers[0].trim());
+      }
+      
       setFeedback({ 
-        message: t('feedback.incorrectFillGaps', `Incorrect. The correct answer is: ${displayCorrect}. Full sentence: ${getLatinizedText(exerciseData.correctSentence, language)}`, { correctAnswer: displayCorrect, correctSentence: getLatinizedText(exerciseData.correctSentence, language) }), 
+        message: t('feedback.incorrectFillGaps', `Incorrect. The correct answer is: ${firstOriginalAnswerForDisplay}. Full sentence: ${getLatinizedText(fullCorrectSentenceForDisplay, language)}`, { correctAnswer: firstOriginalAnswerForDisplay, correctSentence: getLatinizedText(fullCorrectSentenceForDisplay, language) }), 
         type: 'incorrect' 
       });
     }
@@ -116,14 +142,18 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
 
   const revealTheAnswer = () => {
     if (!exerciseData) return;
-    const correctAnswer = exerciseData.answer.split('/')[0].trim();
+    const correctAnswer = exerciseData.answer.split('/')[0].trim(); // Show the first variant
     const latinizedCorrect = getLatinizedText(correctAnswer, language);
-    const displayCorrect = isLatinized ? latinizedCorrect : correctAnswer;
-    const itemId = `fillgaps_${normalizeString(exerciseData.correctSentence)}_${normalizeString(exerciseData.answer)}`;
+    
+    // Reconstruct the correct sentence for display
+    let fullCorrectSentenceForDisplay = exerciseData.correctSentence; // Fallback
+    if (exerciseData.questionPrompt && exerciseData.questionPrompt.includes('___')) {
+        fullCorrectSentenceForDisplay = exerciseData.questionPrompt.replace('___', correctAnswer);
+    }
 
     setUserInput(correctAnswer); 
     setFeedback({ 
-      message: t('feedback.revealedFillGaps', `The correct answer is: ${displayCorrect}. Full sentence: ${getLatinizedText(exerciseData.correctSentence, language)}`, { correctAnswer: displayCorrect, correctSentence: getLatinizedText(exerciseData.correctSentence, language) }),
+      message: t('feedback.revealedFillGaps', `The correct answer is: ${latinizedCorrect}. Full sentence: ${getLatinizedText(fullCorrectSentenceForDisplay, language)}`, { correctAnswer: latinizedCorrect, correctSentence: getLatinizedText(fullCorrectSentenceForDisplay, language) }),
       type: 'info' 
     });
     setIsRevealed(true);
@@ -131,7 +161,13 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
   
   const handlePronounceSentence = () => {
     if (exerciseData && exerciseData.correctSentence && language) {
-        pronounceText(exerciseData.correctSentence, language).catch(err => {
+        // Pronounce the version of the sentence with the blank filled by the first correct option for consistency
+        let sentenceToPronounce = exerciseData.correctSentence;
+        if (exerciseData.questionPrompt && exerciseData.questionPrompt.includes('___') && exerciseData.answer) {
+            const firstCorrectAnswer = exerciseData.answer.split('/')[0].trim();
+            sentenceToPronounce = exerciseData.questionPrompt.replace('___', firstCorrectAnswer);
+        }
+        pronounceText(sentenceToPronounce, language).catch(err => {
             console.error("Pronunciation error:", err);
             setFeedback({message: t('errors.pronunciationError', "Could not pronounce the sentence."), type: "error"});
         });
@@ -167,7 +203,7 @@ const FillGapsExercise = ({ language, days, exerciseKey }) => {
       <h3>{t('titles.fillTheGap', 'Fill in the Gap')}</h3>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0', fontSize: '1.3rem', flexWrap: 'wrap' }}>
         <div>{questionDisplay}</div>
-        {exerciseData.correctSentence && (
+        {exerciseData.correctSentence && ( // Keep button if there's a sentence context
             <button 
                 onClick={handlePronounceSentence} 
                 title={t('tooltips.pronounceSentence',`Pronounce sentence`)}
