@@ -1,21 +1,33 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
-import { pronounceText } from '../../../utils/speechUtils'; // Added
+import { pronounceText } from '../../../utils/speechUtils';
+import { normalizeString } from '../../../utils/stringUtils'; // Import normalizeString
 import './LabelPicturesBlock.css';
 
 const LabelPicturesBlock = ({ blockData, onAnswer }) => {
-    const { t, language } = useI18n(); // language is global UI language
-    const [answers, setAnswers] = useState({}); // Store user's text input for each hotspot
-    const [feedback, setFeedback] = useState({}); // Store feedback (correct/incorrect) for each hotspot
+    const { t, language } = useI18n(); 
+    const [answers, setAnswers] = useState({}); 
+    const [feedback, setFeedback] = useState({}); 
     const [showResults, setShowResults] = useState(false);
-    const [activeHotspot, setActiveHotspot] = useState(null); // Index of hotspot for modal input
+    const [activeHotspot, setActiveHotspot] = useState(null); 
 
-    const { mainImage, labels: hotspots, title } = blockData; // 'labels' in data is 'hotspots' here
+    const { mainImage, labels: hotspots, title } = blockData; 
 
     const blockTitle = title?.[language] || title?.COSYenglish || title?.default || t('labelThePicturesDefaultTitle') || 'Label the Pictures';
 
+    const getHotspotCorrectAnswer = (spot) => {
+        // Prioritize current UI language, then English, then first available, then empty string.
+        if (spot?.texts) {
+            if (spot.texts[language]) return spot.texts[language];
+            if (spot.texts['COSYenglish']) return spot.texts['COSYenglish'];
+            const availableLangs = Object.keys(spot.texts);
+            if (availableLangs.length > 0) return spot.texts[availableLangs[0]];
+        }
+        return '';
+    };
+
     const handleHotspotClick = (index) => {
-        if (showResults) return; // Don't allow changing answer after showing results
+        if (showResults) return; 
         setActiveHotspot(index);
     };
 
@@ -29,36 +41,39 @@ const LabelPicturesBlock = ({ blockData, onAnswer }) => {
 
     const handleModalSubmit = () => {
         if (activeHotspot === null) return;
-        // Basic check (can be expanded)
-        const correctAnswer = hotspots[activeHotspot].texts[language] || hotspots[activeHotspot].texts['COSYenglish'] || '';
-        const userAnswer = answers[activeHotspot] || '';
-        
-        // For immediate feedback if desired, or can wait for a global "Check Answers"
-        // For now, this modal submit just closes the modal. Checking is done by "Check Answers" button.
         setActiveHotspot(null); 
     };
 
     const checkAllAnswers = () => {
         let newFeedback = {};
-        let allCorrect = true;
+        let overallCorrect = true; 
         hotspots.forEach((spot, index) => {
-            const correctAnswer = spot.texts?.[language] || spot.texts?.['COSYenglish'] || '';
+            const originalCorrectAnswer = getHotspotCorrectAnswer(spot);
             const userAnswer = answers[index] || '';
-            const isCorrect = userAnswer.trim().toLowerCase() === correctAnswer.trim().toLowerCase();
-            newFeedback[index] = { isCorrect, correctAnswer };
-            if (!isCorrect) allCorrect = false;
+            
+            const normalizedUserAnswer = normalizeString(userAnswer);
+            const normalizedCorrectAnswer = normalizeString(originalCorrectAnswer);
+            
+            const isCorrect = normalizedCorrectAnswer ? normalizedUserAnswer === normalizedCorrectAnswer : false;
+
+            newFeedback[index] = { 
+                isCorrect, 
+                userAnswer: userAnswer, // Keep original user input for display
+                correctAnswer: originalCorrectAnswer // Keep original correct answer for display
+            };
+            if (!isCorrect) overallCorrect = false;
         });
         setFeedback(newFeedback);
         setShowResults(true);
-        if (onAnswer) { // If a callback for overall result is provided
+        if (onAnswer) { 
             onAnswer({
                 blockId: blockData.id,
-                score: allCorrect ? 1 : 0, // Example scoring
+                score: overallCorrect ? 1 : 0, 
                 total: 1,
                 answers: hotspots.map((spot, index) => ({
                     hotspotId: spot.id || index,
                     answer: answers[index] || '',
-                    correctAnswer: spot.texts?.[language] || spot.texts?.['COSYenglish'] || '',
+                    correctAnswer: getHotspotCorrectAnswer(spot),
                     isCorrect: newFeedback[index]?.isCorrect || false
                 }))
             });
@@ -87,7 +102,13 @@ const LabelPicturesBlock = ({ blockData, onAnswer }) => {
                                   `}
                         style={{ left: `${spot.x}%`, top: `${spot.y}%` }}
                         onClick={() => handleHotspotClick(index)}
-                        title={showResults ? (feedback[index]?.isCorrect ? t('correct') : `${t('incorrect')}. ${t('correctAnswerWas')} ${feedback[index]?.correctAnswer}`) : (answers[index] || t('clickToLabelHotspot', { number: index + 1}) || `Hotspot ${index + 1}: Click to label`)}
+                        title={showResults && feedback[index] ? 
+                                (feedback[index].isCorrect ? 
+                                    ( (normalizeString(feedback[index].userAnswer) !== normalizeString(feedback[index].correctAnswer) && feedback[index].userAnswer.trim() !== feedback[index].correctAnswer) ? 
+                                        `${t('correct')}. ${t('correctAnswerWas')} ${feedback[index].correctAnswer}` : t('correct')
+                                    )
+                                    : `${t('incorrect')}. ${t('correctAnswerWas')} ${feedback[index].correctAnswer}`) 
+                                : (answers[index] || t('clickToLabelHotspot', { number: index + 1}) || `Hotspot ${index + 1}: Click to label`)}
                     >
                         <span>{index + 1}</span>
                         {showResults && feedback[index] && (
@@ -108,10 +129,15 @@ const LabelPicturesBlock = ({ blockData, onAnswer }) => {
                         onChange={handleAnswerChange}
                         placeholder={t('enterLabelPlaceholder') || "Enter label"}
                         autoFocus
+                        onKeyPress={(event) => {
+                            if (event.key === 'Enter') {
+                                handleModalSubmit();
+                            }
+                        }}
                     />
                     <div className="modal-actions">
-                        <button onClick={handleModalSubmit} className="btn btn-primary">{t('submitBtn') || 'Submit'}</button>
-                        <button onClick={() => setActiveHotspot(null)} className="btn btn-secondary">{t('cancelBtn') || 'Cancel'}</button>
+                        <button onClick={handleModalSubmit} className="btn btn-primary">{t('submitBtn') || 'OK'}</button> {/* Changed from Submit to OK as it just closes */}
+                        {/* <button onClick={() => setActiveHotspot(null)} className="btn btn-secondary">{t('cancelBtn') || 'Cancel'}</button> */}
                     </div>
                 </div>
             )}
@@ -127,39 +153,49 @@ const LabelPicturesBlock = ({ blockData, onAnswer }) => {
                 <div className="lp-results-summary">
                     <h5>{t('resultsSummaryTitle') || 'Results Summary:'}</h5>
                     <ul>
-                        {hotspots.map((spot, index) => (
-                            <li key={spot.id || `result-${index}`} className={feedback[index]?.isCorrect ? 'correct' : 'incorrect'}>
-                                <span className="hotspot-number">{t('hotspotResult', { number: index + 1}) || `Hotspot ${index + 1}`}:</span>
-                                <span className="student-answer-lp">
-                                    {answers[index] || `(${(t('notAttempted') || 'Not Attempted')})`}
-                                    {answers[index] && (
-                                        <button 
-                                            onClick={() => pronounceText(answers[index], blockData.lang || language)}
-                                            className="btn-icon pronounce-btn-inline"
-                                            title={t('pronounceYourAnswer') || 'Pronounce your answer'}
-                                        >🔊</button>
-                                    )}
-                                </span>
-                                <span className="feedback-separator">-</span>
-                                {feedback[index]?.isCorrect 
-                                    ? <span className="correct-text"> {t('correct')} ✅</span> 
-                                    : (
-                                        <span className="incorrect-text"> 
-                                            {t('incorrect')} ❌ 
-                                            ({t('correctAnswerWas') || 'Correct'}: {feedback[index]?.correctAnswer}
-                                            {feedback[index]?.correctAnswer && (
-                                                <button 
-                                                    onClick={() => pronounceText(feedback[index]?.correctAnswer, blockData.lang || language)}
-                                                    className="btn-icon pronounce-btn-inline"
-                                                    title={t('pronounceCorrectAnswer') || 'Pronounce correct answer'}
-                                                >🔊</button>
-                                            )}
-                                            )
-                                        </span>
-                                    )
-                                }
-                            </li>
-                        ))}
+                        {hotspots.map((spot, index) => {
+                            const fb = feedback[index];
+                            if (!fb) return null;
+                            const userAnswerDisplay = fb.userAnswer || `(${(t('notAttempted') || 'Not Attempted')})`;
+                            return (
+                                <li key={spot.id || `result-${index}`} className={fb.isCorrect ? 'correct' : 'incorrect'}>
+                                    <span className="hotspot-number">{t('hotspotResult', { number: index + 1}) || `Hotspot ${index + 1}`}:</span>
+                                    <span className="student-answer-lp">
+                                        {userAnswerDisplay}
+                                        {fb.userAnswer && (
+                                            <button 
+                                                onClick={() => pronounceText(fb.userAnswer, blockData.lang || language)}
+                                                className="btn-icon pronounce-btn-inline"
+                                                title={t('pronounceYourAnswer') || 'Pronounce your answer'}
+                                            >🔊</button>
+                                        )}
+                                    </span>
+                                    <span className="feedback-separator">-</span>
+                                    {fb.isCorrect 
+                                        ? (<span className="correct-text"> 
+                                            {t('correct')} ✅
+                                            {(normalizeString(fb.userAnswer) !== normalizeString(fb.correctAnswer) && fb.userAnswer.trim() !== fb.correctAnswer) && 
+                                                ` (${t('correctVariantIs', {variant: fb.correctAnswer}) || `Correct form: ${fb.correctAnswer}`})`
+                                            }
+                                          </span>)
+                                        : (
+                                            <span className="incorrect-text"> 
+                                                {t('incorrect')} ❌ 
+                                                ({t('correctAnswerWas') || 'Correct'}: {fb.correctAnswer}
+                                                {fb.correctAnswer && (
+                                                    <button 
+                                                        onClick={() => pronounceText(fb.correctAnswer, blockData.lang || language)}
+                                                        className="btn-icon pronounce-btn-inline"
+                                                        title={t('pronounceCorrectAnswer') || 'Pronounce correct answer'}
+                                                    >🔊</button>
+                                                )}
+                                                )
+                                            </span>
+                                        )
+                                    }
+                                </li>
+                            );
+                        })}
                     </ul>
                 </div>
             )}
