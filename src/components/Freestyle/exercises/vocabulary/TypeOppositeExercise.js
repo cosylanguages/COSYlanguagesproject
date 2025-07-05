@@ -17,14 +17,11 @@ const TypeOppositeExercise = ({ language, days, exerciseKey }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isRevealed, setIsRevealed] = useState(false);
-  const [isAnsweredCorrectly, setIsAnsweredCorrectly] = useState(false); // To manage post-correct state
+  const [isAnsweredCorrectly, setIsAnsweredCorrectly] = useState(false); 
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
   const { t } = useI18n();
-
-  const displayCurrentWord = getLatinizedText(currentWord, language);
-  const displayCorrectOpposite = getLatinizedText(correctOpposite, language);
 
   const fetchNewOppositePair = useCallback(async () => {
     setIsLoading(true);
@@ -34,7 +31,7 @@ const TypeOppositeExercise = ({ language, days, exerciseKey }) => {
     setIsRevealed(false);
     setCurrentWord('');
     setCorrectOpposite('');
-    setIsAnsweredCorrectly(false); // Reset for new pair
+    setIsAnsweredCorrectly(false); 
 
     try {
       const { data: oppositesMap, error: oppositesError } = await loadOppositesData(language, days);
@@ -83,18 +80,35 @@ const TypeOppositeExercise = ({ language, days, exerciseKey }) => {
 
   const checkAnswer = () => {
     if (!correctOpposite || isRevealed || !currentWord || isAnsweredCorrectly) return;
-    const itemId = `typeopposite_${normalizeString(currentWord)}_${normalizeString(correctOpposite)}`;
-    const isCorrect = normalizeString(userInput) === normalizeString(correctOpposite);
+    
+    const normalizedUserInput = normalizeString(userInput);
+    const normalizedCorrectOpposite = normalizeString(correctOpposite);
+    // const itemId = `typeopposite_${normalizeString(currentWord)}_${normalizedCorrectOpposite}`; // Not used
+
+    const isCorrect = normalizedUserInput === normalizedCorrectOpposite;
 
     if (isCorrect) {
-      setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
-      setIsAnsweredCorrectly(true); // Mark as correctly answered
-      // Auto-progress after a short delay
+      setIsAnsweredCorrectly(true);
+      if (userInput.trim() === correctOpposite) {
+        setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
+      } else {
+        const displayCorrect = getLatinizedText(correctOpposite, language);
+        const displayWord = getLatinizedText(currentWord, language);
+        setFeedback({ 
+            message: t('feedback.correctOppositeIs', `Correct! The opposite of "${displayWord}" is: ${displayCorrect}`, { word: displayWord, opposite: displayCorrect }), 
+            type: 'correct' 
+        });
+      }
       setTimeout(() => {
         fetchNewOppositePair();
-      }, 1500); // 1.5-second delay
+      }, 1500); 
     } else {
-      setFeedback({ message: t('feedback.incorrectOpposite', `Incorrect. The opposite of "${displayCurrentWord}" is "${displayCorrectOpposite}".`, { word: displayCurrentWord, opposite: displayCorrectOpposite }), type: 'incorrect' });
+      const displayOriginalWord = getLatinizedText(currentWord, language);
+      const displayOriginalOpposite = getLatinizedText(correctOpposite, language);
+      setFeedback({ 
+          message: t('feedback.incorrectOpposite', `Incorrect. The opposite of "${displayOriginalWord}" is "${displayOriginalOpposite}".`, { word: displayOriginalWord, opposite: displayOriginalOpposite }), 
+          type: 'incorrect' 
+      });
     }
   };
 
@@ -106,17 +120,22 @@ const TypeOppositeExercise = ({ language, days, exerciseKey }) => {
 
   const revealAnswer = () => {
     if (!correctOpposite || !currentWord || isAnsweredCorrectly) return;
-    const itemId = `typeopposite_${normalizeString(currentWord)}_${normalizeString(correctOpposite)}`;
+    // const itemId = `typeopposite_${normalizeString(currentWord)}_${normalizeString(correctOpposite)}`; // Not used
     setUserInput(correctOpposite);
-    setFeedback({ message: t('feedback.revealedOpposite', `The opposite of "${displayCurrentWord}" is "${displayCorrectOpposite}".`, { word: displayCurrentWord, opposite: displayCorrectOpposite }), type: 'info' });
+    const displayOriginalWord = getLatinizedText(currentWord, language);
+    const displayOriginalOpposite = getLatinizedText(correctOpposite, language);
+    setFeedback({ 
+        message: t('feedback.revealedOpposite', `The opposite of "${displayOriginalWord}" is "${displayOriginalOpposite}".`, { word: displayOriginalWord, opposite: displayOriginalOpposite }), 
+        type: 'info' 
+    });
     setIsRevealed(true);
-     // Auto-progress after showing revealed answer
+    setIsAnsweredCorrectly(true); // Consider revealed as answered for flow
     setTimeout(() => {
         fetchNewOppositePair();
-    }, 2000); // Slightly longer delay for revealed answers
+    }, 2000);
   };
 
-  const handleNext = () => { // Manual next button action
+  const handleNext = () => { 
     fetchNewOppositePair();
   };
 
@@ -128,6 +147,9 @@ const TypeOppositeExercise = ({ language, days, exerciseKey }) => {
       });
     }
   };
+
+  const displayCurrentWordForUI = getLatinizedText(currentWord, language);
+  // const displayCorrectOppositeForUI = getLatinizedText(correctOpposite, language); // Not used directly in render but good for consistency
 
   if (isLoading) {
     return <p>{t('loading.oppositesExercise', 'Loading opposites exercise...')}</p>;
@@ -145,8 +167,8 @@ const TypeOppositeExercise = ({ language, days, exerciseKey }) => {
     <div style={{ textAlign: 'center', padding: '20px', border: '1px solid #eee', borderRadius: '8px' }}>
       <h3>{t('titles.whatIsTheOpposite', 'What is the opposite of:')}</h3>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>
-        <div style={{ fontSize: '2rem', padding: '10px', ...(isLatinized && currentWord !== displayCurrentWord && {fontStyle: 'italic'}) }}>
-          {displayCurrentWord}
+        <div style={{ fontSize: '2rem', padding: '10px', ...(isLatinized && currentWord !== displayCurrentWordForUI && {fontStyle: 'italic'}) }}>
+          {displayCurrentWordForUI}
         </div>
         <button onClick={() => handlePronounceWord(currentWord)} disabled={!currentWord} title={t('tooltips.pronounceWord', `Pronounce word`)} style={{background:'none', border:'none', fontSize:'1.5rem', cursor:'pointer', marginLeft:'5px'}}>🔊</button>
       </div>
@@ -156,7 +178,7 @@ const TypeOppositeExercise = ({ language, days, exerciseKey }) => {
         value={userInput}
         onChange={handleInputChange}
         placeholder={t('placeholders.typeTheOpposite', "Type the opposite...")}
-        disabled={isRevealed || isAnsweredCorrectly} // Disable input after correct answer or reveal
+        disabled={isRevealed || isAnsweredCorrectly} 
         style={{ padding: '10px', fontSize: '1rem', width: '250px', marginBottom: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
         onKeyPress={(event) => {
             if (event.key === 'Enter' && !isRevealed && !isAnsweredCorrectly) {
@@ -171,7 +193,7 @@ const TypeOppositeExercise = ({ language, days, exerciseKey }) => {
         onCheckAnswer={!isRevealed && !isAnsweredCorrectly && currentWord ? checkAnswer : undefined}
         onShowHint={!isRevealed && !isAnsweredCorrectly && currentWord ? showHint : undefined}
         onRevealAnswer={!isRevealed && !isAnsweredCorrectly && currentWord ? revealAnswer : undefined}
-        onNextExercise={handleNext} // Manual next still available
+        onNextExercise={handleNext} 
         config={{ 
             showCheck: !isRevealed && !isAnsweredCorrectly && !!currentWord, 
             showHint: !isRevealed && !isAnsweredCorrectly && !!currentWord, 
