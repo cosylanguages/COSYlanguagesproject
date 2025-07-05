@@ -1,0 +1,75 @@
+.type-opposite-exercise.mcq-variant h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping if title is long */
+  gap: 8px; /* Space between "What is..." and the word, and word and button */
+  margin-bottom: 25px;
+}
+
+.type-opposite-exercise.mcq-variant .pronounce-btn-inline {
+  background: none;
+  border: none;
+  font-size: 1.5rem; /* Adjust size as needed */
+  cursor: pointer;
+  padding: 0;
+  margin-left: 5px; /* Space from the word */
+  vertical-align: middle;
+}
+
+.mcq-options-container {
+  display: flex;
+  flex-direction: column; /* Stack options vertically */
+  align-items: center; /* Center buttons horizontally */
+  gap: 12px; /* Space between option buttons */
+  margin: 20px auto;
+  width: 100%;
+  max-width: 400px; /* Max width for the options block */
+}
+
+.mcq-option-btn {
+  padding: 12px 20px;
+  width: 100%; /* Make buttons take full width of their container */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 1rem;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.1s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.mcq-option-btn:hover:not(:disabled) {
+  border-color: #007bff;
+  background-color: #f0f8ff; /* Light blue for hover */
+  transform: translateY(-1px);
+}
+
+.mcq-option-btn.unselected {
+  /* Default state, no specific style needed if base .mcq-option-btn is the default */
+}
+
+.mcq-option-btn.correct {
+  background-color: #d4edda; /* Light green */
+  color: #155724; /* Dark green text */
+  border-color: #c3e6cb;
+  font-weight: bold;
+}
+
+.mcq-option-btn.incorrect {
+  background-color: #f8d7da; /* Light red */
+  color: #721c24; /* Dark red text */
+  border-color: #f5c6cb;
+  /* font-weight: bold; */ /* Optional: don't make incorrect bold to further differentiate */
+}
+
+.mcq-option-btn:disabled { /* When isAnswered is true */
+  cursor: not-allowed;
+  opacity: 0.8; /* Keep visible but indicate non-interactivity */
+}
+
+/* Ensure ExerciseControls are spaced appropriately */
+.type-opposite-exercise .exercise-controls {
+  margin-top: 25px;
+}
