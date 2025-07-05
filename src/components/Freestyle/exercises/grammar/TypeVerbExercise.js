@@ -89,31 +89,50 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
   };
 
   const checkAnswer = () => {
-    if (!exerciseData) return; // Should be handled by ExerciseControls
+    if (!exerciseData || isRevealed || isAnsweredCorrectly) return;
     
-    const correctAnswer = exerciseData.answer;
-    const latinizedCorrect = getLatinizedText(correctAnswer, language);
-    const displayCorrect = isLatinized ? latinizedCorrect : correctAnswer;
-    let possibleAnswers = correctAnswer.split('/').map(ans => normalizeString(ans.trim()));
-    // const itemId = `verb_${normalizeString(exerciseData.verbInfinitive || exerciseData.correctSentence)}_${normalizeString(correctAnswer)}`; // Not used
-    const isCorrectNow = possibleAnswers.includes(normalizeString(userInput));
+    const originalCorrectAnswerString = exerciseData.answer; // e.g., "réponse/reponse"
+    const normalizedUserInput = normalizeString(userInput);
 
-    if (isCorrectNow) {
-      setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
+    let isCorrect = false;
+    let matchedOriginalAnswer = ''; // The specific original answer part that matched
+
+    const possibleOriginalAnswers = originalCorrectAnswerString.split('/');
+    for (const originalAnswerPart of possibleOriginalAnswers) {
+      const trimmedOriginalAnswerPart = originalAnswerPart.trim();
+      if (normalizeString(trimmedOriginalAnswerPart) === normalizedUserInput) {
+        isCorrect = true;
+        matchedOriginalAnswer = trimmedOriginalAnswerPart;
+        break;
+      }
+    }
+
+    if (isCorrect) {
       setIsAnsweredCorrectly(true);
+      if (userInput.trim() === matchedOriginalAnswer) {
+        setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
+      } else {
+        const feedbackMessage = t('feedback.correctAnswerIs', `Correct! The answer is: ${getLatinizedText(matchedOriginalAnswer, language)}`, { correctAnswer: getLatinizedText(matchedOriginalAnswer, language) });
+        setFeedback({ message: feedbackMessage, type: 'correct' });
+      }
       setTimeout(() => {
         setupNewExercise();
       }, 1500);
     } else {
+      const firstOriginalAnswerForDisplay = getLatinizedText(possibleOriginalAnswers[0].trim(), language);
+      let fullCorrectSentenceForDisplay = exerciseData.correctSentence; // Fallback
+      if (exerciseData.questionPrompt && exerciseData.questionPrompt.includes('___')) {
+          fullCorrectSentenceForDisplay = exerciseData.questionPrompt.replace('___', possibleOriginalAnswers[0].trim());
+      }
       setFeedback({ 
-        message: t('feedback.incorrectVerb', `Incorrect. The correct answer is: ${displayCorrect}. Full sentence: ${getLatinizedText(exerciseData.correctSentence, language)}`, { correctAnswer: displayCorrect, correctSentence: getLatinizedText(exerciseData.correctSentence, language) }), 
+        message: t('feedback.incorrectVerb', `Incorrect. The correct answer is: ${firstOriginalAnswerForDisplay}. Full sentence: ${getLatinizedText(fullCorrectSentenceForDisplay, language)}`, { correctAnswer: firstOriginalAnswerForDisplay, correctSentence: getLatinizedText(fullCorrectSentenceForDisplay, language) }), 
         type: 'incorrect' 
       });
     }
   };
 
   const showHint = () => {
-    if (!exerciseData) return; // Should be handled by ExerciseControls
+    if (!exerciseData || isRevealed || isAnsweredCorrectly) return;
     const answerForHint = exerciseData.answer.split('/')[0].trim();
     let hintLetter = '';
     if (answerForHint && answerForHint.length > 0) {
@@ -123,31 +142,36 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
   };
 
   const revealTheAnswer = () => { 
-    if (!exerciseData) return; // Should be handled by ExerciseControls
-    const correctAnswer = exerciseData.answer.split('/')[0].trim();
+    if (!exerciseData || isAnsweredCorrectly) return;
+    const correctAnswer = exerciseData.answer.split('/')[0].trim(); // Show the first variant
     const latinizedCorrect = getLatinizedText(correctAnswer, language);
-    const displayCorrect = isLatinized ? latinizedCorrect : correctAnswer;
-    // const itemId = `verb_${normalizeString(exerciseData.verbInfinitive || exerciseData.correctSentence)}_${normalizeString(exerciseData.answer)}`; // Not used
+    
+    let fullCorrectSentenceForDisplay = exerciseData.correctSentence; // Fallback
+    if (exerciseData.questionPrompt && exerciseData.questionPrompt.includes('___')) {
+        fullCorrectSentenceForDisplay = exerciseData.questionPrompt.replace('___', correctAnswer);
+    }
 
     setUserInput(correctAnswer); 
     setFeedback({ 
-      message: t('feedback.revealedVerb', `The correct answer is: ${displayCorrect}. Full sentence: ${getLatinizedText(exerciseData.correctSentence, language)}`, { correctAnswer: displayCorrect, correctSentence: getLatinizedText(exerciseData.correctSentence, language) }),
+      message: t('feedback.revealedVerb', `The correct answer is: ${latinizedCorrect}. Full sentence: ${getLatinizedText(fullCorrectSentenceForDisplay, language)}`, { correctAnswer: latinizedCorrect, correctSentence: getLatinizedText(fullCorrectSentenceForDisplay, language) }),
       type: 'info' 
     });
     setIsRevealed(true);
     setIsAnsweredCorrectly(true); 
     
-    // Only auto-progress if not already solved before reveal - this logic might be complex with the current isAnsweredCorrectly state
-    // For simplicity, if revealed, it just shows the answer and user can click Next/Randomize.
-    // Or, keep the timeout to move to next:
     setTimeout(() => {
         setupNewExercise();
-    }, 2500); // Longer timeout for revealed answer
+    }, 2500);
   };
   
   const handlePronounceSentence = () => {
     if (exerciseData && exerciseData.correctSentence && language) {
-        pronounceText(exerciseData.correctSentence, language).catch(err => {
+        let sentenceToPronounce = exerciseData.correctSentence;
+        if (exerciseData.questionPrompt && exerciseData.questionPrompt.includes('___') && exerciseData.answer) {
+            const firstCorrectAnswer = exerciseData.answer.split('/')[0].trim();
+            sentenceToPronounce = exerciseData.questionPrompt.replace('___', firstCorrectAnswer);
+        }
+        pronounceText(sentenceToPronounce, language).catch(err => {
             console.error("Pronunciation error:", err);
             setFeedback({message: t('errors.pronunciationError', "Could not pronounce the sentence."), type: "error"});
         });
@@ -192,8 +216,8 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
             <button 
                 onClick={handlePronounceSentence} 
                 title={t('tooltips.pronounceSentence',`Pronounce sentence`)}
-                className="action-button" // Using common style
-                style={{marginLeft:'10px'}} // Keep specific margin if needed
+                className="action-button" 
+                style={{marginLeft:'10px'}}
             >
             🔊
           </button>
@@ -203,17 +227,17 @@ const TypeVerbExercise = ({ language, days, exerciseKey }) => {
       <FeedbackDisplay message={feedback.message} type={feedback.type} language={language} />
       
       <ExerciseControls
-        onCheckAnswer={checkAnswer}
-        onShowHint={showHint}
-        onRevealAnswer={revealTheAnswer}
+        onCheckAnswer={!isRevealed && !isAnsweredCorrectly && exerciseData ? checkAnswer : undefined}
+        onShowHint={!isRevealed && !isAnsweredCorrectly && exerciseData ? showHint : undefined}
+        onRevealAnswer={!isRevealed && !isAnsweredCorrectly && exerciseData ? revealTheAnswer : undefined}
         onRandomize={setupNewExercise}
         onNextExercise={setupNewExercise}
         isAnswerCorrect={isAnsweredCorrectly}
         isRevealed={isRevealed}
         config={{ 
-            showCheck: !!exerciseData, 
-            showHint: !!exerciseData, 
-            showReveal: !!exerciseData,
+            showCheck: !!exerciseData && !isAnsweredCorrectly && !isRevealed, 
+            showHint: !!exerciseData && !isAnsweredCorrectly && !isRevealed, 
+            showReveal: !!exerciseData && !isAnsweredCorrectly && !isRevealed,
             showRandomize: true,
             showNext: true,
         }}
