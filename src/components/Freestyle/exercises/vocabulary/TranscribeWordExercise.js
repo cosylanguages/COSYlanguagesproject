@@ -82,19 +82,30 @@ const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
   const checkAnswer = () => {
     if (!correctWord || isRevealed || isAnsweredCorrectly) return;
     
-    const latinizedCorrectDisplay = getLatinizedText(correctWord, language);
-    const displayAnswer = isLatinized ? latinizedCorrectDisplay : correctWord;
-    const itemId = `transcribe_${normalizeStringUtil(correctWord)}`;
-    const isCorrect = normalizeStringUtil(userInput) === normalizeStringUtil(correctWord);
+    const normalizedUserInput = normalizeStringUtil(userInput);
+    const normalizedCorrectWord = normalizeStringUtil(correctWord);
+    // const itemId = `transcribe_${normalizedCorrectWord}`; // Not currently used
+
+    const isCorrect = normalizedUserInput === normalizedCorrectWord;
 
     if (isCorrect) {
-      setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
       setIsAnsweredCorrectly(true);
+      // Use untrimmed userInput for exact match comparison
+      if (userInput.trim() === correctWord) {
+        setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
+      } else {
+        const displayCorrect = getLatinizedText(correctWord, language);
+        setFeedback({ 
+          message: t('feedback.correctAnswerIs', `Correct! The answer is: ${displayCorrect}`, { correctAnswer: displayCorrect }), 
+          type: 'correct' 
+        });
+      }
       setTimeout(() => {
         fetchAndSetNewWord();
       }, 1500); // 1.5-second delay
     } else {
-      setFeedback({ message: t('feedback.incorrectAnswerIs', `Incorrect. The correct answer is: ${displayAnswer}`, { correctAnswer: displayAnswer }), type: 'incorrect' });
+      const displayCorrect = getLatinizedText(correctWord, language);
+      setFeedback({ message: t('feedback.incorrectAnswerIs', `Incorrect. The correct answer is: ${displayCorrect}`, { correctAnswer: displayCorrect }), type: 'incorrect' });
     }
   };
 
@@ -105,19 +116,19 @@ const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
   };
 
   const revealTheAnswer = () => {
-    if (!correctWord || isAnsweredCorrectly) return; // Allow reveal even if already revealed, but prevent re-progression if already correct
+    if (!correctWord || isAnsweredCorrectly) return; 
     const latinizedCorrectDisplay = getLatinizedText(correctWord, language);
     const displayAnswer = isLatinized ? latinizedCorrectDisplay : correctWord;
-    const itemId = `transcribe_${normalizeStringUtil(correctWord)}`;
+    // const itemId = `transcribe_${normalizeStringUtil(correctWord)}`; // Not used
     
     setUserInput(correctWord); 
     setFeedback({ message: t('feedback.correctAnswerIs', `The correct answer is: ${displayAnswer}`, { correctAnswer: displayAnswer }), type: 'info' });
     setIsRevealed(true);
 
-    if (!isAnsweredCorrectly) { // Only auto-progress if not already answered correctly
+    if (!isAnsweredCorrectly) { 
         setTimeout(() => {
             fetchAndSetNewWord();
-        }, 2000); // Slightly longer delay for revealed answers
+        }, 2000); 
     }
   };
 
