@@ -6,23 +6,21 @@ import { pronounceText, unlockAudioPlayback } from '../../../../utils/speechUtil
 import ExerciseControls from '../../ExerciseControls'; 
 import FeedbackDisplay from '../../FeedbackDisplay';
 import { useI18n } from '../../../../i18n/I18nContext';
-import TransliterableText from '../../../Common/TransliterableText'; // Import TransliterableText
+import TransliterableText from '../../../Common/TransliterableText';
 
 
-const ShowWordExercise = ({ language, days, exerciseKey }) => {
+const ShowWordExercise = ({ language, days, exerciseKey, onComplete }) => { // Added onComplete prop
   const [currentWord, setCurrentWord] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null); // This will store translated error messages
-  const { isLatinized } = useLatinizationContext(); // For wordStyle
-  const { t, language: i18nLanguage } = useI18n(); // Get UI language
+  const [error, setError] = useState(null);
+  const { isLatinized } = useLatinizationContext();
+  const { t, language: i18nLanguage } = useI18n();
 
-  // latinizedWord is for the dynamic content (currentWord) in the target learning language
   const latinizedWord = useLatinization(currentWord, language);
 
   useEffect(() => {
     unlockAudioPlayback(); 
   }, []);
-
 
   const fetchAndSetNewWord = useCallback(async () => {
     setIsLoading(true);
@@ -56,12 +54,12 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
         setError(t('errors.selectLangDay', "Please select a language and day(s)."));
         setCurrentWord('');
     }
-  }, [fetchAndSetNewWord, exerciseKey, language, days, t]); // t added as it's used in setError
+  }, [fetchAndSetNewWord, exerciseKey, language, days, t]);
 
   const handlePronounce = async () => {
     if (currentWord && language) {
       try {
-        await pronounceText(currentWord, language); // Pronounce the original word in its language
+        await pronounceText(currentWord, language);
       } catch (speechError) {
         console.error("Error pronouncing word:", speechError);
         setError(t('errors.pronunciationError', "Could not pronounce the word. Please ensure your browser supports speech synthesis and audio is enabled."));
@@ -69,22 +67,58 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
     }
   };
   
-  // Style for the dynamic word, based on whether it's latinized (target learning language)
+  const handleNext = () => {
+    if (onComplete) {
+      onComplete();
+    } else {
+      // Fallback if onComplete is not provided (e.g. when used standalone, though not intended for hosts)
+      fetchAndSetNewWord(); 
+    }
+  };
+
   const wordStyle = (isLatinized && currentWord !== latinizedWord) ? { fontFamily: 'Arial, sans-serif', fontStyle: 'italic' } : {};
 
   if (isLoading) {
-    // UI text, should use i18nLanguage for potential latinization
     return <p><TransliterableText text={t('loading.wordExercise', 'Loading word...')} langOverride={i18nLanguage} /></p>;
   }
 
   if (error) {
-    // Error messages are from t(), so they are in i18nLanguage. Pass this to FeedbackDisplay.
-    return <FeedbackDisplay message={error} type="error" language={i18nLanguage} />;
+    return (
+        <>
+            <FeedbackDisplay message={error} type="error" language={i18nLanguage} />
+            {/* Still provide controls to try fetching a new word or allow host to move on */}
+            <ExerciseControls 
+              onRandomize={handleNext} // Or fetchAndSetNewWord if preferred for standalone randomize
+              onNextExercise={handleNext}
+              config={{
+                showNext: true,
+                showCheck: false,
+                showHint: false,
+                showReveal: false,
+                showRandomize: true, 
+              }}
+            />
+        </>
+    );
   }
 
   if (!currentWord && !isLoading) { 
-    // UI text, should use i18nLanguage
-    return <FeedbackDisplay message={t('exercises.noWordToDisplay', "No word to display. Try different selections or check data.")} type="info" language={i18nLanguage} />;
+    return (
+        <>
+            <FeedbackDisplay message={t('exercises.noWordToDisplay', "No word to display. Try different selections or check data.")} type="info" language={i18nLanguage} />
+             <ExerciseControls 
+              onRandomize={handleNext}
+              onNextExercise={handleNext}
+              config={{
+                showNext: true,
+                showCheck: false,
+                showHint: false,
+                showReveal: false,
+                showRandomize: true, 
+              }}
+            />
+        </>
+    );
   }
   
   return (
@@ -94,17 +128,17 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
         <>
           <div
             style={{ fontSize: '2.5rem', margin: '20px 0', padding: '10px', ...wordStyle }}
-            aria-label={`Word to practice: ${currentWord}`} // Screen readers get the original word
+            aria-label={`Word to practice: ${currentWord}`}
           >
-            {latinizedWord || currentWord} {/* Display pre-latinized dynamic content */}
+            {latinizedWord || currentWord}
           </div>
           <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '15px' }}>
             <button onClick={handlePronounce} className="action-button" disabled={!currentWord}>
               🔊 <TransliterableText text={t('buttons.pronounce', 'Pronounce')} langOverride={i18nLanguage} />
             </button>
             <ExerciseControls 
-              onRandomize={fetchAndSetNewWord}
-              onNextExercise={fetchAndSetNewWord}
+              onRandomize={handleNext} // Changed from fetchAndSetNewWord to handleNext
+              onNextExercise={handleNext} // Changed from fetchAndSetNewWord to handleNext
               config={{
                 showNext: true,
                 showCheck: false,
@@ -112,7 +146,6 @@ const ShowWordExercise = ({ language, days, exerciseKey }) => {
                 showReveal: false,
                 showRandomize: true, 
               }}
-              // ExerciseControls itself needs to be made TransliterableText-aware for its button texts
             />
           </div>
         </>
