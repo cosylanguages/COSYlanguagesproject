@@ -34,19 +34,20 @@ async function fetchJsonData(filePath) {
   }
 }
 
+// Corrected langFileMap to align with keys from translationsData.js / I18nContext
 const langFileMap = {
   'COSYenglish': 'english',
-  'COSYfrançais': 'french', // This maps to 'french'
+  'COSYfrench': 'french',       // Was 'COSYfrançais'
   'COSYespañol': 'spanish',
-  'COSYitaliano': 'italian',
+  'COSYitalian': 'italian',     // Was 'COSYitaliano'
   'COSYdeutsch': 'german',
-  'COSYportuguês': 'portuguese',
-  'ΚΟΖΥελληνικά': 'greek',
-  'ТАКОЙрусский': 'russian',
-  'ԾՈՍՅհայկական': 'armenian',
+  'COSYportugese': 'portuguese', // Was 'COSYportuguês'
+  'COSYgreek': 'greek',         // Was 'ΚΟΖΥελληνικά'
+  'COSYrussian': 'russian',     // Was 'ТАКОЙрусский'
+  'COSYarmenian': 'armenian',   // Was 'ԾՈՍՅհայկական'
   'COSYbrezhoneg': 'breton',
-  'COSYtatarça': 'tatar',
-  'COSYbashkort': 'bashkir'
+  'COSYtatar': 'tatar',         // Was 'COSYtatarça'
+  'COSYbachkir': 'bashkir'      // Was 'COSYbashkort' 
 };
 
 function getLanguageFileKey(languageIdentifier) {
@@ -133,7 +134,9 @@ export async function loadGenderGrammarData(languageIdentifier, days) {
 export async function loadPossessivesData(languageIdentifier, days) {
   const langKey = getLanguageFileKey(languageIdentifier);
   // Ensure langKey for filename is 'francais' if languageIdentifier is 'COSYfrançais' (which maps to 'french')
-  const filenameLangKey = langKey === 'french' ? 'francais' : langKey;
+  // This special handling for French might need re-evaluation if 'COSYfrench' is now the standard identifier.
+  // For now, assuming 'french' from getLanguageFileKey is the desired file system name.
+  const filenameLangKey = langKey === 'french' ? 'francais' : langKey; // This line might need to be just `langKey` if french.json exists
   const filePath = `/data/grammar/possessives/${filenameLangKey}.json`;
   const { data, error, errorType } = await fetchJsonData(filePath);
   // Possessives data is an object where keys are day numbers and values are arrays of exercise items.
