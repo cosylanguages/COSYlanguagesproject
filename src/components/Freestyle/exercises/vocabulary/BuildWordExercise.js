@@ -7,10 +7,10 @@ import useLatinization from '../../../../hooks/useLatinization';
 import { pronounceText } from '../../../../utils/speechUtils';
 import { shuffleArray } from '../../../../utils/arrayUtils';
 import { normalizeString } from '../../../../utils/stringUtils';
-import { useI18n } from '../../../../i18n/I18nContext'; // Assuming i18n for texts
+import { useI18n } from '../../../../i18n/I18nContext';
+import './BuildWordExercise.css'; // Import the CSS file
 
-
-const BuildWordExercise = ({ language, days, exerciseKey }) => {
+const BuildWordExercise = ({ language, days, exerciseKey, onComplete }) => {
   const [correctWord, setCorrectWord] = useState('');
   const [shuffledLetters, setShuffledLetters] = useState([]); 
   const [wordSlots, setWordSlots] = useState([]); 
@@ -19,11 +19,11 @@ const BuildWordExercise = ({ language, days, exerciseKey }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isRevealed, setIsRevealed] = useState(false);
-  const [isCorrectState, setIsCorrectState] = useState(false); // Renamed to avoid conflict with isCorrect variable in checkAnswer
+  const [isCorrectState, setIsCorrectState] = useState(false);
 
   const { isLatinized } = useLatinizationContext();
-  const getLatinizedText = useLatinization; // Use the hook directly
-  const { t } = useI18n(); // For internationalized strings
+  const getLatinizedText = useLatinization;
+  const { t } = useI18n();
 
   const latinizedCorrectWord = getLatinizedText(correctWord, language);
 
@@ -32,7 +32,7 @@ const BuildWordExercise = ({ language, days, exerciseKey }) => {
     setError(null);
     setFeedback({ message: '', type: '' });
     setIsRevealed(false);
-    setIsCorrectState(false); // Use the new state variable
+    setIsCorrectState(false);
     setCorrectWord('');
     setShuffledLetters([]);
     setWordSlots([]);
@@ -48,7 +48,6 @@ const BuildWordExercise = ({ language, days, exerciseKey }) => {
         if (singleWords.length > 0) {
             wordForExercise = singleWords[Math.floor(Math.random() * singleWords.length)];
         } else {
-            // Fallback if no suitable single words are found, though less ideal for "Build Word"
             wordForExercise = words[Math.floor(Math.random() * words.length)].split(' ')[0]; 
             if(wordForExercise.length <= 2 || wordForExercise.length >=15) { 
                  setError(t('exercises.noSuitableWordBuild', 'Could not find a suitable word (3-14 letters, no spaces) for "Build Word" exercise.'));
@@ -121,15 +120,14 @@ const BuildWordExercise = ({ language, days, exerciseKey }) => {
   const checkAnswer = () => {
     if (isRevealed || isCorrectState || !correctWord) return;
     const constructedWord = wordSlots.map(slot => slot.char).join('');
-    const itemId = `buildword_${normalizeString(correctWord)}`;
     const isCorrectNow = normalizeString(constructedWord) === normalizeString(correctWord);
 
     if (isCorrectNow) {
       setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
       setIsCorrectState(true);
-      setTimeout(() => {
-        setupNewWord();
-      }, 1500); // Auto-progress
+      if (onComplete) {
+        setTimeout(() => onComplete(), 1500);
+      }
     } else {
       setFeedback({ message: t('feedback.incorrectKeepTrying', `Incorrect. Keep trying or use a hint.`), type: 'incorrect' });
     }
@@ -152,16 +150,13 @@ const BuildWordExercise = ({ language, days, exerciseKey }) => {
 
     if (hintSlotIndex !== -1) {
       const correctCharForHint = correctWord[hintSlotIndex];
-      // If the slot is filled but incorrect, clear it first
       if (wordSlots[hintSlotIndex] && wordSlots[hintSlotIndex].char && normalizeString(wordSlots[hintSlotIndex].char) !== normalizeString(correctCharForHint)) {
-        handleSlotClick(hintSlotIndex); // This will update slots and letters, then we re-evaluate
-         // We need to re-find the tile after state update, so this hint action becomes more complex
-         // For simplicity now, we'll just place it if the slot is empty or correctly filled by this hint
+        handleSlotClick(hintSlotIndex); 
       }
       
       const tileToPlace = shuffledLetters.find(t => !t.inSlot && normalizeString(t.char) === normalizeString(correctCharForHint));
       if (tileToPlace) {
-        const newSlots = [...wordSlots]; // Use fresh slots state in case handleSlotClick was called
+        const newSlots = [...wordSlots]; 
         newSlots[hintSlotIndex] = { char: tileToPlace.char, originalTileId: tileToPlace.id };
         setWordSlots(newSlots);
         setShuffledLetters(prevLetters => prevLetters.map(t => t.id === tileToPlace.id ? {...t, inSlot:true, slotIndex: hintSlotIndex} : t));
@@ -174,23 +169,20 @@ const BuildWordExercise = ({ language, days, exerciseKey }) => {
     }
   };
   
-  const revealTheAnswer = () => { // Renamed from revealAnswer
+  const revealTheAnswer = () => { 
     if (!correctWord) return;
-    const itemId = `buildword_${normalizeString(correctWord)}`;
     setWordSlots(correctWord.split('').map((char, index) => ({ char, originalTileId: -1-index }))); 
     setShuffledLetters(shuffledLetters.map(tile => ({...tile, inSlot: true, slotIndex: correctWord.indexOf(tile.char) }))); 
     setFeedback({ message: t('feedback.answerIs', `The word is: ${latinizedCorrectWord || correctWord}`, { answer: latinizedCorrectWord || correctWord }), type: 'info' });
     setIsRevealed(true);
     setIsCorrectState(true); 
-    if(!isCorrectState) { // Only auto-progress if not already answered correctly before reveal
-        setTimeout(() => {
-            setupNewWord();
-        }, 2000); // Auto-progress
+    if (onComplete) {
+        setTimeout(() => onComplete(), 2000);
     }
   };
 
   const handleReset = () => {
-     if (!correctWord || isRevealed || isCorrectState) return; // Prevent reset if already solved/revealed
+     if (!correctWord || isRevealed || isCorrectState) return;
      setWordSlots(Array(correctWord.length).fill({ char: null, originalTileId: null }));
      setShuffledLetters(
           shuffleArray( 
@@ -198,47 +190,69 @@ const BuildWordExercise = ({ language, days, exerciseKey }) => {
           )
      );
      setFeedback({ message: '', type: '' });
-     // setIsRevealed(false); // Should not reset revealed status on tile reset
-     // setIsCorrectState(false); // Should not reset correct status on tile reset
+  };
+
+  const handleNextRequestByControl = () => {
+    if (onComplete) {
+      onComplete();
+    } else {
+      setupNewWord();
+    }
   };
 
   if (isLoading) return <p>{t('loading.buildWordExercise', 'Loading word building exercise...')}</p>;
-  if (error) return <FeedbackDisplay message={error} type="error" />;
-  if (!correctWord) return <p>{t('exercises.noWordForBuild', 'No word available for this exercise.')}</p>;
-
-  const tileBaseStyle = { padding: '10px 15px', margin: '5px', border: '1px solid #ccc', borderRadius: '5px', cursor: 'pointer', minWidth: '40px', textAlign: 'center', userSelect: 'none', backgroundColor: '#f8f9fa' };
-  const slotBaseStyle = { ...tileBaseStyle, backgroundColor: '#e9ecef', cursor: 'default', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '48px' };
+  if (error) return (
+    <div className="build-word-exercise-container">
+      <FeedbackDisplay message={error} type="error" />
+      <ExerciseControls onNextExercise={handleNextRequestByControl} config={{showNext: true}} />
+    </div>
+  );
+  if (!correctWord && !isLoading) return (
+    <div className="build-word-exercise-container">
+      <FeedbackDisplay message={t('exercises.noWordForBuild', 'No word available for this exercise.')} type="info" />
+      <ExerciseControls onNextExercise={handleNextRequestByControl} config={{showNext: true}} />
+    </div>
+  );
 
   return (
-    <div style={{ textAlign: 'center', padding: '20px', border: '1px solid #eee', borderRadius: '8px' }}>
+    <div className="build-word-exercise-container">
       <h3>{t('titles.buildTheWord', 'Build the Word')}</h3>
-      <button onClick={() => pronounceText(correctWord, language)} disabled={!correctWord} title={t('tooltips.pronounceWord', "Pronounce the word")} style={{background:'none', border:'none', fontSize:'1.5rem', cursor:'pointer', verticalAlign:'middle', marginBottom:'10px'}}>🔊</button>
-      <div id="word-slots" style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px', minHeight: '50px', flexWrap: 'wrap' }}>
+      <button onClick={() => pronounceText(correctWord, language)} disabled={!correctWord} title={t('tooltips.pronounceWord', "Pronounce the word")} className="pronounce-button-bwe">🔊</button>
+      
+      <div className="word-slots-area">
         {wordSlots.map((slot, index) => (
-          <div key={`slot-${index}`} style={slotBaseStyle} onClick={() => handleSlotClick(index)}>
-            {slot.char ? <span style={{...(isLatinized && slot.char !== getLatinizedText(slot.char, language) && {fontStyle:'italic'})}}>{getLatinizedText(slot.char, language)}</span> : '?'}
+          <div 
+            key={`slot-${index}`} 
+            className={`word-slot ${slot.char ? 'filled-slot' : 'empty-slot'}`}
+            onClick={() => handleSlotClick(index)}
+          >
+            {slot.char ? <span className={`slot-char ${isLatinized && slot.char !== getLatinizedText(slot.char, language) ? 'latinized-char' : ''}`}>{getLatinizedText(slot.char, language)}</span> : <span className="slot-placeholder">?</span>}
           </div>
         ))}
       </div>
-      <div id="letter-pool" style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '20px', minHeight: '50px', border: '1px dashed #ddd', padding: '10px', borderRadius: '5px' }}>
+      
+      <div className="letter-pool-area">
         {shuffledLetters.filter(tile => !tile.inSlot).map(tile => (
           <button 
             key={`tile-${tile.id}`} 
-            style={tileBaseStyle} 
+            className="letter-tile"
             onClick={() => handleTileClick(tile)}
             disabled={isRevealed || isCorrectState}
           >
-            <span style={{...(isLatinized && tile.char !== getLatinizedText(tile.char, language) && {fontStyle:'italic'})}}>{getLatinizedText(tile.char, language)}</span>
+            <span className={isLatinized && tile.char !== getLatinizedText(tile.char, language) ? 'latinized-char' : ''}>{getLatinizedText(tile.char, language)}</span>
           </button>
         ))}
-         {shuffledLetters.filter(tile => !tile.inSlot).length === 0 && !isCorrectState && <span style={{color: '#888'}}>{t('feedback.allLettersPlaced', 'All letters placed!')}</span>}
+         {shuffledLetters.filter(tile => !tile.inSlot).length === 0 && !isCorrectState && !isRevealed && 
+            <span className="all-letters-placed-message">{t('feedback.allLettersPlaced', 'All letters placed! Check your word.')}</span>}
       </div>
+      
       <FeedbackDisplay message={feedback.message} type={feedback.type} language={language} />
+      
       <ExerciseControls
         onCheckAnswer={!isRevealed && !isCorrectState && wordSlots.every(s => s.char) && correctWord ? checkAnswer : undefined}
         onShowHint={!isRevealed && !isCorrectState && correctWord ? showHint : undefined}
-        onRevealAnswer={!isRevealed && !isCorrectState && correctWord ? revealTheAnswer : undefined} // Changed to revealTheAnswer
-        onNextExercise={setupNewWord} 
+        onRevealAnswer={!isRevealed && !isCorrectState && correctWord ? revealTheAnswer : undefined}
+        onNextExercise={handleNextRequestByControl}
         config={{ 
             showCheck: !isRevealed && !isCorrectState && wordSlots.every(s => s.char) && !!correctWord, 
             showHint: !isRevealed && !isCorrectState && !!correctWord, 
@@ -246,7 +260,7 @@ const BuildWordExercise = ({ language, days, exerciseKey }) => {
             showNext: true, 
         }}
       />
-       <button onClick={handleReset} style={{...tileBaseStyle, backgroundColor: '#6c757d', color: 'white', marginTop:'10px'}} disabled={isRevealed || isCorrectState || !correctWord}>
+       <button onClick={handleReset} className="reset-tiles-button" disabled={isRevealed || isCorrectState || !correctWord}>
         🔄 {t('buttons.resetTiles', 'Reset Tiles')}
       </button>
     </div>
