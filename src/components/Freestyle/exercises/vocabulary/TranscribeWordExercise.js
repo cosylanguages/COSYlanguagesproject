@@ -8,14 +8,14 @@ import useLatinization from '../../../../hooks/useLatinization';
 import { normalizeString as normalizeStringUtil } from '../../../../utils/stringUtils';
 import { useI18n } from '../../../../i18n/I18nContext';
 
-const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
+const TranscribeWordExercise = ({ language, days, exerciseKey, onComplete }) => { // Added onComplete
   const [correctWord, setCorrectWord] = useState('');
   const [userInput, setUserInput] = useState('');
   const [feedback, setFeedback] = useState({ message: '', type: '' });
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isRevealed, setIsRevealed] = useState(false);
-  const [isAnsweredCorrectly, setIsAnsweredCorrectly] = useState(false);
+  const [isAttemptFinished, setIsAttemptFinished] = useState(false); // Tracks if an answer attempt was made or revealed
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
@@ -28,7 +28,7 @@ const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
     setUserInput('');
     setIsRevealed(false);
     setCorrectWord('');
-    setIsAnsweredCorrectly(false);
+    setIsAttemptFinished(false); 
     try {
       const { data: words, error: fetchError } = await loadVocabularyData(language, days);
       if (fetchError) {
@@ -63,7 +63,7 @@ const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
       setError(t('errors.selectLangDay', "Please select a language and day(s)."));
       setCorrectWord('');
     }
-  }, [fetchAndSetNewWord, exerciseKey, language, days, t]);
+  }, [fetchAndSetNewWord, exerciseKey, language, days, t]); // exerciseKey triggers fetch
 
   const handlePlaySound = () => {
     if (correctWord && language) {
@@ -80,17 +80,14 @@ const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
   };
 
   const checkAnswer = () => {
-    if (!correctWord || isRevealed || isAnsweredCorrectly) return;
+    if (!correctWord || isRevealed || isAttemptFinished) return;
     
+    setIsAttemptFinished(true); // Mark that an attempt has been made
     const normalizedUserInput = normalizeStringUtil(userInput);
     const normalizedCorrectWord = normalizeStringUtil(correctWord);
-    // const itemId = `transcribe_${normalizedCorrectWord}`; // Not currently used
-
     const isCorrect = normalizedUserInput === normalizedCorrectWord;
 
     if (isCorrect) {
-      setIsAnsweredCorrectly(true);
-      // Use untrimmed userInput for exact match comparison
       if (userInput.trim() === correctWord) {
         setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
       } else {
@@ -100,40 +97,47 @@ const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
           type: 'correct' 
         });
       }
-      setTimeout(() => {
-        fetchAndSetNewWord();
-      }, 1500); // 1.5-second delay
+      if (onComplete) {
+        setTimeout(() => onComplete(), 1500);
+      }
+      // Removed: setTimeout(() => { fetchAndSetNewWord(); }, 1500);
     } else {
       const displayCorrect = getLatinizedText(correctWord, language);
       setFeedback({ message: t('feedback.incorrectAnswerIs', `Incorrect. The correct answer is: ${displayCorrect}`, { correctAnswer: displayCorrect }), type: 'incorrect' });
+      if (onComplete) { // Call onComplete even if incorrect
+        setTimeout(() => onComplete(), 1800);
+      }
     }
   };
 
   const showHint = () => {
-    if (!correctWord || isRevealed || isAnsweredCorrectly) return;
+    if (!correctWord || isRevealed || isAttemptFinished) return;
     const firstLetter = getLatinizedText(correctWord[0], language);
     setFeedback({ message: t('feedback.hintWordStructure', `Hint: The word has ${correctWord.length} letters and starts with '${firstLetter}'.`, { length: correctWord.length, letter: firstLetter }), type: 'hint' });
   };
 
   const revealTheAnswer = () => {
-    if (!correctWord || isAnsweredCorrectly) return; 
+    if (!correctWord || isRevealed) return; 
     const latinizedCorrectDisplay = getLatinizedText(correctWord, language);
     const displayAnswer = isLatinized ? latinizedCorrectDisplay : correctWord;
-    // const itemId = `transcribe_${normalizeStringUtil(correctWord)}`; // Not used
     
     setUserInput(correctWord); 
     setFeedback({ message: t('feedback.correctAnswerIs', `The correct answer is: ${displayAnswer}`, { correctAnswer: displayAnswer }), type: 'info' });
     setIsRevealed(true);
+    setIsAttemptFinished(true); 
 
-    if (!isAnsweredCorrectly) { 
-        setTimeout(() => {
-            fetchAndSetNewWord();
-        }, 2000); 
+    if (onComplete) {
+        setTimeout(() => onComplete(), 2000); 
     }
+    // Removed: if (!isAttemptFinished) { setTimeout(() => { fetchAndSetNewWord(); }, 2000); }
   };
 
-  const handleNext = () => {
-    fetchAndSetNewWord();
+  const handleNextRequestByControl = () => {
+    if (onComplete) {
+      onComplete();
+    } else {
+      fetchAndSetNewWord(); // Fallback
+    }
   };
 
   if (isLoading) {
@@ -141,11 +145,21 @@ const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
   }
 
   if (error) {
-    return <FeedbackDisplay message={error} type="error" />;
+    return (
+        <>
+            <FeedbackDisplay message={error} type="error" />
+            <ExerciseControls onNextExercise={handleNextRequestByControl} onRandomize={handleNextRequestByControl} config={{showNext: true, showRandomize: true}} />
+        </>
+    );
   }
 
   if (!correctWord && !isLoading) { 
-    return <FeedbackDisplay message={t('exercises.noWordForTranscription', "No word available for transcription. Try different selections.")} type="info" />;
+    return (
+        <>
+            <FeedbackDisplay message={t('exercises.noWordForTranscription', "No word available for transcription. Try different selections.")} type="info" />
+            <ExerciseControls onNextExercise={handleNextRequestByControl} onRandomize={handleNextRequestByControl} config={{showNext: true, showRandomize: true}} />
+        </>
+    );
   }
   
   return (
@@ -159,25 +173,29 @@ const TranscribeWordExercise = ({ language, days, exerciseKey }) => {
         value={userInput}
         onChange={handleInputChange}
         placeholder={t('placeholders.typeHere', "Type here...")}
-        disabled={isRevealed || isAnsweredCorrectly || isLoading}
+        disabled={isRevealed || isAttemptFinished || isLoading}
         style={{ padding: '10px', fontSize: '1rem', width: '250px', marginBottom: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
         onKeyPress={(event) => {
-            if (event.key === 'Enter' && !isRevealed && !isAnsweredCorrectly) {
+            if (event.key === 'Enter' && !isRevealed && !isAttemptFinished) {
               checkAnswer();
             }
         }}
       />
       <FeedbackDisplay message={feedback.message} type={feedback.type} language={language} />
       <ExerciseControls
-        onCheckAnswer={!isRevealed && !isAnsweredCorrectly && !!correctWord ? checkAnswer : undefined}
-        onShowHint={!isRevealed && !isAnsweredCorrectly && !!correctWord ? showHint : undefined}
-        onRevealAnswer={!isRevealed && !isAnsweredCorrectly && !!correctWord ? revealTheAnswer : undefined}
-        onNextExercise={handleNext}
+        onCheckAnswer={!isRevealed && !isAttemptFinished && !!correctWord ? checkAnswer : undefined}
+        onShowHint={!isRevealed && !isAttemptFinished && !!correctWord ? showHint : undefined}
+        onRevealAnswer={!isRevealed && !isAttemptFinished && !!correctWord ? revealTheAnswer : undefined}
+        onNextExercise={handleNextRequestByControl} // Changed
+        onRandomize={handleNextRequestByControl} // Added for consistency
+        isAnswerCorrect={isAttemptFinished && feedback.type === 'correct'} // Based on attempt and feedback
+        isRevealed={isRevealed}
         config={{ 
-            showCheck: !isRevealed && !isAnsweredCorrectly && !!correctWord, 
-            showHint: !isRevealed && !isAnsweredCorrectly && !!correctWord, 
-            showReveal: !isRevealed && !isAnsweredCorrectly && !!correctWord,
+            showCheck: !!correctWord && !isAttemptFinished && !isRevealed, 
+            showHint: !!correctWord && !isAttemptFinished && !isRevealed, 
+            showReveal: !!correctWord && !isAttemptFinished && !isRevealed,
             showNext: true, 
+            showRandomize: true,
         }}
       />
     </div>
