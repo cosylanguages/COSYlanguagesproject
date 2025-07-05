@@ -29,22 +29,52 @@ const DaySelectorFreestyle = ({
   // Show mode choice buttons if day_selection_stage is active but no specific input mode is.
   const showModeChoiceButtons = activePath.length > 0 && activePath[activePath.length - 1] === 'day_selection_stage';
 
+  // Refs to store previous values of dependencies for the main effect
+  const prevCurrentDaysRef = React.useRef();
+  const prevShowSingleDayInputSectionRef = React.useRef();
+  const prevShowDayRangeInputSectionRef = React.useRef();
 
-  // Sync internal state if currentDays prop changes (e.g., due to external reset or initial load)
   useEffect(() => {
-    if (currentDays && currentDays.length > 0) {
-      if (showSingleDayInputSection && currentDays.length === 1) {
+    const prevCurrentDays = prevCurrentDaysRef.current;
+    const prevShowSingleDay = prevShowSingleDayInputSectionRef.current;
+    const prevShowRangeDay = prevShowDayRangeInputSectionRef.current;
+
+    const currentDaysChanged = prevCurrentDays !== currentDays;
+    const singleDayVisibilityChanged = prevShowSingleDay !== showSingleDayInputSection;
+    const rangeDayVisibilityChanged = prevShowRangeDay !== showDayRangeInputSection;
+
+    prevCurrentDaysRef.current = currentDays;
+    prevShowSingleDayInputSectionRef.current = showSingleDayInputSection;
+    prevShowDayRangeInputSectionRef.current = showDayRangeInputSection;
+
+    if (!currentDaysChanged && !singleDayVisibilityChanged && !rangeDayVisibilityChanged) {
+      return; // No relevant prop/visibility change, so don't interfere with fresh user input
+    }
+
+    // Prop or visibility has changed, synchronize internal state.
+    if (showSingleDayInputSection) {
+      if (currentDays && currentDays.length === 1) {
         setInternalSingleDay(String(currentDays[0]));
-      } else if (showDayRangeInputSection && currentDays.length > 0) { // Can be more than 1 for range
+      } else {
+        setInternalSingleDay('');
+      }
+    } else if (singleDayVisibilityChanged && !showSingleDayInputSection) {
+      setInternalSingleDay(''); // Clear if section just became hidden
+    }
+
+    if (showDayRangeInputSection) {
+      if (currentDays && currentDays.length > 0) {
         setInternalDayFrom(String(currentDays[0]));
         setInternalDayTo(String(currentDays[currentDays.length - 1]));
+      } else {
+        setInternalDayFrom('');
+        setInternalDayTo('');
       }
-    } else {
-      setInternalSingleDay('');
-      setInternalDayFrom('');
+    } else if (rangeDayVisibilityChanged && !showDayRangeInputSection) {
+      setInternalDayFrom(''); // Clear if section just became hidden
       setInternalDayTo('');
     }
-  }, [currentDays, showSingleDayInputSection, showDayRangeInputSection]);
+  }, [currentDays, showSingleDayInputSection, showDayRangeInputSection]); // Correct dependencies
   
   useEffect(() => {
     if (showSingleDayInputSection && internalSingleDay && language) {
