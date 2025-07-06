@@ -165,10 +165,10 @@ const TeacherDashboard = () => {
       
       // We need to pass the whole section data, not just exerciseBlocks,
       // to avoid accidentally wiping other section properties like title.
-      const sectionDataToSave = {
-        ...currentSectionDetails, // Includes title, dayId, etc.
-        exerciseBlocks: lessonBlocks, // The updated blocks
-      };
+      // const sectionDataToSave = { // ESLint: 'sectionDataToSave' is assigned a value but never used.
+      //   ...currentSectionDetails, // Includes title, dayId, etc.
+      //   exerciseBlocks: lessonBlocks, // The updated blocks
+      // };
       // The API for updateLessonSection might only need title and exerciseBlocks,
       // or it might expect the full object. Assuming it takes title and exerciseBlocks.
       // Let's ensure we have the title from currentSectionDetails.
