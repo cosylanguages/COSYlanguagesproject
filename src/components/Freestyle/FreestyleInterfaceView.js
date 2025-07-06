@@ -33,7 +33,7 @@ const FreestyleInterfaceView = ({
   const { t } = useI18n();
 
   // Determine visibility of major sections using the new logic
-  const showLanguageSelector = activePath.length === 0; // Show initially
+  // const showLanguageSelector = activePath.length === 0; // Show initially - ESLint: 'showLanguageSelector' is assigned a value but never used.
   const showDaySelector = isMenuItemVisible(activePath, 'day_selection_stage', allMenuItemsConfig);
   const showPracticeCategories = isMenuItemVisible(activePath, 'main_practice_categories_stage', allMenuItemsConfig);
   
