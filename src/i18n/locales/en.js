@@ -14,7 +14,7 @@ const enTranslations = {
   chooseDay: '📅 Choose Your Day:',
   dayFrom: 'Day From:',
   dayTo: 'Day To:',
-  selectPractice: '🧭 Choose Your Practice:',
+  selectPractice: '🧭 Choose Your Practice:', // Kept this one (appears first)
   vocabulary: '🔠 Vocabulary',
   grammar: '🧩 Grammar',
   reading: '📚 Reading',
@@ -38,7 +38,7 @@ const enTranslations = {
   practiceAllGrammar: '🔄 Practice All Grammar',
   practiceAllSpeaking: '🔄 Practice All Speaking',
   selectDay: 'Select a day',
-  selectLang: 'Select a language',
+  selectLang: 'Select a language', // Kept this one (appears first)
   check: 'Check',
   trySentence: 'Try to use this word in a sentence!',
   randomImageQ1: 'What is this?',
@@ -95,9 +95,9 @@ const enTranslations = {
   "btnLogin": "Login",
 
   // Keys for messages in FreestyleInterfaceView (already used with defaults, good to have them explicitly)
-  "selectLang": "Please select a language to begin.",
+  // "selectLang": "Please select a language to begin.", // DUPLICATE of selectLang above, removed
   // "selectDay": "Please select day(s).", // Already covered by daySelector.selectDay, but used differently in message context
-  "selectPractice": "Please select a practice category.",
+  // "selectPractice": "Please select a practice category.", // DUPLICATE of selectPractice above, removed
   "selectSubPractice": "Please select a specific exercise.",
 
   // Study Mode Specific
