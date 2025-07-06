@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { loadVerbGrammarData, loadVocabularyData } from '../../../../utils/exerciseDataService';
 import { processVerbData, generateGrammarExerciseSentence, setGrammarGeneratorTranslations } from '../../../../utils/grammarSentenceGenerator'; 
-import { useLatinizationContext } from '../../../../contexts/LatinizationContext';
+// import { useLatinizationContext } from '../../../../contexts/LatinizationContext'; // Commented out: isLatinized from here is unused
 import useLatinization from '../../../../hooks/useLatinization';
 import { normalizeString } from '../../../../utils/stringUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
@@ -18,7 +18,7 @@ const FillGapsExercise = ({ language, days, exerciseKey, onComplete }) => { // A
   const [isRevealed, setIsRevealed] = useState(false);
   const [isAttemptFinished, setIsAttemptFinished] = useState(false); // New state
 
-  const { isLatinized } = useLatinizationContext();
+  // const { isLatinized } = useLatinizationContext(); // ESLint: 'isLatinized' is assigned a value but never used.
   const getLatinizedText = useLatinization;
   const { t, allTranslations } = useI18n();
 
