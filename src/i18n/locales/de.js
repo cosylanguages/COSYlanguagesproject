@@ -1,6 +1,8 @@
 // Deutsche Übersetzungen
 const deTranslations = {
-  languageNameNative: 'Deutsch', // Added native name
+  languageNameNative: 'Deutsch',
+  languageNameInEnglish: 'German',
+  languageCode: 'de',
   dayNames: {
       1: "Grundwörter",
       2: "Wer bist du?",

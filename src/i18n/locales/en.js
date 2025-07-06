@@ -1,6 +1,8 @@
 // Traductions anglaises
 const enTranslations = {
-  languageNameNative: 'English', // Added native name
+  languageNameNative: 'English',
+  languageNameInEnglish: 'English',
+  languageCode: 'en',
   dayNames: {
       1: "Basic words",
       2: "Who are you?",

@@ -7,590 +7,144 @@
       "approximate_vocabulary_size": "approx. 300-500 words",
       "learning_outcomes": [
         "Recognize and reproduce sounds of the Russian alphabet.",
-        "Understand and use familiar everyday expressions and very basic phrases (e.g., greetings, introductions, asking for name/nationality).",
-        "Introduce him/herself and others simply.",
-        "Ask and answer simple questions about personal details (where one lives, people one knows).",
-        "Interact in a very simple way if the other person speaks slowly, clearly, and is prepared to help.",
-        "Recognize familiar names, words, and very simple sentences on signs or posters."
+        "Understand and use familiar everyday expressions and very basic phrases.",
+        "Introduce him/herself and others simply."
       ],
       "language_focus_topics": [
         "The Russian (Cyrillic) Alphabet: Letters and their sounds.",
-        "Basic pronunciation rules: Vowel reduction (о/а, е/и unstressed), voiced/voiceless consonants.",
-        "Nouns: Introduction to gender (masculine, feminine, neuter - basic recognition by endings). Introduction to nominative singular.",
-        "Pronouns: Personal pronouns in nominative singular (я, ты, он, она, оно). Possessive pronouns (мой, моя, моё - my).",
-        "Verbs: Present tense of 'быть' (to be) - usually omitted in present tense for 'is/am/are'. Present tense of common verbs like 'жить' (to live), 'говорить' (to speak - я говорю), 'звать' (to call - меня зовут).",
-        "Basic Sentence Structure: Subject-(Verb)-Object/Complement (e.g., Я студент. Это мой дом.).",
-        "Negation: 'не' with verbs (Я не говорю по-русски).",
-        "Simple Questions: Intonation for yes/no questions. Basic question words (Кто? Что? Где? Как?)."
+        "Nouns: Introduction to gender. Nominative singular.",
+        "Verbs: Present tense of 'быть' (to be) - usually omitted."
       ],
       "vocabulary_topics": [
-        "Greetings: Привет, Здравствуйте, До свидания, Пока, Доброе утро, Добрый день, Добрый вечер, Спокойной ночи.",
-        "Introductions & Personal Information: Как тебя/Вас зовут? Меня зовут... Очень приятно. Откуда ты/Вы? Я из... Национальность. Возраст (basic numbers for age).",
-        "Courtesy: Спасибо, Пожалуйста, Извините, Простите.",
-        "Basic responses: Да, Нет.",
+        "Greetings: Привет, Здравствуйте, До свидания.",
+        "Personal Information: Как тебя/Вас зовут? Меня зовут...",
         "Numbers: 0-10 (ноль-десять).",
-        "Colors: красный, синий, зелёный, жёлтый, чёрный, белый.",
-        "Family: мама, папа, брат, сестра (basic).",
-        "Common Objects: книга, ручка, стол, стул, телефон, дом, машина.",
-        "Basic Food & Drink: хлеб, вода, молоко, кофе, чай, сыр, яблоко.",
-        "Classroom language: Повторите, пожалуйста. Я не понимаю."
+        "Colors: красный, синий, зелёный."
       ],
-      "pronunciation_focus_topics": [
-        "Mastering the sounds of all Cyrillic letters.",
-        "Distinguishing hard and soft consonants (basic introduction).",
-        "Voiced vs. voiceless consonants (e.g., б/п, д/т, г/к, з/с, ж/ш).",
-        "Basic vowel reduction (unstressed 'о' as 'а', unstressed 'е/я' as 'и').",
-        "Word stress (ударение) - its importance and unpredictability; learning stress for new words.",
-        "Basic intonation for statements and simple questions."
-      ],
-      "listening_comprehension_skills": [
-        "Recognize familiar Russian words and very basic phrases concerning oneself and immediate surroundings when spoken slowly and clearly.",
-        "Understand simple greetings and introductions.",
-        "Follow very simple instructions (e.g., 'Смотри!' - Look!)."
-      ],
-      "reading_comprehension_skills": [
-        "Read and identify all Russian letters (uppercase and lowercase).",
-        "Read and understand familiar names, words, and very simple sentences on signs or in simple texts.",
-        "Understand numbers 0-10 written as words."
-      ],
-      "spoken_interaction_skills": [
-        "Greet and respond to greetings.",
-        "Introduce oneself and ask for someone's name (e.g., 'Как тебя зовут?').",
-        "Ask and answer simple questions about personal information (name, where from).",
-        "Use basic courtesy phrases (спасибо, пожалуйста)."
-      ],
-      "spoken_production_skills": [
-        "Say the letters of the Russian alphabet.",
-        "Pronounce basic Russian vocabulary with comprehensible (though possibly accented) pronunciation.",
-        "Produce simple isolated phrases and sentences (e.g., 'Я Анна.', 'Это стол.').",
-        "State name, nationality, and where one lives in simple terms."
-      ],
-      "written_interaction_skills": [
-        "Recognize own name and familiar words when written in Cyrillic."
-      ],
-      "written_production_skills": [
-        "Write all letters of the Russian alphabet (uppercase and lowercase, print and basic cursive).",
-        "Write one's name and other simple familiar words in Russian.",
-        "Copy familiar words and short sentences."
-      ],
-      "cultural_competence_topics": [
-        "Common greeting customs (formal vs. informal greetings).",
-        "Basic awareness of formal (Вы) vs. informal (ты) 'you'.",
-        "Importance of politeness markers (пожалуйста, спасибо).",
-        "Concept of patronymics (отчество) - basic awareness that they exist."
-      ],
-      "learning_strategies_suggestions": [
-        "Practice writing Cyrillic letters daily.",
-        "Use flashcards with pictures and Russian words (with stress marked).",
-        "Listen to Russian children's songs or very simple audio resources.",
-        "Focus on mimicking native speaker pronunciation for basic phrases."
-      ]
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
     },
     {
       "level_code": "A1",
       "level_name": "Юный Следопыт (Young Pathfinder)",
       "approximate_vocabulary_size": "approx. 500-700 words",
       "learning_outcomes": [
-        "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.",
-        "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
-        "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
+        "Can understand and use familiar everyday expressions and very basic phrases.",
+        "Can introduce him/herself and others and can ask and answer questions about personal details.",
+        "Can interact in a simple way provided the other person talks slowly and clearly."
       ],
       "language_focus_topics": [
-        "Review A0: Alphabet, basic pronunciation, nominative case, basic verbs.",
-        "Nouns: Introduction to cases: Nominative, Accusative (for direct objects - inanimate/animate distinction for masculine), Prepositional (with 'в' and 'на' for location). Genitive singular for possession ('у меня есть...') and negation ('нет').",
-        "Adjectives: Agreement with nouns in gender, number, and nominative/accusative/prepositional cases (basic patterns).",
-        "Pronouns: Personal pronouns in accusative, genitive, prepositional cases. Possessive pronouns (мой, твой, наш, ваш, его, её, их) - agreement.",
-        "Verbs: Present tense conjugation of common 1st and 2nd conjugation verbs. Past tense (gender and number agreement - л, -ла, -ло, -ли). Basic future tense with 'быть' + infinitive (e.g., я буду читать).",
-        "Verbs of motion (unidirectional): идти/ехать (to go on foot/by transport) in present and past.",
-        "Adverbs: Common adverbs of time (сегодня, завтра, вчера, сейчас, потом), place (здесь, там, дома), manner (хорошо, плохо, быстро, медленно).",
-        "Numbers: 0-100. Basic ordinal numbers (первый, второй...).",
-        "Prepositions: Common prepositions used with Accusative (в, на - direction), Prepositional (в, на - location), Genitive (у, из, с, без, для)."
+        "Nouns: Nominative, Accusative, Prepositional, Genitive singular cases.",
+        "Adjectives: Agreement with nouns in gender, number, and basic cases.",
+        "Verbs: Present tense conjugation. Past tense. Basic future tense ('быть' + infinitive)."
       ],
       "vocabulary_topics": [
-        "Review A0 vocabulary.",
-        "Personal information: Family members (more detail), age, profession (basic).",
-        "Daily routine: Waking up, eating meals, going to work/school, sleeping.",
-        "Food & Drink: Common food items, drinks, ordering in a café/simple restaurant.",
-        "Shopping: Types of shops (магазин, супермаркет, рынок), common items, prices, asking 'how much?'.",
-        "Places in town: улица, площадь, парк, почта, банк, аптека, гостиница, вокзал, аэропорт.",
-        "Transport: автобус, трамвай, метро, такси, поезд, самолёт. Buying tickets.",
-        "Time: Telling the time, days of the week, months, seasons.",
-        "Weather: Basic weather expressions (тепло, холодно, идёт дождь/снег, солнечно).",
-        "Hobbies & interests (basic: читать, смотреть телевизор, слушать музыку, гулять).",
-        "Clothing: Common items (рубашка, брюки, платье, куртка, шапка, обувь)."
+        "Daily routine: Waking up, eating meals, going to work/school.",
+        "Food & Drink: Common food items, ordering in a café.",
+        "Shopping: Types of shops, common items, prices.",
+        "Places in town: улица, площадь, парк."
       ],
-      "pronunciation_focus_topics": [
-        "Review A0 pronunciation: Cyrillic sounds, basic vowel reduction, voiced/voiceless consonants.",
-        "Consonant clusters.",
-        "Pronunciation of grammatical endings (e.g., noun cases, verb conjugations in present/past).",
-        "Intonation of different sentence types: statements, yes/no questions, Wh-questions, simple exclamations.",
-        "Stress patterns in common words and simple phrases."
-      ],
-      "listening_comprehension_skills": [
-        "Understand frequently used words and phrases related to personal details, family, shopping, local area, when spoken slowly and clearly.",
-        "Grasp the main point in short, clear, simple messages, announcements (e.g., in a station).",
-        "Understand simple questions and instructions related to everyday situations."
-      ],
-      "reading_comprehension_skills": [
-        "Understand short, simple texts on familiar matters (e.g., simple menus, advertisements, public signs, short personal messages).",
-        "Find specific, predictable information in everyday material (e.g., times, prices, names).",
-        "Understand short, simple personal letters or emails from friends."
-      ],
-      "spoken_interaction_skills": [
-        "Interact in simple, routine situations (e.g., simple shopping, ordering food, asking for directions).",
-        "Ask and answer questions about familiar topics (daily life, hobbies, work, family).",
-        "Make and respond to simple suggestions or invitations.",
-        "Ask for and give basic information (e.g., 'Где туалет?', 'Сколько стоит?')."
-      ],
-      "spoken_production_skills": [
-        "Describe his/her family and other people, living conditions, daily routine in simple terms.",
-        "Talk about past events using basic past tense (e.g., 'Вчера я ходил в кино').",
-        "Talk about simple future plans (e.g., 'Завтра я буду работать').",
-        "Express likes and dislikes (Мне нравится / Я люблю...)."
-      ],
-      "written_interaction_skills": [
-        "Write a simple reply to a personal message or invitation (e.g., a short email or SMS)."
-      ],
-      "written_production_skills": [
-        "Write short, simple notes and messages (e.g., a shopping list, a simple postcard with greetings).",
-        "Describe a familiar place or person in a few simple sentences.",
-        "Fill in simple forms with personal details (name, address, nationality, date of birth)."
-      ],
-      "cultural_competence_topics": [
-        "Common forms of address (first name, first name + patronymic - basic awareness of when used).",
-        "Understanding basic social etiquette (e.g., visiting someone's home - bringing a small gift like flowers/sweets).",
-        "Awareness of major Russian holidays (e.g., New Year, Victory Day - basic recognition).",
-        "Food culture: common Russian dishes (e.g., борщ, пельмени - recognition)."
-      ],
-      "learning_strategies_suggestions": [
-        "Practice noun-adjective agreement with simple cases.",
-        "Use language learning apps with dialogues and exercises for A1 level.",
-        "Watch Russian cartoons or very simple videos for children.",
-        "Try to make simple sentences about your daily activities and past experiences."
-      ]
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
     },
     {
       "level_code": "A2",
       "level_name": "Уверенный Исследователь (Confident Explorer)",
-      "approximate_vocabulary_size": "approx. 1000-1500 words",
-      "learning_outcomes": [
-        "Can understand sentences and frequently used expressions related to areas of most immediate relevance (e.g. very basic personal and family information, shopping, local geography, employment).",
-        "Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.",
-        "Can describe in simple terms aspects of his/her background, immediate environment and matters in areas of immediate need."
-      ],
-      "language_focus_topics": [
-        "Review A1: Present/Past/Basic Future tenses, Nominative, Accusative, Prepositional, Genitive (singular) cases.",
-        "Nouns: Dative case (indirect object, age, expressions like 'мне нравится'). Instrumental case (with 'с' - with, as an instrument - basic). Plural forms of nouns in all basic cases.",
-        "Adjectives: Agreement in all basic cases, singular and plural. Comparative adjectives (простой comparative - красивее, лучше; basic 'чем').",
-        "Pronouns: Personal pronouns in Dative and Instrumental. Demonstrative pronouns (этот, тот) in basic cases.",
-        "Verbs: Imperfective and Perfective aspects (introduction - e.g., читать/прочитать, делать/сделать). Use of aspects in past and future tenses.",
-        "Verbs of motion: Multidirectional verbs (ходить/ездить). Prefixed verbs of motion (basic prefixes like по-, при-, у- with идти/ехать, ходить/ездить).",
-        "Modal constructions: 'нужно', 'надо', 'можно', 'нельзя' + infinitive.",
-        "Reflexive verbs with -ся/-сь (e.g., учиться, называться, встречаться).",
-        "Time expressions: More detailed (в прошлом году, на следующей неделе, по утрам).",
-        "Conjunctions: 'потому что', 'если', 'когда', 'чтобы' (basic use)."
-      ],
-      "vocabulary_topics": [
-        "Review A1 vocabulary.",
-        "Describing people: Appearance, character, relationships (more detail).",
-        "Housing: Types of dwellings, rooms, furniture, amenities, simple problems and solutions.",
-        "Food & Drink: More variety, simple recipes, expressing preferences, talking about meals.",
-        "Shopping: Departments in a store, discussing quality/problems with items, sizes, colors.",
-        "Travel & Transport: Planning journeys, buying tickets, at the airport/station, asking for/understanding travel information.",
-        "Health & Body: Common illnesses, symptoms, visiting a doctor/dentist, pharmacy.",
-        "Work & Study: Describing one's job/studies, colleagues/classmates, daily tasks, future career plans (simple).",
-        "Leisure & Hobbies: Discussing interests, inviting others, arranging activities, opinions on films/books/music.",
-        "Nature & Weather: Describing landscapes, weather conditions and forecasts in more detail.",
-        "Feelings & Emotions: Expressing joy, sadness, surprise, worry (e.g., Я рад/а, Мне грустно).",
-        "Services: Post office, bank, hairdresser, repairs - basic interactions."
-      ],
-      "pronunciation_focus_topics": [
-        "Review A1/A0: Stress, vowel reduction, voiced/voiceless consonants, hard/soft consonants.",
-        "Intonation in more complex sentences (e.g., with subordinate clauses, listing items).",
-        "Pronunciation of consonant clusters and difficult sound combinations in connected speech.",
-        "Rhythm of Russian speech: stressed and unstressed syllables.",
-        "Palatalization (мягкий знак - ь) and its effect on preceding consonants."
-      ],
-      "listening_comprehension_skills": [
-        "Understand the main points of clear, standard speech on familiar everyday topics (e.g., dialogues about plans, past events, personal information).",
-        "Follow short, simple narratives or descriptions.",
-        "Identify specific information in public announcements or short news items if the topic is familiar and speech is clear."
-      ],
-      "reading_comprehension_skills": [
-        "Understand short, simple personal letters, emails, or blog posts on familiar topics.",
-        "Find specific, predictable information in everyday materials like brochures, event programs, simple instructions.",
-        "Understand the gist of short, simplified newspaper articles or website texts on familiar subjects."
-      ],
-      "spoken_interaction_skills": [
-        "Engage in conversations on familiar topics, exchanging information, opinions, and feelings.",
-        "Handle common everyday situations (e.g., making inquiries, asking for help, simple problem-solving).",
-        "Make and respond to invitations, suggestions, apologies, and thanks.",
-        "Discuss past events and future plans with others.",
-        "Express agreement and disagreement simply."
-      ],
-      "spoken_production_skills": [
-        "Give simple, connected descriptions of people, places, events, or personal experiences.",
-        "Narrate a simple story or recount events in sequence using past tenses (imperfective/perfective).",
-        "Talk about future plans and intentions using appropriate verb forms.",
-        "Express opinions, likes/dislikes, and preferences with simple reasons."
-      ],
-      "written_interaction_skills": [
-        "Write simple personal emails or messages to exchange information, make arrangements, invite, thank, or apologize."
-      ],
-      "written_production_skills": [
-        "Write short, connected texts on familiar topics (e.g., describing a holiday, a friend, a typical day).",
-        "Write a simple personal letter giving news or describing experiences.",
-        "Write short instructions or simple reports on familiar procedures."
-      ],
-      "cultural_competence_topics": [
-        "Russian names and patronymics: understanding their use and significance.",
-        "Gift-giving etiquette for various occasions (birthdays, visiting homes).",
-        "Hospitality traditions in Russia.",
-        "Awareness of important Russian cultural figures (e.g., Pushkin - very basic).",
-        "Public transport etiquette.",
-        "Common superstitions or traditions (e.g., not shaking hands across a threshold)."
-      ],
-      "learning_strategies_suggestions": [
-        "Start practicing the use of imperfective and perfective verbs for past and future actions.",
-        "Read adapted Russian short stories or news articles for learners.",
-        "Watch Russian TV series or films with subtitles (Russian if possible).",
-        "Try to write short diary entries or blog posts in Russian.",
-        "Engage in simple conversations with native speakers or language partners."
-      ]
+      "approximate_vocabulary_size": "",
+      "learning_outcomes": [],
+      "language_focus_topics": [],
+      "vocabulary_topics": [],
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
     },
     {
       "level_code": "B1",
       "level_name": "Мечтатель-Путешественник (Dreamer-Traveler)",
-      "approximate_vocabulary_size": "approx. 2000-2500 words",
-      "learning_outcomes": [
-        "Understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc.",
-        "Deal with most situations likely to arise whilst travelling in an area where Russian is spoken.",
-        "Produce simple connected text on topics which are familiar or of personal interest.",
-        "Describe experiences and events, dreams, hopes & ambitions and briefly give reasons and explanations for opinions and plans."
-      ],
-      "language_focus_topics": [
-        "Review of A2 grammar: All six cases (singular and plural), verb aspects (imperfective/perfective), basic verbs of motion, future/past/present tenses.",
-        "Verbs of motion: Further prefixed verbs of motion, expressing various nuances of movement (e.g., в-, вы-, под-, от-, пере-, до-). Unidirectional/multidirectional distinction with prefixes.",
-        "Participles: Introduction to active and passive participles (present and past - adjectival forms, basic agreement and use, e.g., читающий, прочитанный).",
-        "Gerunds (деепричастия): Introduction to imperfective and perfective gerunds (e.g., читая, прочитав) for describing accompanying actions.",
-        "Conditional mood: Formation with 'бы' + past tense (e.g., Я бы хотел...).",
-        "Subjunctive mood: Basic use with 'чтобы' for purpose/desire (e.g., Я хочу, чтобы ты пришёл).",
-        "Reflexive verbs: Wider range and more complex uses.",
-        "Numerals: Ordinal numbers in different cases. Collective numerals (двое, трое). Declension of cardinal numbers (basic patterns).",
-        "Indirect speech: Reporting simple statements and questions (Я сказал, что...; Он спросил, где...).",
-        "Complex sentences: Conjunctions for cause/effect (поэтому, так как), contrast (но, а, хотя), time (когда, пока, после того как)."
-      ],
-      "vocabulary_topics": [
-        "Work and career: Professions, job responsibilities, work environment, applying for a job, interviews.",
-        "Education: School subjects, university studies, exams, further education.",
-        "Travel and tourism: Planning trips, booking accommodation/transport, sightseeing, cultural experiences, problems during travel.",
-        "Media and news: Understanding main points of news articles, TV/radio news on familiar topics, discussing current events.",
-        "Culture and arts: Types of films, books, music; discussing preferences, plots, characters; museums, theatre, concerts.",
-        "Health and lifestyle: Healthy habits, fitness, common illnesses and treatments, describing well-being.",
-        "Social issues: Basic vocabulary for discussing common social problems (e.g., environment, poverty - simple terms).",
-        "Personal relationships: Friendship, family relationships, dating (simple terms).",
-        "Technology and communication: Internet, social media, mobile phones (everyday use).",
-        "Expressing opinions, emotions, agreement/disagreement with more nuance and justification."
-      ],
-      "pronunciation_focus_topics": [
-        "Review of A2 pronunciation: Stress, reduction, palatalization, intonation.",
-        "Intonation in complex sentences, including those with participles, gerunds, and subordinate clauses.",
-        "Rhythm and fluency in longer stretches of speech.",
-        "Pronunciation of loanwords and less common sound combinations.",
-        "Connected speech: assimilation of consonants, linking sounds more consistently."
-      ],
-      "listening_comprehension_skills": [
-        "Understand the main points of clear standard speech on familiar matters regularly encountered in work, school, leisure, etc.",
-        "Understand the main points of radio or TV programs on current affairs or topics of personal interest when the delivery is relatively slow and clear.",
-        "Follow a lecture or talk on a familiar topic if the presentation is straightforward."
-      ],
-      "reading_comprehension_skills": [
-        "Understand texts that consist mainly of high-frequency everyday or job-related language.",
-        "Understand the description of events, feelings, and wishes in personal letters, emails, and blog posts.",
-        "Read straightforward factual texts on subjects related to one's field of interest (e.g., magazine articles, non-specialized web pages)."
-      ],
-      "spoken_interaction_skills": [
-        "Enter unprepared into conversation on topics that are familiar, of personal interest, or pertinent to everyday life.",
-        "Deal with most situations likely to arise whilst travelling (e.g., checking into a hotel, asking for detailed information, making a complaint).",
-        "Express and sustain personal opinions, providing reasons and examples.",
-        "Participate in discussions on familiar topics, agreeing and disagreeing politely."
-      ],
-      "spoken_production_skills": [
-        "Produce simple connected text on topics which are familiar or of personal interest.",
-        "Narrate a story, or relate the plot of a book or film and describe personal reactions.",
-        "Describe experiences, events, dreams, hopes, and ambitions in some detail.",
-        "Briefly give reasons and explanations for opinions and plans."
-      ],
-      "written_interaction_skills": [
-        "Write personal letters or emails describing experiences, feelings, and events in some detail.",
-        "Respond to formal/informal inquiries or requests via email/letter, providing relevant information."
-      ],
-      "written_production_skills": [
-        "Write connected texts on a range of familiar subjects (e.g., an account of an experience, a description of a place or event).",
-        "Write a short formal letter or email (e.g., a letter of inquiry, a simple application).",
-        "Express personal opinions and viewpoints on familiar topics in a short structured text (e.g., a review, a forum post)."
-      ],
-      "cultural_competence_topics": [
-        "Understanding different levels of formality in communication and social interactions.",
-        "Knowledge of major Russian cities and regions, and some cultural specifics.",
-        "Russian traditions and customs related to holidays (e.g., Maslenitsa, Women's Day - March 8th).",
-        "Etiquette for social gatherings, visiting, and dining.",
-        "Awareness of famous Russian writers, composers, or artists (e.g., Tolstoy, Tchaikovsky - basic recognition and significance).",
-        "Understanding common Russian proverbs or sayings (basic)."
-      ],
-      "learning_strategies_suggestions": [
-        "Start reading authentic Russian short stories, news articles, or blogs.",
-        "Practice using participles and gerunds to make sentences more complex.",
-        "Watch Russian films or TV series with Russian subtitles, paying attention to colloquial language.",
-        "Engage in discussions with native speakers, focusing on expressing opinions and justifying them.",
-        "Write longer texts like essays or detailed emails, and seek feedback."
-      ]
+      "approximate_vocabulary_size": "",
+      "learning_outcomes": [],
+      "language_focus_topics": [],
+      "vocabulary_topics": [],
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
     },
     {
       "level_code": "B2",
       "level_name": "Искусный Рассказчик (Skillful Storyteller)",
-      "approximate_vocabulary_size": "approx. 3500-4500 words",
-      "learning_outcomes": [
-        "Understand the main ideas of complex texts on both concrete and abstract topics, including technical discussions in his/her field of specialization.",
-        "Interact with a degree of fluency and spontaneity that makes regular interaction with native speakers possible without strain for either party.",
-        "Produce clear, detailed text on a wide range of subjects.",
-        "Explain a viewpoint on a topical issue, giving the advantages and disadvantages of various options."
-      ],
-      "language_focus_topics": [
-        "Comprehensive review of verb aspects and their usage in all tenses.",
-        "Advanced verbs of motion: nuanced use of prefixes, abstract meanings of motion verbs.",
-        "Participles and participial phrases: active and passive, all tenses; their role in formal and written Russian.",
-        "Gerunds and gerund phrases: perfective and imperfective; their use for conciseness and stylistic variation.",
-        "Conditional and subjunctive moods: all forms and uses, including hypothetical situations, wishes, regrets, advice.",
-        "Reported speech: complex structures, reporting different types of utterances, shifts in perspective.",
-        "Impersonal constructions and passive voice: wider range of uses and stylistic functions.",
-        "Syntax of complex sentences: various types of subordinate clauses (relative, concessive, causal, temporal, purpose, result), appropriate conjunctions.",
-        "Word order variations for emphasis and style.",
-        "Nuances of case usage (e.g., genitive vs. accusative in negation, partitive genitive)."
-      ],
-      "vocabulary_topics": [
-        "Abstract concepts: Society, politics, economics, environment, education, culture, arts, science, technology (in greater depth and with more specialized terms).",
-        "Expressing nuanced opinions, arguments, agreement, disagreement, doubt, certainty, probability, possibility.",
-        "Vocabulary for argumentation and debate: structuring arguments, supporting points, refuting counter-arguments, concluding, hedging.",
-        "Idioms, set expressions, and proverbs common in contemporary Russian.",
-        "Understanding and using different registers (formal, neutral, informal, colloquial, some professional jargon).",
-        "Word formation: prefixes, suffixes, compound words for vocabulary expansion and understanding.",
-        "Synonyms and antonyms for precision, stylistic variation, and register.",
-        "Collocations: advanced verb-noun, adjective-noun, adverb-adjective combinations.",
-        "Vocabulary related to one's field of specialization or academic interest."
-      ],
-      "pronunciation_focus_topics": [
-        "Fine-tuning intonation for expressing complex attitudes, emotions, and pragmatic functions (e.g., irony, sarcasm, politeness).",
-        "Mastery of connected speech phenomena for natural flow and rhythm.",
-        "Recognition and understanding of various regional accents and sociolects.",
-        "Maintaining clarity and good pronunciation in extended speech, presentations, and discussions."
-      ],
-      "listening_comprehension_skills": [
-        "Understand extended speech and lectures and follow complex lines of argument, provided the topic is reasonably familiar.",
-        "Understand most TV news, current affairs programs, and documentaries.",
-        "Understand the majority of films and plays in standard Russian."
-      ],
-      "reading_comprehension_skills": [
-        "Read articles and reports concerned with contemporary problems in which the writers adopt particular stances or viewpoints.",
-        "Understand contemporary literary prose and drama.",
-        "Understand specialized articles outside one's immediate field with occasional use of a dictionary for specific terminology."
-      ],
-      "spoken_interaction_skills": [
-        "Interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
-        "Take an active part in discussions in familiar and some unfamiliar contexts, accounting for and sustaining viewpoints.",
-        "Handle linguistic aspects of negotiation, making a case, managing disagreement, and reaching compromise."
-      ],
-      "spoken_production_skills": [
-        "Present clear, detailed descriptions on a wide range of subjects related to his/her field of interest or general topics.",
-        "Explain a viewpoint on a topical issue, giving the advantages and disadvantages of various options, and supporting arguments with evidence.",
-        "Develop an argument systematically, highlighting significant points and relevant supporting detail."
-      ],
-      "written_interaction_skills": [
-        "Write clear, detailed letters or emails on complex subjects, conveying information, ideas, or opinions effectively, adapting style and register appropriately.",
-        "Respond to complex inquiries, arguments, or proposals in writing."
-      ],
-      "written_production_skills": [
-        "Write clear, detailed texts (essays, reports, articles) on a wide range of subjects.",
-        "Summarize information from different spoken and written sources, and present arguments coherently.",
-        "Write reviews of films, books, or events, expressing justified opinions.",
-        "Develop a reasoned argument in an essay or report, presenting different viewpoints and concluding."
-      ],
-      "cultural_competence_topics": [
-        "Deeper understanding of Russian society, history, and contemporary issues (social structures, political landscape, cultural debates).",
-        "Ability to understand and appreciate cultural references, humor, irony, and allusions in Russian media and literature.",
-        "Nuances of social and professional etiquette in various contexts.",
-        "Understanding different perspectives within Russian society and current cultural trends.",
-        "Knowledge of key figures and events in Russian history, literature, and arts."
-      ],
-      "learning_strategies_suggestions": [
-        "Engage regularly with authentic Russian media (news, analytical programs, podcasts, films, contemporary literature).",
-        "Participate in debates, discussions, or presentations in Russian.",
-        "Write analytical essays, reports, or summaries of complex texts, focusing on structure and argumentation.",
-        "Seek feedback on writing and speaking from native speakers or advanced learners, focusing on accuracy, fluency, and idiomaticity.",
-        "Explore Russian internet forums and social media to understand contemporary language use."
-      ]
+      "approximate_vocabulary_size": "",
+      "learning_outcomes": [],
+      "language_focus_topics": [],
+      "vocabulary_topics": [],
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
     },
     {
       "level_code": "C1",
       "level_name": "Философ-Оратор (Philosopher-Orator)",
-      "approximate_vocabulary_size": "approx. 7000-8000 words",
-      "learning_outcomes": [
-        "Understand a wide range of demanding, longer texts, and recognize implicit meaning.",
-        "Express him/herself fluently and spontaneously without much obvious searching for expressions.",
-        "Use language flexibly and effectively for social, academic and professional purposes.",
-        "Produce clear, well-structured, detailed text on complex subjects, showing controlled use of organizational patterns, connectors and cohesive devices."
-      ],
-      "language_focus_topics": [
-        "Mastery of the Russian grammatical system, including all aspects, tenses, moods, cases, and complex syntactic structures.",
-        "Nuanced use of participles, gerunds, and participial/gerund phrases for sophisticated expression and conciseness.",
-        "Advanced use of impersonal and passive constructions for stylistic variation and formal discourse.",
-        "Sophisticated use of various types of subordinate clauses and connectors to build complex, coherent arguments.",
-        "Stylistic use of word order, inversion, and ellipsis for emphasis and effect.",
-        "Understanding and occasional use of archaic or bookish grammatical forms for specific stylistic purposes.",
-        "Deep understanding of aspectual pairs and their subtle differences in meaning and connotation.",
-        "Advanced use of discourse markers for structuring complex arguments and narratives."
-      ],
-      "vocabulary_topics": [
-        "Extensive vocabulary covering abstract, specialized, and technical topics across a wide range of domains.",
-        "Nuanced understanding and precise use of synonyms, antonyms, and related lexical items to convey fine shades of meaning.",
-        "Rich repertoire of idiomatic expressions, proverbs, colloquialisms, and cultural allusions, with an understanding of their appropriate context, register, and connotations.",
-        "Vocabulary for academic and professional purposes, including specialized terminology for one's field and related areas.",
-        "Advanced word formation: understanding etymology, roots, and complex affixation to deduce meaning and expand vocabulary.",
-        "Ability to use language creatively and play with words (e.g., puns, wordplay - basic understanding).",
-        "Differentiating and appropriately using various stylistic layers of vocabulary (neutral, formal, informal, literary, technical)."
-      ],
-      "pronunciation_focus_topics": [
-        "Near-native pronunciation, intonation, rhythm, and stress across various speech styles and registers.",
-        "Using prosody effectively to convey subtle meanings, attitudes, irony, and emotions.",
-        "Understanding and adapting to a wider range of regional accents and sociolects.",
-        "Maintaining clarity, precision, and natural flow in rapid or complex speech, including public speaking."
-      ],
-      "listening_comprehension_skills": [
-        "Understand extended speech even when it is not clearly structured and when relationships are only implied and not explicitly signaled.",
-        "Understand a wide range of television programs, films, plays, and public speeches without too much effort.",
-        "Understand complex technical or academic presentations and discussions, even on unfamiliar topics.",
-        "Recognize and understand a wide range of idiomatic expressions, colloquialisms, and cultural references."
-      ],
-      "reading_comprehension_skills": [
-        "Understand long and complex factual and literary texts, appreciating distinctions of style, register, and authorial intent.",
-        "Understand specialized articles, academic papers, and longer technical or official documents, even outside one's own field.",
-        "Recognize implicit meaning, writer's stance, irony, persuasive techniques, and rhetorical strategies in various text types."
-      ],
-      "spoken_interaction_skills": [
-        "Express him/herself fluently, spontaneously, and accurately, using complex language appropriately and without much obvious searching for expressions.",
-        "Use language flexibly and effectively for social, academic, and professional purposes, adapting register and style to the situation and audience with ease.",
-        "Formulate ideas and opinions with precision, structure arguments logically, and relate contributions skilfully to those of other speakers in discussions, debates, and formal meetings.",
-        "Mediate and negotiate effectively in complex situations."
-      ],
-      "spoken_production_skills": [
-        "Present clear, detailed, and well-structured descriptions or arguments on complex subjects, integrating sub-themes, developing particular points coherently, and rounding off with an appropriate and impactful conclusion.",
-        "Give clear, well-structured, and engaging presentations or speeches on complex subjects, expanding and supporting ideas with subsidiary points, reasons, relevant examples, and appropriate rhetorical devices.",
-        "Adapt style, register, and delivery to the audience and communicative purpose with sophistication."
-      ],
-      "written_interaction_skills": [
-        "Write clear, well-structured, and stylistically appropriate letters, emails, reports, or proposals on complex subjects, adapting style, tone, and register to the intended reader and purpose with sophistication and precision.",
-        "Respond effectively, persuasively, and diplomatically to complex written communications, addressing all nuances."
-      ],
-      "written_production_skills": [
-        "Write clear, well-structured, detailed, and engaging texts on complex subjects in various genres (essays, reports, articles, critiques, research papers), demonstrating command of appropriate academic, professional, or literary conventions.",
-        "Write insightful summaries, analyses, and critical reviews of professional or literary works, demonstrating advanced critical thinking.",
-        "Show controlled and sophisticated use of organizational patterns, connectors, and cohesive devices to produce coherent, elegant, and impactful text.",
-        "Employ a wide range of stylistic and rhetorical devices appropriate to the text type and communicative goal."
-      ],
-      "cultural_competence_topics": [
-        "In-depth and critical understanding of contemporary Russian society, including complex social, political, economic, and ethical issues, and their historical roots.",
-        "Critical appreciation and analysis of Russian literature (classic and contemporary), cinema, arts, philosophy, and intellectual traditions.",
-        "Ability to interpret, discuss, and critique cultural subtext, humor, irony, allusions, and socio-cultural references with insight.",
-        "Understanding of diverse cultural perspectives, regional variations, and social dynamics within Russia and the Russian-speaking world."
-      ],
-      "learning_strategies_suggestions": [
-        "Engage with a wide variety of authentic, complex, and challenging Russian texts and media from diverse fields.",
-        "Practice writing different genres of complex texts, focusing on stylistic refinement, argumentation, and rhetorical effectiveness.",
-        "Participate actively in academic or professional discussions, presentations, and debates in Russian.",
-        "Focus on advanced stylistic aspects of language, including register, tone, rhetorical devices, nuanced vocabulary, and complex syntax.",
-        "Conduct research or undertake projects requiring advanced use of the Russian language."
-      ]
+      "approximate_vocabulary_size": "",
+      "learning_outcomes": [],
+      "language_focus_topics": [],
+      "vocabulary_topics": [],
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
     },
     {
       "level_code": "C2",
       "level_name": "Мастер Слова (Master of the Word)",
-      "approximate_vocabulary_size": "approx. 15000+ words",
-      "learning_outcomes": [
-        "Understand with ease virtually everything heard or read in Russian.",
-        "Summarise information from different spoken and written Russian sources, reconstructing arguments and accounts in a coherent and nuanced presentation.",
-        "Express him/herself spontaneously, very fluently and precisely in Russian, differentiating finer shades of meaning even in more complex and sensitive situations.",
-        "Use Russian effectively, appropriately, and creatively for all social, academic, and professional purposes with a high degree of precision, style, and cultural attunement."
-      ],
-      "language_focus_topics": [
-        "Complete mastery of all Russian grammatical structures, including rare, complex, archaic, and literary forms, and their stylistic implications.",
-        "Sophisticated and creative use of syntax for stylistic effect, emphasis, nuance, and rhetorical impact.",
-        "Full command of all moods and their subtle applications in expressing complex hypothetical reasoning, subjective stance, or politeness.",
-        "Nuanced understanding and application of aspectual distinctions, including secondary imperfectivization and complex aspectual chains.",
-        "Advanced and flexible use of nominalization, participial constructions (including absolute constructions), and infinitive clauses for sophisticated, concise, and elegant expression.",
-        "Complete control over a vast range of discourse markers, conjunctions, and cohesive devices to create highly articulate, fluent, logically structured, and stylistically varied texts and speech of any genre and complexity.",
-        "Understanding, appreciation, and creative use of a wide array of rhetorical figures and stylistic devices common in Russian literature, formal discourse, journalism, and oratory.",
-        "Ability to analyze, deconstruct, explain, and manipulate complex grammatical structures encountered in any authentic Russian text or discourse with expert precision."
-      ],
-      "vocabulary_topics": [
-        "Extensive, profound, and dynamic vocabulary approaching that of an educated native Russian speaker, including low-frequency words, specialized terminology across diverse academic and professional fields, and neologisms.",
-        "Full command of idiomatic language: idioms, proverbs, colloquialisms, cultural sayings, and fixed expressions, with a deep understanding of their origins, evolution, connotations, and appropriate nuanced usage in various contexts.",
-        "Ability to understand, use, and differentiate very fine shades of meaning, connotations, and register for virtually any lexical item, including formal, literary, specialized, historical, and archaic vocabulary.",
-        "Mastery of word formation processes, including understanding of Old Church Slavonic and other historical influences, to interpret and creatively use complex words.",
-        "Vocabulary for discussing abstract, philosophical, scientific, literary, artistic, and highly specialized topics with precision, depth, eloquence, and originality.",
-        "Appreciation and understanding of etymology and semantic evolution of Russian words, including influences from other languages and historical linguistic developments.",
-        "Recognition, understanding, and appropriate use or interpretation of a wide range of regionalisms, dialectal features, and sociolects within the Russian-speaking world."
-      ],
-      "pronunciation_focus_topics": [
-        "Native-like or near-native pronunciation, intonation, stress, and rhythm across all registers and styles of Russian, with effortless control and naturalness.",
-        "Ability to subtly, effectively, and creatively vary prosody to convey complex attitudes, emotions, irony, humor, and other pragmatic meanings with native-like precision and naturalness.",
-        "Effortless and natural handling of all aspects of connected speech, even at rapid native speed, in noisy environments, or with overlapping speech.",
-        "Ability to understand and, if desired, accurately reproduce or playfully imitate various regional Russian accents and sociolectal variations with high fidelity and cultural awareness."
-      ],
-      "listening_comprehension_skills": [
-        "Understand any kind of spoken Russian, whether live or broadcast, even when delivered at fast native speed, with significant background noise, multiple speakers, or on unfamiliar, abstract, or highly specialized topics, including dialectal variations.",
-        "Follow complex interactions between multiple speakers in group discussions, debates, or fast-paced conversations, identifying subtle cues, implicit meanings, speaker intentions, interpersonal dynamics, and cultural undertones.",
-        "Appreciate stylistic nuances, register shifts, irony, humor, sarcasm, and implicit meaning in any spoken discourse, including culturally specific references and wordplay."
-      ],
-      "reading_comprehension_skills": [
-        "Understand and critically interpret all forms of written Russian, including abstract, structurally or linguistically complex texts such as legal documents, academic treatises, specialized scientific articles, and literary works from various periods (including pre-reform orthography for historical texts).",
-        "Appreciate fine distinctions of style, tone, authorial intent, narrative technique, and literary or rhetorical devices across genres and historical periods.",
-        "Read and understand texts from different historical periods and diverse cultural contexts within the Russian-speaking world, including texts with significant linguistic or stylistic challenges."
-      ],
-      "spoken_interaction_skills": [
-        "Take part effortlessly, fluently, engagingly, and often leadingly in any conversation or discussion, using idiomatic expressions, colloquialisms, and cultural references naturally, appropriately, and often creatively or humorously.",
-        "Express him/herself with precision, eloquence, and charisma, differentiating finer shades of meaning, and reformulating ideas to overcome any communication difficulty smoothly, imperceptibly, and effectively.",
-        "Argue a complex case, negotiate, persuade, mediate, and lead discussions effectively, diplomatically, and often inspirationally in formal and informal settings, adapting strategies dynamically and with cultural astuteness.",
-        "Adapt language, style, and communicative strategies appropriately and dynamically to any audience, context, and purpose with complete flexibility and sophistication."
-      ],
-      "spoken_production_skills": [
-        "Present a clear, smoothly-flowing, well-structured, engaging, and often memorable description, argument, or narrative in an appropriate and compelling style on any complex subject, demonstrating depth of thought and originality.",
-        "Develop points cohesively, logically, and persuasively, with masterful use of organizational patterns, a wide range of sophisticated cohesive devices, and impactful rhetorical strategies.",
-        "Deliver presentations, lectures, or speeches with clarity, precision, eloquence, charisma, and engaging style, adapting to audience feedback, managing questions adeptly, and potentially inspiring action or thought.",
-        "Use rhetorical devices effectively, creatively, and with significant impact."
-      ],
-      "written_interaction_skills": [
-        "Write any type of correspondence (letters, emails, messages, formal submissions, public statements, diplomatic notes) with complete command of style, tone, register, persuasive techniques, and cultural nuances appropriate to the recipient, purpose, and context, achieving specific communicative goals.",
-        "Engage in complex written discussions, collaborations, or negotiations, conveying nuanced ideas effectively, persuasively, and diplomatically."
-      ],
-      "written_production_skills": [
-        "Write clear, smoothly-flowing, complex, sophisticated, and potentially publishable texts (essays, research papers, reports, articles, reviews, creative writing, literary criticism, policy documents) in an appropriate and effective style, demonstrating originality, critical insight, intellectual depth, and stylistic finesse.",
-        "Select and use a vast range of linguistic resources to express ideas precisely, persuasively, artistically, or humorously, with stylistic versatility and creativity.",
-        "Demonstrate mastery of organizational patterns, paragraphing, and cohesive devices to ensure clarity, coherence, logical flow, and aesthetic impact at the highest professional or academic level.",
-        "Write insightful summaries, critiques, or syntheses of complex information from multiple sources, adding original perspectives, critical analysis, and demonstrating intellectual leadership."
-      ],
-      "cultural_competence_topics": [
-        "Profound, nuanced, critical, and comparative understanding of the diversity of Russian and Russophone cultures, societies, histories, arts, literatures, philosophical traditions, and intellectual movements, including their evolution, global impact, and contemporary manifestations.",
-        "Ability to function with complete ease, cultural sensitivity, adaptability, and often leadership in any Russian-speaking environment or context, navigating complex social dynamics with astuteness and empathy.",
-        "Capacity to act as a cultural interpreter, mediator, or bridge, explaining subtle and complex cultural nuances effectively and insightfully to diverse audiences, fostering cross-cultural understanding.",
-        "Deep and critical understanding of contemporary socio-political issues, cultural debates, intellectual currents, and historical narratives in Russia and the wider Russophone world, with the ability to engage critically, contribute meaningfully, and offer informed, original perspectives."
-      ],
-      "learning_strategies_suggestions": [
-        "Maintain and expand language proficiency through continuous, high-level engagement with diverse and complex authentic Russian materials, interactions, and creative endeavors, often in a professional or academic capacity.",
-        "Engage in original research, critical analysis, or creative production in Russian (e.g., writing articles, books, giving lectures, participating in high-level policy discussions).",
-        "Contribute to Russian-language discussions, publications, academic conferences, or professional activities at a leadership or expert level.",
-        "Reflect critically on and refine personal language use for optimal effectiveness, stylistic appropriateness, persuasive power, and creative expression, possibly through teaching, mentoring, or public intellectual work.",
-        "Explore highly specialized areas of interest in great depth in Russian, potentially contributing original research, analysis, or creative work that pushes the boundaries of the field."
-      ]
+      "approximate_vocabulary_size": "",
+      "learning_outcomes": [],
+      "language_focus_topics": [],
+      "vocabulary_topics": [],
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
     }
   ]
 }

@@ -1,6 +1,8 @@
 // Traductions italiennes
 const itTranslations = {
-  languageNameNative: 'Italiano', // Added native name
+  languageNameNative: 'Italiano',
+  languageNameInEnglish: 'Italian',
+  languageCode: 'it',
   dayNames: {
       1: "Parole di base",
       2: "Chi sei?",
