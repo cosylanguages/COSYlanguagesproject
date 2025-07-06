@@ -17,7 +17,11 @@ const a0_french_vocabulary = {
     { "term": "Mademoiselle", "definition": "Titre de civilité pour une jeune femme non mariée.", "gender": "f", "example": "Bonjour Mademoiselle.", "notes": "Moins courant maintenant, 'Madame' est souvent utilisé pour toutes les femmes adultes." },
     { "term": "Comment allez-vous ?", "definition": "Question sur l'état de santé ou le moral (formel).", "gender": null, "example": "Bonjour Monsieur, comment allez-vous ?", "notes": "" },
     { "term": "Ça va.", "definition": "Réponse simple pour dire que tout va bien.", "gender": null, "example": "Ça va, merci.", "notes": "Réponse simple." },
-    { "term": "Pardon / Excusez-moi", "definition": "Pour s'excuser ou attirer l'attention.", "gender": null, "example": "Pardon, je n'ai pas compris.", "notes": "" }
+    { "term": "Pardon / Excusez-moi", "definition": "Pour s'excuser ou attirer l'attention.", "gender": null, "example": "Pardon, je n'ai pas compris.", "notes": "" },
+    { "term": "De rien", "definition": "Réponse à 'merci'.", "gender": null, "example": "Merci ! - De rien.", "notes": "Aussi 'Je vous en prie' (formel) / 'Je t'en prie' (informel)." },
+    { "term": "À bientôt", "definition": "Formule pour dire au revoir quand on pense revoir la personne prochainement.", "gender": null, "example": "Au revoir, à bientôt !", "notes": "" },
+    { "term": "À demain", "definition": "Formule pour dire au revoir quand on pense revoir la personne le lendemain.", "gender": null, "example": "Bonne soirée, à demain.", "notes": "" },
+    { "term": "Enchanté(e)", "definition": "Formule de politesse quand on rencontre quelqu'un pour la première fois.", "gender": null, "example": "Je m'appelle Marc. - Enchantée, je suis Sophie.", "notes": "S'accorde en genre: enchanté (m), enchantée (f)." }
   ],
   "Nombres et Couleurs de base": [
     { "term": "zéro", "definition": "Le chiffre 0.", "gender": "m", "example": "Il fait zéro degré.", "notes": "" },
@@ -32,6 +36,8 @@ const a0_french_vocabulary = {
     { "term": "huit", "definition": "Le chiffre 8.", "gender": null, "example": "Huit euros.", "notes": "" },
     { "term": "neuf", "definition": "Le chiffre 9.", "gender": null, "example": "Neuf vies.", "notes": "" },
     { "term": "dix", "definition": "Le chiffre 10.", "gender": null, "example": "Dix commandements.", "notes": "" },
+    { "term": "onze", "definition": "Le chiffre 11.", "gender": "m", "example": "Il y a onze joueurs.", "notes": "" },
+    { "term": "douze", "definition": "Le chiffre 12.", "gender": "m", "example": "Douze mois dans l'année.", "notes": "" },
     { "term": "rouge", "definition": "Couleur du sang, des coquelicots.", "gender": null, "example": "La pomme est rouge.", "notes": "Adjectif, invariable au singulier m/f pour certaines couleurs." },
     { "term": "bleu(e)", "definition": "Couleur du ciel par temps clair.", "gender": null, "example": "Le ciel est bleu. Une voiture bleue.", "notes": "Féminin: bleue." },
     { "term": "vert(e)", "definition": "Couleur de l'herbe, des feuilles.", "gender": null, "example": "Le jardin est vert. Une feuille verte.", "notes": "Féminin: verte." },
@@ -41,17 +47,38 @@ const a0_french_vocabulary = {
     { "term": "orange", "definition": "Couleur du fruit du même nom.", "gender": null, "example": "Un ballon orange.", "notes": "Invariable comme adjectif de couleur." },
     { "term": "rose", "definition": "Couleur de certaines fleurs, du bonbon.", "gender": null, "example": "Une fleur rose.", "notes": "Invariable comme adjectif de couleur." },
     { "term": "gris(e)", "definition": "Couleur entre le blanc et le noir.", "gender": null, "example": "Un ciel gris. Une souris grise.", "notes": "Féminin: grise." },
-    { "term": "marron", "definition": "Couleur de la terre, du chocolat.", "gender": null, "example": "Des chaussures marron.", "notes": "Invariable comme adjectif de couleur." }
+    { "term": "marron", "definition": "Couleur de la terre, du chocolat.", "gender": null, "example": "Des chaussures marron.", "notes": "Invariable comme adjectif de couleur." },
+    { "term": "violet(te)", "definition": "Couleur entre le bleu et le rouge.", "gender": null, "example": "Une fleur violette. Un pull violet.", "notes": "Féminin: violette." }
   ],
   "Objets de base et Animaux": [
     { "term": "un livre", "definition": "Ensemble de pages écrites ou imprimées.", "gender": "m", "example": "Je lis un livre.", "notes": "" },
     { "term": "un stylo", "definition": "Instrument pour écrire à l'encre.", "gender": "m", "example": "J'écris avec un stylo.", "notes": "" },
+    { "term": "un crayon", "definition": "Instrument pour écrire ou dessiner, souvent en bois avec une mine de graphite.", "gender": "m", "example": "Je dessine avec un crayon.", "notes": "" },
     { "term": "une table", "definition": "Meuble avec un plateau et des pieds.", "gender": "f", "example": "Le livre est sur la table.", "notes": "" },
     { "term": "une chaise", "definition": "Siège avec un dossier pour une personne.", "gender": "f", "example": "Asseyez-vous sur la chaise.", "notes": "" },
+    { "term": "une porte", "definition": "Ouverture mobile permettant d'entrer ou de sortir d'un lieu.", "gender": "f", "example": "Ouvre la porte, s'il te plaît.", "notes": "" },
+    { "term": "une fenêtre", "definition": "Ouverture vitrée dans un mur pour laisser entrer la lumière et voir à l'extérieur.", "gender": "f", "example": "Regarde par la fenêtre.", "notes": "" },
+    { "term": "un sac", "definition": "Contenant souple pour transporter des objets.", "gender": "m", "example": "J'ai un sac à dos.", "notes": "" },
+    { "term": "un téléphone", "definition": "Appareil pour communiquer à distance.", "gender": "m", "example": "Mon téléphone est dans mon sac.", "notes": "" },
     { "term": "un chat", "definition": "Petit animal domestique félin.", "gender": "m", "example": "Mon chat s'appelle Minou.", "notes": "" },
-    { "term": "un chien", "definition": "Animal domestique canin.", "gender": "m", "example": "Le chien aboie.", "notes": "" }
+    { "term": "un chien", "definition": "Animal domestique canin.", "gender": "m", "example": "Le chien aboie.", "notes": "" },
+    { "term": "un oiseau", "definition": "Animal vertébré à plumes, avec des ailes et un bec.", "gender": "m", "example": "L'oiseau chante le matin.", "notes": "" },
+    { "term": "un poisson", "definition": "Animal aquatique vertébré, respirant par des branchies.", "gender": "m", "example": "J'ai un poisson rouge.", "notes": "" }
   ],
-  "Verbes essentiels (être et avoir)": [
+  "Famille et Personnes": [
+    { "term": "un homme", "definition": "Personne de sexe masculin, adulte.", "gender": "m", "example": "C'est un homme grand.", "notes": "" },
+    { "term": "une femme", "definition": "Personne de sexe féminin, adulte.", "gender": "f", "example": "C'est une femme intelligente.", "notes": "" },
+    { "term": "un garçon", "definition": "Enfant ou jeune personne de sexe masculin.", "gender": "m", "example": "Le garçon joue au ballon.", "notes": "" },
+    { "term": "une fille", "definition": "Enfant ou jeune personne de sexe féminin.", "gender": "f", "example": "La fille dessine.", "notes": "" },
+    { "term": "un ami", "definition": "Personne avec qui on a des liens d'affection (masculin).", "gender": "m", "example": "C'est mon meilleur ami.", "notes": "" },
+    { "term": "une amie", "definition": "Personne avec qui on a des liens d'affection (féminin).", "gender": "f", "example": "Elle est une bonne amie.", "notes": "" },
+    { "term": "la famille", "definition": "Ensemble des personnes unies par un lien de parenté ou d'alliance.", "gender": "f", "example": "J'aime ma famille.", "notes": "" },
+    { "term": "le père", "definition": "Parent de sexe masculin.", "gender": "m", "example": "Mon père s'appelle Paul.", "notes": "Informel: papa." },
+    { "term": "la mère", "definition": "Parent de sexe féminin.", "gender": "f", "example": "Ma mère est gentille.", "notes": "Informel: maman." },
+    { "term": "un frère", "definition": "Garçon ou homme ayant les mêmes parents qu'une autre personne.", "gender": "m", "example": "J'ai deux frères.", "notes": "" },
+    { "term": "une sœur", "definition": "Fille ou femme ayant les mêmes parents qu'une autre personne.", "gender": "f", "example": "Ma sœur est plus jeune.", "notes": "" }
+  ],
+  "Verbes essentiels (être, avoir et actions de base)": [
     { "term": "être", "definition": "Verbe exprimant l'existence, l'état.", "gender": null, "example": "Je suis content.", "notes": "Verbe irrégulier." },
     { "term": "je suis", "definition": "Première personne du singulier du verbe être au présent.", "gender": null, "example": "Je suis étudiant.", "notes": "" },
     { "term": "tu es", "definition": "Deuxième personne du singulier du verbe être au présent (informel).", "gender": null, "example": "Tu es gentil.", "notes": "" },
@@ -71,7 +98,37 @@ const a0_french_vocabulary = {
     { "term": "nous avons", "definition": "Première personne du pluriel du verbe avoir au présent.", "gender": null, "example": "Nous avons une maison.", "notes": "" },
     { "term": "vous avez", "definition": "Deuxième personne du pluriel ou formel singulier du verbe avoir au présent.", "gender": null, "example": "Vous avez des questions ?", "notes": "" },
     { "term": "ils ont", "definition": "Troisième personne du pluriel (masculin ou mixte) du verbe avoir au présent.", "gender": null, "example": "Ils ont des vélos.", "notes": "" },
-    { "term": "elles ont", "definition": "Troisième personne du pluriel (féminin) du verbe avoir au présent.", "gender": null, "example": "Elles ont des idées.", "notes": "" }
+    { "term": "elles ont", "definition": "Troisième personne du pluriel (féminin) du verbe avoir au présent.", "gender": null, "example": "Elles ont des idées.", "notes": "" },
+    { "term": "parler", "definition": "Action de s'exprimer avec des mots.", "gender": null, "example": "Je parle français.", "notes": "Verbe régulier en -er." },
+    { "term": "aimer", "definition": "Éprouver de l'affection, de l'amour pour quelqu'un ou quelque chose.", "gender": null, "example": "J'aime le chocolat.", "notes": "Verbe régulier en -er." },
+    { "term": "habiter", "definition": "Avoir son domicile quelque part.", "gender": null, "example": "J'habite à Paris.", "notes": "Verbe régulier en -er. 'h' est muet." },
+    { "term": "regarder", "definition": "Porter son regard sur quelque chose ou quelqu'un.", "gender": null, "example": "Je regarde la télévision.", "notes": "Verbe régulier en -er." },
+    { "term": "écouter", "definition": "Prêter attention pour entendre.", "gender": null, "example": "J'écoute de la musique.", "notes": "Verbe régulier en -er." }
+  ],
+  "Nourriture et Boissons de base": [
+    { "term": "le pain", "definition": "Aliment de base fait de farine, d'eau et de levure, cuit au four.", "gender": "m", "example": "Je mange du pain.", "notes": "" },
+    { "term": "l'eau", "definition": "Liquide transparent, inodore et insipide, essentiel à la vie.", "gender": "f", "example": "Je bois de l'eau.", "notes": "Commence par une voyelle, donc l'." },
+    { "term": "le lait", "definition": "Liquide blanc nutritif produit par les mammifères femelles.", "gender": "m", "example": "Le bébé boit du lait.", "notes": "" },
+    { "term": "le fruit", "definition": "Produit comestible des plantes, souvent sucré.", "gender": "m", "example": "J'aime manger un fruit après le repas.", "notes": "" },
+    { "term": "la pomme", "definition": "Fruit du pommier, rond, à peau verte, jaune ou rouge.", "gender": "f", "example": "Une pomme par jour éloigne le médecin.", "notes": "" },
+    { "term": "la banane", "definition": "Fruit allongé, à peau jaune, du bananier.", "gender": "f", "example": "Les singes aiment les bananes.", "notes": "" },
+    { "term": "le fromage", "definition": "Aliment fait à partir de lait caillé.", "gender": "m", "example": "La France est célèbre pour son fromage.", "notes": "" }
+  ],
+  "Lieux très communs": [
+    { "term": "la maison", "definition": "Bâtiment d'habitation.", "gender": "f", "example": "Je rentre à la maison.", "notes": "" },
+    { "term": "l'école", "definition": "Établissement où l'on dispense un enseignement collectif.", "gender": "f", "example": "Les enfants vont à l'école.", "notes": "Commence par une voyelle, donc l'." },
+    { "term": "le magasin", "definition": "Lieu où l'on vend des marchandises.", "gender": "m", "example": "Je vais au magasin pour acheter du pain.", "notes": "" },
+    { "term": "le parc", "definition": "Grand jardin public.", "gender": "m", "example": "Nous jouons dans le parc.", "notes": "" }
+  ],
+  "Adjectifs descriptifs simples": [
+    { "term": "grand(e)", "definition": "De dimension supérieure à la moyenne.", "gender": null, "example": "Un grand arbre. Une grande maison.", "notes": "Féminin: grande." },
+    { "term": "petit(e)", "definition": "De dimension inférieure à la moyenne.", "gender": null, "example": "Un petit chat. Une petite voiture.", "notes": "Féminin: petite." },
+    { "term": "bon(ne)", "definition": "Qui a des qualités positives ; agréable au goût.", "gender": null, "example": "Un bon livre. Une bonne idée. C'est bon !", "notes": "Féminin: bonne." },
+    { "term": "mauvais(e)", "definition": "Qui a des qualités négatives ; désagréable au goût.", "gender": null, "example": "Un mauvais film. Une mauvaise nouvelle.", "notes": "Féminin: mauvaise." },
+    { "term": "beau / bel / belle", "definition": "Qui plaît par son aspect esthétique.", "gender": null, "example": "Un beau paysage. Un bel homme. Une belle fleur.", "notes": "Masculin: beau (devant consonne), bel (devant voyelle ou h muet). Féminin: belle." },
+    { "term": "joli(e)", "definition": "Agréable à voir, mignon.", "gender": null, "example": "Un joli bouquet. Une jolie robe.", "notes": "Féminin: jolie." },
+    { "term": "content(e)", "definition": "Qui éprouve de la joie, de la satisfaction.", "gender": null, "example": "Je suis content. Elle est contente.", "notes": "Féminin: contente." },
+    { "term": "triste", "definition": "Qui éprouve du chagrin, de la mélancolie.", "gender": null, "example": "Il est triste aujourd'hui.", "notes": "Invariable m/f." }
   ]
 };
 
