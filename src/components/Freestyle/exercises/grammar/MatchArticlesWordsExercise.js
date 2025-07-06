@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { loadGenderGrammarData } from '../../../../utils/exerciseDataService';
-import { useLatinizationContext } from '../../../../contexts/LatinizationContext';
+// import { useLatinizationContext } from '../../../../contexts/LatinizationContext'; // Commented out: isLatinized from here is unused
 import useLatinization from '../../../../hooks/useLatinization';
 import { shuffleArray } from '../../../../utils/arrayUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
@@ -21,7 +21,7 @@ const MatchArticlesWordsExercise = ({ language, days, exerciseKey }) => {
   const [numCorrectMatches, setNumCorrectMatches] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
 
-  const { isLatinized } = useLatinizationContext();
+  // const { isLatinized } = useLatinizationContext(); // ESLint: 'isLatinized' is assigned a value but never used.
   const getLatinizedText = useLatinization;
 
   const NUM_PAIRS_TO_DISPLAY = 4;
@@ -115,7 +115,7 @@ const MatchArticlesWordsExercise = ({ language, days, exerciseKey }) => {
       const isCorrectMatch = actualPairs.some(pair => 
         pair.article === currentArticleValue && pair.word === currentWordValue
       );
-      const itemId = `gender_${currentWordValue}_${currentArticleValue}`;
+      // const itemId = `gender_${currentWordValue}_${currentArticleValue}`; // ESLint: 'itemId' is assigned a value but never used.
 
       if (isCorrectMatch) {
         setFeedback({ message: 'Correct Match!', type: 'correct' });
@@ -133,7 +133,7 @@ const MatchArticlesWordsExercise = ({ language, days, exerciseKey }) => {
       setSelectedArticle(null);
       setSelectedWord(null);
     }
-  }, [selectedArticle, selectedWord, actualPairs, language]);
+  }, [selectedArticle, selectedWord, actualPairs]); // Removed 'language' as getLatinizedText not used here
 
   useEffect(() => {
     if (actualPairs.length > 0 && numCorrectMatches === actualPairs.length && !isRevealed) {
