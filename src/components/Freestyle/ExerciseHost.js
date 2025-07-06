@@ -20,10 +20,10 @@ import MatchImageWordExercise from './exercises/vocabulary/MatchImageWordExercis
 
 // Grammar Exercise Components
 // import ArticleWordExercise from './exercises/grammar/ArticleWordExercise'; // Not currently in map
-import MatchArticlesWordsExercise from './exercises/grammar/MatchArticlesWordsExercise'; // Not currently in map
+// import MatchArticlesWordsExercise from './exercises/grammar/MatchArticlesWordsExercise'; // Not currently in map
 import SelectArticleExercise from './exercises/grammar/SelectArticleExercise';
 import TypeVerbExercise from './exercises/grammar/TypeVerbExercise'; // Not currently in map, but should be
-import MatchVerbsPronounsExercise from './exercises/grammar/MatchVerbsPronounsExercise'; // Not currently in map
+// import MatchVerbsPronounsExercise from './exercises/grammar/MatchVerbsPronounsExercise'; // Not currently in map
 import FillGapsExercise from './exercises/grammar/FillGapsExercise'; // Not currently in map
 import WordOrderExercise from './exercises/grammar/WordOrderExercise';
 
