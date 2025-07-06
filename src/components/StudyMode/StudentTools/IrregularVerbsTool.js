@@ -58,11 +58,8 @@ const IrregularVerbsTool = () => {
                 }
             } catch (err) { // This will now primarily catch non-404 fetch errors or JSON parsing errors
                 console.error(`Error loading irregular verbs for ${currentUILanguage} from ${filePath}:`, err);
-                // Only set general error if not already handled as noDataForLanguage
-                // (though 404s are now handled before they would throw to here)
-                if (!noDataForLanguage) { 
-                    setError(err.message);
-                }
+                // If we are in this catch, it's a non-404 error, so set the general error.
+                setError(err.message);
                 setVerbs([]);
             } finally {
                 setIsLoading(false);
@@ -72,7 +69,7 @@ const IrregularVerbsTool = () => {
         if (currentUILanguage) {
             loadVerbs();
         }
-    }, [currentUILanguage, t]); // noDataForLanguage is an outcome, not an input dependency for this effect.
+    }, [currentUILanguage, t]);
 
     const filteredVerbs = useMemo(() => {
         if (!searchTerm) return verbs;
