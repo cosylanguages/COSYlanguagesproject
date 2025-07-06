@@ -91,7 +91,7 @@ export function I18nProvider({ children }) {
                 if (!placeholder || /^\d+$/.test(placeholder)) continue;
                 const value = options[placeholder];
                 if (value === undefined || value === null) continue;
-                const escapedPlaceholder = placeholder.replace(/[.*+?^${}()|[\]\]/g, '\$&');
+                const escapedPlaceholder = placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Corrected regex
                 try {
                     tempString = tempString.replace(new RegExp(`{${escapedPlaceholder}}`, 'g'), String(value));
                 } catch (e) {
