@@ -282,7 +282,7 @@ export default {
   "exercises.placeholder.message1": "This is a placeholder for the <em>{name}</em> exercise.", // Placeholder
   "exercises.placeholder.message2": "Implementation is pending.", // Placeholder
   "errors.exerciseHost.title": "Exercise Error", // Placeholder
-  "errors.exerciseHost.notFound": "Exercise type "<strong>{subPracticeType}</strong>" not found or not yet implemented.", // Placeholder
+  "errors.exerciseHost.notFound": 'Exercise type "<strong>{subPracticeType}</strong>" not found or not yet implemented.', // Placeholder
   "errors.exerciseHost.suggestion": "Please check the mapping in ExerciseHost.js or select another exercise.", // Placeholder
   "exercises.selectExerciseHint": "Please select an exercise type above.", // Placeholder
 
