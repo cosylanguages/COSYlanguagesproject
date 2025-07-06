@@ -29,7 +29,16 @@
       "written_interaction_skills": [],
       "written_production_skills": [],
       "cultural_competence_topics": [],
-      "learning_strategies_suggestions": []
+      "learning_strategies_suggestions": [],
+      "example_conversation_starters": [
+        "Bonjour ! Comment tu t'appelles ?",
+        "Je m'appelle [Nom]. Et toi ?",
+        "Quelle est ta couleur préférée ?",
+        "Tu as combien de stylos ?",
+        "Au revoir !"
+      ],
+      "example_text_files": [],
+      "example_exercise_files": []
     },
     {
       "level_code": "A1",
@@ -133,7 +142,18 @@
         "Use language learning apps for vocabulary and basic phrases.",
         "Listen to simple French children's songs.",
         "Practice pronunciation with audio resources."
-      ]
+      ],
+      "example_conversation_starters": [
+        "Salut ! Ça va ? Tu t'appelles comment ?",
+        "Tu as des frères ou des sœurs ?",
+        "Qu'est-ce que tu aimes manger ?",
+        "Où habites-tu ? Tu aimes ta ville ?",
+        "Quel temps fait-il aujourd'hui ?",
+        "Qu'est-ce que tu fais le week-end ?",
+        "Tu peux me décrire ta famille / ton meilleur ami / ta maison ?"
+      ],
+      "example_text_files": [],
+      "example_exercise_files": []
     },
     {
       "level_code": "A2",
@@ -233,7 +253,18 @@
         "Listen to A2-level French podcasts or short news segments.",
         "Practice speaking with a partner or tutor, focusing on past and future events.",
         "Watch short French videos or cartoons with subtitles."
-      ]
+      ],
+      "example_conversation_starters": [
+        "Qu'est-ce que tu as fait hier soir / le week-end dernier ?",
+        "Qu'est-ce que tu vas faire demain / pendant les vacances ?",
+        "Parle-moi de ton travail ou de tes études.",
+        "Comment est-ce que tu fêtes [nom d'une fête française/locale] ?",
+        "Si tu pouvais voyager, où irais-tu et pourquoi ?",
+        "Tu te sens bien ? Qu'est-ce qui ne va pas ?",
+        "Quel est ton plat préféré ? Comment on le prépare ?"
+      ],
+      "example_text_files": [],
+      "example_exercise_files": []
     },
     {
       "level_code": "B1",
@@ -337,7 +368,18 @@
         "Watch French TV shows or movies with French subtitles.",
         "Engage in conversations with native speakers, focusing on expressing and justifying opinions.",
         "Keep a journal in French to practice narration and description."
-      ]
+      ],
+      "example_conversation_starters": [
+        "Qu'est-ce que tu penses de [sujet d'actualité simple] ?",
+        "Raconte-moi un voyage intéressant que tu as fait.",
+        "Quels sont les avantages et les inconvénients de [la technologie / vivre en ville / etc.] ?",
+        "Si tu gagnais au loto, qu'est-ce que tu ferais ?",
+        "Comment peut-on protéger l'environnement au quotidien ?",
+        "Quel livre ou film recommandes-tu et pourquoi ?",
+        "Comment décrirais-tu le système éducatif de ton pays ?"
+      ],
+      "example_text_files": [],
+      "example_exercise_files": []
     },
     {
       "level_code": "B2",
@@ -442,7 +484,17 @@
         "Actively participate in debates and discussions in French on a variety of topics.",
         "Focus on understanding and using nuances in meaning, idiomatic expressions, and appropriate register.",
         "Practice writing different types of texts (essays, reports, formal letters)."
-      ]
+      ],
+      "example_conversation_starters": [
+        "Selon toi, quels sont les plus grands défis sociaux actuels et comment pourrait-on les aborder ?",
+        "Discutez de l'impact de [une technologie spécifique] sur la société.",
+        "Comment les médias influencent-ils l'opinion publique ? Donnez des exemples.",
+        "Quel rôle l'art et la culture jouent-ils dans la société contemporaine ?",
+        "Analysez les causes et conséquences d'un événement historique important.",
+        "Débat: Pour ou contre [une question éthique controversée, ex: l'intelligence artificielle dans la prise de décision]."
+      ],
+      "example_text_files": [],
+      "example_exercise_files": []
     },
     {
       "level_code": "C1",
@@ -514,6 +566,36 @@
         "Engage with a wide variety of authentic materials (literature, academic papers, specialized media).",
         "Seek opportunities for high-level discussion and debate.",
         "Focus on refining style, register, and precision in language use."
+      ],
+      "example_conversation_starters": [
+        "Quelle est votre perspective sur [un enjeu philosophique ou sociétal complexe, e.g., la notion de progrès, l'identité culturelle à l'ère de la mondialisation] ?",
+        "Analysez de manière critique [une œuvre littéraire ou artistique marquante], en considérant son contexte et sa réception.",
+        "Comment les structures de pouvoir influencent-elles le discours public sur [un sujet sensible] ?",
+        "Développez une argumentation nuancée concernant les implications éthiques de [une avancée scientifique ou technologique récente].",
+        "Comparez et contrastez les approches de différents penseurs/écoles de pensée sur [un concept abstrait]."
+      ],
+      "example_text_files": [],
+      "example_exercise_files": [],
+      "example_text_types": [
+        "Authentic, unabridged literary texts (novels, plays, poetry) with complex themes, styles, and historical/cultural context.",
+        "Academic articles, research papers, and specialized publications from various fields.",
+        "In-depth journalistic reports, editorials, and opinion pieces from quality newspapers and magazines (e.g., Le Monde Diplomatique, L'Obs).",
+        "Formal speeches, lectures, and conference presentations on abstract or specialized topics.",
+        "Legal documents, official reports, and complex administrative texts.",
+        "Texts employing sophisticated rhetoric, irony, satire, or nuanced argumentation.",
+        "Transcripts of debates, round-table discussions, or interviews with experts."
+      ],
+      "example_exercise_types": [
+        "Critical analysis of literary texts: identifying stylistic devices, interpreting symbolism, discussing authorial intent and socio-historical context.",
+        "Writing academic essays, research summaries, or critical reviews demonstrating advanced analytical and argumentative skills.",
+        "Synthesizing information from multiple complex sources (written and spoken) to produce a coherent, well-structured report or presentation.",
+        "Delivering persuasive oral presentations on complex topics, adapting style and content to the audience and handling challenging questions.",
+        "Participating in formal debates or negotiations, employing sophisticated argumentation and rhetorical strategies.",
+        "Advanced translation exercises (French to native language and vice-versa) focusing on nuance, style, and register.",
+        "Identifying and analyzing different registers, tones, and implicit meanings in a variety of authentic texts and discourses.",
+        "Exercises on recognizing and using sophisticated idiomatic expressions, proverbs, and cultural allusions appropriately.",
+        "Tasks requiring creative language use, such as writing pastiches, parodies, or sophisticated dialogues.",
+        "Editing and proofreading complex texts for grammatical accuracy, stylistic consistency, and overall coherence."
       ]
     },
     {
@@ -574,6 +656,37 @@
         "Maintain language skills through continuous immersion and use in diverse contexts.",
         "Engage in intellectually stimulating activities in French (e.g., advanced studies, professional work).",
         "Explore niche areas of French language and culture."
+      ],
+      "example_conversation_starters": [
+        "Engagez une discussion sur les subtilités de la traduction de l'humour ou de la poésie entre le français et [autre langue].",
+        "Proposez une analyse stylistique comparée de deux auteurs francophones de périodes ou de genres différents, en relevant les particularités de leur écriture.",
+        "Débattez des limites de la liberté d'expression dans un contexte multiculturel complexe, en utilisant un langage précis et en anticipant les contre-arguments.",
+        "Comment la langue française a-t-elle évolué pour refléter les changements sociétaux au cours du dernier siècle ? Illustrez avec des exemples précis.",
+        "Présentez et défendez une thèse originale sur un aspect peu exploré de [un domaine de votre expertise en français]."
+      ],
+      "example_text_files": [],
+      "example_exercise_files": [],
+      "example_text_types": [
+        "Highly specialized academic papers, research monographs, and theoretical treatises.",
+        "Classic and contemporary literary works of significant complexity and cultural depth, including poetry and avant-garde texts.",
+        "Philosophical essays, critical theory, and other abstract intellectual discourses.",
+        "Complex legal texts, international treaties, and detailed policy documents.",
+        "Historical documents and archival materials requiring interpretation.",
+        "Texts involving subtle humor, wordplay, irony, and multiple layers of meaning.",
+        "Speeches and writings by prominent intellectuals or historical figures, requiring contextual understanding.",
+        "Linguistically diverse materials, including texts with regional dialects or historical sociolects (for analysis)."
+      ],
+      "example_exercise_types": [
+        "Producing original research or extended essays demonstrating mastery of academic French and critical thought.",
+        "Comparative literary analysis of multiple complex works, potentially across different periods or genres.",
+        "Crafting sophisticated written pieces in various genres (e.g., formal proposals, persuasive manifestos, satirical articles, detailed critiques).",
+        "Delivering master-level oral presentations, lectures, or participating in high-level academic/professional panels with articulate and nuanced contributions.",
+        "Leading and moderating complex discussions or debates, skillfully managing diverse viewpoints and synthesizing arguments.",
+        "Professional translation and interpretation tasks requiring exceptional linguistic precision and cultural sensitivity (e.g., literary translation, simultaneous interpreting).",
+        "Analyzing and deconstructing rhetorical strategies in complex political, legal, or media discourses.",
+        "Tasks involving creative writing at a very high level, demonstrating stylistic versatility and originality (e.g., short stories, poetry, playwriting).",
+        "Critical discourse analysis of texts, identifying underlying ideologies, power dynamics, and cultural assumptions.",
+        "Mentoring or teaching others, explaining complex linguistic and cultural points with clarity and precision."
       ]
     }
   ]
