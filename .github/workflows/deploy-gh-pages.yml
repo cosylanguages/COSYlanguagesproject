@@ -23,9 +23,6 @@ jobs:
       - name: Build React application
         run: npm run build
 
-      - name: Copy data directory to build
-        run: cp -r public/data build/data
-
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
