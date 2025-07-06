@@ -4,7 +4,9 @@ import './LanguageSelector.css';
 import TransliterableText from '../Common/TransliterableText';
 
 const LanguageSelector = () => {
-    const { language, changeLanguage, allTranslations, currentLangKey, t } = useI18n();
+    // const { language, changeLanguage, allTranslations, currentLangKey, t } = useI18n(); // ESLint: 'language' is assigned a value but never used.
+    const { changeLanguage, allTranslations, currentLangKey, t } = useI18n();
+
 
     // Desired order of languages by popularity, using new standardized keys
     const popularLanguageOrder = [
