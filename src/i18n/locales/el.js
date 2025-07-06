@@ -317,7 +317,7 @@ export default {
   "hint_nextWordIs": "Hint: the next word is", // Placeholder
   "hint_firstWordIs": "Hint: the first word is", // Placeholder
   "noMoreHintsSlotsFull": "All slots are full. Check your answer or reset.", // Placeholder
-  "hint_correctLetterForNextSlot": "Hint: the letter <strong>%s</strong> goes in the next empty slot. It is highlighted in the pool.", // Placeholder
+  "hint_correctLetterForNextSlot": 'Hint: the letter <strong>%s</strong> goes in the next empty slot. It is highlighted in the pool.', // Placeholder
   "hint_tryMatchingThis": "Hint: try matching this word.", // Placeholder
 
   // Loading specific from other files
