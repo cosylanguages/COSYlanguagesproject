@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Or your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./ # This assumes your static files are in the root.
+                          # If they are in a 'docs' folder, change to './docs'.
+                          # If you have a build step, this should be your build output folder (e.g., './_site', './build', './public').
+          # cname: your.custom.domain.com # Uncomment if you have a custom domain
+          # publish_branch: gh-pages # Default is gh-pages, can be changed if needed
+          # keep_files: false # Set to true to keep files from previous deployments
+          # force_orphan: true # Creates a new commit history for the gh-pages branch without keeping the old history. Useful for clean deployments.
