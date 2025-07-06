@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react'; // Removed useRef
 import FreestyleInterfaceView from '../../components/Freestyle/FreestyleInterfaceView';
 import './FreestyleModePage.css';
 import { useI18n } from '../../i18n/I18nContext';
