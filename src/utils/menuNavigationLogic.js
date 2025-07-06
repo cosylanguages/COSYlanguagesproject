@@ -39,7 +39,7 @@ export function getInitialMenuState() {
 export function handleMenuSelection(currentActivePath, clickedItemKey, menuConfig) {
   const clickedItemConfig = menuConfig[clickedItemKey];
   if (!clickedItemConfig) {
-    console.warn(`[menuNavigationLogic] Clicked item key "${clickedItemKey}" not found in menuConfig.`);
+    console.warn('[menuNavigationLogic] Clicked item key "' + clickedItemKey + '" not found in menuConfig.');
     return { activePath: currentActivePath }; // No change if item not found
   }
 
@@ -246,5 +246,6 @@ export const allMenuItemsConfig = {
 //   setCurrentMenuState(newMenuState);
 // And then a VocabularyCategoryButton component would render itself based on:
 //   isVisible = isMenuItemVisible(currentMenuState.activePath, 'vocabulary', actualMenuConfig);
+
 
 ```
