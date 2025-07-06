@@ -118,7 +118,7 @@ const MatchVerbsPronounsExercise = ({ language, days, exerciseKey }) => {
         pair.pronoun === currentPronounValue && pair.form === currentFormValue
       );
       // Construct a unique ID for the specific pronoun-form pair of this verb
-      const itemId = `verbmatch_${targetVerbInfinitive}_${currentPronounValue}_${currentFormValue}`;
+      // const itemId = `verbmatch_${targetVerbInfinitive}_${currentPronounValue}_${currentFormValue}`; // ESLint: 'itemId' is assigned a value but never used.
 
       if (isCorrectMatch) {
         setFeedback({ message: t('feedback.correctMatch', 'Correct Match!'), type: 'correct' });
@@ -136,7 +136,7 @@ const MatchVerbsPronounsExercise = ({ language, days, exerciseKey }) => {
       setSelectedPronoun(null);
       setSelectedForm(null);
     }
-  }, [selectedPronoun, selectedForm, actualPairs, t, language, targetVerbInfinitive]);
+  }, [selectedPronoun, selectedForm, actualPairs, t, targetVerbInfinitive]); // language removed as getLatinizedText not used here
 
   useEffect(() => {
     if (actualPairs.length > 0 && numCorrectMatches === actualPairs.length && !isRevealed) {
