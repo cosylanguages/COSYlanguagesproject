@@ -1,5 +1,6 @@
 // Traduções portugaises
-const ptTranslations = {
+// const ptTranslations = { // ESLint: 'ptTranslations' is assigned a value but never used.
+export default {
   languageNameNative: 'Português',
   languageNameInEnglish: 'Portuguese',
   languageCode: 'pt',
