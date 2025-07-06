@@ -43,7 +43,7 @@ const MCQMultipleBlock = ({ blockData, onAnswer }) => {
         let newFeedback = {};
         let correctSelections = 0;
         let incorrectSelections = 0; // User selected an incorrect option
-        let missedSelections = 0;    // User did not select a correct option
+        // let missedSelections = 0;    // ESLint: 'missedSelections' is assigned a value but never used. User did not select a correct option
         let totalCorrectOptions = 0;
 
         options.forEach(opt => {
@@ -54,7 +54,7 @@ const MCQMultipleBlock = ({ blockData, onAnswer }) => {
                     correctSelections++;
                 } else {
                     newFeedback[opt.id] = 'incorrect-missed'; // Correct but not selected by user
-                    missedSelections++;
+                    // missedSelections++; // ESLint: 'missedSelections' is assigned a value but never used.
                 }
             } else { // Option is incorrect
                 if (selectedOptions[opt.id]) {
