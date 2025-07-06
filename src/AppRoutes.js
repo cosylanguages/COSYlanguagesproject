@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react'; // Removed useEffect
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 // import { usePlan } from './PlanContext'; // Commented out as PlanOverview is commented
 import { useAuth } from './AuthContext';
@@ -19,7 +19,7 @@ const PlanOverview = () => {
     const { plan, fetchPlan, loading, error } = usePlan(); // usePlan would be undefined here
     const { authToken, isAuthenticated } = useAuth();
 
-    useEffect(() => {
+    useEffect(() => { // This useEffect is part of the commented out PlanOverview
         if (isAuthenticated && authToken) {
             fetchPlan(authToken);
         }
