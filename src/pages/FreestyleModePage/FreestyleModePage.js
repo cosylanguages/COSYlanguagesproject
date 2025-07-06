@@ -6,7 +6,7 @@ import {
     getInitialMenuState, 
     handleMenuSelection, 
     isMenuItemVisible, 
-    allMenuItemsConfig 
+    allMenuItemsConfig // Imported directly, considered stable
 } from '../../utils/menuNavigationLogic';
 
 const FreestyleModePage = () => {
@@ -45,6 +45,7 @@ const FreestyleModePage = () => {
     console.log("[FreestyleModePage] onMenuSelect:", clickedItemKey, "current activePath:", activePath, "payload:", payload);
 
     setActivePath(prevActivePath => {
+        // allMenuItemsConfig is stable and imported, so it doesn't need to be a dependency of useCallback
         const newMenuState = handleMenuSelection(prevActivePath, clickedItemKey, allMenuItemsConfig);
         const newPath = newMenuState.activePath;
 
@@ -108,7 +109,7 @@ const FreestyleModePage = () => {
         return newPath;
     });
 
-  }, [activePath, selectedDays, currentMainCategoryKey, currentSubPracticeKey, allMenuItemsConfig]);
+  }, [activePath, selectedDays, currentMainCategoryKey, currentSubPracticeKey]); // Removed allMenuItemsConfig
 
 
   const handleLanguageChangeWrapper = (newLanguage) => {
@@ -123,6 +124,7 @@ const FreestyleModePage = () => {
     setExerciseKey(prevKey => prevKey + 1);
 
     // After language states are updated, set the menu path to day selection stage
+    // allMenuItemsConfig is stable and imported
     setActivePath(handleMenuSelection([], 'day_selection_stage', allMenuItemsConfig).activePath);
     
     const languageName = t(`language.${newLanguage}`, newLanguage.replace('COSY', '')); 
