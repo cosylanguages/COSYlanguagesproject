@@ -8,6 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions: # Add this to grant necessary permissions
+      contents: write
+      pages: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -18,9 +21,11 @@ jobs:
           node-version: '20' # Specify your Node.js version, LTS is a good choice
 
       - name: Install dependencies
-        run: npm ci # Or npm install
+        run: npm ci # Assumes package-lock.json is present and correct. Use npm install if not.
 
       - name: Build React application
+        env: # Add this if your build process needs PUBLIC_URL (common for gh-pages)
+          PUBLIC_URL: /${{ github.event.repository.name }} # Sets base path for assets
         run: npm run build
 
       - name: Deploy to gh-pages branch
