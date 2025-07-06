@@ -1,6 +1,8 @@
 // Traductions bretonnes
 const brTranslations = {
-  languageNameNative: 'Brezhoneg', // Added native name
+  languageNameNative: 'Brezhoneg',
+  languageNameInEnglish: 'Breton',
+  languageCode: 'br',
   dayNames: {
     1: "Gerioù diazez",
     2: "Piv out?",

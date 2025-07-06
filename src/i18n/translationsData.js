@@ -12,18 +12,18 @@ import tt from './locales/tt.js';
 import el from './locales/el.js'; // Import Greek
 
 const translations = {
-  COSYgreek: el, // Add Greek
-  COSYenglish: en,
-  COSYfrench: fr,
-  COSYspanish: es,
-  COSYgerman: de,
-  COSYrussian: ru,
-  COSYbachkir: ba,
-  COSYbreton: br,
-  COSYarmenian: hy,
-  COSYitalian: it,
-  COSYportugese: pt,
-  COSYtatar: tt,
+  greek: el,
+  english: en,
+  french: fr,
+  spanish: es,
+  german: de,
+  russian: ru,
+  bashkir: ba,
+  breton: br,
+  armenian: hy,
+  italian: it,
+  portuguese: pt,
+  tatar: tt,
 };
 
 export default translations;

@@ -1,6 +1,8 @@
 // Traductions armենական
 const hyTranslations = {
-  languageNameNative: 'Հայերեն', // Added native name
+  languageNameNative: 'Հայերեն',
+  languageNameInEnglish: 'Armenian',
+  languageCode: 'hy',
   dayNames: {
       1: "Հիմնական բառեր",
       2: "Ո՞վ ես դու?",

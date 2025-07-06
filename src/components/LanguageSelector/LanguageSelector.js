@@ -6,25 +6,25 @@ import TransliterableText from '../Common/TransliterableText';
 const LanguageSelector = () => {
     const { language, changeLanguage, allTranslations, currentLangKey, t } = useI18n();
 
-    // Desired order of languages by popularity
+    // Desired order of languages by popularity, using new standardized keys
     const popularLanguageOrder = [
-      'COSYenglish',
-      'COSYspanish',
-      'COSYfrench',
-      'COSYportugese',
-      'COSYrussian',
-      'COSYgerman',
-      'COSYitalian',
-      'COSYgreek',
-      'COSYarmenian',
-      'COSYtatar',
-      'COSYbachkir',
-      'COSYbreton',
+      'english',
+      'spanish',
+      'french',
+      'portuguese', // Corrected spelling
+      'russian',
+      'german',
+      'italian',
+      'greek',
+      'armenian',
+      'tatar',
+      'bashkir',
+      'breton',
     ];
 
     const availableLanguages = Object.keys(allTranslations).map(langKey => {
         // Skip "null" key if it appears, ensure the langKey actual entry exists
-        if (langKey === "null" || !allTranslations[langKey]) return null; 
+        if (langKey === "null" || !allTranslations[langKey]) return null;
 
         const nativeName = allTranslations[langKey]?.languageNameNative;
         let name;
@@ -32,12 +32,13 @@ const LanguageSelector = () => {
         if (nativeName) {
             name = nativeName;
         } else {
-            name = allTranslations[langKey]?.languageNameInEnglish ||
-                   langKey.replace(/^(COSY|ТАКОЙ|ΚΟΖΥ|ԾՈՍՅ)/, '');
+            // Standardized keys (e.g., 'english') can serve as a fallback if languageNameInEnglish is missing
+            // Capitalize the first letter for display if it's a simple key.
+            name = allTranslations[langKey]?.languageNameInEnglish || langKey.charAt(0).toUpperCase() + langKey.slice(1);
         }
         // Combine native and English names if different, for clarity
-        if (allTranslations[langKey]?.languageNameNative && 
-            allTranslations[langKey]?.languageNameInEnglish && 
+        if (allTranslations[langKey]?.languageNameNative &&
+            allTranslations[langKey]?.languageNameInEnglish &&
             allTranslations[langKey]?.languageNameNative !== allTranslations[langKey]?.languageNameInEnglish) {
             name = `${allTranslations[langKey]?.languageNameNative} (${allTranslations[langKey]?.languageNameInEnglish})`;
         }
@@ -74,20 +75,28 @@ const LanguageSelector = () => {
     // This useEffect for body class management should be reviewed for potential conflicts
     // if LanguageSelectorFreestyle also manages it. Ideally, one component or a higher-level
     // one should manage global body classes based on language.
+    // Logic for class removal will be updated/centralized in a later step.
     useEffect(() => {
         const body = document.body;
-        const classesToRemove = Array.from(body.classList).filter(cls => 
-            cls.endsWith('-bg') || 
-            cls === 'lang-bg' || 
-            cls === 'lang-bg-fallback' || 
-            cls.startsWith('COSY') || cls.startsWith('ТАКОЙ') || cls.startsWith('ΚΟΖΥ') || cls.startsWith('ԾՈՍՅ') ||
+        const currentLanguageKeys = Object.keys(allTranslations || {}); // Ensure allTranslations is not null/undefined
+        const classesToRemove = Array.from(body.classList).filter(cls =>
+            cls.endsWith('-bg') ||
+            cls === 'lang-bg' ||
+            cls === 'lang-bg-fallback' ||
+            // Check against current known language keys for more precise removal
+            currentLanguageKeys.some(key => cls.startsWith(key + '-bg')) ||
+            cls.startsWith('COSY') || // Keep old prefix for cleanup during transition
+            cls.startsWith('ТАКОЙ') ||
+            cls.startsWith('ΚΟΖΥ') ||
+            cls.startsWith('ԾՈՍՅ') ||
             cls === 'no-language-selected-bg'
         );
         classesToRemove.forEach(cls => body.classList.remove(cls));
 
         if (currentLangKey && currentLangKey !== "null") { // Ensure currentLangKey is valid and not the string "null"
-            const langClassName = `${currentLangKey}-bg`;
+            const langClassName = `${currentLangKey}-bg`; // Uses new standardized key
             // Check if class exists (optional, for robustness against missing CSS)
+            // This check might be intensive, consider if truly necessary or if CSS can handle non-existent classes gracefully.
             const classExists = Array.from(document.styleSheets).some(sheet => {
                 try {
                   return Array.from(sheet.cssRules || []).some(rule => rule.selectorText === `.${langClassName}`);
@@ -103,17 +112,17 @@ const LanguageSelector = () => {
         } else {
             body.classList.add('no-language-selected-bg'); // Class when no language is selected
         }
-    }, [currentLangKey]);
+    }, [currentLangKey, allTranslations]); // Added allTranslations to dependency array for classesToRemove logic
 
     return (
         <div className="language-selector-container">
             <label htmlFor="language-select" className="language-select-label">
                 <TransliterableText text={t('languageSelector.label', '🌎:')} />
             </label>
-            <select 
-                id="language-select" 
+            <select
+                id="language-select"
                 value={currentLangKey || ''} // Handles null currentLangKey by selecting the placeholder
-                onChange={handleChange} 
+                onChange={handleChange}
                 className="language-select-dropdown"
                 aria-label={t('languageSelector.ariaLabel', 'Select language')}
             >

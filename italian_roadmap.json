@@ -6,169 +6,68 @@
       "level_name": "Il Pulcino",
       "approximate_vocabulary_size": "approx. 300-500 words",
       "learning_outcomes": [
-        "Understand and use familiar everyday Italian expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.",
-        "Introduce him/herself and others in Italian and can ask and answer simple questions about personal details such as where he/she lives, people he/she knows and things he/she has (e.g., Come ti chiami? Mi chiamo...).",
-        "Interact in a very simple way in Italian provided the other person talks slowly and clearly and is prepared to help.",
-        "Recognize familiar Italian names, words, and very simple sentences, for example on notices and posters or in catalogues."
+        "Understand and use familiar everyday Italian expressions and very basic phrases.",
+        "Introduce him/herself and others in Italian (e.g., Come ti chiami? Mi chiamo...).",
+        "Ask and answer simple questions about personal details."
       ],
       "language_focus_topics": [
         "Nouns: Introduction to gender (masculine/feminine).",
-        "Articles: Definite articles (il, lo, la, i, gli, le, l'); Indefinite articles (un, uno, una, un').",
-        "Subject Pronouns: io, tu, lui/lei/Lei, noi, voi, loro.",
-        "Verbs: `essere` (to be) - present tense.",
-        "Verbs: `avere` (to have) - present tense.",
-        "Verbs: Present tense of common regular `-are` verbs (e.g., parlare, abitare, chiamare - focus on io/tu/lui/lei forms).",
-        "Basic Sentence Structure: Subject-Verb-Object.",
-        "Negation: `non` before the verb (e.g., Non parlo italiano).",
-        "Simple Questions: Intonation, question words (Chi?, Cosa?, Dove?, Quando?, Come?, Quanto?, Perché?).",
-        "Adjectives: Basic agreement in gender and number (e.g., rosso/a/i/e).",
-        "`C'è / Ci sono` (There is / There are)."
+        "Articles: Definite articles (il, lo, la); Indefinite articles (un, uno, una).",
+        "Verbs: `essere` (to be) and `avere` (to have) - present tense.",
+        "Basic Sentence Structure: Subject-Verb-Object."
       ],
       "vocabulary_topics": [
-        "Greetings & Introductions: Ciao, Salve, Buongiorno, Buonasera, Buonanotte, Arrivederci. Come ti chiami?/Come si chiama?, Mi chiamo..., Piacere (Nice to meet you).",
-        "Courtesy & Basic Responses: Per favore/Per piacere, Grazie (mille), Prego, Non c’è di che, Scusa/Scusi, Mi dispiace, Permesso?, Sì, No.",
-        "Personal Information: Nome, nazionalità, età (age), città. Phrases: Come stai/sta?, Sto bene/male/così così.",
-        "Numbers: 0-20 (zero-venti).",
-        "Colors: rosso, blu, verde, giallo, nero, bianco, grigio, arancione, rosa, marrone.",
-        "Days of the week: lunedì, martedì, mercoledì, giovedì, venerdì, sabato, domenica. Also: oggi, domani, ieri.",
-        "Family: padre, madre, fratello, sorella.",
-        "Common Objects: libro, penna, tavolo, sedia, telefono, casa, macchina (car).",
-        "Basic Food & Drink: pane, acqua, latte, caffè, tè, formaggio, frutta, verdura, mela, banana, gelato.",
-        "Asking for help/directions (basic): Parla inglese?, Dov’è il bagno/la stazione?"
+        "Greetings & Introductions: Ciao, Salve, Buongiorno, Arrivederci.",
+        "Courtesy & Basic Responses: Per favore, Grazie, Prego, Sì, No.",
+        "Numbers: 0-10 (zero-dieci).",
+        "Colors: rosso, blu, verde, giallo, nero, bianco."
       ],
-      "pronunciation_focus_topics": [
-        "The Italian alphabet (21 letters + J,K,W,X,Y for foreign words).",
-        "Phonetic nature of Italian: pronounce all letters (except 'h').",
-        "Vowel sounds: a, e (open/closed), i, o (open/closed), u.",
-        "Consonant sounds: rolled 'r', hard/soft 'c' (ca, co, cu vs. ce, ci; ch+e/i), hard/soft 'g' (ga, go, gu vs. ge, gi; gh+e/i).",
-        "Special sounds: 'gn' (like ñ), 'gli'.",
-        "Double consonants (pronounced more forcefully/longer).",
-        "Stress: general rule (penultimate syllable) and common exceptions.",
-        "Silent 'h' (except in 'ho, hai, ha, hanno' to distinguish)."
-      ],
-      "listening_comprehension_skills": [
-        "Recognize familiar Italian words and very basic phrases concerning oneself, family, and immediate surroundings when people speak slowly and clearly."
-      ],
-      "reading_comprehension_skills": [
-        "Understand familiar Italian names, words, and very simple sentences on notices, posters, or in simple menus."
-      ],
-      "spoken_interaction_skills": [
-        "Greet and take leave using appropriate formal/informal expressions (Ciao, Buongiorno, Arrivederci).",
-        "Introduce oneself and others (Mi chiamo..., Questo/a è...).",
-        "Ask and answer simple questions about personal details and immediate needs.",
-        "Order simple food and drink (Un caffè, per favore)."
-      ],
-      "spoken_production_skills": [
-        "Use simple phrases and sentences to describe oneself (name, nationality, age).",
-        "Name common objects, colors, numbers."
-      ],
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
       "written_interaction_skills": [],
-      "written_production_skills": [
-        "Write one's name, nationality, address on a form.",
-        "Write numbers 0-20."
-      ],
-      "cultural_competence_topics": [
-        "Formal (Lei) vs. Informal (tu) address: when to use each (basic understanding).",
-        "Importance of greetings (shaking hands, ciao vs. buongiorno).",
-        "Common courtesy phrases and their importance.",
-        "Awareness of gestures in Italian communication (general).",
-        "Tipping customs (generally not obligatory but appreciated for good service)."
-      ],
-      "learning_strategies_suggestions": [
-        "Focus on clear pronunciation of vowels and double consonants.",
-        "Listen to Italian music or simple dialogues.",
-        "Practice basic greetings with others if possible."
-      ]
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
     },
     {
       "level_code": "A1",
       "level_name": "Il Giovane Esploratore",
       "approximate_vocabulary_size": "approx. 500-700 words",
       "learning_outcomes": [
-        "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.",
-        "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
-        "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
+        "Can understand and use familiar everyday expressions and very basic phrases.",
+        "Can introduce him/herself and others and can ask and answer questions about personal details.",
+        "Can interact in a simple way provided the other person talks slowly and clearly."
       ],
       "language_focus_topics": [
-        "Review A0: `essere`, `avere`, gender, articles, negation, basic questions, `c'è/ci sono`.",
-        "Present tense of regular `-are`, `-ere`, `-ire` verbs (full conjugation).",
-        "Common irregular verbs in present tense: `andare`, `fare`, `potere`, `volere`, `dovere`, `dire`, `venire`, `uscire`, `sapere`, `dare`, `stare`.",
-        "Possessive adjectives (mio, tuo, suo, nostro, vostro, loro - agreement).",
-        "Demonstrative adjectives (questo, quello - agreement).",
-        "Partitive articles (del, dello, della, dei, degli, delle - for 'some').",
-        "Simple prepositions (di, a, da, in, con, su, per, tra/fra).",
-        "Articulated prepositions (preposition + definite article, e.g., `del`, `al`, `dal`, `nel`, `sul`).",
-        "Introduction to `Passato Prossimo`: Formation with `avere` and `essere`; past participles of common regular and key irregular verbs; basic agreement with `essere`.",
-        "Adjectives: Further practice with agreement and placement.",
-        "Adverbs: Common adverbs of time (ora, sempre, spesso, mai), manner (bene, male, lentamente).",
-        "Modal verbs (`potere`, `volere`, `dovere`) + infinitive."
+        "Present tense of regular `-are`, `-ere`, `-ire` verbs.",
+        "Common irregular verbs in present tense (andare, fare, potere, volere, dovere).",
+        "Possessive adjectives (mio, tuo, suo).",
+        "Simple prepositions (di, a, da, in, con, su)."
       ],
       "vocabulary_topics": [
-        "Review A0 vocabulary.",
-        "Numbers: 0-100+.",
-        "Telling the time, dates (days, months, seasons).",
-        "Daily routine & activities (svegliarsi, alzarsi, lavarsi, fare colazione, andare a scuola/lavoro, pranzare, cenare, dormire).",
-        "Hobbies & leisure (sport, musica, leggere, guardare la TV, cinema, uscire con amici).",
-        "Food & Drink: Wider range, common dishes, ordering in a restaurant/bar, ingredients.",
-        "Places in town: negozio, mercato, ufficio postale, banca, stazione, aeroporto, ospedale, farmacia, albergo, piazza, via, parco.",
-        "Clothing & accessories.",
-        "Weather: More descriptive terms (nuvoloso, soleggiato, ventoso, nevica, piove).",
-        "Transportation: treno, autobus, aereo, bicicletta, motocicletta, biglietto.",
-        "Describing people (basic physical appearance and personality).",
-        "The home (rooms, basic furniture)."
+        "Daily routine & activities.",
+        "Hobbies & leisure.",
+        "Food & Drink: Wider range, ordering in a restaurant/bar.",
+        "Places in town: negozio, mercato, ufficio postale, banca."
       ],
-      "pronunciation_focus_topics": [
-        "Review and solidify A0 sounds (vowels, consonants, double consonants, 'c'/'g'/'gn'/'gli', rolled 'r').",
-        "Word stress patterns (more examples, common exceptions).",
-        "Sentence intonation for different communicative functions (statements, questions, exclamations - basic).",
-        "Distinguishing open and closed 'e' and 'o' sounds in more contexts."
-      ],
-      "listening_comprehension_skills": [
-        "Understand instructions and short, simple descriptions related to familiar topics.",
-        "Identify key information in simple public announcements or messages."
-      ],
-      "reading_comprehension_skills": [
-        "Understand short narrative texts about familiar topics (e.g., a simple story about a daily routine).",
-        "Extract essential information from simple informational texts (e.g., event posters, simple instructions)."
-      ],
-      "spoken_interaction_skills": [
-        "Ask for and give information about quantities, prices, and times.",
-        "Make simple purchases.",
-        "Ask for and offer help in simple situations.",
-        "Express likes and dislikes about familiar topics (food, hobbies)."
-      ],
-      "spoken_production_skills": [
-        "Describe one's daily routine.",
-        "Talk about past activities using simple Passato Prossimo.",
-        "Describe one's home or town in simple terms."
-      ],
-      "written_interaction_skills": [
-        "Write a simple email or message to a friend to make arrangements."
-      ],
-      "written_production_skills": [
-        "Write a few simple sentences describing a person, place, or past event.",
-        "Write a simple shopping list."
-      ],
-      "cultural_competence_topics": [
-        "Italian café culture (how to order, common types of coffee).",
-        "Typical Italian meal times and basic meal structure.",
-        "Common social etiquette for invitations or visiting someone's home (basic)."
-      ],
-      "learning_strategies_suggestions": [
-        "Try to think in Italian for simple daily actions.",
-        "Use Italian for basic interactions if opportunities arise (e.g., ordering coffee).",
-        "Read simple Italian stories or dialogues with audio support."
-      ]
+      "pronunciation_focus_topics": [],
+      "listening_comprehension_skills": [],
+      "reading_comprehension_skills": [],
+      "spoken_interaction_skills": [],
+      "spoken_production_skills": [],
+      "written_interaction_skills": [],
+      "written_production_skills": [],
+      "cultural_competence_topics": [],
+      "learning_strategies_suggestions": []
     },
     {
       "level_code": "A2",
       "level_name": "L'Apprendista Mago",
       "approximate_vocabulary_size": "",
-      "learning_outcomes": [
-        "Can understand sentences and frequently used expressions related to areas of most immediate relevance (e.g. very basic personal and family information, shopping, local geography, employment).",
-        "Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.",
-        "Can describe in simple terms aspects of his/her background, immediate environment and matters in areas of immediate need."
-      ],
+      "learning_outcomes": [],
       "language_focus_topics": [],
       "vocabulary_topics": [],
       "pronunciation_focus_topics": [],
@@ -185,12 +84,7 @@
       "level_code": "B1",
       "level_name": "Il Ribelle Ingegnoso",
       "approximate_vocabulary_size": "",
-      "learning_outcomes": [
-        "Can understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc.",
-        "Can deal with most situations likely to arise whilst travelling in an area where the language is spoken.",
-        "Can produce simple connected text on topics, which are familiar, or of personal interest.",
-        "Can describe experiences and events, dreams, hopes & ambitions and briefly give reasons and explanations for opinions and plans."
-      ],
+      "learning_outcomes": [],
       "language_focus_topics": [],
       "vocabulary_topics": [],
       "pronunciation_focus_topics": [],
@@ -207,11 +101,7 @@
       "level_code": "B2",
       "level_name": "L'Artista delle Parole",
       "approximate_vocabulary_size": "",
-      "learning_outcomes": [
-        "Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in his/her field of specialisation.",
-        "Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
-        "Can produce clear, detailed text on a wide range of subjects and explain a viewpoint on a topical issue giving the advantages and disadvantages of various options."
-      ],
+      "learning_outcomes": [],
       "language_focus_topics": [],
       "vocabulary_topics": [],
       "pronunciation_focus_topics": [],
@@ -228,12 +118,7 @@
       "level_code": "C1",
       "level_name": "La Stella Brillante",
       "approximate_vocabulary_size": "",
-      "learning_outcomes": [
-        "Can understand a wide range of demanding, longer texts, and recognise implicit meaning.",
-        "Can express him/herself fluently and spontaneously without much obvious searching for expressions.",
-        "Can use language flexibly and effectively for social, academic and professional purposes.",
-        "Can produce clear, well-structured, detailed text on complex subjects, showing controlled use of organisational patterns, connectors and cohesive devices."
-      ],
+      "learning_outcomes": [],
       "language_focus_topics": [],
       "vocabulary_topics": [],
       "pronunciation_focus_topics": [],
@@ -250,11 +135,7 @@
       "level_code": "C2",
       "level_name": "Il Camaleonte Linguistico",
       "approximate_vocabulary_size": "",
-      "learning_outcomes": [
-        "Can understand with ease virtually everything heard or read.",
-        "Can summarise information from different spoken and written sources, reconstructing arguments and accounts in a coherent presentation.",
-        "Can express him/herself spontaneously, very fluently and precisely, differentiating finer shades of meaning even in more complex situations."
-      ],
+      "learning_outcomes": [],
       "language_focus_topics": [],
       "vocabulary_topics": [],
       "pronunciation_focus_topics": [],
