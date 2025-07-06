@@ -5,7 +5,7 @@ import { shuffleArray } from '../../../../utils/arrayUtils';
 import { pronounceText } from '../../../../utils/speechUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
-import { useLatinizationContext } from '../../../../contexts/LatinizationContext';
+// import { useLatinizationContext } from '../../../../contexts/LatinizationContext'; // Commented out: isLatinized from here is unused
 import useLatinization from '../../../../hooks/useLatinization';
 import { useI18n } from '../../../../i18n/I18nContext';
 import './MatchSoundsWithWordsExercise.css'; // To be created
@@ -51,7 +51,7 @@ const MatchSoundsWithWordsExercise = ({ language, days, exerciseKey, onComplete 
 
       // Select distractors
       const distractors = [];
-      let attempts = 0; // Prevent infinite loop if not enough unique words
+      // let attempts = 0; // ESLint: 'attempts' is assigned a value but never used. Prevent infinite loop if not enough unique words
       const potentialDistractors = itemsWithAudio.filter(item => item.word !== currentTarget.word);
       const shuffledPotentialDistractors = shuffleArray(potentialDistractors);
 
