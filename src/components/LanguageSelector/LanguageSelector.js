@@ -8,20 +8,15 @@ const LanguageSelector = () => {
     const { changeLanguage, allTranslations, currentLangKey, t } = useI18n();
 
 
-    // Desired order of languages by popularity, using new standardized keys
+    // Researched order of languages by popularity (Top 7 from Ethnologue 2025 for available languages)
     const popularLanguageOrder = [
-      'english',
-      'spanish',
-      'french',
-      'portuguese', // Corrected spelling
-      'russian',
-      'german',
-      'italian',
-      'greek',
-      'armenian',
-      'tatar',
-      'bashkir',
-      'breton',
+      'english',    // 1st
+      'spanish',    // 4th
+      'french',     // 6th
+      'portuguese', // 8th
+      'russian',    // 9th
+      'german',     // 12th
+      'italian',    // 24th
     ];
 
     const availableLanguages = Object.keys(allTranslations).map(langKey => {
@@ -32,20 +27,13 @@ const LanguageSelector = () => {
         let name;
 
         if (nativeName) {
-            name = nativeName;
+            name = nativeName; // Use native name directly
         } else {
-            // Standardized keys (e.g., 'english') can serve as a fallback if languageNameInEnglish is missing
-            // Capitalize the first letter for display if it's a simple key.
-            name = allTranslations[langKey]?.languageNameInEnglish || langKey.charAt(0).toUpperCase() + langKey.slice(1);
+            // Fallback to the language key, capitalized, if nativeName is somehow missing
+            name = langKey.charAt(0).toUpperCase() + langKey.slice(1);
         }
-        // Combine native and English names if different, for clarity
-        if (allTranslations[langKey]?.languageNameNative &&
-            allTranslations[langKey]?.languageNameInEnglish &&
-            allTranslations[langKey]?.languageNameNative !== allTranslations[langKey]?.languageNameInEnglish) {
-            name = `${allTranslations[langKey]?.languageNameNative} (${allTranslations[langKey]?.languageNameInEnglish})`;
-        }
-
-        return { key: langKey, name: name };
+        // Storing nativeName directly in 'name' for sorting, and also for display.
+        return { key: langKey, name: name, nativeName: nativeName || name }; // ensure nativeName field for sorting
     }).filter(Boolean) // Filter out any null entries from map
       .sort((a, b) => {
         const indexA = popularLanguageOrder.indexOf(a.key);
@@ -63,8 +51,9 @@ const LanguageSelector = () => {
         if (indexB !== -1) {
             return 1;
         }
-        // If neither is in the popular list, sort alphabetically by name
-        return a.name.localeCompare(b.name);
+        // If neither is in the popular list, sort alphabetically by their NATIVE name
+        // Assuming a.nativeName and b.nativeName are populated correctly
+        return (a.nativeName || a.name).localeCompare(b.nativeName || b.name);
     });
 
     const handleChange = (event) => {
