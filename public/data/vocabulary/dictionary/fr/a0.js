@@ -1,0 +1,80 @@
+const a0_french_vocabulary = {
+  "Salutations et Identité de base": [
+    { "term": "Bonjour", "definition": "Formule de salutation utilisée pendant la journée.", "gender": null, "example": "Bonjour Paul !", "notes": "Utilisé toute la journée." },
+    { "term": "Salut", "definition": "Salutation informelle pour dire bonjour ou au revoir.", "gender": null, "example": "Salut Marie !", "notes": "Salutation et départ informels." },
+    { "term": "Au revoir", "definition": "Formule pour prendre congé de quelqu'un.", "gender": null, "example": "Au revoir, à demain.", "notes": "Départ standard." },
+    { "term": "Bonsoir", "definition": "Salutation utilisée le soir.", "gender": null, "example": "Bonsoir Madame.", "notes": "Utilisé en soirée." },
+    { "term": "Oui", "definition": "Réponse affirmative.", "gender": null, "example": "Oui, je veux.", "notes": "" },
+    { "term": "Non", "definition": "Réponse négative.", "gender": null, "example": "Non, merci.", "notes": "" },
+    { "term": "Merci", "definition": "Expression de gratitude.", "gender": null, "example": "Merci beaucoup.", "notes": "" },
+    { "term": "S'il vous plaît", "definition": "Formule de politesse pour demander quelque chose (formel).", "gender": null, "example": "Un café, s'il vous plaît.", "notes": "Utiliser 's'il te plaît' pour informel." },
+    { "term": "S'il te plaît", "definition": "Formule de politesse pour demander quelque chose (informel).", "gender": null, "example": "Passe-moi le sel, s'il te plaît.", "notes": "Utiliser avec 'tu'." },
+    { "term": "Je m'appelle...", "definition": "Phrase pour dire son nom.", "gender": null, "example": "Je m'appelle Jean.", "notes": "" },
+    { "term": "Comment tu t'appelles ?", "definition": "Question pour demander le nom (informel).", "gender": null, "example": "Salut, comment tu t'appelles ?", "notes": "" },
+    { "term": "Comment vous appelez-vous ?", "definition": "Question pour demander le nom (formel).", "gender": null, "example": "Bonjour, comment vous appelez-vous ?", "notes": "" },
+    { "term": "Monsieur", "definition": "Titre de civilité pour un homme.", "gender": "m", "example": "Bonjour Monsieur Dupont.", "notes": "" },
+    { "term": "Madame", "definition": "Titre de civilité pour une femme (mariée ou adulte).", "gender": "f", "example": "Oui, Madame.", "notes": "" },
+    { "term": "Mademoiselle", "definition": "Titre de civilité pour une jeune femme non mariée.", "gender": "f", "example": "Bonjour Mademoiselle.", "notes": "Moins courant maintenant, 'Madame' est souvent utilisé pour toutes les femmes adultes." },
+    { "term": "Comment allez-vous ?", "definition": "Question sur l'état de santé ou le moral (formel).", "gender": null, "example": "Bonjour Monsieur, comment allez-vous ?", "notes": "" },
+    { "term": "Ça va.", "definition": "Réponse simple pour dire que tout va bien.", "gender": null, "example": "Ça va, merci.", "notes": "Réponse simple." },
+    { "term": "Pardon / Excusez-moi", "definition": "Pour s'excuser ou attirer l'attention.", "gender": null, "example": "Pardon, je n'ai pas compris.", "notes": "" }
+  ],
+  "Nombres et Couleurs de base": [
+    { "term": "zéro", "definition": "Le chiffre 0.", "gender": "m", "example": "Il fait zéro degré.", "notes": "" },
+    { "term": "un", "definition": "Le chiffre 1 (masculin).", "gender": "m", "example": "J'ai un frère.", "notes": "" },
+    { "term": "une", "definition": "Le chiffre 1 (féminin).", "gender": "f", "example": "J'ai une sœur.", "notes": "Utilisé devant les noms féminins." },
+    { "term": "deux", "definition": "Le chiffre 2.", "gender": null, "example": "Deux cafés.", "notes": "" },
+    { "term": "trois", "definition": "Le chiffre 3.", "gender": null, "example": "Trois chats.", "notes": "" },
+    { "term": "quatre", "definition": "Le chiffre 4.", "gender": null, "example": "Quatre saisons.", "notes": "" },
+    { "term": "cinq", "definition": "Le chiffre 5.", "gender": null, "example": "Cinq doigts.", "notes": "" },
+    { "term": "six", "definition": "Le chiffre 6.", "gender": null, "example": "Six heures.", "notes": "" },
+    { "term": "sept", "definition": "Le chiffre 7.", "gender": null, "example": "Sept jours.", "notes": "" },
+    { "term": "huit", "definition": "Le chiffre 8.", "gender": null, "example": "Huit euros.", "notes": "" },
+    { "term": "neuf", "definition": "Le chiffre 9.", "gender": null, "example": "Neuf vies.", "notes": "" },
+    { "term": "dix", "definition": "Le chiffre 10.", "gender": null, "example": "Dix commandements.", "notes": "" },
+    { "term": "rouge", "definition": "Couleur du sang, des coquelicots.", "gender": null, "example": "La pomme est rouge.", "notes": "Adjectif, invariable au singulier m/f pour certaines couleurs." },
+    { "term": "bleu(e)", "definition": "Couleur du ciel par temps clair.", "gender": null, "example": "Le ciel est bleu. Une voiture bleue.", "notes": "Féminin: bleue." },
+    { "term": "vert(e)", "definition": "Couleur de l'herbe, des feuilles.", "gender": null, "example": "Le jardin est vert. Une feuille verte.", "notes": "Féminin: verte." },
+    { "term": "jaune", "definition": "Couleur du soleil, du citron.", "gender": null, "example": "Le soleil est jaune.", "notes": "Adjectif, invariable au singulier m/f." },
+    { "term": "noir(e)", "definition": "Couleur de la nuit, du charbon.", "gender": null, "example": "Un chat noir. Une robe noire.", "notes": "Féminin: noire." },
+    { "term": "blanc(he)", "definition": "Couleur de la neige, du lait.", "gender": null, "example": "Un mur blanc. Une page blanche.", "notes": "Féminin: blanche." },
+    { "term": "orange", "definition": "Couleur du fruit du même nom.", "gender": null, "example": "Un ballon orange.", "notes": "Invariable comme adjectif de couleur." },
+    { "term": "rose", "definition": "Couleur de certaines fleurs, du bonbon.", "gender": null, "example": "Une fleur rose.", "notes": "Invariable comme adjectif de couleur." },
+    { "term": "gris(e)", "definition": "Couleur entre le blanc et le noir.", "gender": null, "example": "Un ciel gris. Une souris grise.", "notes": "Féminin: grise." },
+    { "term": "marron", "definition": "Couleur de la terre, du chocolat.", "gender": null, "example": "Des chaussures marron.", "notes": "Invariable comme adjectif de couleur." }
+  ],
+  "Objets de base et Animaux": [
+    { "term": "un livre", "definition": "Ensemble de pages écrites ou imprimées.", "gender": "m", "example": "Je lis un livre.", "notes": "" },
+    { "term": "un stylo", "definition": "Instrument pour écrire à l'encre.", "gender": "m", "example": "J'écris avec un stylo.", "notes": "" },
+    { "term": "une table", "definition": "Meuble avec un plateau et des pieds.", "gender": "f", "example": "Le livre est sur la table.", "notes": "" },
+    { "term": "une chaise", "definition": "Siège avec un dossier pour une personne.", "gender": "f", "example": "Asseyez-vous sur la chaise.", "notes": "" },
+    { "term": "un chat", "definition": "Petit animal domestique félin.", "gender": "m", "example": "Mon chat s'appelle Minou.", "notes": "" },
+    { "term": "un chien", "definition": "Animal domestique canin.", "gender": "m", "example": "Le chien aboie.", "notes": "" }
+  ],
+  "Verbes essentiels (être et avoir)": [
+    { "term": "être", "definition": "Verbe exprimant l'existence, l'état.", "gender": null, "example": "Je suis content.", "notes": "Verbe irrégulier." },
+    { "term": "je suis", "definition": "Première personne du singulier du verbe être au présent.", "gender": null, "example": "Je suis étudiant.", "notes": "" },
+    { "term": "tu es", "definition": "Deuxième personne du singulier du verbe être au présent (informel).", "gender": null, "example": "Tu es gentil.", "notes": "" },
+    { "term": "il est", "definition": "Troisième personne du singulier (masculin) du verbe être au présent.", "gender": null, "example": "Il est grand.", "notes": "" },
+    { "term": "elle est", "definition": "Troisième personne du singulier (féminin) du verbe être au présent.", "gender": null, "example": "Elle est intelligente.", "notes": "" },
+    { "term": "on est", "definition": "Forme impersonnelle ou informelle pour 'nous sommes'.", "gender": null, "example": "On est amis.", "notes": "Souvent utilisé pour 'nous' à l'oral." },
+    { "term": "nous sommes", "definition": "Première personne du pluriel du verbe être au présent.", "gender": null, "example": "Nous sommes ici.", "notes": "" },
+    { "term": "vous êtes", "definition": "Deuxième personne du pluriel ou formel singulier du verbe être au présent.", "gender": null, "example": "Vous êtes en retard.", "notes": "" },
+    { "term": "ils sont", "definition": "Troisième personne du pluriel (masculin ou mixte) du verbe être au présent.", "gender": null, "example": "Ils sont frères.", "notes": "" },
+    { "term": "elles sont", "definition": "Troisième personne du pluriel (féminin) du verbe être au présent.", "gender": null, "example": "Elles sont contentes.", "notes": "" },
+    { "term": "avoir", "definition": "Verbe exprimant la possession.", "gender": null, "example": "J'ai un chien.", "notes": "Verbe irrégulier." },
+    { "term": "j'ai", "definition": "Première personne du singulier du verbe avoir au présent.", "gender": null, "example": "J'ai faim.", "notes": "" },
+    { "term": "tu as", "definition": "Deuxième personne du singulier du verbe avoir au présent (informel).", "gender": null, "example": "Tu as quel âge ?", "notes": "" },
+    { "term": "il a", "definition": "Troisième personne du singulier (masculin) du verbe avoir au présent.", "gender": null, "example": "Il a une voiture.", "notes": "" },
+    { "term": "elle a", "definition": "Troisième personne du singulier (féminin) du verbe avoir au présent.", "gender": null, "example": "Elle a les cheveux longs.", "notes": "" },
+    { "term": "on a", "definition": "Forme impersonnelle ou informelle pour 'nous avons'.", "gender": null, "example": "On a soif.", "notes": "Souvent utilisé pour 'nous' à l'oral." },
+    { "term": "nous avons", "definition": "Première personne du pluriel du verbe avoir au présent.", "gender": null, "example": "Nous avons une maison.", "notes": "" },
+    { "term": "vous avez", "definition": "Deuxième personne du pluriel ou formel singulier du verbe avoir au présent.", "gender": null, "example": "Vous avez des questions ?", "notes": "" },
+    { "term": "ils ont", "definition": "Troisième personne du pluriel (masculin ou mixte) du verbe avoir au présent.", "gender": null, "example": "Ils ont des vélos.", "notes": "" },
+    { "term": "elles ont", "definition": "Troisième personne du pluriel (féminin) du verbe avoir au présent.", "gender": null, "example": "Elles ont des idées.", "notes": "" }
+  ]
+};
+
+export default a0_french_vocabulary;
+// If using CommonJS (older style, check project setup if unsure):
+// module.exports = a0_french_vocabulary;
