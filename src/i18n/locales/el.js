@@ -288,7 +288,7 @@ export default {
 
   // Keys for specific exercises UI elements
   "altText.identifyImage": "Identify this image", // Placeholder
-  "tooltips.pronounceWord": "Pronounce "{word}"", // Placeholder
+  "tooltips.pronounceWord": 'Pronounce "{word}"', // Placeholder
   "tooltips.showOriginalScript": "Show text in its original script", // Placeholder, already in el.js
   "tooltips.showLatinScript": "Show text in Latin script (transliteration)", // Placeholder, already in el.js
 
