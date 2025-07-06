@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; // Added useEffect for initial load
+import React, { useState, useEffect, useCallback } from 'react'; // Added useCallback
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../../components/Common/TransliterableText';
 import TemplateTypeSelectionModal from '../../components/StudyMode/TemplateTypeSelectionModal';
@@ -34,10 +34,10 @@ const TeacherDashboard = () => {
   const [selectedSectionId, setSelectedSectionId] = useState(null);
   const [currentSectionDetails, setCurrentSectionDetails] = useState(null); // State for full section data
 
-  // Explicit load on mount is disabled for now. User must click "Load Lesson".
-  // useEffect(() => {
-  //   handleLoadLesson(false); // false to suppress feedback on initial auto-load
-  // }, []);
+  const displayFeedback = useCallback((messageKey, defaultText, isError = false) => {
+    setFeedbackMessage({text: t(messageKey, defaultText), type: isError ? 'error' : 'success'});
+    setTimeout(() => setFeedbackMessage(''), 3000); // Clear feedback after 3 seconds
+  }, [t]); // t is from useI18n, considered stable
 
   useEffect(() => {
     if (selectedSectionId && authToken) {
@@ -47,7 +47,7 @@ const TeacherDashboard = () => {
           const sectionDetailsFull = await getLessonSectionDetails(authToken, selectedSectionId);
           setCurrentSectionDetails(sectionDetailsFull); // Store full details
           setLessonBlocks(sectionDetailsFull.exerciseBlocks || []);
-          setFeedbackMessage(''); // Clear loading message
+          // setFeedbackMessage(''); // Clearing feedback message here might be too soon if displayFeedback has a timeout
         } catch (error) {
           console.error("Error fetching section details:", error);
           displayFeedback('teacherDashboard.errorLoadingSectionContent', `Error loading section: ${error.message}`, true);
@@ -59,27 +59,20 @@ const TeacherDashboard = () => {
       setLessonBlocks([]); // Clear blocks if no section is selected or no token
        setCurrentSectionDetails(null); // Clear details too
     }
-  }, [selectedSectionId, authToken]); // Effect dependencies
+  }, [selectedSectionId, authToken, displayFeedback]); // Added displayFeedback
 
   const handleDaySelect = (dayId) => {
     setSelectedDayId(dayId);
     setSelectedSectionId(null); // Reset section when day changes
     setCurrentSectionDetails(null); // Clear details
-    // lessonBlocks will be cleared by the useEffect above when selectedSectionId becomes null
   };
 
   const handleSectionSelect = (sectionId) => {
     setSelectedSectionId(sectionId);
-    // lessonBlocks and currentSectionDetails will be loaded by the useEffect above
   };
 
   const openTemplateModal = () => setIsTemplateModalOpen(true);
   const closeTemplateModal = () => setIsTemplateModalOpen(false);
-
-  const displayFeedback = (messageKey, defaultText, isError = false) => {
-    setFeedbackMessage({text: t(messageKey, defaultText), type: isError ? 'error' : 'success'});
-    setTimeout(() => setFeedbackMessage(''), 3000); // Clear feedback after 3 seconds
-  };
 
   const handleSelectTemplateType = (typePath, typeName) => {
     const newBlock = {
@@ -140,8 +133,6 @@ const TeacherDashboard = () => {
   const handleSaveLesson = async () => {
     if (!selectedSectionId || !authToken || !currentSectionDetails) {
       displayFeedback('teacherDashboard.cannotSaveSection', 'No section selected or not authenticated. Cannot save.', true);
-      // Fallback to localStorage save if that's desired, or just show error.
-      // For now, let's try to save to localStorage as a fallback if no section is selected.
       if (!selectedSectionId && lessonBlocks.length > 0) {
         try {
           localStorage.setItem(TEACHER_LESSON_STORAGE_KEY, JSON.stringify(lessonBlocks));
@@ -154,33 +145,10 @@ const TeacherDashboard = () => {
       return;
     }
 
-    // API Save
     try {
-      if (lessonBlocks.length === 0) {
-        // Allow saving an empty section to clear it, or add a specific check if empty sections are disallowed.
-        // For now, allow it. A confirmation might be good UX.
-        // displayFeedback('teacherDashboard.lessonEmptySave', 'Cannot save an empty lesson to the section.', true);
-        // return;
-      }
-      
-      // We need to pass the whole section data, not just exerciseBlocks,
-      // to avoid accidentally wiping other section properties like title.
-      // const sectionDataToSave = { // ESLint: 'sectionDataToSave' is assigned a value but never used.
-      //   ...currentSectionDetails, // Includes title, dayId, etc.
-      //   exerciseBlocks: lessonBlocks, // The updated blocks
-      // };
-      // The API for updateLessonSection might only need title and exerciseBlocks,
-      // or it might expect the full object. Assuming it takes title and exerciseBlocks.
-      // Let's ensure we have the title from currentSectionDetails.
-      // The API `updateLessonSection(token, sectionId, sectionData)` where sectionData is {title, exerciseBlocks}
-
       await updateLessonSection(authToken, selectedSectionId, {
-        title: currentSectionDetails.title, // Preserve existing title
+        title: currentSectionDetails.title, 
         exerciseBlocks: lessonBlocks,
-        // Pass any other fields that updateLessonSection expects, if currentSectionDetails has them
-        // and they should be preserved or are part of the update.
-        // For example, if the API expects 'dayId' in the body:
-        // dayId: currentSectionDetails.dayId 
       });
       displayFeedback('teacherDashboard.sectionSavedSuccess', 'Section content saved successfully to API!');
     } catch (error) {
@@ -189,7 +157,7 @@ const TeacherDashboard = () => {
     }
   };
 
-  const handleLoadLesson = (showFeedback = true) => {
+  const handleLoadLesson = useCallback((showFeedback = true) => { // Wrapped in useCallback
     try {
       const savedLessonJson = localStorage.getItem(TEACHER_LESSON_STORAGE_KEY);
       if (savedLessonJson) {
@@ -210,14 +178,17 @@ const TeacherDashboard = () => {
       if (showFeedback) displayFeedback('teacherDashboard.lessonLoadedError', 'Error loading lesson.', true);
       setLessonBlocks([]); 
     }
-  };
+  }, [displayFeedback]); // Added displayFeedback as a dependency
+
+  // Example: useEffect for initial load (if ever re-enabled)
+  // useEffect(() => {
+  //   handleLoadLesson(false); 
+  // }, [handleLoadLesson]); // Now depends on the memoized handleLoadLesson
 
   const handleClearSavedLesson = () => {
     try {
       localStorage.removeItem(TEACHER_LESSON_STORAGE_KEY);
       displayFeedback('teacherDashboard.clearedSuccess', 'Saved lesson cleared from local storage.');
-      // Optionally, also clear the current lessonBlocks in the UI:
-      // setLessonBlocks([]); 
     } catch (error) {
       console.error("Error clearing saved lesson from localStorage:", error);
       displayFeedback('teacherDashboard.clearedError', 'Error clearing saved lesson.', true);
@@ -227,7 +198,6 @@ const TeacherDashboard = () => {
   const renderBlockItem = (block, index, totalBlocks) => {
     const DisplayComponent = displayComponentMap[block.typePath];
     return (
-      // Assign the scrollable ID to this wrapper div
       <div key={block.id} id={getBlockElementId(block.id)} className="lesson-block-item-container">
         <div className="lesson-block-header">
             <span className="block-type-name"><TransliterableText text={t('teacherDashboard.blockTypeLabel', 'Type:')} /> <TransliterableText text={block.typeName} /></span>
@@ -282,7 +252,7 @@ const TeacherDashboard = () => {
   };
 
   return (
-    <div className="teacher-dashboard-container-grid"> {/* New class for grid layout */}
+    <div className="teacher-dashboard-container-grid"> 
       <div className="teacher-dashboard-sidebar">
         <DayManager 
           onDaySelect={handleDaySelect} 
@@ -303,12 +273,9 @@ const TeacherDashboard = () => {
             <TransliterableText text={t('studyMode.teacherDashboardHeading', 'Lesson Content Editor')} />
           </h2>
           <div className="dashboard-main-actions">
-              {/* Save/Load buttons might now relate to selectedDayId/selectedSectionId */}
               <button 
                 onClick={() => handleLoadLesson()} 
                 className="btn btn-info load-lesson-btn"
-                // DEV_NOTE: handleLoadLesson needs to be updated for API based loading.
-                // For now, it loads from LocalStorage.
                 title={t('loadFromLocalStorageTitle') || "Load from Local Storage (Legacy)"} 
               >
                   <TransliterableText text={t('loadLessonBtn', 'Load Lesson')} />
@@ -316,17 +283,15 @@ const TeacherDashboard = () => {
               <button 
                 onClick={handleSaveLesson} 
                 className="btn btn-success save-lesson-btn"
-                // DEV_NOTE: handleSaveLesson needs to be updated for API based saving.
-                // For now, it saves to LocalStorage.
-                disabled={!selectedSectionId} // Example: disable if no section selected for API save
-                title={selectedSectionId ? (t('saveToCurrentSectionAPITitle') || "Save to Current Section (API - Placeholder)") : (t('saveToLocalStorageTitle') || "Save to Local Storage (Legacy)")}
+                disabled={!selectedSectionId} 
+                title={selectedSectionId ? (t('saveToCurrentSectionAPITitle') || "Save to Current Section (API)") : (t('saveToLocalStorageTitle') || "Save to Local Storage (Legacy)")}
               >
                   <TransliterableText text={t('saveLessonBtn', 'Save Lesson')} />
               </button>
               <button 
                 onClick={openTemplateModal} 
                 className="btn btn-primary add-block-btn"
-                disabled={!selectedSectionId} // Disable if no section is selected to add blocks to
+                disabled={!selectedSectionId} 
                 title={selectedSectionId ? (t('addContentBlockBtn') || '+ Add Content Block') : (t('selectSectionToAddBlockTitle') || "Select a section to add blocks")}
               >
                 <TransliterableText text={t('addContentBlockBtn') || '+ Add Content Block'} />
