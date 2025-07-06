@@ -16,9 +16,11 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ # This assumes your static files are in the root.
-                          # If they are in a 'docs' folder, change to './docs'.
-                          # If you have a build step, this should be your build output folder (e.g., './_site', './build', './public').
+          publish_dir: ./public # Site files are in the /public directory
+          # cname: your.custom.domain.com # Uncomment if you have a custom domain
+          # publish_branch: gh-pages # Default is gh-pages, can be changed if needed
+          # keep_files: false # Set to true to keep files from previous deployments
+          # force_orphan: true # Creates a new commit history for the gh-pages branch without keeping the old history. Useful for clean deployments.
           # cname: your.custom.domain.com # Uncomment if you have a custom domain
           # publish_branch: gh-pages # Default is gh-pages, can be changed if needed
           # keep_files: false # Set to true to keep files from previous deployments
