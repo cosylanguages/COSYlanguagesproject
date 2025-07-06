@@ -137,7 +137,7 @@ const MatchOppositesExercise = ({ language, days, exerciseKey }) => {
       const isCorrectMatch = pairs.some(pair =>
         (pair.word === currentWordValue && pair.opposite === currentOppositeValue)
       );
-      const itemId = `matchopposite_${normalizeString(currentWordValue)}_${normalizeString(currentOppositeValue)}`;
+      // const itemId = `matchopposite_${normalizeString(currentWordValue)}_${normalizeString(currentOppositeValue)}`; // ESLint: 'itemId' is assigned a value but never used.
 
       if (isCorrectMatch) {
         setFeedback({ message: 'Correct Match!', type: 'correct' });
