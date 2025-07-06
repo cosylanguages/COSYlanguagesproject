@@ -1,6 +1,8 @@
 // Traductions bachkirs
 const baTranslations = {
-  languageNameNative: 'Башҡортса', // Added native name
+  languageNameNative: 'Башҡортса',
+  languageNameInEnglish: 'Bashkir',
+  languageCode: 'ba',
   dayNames: {
       1: "Төп һүҙҙәр",
       2: "Кем һин?",

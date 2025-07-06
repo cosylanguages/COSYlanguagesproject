@@ -1,6 +1,8 @@
 // Traduções portugaises
 const ptTranslations = {
-  languageNameNative: 'Português', // Added native name
+  languageNameNative: 'Português',
+  languageNameInEnglish: 'Portuguese',
+  languageCode: 'pt',
   dayNames: {
       1: "Palavras básicas",
       2: "Quem é você?",
