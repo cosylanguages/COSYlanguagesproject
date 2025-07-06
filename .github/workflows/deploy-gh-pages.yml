@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy React App to GitHub Pages
 
 on:
   push:
@@ -12,16 +12,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # Specify your Node.js version, LTS is a good choice
+
+      - name: Install dependencies
+        run: npm ci # Or npm install
+
+      - name: Build React application
+        run: npm run build
+
+      - name: Copy data directory to build
+        run: cp -r public/data build/data
+
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public # Site files are in the /public directory
+          publish_dir: ./build # Deploy the 'build' directory
           # cname: your.custom.domain.com # Uncomment if you have a custom domain
-          # publish_branch: gh-pages # Default is gh-pages, can be changed if needed
-          # keep_files: false # Set to true to keep files from previous deployments
-          # force_orphan: true # Creates a new commit history for the gh-pages branch without keeping the old history. Useful for clean deployments.
-          # cname: your.custom.domain.com # Uncomment if you have a custom domain
-          # publish_branch: gh-pages # Default is gh-pages, can be changed if needed
-          # keep_files: false # Set to true to keep files from previous deployments
-          # force_orphan: true # Creates a new commit history for the gh-pages branch without keeping the old history. Useful for clean deployments.
+          # publish_branch: gh-pages # Default is gh-pages
+          # keep_files: false
+          # force_orphan: true
