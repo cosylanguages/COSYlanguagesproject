@@ -1,5 +1,5 @@
 // Greek translations - using English as placeholders for now
-export default {
+const elTranslations = {
   languageNameNative: "Ελληνικά",
   languageNameInEnglish: "Greek",
   languageCode: "el",
@@ -14,7 +14,7 @@ export default {
   chooseDay: '📅 Choose Your Day:', // Placeholder
   dayFrom: 'Day From:', // Placeholder
   dayTo: 'Day To:', // Placeholder
-  selectPractice: '🧭 Choose Your Practice:', // Placeholder
+  selectPractice: '🧭 Choose Your Practice:', // Placeholder // Original: "Please select a practice category." - Kept this one as it's listed first
   vocabulary: '🔠 Vocabulary', // Placeholder
   grammar: '🧩 Grammar', // Placeholder
   reading: '📚 Reading', // Placeholder
@@ -99,7 +99,7 @@ export default {
   feedbackNotCorrectTryAgain: '❌ Incorrect. Try again!', // Placeholder
   noOppositeFound: 'No opposite found', // Placeholder
   pageTitle: 'COSYlanguages', // Placeholder
-  mainHeading: 'COSYlanguages', // Placeholder
+  mainHeading: 'COSYlanguages', // Placeholder // Original: "COSYlanguages" - Kept this one
   selectYourLanguagePrompt: 'Your language', // Placeholder
   selectDayPrompt: 'Day', // Placeholder
   levelUpToast: '🎉 Level up! You are now level {level}!', // Placeholder
@@ -107,8 +107,7 @@ export default {
   statsLevel: 'Level:', // Placeholder
   statsStreak: 'Streak:', // Placeholder
 
-  // Keys for FreestyleInterfaceView and general layout
-  "mainHeading": "COSYlanguages", // Placeholder
+  // "mainHeading": "COSYlanguages", // Placeholder - DUPLICATE, removed
   "studyModeButtonLabel": "🚀 Study Mode", // Placeholder
   "pinIncorrectMessage": "Incorrect PIN. Access denied.", // Placeholder
 
@@ -134,8 +133,7 @@ export default {
   // Keys for messages in FreestyleInterfaceView
   // selectLang is already covered by chooseLanguage
   // selectDay is already covered by daySelector.selectDay
-  "selectPractice": "Please select a practice category.", // Placeholder
-  "selectSubPractice": "Please select a specific exercise.", // Placeholder
+  // "selectPractice": "Please select a practice category.", // Placeholder - DUPLICATE, removed
 
   // Study Mode Specific
   "studyMode.mainHeading": "COSYlanguages - Study Mode", // Placeholder
@@ -355,3 +353,5 @@ export default {
   "aria.playSound": "Play sound", // Placeholder
   "aria.resetTiles": "Reset tiles" // Placeholder
 };
+
+export default elTranslations;
