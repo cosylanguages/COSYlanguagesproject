@@ -5,7 +5,7 @@ import ExerciseControls from '../../ExerciseControls';
 import { useLatinizationContext } from '../../../../contexts/LatinizationContext';
 import useLatinization from '../../../../hooks/useLatinization';
 import { shuffleArray } from '../../../../utils/arrayUtils';
-import { normalizeString } from '../../../../utils/stringUtils';
+// import { normalizeString } from '../../../../utils/stringUtils'; // Commented out: itemIdForProgress which used it is commented
 
 const MatchImageWordExercise = ({ language, days, exerciseKey }) => {
   const [gameItems, setGameItems] = useState([]);
@@ -119,9 +119,9 @@ const MatchImageWordExercise = ({ language, days, exerciseKey }) => {
   useEffect(() => {
     if (selectedItems.length === 2) {
       const [item1, item2] = selectedItems;
-      const wordItem = item1.type === 'word' ? item1 : (item2.type === 'word' ? item2 : null);
-      const imageItem = item1.type === 'image' ? item1 : (item2.type === 'image' ? item2 : null);
-      const itemIdForProgress = `matchimg_${imageItem ? normalizeString(imageItem.value) : 'unknownimg'}_${wordItem ? normalizeString(wordItem.value) : 'unknownword'}`;
+      // const wordItem = item1.type === 'word' ? item1 : (item2.type === 'word' ? item2 : null); // Commented out: part of itemIdForProgress
+      // const imageItem = item1.type === 'image' ? item1 : (item2.type === 'image' ? item2 : null); // Commented out: part of itemIdForProgress
+      // const itemIdForProgress = `matchimg_${imageItem ? normalizeString(imageItem.value) : 'unknownimg'}_${wordItem ? normalizeString(wordItem.value) : 'unknownword'}`; // ESLint: 'itemIdForProgress' is assigned a value but never used.
 
       if (item1.pairId === item2.pairId) {
         setFeedback({ message: 'Correct Match!', type: 'correct' });
@@ -179,7 +179,7 @@ const MatchImageWordExercise = ({ language, days, exerciseKey }) => {
   const revealAllAnswers = () => {
     setIsRevealed(true);
     const allPairsRevealed = {};
-    const newLines = [];
+    // const newLines = []; // ESLint: 'newLines' is assigned a value but never used.
     const uniquePairIds = [...new Set(gameItems.map(item => item.pairId))];
 
     uniquePairIds.forEach(pairId => {
