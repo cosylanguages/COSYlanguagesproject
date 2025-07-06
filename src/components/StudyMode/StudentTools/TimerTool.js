@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef } from 'react'; // Removed useCallback
 import { useI18n } from '../../../i18n/I18nContext';
 import './TimerTool.css'; // To be created
 
