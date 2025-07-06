@@ -171,7 +171,7 @@ export default {
 
   // For TeacherDashboard.js & TemplateTypeSelectionModal.js
   "addContentBlockBtn": "+ Add Content Block", // Placeholder
-  "teacherDashboard.noBlocksMessage": "No content blocks added yet. Click "Add Content Block" to start building your lesson.", // Placeholder
+  "teacherDashboard.noBlocksMessage": "No content blocks added yet. Click \\"Add Content Block\\" to start building your lesson.", // Placeholder
   "configureBtn": "Configure", // Placeholder
   "removeBtn": "Remove", // Placeholder
   "selectTemplateTypeTitle": "Select Content Block Type", // Placeholder
