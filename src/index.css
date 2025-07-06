@@ -245,56 +245,54 @@ body {
 }
 
 /* Individual Language Backgrounds */
-/* Ensure class names match the keys in src/i18n/translationsData.js */
-.COSYenglish-bg { /* Key: COSYenglish */
+/* Ensure class names match the keys in src/i18n/translationsData.js (e.g., 'english', 'greek') */
+.english-bg { /* Key: english */
   background-image: url('https://flagcdn.com/gb.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYfrench-bg { /* Key: COSYfrench */
+.french-bg { /* Key: french */
   background-image: url('https://flagcdn.com/fr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYrussian-bg { /* Key: COSYrussian */
+.russian-bg { /* Key: russian */
   background-image: url('https://flagcdn.com/ru.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYitalian-bg { /* Key: COSYitalian */
+.italian-bg { /* Key: italian */
   background-image: url('https://flagcdn.com/it.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYspanish-bg { /* Key: COSYspanish */
+.spanish-bg { /* Key: spanish */
   background-image: url('https://flagcdn.com/es.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYgerman-bg { /* Key: COSYgerman */
+.german-bg { /* Key: german */
   background-image: url('https://flagcdn.com/de.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYarmenian-bg { /* Key: COSYarmenian */
+.armenian-bg { /* Key: armenian */
   background-image: url('https://flagcdn.com/am.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
 /* Languages with local flags - paths might need adjustment based on project structure */
 /* Assuming assets are in public folder, so /assets/icons/ is relative to public URL */
-.COSYbachkir-bg { /* Key: COSYbachkir */
+.bashkir-bg { /* Key: bashkir */
   background-image: url('/assets/icons/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYtatar-bg { /* Key: COSYtatar */
+.tatar-bg { /* Key: tatar */
   background-image: url('/assets/icons/Flag_of_Tatarstan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.COSYbreton-bg { /* Key: COSYbreton */
+.breton-bg { /* Key: breton */
   background-image: url('/assets/icons/Flag_of_Brittany.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-/* Key: ΚΟΖΥελληνικά */
-.ΚΟΖΥελληνικά-bg { 
+.greek-bg { /* Key: greek */
   background-image: url('https://flagcdn.com/gr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-/* Key: COSYportugese */
-.COSYportugese-bg { 
+.portuguese-bg { /* Key: portuguese */
   background-image: url('https://flagcdn.com/pt.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
