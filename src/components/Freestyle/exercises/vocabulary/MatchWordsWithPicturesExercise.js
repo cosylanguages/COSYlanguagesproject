@@ -4,7 +4,7 @@ import { loadVocabularyData } from '../../../../utils/exerciseDataService';
 import { shuffleArray } from '../../../../utils/arrayUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
-import { useLatinizationContext } from '../../../../contexts/LatinizationContext';
+// import { useLatinizationContext } from '../../../../contexts/LatinizationContext'; // Commented out: isLatinized from here is unused
 import useLatinization from '../../../../hooks/useLatinization';
 import { useI18n } from '../../../../i18n/I18nContext';
 import './MatchWordsWithPicturesExercise.css'; // To be created
@@ -13,7 +13,7 @@ const NUM_ITEMS_FOR_EXERCISE = 4; // e.g., 4 pictures and 4 words
 
 const MatchWordsWithPicturesExercise = ({ language, days, exerciseKey, onComplete }) => {
   const { t } = useI18n();
-  const { isLatinized } = useLatinizationContext(); // Not directly used for image matching, but good to have if text appears
+  // const { isLatinized } = useLatinizationContext(); // ESLint: 'isLatinized' is assigned a value but never used.
   const getLatinizedText = useLatinization;
 
   const [isLoading, setIsLoading] = useState(true);
