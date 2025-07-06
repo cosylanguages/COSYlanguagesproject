@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
-import { usePlan } from './PlanContext';
+// import { usePlan } from './PlanContext'; // Commented out as PlanOverview is commented
 import { useAuth } from './AuthContext';
 import { useI18n } from './i18n/I18nContext';
 import Layout from './components/Layout/Layout';
@@ -12,10 +12,11 @@ import PinModal from './components/Common/PinModal'; // Import PinModal
 
 const STUDY_MODE_PIN = "1234"; // Define the PIN
 
+/*
 // Component for the Plan Overview
 const PlanOverview = () => {
     const { t, language } = useI18n();
-    const { plan, fetchPlan, loading, error } = usePlan();
+    const { plan, fetchPlan, loading, error } = usePlan(); // usePlan would be undefined here
     const { authToken, isAuthenticated } = useAuth();
 
     useEffect(() => {
@@ -89,7 +90,9 @@ const PlanOverview = () => {
         </div>
     );
 };
+*/
 
+/*
 // ProtectedRoute component (for general auth)
 const ProtectedRoute = ({ children }) => {
     const { isAuthenticated, loadingAuth } = useAuth();
@@ -100,6 +103,7 @@ const ProtectedRoute = ({ children }) => {
     }
     return isAuthenticated ? children : <Navigate to="/login" replace />;
 };
+*/
 
 // StudyModeProtectedRoute component (for PIN access)
 const StudyModeProtectedRoute = ({ children }) => {
