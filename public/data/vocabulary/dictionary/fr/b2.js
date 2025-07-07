@@ -29,10 +29,16 @@ const b2_french_vocabulary = {
     { "term": "la couverture médiatique", "definition": "Traitement d'un événement par les médias.", "gender": "f", "example": "La couverture médiatique de l'élection a été intense.", "notes": "" },
     { "term": "vérifier les faits / le fact-checking", "definition": "Processus de confirmation de la véracité des informations.", "gender": null, "example": "Le fact-checking est crucial pour lutter contre la désinformation.", "notes": "Anglicisme fréquent." },
     { "term": "une agence de presse", "definition": "Organisme qui fournit des informations aux médias.", "gender": "f", "example": "L'AFP est une grande agence de presse.", "notes": "" },
-    { "term": "un scoop", "definition": "Information exclusive publiée avant les autres.", "gender": "m", "example": "Le journaliste a obtenu un scoop.", "notes": "Anglicisme." }
+    { "term": "un scoop", "definition": "Information exclusive publiée avant les autres.", "gender": "m", "example": "Le journaliste a obtenu un scoop.", "notes": "Anglicisme." },
+    { "term": "la une", "definition": "Première page d'un journal.", "gender": "f", "example": "Faire la une des journaux.", "notes": "Synonyme de 'la première page'." },
+    { "term": "le tirage", "definition": "Nombre d'exemplaires imprimés d'une publication.", "gender": "m", "example": "Ce quotidien a un fort tirage.", "notes": "" },
+    { "term": "l'actualité (chaude)", "definition": "Ensemble des événements récents (très récents).", "gender": "f", "example": "Suivre l'actualité chaude.", "notes": "" },
+    { "term": "la couverture médiatique", "definition": "Traitement d'un événement par les médias.", "gender": "f", "example": "La couverture médiatique de l'élection a été intense.", "notes": "" },
+    { "term": "vérifier les faits / le fact-checking", "definition": "Processus de confirmation de la véracité des informations.", "gender": null, "example": "Le fact-checking est crucial pour lutter contre la désinformation.", "notes": "Anglicisme fréquent." },
+    { "term": "une agence de presse", "definition": "Organisme qui fournit des informations aux médias.", "gender": "f", "example": "L'AFP est une grande agence de presse.", "notes": "" }
   ],
   "Le Monde du Travail (stratégie et économie)": [
-    { "term": "un(e) cadre (supérieur)", "definition": "Employé(e) occupant un poste de direction ou de responsabilité élevée (très élevée).", "gender": "m/f", "example": "Elle a été promue cadre supérieur.", "notes": "" },
+    { "term": "un(e) cadre (supérieur)", "definition": "Employé(e) occupant un poste de direction ou de responsabilité élevée (très élevée).", "gender": "m/f", "example": "Elle a été promue cadre supérieur après dix ans dans l'entreprise.", "notes": "" },
     { "term": "un(e) responsable (de département, de projet)", "definition": "Personne ayant la charge, la direction d'un service, d'un projet.", "gender": "m/f", "example": "Il est le responsable du département des ventes.", "notes": "" },
     { "term": "un(e) entrepreneur(-euse)", "definition": "Personne qui crée, développe et gère une entreprise à ses risques.", "gender": "m/f", "example": "Les jeunes entrepreneurs sont encouragés par des aides gouvernementales.", "notes": "" },
     { "term": "une start-up", "definition": "Jeune entreprise innovante, souvent dans le secteur technologique, à fort potentiel de croissance.", "gender": "f", "example": "Il a lancé une start-up dans le domaine de l'intelligence artificielle.", "notes": "Anglicisme fréquent." },
@@ -67,7 +73,10 @@ const b2_french_vocabulary = {
     { "term": "le marketing", "definition": "Ensemble des actions visant à étudier et influencer les besoins et comportements des consommateurs.", "gender": "m", "example": "Une campagne de marketing réussie.", "notes": "Anglicisme." },
     { "term": "la comptabilité", "definition": "Tenue des comptes financiers d'une entreprise.", "gender": "f", "example": "Le service de la comptabilité.", "notes": "" },
     { "term": "un actionnaire", "definition": "Personne qui possède des actions d'une société.", "gender": "m", "example": "L'assemblée générale des actionnaires.", "notes": "" },
-    { "term": "la bourse", "definition": "Marché où s'échangent les valeurs mobilières (actions, obligations).", "gender": "f", "example": "Investir en bourse comporte des risques.", "notes": "" }
+    { "term": "la bourse", "definition": "Marché où s'échangent les valeurs mobilières (actions, obligations).", "gender": "f", "example": "Investir en bourse comporte des risques.", "notes": "" },
+    { "term": "un organigramme", "definition": "Schéma représentant la structure hiérarchique d'une entreprise.", "gender": "m", "example": "L'organigramme de l'entreprise montre les différents départements et leurs responsables.", "notes": "" },
+    { "term": "la rentabilité", "definition": "Capacité d'une entreprise ou d'un investissement à générer des profits.", "gender": "f", "example": "Analyser la rentabilité d'un projet avant de le lancer.", "notes": "" },
+    { "term": "un créneau (commercial)", "definition": "Segment de marché spécifique et souvent peu exploité.", "gender": "m", "example": "Cette entreprise a trouvé un créneau porteur.", "notes": "Aussi 'niche'." }
   ],
   "Les Arts et la Littérature (analyse critique)": [
     { "term": "une œuvre d'art", "definition": "Création ayant une valeur esthétique (peinture, sculpture, musique, etc.).", "gender": "f", "example": "Cette œuvre d'art a été exposée dans plusieurs musées internationaux.", "notes": "" },
@@ -99,7 +108,12 @@ const b2_french_vocabulary = {
     { "term": "le symbolisme", "definition": "Utilisation de symboles pour représenter des idées ou des qualités.", "gender": "m", "example": "Le symbolisme des couleurs dans ce tableau est frappant.", "notes": "" },
     { "term": "une critique (littéraire, d'art)", "definition": "Analyse et jugement d'une œuvre.", "gender": "f", "example": "J'ai lu une critique très positive de ce film.", "notes": "" },
     { "term": "interpréter", "definition": "Donner un sens à quelque chose.", "gender": null, "example": "Comment interprétez-vous ce poème ?", "notes": "" },
-    { "term": "l'esthétique", "definition": "Science du beau ; caractère beau d'une œuvre.", "gender": "f", "example": "L'esthétique de ce film est remarquable.", "notes": "" }
+    { "term": "l'esthétique", "definition": "Science du beau ; caractère beau d'une œuvre.", "gender": "f", "example": "L'esthétique de ce film est remarquable.", "notes": "" },
+    { "term": "un roman d'apprentissage", "definition": "Roman qui retrace la formation d'un personnage, son évolution psychologique et morale.", "gender": "m", "example": "'L'Éducation sentimentale' de Flaubert est un exemple de roman d'apprentissage.", "notes": "Genre littéraire." },
+    { "term": "la mise en scène", "definition": "Art de diriger la représentation d'une œuvre théâtrale ou cinématographique.", "gender": "f", "example": "La mise en scène de cette pièce était très innovante.", "notes": "" },
+    { "term": "un protagoniste", "definition": "Personnage principal d'une œuvre littéraire ou cinématographique.", "gender": "m", "example": "Le protagoniste du film est un détective tourmenté.", "notes": "" },
+    { "term": "une intrigue secondaire", "definition": "Action secondaire qui se développe parallèlement à l'action principale.", "gender": "f", "example": "L'intrigue secondaire apporte une touche d'humour au récit.", "notes": "" },
+    { "term": "le dénouement", "definition": "Fin de l'action dans une œuvre de fiction, résolution de l'intrigue.", "gender": "m", "example": "Le dénouement de la pièce était surprenant.", "notes": "" }
   ],
   "La Science et la Technologie (débats et éthique)": [
     { "term": "la science", "definition": "Ensemble cohérent de connaissances relatives à certaines catégories de faits, d'objets ou de phénomènes obéissant à des lois.", "gender": "f", "example": "La science a permis des avancées médicales considérables.", "notes": "" },
@@ -129,7 +143,12 @@ const b2_french_vocabulary = {
     { "term": "le brevet", "definition": "Titre de propriété industrielle protégeant une invention.", "gender": "m", "example": "Déposer un brevet pour une nouvelle technologie.", "notes": "" },
     { "term": "la génétique", "definition": "Science de l'hérédité et des gènes.", "gender": "f", "example": "Les progrès en génétique ouvrent de nouvelles perspectives.", "notes": "" },
     { "term": "les OGM (Organismes Génétiquement Modifiés)", "definition": "Organismes dont le patrimoine génétique a été modifié par l'homme.", "gender": "m, pl", "example": "Le débat sur les OGM est complexe.", "notes": "" },
-    { "term": "la nanotechnologie", "definition": "Ensemble des techniques de manipulation de la matière à l'échelle atomique et moléculaire.", "gender": "f", "example": "Les applications potentielles de la nanotechnologie.", "notes": "" }
+    { "term": "la nanotechnologie", "definition": "Ensemble des techniques de manipulation de la matière à l'échelle atomique et moléculaire.", "gender": "f", "example": "Les applications potentielles de la nanotechnologie.", "notes": "" },
+    { "term": "un chercheur / une chercheuse", "definition": "Personne qui effectue des recherches scientifiques.", "gender": "m/f", "example": "Les chercheurs travaillent sur un nouveau vaccin.", "notes": "" },
+    { "term": "une avancée (scientifique/technologique)", "definition": "Progrès significatif dans un domaine.", "gender": "f", "example": "C'est une avancée majeure pour la médecine.", "notes": "" },
+    { "term": "le génie génétique", "definition": "Ensemble des techniques de modification des gènes.", "gender": "m", "example": "Le génie génétique soulève des questions éthiques.", "notes": "" },
+    { "term": "l'automatisation", "definition": "Remplacement du travail humain par des machines.", "gender": "f", "example": "L'automatisation transforme de nombreux secteurs industriels.", "notes": "" },
+    { "term": "la cybersécurité", "definition": "Ensemble des mesures de protection des systèmes informatiques.", "gender": "f", "example": "La cybersécurité est un enjeu crucial pour les entreprises.", "notes": "" }
   ],
   "Les Enjeux Sociaux, Politiques et Économiques (analyse)": [
     { "term": "un enjeu", "definition": "Ce que l'on risque dans une compétition, une entreprise ; question importante et décisive.", "gender": "m", "example": "L'accès à l'eau potable est un enjeu majeur dans de nombreux pays.", "notes": "" },
@@ -163,7 +182,13 @@ const b2_french_vocabulary = {
     { "term": "la croissance (économique)", "definition": "Augmentation de la production de richesses.", "gender": "f", "example": "La croissance économique est faible cette année.", "notes": "" },
     { "term": "la dette (publique)", "definition": "Somme d'argent due (par l'État).", "gender": "f", "example": "La dette publique du pays est élevée.", "notes": "" },
     { "term": "un impôt", "definition": "Prélèvement financier obligatoire par l'État.", "gender": "m", "example": "Payer ses impôts.", "notes": "" },
-    { "term": "une taxe", "definition": "Impôt indirect sur la consommation ou certains services.", "gender": "f", "example": "La taxe sur la valeur ajoutée (TVA).", "notes": "" }
+    { "term": "une taxe", "definition": "Impôt indirect sur la consommation ou certains services.", "gender": "f", "example": "La taxe sur la valeur ajoutée (TVA).", "notes": "" },
+    { "term": "un syndicat", "definition": "Association de travailleurs visant à défendre leurs intérêts professionnels.", "gender": "m", "example": "Les syndicats négocient avec le patronat.", "notes": "Déjà présent dans 'Le Monde du Travail', ici avec un focus plus social/politique." },
+    { "term": "une grève", "definition": "Arrêt collectif de travail décidé par les salariés pour revendiquer.", "gender": "f", "example": "Les employés ont voté la grève.", "notes": "Déjà présent dans 'Le Monde du Travail'." },
+    { "term": "le pouvoir d'achat", "definition": "Quantité de biens et services qu'un revenu permet d'acheter.", "gender": "m", "example": "L'inflation diminue le pouvoir d'achat.", "notes": "" },
+    { "term": "le développement durable", "definition": "Développement qui répond aux besoins du présent sans compromettre la capacité des générations futures.", "gender": "m", "example": "Le développement durable est un enjeu planétaire.", "notes": "Concept clé." },
+    { "term": "l'urbanisation", "definition": "Processus de concentration de la population dans les villes.", "gender": "f", "example": "L'urbanisation rapide pose des défis en matière de logement et de transport.", "notes": "" },
+    { "term": "la laïcité", "definition": "Principe de séparation de la société civile et de la société religieuse.", "gender": "f", "example": "La laïcité est un principe fondamental de la République française.", "notes": "" }
   ],
   "Expressions Idiomatiques, Nuances et Connecteurs Logiques": [
     { "term": "avoir lieu", "definition": "Se produire, se dérouler (pour un événement).", "gender": null, "example": "La réunion aura lieu demain à 10h.", "notes": "Expression courante." },
@@ -192,7 +217,20 @@ const b2_french_vocabulary = {
     { "term": "mettre les points sur les i", "definition": "Clarifier les choses de manière ferme et définitive.", "gender": null, "example": "Il a mis les points sur les i lors de la réunion.", "notes": "Expression idiomatique." },
     { "term": "coûter les yeux de la tête", "definition": "Être très cher.", "gender": null, "example": "Cette voiture coûte les yeux de la tête.", "notes": "Expression idiomatique." },
     { "term": "avoir un coup de foudre (pour)", "definition": "Tomber amoureux(-euse) subitement (de).", "gender": null, "example": "J'ai eu un coup de foudre pour cette ville.", "notes": "Expression idiomatique." },
-    { "term": "faire d'une pierre deux coups", "definition": "Atteindre deux objectifs avec une seule action.", "gender": null, "example": "En visitant ma tante, j'ai fait d'une pierre deux coups en voyant aussi mon cousin.", "notes": "Expression idiomatique." }
+    { "term": "faire d'une pierre deux coups", "definition": "Atteindre deux objectifs avec une seule action.", "gender": null, "example": "En visitant ma tante, j'ai fait d'une pierre deux coups en voyant aussi mon cousin.", "notes": "Expression idiomatique." },
+    { "term": "en ce qui concerne / concernant", "definition": "À propos de, pour ce qui est de.", "gender": null, "example": "En ce qui concerne votre demande, nous l'étudions. Concernant le budget, des ajustements sont nécessaires.", "notes": "Connecteurs pour introduire un sujet." },
+    { "term": "d'une part... d'autre part...", "definition": "Pour présenter deux aspects ou arguments distincts.", "gender": null, "example": "D'une part, le projet est innovant, d'autre part, il est très coûteux.", "notes": "Structure argumentative." },
+    { "term": "non seulement... mais encore / mais également...", "definition": "Pour ajouter un élément plus fort ou surprenant au premier.", "gender": null, "example": "Non seulement il est arrivé en retard, mais il n'avait pas non plus préparé sa présentation.", "notes": "Structure d'emphase et d'addition." },
+    { "term": "au cas où (+ conditionnel)", "definition": "Exprime une éventualité, une précaution.", "gender": null, "example": "Prends ton parapluie au cas où il pleuvrait.", "notes": "Conjonction de subordination." },
+    { "term": "pourvu que (+ subjonctif)", "definition": "Exprime une condition souhaitée pour qu'une action se réalise.", "gender": null, "example": "Nous irons à la plage pourvu qu'il fasse beau.", "notes": "Conjonction de subordination." },
+    { "term": "afin que / pour que (+ subjonctif)", "definition": "Exprime le but, l'objectif visé.", "gender": null, "example": "Il travaille dur afin que sa famille ne manque de rien.", "notes": "Conjonctions de subordination." },
+    { "term": "bien que / quoique (+ subjonctif)", "definition": "Exprime une concession, une opposition.", "gender": null, "example": "Bien qu'il soit fatigué, il continue de travailler. Quoique ce soit difficile, il ne renonce pas.", "notes": "Conjonctions de subordination." },
+    { "term": "tant que", "definition": "Aussi longtemps que, pendant tout le temps que.", "gender": null, "example": "Tant qu'il y aura des hommes, il y aura des guerres. (Victor Hugo)", "notes": "Conjonction de subordination (temps)." },
+    { "term": "dès que / aussitôt que", "definition": "Immédiatement après que.", "gender": null, "example": "Je t'appellerai dès que j'arriverai. Aussitôt qu'il a fini, il est parti.", "notes": "Conjonctions de subordination (temps)." },
+    { "term": "étant donné que / vu que", "definition": "Considérant que, puisque (introduit une cause connue).", "gender": null, "example": "Étant donné que la météo est mauvaise, le match est annulé. Vu que tu es là, tu peux m'aider.", "notes": "Conjonctions de subordination (cause)." },
+    { "term": "mettre l'accent sur", "definition": "Souligner, insister sur un point particulier.", "gender": null, "example": "Le rapport met l'accent sur les difficultés économiques.", "notes": "Expression." },
+    { "term": "prendre en compte", "definition": "Considérer, inclure dans son raisonnement ou son action.", "gender": null, "example": "Il faut prendre en compte tous les aspects du problème.", "notes": "Synonyme de 'tenir compte de'." },
+    { "term": "en résumé / en bref / en un mot", "definition": "Pour conclure de manière concise.", "gender": null, "example": "En résumé, la situation est préoccupante. En bref, il a refusé. En un mot : excellent !", "notes": "Connecteurs de conclusion." }
   ]
 };
 
