@@ -9,19 +9,28 @@ const c1_french_vocabulary = {
     { "term": "une assertion", "definition": "Proposition que l'on avance et que l'on soutient comme vraie.", "gender": "f", "example": "Son assertion a été contestée par plusieurs experts.", "notes": "Soutenu." },
     { "term": "fallacieux(-euse)", "definition": "Trompeur, illusoire.", "gender": null, "example": "Un argument fallacieux.", "notes": "Soutenu." },
     { "term": "probant(e)", "definition": "Qui prouve, qui est convaincant.", "gender": null, "example": "Des preuves probantes.", "notes": "Soutenu." },
-    { "term": "une panacée", "definition": "Remède universel censé guérir tous les maux.", "gender": "f", "example": "Cette solution n'est pas une panacée, mais elle aide.", "notes": "Souvent utilisé de manière critique." }
+    { "term": "une panacée", "definition": "Remède universel censé guérir tous les maux.", "gender": "f", "example": "Cette solution n'est pas une panacée, mais elle aide.", "notes": "Souvent utilisé de manière critique." },
+    { "term": "corroborer", "definition": "Confirmer, appuyer (une affirmation, une théorie) par de nouvelles preuves ou témoignages.", "gender": null, "example": "Les récentes découvertes archéologiques corroborent l'hypothèse des historiens.", "notes": "Soutenu. Verbe transitif." },
+    { "term": "une diligence (faire preuve de)", "definition": "Soin attentif, zèle et rapidité que l'on apporte à l'exécution de quelque chose.", "gender": "f", "example": "Il a fait preuve d'une grande diligence dans la gestion de ce dossier complexe.", "notes": "Soutenu. 'Faire preuve de diligence'." },
+    { "term": "subséquent(e)", "definition": "Qui suit immédiatement dans le temps ou dans un ordre logique.", "gender": null, "example": "Les mesures prises et les ajustements subséquents ont permis d'améliorer la situation.", "notes": "Soutenu. Adjectif." },
+    { "term": "obvier à (un problème, une difficulté)", "definition": "Prendre les dispositions nécessaires pour éviter un inconvénient, un danger.", "gender": null, "example": "Pour obvier aux risques d'inondation, des digues ont été construites.", "notes": "Soutenu. Verbe transitif indirect (obvier à quelque chose)." }
   ],
   "Actualités et Débats d'Idées (avancé)": [
-    { "term": "une conjoncture (économique, politique)", "definition": "Situation résultant d'un concours de circonstances.", "gender": "f", "example": "La conjoncture économique actuelle est difficile.", "notes": "" },
-    { "term": "une hégémonie", "definition": "Suprématie d'un État, d'un groupe sur d'autres.", "gender": "f", "example": "L'hégémonie culturelle américaine.", "notes": "" },
-    { "term": "un paradigme", "definition": "Modèle de pensée, cadre de référence.", "gender": "m", "example": "Un changement de paradigme est nécessaire.", "notes": "" },
-    { "term": "la précarité", "definition": "État de ce qui est instable, incertain, fragile (surtout socialement).", "gender": "f", "example": "La précarité de l'emploi chez les jeunes.", "notes": "" },
-    { "term": "la dissidence", "definition": "Action ou état d'une personne qui se sépare d'une communauté ou d'une doctrine.", "gender": "f", "example": "La dissidence politique dans les régimes autoritaires.", "notes": "" },
-    { "term": "un clivage", "definition": "Séparation nette entre des groupes, des opinions.", "gender": "m", "example": "Le clivage entre la gauche et la droite.", "notes": "" },
-    { "term": "une ingérence", "definition": "Action de s'ingérer dans les affaires d'autrui, notamment d'un État dans celles d'un autre.", "gender": "f", "example": "Dénoncer l'ingérence étrangère.", "notes": "" },
-    { "term": "la rhétorique", "definition": "Art de bien parler, d'utiliser le discours pour persuader.", "gender": "f", "example": "Analyser la rhétorique d'un homme politique.", "notes": "Peut avoir une connotation péjorative (discours vide)." },
-    { "term": "un plaidoyer (pour/contre)", "definition": "Discours ou écrit en faveur ou défaveur de quelqu'un, quelque chose.", "gender": "m", "example": "Un plaidoyer vibrant pour la liberté de la presse.", "notes": "" },
-    { "term": "une diatribe (contre)", "definition": "Critique amère et violente.", "gender": "f", "example": "Publier une diatribe contre le gouvernement.", "notes": "" }
+    { "term": "une conjoncture (économique, politique)", "definition": "Situation d'ensemble résultant d'un concours de circonstances, en particulier dans le domaine économique ou politique.", "gender": "f", "example": "La conjoncture économique actuelle est marquée par une forte inflation.", "notes": "" },
+    { "term": "une hégémonie (culturelle, économique)", "definition": "Suprématie, domination d'un État, d'un groupe, d'une culture sur d'autres.", "gender": "f", "example": "Certains dénoncent l'hégémonie culturelle américaine à travers les médias.", "notes": "" },
+    { "term": "un paradigme (changement de)", "definition": "Modèle de pensée, ensemble de croyances et de valeurs qui façonnent une vision du monde à une époque donnée.", "gender": "m", "example": "La découverte de l'héliocentrisme a provoqué un changement de paradigme scientifique.", "notes": "" },
+    { "term": "la précarité (de l'emploi, sociale)", "definition": "État de ce qui est instable, incertain, fragile, notamment en ce qui concerne la situation sociale ou professionnelle.", "gender": "f", "example": "La précarité de l'emploi touche de plus en plus de jeunes diplômés.", "notes": "" },
+    { "term": "la dissidence (politique, idéologique)", "definition": "Action ou état d'une personne ou d'un groupe qui se sépare d'une communauté, d'une autorité ou d'une doctrine établie.", "gender": "f", "example": "La dissidence politique est souvent réprimée dans les régimes autoritaires.", "notes": "" },
+    { "term": "un clivage (social, politique)", "definition": "Séparation nette, division profonde entre des groupes sociaux, des opinions politiques, etc.", "gender": "m", "example": "Le clivage traditionnel entre la gauche et la droite politique semble s'estomper.", "notes": "" },
+    { "term": "une ingérence (étrangère, dans les affaires intérieures)", "definition": "Action de s'ingérer, d'intervenir sans y être invité dans les affaires d'autrui, notamment d'un État dans celles d'un autre.", "gender": "f", "example": "Le gouvernement a dénoncé toute tentative d'ingérence étrangère dans ses élections.", "notes": "" },
+    { "term": "la rhétorique", "definition": "Art de bien parler, ensemble des techniques du discours visant à persuader ou à émouvoir l'auditoire.", "gender": "f", "example": "Il est important d'analyser la rhétorique utilisée par les hommes politiques pour comprendre leurs intentions.", "notes": "Peut avoir une connotation péjorative (discours artificiel, manipulateur)." },
+    { "term": "un plaidoyer (pour/contre)", "definition": "Discours ou écrit passionné en faveur ou en défaveur de quelqu'un, d'une cause, d'une idée.", "gender": "m", "example": "L'avocat a prononcé un plaidoyer vibrant pour la défense de son client. Cet article est un véritable plaidoyer pour l'environnement.", "notes": "" },
+    { "term": "une diatribe (contre)", "definition": "Critique amère, violente et souvent injurieuse contre quelqu'un ou quelque chose.", "gender": "f", "example": "Le journaliste a publié une diatribe virulente contre la corruption.", "notes": "" },
+    { "term": "un enjeu (majeur, crucial)", "definition": "Ce que l'on peut gagner ou perdre dans une entreprise, une compétition ; question importante dont l'issue est décisive.", "gender": "m", "example": "La transition énergétique est un enjeu majeur pour les décennies à venir.", "notes": "" },
+    { "term": "une problématique", "definition": "Ensemble des problèmes qui se posent sur un sujet donné ; art de poser les problèmes.", "gender": "f", "example": "La problématique du logement en milieu urbain est complexe.", "notes": "" },
+    { "term": "une controverse", "definition": "Discussion suivie sur une question, motivée par des opinions ou des interprétations divergentes.", "gender": "f", "example": "Cette décision a suscité une vive controverse dans les médias.", "notes": "" },
+    { "term": "un consensus", "definition": "Accord et consentement du plus grand nombre, de l'opinion publique.", "gender": "m", "example": "Il est difficile de parvenir à un consensus sur cette question politique.", "notes": "" },
+    { "term": "la pertinence (d'un argument, d'une mesure)", "definition": "Qualité de ce qui est approprié, adéquat à l'objet dont il s'agit.", "gender": "f", "example": "La pertinence de ses arguments a convaincu l'auditoire.", "notes": "" }
   ],
   "Arts, Littérature et Culture (critique et analyse)": [
     { "term": "l'herméneutique", "definition": "Théorie de l'interprétation des textes.", "gender": "f", "example": "L'herméneutique littéraire.", "notes": "Spécialisé." },
@@ -33,7 +42,12 @@ const c1_french_vocabulary = {
     { "term": "la catharsis", "definition": "Purgation des passions par la représentation artistique (notamment au théâtre).", "gender": "f", "example": "La fonction cathartique de la tragédie.", "notes": "Terme d'origine grecque." },
     { "term": "subversif(-ive)", "definition": "Qui cherche à renverser l'ordre établi, les valeurs admises.", "gender": null, "example": "Un art subversif.", "notes": "" },
     { "term": "iconoclaste", "definition": "Qui détruit les images saintes ; par extension, qui s'attaque aux traditions, aux valeurs établies.", "gender": null, "example": "Un artiste iconoclaste.", "notes": "Adjectif ou nom." },
-    { "term": "une allégorie", "definition": "Représentation d'une idée abstraite par une image ou un récit.", "gender": "f", "example": "La Justice est souvent représentée sous forme d'allégorie.", "notes": "" }
+    { "term": "une allégorie", "definition": "Représentation d'une idée abstraite par une image ou un récit.", "gender": "f", "example": "La Justice est souvent représentée sous forme d'allégorie.", "notes": "" },
+    { "term": "un protagoniste", "definition": "Personnage principal d'une œuvre.", "gender": "m", "example": "Le protagoniste de ce roman est confronté à de nombreux dilemmes moraux.", "notes": "" },
+    { "term": "une péripétie", "definition": "Événement imprévu qui modifie le cours de l'action dans une œuvre.", "gender": "f", "example": "Le récit est riche en péripéties inattendues.", "notes": "Souvent au pluriel." },
+    { "term": "le dénouement", "definition": "Fin de l'intrigue d'une œuvre, résolution des conflits.", "gender": "m", "example": "Le dénouement de la pièce était à la fois tragique et poétique.", "notes": "" },
+    { "term": "une connotation", "definition": "Sens particulier, souvent subjectif ou culturel, qui s'ajoute au sens premier d'un mot.", "gender": "f", "example": "Ce mot a une connotation péjorative dans ce contexte.", "notes": "" },
+    { "term": "une figure de style", "definition": "Procédé d'expression qui s'écarte de l'usage ordinaire de la langue pour donner plus de force, d'originalité au discours.", "gender": "f", "example": "La métaphore et la comparaison sont des figures de style courantes.", "notes": "" }
   ],
   "Sciences, Technologies et Économie (concepts avancés)": [
     { "term": "empirique", "definition": "Qui s'appuie sur l'expérience, l'observation, et non sur la théorie.", "gender": null, "example": "Une étude empirique.", "notes": "" },
@@ -45,7 +59,10 @@ const c1_french_vocabulary = {
     { "term": "la macroéconomie", "definition": "Étude de l'économie à l'échelle d'un pays ou d'un ensemble de pays.", "gender": "f", "example": "Analyser les indicateurs macroéconomiques.", "notes": "" },
     { "term": "la microéconomie", "definition": "Étude des comportements économiques individuels (consommateurs, entreprises).", "gender": "f", "example": "Les modèles de la microéconomie.", "notes": "" },
     { "term": "la conjecture (économique)", "definition": "Hypothèse, prévision sur l'évolution économique.", "gender": "f", "example": "Les conjectures économiques pour l'année prochaine.", "notes": "Différent de 'conjoncture'." },
-    { "term": "la spéculation (financière)", "definition": "Opération financière risquée visant un gain rapide.", "gender": "f", "example": "La spéculation sur les marchés boursiers.", "notes": "" }
+    { "term": "la spéculation (financière)", "definition": "Opération financière risquée visant un gain rapide.", "gender": "f", "example": "La spéculation sur les marchés boursiers.", "notes": "" },
+    { "term": "la R&D (Recherche et Développement)", "definition": "Ensemble des activités entreprises par les entreprises et les institutions pour améliorer les connaissances et les produits.", "gender": "f", "example": "Investir massivement en R&D est crucial pour l'innovation.", "notes": "" },
+    { "term": "une synergie", "definition": "Action coordonnée de plusieurs éléments dont l'effet global est supérieur à la somme des effets individuels.", "gender": "f", "example": "La synergie entre les différents départements a amélioré la productivité.", "notes": "" },
+    { "term": "obsolescence programmée", "definition": "Stratégie visant à réduire délibérément la durée de vie d'un produit pour en augmenter le taux de remplacement.", "gender": "f", "example": "L'obsolescence programmée est critiquée pour son impact environnemental.", "notes": "" }
   ],
   "Enjeux Sociaux, Politiques et Environnementaux (approfondissement)": [
     { "term": "la géopolitique", "definition": "Étude des rapports entre la politique des États et leur géographie.", "gender": "f", "example": "Analyser la situation géopolitique mondiale.", "notes": "" },
@@ -57,7 +74,11 @@ const c1_french_vocabulary = {
     { "term": "la gentrification / l'embourgeoisement", "definition": "Processus par lequel des populations plus aisées s'approprient un espace initialement populaire.", "gender": "f/m", "example": "La gentrification des centres-villes.", "notes": "" },
     { "term": "la polarisation (sociale, politique)", "definition": "Division croissante et antagoniste au sein d'une société ou d'un système politique.", "gender": "f", "example": "La polarisation politique s'accentue.", "notes": "" },
     { "term": "un bouc émissaire", "definition": "Personne ou groupe sur qui l'on fait retomber toutes les fautes.", "gender": "m", "example": "Chercher un bouc émissaire pour détourner l'attention.", "notes": "" },
-    { "term": "la xénophobie", "definition": "Hostilité à l'égard des étrangers.", "gender": "f", "example": "Lutter contre la xénophobie.", "notes": "" }
+    { "term": "la xénophobie", "definition": "Hostilité à l'égard des étrangers.", "gender": "f", "example": "Lutter contre la xénophobie.", "notes": "" },
+    { "term": "le développement durable", "definition": "Développement qui répond aux besoins du présent sans compromettre la capacité des générations futures à répondre aux leurs.", "gender": "m", "example": "Le développement durable est un concept clé pour l'avenir de la planète.", "notes": "" },
+    { "term": "un enjeu de taille", "definition": "Un défi ou un problème d'importance considérable.", "gender": "m", "example": "La transition énergétique représente un enjeu de taille pour notre société.", "notes": "" },
+    { "term": "la fracture sociale (numérique, éducative)", "definition": "Disparité, inégalité profonde entre différents groupes au sein d'une société (accès à internet, éducation).", "gender": "f", "example": "La fracture numérique aggrave les inégalités sociales existantes.", "notes": "" },
+    { "term": "la parité (hommes-femmes)", "definition": "Égalité de représentation ou de traitement, notamment entre les sexes.", "gender": "f", "example": "La loi sur la parité vise à assurer une meilleure représentation des femmes en politique.", "notes": "" }
   ],
   "Expressions Idiomatiques et Figuré (maîtrise)": [
     { "term": "mettre de l'eau dans son vin", "definition": "Modérer ses exigences, devenir plus conciliant.", "gender": null, "example": "Il a dû mettre de l'eau dans son vin pour trouver un accord.", "notes": "" },
@@ -69,7 +90,11 @@ const c1_french_vocabulary = {
     { "term": "avoir du pain sur la planche", "definition": "Avoir beaucoup de travail à faire.", "gender": null, "example": "Je ne peux pas sortir ce soir, j'ai du pain sur la planche.", "notes": "" },
     { "term": "chercher midi à quatorze heures", "definition": "Compliquer inutilement les choses simples.", "gender": null, "example": "La solution est évidente, arrête de chercher midi à quatorze heures.", "notes": "" },
     { "term": "se tenir à carreau", "definition": "Rester tranquille, se méfier, ne pas s'exposer.", "gender": null, "example": "Après cet avertissement, il a intérêt à se tenir à carreau.", "notes": "" },
-    { "term": "passer du coq à l'âne", "definition": "Passer brusquement d'un sujet à un autre sans transition logique.", "gender": null, "example": "Dans la conversation, il passait constamment du coq à l'âne.", "notes": "" }
+    { "term": "passer du coq à l'âne", "definition": "Passer brusquement d'un sujet à un autre sans transition logique.", "gender": null, "example": "Dans la conversation, il passait constamment du coq à l'âne.", "notes": "" },
+    { "term": "ne pas être dans son assiette", "definition": "Ne pas se sentir bien, être mal à l'aise ou de mauvaise humeur.", "gender": null, "example": "Il est un peu distant aujourd'hui, il ne doit pas être dans son assiette.", "notes": "Expression idiomatique." },
+    { "term": "avoir la puce à l'oreille", "definition": "Se douter de quelque chose, être intrigué ou méfiant.", "gender": null, "example": "Son silence m'a mis la puce à l'oreille.", "notes": "Expression idiomatique." },
+    { "term": "coûter un bras", "definition": "Être extrêmement cher.", "gender": null, "example": "Cette réparation de voiture va me coûter un bras !", "notes": "Variante de 'coûter les yeux de la tête'." },
+    { "term": "en avoir ras le bol (de)", "definition": "En avoir assez, être excédé (par).", "gender": null, "example": "J'en ai ras le bol de ce bruit constant !", "notes": "Familier." }
   ],
   "Registres de Langue et Nuances Sémantiques": [
     { "term": "disparate", "definition": "Qui est composé d'éléments hétérogènes, manquant d'harmonie.", "gender": null, "example": "Une collection d'objets disparates.", "notes": "Soutenu." },
@@ -81,7 +106,11 @@ const c1_french_vocabulary = {
     { "term": "explicite", "definition": "Qui est énoncé clairement, sans rien laisser d'implicite.", "gender": null, "example": "Des instructions explicites.", "notes": "" },
     { "term": "endémique", "definition": "Qui sévit de façon permanente dans une région (maladie) ; propre à une région.", "gender": null, "example": "Une maladie endémique. Une plante endémique de cette île.", "notes": "" },
     { "term": "sporadique", "definition": "Qui apparaît ça et là, de temps en temps, irrégulièrement.", "gender": null, "example": "Des incidents sporadiques.", "notes": "" },
-    { "term": "subodorer", "definition": "Pressentir, deviner quelque chose de caché, de secret.", "gender": null, "example": "J'ai subodoré une ruse.", "notes": "Soutenu." }
+    { "term": "subodorer", "definition": "Pressentir, deviner quelque chose de caché, de secret.", "gender": null, "example": "J'ai subodoré une ruse.", "notes": "Soutenu." },
+    { "term": "désuet(ète)", "definition": "Qui n'est plus en usage, démodé, vieilli.", "gender": null, "example": "Cette expression est devenue désuète.", "notes": "Soutenu. Féminin: désuète." },
+    { "term": "vernaculaire", "definition": "Propre à un pays, à ses habitants (en parlant d'une langue).", "gender": null, "example": "Le français vernaculaire du Québec.", "notes": "Linguistique." },
+    { "term": "péremptoire", "definition": "Qui détruit d'avance toute objection ; indiscutable, catégorique.", "gender": null, "example": "Un ton péremptoire.", "notes": "Soutenu." },
+    { "term": "assertorique", "definition": "Qui affirme comme certain (philosophie).", "gender": null, "example": "Un jugement assertorique.", "notes": "Philosophie, soutenu." }
   ],
   "Compétences Professionnelles Spécifiques": [
     { "term": "un cahier des charges", "definition": "Document décrivant les spécifications d'un projet, les besoins à satisfaire.", "gender": "m", "example": "Rédiger le cahier des charges avant de lancer le projet.", "notes": "" },
@@ -93,7 +122,10 @@ const c1_french_vocabulary = {
     { "term": "la rentabilité", "definition": "Capacité à produire des bénéfices.", "gender": "f", "example": "Analyser la rentabilité d'un investissement.", "notes": "" },
     { "term": "externaliser / l'externalisation (outsourcing)", "definition": "Confier une partie de ses activités à un prestataire extérieur.", "gender": null, "example": "Externaliser le service client.", "notes": "Anglicisme 'outsourcing' fréquent." },
     { "term": "optimiser", "definition": "Rendre optimal, améliorer au maximum.", "gender": null, "example": "Optimiser les processus de production.", "notes": "" },
-    { "term": "une performance", "definition": "Résultat obtenu ; exploit.", "gender": "f", "example": "Évaluer la performance des employés. Une performance sportive remarquable.", "notes": "" }
+    { "term": "une performance", "definition": "Résultat obtenu ; exploit.", "gender": "f", "example": "Évaluer la performance des employés. Une performance sportive remarquable.", "notes": "" },
+    { "term": "un appel d'offres", "definition": "Procédure par laquelle un commanditaire demande à plusieurs entreprises de faire une proposition chiffrée pour la réalisation d'un projet.", "gender": "m", "example": "Notre entreprise a répondu à un appel d'offres public.", "notes": "" },
+    { "term": "la RSE (Responsabilité Sociétale des Entreprises)", "definition": "Intégration volontaire par les entreprises de préoccupations sociales et environnementales à leurs activités commerciales.", "gender": "f", "example": "De plus en plus d'entreprises mettent en place une politique de RSE.", "notes": "" },
+    { "term": "le brainstorming / le remue-méninges", "definition": "Technique de recherche d'idées originales en groupe.", "gender": "m", "example": "Nous avons organisé une séance de brainstorming pour trouver un nom au nouveau produit.", "notes": "'Remue-méninges' est la traduction française." }
   ],
   "Structuration du Discours et Rhétorique": [
     { "term": "une prémisse", "definition": "Proposition initiale d'un raisonnement, d'où l'on tire une conclusion.", "gender": "f", "example": "Partir de prémisses erronées.", "notes": "" },
@@ -105,7 +137,12 @@ const c1_french_vocabulary = {
     { "term": "une litote", "definition": "Figure de style qui consiste à dire moins pour faire entendre plus.", "gender": "f", "example": "'Ce n'est pas mauvais' pour 'c'est très bon' est une litote.", "notes": "" },
     { "term": "un sophisme", "definition": "Argument fallacieux, destiné à tromper.", "gender": "m", "example": "Démasquer un sophisme.", "notes": "" },
     { "term": "la dialectique", "definition": "Art de raisonner méthodiquement, par questions et réponses, pour atteindre la vérité.", "gender": "f", "example": "La dialectique hégélienne.", "notes": "" },
-    { "term": "la dissertation", "definition": "Exercice scolaire ou académique consistant à développer un sujet de manière argumentée.", "gender": "f", "example": "Rédiger une dissertation philosophique.", "notes": "" }
+    { "term": "la dissertation", "definition": "Exercice scolaire ou académique consistant à développer un sujet de manière argumentée.", "gender": "f", "example": "Rédiger une dissertation philosophique.", "notes": "" },
+    { "term": "un argumentaire", "definition": "Ensemble des arguments utilisés pour convaincre.", "gender": "m", "example": "Préparer un argumentaire solide pour défendre son projet.", "notes": "" },
+    { "term": "une thèse", "definition": "Proposition que l'on soutient par des arguments ; travail universitaire pour le doctorat.", "gender": "f", "example": "Sa thèse portait sur l'impact des nouvelles technologies. Il a soutenu sa thèse avec brio.", "notes": "" },
+    { "term": "une antithèse", "definition": "Opposition d'idées, de pensées ; figure de style qui oppose fortement deux termes.", "gender": "f", "example": "La structure thèse-antithèse-synthèse est classique. L'antithèse entre la vie et la mort.", "notes": "" },
+    { "term": "une synthèse", "definition": "Exposé qui rassemble les éléments essentiels de diverses sources ou d'une discussion.", "gender": "f", "example": "Faire la synthèse des documents proposés.", "notes": "Compétence clé du DALF C1." },
+    { "term": "un connecteur logique", "definition": "Mot ou groupe de mots qui établit une liaison entre des idées, des phrases ou des paragraphes.", "gender": "m", "example": "Utiliser des connecteurs logiques pour structurer son discours (e.g., donc, cependant, en outre).", "notes": "" }
   ],
   "Concepts Abstraits et Philosophiques": [
     { "term": "l'ontologie", "definition": "Partie de la philosophie qui étudie l'être en tant qu'être.", "gender": "f", "example": "Questions d'ontologie.", "notes": "Philosophie." },
@@ -117,7 +154,11 @@ const c1_french_vocabulary = {
     { "term": "le stoïcisme", "definition": "Doctrine philosophique prônant la vertu, la raison et l'acceptation du destin.", "gender": "m", "example": "Le stoïcisme de Marc Aurèle.", "notes": "Philosophie." },
     { "term": "l'hédonisme", "definition": "Doctrine philosophique qui fait du plaisir le bien suprême.", "gender": "m", "example": "L'hédonisme épicurien.", "notes": "Philosophie." },
     { "term": "l'utopie", "definition": "Conception imaginaire d'une société idéale.", "gender": "f", "example": "L'Utopie de Thomas More.", "notes": "" },
-    { "term": "la dystopie", "definition": "Récit de fiction dépeignant une société imaginaire sombre et oppressive.", "gender": "f", "example": "'1984' est une célèbre dystopie.", "notes": "" }
+    { "term": "la dystopie", "definition": "Récit de fiction dépeignant une société imaginaire sombre et oppressive.", "gender": "f", "example": "'1984' est une célèbre dystopie.", "notes": "" },
+    { "term": "l'altruisme", "definition": "Disposition à s'intéresser et à se dévouer à autrui.", "gender": "m", "example": "Faire preuve d'altruisme.", "notes": "Philosophie morale." },
+    { "term": "l'empirisme", "definition": "Doctrine philosophique selon laquelle toutes les connaissances proviennent de l'expérience.", "gender": "m", "example": "L'empirisme de Locke et Hume.", "notes": "Philosophie." },
+    { "term": "le pragmatisme", "definition": "Attitude qui privilégie l'action et les résultats pratiques.", "gender": "m", "example": "Aborder un problème avec pragmatisme.", "notes": "" },
+    { "term": "l'allégorie (de la caverne)", "definition": "Récit ou image représentant une idée abstraite sous une forme concrète (exemple célèbre de Platon).", "gender": "f", "example": "L'allégorie de la caverne illustre la théorie des Idées de Platon.", "notes": "Philosophie, littérature." }
   ]
 };
 
