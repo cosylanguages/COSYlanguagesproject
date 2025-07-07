@@ -4,28 +4,43 @@ const c2_french_vocabulary = {
     { "term": "pléthorique", "definition": "Qui est en abondance excessive.", "gender": null, "example": "Une offre pléthorique sur le marché.", "notes": "Soutenu." },
     { "term": "dichotomie", "definition": "Division en deux parties que l'on oppose.", "gender": "f", "example": "La dichotomie entre le bien et le mal.", "notes": "Soutenu." },
     { "term": "ésotérique", "definition": "Qui ne peut être compris que par des initiés.", "gender": null, "example": "Un langage ésotérique.", "notes": "" },
-    { "term": "vernaculaire", "definition": "Propre à un pays, à ses habitants (surtout pour une langue).", "gender": null, "example": "L'architecture vernaculaire de la région.", "notes": "Soutenu." }
+    { "term": "vernaculaire", "definition": "Propre à un pays, à ses habitants (surtout pour une langue).", "gender": null, "example": "L'architecture vernaculaire de la région.", "notes": "Soutenu." },
+    { "term": "alambiqué(e)", "definition": "Excessivement compliqué et subtil, manquant de naturel.", "gender": null, "example": "Un style d'écriture alambiqué et difficile à suivre.", "notes": "Soutenu, souvent péjoratif." },
+    { "term": "pléonastique", "definition": "Qui relève du pléonasme (répétition d'idées par des termes équivalents).", "gender": null, "example": "L'expression 'monter en haut' est pléonastique.", "notes": "Linguistique, stylistique." },
+    { "term": "ubuesque", "definition": "Absurde, grotesque et souvent cruel, à la manière du personnage d'Ubu Roi d'Alfred Jarry.", "gender": null, "example": "Une situation ubuesque qui défie toute logique.", "notes": "Référence culturelle." }
   ],
   "Expressions Idiomatiques, Proverbes et Allusions Culturelles (niveau natif)": [
     { "term": "battre son plein", "definition": "Être à son apogée, à son maximum d'intensité.", "gender": null, "example": "La fête battait son plein quand nous sommes arrivés.", "notes": "Expression." },
     { "term": "c'est monnaie courante", "definition": "C'est habituel, fréquent.", "gender": null, "example": "Les retards sont monnaie courante sur cette ligne.", "notes": "Expression." },
     { "term": "une levée de boucliers", "definition": "Protestation vive et générale.", "gender": "f", "example": "Sa proposition a provoqué une levée de boucliers.", "notes": "Expression." },
     { "term": "faire long feu", "definition": "Ne pas durer, échouer (pour un projet, une entreprise).", "gender": null, "example": "Son projet de réforme n'a pas fait long feu.", "notes": "Expression." },
-    { "term": "un travail de Romain / de Bénédictin", "definition": "Travail considérable, de longue haleine et minutieux.", "gender": "m", "example": "La traduction de ces archives a été un travail de Bénédictin.", "notes": "Allusion culturelle." }
+    { "term": "un travail de Romain / de Bénédictin", "definition": "Travail considérable, de longue haleine et minutieux.", "gender": "m", "example": "La traduction de ces archives a été un travail de Bénédictin.", "notes": "Allusion culturelle." },
+    { "term": "chercher la petite bête", "definition": "Critiquer des détails insignifiants, être excessivement pointilleux.", "gender": null, "example": "Il trouve toujours à redire, il adore chercher la petite bête.", "notes": "Expression idiomatique." },
+    { "term": "mettre la charrue avant les bœufs", "definition": "Faire les choses dans le désordre, commencer par la fin.", "gender": null, "example": "Vouloir acheter la voiture avant d'avoir le permis, c'est mettre la charrue avant les bœufs.", "notes": "Expression idiomatique." },
+    { "term": "ce n'est pas la mer à boire", "definition": "Ce n'est pas si difficile ou impossible que ça.", "gender": null, "example": "Apprendre cette leçon par cœur, ce n'est pas la mer à boire.", "notes": "Expression idiomatique." },
+    { "term": "une épée de Damoclès", "definition": "Un danger constant, une menace qui pèse sur quelqu'un.", "gender": "f", "example": "Cette échéance est une véritable épée de Damoclès suspendue au-dessus de nos têtes.", "notes": "Allusion culturelle/mythologique." }
   ],
   "Nuances Fines de Sens et Connotations": [
     { "term": "insidieux(-euse)", "definition": "Qui cherche à tromper, à nuire sournoisement ; qui progresse de façon cachée.", "gender": null, "example": "Un mal insidieux. Une question insidieuse.", "notes": "Connotation négative forte." },
     { "term": "péremptoire", "definition": "Qui détruit d'avance toute objection ; cassant, dogmatique.", "gender": null, "example": "Un ton péremptoire.", "notes": "Connotation autoritaire." },
     { "term": "velléitaire", "definition": "Qui a des intentions faibles, changeantes, sans passer à l'action.", "gender": null, "example": "Un artiste velléitaire, plein de projets inachevés.", "notes": "" },
     { "term": "prosaïque", "definition": "Qui manque de poésie, d'idéal ; banal, terre à terre.", "gender": null, "example": "Des préoccupations prosaïques.", "notes": "" },
-    { "term": "suranné(e)", "definition": "Démodé, qui appartient à une époque révolue.", "gender": null, "example": "Des coutumes surannées.", "notes": "" }
+    { "term": "suranné(e)", "definition": "Démodé, qui appartient à une époque révolue.", "gender": null, "example": "Des coutumes surannées.", "notes": "" },
+    { "term": "fallacieux(-euse)", "definition": "Trompeur, illusoire, destiné à induire en erreur.", "gender": null, "example": "Un raisonnement fallacieux qui masque la vérité.", "notes": "Soutenu. Connotation de tromperie intentionnelle." },
+    { "term": "probant(e)", "definition": "Qui apporte une preuve convaincante, qui établit la vérité de façon certaine.", "gender": null, "example": "Les enquêteurs ont recueilli des éléments probants.", "notes": "Soutenu. Connotation de force démonstrative." },
+    { "term": "ostensible(ment)", "definition": "Qui est fait avec l'intention d'être remarqué, de manière visible et souvent affectée.", "gender": null, "example": "Il affichait ostensiblement sa richesse. (Adverbe: ostensiblement)", "notes": "Soutenu. Peut avoir une connotation négative d'ostentation." },
+    { "term": "taciturne", "definition": "Qui parle peu, silencieux par nature, souvent d'humeur sombre.", "gender": null, "example": "C'est un homme taciturne et réservé.", "notes": "Décrit un trait de caractère." }
   ],
   "Adaptation Stylistique et Registres Multiples": [
     { "term": "argotique", "definition": "Relatif à l'argot, langage particulier à un groupe social.", "gender": null, "example": "Une expression argotique.", "notes": "Niveau de langue." },
     { "term": "soutenu(e)", "definition": "D'un niveau de langue élevé, recherché.", "gender": null, "example": "Un style soutenu.", "notes": "Niveau de langue." },
     { "term": "littéraire", "definition": "Propre à la littérature, souvent plus formel et imagé.", "gender": null, "example": "Une tournure littéraire.", "notes": "Niveau de langue." },
     { "term": "colloquial(e) / familier(-ière)", "definition": "Propre à la conversation courante, informelle.", "gender": null, "example": "Une expression familière.", "notes": "Niveau de langue." },
-    { "term": "la grandiloquence", "definition": "Emphase excessive dans le discours, style pompeux.", "gender": "f", "example": "Sa grandiloquence masquait mal la pauvreté de ses idées.", "notes": "Caractéristique stylistique." }
+    { "term": "la grandiloquence", "definition": "Emphase excessive dans le discours, style pompeux.", "gender": "f", "example": "Sa grandiloquence masquait mal la pauvreté de ses idées.", "notes": "Caractéristique stylistique." },
+    { "term": "le registre (de langue)", "definition": "Niveau de langue adopté par un locuteur en fonction de la situation de communication (soutenu, courant, familier, argotique).", "gender": "m", "example": "Il est important d'adapter son registre de langue à son interlocuteur.", "notes": "Concept linguistique." },
+    { "term": "la connotation / la dénotation", "definition": "Sens subjectif, culturel ou émotionnel associé à un mot / Sens objectif et littéral d'un mot.", "gender": "f", "example": "Le mot 'foyer' a une connotation chaleureuse, sa dénotation est 'lieu d'habitation'.", "notes": "Concepts linguistiques." },
+    { "term": "un euphémisme", "definition": "Atténuation d'une expression jugée trop crue, brutale ou déplaisante.", "gender": "m", "example": "'Il nous a quittés' est un euphémisme pour 'il est mort'.", "notes": "Figure de style." },
+    { "term": "une litote", "definition": "Figure de style qui consiste à dire moins pour suggérer davantage.", "gender": "f", "example": "'Ce n'est pas mauvais' est une litote pour dire 'c'est très bon'.", "notes": "Figure de style." }
   ],
   "Créativité Lexicale et Jeu de Mots": [
     { "term": "un néologisme", "definition": "Mot nouveau ou sens nouveau donné à un mot existant.", "gender": "m", "example": "Les jeunes inventent souvent des néologismes.", "notes": "" },
