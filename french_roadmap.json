@@ -43,305 +43,360 @@
     {
       "level_code": "A1",
       "level_name": "Le Jeune Explorateur",
-      "approximate_vocabulary_size": "approx. 500-700 words",
+      "approximate_vocabulary_size": "approx. 500-700 words (expandable with Vocabulaire Essentiel A1)",
       "learning_outcomes": [
-        "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.",
-        "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
-        "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
+        "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type (e.g., introducing oneself, asking for prices, ordering food).",
+        "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has (e.g., name, age, nationality, profession, family).",
+        "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help (e.g., understanding simple instructions, asking for repetition)."
       ],
       "language_focus_topics": [
-        "Nouns: Gender (masculine/feminine) and number (singular/plural) - regular forms and common irregulars.",
-        "Articles: Definite (le, la, l', les), indefinite (un, une, des).",
-        "Articles: Partitive (du, de la, de l', des) - introduction for food/drink.",
-        "Adjectives: Agreement in gender and number with nouns; placement of common descriptive adjectives (before/after noun).",
+        "Nouns: Gender (masculine/feminine) and number (singular/plural) - regular forms and common irregulars (e.g., un homme/des hommes, une femme/des femmes, un oeil/des yeux).",
+        "Articles: Definite (le, la, l', les), indefinite (un, une, des). Contracted articles (au, aux, du, des).",
+        "Articles: Partitive (du, de la, de l', des) - introduction for food/drink and abstract concepts (e.g., de la patience).",
+        "Adjectives: Agreement in gender and number with nouns; placement of common descriptive adjectives (before/after noun, e.g. grand, petit, bon, mauvais, beau, nouveau, vieux, joli).",
         "Verbs: Present tense of 'être', 'avoir'.",
-        "Verbs: Present tense of regular -er verbs.",
-        "Verbs: Present tense of common irregular verbs (e.g., aller, faire, venir, pouvoir, vouloir, prendre, boire, dire, lire, écrire, voir, savoir).",
-        "Verbs: Reflexive verbs in the present tense (e.g., s'appeler, se lever).",
-        "Basic sentence structure: Subject-Verb-Object; Subject-Verb-Adjective.",
-        "Negation: 'ne...pas' around the verb.",
-        "Questions: Intonation, 'est-ce que', inversion (simple verbs like être, avoir, aller), common question words (où, quand, comment, pourquoi, qui, que, combien, quel(le)(s)).",
+        "Verbs: Present tense of regular -er verbs (e.g., parler, habiter, aimer).",
+        "Verbs: Present tense of common irregular verbs (e.g., aller, faire, venir, pouvoir, vouloir, prendre, boire, dire, lire, écrire, voir, savoir, mettre, ouvrir, dormir, partir, sortir).",
+        "Verbs: Reflexive verbs in the present tense (e.g., s'appeler, se lever, se laver, se coucher).",
+        "Basic sentence structure: Subject-Verb-Object (e.g. J'aime le chocolat); Subject-Verb-Adjective (e.g. Je suis content).",
+        "Negation: 'ne...pas' around the verb; 'ne...pas de' with partitive articles (e.g. Je n'ai pas de frères).",
+        "Questions: Intonation, 'est-ce que', inversion (simple verbs like être, avoir, aller), common question words (où, quand, comment, pourquoi, qui, que, quoi, combien, quel(le)(s)).",
         "Possessive adjectives (mon, ton, son, ma, ta, sa, mes, tes, ses, notre, votre, leur, nos, vos, leurs).",
         "Demonstrative adjectives (ce, cet, cette, ces).",
-        "Prepositions of place: à (ville), en (pays fém.), au (pays masc.), dans, sur, sous, chez, devant, derrière.",
-        "Numbers: 0-100.",
-        "Telling time: 'Quelle heure est-il ? Il est...'.",
-        "Adverbs: Common adverbs of frequency (toujours, souvent, parfois, rarement, jamais) and manner (bien, mal, vite).",
-        "Conjunctions: et, ou, mais, parce que.",
-        "Near future: 'aller' + infinitive.",
-        "Recent past: 'venir de' + infinitive."
+        "Prepositions of place: à (ville, à la maison), en (pays fém., en France), au (pays masc., au Portugal), dans, sur, sous, chez, devant, derrière, à côté de, près de, loin de.",
+        "Numbers: 0-100. Ordinal numbers (premier, deuxième, etc. - basic).",
+        "Telling time: 'Quelle heure est-il ? Il est...'. Official and informal time.",
+        "Adverbs: Common adverbs of frequency (toujours, souvent, parfois, rarement, jamais), manner (bien, mal, vite, lentement), and quantity (beaucoup, un peu, assez, trop).",
+        "Conjunctions: et, ou, mais, parce que, donc, si (simple condition).",
+        "Near future: 'aller' + infinitive (e.g., Je vais manger).",
+        "Recent past: 'venir de' + infinitive (e.g., Je viens de manger)."
       ],
       "vocabulary_topics": [
-        "Theme: Salutations et Présentations (greetings, introductions, farewells, politeness).",
-        "Theme: La Famille et les Relations (immediate and extended family, friends, marital status).",
-        "Theme: Nombres (0-100), Jours, Mois, Saisons, Dates.",
-        "Theme: L'Heure et les Moments de la journée.",
-        "Theme: Les Couleurs et Formes de base.",
-        "Theme: La Nourriture et les Boissons (common food/drink items, meals, quantities, ordering in a café/restaurant).",
-        "Theme: Les Lieux en Ville (common places: school, shop, market, park, bank, post office, cinema, restaurant, hospital).",
-        "Theme: Les Activités Quotidiennes et les Loisirs (common verbs for daily actions and hobbies).",
-        "Theme: Adjectifs descriptifs (describing people, objects, places - appearance, personality basics).",
-        "Theme: Les Vêtements (common items of clothing for different seasons).",
-        "Theme: Les Transports (basic modes of transport, asking for/giving simple directions).",
-        "Theme: Le Logement (types of houses/apartments, rooms in a house, basic furniture).",
-        "Theme: Le Corps Humain (basic parts of the body).",
-        "Theme: La Météo (basic weather expressions)."
+        "Theme: Salutations et Présentations (greetings, introductions, farewells, politeness - e.g., enchanté(e), s'il vous plaît, merci).",
+        "Theme: Identité et Coordonnées (name, age, nationality, address, phone number, email).",
+        "Theme: La Famille et les Relations (immediate and extended family, friends, marital status, describing people simply).",
+        "Theme: Nombres (0-100+), Jours, Mois, Saisons, Dates (writing and saying dates).",
+        "Theme: L'Heure et les Moments de la journée (matin, midi, après-midi, soir, nuit, hier, aujourd'hui, demain).",
+        "Theme: Les Couleurs et Formes de base (rond, carré, triangle).",
+        "Theme: La Nourriture et les Boissons (common food/drink items, meals - petit-déjeuner, déjeuner, dîner, quantities, ordering in a café/restaurant, expressing likes/dislikes).",
+        "Theme: Les Lieux en Ville (common places: école, magasin, marché, parc, banque, poste, cinéma, restaurant, hôpital, pharmacie, boulangerie, supermarché).",
+        "Theme: Les Activités Quotidiennes et les Loisirs (common verbs for daily actions and hobbies: manger, boire, dormir, travailler, étudier, lire, écrire, écouter de la musique, regarder la TV, faire du sport).",
+        "Theme: Adjectifs descriptifs (describing people, objects, places - appearance, personality basics - e.g. grand/petit, content/triste, facile/difficile).",
+        "Theme: Les Vêtements (common items of clothing for different seasons, basic accessories).",
+        "Theme: Les Transports (basic modes of transport: voiture, bus, train, vélo, avion, à pied; asking for/giving simple directions, buying a ticket).",
+        "Theme: Le Logement (types of houses/apartments, rooms in a house, basic furniture - table, chaise, lit, armoire).",
+        "Theme: Le Corps Humain (basic parts of the body - tête, bras, jambe, main, pied).",
+        "Theme: La Météo (basic weather expressions: il fait beau/mauvais/chaud/froid, il pleut, il neige, il y a du soleil/du vent).",
+        "Theme: Les Objets de la classe et du quotidien (livre, cahier, stylo, crayon, table, chaise, ordinateur, téléphone)."
       ],
       "pronunciation_focus_topics": [
-        "Basic French vowel and consonant sounds.",
-        "Nasal vowels (an, en, in, on, un).",
-        "Silent letters (e.g., final 'e', 's', 't', 'd').",
-        "Basic liaison (e.g., 'les amis').",
-        "Intonation for statements and basic questions."
+        "Basic French vowel and consonant sounds, including distinctions like 'u' vs 'ou'.",
+        "Nasal vowels (an/am, en/em, in/im/ain/ein/aim, on/om, un/um).",
+        "Silent letters (e.g., final 'e', 's', 't', 'd', 'h' initial).",
+        "Basic liaison (e.g., 'les amis', 'un‿enfant') and forbidden liaisons (e.g. et // اروپا).",
+        "Intonation for statements, yes/no questions, and wh-questions.",
+        "Basic rhythm of French sentences."
       ],
       "listening_comprehension_skills": [
         "Understand familiar names, words and very basic phrases concerning myself, my family and immediate concrete surroundings when people speak slowly and clearly.",
-        "Recognise familiar words and very basic phrases concerning self, family, and immediate concrete surroundings."
+        "Recognise familiar words and very basic phrases concerning self, family, and immediate concrete surroundings in short, simple audio announcements or dialogues.",
+        "Understand simple instructions related to classroom activities or directions."
       ],
       "reading_comprehension_skills": [
-        "Understand familiar names, words and very simple sentences, for example on notices and posters or in catalogues.",
-        "Understand short, simple texts containing high frequency vocabulary."
+        "Understand familiar names, words and very simple sentences, for example on notices and posters, in catalogues, or short messages (SMS, emails).",
+        "Understand short, simple texts containing high frequency vocabulary, such as simple descriptions or personal information."
       ],
       "example_text_types": [
-        "Very short descriptive texts about people or places.",
-        "Simple dialogues about daily routines or making plans.",
-        "Menus, timetables, simple advertisements.",
-        "Postcards or very short personal messages."
+        "Very short descriptive texts about people or places (e.g., 'Voici Marie. Elle est grande.').",
+        "Simple dialogues about daily routines, making plans, or in shops/cafés.",
+        "Menus, timetables, simple advertisements, price tags.",
+        "Postcards, short personal messages (SMS, simple emails).",
+        "Simple forms to fill in (name, address, nationality)."
       ],
       "example_exercise_types": [
-        "Matching words to pictures.",
-        "Fill-in-the-blanks with articles, prepositions, or verb conjugations (present tense).",
-        "Answering simple 'qui/que/où/quand' questions about a short text or dialogue.",
+        "Matching words to pictures (vocabulary).",
+        "Fill-in-the-blanks with articles, prepositions, or verb conjugations (present tense of être, avoir, -er verbs, common irregulars).",
+        "Answering simple 'qui/que/où/quand/comment/pourquoi' questions about a short text or dialogue (DELF A1 style).",
         "Ordering words to make a sentence.",
-        "True/False questions based on short audio clips or texts."
+        "True/False or multiple-choice questions based on short audio clips or texts (DELF A1 style).",
+        "Completing simple forms with personal information.",
+        "Writing short sentences to describe a picture or a simple situation.",
+        "Role-play: Introducing oneself, ordering food, asking for simple information."
       ],
       "spoken_interaction_skills": [
         "Interact in a simple way provided the other person is prepared to repeat or rephrase things at a slower rate of speech and help formulate what to say.",
-        "Ask and answer simple questions in areas of immediate need or on very familiar topics."
+        "Ask and answer simple questions in areas of immediate need or on very familiar topics (e.g., 'Comment allez-vous?', 'Quel âge avez-vous?', 'Où est la gare?').",
+        "Make simple transactions in shops (e.g., asking for price, paying)."
       ],
       "spoken_production_skills": [
         "Use simple phrases and sentences to describe where I live and people I know.",
-        "Describe his/her family and other people, living conditions, his/her educational background and his/her present or most recent job."
+        "Describe his/her family and other people, living conditions, his/her educational background and his/her present or most recent job in simple terms.",
+        "Talk about likes and dislikes (e.g., 'J'aime le sport', 'Je n'aime pas le café')."
       ],
       "written_interaction_skills": [
         "Write a short, simple postcard, for example sending holiday greetings.",
-        "Fill in forms with personal details, for example entering name, nationality and address on a hotel registration form."
+        "Fill in forms with personal details, for example entering name, nationality and address on a hotel registration form or a course enrolment form."
       ],
       "written_production_skills": [
-        "Write short, simple notes and messages.",
-        "Write a very simple personal letter, for example thanking someone for something."
+        "Write short, simple notes and messages (e.g., a shopping list, a reminder).",
+        "Write a very simple personal letter or email, for example thanking someone for something or describing a daily activity."
       ],
       "cultural_competence_topics": [
-        "Basic greetings and politeness formulas (e.g., bonjour, merci, s'il vous plaît, pardon).",
-        "Common French first names and forms of address (tu vs. vous - basic introduction).",
-        "Awareness of some major French cities and landmarks (e.g., Paris, Eiffel Tower).",
-        "Recognizing common French food items."
+        "Basic greetings (shaking hands, la bise - awareness), politeness formulas (e.g., bonjour, au revoir, merci, s'il vous plaît, pardon, excusez-moi).",
+        "Common French first names and forms of address (tu vs. vous - basic introduction to formal/informal).",
+        "Awareness of some major French cities and landmarks (e.g., Paris, Eiffel Tower, a few other cities).",
+        "Recognizing common French food items (croissant, baguette, fromage, vin - clichés and realities).",
+        "Basic understanding of French meal structure (petit-déjeuner, déjeuner, dîner).",
+        "Numbers in everyday contexts (prices, phone numbers)."
       ],
       "learning_strategies_suggestions": [
-        "Label objects in the house with their French names.",
-        "Use language learning apps for vocabulary and basic phrases.",
-        "Listen to simple French children's songs.",
-        "Practice pronunciation with audio resources."
+        "Label objects in the house with their French names (le/la + noun).",
+        "Use language learning apps with audio for vocabulary and basic phrases (e.g., Duolingo, Memrise, Anki with French decks).",
+        "Listen to simple French children's songs or short A1-level dialogues.",
+        "Practice pronunciation with audio resources and try to mimic native speakers.",
+        "Create simple flashcards for new words with a picture or a simple sentence.",
+        "Try to form simple sentences about your day in French.",
+        "Review "Grammaire Essentielle A1" and "Vocabulaire Essentiel A1" lessons and exercises regularly."
       ],
       "example_conversation_starters": [
-        "Salut ! Ça va ? Tu t'appelles comment ?",
+        "Bonjour ! Comment tu t'appelles ? / Comment vous appelez-vous ?",
+        "Je m'appelle [Nom]. Et toi/vous ?",
+        "Ça va ? / Comment allez-vous ?",
+        "Quelle est ta nationalité ? / Vous êtes de quelle nationalité ?",
+        "Tu habites où ? / Où habitez-vous ?",
+        "Qu'est-ce que tu aimes faire le week-end ?",
         "Tu as des frères ou des sœurs ?",
-        "Qu'est-ce que tu aimes manger ?",
-        "Où habites-tu ? Tu aimes ta ville ?",
-        "Quel temps fait-il aujourd'hui ?",
-        "Qu'est-ce que tu fais le week-end ?",
-        "Tu peux me décrire ta famille / ton meilleur ami / ta maison ?"
+        "Qu'est-ce que tu veux boire/manger ?",
+        "C'est combien, s'il vous plaît ?",
+        "Où sont les toilettes, s'il vous plaît ?"
       ],
-      "example_text_files": [],
-      "example_exercise_files": []
+      "example_text_files": [
+        "A1_dialogue_cafe.txt (Simple dialogue ordering food/drinks)",
+        "A1_description_famille.txt (Short text describing a family)"
+      ],
+      "example_exercise_files": [
+        "A1_exercice_articles.txt (Fill-in-the-blanks with definite/indefinite articles)",
+        "A1_exercice_etre_avoir.txt (Conjugate être/avoir in present tense)"
+      ]
     },
     {
       "level_code": "A2",
       "level_name": "L'Apprenti Sorcier",
-      "approximate_vocabulary_size": "approx. 1000-1200 words",
+      "approximate_vocabulary_size": "approx. 1000-1200 words (expandable with Vocabulaire Essentiel A2)",
       "learning_outcomes": [
-        "Can understand sentences and frequently used expressions related to areas of most immediate relevance (e.g. very basic personal and family information, shopping, local geography, employment).",
-        "Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.",
-        "Can describe in simple terms aspects of his/her background, immediate environment and matters in areas of immediate need."
+        "Can understand sentences and frequently used expressions related to areas of most immediate relevance (e.g. very basic personal and family information, shopping, local geography, employment, daily routines).",
+        "Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters (e.g., asking for directions, making purchases, describing past events).",
+        "Can describe in simple terms aspects of his/her background (e.g., education, work), immediate environment and matters in areas of immediate need (e.g., health, travel)."
       ],
       "language_focus_topics": [
-        "Verbs: Passé composé with 'avoir' and 'être' (including agreement of past participle with 'être' and preceding direct objects with 'avoir'). Common irregular past participles.",
-        "Verbs: Imparfait (formation and usage for descriptions, habitual actions in the past, ongoing past actions). Contrast between Passé Composé and Imparfait.",
-        "Verbs: Futur simple (formation for regular and common irregular verbs; usage for future plans and predictions).",
-        "Verbs: Conditionnel présent (formation; usage for polite requests, hypothetical situations - basic 'si' clauses like 'Si j'avais de l'argent, j'achèterais...').",
-        "Verbs: Impératif (affirmative and negative commands for common verbs - tu, nous, vous forms).",
-        "Verbs: Pronominal verbs (reflexive, reciprocal) in present, passé composé, and futur simple.",
-        "Pronouns: Direct object pronouns (me, te, le, la, nous, vous, les) - placement before conjugated verb, with imperative.",
-        "Pronouns: Indirect object pronouns (me, te, lui, nous, vous, leur) - placement.",
-        "Pronouns: Stressed/disjunctive pronouns (moi, toi, lui, elle, nous, vous, eux, elles) after prepositions, for emphasis.",
-        "Pronouns: Relative pronouns 'qui' (subject), 'que' (direct object), 'où' (place, time).",
-        "Adjectives: Comparative forms (plus...que, moins...que, aussi...que). Superlative forms (le/la/les plus..., le/la/les moins...). Irregular comparatives/superlatives (bon, mauvais).",
-        "Adverbs: Formation of adverbs from adjectives (e.g., -ment). Common adverbs of manner, time, and place. Placement of adverbs.",
-        "Prepositions: Of place (sur, sous, dans, devant, derrière, entre, à côté de, près de, loin de, chez). Of time (avant, après, pendant, depuis - basic). Of movement (à, de, en, par).",
-        "Negative sentences: 'ne...pas', 'ne...jamais', 'ne...plus', 'ne...rien', 'ne...personne'.",
-        "Questions: Interrogative pronouns (qui, que, quoi), interrogative adjectives (quel(le)(s)), interrogative adverbs (où, quand, comment, pourquoi, combien). Inversion with subject pronouns for more complex questions.",
-        "Connectors: pour, parce que, quand, comme, si (basic conditional)."
+        "Review: Present tense (regular & common irregular verbs), articles, noun/adjective agreement.",
+        "Verbs: Passé composé with 'avoir' and 'être' (including agreement of past participle with 'être' and preceding direct objects with 'avoir'). Common irregular past participles (e.g., eu, été, fait, allé, venu, pris, bu, dit, lu, écrit, vu, su, pu, voulu, dû, ouvert, mort, né).",
+        "Verbs: Imparfait (formation and usage for descriptions, habitual actions in the past, ongoing past actions). Introduction to contrast between Passé Composé and Imparfait.",
+        "Verbs: Futur simple (formation for regular and common irregular verbs; usage for future plans and predictions). Contrast with Futur Proche.",
+        "Verbs: Conditionnel présent (formation; usage for polite requests - 'je voudrais', hypothetical situations - basic 'si' clauses like 'Si j'avais de l'argent, j'achèterais...').",
+        "Verbs: Impératif (affirmative and negative commands for common verbs - tu, nous, vous forms, including reflexive verbs).",
+        "Verbs: Pronominal verbs (reflexive, reciprocal) in present, passé composé, imparfait, and futur simple.",
+        "Pronouns: Direct object pronouns (me, te, le, la, l', nous, vous, les) - placement before conjugated verb, with imperative, in passé composé.",
+        "Pronouns: Indirect object pronouns (me, te, lui, nous, vous, leur) - placement, distinction from direct object pronouns.",
+        "Pronouns: Stressed/disjunctive pronouns (moi, toi, lui, elle, nous, vous, eux, elles) after prepositions, for emphasis, with 'aussi' and 'non plus'.",
+        "Pronouns: Relative pronouns 'qui' (subject), 'que' (direct object), 'où' (place, time). Introduction to 'dont' (of which/whom - basic).",
+        "Adjectives: Comparative forms (plus...que, moins...que, aussi...que). Superlative forms (le/la/les plus..., le/la/les moins...). Irregular comparatives/superlatives (bon/meilleur/le meilleur, mauvais/pire/le pire, bien/mieux/le mieux).",
+        "Adverbs: Formation of adverbs from adjectives (e.g., -ment). Common adverbs of manner, time, and place. Placement of adverbs (especially with Passé Composé).",
+        "Prepositions: Of place (sur, sous, dans, devant, derrière, entre, à côté de, près de, loin de, chez, en face de). Of time (avant, après, pendant, depuis, il y a + time, dans + future time). Of movement (à, de, en, par, jusqu'à).",
+        "Negative sentences: 'ne...pas', 'ne...jamais', 'ne...plus', 'ne...rien', 'ne...personne', 'ne...que' (restriction).",
+        "Questions: Interrogative pronouns (qui, que, quoi - after preposition), interrogative adjectives (quel(le)(s)), interrogative adverbs (où, quand, comment, pourquoi, combien). Inversion with subject pronouns for more complex questions and with subject nouns (simple cases).",
+        "Connectors: pour (purpose), parce que (cause), quand (time), comme (comparison/cause), si (condition), alors, donc (consequence), mais, cependant (opposition)."
       ],
       "vocabulary_topics": [
-        "Theme: Décrire les Personnes (physical descriptions, character traits - expanded).",
-        "Theme: Les Vêtements (types of clothes for different occasions, accessories, materials).",
-        "Theme: La Routine Quotidienne (describing past and future daily actions in more detail).",
-        "Theme: Les Transports et les Voyages (means of transport, at the station/airport, buying tickets, asking for travel information).",
-        "Theme: La Santé et les Petits Problèmes (common illnesses, symptoms, parts of the body, at the doctor's/pharmacy).",
-        "Theme: La Nourriture et les Boissons (types of food, meals, recipes, quantities, shopping for food, in a restaurant).",
-        "Theme: Le Logement (types of housing, rooms, furniture, describing one's home).",
-        "Theme: Les Loisirs et les Sports (hobbies, sports, cultural activities, making plans).",
-        "Theme: L'École et le Travail (school subjects, places in school, common jobs, work-related tasks - basic).",
-        "Theme: Expressions de Temps (yesterday, tomorrow, last week/month/year, next week/month/year, specific times).",
-        "Theme: Expressions de Quantité (un peu de, beaucoup de, assez de, trop de)."
+        "Theme: Décrire les Personnes (physical descriptions, character traits - expanded, e.g., sympa, timide, sportif).",
+        "Theme: Les Vêtements et Accessoires (types of clothes for different occasions, accessories like chapeau, écharpe, gants, materials - coton, laine).",
+        "Theme: La Routine Quotidienne et les Habitudes (describing past and future daily actions in more detail, frequency).",
+        "Theme: Les Transports et les Voyages (means of transport, at the station/airport, buying tickets, asking for travel information, understanding announcements).",
+        "Theme: La Santé et les Petits Problèmes (common illnesses - rhume, grippe, mal de tête/gorge/ventre, symptoms, parts of the body, at the doctor's/pharmacy, giving simple advice).",
+        "Theme: La Nourriture et les Boissons (types of food, meals, recipes - simple, quantities, shopping for food, in a restaurant - full interaction, understanding a menu).",
+        "Theme: Le Logement (types of housing, rooms, furniture, describing one's home, simple household chores).",
+        "Theme: Les Loisirs et les Sports (hobbies, sports - individual/team, cultural activities - cinema, concert, museum, making plans, expressing preferences).",
+        "Theme: L'École et le Travail (school subjects, places in school, common jobs, work-related tasks - basic, applying for a simple job).",
+        "Theme: Expressions de Temps (yesterday, tomorrow, last week/month/year, next week/month/year, specific times, duration - pendant, depuis).",
+        "Theme: Expressions de Quantité (un peu de, beaucoup de, assez de, trop de, plusieurs, quelques).",
+        "Theme: Faire des Achats (shops, products, asking for prices, paying, asking for help in a shop).",
+        "Theme: Invitations et Réponses (inviting someone, accepting/refusing an invitation)."
       ],
       "pronunciation_focus_topics": [
-        "Distinction between similar sounds (e.g., /y/ vs /u/, /e/ vs /ɛ/, /o/ vs /ɔ/).",
-        "Liaison (required, forbidden, optional - basic rules).",
-        "Enchaînement (vowel-vowel and consonant-vowel).",
-        "Intonation in different types of questions and exclamations."
+        "Distinction between similar sounds (e.g., /y/ vs /u/, /e/ vs /ɛ/, /o/ vs /ɔ/, voiced vs. unvoiced consonants like /s/ vs /z/).",
+        "Liaison: Required, forbidden, and common optional liaisons.",
+        "Enchaînement (vowel-vowel and consonant-vowel) for smoother speech.",
+        "Intonation in different types of questions, exclamations, and expressing simple emotions (surprise, doubt).",
+        "The letter 'h' (muet vs. aspiré - basic awareness for liaison)."
       ],
       "listening_comprehension_skills": [
-        "Understand phrases and the highest frequency vocabulary related to areas of most immediate personal relevance (e.g. very basic personal and family information, shopping, local area, employment).",
-        "Catch the main point in short, clear, simple messages and announcements.",
-        "Understand simple directions."
+        "Understand phrases and the highest frequency vocabulary related to areas of most immediate personal relevance (e.g. very basic personal and family information, shopping, local area, employment, daily routines).",
+        "Catch the main point in short, clear, simple messages and announcements (e.g., public transport, shop announcements).",
+        "Understand simple directions and instructions."
       ],
       "reading_comprehension_skills": [
-        "Read very short, simple texts.",
-        "Find specific, predictable information in simple everyday material such as advertisements, prospectuses, menus and timetables.",
-        "Understand short simple personal letters."
+        "Read very short, simple texts (e.g., personal emails, advertisements, simple instructions).",
+        "Find specific, predictable information in simple everyday material such as advertisements, prospectuses, menus and timetables, and short official documents.",
+        "Understand short simple personal letters and messages about familiar topics."
       ],
       "example_text_types": [
-        "Short descriptive paragraphs about people, places, or past/future events.",
-        "Simple personal emails, text messages, or forum posts.",
-        "Short dialogues about everyday situations (e.g., making an appointment, asking for help).",
-        "Public signs, notices, and simple instructions (e.g., for a machine, a recipe).",
-        "Short, simplified news items or factual texts on familiar topics."
+        "Short descriptive paragraphs about people, places, or past/future events (e.g., 'Mon week-end dernier').",
+        "Simple personal emails, text messages, or forum posts about familiar topics.",
+        "Short dialogues about everyday situations (e.g., making an appointment, asking for help, shopping).",
+        "Public signs, notices, and simple instructions (e.g., for a machine, a recipe, safety warnings).",
+        "Short, simplified news items or factual texts on familiar topics (e.g., local events, weather forecast)."
       ],
       "example_exercise_types": [
-        "Comprehension questions (multiple choice, true/false, short answer) on A2-level texts/dialogues.",
+        "Comprehension questions (multiple choice, true/false, short answer) on A2-level texts/dialogues (DELF A2 style).",
         "Fill-in-the-blanks for verb conjugations (passé composé, imparfait, futur simple, conditionnel présent - basic).",
         "Sentence construction using object pronouns or relative pronouns (qui, que, où).",
         "Exercises on comparative and superlative adjectives.",
-        "Role-play: e.g., buying something in a shop, asking for directions, describing a past event.",
-        "Writing short descriptive paragraphs or simple narratives (e.g., 'My last holiday', 'My daily routine')."
+        "Role-play: e.g., buying something in a shop, asking for directions, describing a past event, making a simple phone call.",
+        "Writing short descriptive paragraphs or simple narratives (e.g., 'My last holiday', 'My daily routine', 'My favorite hobby').",
+        "Writing a short informal letter or email to a friend (e.g., to invite them, to recount an event).",
+        "Identifying the correct tense (Passé Composé vs. Imparfait) in context."
       ],
       "spoken_interaction_skills": [
         "Communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar topics and activities.",
-        "Handle very short social exchanges, even if I can’t usually understand enough to keep the conversation going myself."
+        "Handle very short social exchanges, even if I can’t usually understand enough to keep the conversation going myself (e.g., greetings, leave-taking, thanking, apologizing).",
+        "Ask for and give directions; make simple purchases."
       ],
       "spoken_production_skills": [
         "Use a series of phrases and sentences to describe in simple terms family and other people, living conditions, educational background and present or most recent job.",
-        "Describe past activities and personal experiences."
+        "Describe past activities and personal experiences (e.g., what I did yesterday, a memorable event).",
+        "Briefly give reasons and explanations for opinions, plans and actions."
       ],
       "written_interaction_skills": [
-        "Write short, simple notes and messages relating to matters in areas of immediate need.",
-        "Write a very simple personal letter, for example thanking someone for something or making simple arrangements."
+        "Write short, simple notes and messages relating to matters in areas of immediate need (e.g., a note to a colleague, a text message to a friend).",
+        "Write a very simple personal letter or email, for example thanking someone for something or making simple arrangements (e.g., suggesting a meeting time/place)."
       ],
       "written_production_skills": [
-        "Write a series of simple phrases and sentences linked with simple connectors like 'and', 'but' and 'because'.",
-        "Write short, simple descriptions of events, past activities and personal experiences."
+        "Write a series of simple phrases and sentences linked with simple connectors like 'et', 'mais', 'parce que', 'alors'.",
+        "Write short, simple descriptions of events, past activities and personal experiences.",
+        "Describe plans and arrangements."
       ],
       "cultural_competence_topics": [
-        "Common French customs and politeness (e.g., greetings, 'la bise', tu/vous usage in different contexts).",
-        "Basic knowledge of French geography, major cities, and regions.",
-        "Introduction to common French holidays, festivals, and traditions.",
-        "Understanding simple public signs and common abbreviations."
+        "Common French customs and politeness (e.g., greetings, 'la bise', tu/vous usage in different contexts - more nuanced).",
+        "Basic knowledge of French geography, major cities, and regions (identifying them on a map).",
+        "Introduction to common French holidays (e.g., Bastille Day, Christmas, Easter) festivals, and traditions (e.g., food associated with holidays).",
+        "Understanding simple public signs and common abbreviations in daily life.",
+        "Basic table manners in France.",
+        "Awareness of common stereotypes (and how to be respectful)."
       ],
       "learning_strategies_suggestions": [
-        "Use flashcards with example sentences for new vocabulary and grammar.",
-        "Listen to A2-level French podcasts or short news segments.",
-        "Practice speaking with a partner or tutor, focusing on past and future events.",
-        "Watch short French videos or cartoons with subtitles."
+        "Use flashcards with example sentences for new vocabulary and grammar points (Passé Composé, Imparfait).",
+        "Listen to A2-level French podcasts or short news segments (e.g., RFI Savoirs - Journal en français facile excerpts).",
+        "Practice speaking with a partner or tutor, focusing on describing past and future events, and simple interactions.",
+        "Watch short French videos or cartoons with French subtitles if available, or English subtitles to begin.",
+        "Try to write short paragraphs about your day or weekend in French.",
+        "Review "Grammaire Essentielle A2" and "Vocabulaire Essentiel A2" lessons and exercises regularly.",
+        "Practice with DELF A2 sample exam papers."
       ],
       "example_conversation_starters": [
         "Qu'est-ce que tu as fait hier soir / le week-end dernier ?",
         "Qu'est-ce que tu vas faire demain / pendant les vacances ?",
-        "Parle-moi de ton travail ou de tes études.",
-        "Comment est-ce que tu fêtes [nom d'une fête française/locale] ?",
-        "Si tu pouvais voyager, où irais-tu et pourquoi ?",
-        "Tu te sens bien ? Qu'est-ce qui ne va pas ?",
-        "Quel est ton plat préféré ? Comment on le prépare ?"
+        "Parle-moi de ton travail ou de tes études. Qu'est-ce que tu fais exactement ?",
+        "Comment est-ce que tu fêtes [nom d'une fête française/locale] dans ta famille / ton pays ?",
+        "Si tu pouvais voyager, où irais-tu et pourquoi ? Qu'est-ce que tu ferais là-bas ?",
+        "Tu te sens bien ? Qu'est-ce qui ne va pas ? (explaining simple health problems)",
+        "Quel est ton plat préféré ? Peux-tu me dire comment on le prépare (simplement) ?",
+        "Excusez-moi, je cherche [un lieu]. Pouvez-vous m'aider ?",
+        "Je voudrais acheter [un objet]. Combien ça coûte ?"
       ],
-      "example_text_files": [],
-      "example_exercise_files": []
+      "example_text_files": [
+        "A2_email_invitation.txt (Simple email inviting a friend to an event)",
+        "A2_description_vacances_passees.txt (Short text describing a past holiday)"
+      ],
+      "example_exercise_files": [
+        "A2_exercice_passe_compose.txt (Fill-in-the-blanks with Passé Composé)",
+        "A2_exercice_imparfait_description.txt (Describe a picture using Imparfait)",
+        "A2_comprehension_orale_annonce.txt (Questions on a short public announcement)"
+      ]
     },
     {
       "level_code": "B1",
       "level_name": "Le Globe-trotteur",
-      "approximate_vocabulary_size": "approx. 2000-2500 words",
+      "approximate_vocabulary_size": "approx. 2000-2500 words (expandable with Vocabulaire Essentiel B1)",
       "learning_outcomes": [
-        "Can understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc.",
-        "Can deal with most situations likely to arise whilst travelling in an area where the language is spoken.",
-        "Can produce simple connected text on topics which are familiar or of personal interest.",
+        "Can understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc. (e.g., understanding conversations, radio news, articles on familiar topics).",
+        "Can deal with most situations likely to arise whilst travelling in an area where the language is spoken (e.g., making travel arrangements, handling unexpected problems).",
+        "Can produce simple connected text on topics which are familiar or of personal interest (e.g., writing emails, short essays about experiences or opinions).",
         "Can describe experiences and events, dreams, hopes and ambitions and briefly give reasons and explanations for opinions and plans."
       ],
       "language_focus_topics": [
-        "Verbs: Consolidation of Passé Composé vs. Imparfait for narration and description.",
+        "Review: Passé Composé vs. Imparfait - mastery of usage for narration and description.",
         "Verbs: Plus-que-parfait (formation and usage for prior past actions).",
-        "Verbs: Futur Antérieur (formation and usage for actions completed before a future point).",
-        "Verbs: Conditionnel Présent (expanded use for advice, suggestions, polite requests, hypothetical situations).",
-        "Verbs: Conditionnel Passé (formation and usage for past unreal conditions, regrets).",
-        "Verbs: Subjonctif Présent (formation of regular and common irregular verbs; usage after expressions of will, desire, emotion, doubt, necessity, possibility, opinion - e.g., il faut que, je veux que, il est possible que, je doute que).",
+        "Verbs: Futur Antérieur (formation and usage for actions completed before a future point - introduction).",
+        "Verbs: Conditionnel Présent (expanded use for advice, suggestions, polite requests, hypothetical situations - 'si + imparfait, conditionnel présent').",
+        "Verbs: Conditionnel Passé (formation and usage for past unreal conditions, regrets - 'si + plus-que-parfait, conditionnel passé').",
+        "Verbs: Subjonctif Présent (formation of regular and common irregular verbs; usage after expressions of will, desire, emotion, doubt, necessity, possibility, opinion - e.g., il faut que, je veux que, je suis content que, il est possible que, je ne pense pas que).",
         "Verbs: Subjonctif Passé (formation and basic usage for past actions in subjunctive contexts).",
-        "Pronouns: Emphatic/Stressed pronouns (moi, toi, lui, elle, nous, vous, eux, elles) - various uses.",
-        "Pronouns: Double object pronouns (e.g., Il me le donne) - order and placement with different tenses, including imperative.",
-        "Pronouns: Relative pronouns 'dont' (of which/whom, whose), 'lequel/laquelle/lesquels/lesquelles' (after prepositions, for clarity).",
-        "Reported speech (discours indirect): Reporting statements, questions (with 'si', interrogative adverbs/pronouns), and commands in present and past contexts, including changes in tense, pronouns, and time/place expressions.",
+        "Pronouns: Emphatic/Stressed pronouns (moi, toi, lui, elle, nous, vous, eux, elles) - various uses, including with 'même' and comparatives.",
+        "Pronouns: Double object pronouns (e.g., Il me le donne, Donne-le-moi!) - order and placement with different tenses, including affirmative and negative imperative.",
+        "Pronouns: Relative pronouns 'dont' (of which/whom, whose), 'lequel/laquelle/lesquels/lesquelles' (after prepositions, for clarity), 'ce qui', 'ce que', 'ce dont'.",
+        "Reported speech (discours indirect): Reporting statements, questions (with 'si', interrogative adverbs/pronouns like 'ce que', 'où', 'quand'), and commands in present and past contexts, including changes in tense, pronouns, and time/place expressions.",
         "Hypothetical sentences (Si clauses): Type 1 (Si + présent, futur simple/présent/impératif), Type 2 (Si + imparfait, conditionnel présent), Type 3 (Si + plus-que-parfait, conditionnel passé).",
-        "Passive voice (la voix passive): Formation and use in various tenses (présent, passé composé, imparfait, futur simple).",
+        "Passive voice (la voix passive): Formation and use in various tenses (présent, passé composé, imparfait, futur simple). Agent introduced by 'par' or 'de'.",
         "Gerund (le gérondif - en + participe présent): Expressing simultaneity, manner, condition, or cause.",
-        "Expressions of cause (parce que, car, comme, puisque, grâce à, à cause de).",
-        "Expressions of consequence (donc, alors, par conséquent, c'est pourquoi).",
+        "Expressions of cause (parce que, car, comme, puisque, grâce à + noun, à cause de + noun).",
+        "Expressions of consequence (donc, alors, par conséquent, c'est pourquoi, si bien que).",
         "Expressions of purpose (pour + infinitif, pour que + subjonctif, afin de + infinitif, afin que + subjonctif).",
-        "Expressions of opposition and concession (mais, cependant, pourtant, bien que + subjonctif, même si + indicatif).",
-        "Adverbs of quantity and intensity (très, beaucoup, peu, assez, trop)."
+        "Expressions of opposition and concession (mais, cependant, pourtant, quand même, bien que + subjonctif, quoique + subjonctif, même si + indicatif, avoir beau + infinitif).",
+        "Adverbs of quantity and intensity (très, beaucoup, peu, assez, trop, tellement, tant). Placement of adverbs.",
+        "The pronoun 'y' (replacing à + place/thing) and 'en' (replacing de + thing/quantity)."
       ],
       "vocabulary_topics": [
-        "Theme: Exprimer des Opinions et des Sentiments (justifying opinions, expressing agreement/disagreement, hopes, regrets, fears).",
-        "Theme: Les Études et le Travail (describing job responsibilities, career plans, academic subjects in more detail, understanding job offers).",
-        "Theme: Les Voyages et Expériences Culturelles (planning trips, recounting detailed travel narratives, discussing cultural differences and impressions).",
-        "Theme: L'Environnement et la Société (discussing common environmental problems, social issues, civic life - introductory).",
-        "Theme: La Technologie et la Communication (discussing use of internet, social media, common tech devices, advantages/disadvantages).",
-        "Theme: La Santé et le Bien-être (discussing healthy lifestyles, common health advice, describing accidents or more complex symptoms).",
-        "Theme: Les Médias (types of media, understanding main points of news, discussing favorite programs/films/books).",
-        "Theme: Le Caractère et la Personnalité (describing people's characters in more detail).",
-        "Theme: La Vie Quotidienne (organizing events, making arrangements, dealing with unexpected situations)."
+        "Theme: Exprimer des Opinions et des Sentiments (justifying opinions, expressing agreement/disagreement, hopes, regrets, fears, surprise, satisfaction, disappointment).",
+        "Theme: Les Études et le Monde du Travail (describing job responsibilities, career plans, academic subjects in more detail, understanding job offers, CV basics, simple job interview phrases).",
+        "Theme: Les Voyages et Expériences Culturelles (planning trips, recounting detailed travel narratives, discussing cultural differences and impressions, dealing with travel problems).",
+        "Theme: L'Environnement et la Société (discussing common environmental problems - pollution, recycling, social issues - poverty, unemployment, civic life - voting, associations - introductory).",
+        "Theme: La Technologie et la Communication (discussing use of internet, social media, common tech devices, advantages/disadvantages, online safety basics).",
+        "Theme: La Santé et le Bien-être (discussing healthy lifestyles, common health advice, describing accidents or more complex symptoms, understanding medical instructions).",
+        "Theme: Les Médias (types of media, understanding main points of news articles/broadcasts, discussing favorite programs/films/books, expressing opinions on media content).",
+        "Theme: Le Caractère et la Personnalité (describing people's characters in more detail, positive and negative traits).",
+        "Theme: La Vie Quotidienne (organizing events, making arrangements, dealing with unexpected situations, complaining, making suggestions).",
+        "Theme: Les Événements Actuels (discussing simple current events from the news).",
+        "Theme: Les Relations Interpersonnelles (friendship, love, conflicts - basic discussion)."
       ],
       "pronunciation_focus_topics": [
-        "Rhythm and intonation patterns in longer, more complex sentences.",
+        "Rhythm and intonation patterns in longer, more complex sentences, including expressing different emotions.",
         "Nuances of nasal vowels and semi-vowels (e.g., /j/, /w/, /ɥ/).",
-        "Impact of silent letters on pronunciation and liaison.",
-        "Distinguishing between formal and informal speech patterns (basic)."
+        "Impact of silent letters on pronunciation and liaison; more complex liaison rules.",
+        "Distinguishing between formal and informal speech patterns (basic awareness of contractions, vocabulary choices).",
+        "Stress patterns within word groups and sentences."
       ],
       "listening_comprehension_skills": [
-        "Understand the main points of clear standard speech on familiar matters regularly encountered in work, school, leisure, etc.",
-        "Understand the main point of many radio or TV programs on current affairs or topics of personal or professional interest when the delivery is relatively slow and clear."
+        "Understand the main points of clear standard speech on familiar matters regularly encountered in work, school, leisure, etc. (e.g., conversations, simple presentations, instructions).",
+        "Understand the main point of many radio or TV programs on current affairs or topics of personal or professional interest when the delivery is relatively slow and clear.",
+        "Follow a lecture or talk within own field, provided the subject matter is familiar and the presentation straightforward and clearly structured."
       ],
       "reading_comprehension_skills": [
         "Understand texts that consist mainly of high frequency everyday or job-related language.",
-        "Understand the description of events, feelings and wishes in personal letters and simple narratives."
+        "Understand the description of events, feelings and wishes in personal letters and simple narratives.",
+        "Scan longer texts in order to locate desired information, and gather information from different parts of a text, or from different texts in order to perform a specific task."
       ],
       "example_text_types": [
-        "Short newspaper or magazine articles on familiar or current topics.",
+        "Short newspaper or magazine articles on familiar or current topics (e.g., lifestyle, hobbies, local news).",
         "Personal blog posts, forum entries, or reviews expressing opinions or experiences.",
         "Simplified factual texts on historical events, cultural topics, or social issues.",
         "Instructions or user guides for everyday products or services with some complexity.",
-        "Short fictional stories, excerpts from graded readers, or simplified literary texts."
+        "Short fictional stories, excerpts from graded readers (B1 level), or simplified literary texts.",
+        "Formal and informal letters/emails (e.g., letter of complaint, email to a friend sharing news)."
       ],
       "example_exercise_types": [
-        "Comprehension questions requiring inference, understanding of main ideas, and supporting details.",
+        "Comprehension questions requiring inference, understanding of main ideas, and supporting details from texts and audio (DELF B1 style).",
         "Summarizing paragraphs or short articles in own words.",
-        "Exercises on transforming sentences (e.g., active to passive in various tenses, direct to reported speech).",
-        "Gap-fill exercises focusing on subjunctive mood with different triggers, conditional tenses, or complex pronoun usage (dont, lequel).",
-        "Role-playing scenarios (e.g., participating in a simple debate, making travel arrangements with complications, discussing pros and cons).",
-        "Writing personal letters or emails detailing experiences, giving advice, or expressing feelings with justification.",
-        "Composing short, structured essays or reports on familiar topics, presenting arguments and counter-arguments simply."
+        "Exercises on transforming sentences (e.g., active to passive in various tenses, direct to reported speech with tense changes).",
+        "Gap-fill exercises focusing on subjunctive mood with different triggers, conditional tenses, relative pronouns (dont, lequel), or double object pronouns.",
+        "Role-playing scenarios (e.g., participating in a simple debate, making travel arrangements with complications, discussing pros and cons of a situation, giving advice).",
+        "Writing personal letters or emails detailing experiences, giving advice, or expressing feelings with justification and appropriate connectors.",
+        "Composing short, structured essays or reports on familiar topics, presenting arguments and counter-arguments simply (e.g., advantages/disadvantages of something).",
+        "Identifying and using appropriate connectors to link ideas in sentences and paragraphs."
       ],
       "spoken_interaction_skills": [
         "Enter unprepared into conversation on topics that are familiar, of personal interest or pertinent to everyday life (e.g. family, hobbies, work, travel and current events).",
-        "Express and sustain personal opinions, providing brief reasons and explanations.",
-        "Deal with most situations likely to arise whilst travelling in an area where the language is spoken."
+        "Express and sustain personal opinions, providing brief reasons and explanations, and responding to others' viewpoints.",
+        "Deal with most situations likely to arise whilst travelling in an area where the language is spoken (e.g., asking for information, explaining a problem, making a complaint)."
       ],
       "spoken_production_skills": [
         "Connect phrases in a simple way in order to describe experiences and events, dreams, hopes and ambitions.",
@@ -349,344 +404,403 @@
         "Narrate a story or relate the plot of a book or film and describe personal reactions."
       ],
       "written_interaction_skills": [
-        "Write personal letters describing experiences, impressions, and feelings in some detail.",
-        "Write straightforward connected text on topics which are familiar or of personal interest, asking for or giving information."
+        "Write personal letters and emails describing experiences, impressions, and feelings in some detail, asking for and giving news.",
+        "Write straightforward connected text on topics which are familiar or of personal interest, asking for or giving information, or expressing opinions."
       ],
       "written_production_skills": [
-        "Write simple connected text on a range of familiar subjects (e.g., essays, reports, reviews).",
-        "Write a short, simple essay on a topic of interest, presenting information and arguments.",
-        "Describe dreams, hopes, and ambitions."
+        "Write simple connected text (e.g., essays, reports, reviews) on a range of familiar subjects or subjects of personal interest.",
+        "Write a short, simple essay or report on a topic of interest, presenting information and arguments in a structured way.",
+        "Describe dreams, hopes, and ambitions, and explain plans for the future."
       ],
       "cultural_competence_topics": [
-        "Understanding of French social etiquette in various common contexts (e.g., dining out, visiting someone's home, invitations).",
-        "Overview of the French political and educational systems (main structures).",
-        "Introduction to key aspects of French literature, cinema, and music (major figures or works).",
-        "Awareness of regional diversity in France (e.g., accents, customs - basic)."
+        "Understanding of French social etiquette in various common contexts (e.g., dining out, visiting someone's home, invitations, punctuality).",
+        "Overview of the French political and educational systems (main structures, key figures/institutions).",
+        "Introduction to key aspects of French literature, cinema, and music (major figures or works, common genres).",
+        "Awareness of regional diversity in France (e.g., accents, customs, typical products - basic).",
+        "Understanding common French media (newspapers, TV channels, radio stations - main ones).",
+        "Discussing current events in France (simple topics)."
       ],
       "learning_strategies_suggestions": [
-        "Start reading simple authentic articles (e.g., news for learners, blogs).",
-        "Watch French TV shows or movies with French subtitles.",
-        "Engage in conversations with native speakers, focusing on expressing and justifying opinions.",
-        "Keep a journal in French to practice narration and description."
+        "Start reading simple authentic articles (e.g., news for learners like "20 minutes", blogs on familiar topics).",
+        "Watch French TV shows or movies with French subtitles, trying to guess unknown words from context.",
+        "Engage in conversations with native speakers, focusing on expressing and justifying opinions, and recounting experiences.",
+        "Keep a journal in French to practice narration, description, and expressing feelings.",
+        "Practice summarizing texts or audio clips.",
+        "Review "Grammaire Essentielle B1" and "Vocabulaire Essentiel B1" lessons and exercises regularly.",
+        "Work through DELF B1 preparation materials and mock exams."
       ],
       "example_conversation_starters": [
-        "Qu'est-ce que tu penses de [sujet d'actualité simple] ?",
-        "Raconte-moi un voyage intéressant que tu as fait.",
-        "Quels sont les avantages et les inconvénients de [la technologie / vivre en ville / etc.] ?",
-        "Si tu gagnais au loto, qu'est-ce que tu ferais ?",
-        "Comment peut-on protéger l'environnement au quotidien ?",
-        "Quel livre ou film recommandes-tu et pourquoi ?",
-        "Comment décrirais-tu le système éducatif de ton pays ?"
+        "Qu'est-ce que tu penses de [sujet d'actualité simple, e.g., la météo, un film récent] ? Pourquoi ?",
+        "Raconte-moi un voyage intéressant que tu as fait. Qu'est-ce qui t'a plu / déplu ?",
+        "Quels sont les avantages et les inconvénients de [la technologie / vivre en ville / travailler à la maison / etc.] ?",
+        "Si tu gagnais au loto, qu'est-ce que tu ferais ? Explique tes choix.",
+        "Comment peut-on protéger l'environnement au quotidien ? Donne quelques idées.",
+        "Quel livre ou film recommandes-tu et pourquoi ? De quoi ça parle ?",
+        "Comment décrirais-tu le système éducatif / politique de ton pays (simplement) ?"
       ],
-      "example_text_files": [],
-      "example_exercise_files": []
+      "example_text_files": [
+        "B1_lettre_reclamation_simple.txt (Simple letter of complaint)",
+        "B1_article_voyage.txt (Short article describing a travel destination)"
+      ],
+      "example_exercise_files": [
+        "B1_exercice_subjunctive.txt (Fill-in-the-blanks with present subjunctive)",
+        "B1_exercice_discours_indirect.txt (Transform direct speech to indirect speech)",
+        "B1_comprehension_ecrite_article.txt (Questions on a short news article)"
+      ]
     },
     {
       "level_code": "B2",
       "level_name": "L'Artiste des Mots",
-      "approximate_vocabulary_size": "approx. 3000-4000 words",
+      "approximate_vocabulary_size": "approx. 3000-4000 words (expandable with DELF B2 vocabulary sections)",
       "learning_outcomes": [
-        "Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in his/her field of specialisation.",
-        "Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
-        "Can produce clear, detailed text on a wide range of subjects and explain a viewpoint on a topical issue giving the advantages and disadvantages of various options."
+        "Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in his/her field of specialisation (e.g., newspaper articles, academic texts, professional documents).",
+        "Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party (e.g., participate in discussions, debates, express and defend opinions).",
+        "Can produce clear, detailed text on a wide range of subjects and explain a viewpoint on a topical issue giving the advantages and disadvantages of various options (e.g., essays, reports, formal letters)."
       ],
       "language_focus_topics": [
-        "Verbs: Mastery of all indicative tenses (présent, imparfait, passé composé, plus-que-parfait, futur simple, futur antérieur).",
-        "Verbs: Conditionnel (présent and passé) - full range of uses (hypotheses, regret, future in the past, politeness).",
-        "Verbs: Subjonctif (présent, passé, imparfait - recognition, and plus-que-parfait - recognition) - active use of présent & passé in complex subordinate clauses (after conjunctions of concession, purpose, fear, doubt, opinion, etc.).",
-        "Verbs: Discours indirect (reported speech) - complex transformations including concordance des temps for all tenses, reporting questions and commands with nuance.",
-        "Advanced hypothetical structures: 'Si' clauses (all types reviewed and consolidated), other expressions of hypothesis (au cas où + conditionnel, à condition que + subjonctif).",
-        "Pronouns: Advanced relative pronouns (ce qui, ce que, ce dont; lequel, auquel, duquel and their compounds; où referring to time/situation).",
-        "Pronouns: Comprehensive use of 'en' and 'y', including idiomatic expressions and replacing prepositional phrases.",
-        "Prepositions: Nuances and precise usage of prepositions, including those introducing infinitive verbs (à, de, pour). Prepositional phrases.",
-        "Conjunctions: Wide range of subordinating and coordinating conjunctions for expressing logical relationships (cause, consequence, opposition, concession, purpose, time - e.g., bien que, quoique, afin que, pourvu que, dès que, aussitôt que).",
-        "Stylistic variations: Formal vs. informal registers in written and spoken French; levels of language (soutenu, courant, familier).",
-        "Literary tenses (Passé simple, Passé antérieur, Subjonctif imparfait, Subjonctif plus-que-parfait) - primarily for reading comprehension of literary and formal texts.",
-        "Modal verbs and expressions: Nuanced uses of devoir, pouvoir, falloir, savoir to express obligation, permission, possibility, ability, advice.",
-        "Participe présent and gérondif: Advanced uses, including replacing relative clauses, expressing cause, condition, manner.",
-        "Nominalization: Transforming verbal phrases into noun phrases.",
-        "Emphasis and highlighting: Structures for emphasizing parts of a sentence (c'est...qui, c'est...que, ce qui...c'est, etc.)."
+        "Review and mastery: All indicative tenses (présent, imparfait, passé composé, plus-que-parfait, futur simple, futur antérieur), conditional (présent, passé), subjunctive (présent, passé).",
+        "Verbs: Subjonctif (présent, passé, imparfait - primarily for recognition, and plus-que-parfait - primarily for recognition) - active use of présent & passé in complex subordinate clauses (after conjunctions of concession - bien que, quoique; purpose - pour que, afin que; fear - de peur que; doubt; opinion; impersonal expressions).",
+        "Verbs: Discours indirect (reported speech) - complex transformations including concordance des temps for all tenses, reporting questions (indirect interrogatives), commands, and exclamations with nuance.",
+        "Advanced hypothetical structures: 'Si' clauses (all types reviewed and consolidated), other expressions of hypothesis (au cas où + conditionnel, à condition que + subjonctif, en supposant que + subjonctif).",
+        "Pronouns: Advanced relative pronouns (ce qui, ce que, ce dont; lequel, auquel, duquel and their compounds; où referring to time/situation). Pronouns 'en' and 'y' in complex contexts and idiomatic uses.",
+        "Prepositions: Nuances and precise usage of prepositions, including those introducing infinitive verbs (à, de, pour). Prepositional phrases and complex prepositions (afin de, au lieu de, grâce à, à cause de, etc.).",
+        "Conjunctions: Wide range of subordinating and coordinating conjunctions for expressing precise logical relationships (cause, consequence, opposition, concession, purpose, time - e.g., bien que, quoique, afin que, pourvu que, dès que, aussitôt que, pendant que, alors que, tant que).",
+        "Stylistic variations: Formal vs. informal registers in written and spoken French; levels of language (soutenu, courant, familier) and their appropriate use.",
+        "Literary tenses (Passé simple, Passé antérieur, Subjonctif imparfait, Subjonctif plus-que-parfait) - primarily for reading comprehension of literary and formal texts; basic productive use of Passé Simple in formal narration if covered.",
+        "Modal verbs and expressions: Nuanced uses of devoir, pouvoir, falloir, savoir to express obligation, permission, possibility, ability, advice, probability, regret.",
+        "Participe présent and gérondif: Advanced uses, including replacing relative clauses, expressing cause, condition, manner, simultaneity with precision.",
+        "Nominalization: Transforming verbal phrases into noun phrases to achieve a more formal or concise style (e.g., 'la construction du pont' instead of 'on construit le pont').",
+        "Emphasis and highlighting: Structures for emphasizing parts of a sentence (c'est...qui, c'est...que, ce qui...c'est, mise en relief par dislocation).",
+        "Figures de style (basic recognition): metaphor, simile, hyperbole, irony."
       ],
       "vocabulary_topics": [
-        "Theme: Les Actualités et les Médias (analyzing news from various sources, media bias, editorial language, types of journalism).",
-        "Theme: Le Monde du Travail (professional correspondence, participating effectively in meetings, job market, company structures, economic concepts).",
-        "Theme: Les Enjeux Sociaux et Éthiques (debating societal issues like education, health, justice, equality, immigration, environment).",
-        "Theme: Les Arts et la Littérature (discussing literary works, artistic movements, film analysis, critical reviews, cultural heritage).",
-        "Theme: La Science et la Technologie (discussing technological advancements, scientific research, ethical implications, impact on society).",
-        "Theme: L'Histoire et la Politique (discussing historical events and their impact, political systems, international relations, citizenship).",
-        "Theme: L'Environnement et l'Écologie (in-depth discussions on environmental problems, climate change, sustainability, conservation efforts).",
-        "Idiomatic expressions, proverbs, and common figurative language.",
-        "Nuances of synonyms and antonyms; precise word choice.",
-        "Vocabulary related to argumentation, persuasion, and debate.",
-        "Formal and informal vocabulary registers and their appropriate use."
+        "Theme: Les Actualités et les Médias (analyzing news from various sources, media bias, editorial language, types of journalism, fact vs. opinion).",
+        "Theme: Le Monde du Travail et l'Économie (professional correspondence, participating effectively in meetings, job market trends, company structures, economic concepts - inflation, unemployment, globalization).",
+        "Theme: Les Enjeux Sociaux et Éthiques (debating societal issues like education systems, healthcare access, justice system, equality, immigration policies, environmental ethics).",
+        "Theme: Les Arts et la Littérature (discussing literary works, artistic movements, film analysis, critical reviews, cultural heritage, expressing aesthetic judgments).",
+        "Theme: La Science et la Technologie (discussing technological advancements, scientific research methods, ethical implications of new technologies, impact on society and individuals).",
+        "Theme: L'Histoire et la Politique (discussing historical events and their impact, political systems and ideologies, international relations, citizenship, human rights).",
+        "Theme: L'Environnement et l'Écologie (in-depth discussions on environmental problems, climate change causes and consequences, sustainability, conservation efforts, renewable energy).",
+        "Idiomatic expressions, proverbs, and common figurative language used in contemporary French.",
+        "Nuances of synonyms and antonyms; precise word choice for specific contexts.",
+        "Vocabulary related to argumentation, persuasion, debate, and structuring an argument (connectors, rhetorical questions).",
+        "Formal and informal vocabulary registers and their appropriate use in different communicative situations."
       ],
       "pronunciation_focus_topics": [
-        "Fine-tuning of intonation for expressing complex emotions and attitudes (doubt, irony, sarcasm, enthusiasm).",
-        "Connected speech: advanced liaison, elision, and assimilation for natural flow.",
-        "Awareness and basic understanding of regional accents and variations in spoken French.",
-        "Prosody: stress patterns in longer sentences and discourse."
+        "Fine-tuning of intonation for expressing complex emotions and attitudes (doubt, irony, sarcasm, enthusiasm, conviction).",
+        "Connected speech: advanced liaison, elision, and assimilation for natural flow and comprehension of fast native speech.",
+        "Awareness and basic understanding of regional accents and variations in spoken French, and their sociolinguistic implications.",
+        "Prosody: stress patterns in longer sentences and discourse to convey meaning and emphasis effectively."
       ],
       "listening_comprehension_skills": [
         "Understand extended speech and lectures and follow even complex lines of argument provided the topic is reasonably familiar.",
-        "Understand most TV news and current affairs programs, including interviews and discussions.",
-        "Understand the majority of films in standard dialect, including some idiomatic language."
+        "Understand most TV news and current affairs programs, including interviews, discussions, and documentaries.",
+        "Understand the majority of films in standard dialect, including some idiomatic language and cultural references."
       ],
       "reading_comprehension_skills": [
         "Read articles and reports concerned with contemporary problems in which the writers adopt particular attitudes or viewpoints.",
-        "Understand contemporary literary prose and grasp implicit meanings.",
-        "Understand specialized texts in one's field of interest with some effort."
+        "Understand contemporary literary prose and grasp implicit meanings, irony, and authorial intent.",
+        "Understand specialized texts in one's field of interest with some effort, including abstract concepts."
       ],
       "example_text_types": [
-        "Authentic newspaper and magazine articles on a wide range of current, specialized, or controversial topics.",
-        "Excerpts from contemporary novels, essays, or plays with complex themes and language.",
-        "Reports, official documents, or formal correspondence (e.g., business letters, academic papers - excerpts).",
-        "Film reviews, literary critiques, or well-argued opinion pieces.",
-        "Texts containing idiomatic language, cultural references, varied registers, and figurative language."
+        "Authentic newspaper and magazine articles on a wide range of current, specialized, or controversial topics (e.g., editorials, opinion pieces, investigative reports).",
+        "Excerpts from contemporary novels, essays, or plays with complex themes, language, and narrative structures.",
+        "Reports, official documents, or formal correspondence (e.g., business letters, academic papers - excerpts, minutes of meetings).",
+        "Film reviews, literary critiques, or well-argued opinion pieces from reputable sources.",
+        "Texts containing idiomatic language, cultural references, varied registers, and figurative language requiring interpretation."
       ],
       "example_exercise_types": [
-        "In-depth text analysis: identifying author's purpose, tone, implicit meanings, argumentative structure, and target audience.",
-        "Summarizing complex texts and spoken discourses, highlighting key arguments.",
-        "Participating in debates and structured discussions on complex or controversial topics, defending a viewpoint.",
-        "Advanced grammar exercises focusing on nuances of tenses, moods (subjunctive), complex sentence structures, and stylistic transformations.",
-        "Exercises on recognizing, understanding, and using different registers of language appropriately.",
-        "Writing well-structured argumentative essays, formal reports, proposals, or detailed reviews.",
-        "Creative writing prompts (e.g., writing a short story with specific stylistic constraints, composing a formal letter of complaint or application).",
-        "Exercises on understanding and correctly using a wide range of idiomatic expressions and figurative language."
+        "In-depth text analysis: identifying author's purpose, tone, implicit meanings, argumentative structure, target audience, and stylistic choices (DELF B2 style).",
+        "Summarizing complex texts and spoken discourses, highlighting key arguments and supporting details.",
+        "Participating in debates and structured discussions on complex or controversial topics, defending a viewpoint with coherent arguments and examples.",
+        "Advanced grammar exercises focusing on nuances of tenses (e.g., concordance des temps in reported speech), moods (subjunctive in various clauses), complex sentence structures (e.g., relative clauses with 'lequel', use of 'dont'), and stylistic transformations.",
+        "Exercises on recognizing, understanding, and using different registers of language appropriately in context.",
+        "Writing well-structured argumentative essays, formal reports, proposals, or detailed reviews, using appropriate connectors and cohesive devices.",
+        "Creative writing prompts (e.g., writing a short story with specific stylistic constraints, composing a formal letter of complaint or application, writing a critique).",
+        "Exercises on understanding and correctly using a wide range of idiomatic expressions and figurative language in context.",
+        "Listening comprehension tasks with authentic audio/video (news reports, interviews, debates) followed by detailed comprehension questions (DELF B2 style)."
       ],
       "spoken_interaction_skills": [
         "Interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
-        "Take an active part in discussion in familiar and some unfamiliar contexts, accounting for and sustaining viewpoints clearly.",
-        "Effectively argue a point and respond to counter-arguments."
+        "Take an active part in discussion in familiar and some unfamiliar contexts, accounting for and sustaining viewpoints clearly, providing relevant explanations and arguments.",
+        "Effectively argue a point, respond to counter-arguments, and negotiate solutions in discussions."
       ],
       "spoken_production_skills": [
-        "Present clear, detailed descriptions and arguments on a wide range of subjects related to field of interest.",
-        "Explain a viewpoint on a topical issue giving the advantages and disadvantages of various options, and developing an argument systematically.",
-        "Structure a talk or presentation logically."
+        "Present clear, detailed descriptions and arguments on a wide range of subjects related to field of interest or current affairs.",
+        "Explain a viewpoint on a topical issue giving the advantages and disadvantages of various options, and developing an argument systematically with supporting points and examples.",
+        "Structure a talk or presentation logically, using appropriate cohesive devices."
       ],
       "written_interaction_skills": [
-        "Write clear, detailed text (letters, emails, forum posts) conveying information, asking for clarification, and expressing personal opinions effectively and appropriately.",
-        "Respond to complex correspondence, adapting style and register to the recipient and situation."
+        "Write clear, detailed text (letters, emails, forum posts) conveying information, asking for clarification, and expressing personal opinions effectively and appropriately for the context and recipient.",
+        "Respond to complex correspondence, adapting style and register to the recipient and situation, and addressing all points raised."
       ],
       "written_production_skills": [
         "Write clear, detailed text (essays, reports, reviews) on a wide range of subjects related to interests, synthesizing information and arguments from various sources.",
-        "Write an essay or report, passing on information or giving reasons in support of or against a particular point of view, showing an ability to structure arguments logically.",
-        "Write reviews of films, books, or plays."
+        "Write an essay or report, passing on information or giving reasons in support of or against a particular point of view, showing an ability to structure arguments logically and use appropriate vocabulary and grammar.",
+        "Write reviews of films, books, or plays, expressing a personal and justified opinion."
       ],
       "cultural_competence_topics": [
-        "Deeper understanding of French and Francophone societal norms, values, and contemporary issues (e.g., secularism, regionalism, social debates).",
-        "Knowledge of significant French historical and cultural figures, events, and their influence.",
-        "Ability to navigate and understand different French media (newspapers, TV, radio) and cultural products (literature, cinema).",
-        "Understanding of different levels of formality and politeness in various social and professional contexts."
+        "Deeper understanding of French and Francophone societal norms, values, and contemporary issues (e.g., laïcité, le système éducatif, le monde du travail en France, débats sociaux actuels).",
+        "Knowledge of significant French historical and cultural figures, events, and their influence on contemporary France.",
+        "Ability to navigate and understand different French media (newspapers of different political leanings, TV news channels, radio programs) and cultural products (literature, cinema, music) with critical awareness.",
+        "Understanding of different levels of formality and politeness in various social and professional contexts, and adapting language accordingly.",
+        "Awareness of humor, irony, and implicit cultural references in French discourse."
       ],
       "learning_strategies_suggestions": [
-        "Regularly read authentic French newspapers, magazines, and contemporary literature.",
-        "Watch French films, documentaries, and TV series without subtitles, or with French subtitles for complex content.",
-        "Actively participate in debates and discussions in French on a variety of topics.",
-        "Focus on understanding and using nuances in meaning, idiomatic expressions, and appropriate register.",
-        "Practice writing different types of texts (essays, reports, formal letters)."
+        "Regularly read authentic French newspapers (e.g., Le Monde, Libération, Le Figaro), magazines (e.g., L'Obs, Courrier International), and contemporary literature.",
+        "Watch French films, documentaries, and TV series without subtitles, or with French subtitles for complex content. Listen to French radio and podcasts on various topics.",
+        "Actively participate in debates and discussions in French on a variety of topics, focusing on structuring arguments and using precise language.",
+        "Focus on understanding and using nuances in meaning, idiomatic expressions, and appropriate register for different situations.",
+        "Practice writing different types of texts (argumentative essays, reports, formal letters, critiques) and get feedback.",
+        "Review "Grammaire Essentielle B2" lessons and exercises, focusing on complex structures and nuances.",
+        "Prepare for DELF B2 by working with specific exam preparation books and mock exams, paying attention to time constraints and task requirements."
       ],
       "example_conversation_starters": [
-        "Selon toi, quels sont les plus grands défis sociaux actuels et comment pourrait-on les aborder ?",
-        "Discutez de l'impact de [une technologie spécifique] sur la société.",
-        "Comment les médias influencent-ils l'opinion publique ? Donnez des exemples.",
-        "Quel rôle l'art et la culture jouent-ils dans la société contemporaine ?",
-        "Analysez les causes et conséquences d'un événement historique important.",
-        "Débat: Pour ou contre [une question éthique controversée, ex: l'intelligence artificielle dans la prise de décision]."
+        "Selon toi, quels sont les plus grands défis auxquels notre société est confrontée aujourd'hui et comment pourrait-on les aborder ?",
+        "Discutez de l'impact de [une technologie spécifique, e.g., l'intelligence artificielle, les réseaux sociaux] sur la société et les relations humaines.",
+        "Comment les médias influencent-ils l'opinion publique ? Pensez-vous qu'ils soient objectifs ? Donnez des exemples.",
+        "Quel rôle l'art et la culture jouent-ils dans la société contemporaine ? Peuvent-ils être des vecteurs de changement social ?",
+        "Analysez les causes et conséquences d'un événement historique important de votre choix et son héritage aujourd'hui.",
+        "Débat: Pour ou contre [une question éthique ou sociétale controversée, e.g., la semaine de travail de quatre jours, l'énergie nucléaire, la régulation d'Internet]."
       ],
-      "example_text_files": [],
-      "example_exercise_files": []
+      "example_text_files": [
+        "B2_article_opinion_medias.txt (Article d'opinion sur le rôle des médias)",
+        "B2_extrait_roman_contemporain.txt (Extrait d'un roman français contemporain)"
+      ],
+      "example_exercise_files": [
+        "B2_exercice_discours_rapporte_complexe.txt (Transformation de dialogues en discours indirect complexe)",
+        "B2_production_ecrite_essai_argumentatif.txt (Sujet d'essai argumentatif sur un thème d'actualité)",
+        "B2_comprehension_orale_debat.txt (Questions sur un extrait de débat radiophonique)"
+      ]
     },
     {
       "level_code": "C1",
       "level_name": "L'Étoile Filante",
-      "approximate_vocabulary_size": "approx. 4000-5000+ words (focus on range and precision)",
+      "approximate_vocabulary_size": "approx. 4000-5000+ words (focus on range, precision, and idiomatic language)",
       "learning_outcomes": [
-        "Can understand a wide range of demanding, longer texts, and recognise implicit meaning.",
-        "Can express him/herself fluently and spontaneously without much obvious searching for expressions.",
-        "Can use language flexibly and effectively for social, academic and professional purposes.",
-        "Can produce clear, well-structured, detailed text on complex subjects, showing controlled use of organisational patterns, connectors and cohesive devices."
+        "Can understand a wide range of demanding, longer texts (articles, literary works, academic papers), and recognise implicit meaning, irony, and stylistic nuances.",
+        "Can express him/herself fluently and spontaneously without much obvious searching for expressions, using a rich vocabulary and complex sentence structures.",
+        "Can use language flexibly and effectively for social, academic and professional purposes, adapting register and style to the context.",
+        "Can produce clear, well-structured, detailed text on complex subjects, showing controlled use of organisational patterns, connectors and cohesive devices to create coherent and persuasive arguments."
       ],
       "language_focus_topics": [
-        "Mastery and nuanced application of all previously learned grammatical structures.",
-        "Advanced uses of the subjunctive (e.g., in independent clauses, literary uses).",
-        "Complex sentence structures: advanced subordination, participles replacing clauses, nominalization.",
-        "Stylistic devices: inversion, emphasis, figures of speech.",
-        "Nuances of register, tone, and connotation in written and spoken French.",
-        "Understanding and using different levels of formality in various contexts.",
-        "Idiomatic language, proverbs, and cultural references in depth.",
-        "Rhetorical devices and persuasive language techniques."
+        "Mastery and nuanced application of all previously learned grammatical structures, including fine points of tense and mood usage (e.g., concordance des temps in complex sentences, subtle uses of subjunctive and conditional).",
+        "Advanced uses of the subjunctive (e.g., in independent clauses for wishes or commands, after superlatives or unique expressions, in literary styles).",
+        "Complex sentence structures: advanced subordination with a wide range of conjunctions, use of participles (présent, passé) to replace clauses, complex nominalization.",
+        "Stylistic devices: inversion for emphasis or formal style, various forms of emphasis (mise en relief), figures of speech (metaphor, simile, hyperbole, litotes, irony, euphemism - recognition and appropriate use).",
+        "Nuances of register (soutenu, courant, familier, argotique - recognition and appropriate adaptation), tone, and connotation in written and spoken French.",
+        "Understanding and using different levels of formality in various social, academic, and professional contexts.",
+        "Idiomatic language, proverbs, and cultural references in depth; understanding their origins and appropriate usage.",
+        "Rhetorical devices and persuasive language techniques (e.g., structuring an argument, using rhetorical questions, appealing to logic/emotion)."
       ],
       "vocabulary_topics": [
-        "Theme: Specialized fields (literature, arts, sciences, politics, economics - according to learner's interest).",
-        "Theme: Abstract & Philosophical Concepts (in-depth discussion and analysis).",
-        "Theme: Cultural Nuances & Social Commentary (understanding and discussing complex societal trends).",
-        "Advanced idiomatic expressions, collocations, and fixed phrases across various domains.",
-        "Understanding and using synonyms, antonyms, and nuanced vocabulary with high precision.",
-        "Vocabulary for argumentation, debate, formal presentations, and academic writing.",
-        "Lexical creativity and wordplay."
+        "Theme: Specialized fields (literature, arts, sciences, politics, economics, philosophy - according to learner's interest and DALF C1 domains).",
+        "Theme: Abstract & Philosophical Concepts (in-depth discussion and analysis of concepts like justice, freedom, progress, identity, ethics).",
+        "Theme: Cultural Nuances & Social Commentary (understanding and discussing complex societal trends, debates, and cultural phenomena with sophistication).",
+        "Advanced idiomatic expressions, collocations, and fixed phrases across various domains, including formal and informal language.",
+        "Understanding and using synonyms, antonyms, and nuanced vocabulary with high precision to convey subtle differences in meaning.",
+        "Vocabulary for argumentation, debate, formal presentations, academic writing (e.g., structuring essays, theses, reports), and synthesis of documents.",
+        "Lexical creativity and wordplay; understanding neologisms and language evolution.",
+        "Vocabulary related to specific DALF C1/C2 themes (e.g., work, education, environment, new technologies, health, media, citizenship)."
       ],
       "pronunciation_focus_topics": [
-        "Mastery of French phonetics, including subtle distinctions.",
-        "Native-like rhythm, stress, and intonation for various communicative intentions.",
-        "Adapting pronunciation to different registers and audiences."
+        "Mastery of French phonetics, including subtle distinctions in vowel and consonant sounds, and prosodic features.",
+        "Native-like rhythm, stress, and intonation for various communicative intentions (persuasion, irony, conveying emotion).",
+        "Adapting pronunciation, intonation, and speech flow to different registers and audiences (formal presentations vs. informal discussions).",
+        "Understanding and potentially reproducing features of different French accents (awareness level)."
       ],
       "listening_comprehension_skills": [
-        "Understand a wide range of spoken language, including lectures, discussions, and presentations on complex topics.",
-        "Recognise a wide range of idiomatic expressions and colloquialisms, appreciating register shifts.",
-        "Follow extended speech even when it is not clearly structured and when relationships are only implied and not signalled explicitly."
+        "Understand a wide range of spoken language, including lectures, discussions, debates, and presentations on complex and abstract topics, even if not clearly structured.",
+        "Recognise a wide range of idiomatic expressions and colloquialisms, appreciating register shifts and cultural allusions.",
+        "Follow extended speech even when it is not clearly structured and when relationships are only implied and not signalled explicitly (e.g., complex arguments, fast-paced native speaker interactions)."
       ],
       "reading_comprehension_skills": [
-        "Understand long and complex factual and literary texts, appreciating distinctions of style.",
-        "Understand specialised articles and longer technical instructions, even when they do not relate to his/her field."
+        "Understand long and complex factual and literary texts, appreciating distinctions of style, tone, and authorial intent.",
+        "Understand specialised articles and longer technical instructions, even when they do not relate to his/her field, including abstract and structurally complex texts.",
+        "Critically evaluate texts, identifying biases, assumptions, and rhetorical strategies."
       ],
       "spoken_interaction_skills": [
-        "Express him/herself fluently and spontaneously without much obvious searching for expressions.",
-        "Use language flexibly and effectively for social and professional purposes.",
-        "Formulate ideas and opinions with precision and relate his/her contribution skilfully to those of other speakers."
+        "Express him/herself fluently and spontaneously without much obvious searching for expressions, adapting language to the interlocutor and situation.",
+        "Use language flexibly and effectively for social, academic and professional purposes, including participating actively in meetings and formal discussions.",
+        "Formulate ideas and opinions with precision, support them with arguments and examples, and relate his/her contribution skilfully to those of other speakers.",
+        "Handle interruptions, manage turn-taking, and clarify misunderstandings effectively."
       ],
       "spoken_production_skills": [
-        "Present clear, detailed descriptions of complex subjects integrating sub-themes, developing particular points and rounding off with an appropriate conclusion.",
-        "Deliver well-structured presentations on complex topics, adapting style to the audience."
+        "Present clear, detailed descriptions or arguments on complex subjects integrating sub-themes, developing particular points with supporting evidence, and rounding off with an appropriate conclusion (e.g., DALF exposé).",
+        "Deliver well-structured and engaging presentations on complex topics, adapting style and content to the audience and purpose.",
+        "Use intonation and stress effectively to convey nuances of meaning and maintain audience interest."
       ],
       "written_interaction_skills": [
-        "Write clear, well-structured texts (e.g. letters, emails, reports) on complex subjects, underlining the relevant salient issues.",
-        "Express him/herself in clear, well-structured text, expressing points of view at some length."
+        "Write clear, well-structured texts (e.g., formal letters, emails, contributions to online discussions) on complex subjects, underlining the relevant salient issues and adapting style to the intended reader.",
+        "Express him/herself in clear, well-structured text, expressing points of view at some length, and responding appropriately to arguments from others."
       ],
       "written_production_skills": [
-        "Write clear, well-structured text on complex subjects, showing controlled use of organisational patterns, connectors and cohesive devices.",
-        "Write about complex subjects in a letter, an essay or a report, underlining what he/she considers to be the salient issues.",
-        "Write different kinds of texts in a clear, well-structured style appropriate to the reader in mind."
+        "Write clear, well-structured text on complex subjects (e.g., essays, reports, summaries, synthesis of documents for DALF C1), showing controlled use of organisational patterns, connectors and cohesive devices.",
+        "Write about complex subjects in a letter, an essay or a report, underlining what he/she considers to be the salient issues, and developing an argument systematically with supporting points and examples.",
+        "Write different kinds of texts in a clear, well-structured style appropriate to the reader in mind, demonstrating command of vocabulary, grammar, and orthography."
       ],
       "cultural_competence_topics": [
-        "Deep understanding of French-speaking cultures, including regional variations.",
-        "Critical awareness of cultural stereotypes and sociolinguistic norms.",
-        "Ability to interpret and discuss complex cultural phenomena."
+        "Deep understanding of French-speaking cultures (France and Francophonie), including regional variations, social structures, and current affairs.",
+        "Critical awareness of cultural stereotypes, sociolinguistic norms, and intercultural communication challenges.",
+        "Ability to interpret and discuss complex cultural phenomena, historical contexts, and contemporary societal debates in the French-speaking world.",
+        "Understanding of the French approach to intellectual debate and argumentation."
       ],
       "learning_strategies_suggestions": [
-        "Engage with a wide variety of authentic materials (literature, academic papers, specialized media).",
-        "Seek opportunities for high-level discussion and debate.",
-        "Focus on refining style, register, and precision in language use."
+        "Engage with a wide variety of authentic, complex materials (literature, academic papers, specialized media, quality journalism).",
+        "Seek opportunities for high-level discussion and debate with native speakers or advanced learners.",
+        "Focus on refining style, register, and precision in language use, paying attention to collocations and idiomaticity.",
+        "Practice synthesizing information from multiple sources (written and spoken) for DALF C1 preparation.",
+        "Write regularly on complex topics, seeking feedback on structure, argumentation, and language accuracy.",
+        "Actively expand vocabulary through reading and noting new expressions, especially those related to abstract concepts and specialized fields.",
+        "Prepare for DALF C1 by working through specific exam preparation materials, focusing on all four skills and time management."
       ],
       "example_conversation_starters": [
-        "Quelle est votre perspective sur [un enjeu philosophique ou sociétal complexe, e.g., la notion de progrès, l'identité culturelle à l'ère de la mondialisation] ?",
-        "Analysez de manière critique [une œuvre littéraire ou artistique marquante], en considérant son contexte et sa réception.",
-        "Comment les structures de pouvoir influencent-elles le discours public sur [un sujet sensible] ?",
-        "Développez une argumentation nuancée concernant les implications éthiques de [une avancée scientifique ou technologique récente].",
-        "Comparez et contrastez les approches de différents penseurs/écoles de pensée sur [un concept abstrait]."
+        "Quelle est votre perspective sur [un enjeu philosophique ou sociétal complexe, e.g., la notion de progrès, l'identité culturelle à l'ère de la mondialisation, les défis de l'intelligence artificielle] ? Quels arguments soutiennent votre point de vue ?",
+        "Analysez de manière critique [une œuvre littéraire ou artistique marquante du monde francophone], en considérant son contexte socio-historique, ses thèmes principaux et sa réception.",
+        "Comment les structures de pouvoir et les médias influencent-elles le discours public sur [un sujet sensible actuel, e.g., la crise climatique, les inégalités sociales] ?",
+        "Développez une argumentation nuancée concernant les implications éthiques de [une avancée scientifique ou technologique récente, e.g., l'édition génomique, la surveillance numérique].",
+        "Comparez et contrastez les approches de différents penseurs, écoles de pensée ou politiques publiques sur [un concept abstrait ou un problème de société, e.g., la justice sociale, la gestion des migrations]."
       ],
-      "example_text_files": [],
-      "example_exercise_files": [],
+      "example_text_files": [
+        "C1_article_philosophie_politique.txt (Article on political philosophy)",
+        "C1_synthese_documents_environnement.txt (Set of documents on an environmental issue for synthesis)"
+      ],
+      "example_exercise_files": [
+        "C1_DALF_essai_argumente.txt (Prompt for an argumentative essay on a societal topic)",
+        "C1_DALF_synthese_de_documents.txt (Exercise requiring synthesis of multiple texts)",
+        "C1_comprehension_orale_conference.txt (Questions on an extract from an academic lecture or conference)"
+      ],
       "example_text_types": [
         "Authentic, unabridged literary texts (novels, plays, poetry) with complex themes, styles, and historical/cultural context.",
-        "Academic articles, research papers, and specialized publications from various fields.",
-        "In-depth journalistic reports, editorials, and opinion pieces from quality newspapers and magazines (e.g., Le Monde Diplomatique, L'Obs).",
+        "Academic articles, research papers, and specialized publications from various fields (humanities, social sciences, sciences).",
+        "In-depth journalistic reports, editorials, and opinion pieces from quality newspapers and magazines (e.g., Le Monde Diplomatique, L'Obs, Le Débat).",
         "Formal speeches, lectures, and conference presentations on abstract or specialized topics.",
-        "Legal documents, official reports, and complex administrative texts.",
-        "Texts employing sophisticated rhetoric, irony, satire, or nuanced argumentation.",
-        "Transcripts of debates, round-table discussions, or interviews with experts."
+        "Legal documents (excerpts), official reports, and complex administrative texts.",
+        "Texts employing sophisticated rhetoric, irony, satire, or nuanced argumentation requiring careful interpretation.",
+        "Transcripts of debates, round-table discussions, or interviews with experts or public figures."
       ],
       "example_exercise_types": [
-        "Critical analysis of literary texts: identifying stylistic devices, interpreting symbolism, discussing authorial intent and socio-historical context.",
-        "Writing academic essays, research summaries, or critical reviews demonstrating advanced analytical and argumentative skills.",
-        "Synthesizing information from multiple complex sources (written and spoken) to produce a coherent, well-structured report or presentation.",
-        "Delivering persuasive oral presentations on complex topics, adapting style and content to the audience and handling challenging questions.",
-        "Participating in formal debates or negotiations, employing sophisticated argumentation and rhetorical strategies.",
-        "Advanced translation exercises (French to native language and vice-versa) focusing on nuance, style, and register.",
-        "Identifying and analyzing different registers, tones, and implicit meanings in a variety of authentic texts and discourses.",
-        "Exercises on recognizing and using sophisticated idiomatic expressions, proverbs, and cultural allusions appropriately.",
-        "Tasks requiring creative language use, such as writing pastiches, parodies, or sophisticated dialogues.",
-        "Editing and proofreading complex texts for grammatical accuracy, stylistic consistency, and overall coherence."
+        "Critical analysis of literary or argumentative texts: identifying stylistic devices, interpreting symbolism, evaluating arguments, discussing authorial intent and socio-historical context.",
+        "Writing academic essays, research summaries, or critical reviews demonstrating advanced analytical, argumentative, and synthesizing skills (DALF C1 'production écrite' - essai/synthèse).",
+        "Synthesizing information from multiple complex sources (written and spoken) to produce a coherent, well-structured report or presentation (DALF C1 'synthèse de documents').",
+        "Delivering persuasive oral presentations (exposés) on complex topics, adapting style and content to the audience and handling challenging questions (DALF C1 'production orale').",
+        "Participating in formal debates or negotiations, employing sophisticated argumentation, rhetorical strategies, and managing interaction effectively.",
+        "Advanced translation exercises (French to native language and vice-versa) focusing on nuance, style, register, and cultural equivalence.",
+        "Identifying and analyzing different registers, tones, implicit meanings, and cultural allusions in a variety of authentic texts and discourses.",
+        "Exercises on recognizing and using sophisticated idiomatic expressions, proverbs, and culturally embedded phrases appropriately.",
+        "Tasks requiring creative language use, such as writing pastiches, parodies, or sophisticated dialogues maintaining a specific tone or style.",
+        "Editing and proofreading complex texts for grammatical accuracy, stylistic consistency, coherence, and appropriateness of register."
       ]
     },
     {
       "level_code": "C2",
       "level_name": "Le Caméléon Linguistique",
-      "approximate_vocabulary_size": "Extensive vocabulary, approaching that of an educated native speaker (6000+ words)",
+      "approximate_vocabulary_size": "Extensive vocabulary, approaching that of an educated native speaker (6000+ words, including specialized and nuanced terms)",
       "learning_outcomes": [
-        "Can understand with ease virtually everything heard or read.",
-        "Can summarise information from different spoken and written sources, reconstructing arguments and accounts in a coherent presentation.",
-        "Can express him/herself spontaneously, very fluently and precisely, differentiating finer shades of meaning even in more complex situations."
+        "Can understand with ease virtually everything heard or read, including fast native speech, abstract topics, and complex arguments.",
+        "Can summarise information from different spoken and written sources, reconstructing arguments and accounts in a coherent, precise, and stylistically appropriate presentation (e.g., DALF C2 'compte rendu et synthèse').",
+        "Can express him/herself spontaneously, very fluently and precisely, differentiating finer shades of meaning even in more complex situations, and using idiomatic expressions and cultural allusions appropriately."
       ],
       "language_focus_topics": [
-        "Complete mastery of all grammatical structures, including rare, archaic, and highly complex ones.",
-        "Full command of different stylistic levels, registers, and their pragmatic effects.",
-        "Sophisticated understanding and use of literary and cultural allusions, wordplay, and humor.",
-        "Ability to manipulate language creatively and for specific rhetorical effect.",
-        "Understanding of historical and regional variations in French grammar and usage (overview)."
+        "Complete mastery of all grammatical structures, including rare, archaic (for recognition), and highly complex syntactical constructions (e.g., complex inversions, elaborate subordinate clauses).",
+        "Full command of different stylistic levels (soutenu, littéraire, standard, familier, argotique), registers, and their pragmatic effects in various contexts.",
+        "Sophisticated understanding and use of literary and cultural allusions, wordplay, humor, irony, and sarcasm.",
+        "Ability to manipulate language creatively and for specific rhetorical effect (persuasion, argumentation, literary expression).",
+        "Understanding of historical and regional variations in French grammar and usage (overview and ability to comprehend variations).",
+        "Advanced discourse analysis: understanding text cohesion, coherence, implicatures, and presuppositions.",
+        "Mastery of punctuation for stylistic effect and clarity in complex sentences."
       ],
       "vocabulary_topics": [
-        "Near-native command of vocabulary across all common, academic, professional, and many specialized domains.",
-        "Effortless understanding and appropriate use of a vast range of idiomatic, colloquial, and formal French.",
-        "Exceptional precision in word choice to convey subtle nuances, irony, and subtext.",
-        "Vocabulary related to highly specialized or technical fields if relevant to the learner.",
-        "Understanding etymology and evolution of words (basic awareness)."
+        "Near-native command of vocabulary across all common, academic, professional, and many specialized domains (e.g., specific terminology in chosen fields of interest for DALF C2).",
+        "Effortless understanding and appropriate use of a vast range of idiomatic, colloquial, proverbial, and formal French.",
+        "Exceptional precision in word choice to convey subtle nuances, irony, subtext, and specific connotations.",
+        "Vocabulary related to highly specialized or technical fields if relevant to the learner's academic or professional goals.",
+        "Understanding etymology and evolution of words (basic awareness to appreciate nuances and connections).",
+        "Lexicon of argumentation, rhetoric, and literary criticism."
       ],
       "pronunciation_focus_topics": [
-        "Native-like or near-native pronunciation, intonation, and rhythm.",
-        "Ability to subtly vary pronunciation to convey attitude or to mimic regional variations if desired."
+        "Native-like or near-native pronunciation, intonation, and rhythm, with natural flow and expressiveness.",
+        "Ability to subtly vary pronunciation, intonation, and speaking style to convey attitude, emotion, or to mimic regional variations if desired for specific effects.",
+        "Mastery of prosodic features to structure discourse and highlight key information in oral presentations or discussions."
       ],
       "listening_comprehension_skills": [
-        "Have no difficulty in understanding any kind of spoken language, whether live or broadcast, even when delivered at fast native speed, provided he/she has some time to get familiar with the accent."
+        "Have no difficulty in understanding any kind of spoken language, whether live or broadcast, even when delivered at fast native speed, provided he/she has some time to get familiar with the accent (e.g., lectures, debates, films, plays, complex media broadcasts).",
+        "Appreciate stylistic nuances, humor, irony, and cultural references in spoken discourse."
       ],
       "reading_comprehension_skills": [
-        "Read with ease virtually all forms of the written language, including abstract, structurally or linguistically complex texts such as manuals, specialised articles and literary works."
+        "Read with ease virtually all forms of the written language, including abstract, structurally or linguistically complex texts such as manuals, specialised articles and literary works (classic and contemporary).",
+        "Critically analyze and interpret complex texts, identifying underlying assumptions, authorial stance, and rhetorical strategies."
       ],
       "spoken_interaction_skills": [
-        "Take part effortlessly in any conversation or discussion and have a good familiarity with idiomatic expressions and colloquialisms.",
-        "Express him/herself fluently and convey finer shades of meaning precisely.",
-        "Backtrack and restructure around any difficulty so smoothly that other people are hardly aware of it."
+        "Take part effortlessly in any conversation or discussion and have a good familiarity with idiomatic expressions and colloquialisms, using them appropriately.",
+        "Express him/herself fluently and convey finer shades of meaning precisely, reformulating ideas to suit the context and interlocutor.",
+        "Backtrack and restructure around any difficulty so smoothly that other people are hardly aware of it, maintaining a natural flow of conversation."
       ],
       "spoken_production_skills": [
-        "Present a clear, smoothly-flowing description or argument in a style appropriate to the context and with an effective logical structure which helps the recipient to notice and remember significant points."
+        "Present a clear, smoothly-flowing, and engaging description or argument in a style appropriate to the context and with an effective logical structure which helps the recipient to notice and remember significant points (e.g., DALF C2 'production orale' - exposé based on documents).",
+        "Develop arguments with sophistication, using a wide range of linguistic resources and rhetorical devices.",
+        "Adapt language register and style effectively to different audiences and purposes."
       ],
       "written_interaction_skills": [
-        "Write clear, smoothly flowing text in an appropriate style.",
-        "Communicate complex ideas and relationships with precision and clarity."
+        "Write clear, smoothly flowing text in an appropriate style for various purposes (e.g., formal correspondence, academic debate, creative writing).",
+        "Communicate complex ideas and relationships with precision, clarity, and stylistic elegance.",
+        "Respond effectively to complex written input, addressing all nuances and maintaining an appropriate tone."
       ],
       "written_production_skills": [
-        "Write clear, smoothly-flowing complex texts in an appropriate and effective style and a logical structure which helps the reader to find significant points.",
-        "Write reviews of professional or literary works, summaries of complex texts."
+        "Write clear, smoothly-flowing complex texts (e.g., articles, reports, essays, literary critiques, synthesis of multiple documents for DALF C2) in an appropriate and effective style and a logical structure which helps the reader to find significant points.",
+        "Write reviews of professional or literary works, summaries of complex texts, demonstrating critical thinking and advanced writing skills.",
+        "Demonstrate a high degree of grammatical accuracy, orthographic precision, and sophisticated vocabulary and sentence structure."
       ],
       "cultural_competence_topics": [
-        "Profound and nuanced understanding of French-speaking cultures, their diversity, and their historical and contemporary contexts.",
-        "Ability to mediate effectively between cultures.",
-        "Sophisticated understanding of humor, irony, and cultural subtext."
+        "Profound and nuanced understanding of French-speaking cultures, their diversity, historical evolution, and contemporary socio-political contexts.",
+        "Ability to mediate effectively between cultures, explaining cultural nuances and perspectives.",
+        "Sophisticated understanding of humor, irony, cultural subtext, and implicit references in Francophone media and literature.",
+        "Critical engagement with major intellectual and artistic currents in the French-speaking world."
       ],
       "learning_strategies_suggestions": [
-        "Maintain language skills through continuous immersion and use in diverse contexts.",
-        "Engage in intellectually stimulating activities in French (e.g., advanced studies, professional work).",
-        "Explore niche areas of French language and culture."
+        "Maintain language skills through continuous immersion and active use in diverse and intellectually stimulating contexts.",
+        "Engage in advanced studies, professional work, or creative projects requiring a high level of French proficiency.",
+        "Explore niche areas of French language, literature, and culture based on personal or professional interests.",
+        "Contribute to French-language forums, publications, or academic discussions.",
+        "Provide mentorship or guidance to less advanced learners.",
+        "Prepare for DALF C2 by practicing integrated skills tasks (e.g., synthèse de documents followed by an exposé and debate) and engaging with C2-level authentic materials."
       ],
       "example_conversation_starters": [
-        "Engagez une discussion sur les subtilités de la traduction de l'humour ou de la poésie entre le français et [autre langue].",
-        "Proposez une analyse stylistique comparée de deux auteurs francophones de périodes ou de genres différents, en relevant les particularités de leur écriture.",
-        "Débattez des limites de la liberté d'expression dans un contexte multiculturel complexe, en utilisant un langage précis et en anticipant les contre-arguments.",
-        "Comment la langue française a-t-elle évolué pour refléter les changements sociétaux au cours du dernier siècle ? Illustrez avec des exemples précis.",
-        "Présentez et défendez une thèse originale sur un aspect peu exploré de [un domaine de votre expertise en français]."
+        "Engagez une discussion sur les subtilités de la traduction de l'humour, de la poésie ou de concepts philosophiques entre le français et [autre langue], en illustrant avec des exemples concrets.",
+        "Proposez une analyse stylistique comparée de deux auteurs francophones de périodes ou de genres différents, en relevant les particularités de leur écriture et leur apport à la littérature.",
+        "Débattez des limites de la liberté d'expression dans un contexte multiculturel complexe, en utilisant un langage précis, en anticipant les contre-arguments et en proposant des solutions nuancées.",
+        "Comment la langue française a-t-elle évolué pour refléter les changements sociétaux au cours du dernier siècle ? Illustrez avec des exemples précis de néologismes, d'emprunts ou de changements sémantiques.",
+        "Présentez et défendez une thèse originale sur un aspect peu exploré de [un domaine de votre expertise en français, e.g., une problématique scientifique, un courant artistique, une question de politique internationale]."
       ],
-      "example_text_files": [],
-      "example_exercise_files": [],
+      "example_text_files": [
+        "C2_essai_philosophique_complexe.txt (An essay on a complex philosophical topic)",
+        "C2_DALF_dossier_thematique_synthese.txt (A collection of documents on a complex theme for synthesis and presentation)"
+      ],
+      "example_exercise_files": [
+        "C2_DALF_production_ecrite_article_specialise.txt (Task to write a specialized article)",
+        "C2_DALF_production_orale_expose_debat.txt (Instructions for preparing an exposé and participating in a debate based on provided documents)"
+      ],
       "example_text_types": [
-        "Highly specialized academic papers, research monographs, and theoretical treatises.",
-        "Classic and contemporary literary works of significant complexity and cultural depth, including poetry and avant-garde texts.",
-        "Philosophical essays, critical theory, and other abstract intellectual discourses.",
-        "Complex legal texts, international treaties, and detailed policy documents.",
-        "Historical documents and archival materials requiring interpretation.",
-        "Texts involving subtle humor, wordplay, irony, and multiple layers of meaning.",
-        "Speeches and writings by prominent intellectuals or historical figures, requiring contextual understanding.",
-        "Linguistically diverse materials, including texts with regional dialects or historical sociolects (for analysis)."
+        "Highly specialized academic papers, research monographs, and theoretical treatises from diverse disciplines.",
+        "Classic and contemporary literary works of significant complexity and cultural depth, including poetry, avant-garde texts, and philosophical writings.",
+        "Philosophical essays, critical theory, and other abstract intellectual discourses requiring deep comprehension.",
+        "Complex legal texts, international treaties, detailed policy documents, and high-level administrative texts.",
+        "Historical documents and archival materials requiring interpretation and contextual understanding.",
+        "Texts involving subtle humor, wordplay, irony, satire, and multiple layers of meaning that demand sophisticated interpretation.",
+        "Speeches and writings by prominent intellectuals, political figures, or historical figures, requiring contextual and rhetorical analysis.",
+        "Linguistically diverse materials, including texts with regional dialects, historical sociolects, or highly specialized jargon (for analysis and comprehension)."
       ],
       "example_exercise_types": [
-        "Producing original research or extended essays demonstrating mastery of academic French and critical thought.",
-        "Comparative literary analysis of multiple complex works, potentially across different periods or genres.",
-        "Crafting sophisticated written pieces in various genres (e.g., formal proposals, persuasive manifestos, satirical articles, detailed critiques).",
-        "Delivering master-level oral presentations, lectures, or participating in high-level academic/professional panels with articulate and nuanced contributions.",
-        "Leading and moderating complex discussions or debates, skillfully managing diverse viewpoints and synthesizing arguments.",
-        "Professional translation and interpretation tasks requiring exceptional linguistic precision and cultural sensitivity (e.g., literary translation, simultaneous interpreting).",
-        "Analyzing and deconstructing rhetorical strategies in complex political, legal, or media discourses.",
-        "Tasks involving creative writing at a very high level, demonstrating stylistic versatility and originality (e.g., short stories, poetry, playwriting).",
-        "Critical discourse analysis of texts, identifying underlying ideologies, power dynamics, and cultural assumptions.",
-        "Mentoring or teaching others, explaining complex linguistic and cultural points with clarity and precision."
+        "Producing original research or extended essays demonstrating mastery of academic French, critical thought, and sophisticated argumentation (DALF C2 style).",
+        "Comparative literary analysis of multiple complex works, potentially across different periods, genres, or cultural contexts, focusing on stylistic and thematic nuances.",
+        "Crafting sophisticated written pieces in various genres (e.g., formal proposals, persuasive manifestos, satirical articles, detailed critiques, policy briefs) for specific audiences and purposes.",
+        "Delivering master-level oral presentations, lectures, or participating in high-level academic/professional panels with articulate, nuanced, and persuasive contributions.",
+        "Leading and moderating complex discussions or debates, skillfully managing diverse viewpoints, synthesizing arguments, and guiding the conversation towards productive outcomes.",
+        "Professional translation and interpretation tasks requiring exceptional linguistic precision, cultural sensitivity, and stylistic adaptability (e.g., literary translation, simultaneous interpreting of complex discourse).",
+        "Analyzing and deconstructing rhetorical strategies, implicit biases, and ideological underpinnings in complex political, legal, or media discourses.",
+        "Tasks involving creative writing at a very high level, demonstrating stylistic versatility, originality, and a profound command of the language's resources (e.g., short stories, poetry, playwriting, screenwriting excerpts).",
+        "Critical discourse analysis of texts, identifying underlying ideologies, power dynamics, cultural assumptions, and their linguistic manifestations.",
+        "Mentoring or teaching others advanced aspects of French, explaining complex linguistic, stylistic, and cultural points with clarity and precision."
       ]
     }
   ]
