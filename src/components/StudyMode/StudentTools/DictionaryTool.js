@@ -9,7 +9,7 @@ const CEFR_LEVELS_ORDER = importedCefrLevels || ['a0', 'a1', 'a2', 'b1', 'b2', '
 
 
 const DictionaryTool = () => {
-    const { t, language: currentUILanguage, currentLangKey } = useI18n(); // currentLangKey is 'el', 'en' etc.
+    const { t, currentLangKey } = useI18n(); // currentLangKey is 'el', 'en' etc.
     const [allVocabulary, setAllVocabulary] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
