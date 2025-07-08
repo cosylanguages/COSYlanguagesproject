@@ -37,8 +37,9 @@
         "Tu as combien de stylos ?",
         "Au revoir !"
       ],
-      "example_text_files": [],
-      "example_exercise_files": []
+      "example_text_types": [],
+      "example_exercise_files": [],
+      "example_exercise_types": []
     },
     {
       "level_code": "A1",
@@ -106,23 +107,6 @@
         "Understand familiar names, words and very simple sentences, for example on notices and posters, in catalogues, or short messages (SMS, emails).",
         "Understand short, simple texts containing high frequency vocabulary, such as simple descriptions or personal information."
       ],
-      "example_text_types": [
-        "Very short descriptive texts about people or places (e.g., 'Voici Marie. Elle est grande.').",
-        "Simple dialogues about daily routines, making plans, or in shops/cafés.",
-        "Menus, timetables, simple advertisements, price tags.",
-        "Postcards, short personal messages (SMS, simple emails).",
-        "Simple forms to fill in (name, address, nationality)."
-      ],
-      "example_exercise_types": [
-        "Matching words to pictures (vocabulary).",
-        "Fill-in-the-blanks with articles, prepositions, or verb conjugations (present tense of être, avoir, -er verbs, common irregulars).",
-        "Answering simple 'qui/que/où/quand/comment/pourquoi' questions about a short text or dialogue (DELF A1 style).",
-        "Ordering words to make a sentence.",
-        "True/False or multiple-choice questions based on short audio clips or texts (DELF A1 style).",
-        "Completing simple forms with personal information.",
-        "Writing short sentences to describe a picture or a simple situation.",
-        "Role-play: Introducing oneself, ordering food, asking for simple information."
-      ],
       "spoken_interaction_skills": [
         "Interact in a simple way provided the other person is prepared to repeat or rephrase things at a slower rate of speech and help formulate what to say.",
         "Ask and answer simple questions in areas of immediate need or on very familiar topics (e.g., 'Comment allez-vous?', 'Quel âge avez-vous?', 'Où est la gare?').",
@@ -170,13 +154,26 @@
         "C'est combien, s'il vous plaît ?",
         "Où sont les toilettes, s'il vous plaît ?"
       ],
-      "example_text_files": [
+      "example_text_types": [
+        "Very short descriptive texts about people or places (e.g., 'Voici Marie. Elle est grande.').",
+        "Simple dialogues about daily routines, making plans, or in shops/cafés.",
+        "Menus, timetables, simple advertisements, price tags.",
+        "Postcards, short personal messages (SMS, simple emails).",
+        "Simple forms to fill in (name, address, nationality)."
+      ],
+      "example_exercise_files": [
         "A1_dialogue_cafe.txt (Simple dialogue ordering food/drinks)",
         "A1_description_famille.txt (Short text describing a family)"
       ],
-      "example_exercise_files": [
-        "A1_exercice_articles.txt (Fill-in-the-blanks with definite/indefinite articles)",
-        "A1_exercice_etre_avoir.txt (Conjugate être/avoir in present tense)"
+      "example_exercise_types": [
+        "Matching words to pictures (vocabulary).",
+        "Fill-in-the-blanks with articles, prepositions, or verb conjugations (present tense of être, avoir, -er verbs, common irregulars).",
+        "Answering simple 'qui/que/où/quand/comment/pourquoi' questions about a short text or dialogue (DELF A1 style).",
+        "Ordering words to make a sentence.",
+        "True/False or multiple-choice questions based on short audio clips or texts (DELF A1 style).",
+        "Completing simple forms with personal information.",
+        "Writing short sentences to describe a picture or a simple situation.",
+        "Role-play: Introducing oneself, ordering food, asking for simple information."
       ]
     },
     {
@@ -239,23 +236,6 @@
         "Find specific, predictable information in simple everyday material such as advertisements, prospectuses, menus and timetables, and short official documents.",
         "Understand short simple personal letters and messages about familiar topics."
       ],
-      "example_text_types": [
-        "Short descriptive paragraphs about people, places, or past/future events (e.g., 'Mon week-end dernier').",
-        "Simple personal emails, text messages, or forum posts about familiar topics.",
-        "Short dialogues about everyday situations (e.g., making an appointment, asking for help, shopping).",
-        "Public signs, notices, and simple instructions (e.g., for a machine, a recipe, safety warnings).",
-        "Short, simplified news items or factual texts on familiar topics (e.g., local events, weather forecast)."
-      ],
-      "example_exercise_types": [
-        "Comprehension questions (multiple choice, true/false, short answer) on A2-level texts/dialogues (DELF A2 style).",
-        "Fill-in-the-blanks for verb conjugations (passé composé, imparfait, futur simple, conditionnel présent - basic).",
-        "Sentence construction using object pronouns or relative pronouns (qui, que, où).",
-        "Exercises on comparative and superlative adjectives.",
-        "Role-play: e.g., buying something in a shop, asking for directions, describing a past event, making a simple phone call.",
-        "Writing short descriptive paragraphs or simple narratives (e.g., 'My last holiday', 'My daily routine', 'My favorite hobby').",
-        "Writing a short informal letter or email to a friend (e.g., to invite them, to recount an event).",
-        "Identifying the correct tense (Passé Composé vs. Imparfait) in context."
-      ],
       "spoken_interaction_skills": [
         "Communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar topics and activities.",
         "Handle very short social exchanges, even if I can’t usually understand enough to keep the conversation going myself (e.g., greetings, leave-taking, thanking, apologizing).",
@@ -303,15 +283,19 @@
         "Excusez-moi, je cherche [un lieu]. Pouvez-vous m'aider ?",
         "Je voudrais acheter [un objet]. Combien ça coûte ?"
       ],
-      "example_text_files": [
-        "A2_email_invitation.txt (Simple email inviting a friend to an event)",
-        "A2_description_vacances_passees.txt (Short text describing a past holiday)"
+      "example_text_types": [
+        "Short descriptive paragraphs about people, places, or past/future events (e.g., 'Mon week-end dernier').",
+        "Simple personal emails, text messages, or forum posts about familiar topics.",
+        "Short dialogues about everyday situations (e.g., making an appointment, asking for help, shopping).",
+        "Public signs, notices, and simple instructions (e.g., for a machine, a recipe, safety warnings).",
+        "Short, simplified news items or factual texts on familiar topics (e.g., local events, weather forecast)."
       ],
       "example_exercise_files": [
         "A2_exercice_passe_compose.txt (Fill-in-the-blanks with Passé Composé)",
         "A2_exercice_imparfait_description.txt (Describe a picture using Imparfait)",
         "A2_comprehension_orale_annonce.txt (Questions on a short public announcement)"
-      ]
+      ],
+      "example_exercise_types": []
     },
     {
       "level_code": "B1",
@@ -375,24 +359,6 @@
         "Understand the description of events, feelings and wishes in personal letters and simple narratives.",
         "Scan longer texts in order to locate desired information, and gather information from different parts of a text, or from different texts in order to perform a specific task."
       ],
-      "example_text_types": [
-        "Short newspaper or magazine articles on familiar or current topics (e.g., lifestyle, hobbies, local news).",
-        "Personal blog posts, forum entries, or reviews expressing opinions or experiences.",
-        "Simplified factual texts on historical events, cultural topics, or social issues.",
-        "Instructions or user guides for everyday products or services with some complexity.",
-        "Short fictional stories, excerpts from graded readers (B1 level), or simplified literary texts.",
-        "Formal and informal letters/emails (e.g., letter of complaint, email to a friend sharing news)."
-      ],
-      "example_exercise_types": [
-        "Comprehension questions requiring inference, understanding of main ideas, and supporting details from texts and audio (DELF B1 style).",
-        "Summarizing paragraphs or short articles in own words.",
-        "Exercises on transforming sentences (e.g., active to passive in various tenses, direct to reported speech with tense changes).",
-        "Gap-fill exercises focusing on subjunctive mood with different triggers, conditional tenses, relative pronouns (dont, lequel), or double object pronouns.",
-        "Role-playing scenarios (e.g., participating in a simple debate, making travel arrangements with complications, discussing pros and cons of a situation, giving advice).",
-        "Writing personal letters or emails detailing experiences, giving advice, or expressing feelings with justification and appropriate connectors.",
-        "Composing short, structured essays or reports on familiar topics, presenting arguments and counter-arguments simply (e.g., advantages/disadvantages of something).",
-        "Identifying and using appropriate connectors to link ideas in sentences and paragraphs."
-      ],
       "spoken_interaction_skills": [
         "Enter unprepared into conversation on topics that are familiar, of personal interest or pertinent to everyday life (e.g. family, hobbies, work, travel and current events).",
         "Express and sustain personal opinions, providing brief reasons and explanations, and responding to others' viewpoints.",
@@ -438,14 +404,24 @@
         "Quel livre ou film recommandes-tu et pourquoi ? De quoi ça parle ?",
         "Comment décrirais-tu le système éducatif / politique de ton pays (simplement) ?"
       ],
-      "example_text_files": [
-        "B1_lettre_reclamation_simple.txt (Simple letter of complaint)",
-        "B1_article_voyage.txt (Short article describing a travel destination)"
+      "example_text_types": [
+        "Short newspaper or magazine articles on familiar or current topics (e.g., lifestyle, hobbies, local news).",
+        "Personal blog posts, forum entries, or reviews expressing opinions or experiences.",
+        "Simplified factual texts on historical events, cultural topics, or social issues.",
+        "Instructions or user guides for everyday products or services with some complexity.",
+        "Short fictional stories, excerpts from graded readers (B1 level), or simplified literary texts.",
+        "Formal and informal letters/emails (e.g., letter of complaint, email to a friend sharing news)."
       ],
-      "example_exercise_files": [
-        "B1_exercice_subjunctive.txt (Fill-in-the-blanks with present subjunctive)",
-        "B1_exercice_discours_indirect.txt (Transform direct speech to indirect speech)",
-        "B1_comprehension_ecrite_article.txt (Questions on a short news article)"
+      "example_exercise_files": [],
+      "example_exercise_types": [
+        "Comprehension questions requiring inference, understanding of main ideas, and supporting details from texts and audio (DELF B1 style).",
+        "Summarizing paragraphs or short articles in own words.",
+        "Exercises on transforming sentences (e.g., active to passive in various tenses, direct to reported speech with tense changes).",
+        "Gap-fill exercises focusing on subjunctive mood with different triggers, conditional tenses, relative pronouns (dont, lequel), or double object pronouns.",
+        "Role-playing scenarios (e.g., participating in a simple debate, making travel arrangements with complications, discussing pros and cons of a situation, giving advice).",
+        "Writing personal letters or emails detailing experiences, giving advice, or expressing feelings with justification and appropriate connectors.",
+        "Composing short, structured essays or reports on familiar topics, presenting arguments and counter-arguments simply (e.g., advantages/disadvantages of something).",
+        "Identifying and using appropriate connectors to link ideas in sentences and paragraphs."
       ]
     },
     {
@@ -502,24 +478,6 @@
         "Understand contemporary literary prose and grasp implicit meanings, irony, and authorial intent.",
         "Understand specialized texts in one's field of interest with some effort, including abstract concepts."
       ],
-      "example_text_types": [
-        "Authentic newspaper and magazine articles on a wide range of current, specialized, or controversial topics (e.g., editorials, opinion pieces, investigative reports).",
-        "Excerpts from contemporary novels, essays, or plays with complex themes, language, and narrative structures.",
-        "Reports, official documents, or formal correspondence (e.g., business letters, academic papers - excerpts, minutes of meetings).",
-        "Film reviews, literary critiques, or well-argued opinion pieces from reputable sources.",
-        "Texts containing idiomatic language, cultural references, varied registers, and figurative language requiring interpretation."
-      ],
-      "example_exercise_types": [
-        "In-depth text analysis: identifying author's purpose, tone, implicit meanings, argumentative structure, target audience, and stylistic choices (DELF B2 style).",
-        "Summarizing complex texts and spoken discourses, highlighting key arguments and supporting details.",
-        "Participating in debates and structured discussions on complex or controversial topics, defending a viewpoint with coherent arguments and examples.",
-        "Advanced grammar exercises focusing on nuances of tenses (e.g., concordance des temps in reported speech), moods (subjunctive in various clauses), complex sentence structures (e.g., relative clauses with 'lequel', use of 'dont'), and stylistic transformations.",
-        "Exercises on recognizing, understanding, and using different registers of language appropriately in context.",
-        "Writing well-structured argumentative essays, formal reports, proposals, or detailed reviews, using appropriate connectors and cohesive devices.",
-        "Creative writing prompts (e.g., writing a short story with specific stylistic constraints, composing a formal letter of complaint or application, writing a critique).",
-        "Exercises on understanding and correctly using a wide range of idiomatic expressions and figurative language in context.",
-        "Listening comprehension tasks with authentic audio/video (news reports, interviews, debates) followed by detailed comprehension questions (DELF B2 style)."
-      ],
       "spoken_interaction_skills": [
         "Interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
         "Take an active part in discussion in familiar and some unfamiliar contexts, accounting for and sustaining viewpoints clearly, providing relevant explanations and arguments.",
@@ -563,14 +521,24 @@
         "Analysez les causes et conséquences d'un événement historique important de votre choix et son héritage aujourd'hui.",
         "Débat: Pour ou contre [une question éthique ou sociétale controversée, e.g., la semaine de travail de quatre jours, l'énergie nucléaire, la régulation d'Internet]."
       ],
-      "example_text_files": [
-        "B2_article_opinion_medias.txt (Article d'opinion sur le rôle des médias)",
-        "B2_extrait_roman_contemporain.txt (Extrait d'un roman français contemporain)"
+      "example_text_types": [
+        "Authentic newspaper and magazine articles on a wide range of current, specialized, or controversial topics (e.g., editorials, opinion pieces, investigative reports).",
+        "Excerpts from contemporary novels, essays, or plays with complex themes, language, and narrative structures.",
+        "Reports, official documents, or formal correspondence (e.g., business letters, academic papers - excerpts, minutes of meetings).",
+        "Film reviews, literary critiques, or well-argued opinion pieces from reputable sources.",
+        "Texts containing idiomatic language, cultural references, varied registers, and figurative language requiring interpretation."
       ],
-      "example_exercise_files": [
-        "B2_exercice_discours_rapporte_complexe.txt (Transformation de dialogues en discours indirect complexe)",
-        "B2_production_ecrite_essai_argumentatif.txt (Sujet d'essai argumentatif sur un thème d'actualité)",
-        "B2_comprehension_orale_debat.txt (Questions sur un extrait de débat radiophonique)"
+      "example_exercise_files": [],
+      "example_exercise_types": [
+        "In-depth text analysis: identifying author's purpose, tone, implicit meanings, argumentative structure, target audience, and stylistic choices (DELF B2 style).",
+        "Summarizing complex texts and spoken discourses, highlighting key arguments and supporting details.",
+        "Participating in debates and structured discussions on complex or controversial topics, defending a viewpoint with coherent arguments and examples.",
+        "Advanced grammar exercises focusing on nuances of tenses (e.g., concordance des temps in reported speech), moods (subjunctive in various clauses), complex sentence structures (e.g., relative clauses with 'lequel', use of 'dont'), and stylistic transformations.",
+        "Exercises on recognizing, understanding, and using different registers of language appropriately in context.",
+        "Writing well-structured argumentative essays, formal reports, proposals, or detailed reviews, using appropriate connectors and cohesive devices.",
+        "Creative writing prompts (e.g., writing a short story with specific stylistic constraints, composing a formal letter of complaint or application, writing a critique).",
+        "Exercises on understanding and correctly using a wide range of idiomatic expressions and figurative language in context.",
+        "Listening comprehension tasks with authentic audio/video (news reports, interviews, debates) followed by detailed comprehension questions (DELF B2 style)."
       ]
     },
     {
@@ -661,15 +629,6 @@
         "Développez une argumentation nuancée concernant les implications éthiques de [une avancée scientifique ou technologique récente, e.g., l'édition génomique, la surveillance numérique].",
         "Comparez et contrastez les approches de différents penseurs, écoles de pensée ou politiques publiques sur [un concept abstrait ou un problème de société, e.g., la justice sociale, la gestion des migrations]."
       ],
-      "example_text_files": [
-        "C1_article_philosophie_politique.txt (Article on political philosophy)",
-        "C1_synthese_documents_environnement.txt (Set of documents on an environmental issue for synthesis)"
-      ],
-      "example_exercise_files": [
-        "C1_DALF_essai_argumente.txt (Prompt for an argumentative essay on a societal topic)",
-        "C1_DALF_synthese_de_documents.txt (Exercise requiring synthesis of multiple texts)",
-        "C1_comprehension_orale_conference.txt (Questions on an extract from an academic lecture or conference)"
-      ],
       "example_text_types": [
         "Authentic, unabridged literary texts (novels, plays, poetry) with complex themes, styles, and historical/cultural context.",
         "Academic articles, research papers, and specialized publications from various fields (humanities, social sciences, sciences).",
@@ -679,6 +638,7 @@
         "Texts employing sophisticated rhetoric, irony, satire, or nuanced argumentation requiring careful interpretation.",
         "Transcripts of debates, round-table discussions, or interviews with experts or public figures."
       ],
+      "example_exercise_files": [],
       "example_exercise_types": [
         "Critical analysis of literary or argumentative texts: identifying stylistic devices, interpreting symbolism, evaluating arguments, discussing authorial intent and socio-historical context.",
         "Writing academic essays, research summaries, or critical reviews demonstrating advanced analytical, argumentative, and synthesizing skills (DALF C1 'production écrite' - essai/synthèse).",
@@ -772,14 +732,6 @@
         "Comment la langue française a-t-elle évolué pour refléter les changements sociétaux au cours du dernier siècle ? Illustrez avec des exemples précis de néologismes, d'emprunts ou de changements sémantiques.",
         "Présentez et défendez une thèse originale sur un aspect peu exploré de [un domaine de votre expertise en français, e.g., une problématique scientifique, un courant artistique, une question de politique internationale]."
       ],
-      "example_text_files": [
-        "C2_essai_philosophique_complexe.txt (An essay on a complex philosophical topic)",
-        "C2_DALF_dossier_thematique_synthese.txt (A collection of documents on a complex theme for synthesis and presentation)"
-      ],
-      "example_exercise_files": [
-        "C2_DALF_production_ecrite_article_specialise.txt (Task to write a specialized article)",
-        "C2_DALF_production_orale_expose_debat.txt (Instructions for preparing an exposé and participating in a debate based on provided documents)"
-      ],
       "example_text_types": [
         "Highly specialized academic papers, research monographs, and theoretical treatises from diverse disciplines.",
         "Classic and contemporary literary works of significant complexity and cultural depth, including poetry, avant-garde texts, and philosophical writings.",
@@ -790,6 +742,7 @@
         "Speeches and writings by prominent intellectuals, political figures, or historical figures, requiring contextual and rhetorical analysis.",
         "Linguistically diverse materials, including texts with regional dialects, historical sociolects, or highly specialized jargon (for analysis and comprehension)."
       ],
+      "example_exercise_files": [],
       "example_exercise_types": [
         "Producing original research or extended essays demonstrating mastery of academic French, critical thought, and sophisticated argumentation (DALF C2 style).",
         "Comparative literary analysis of multiple complex works, potentially across different periods, genres, or cultural contexts, focusing on stylistic and thematic nuances.",
@@ -805,3 +758,5 @@
     }
   ]
 }
+
+[end of french_roadmap.json]

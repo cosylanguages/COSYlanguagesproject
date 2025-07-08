@@ -3,148 +3,833 @@
   "levels": [
     {
       "level_code": "A0",
-      "level_name": "Το Πρώτο Βήμα",
+      "level_name": "Το Πρώτο Βήμα (The First Step)",
       "approximate_vocabulary_size": "approx. 300-500 words",
       "learning_outcomes": [
-        "Understand and use familiar everyday Greek expressions and very basic phrases.",
+        "Understand and use familiar everyday Greek expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.",
         "Introduce him/herself and others in Greek.",
-        "Ask and answer simple questions about personal details."
+        "Ask and answer simple questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
+        "Interact in a very simple way provided the other person talks slowly and clearly and is prepared to help.",
+        "Recognize familiar Greek names, words, and very simple sentences on notices, posters, or in simple instructions.",
+        "Understand simple classroom instructions given slowly and clearly."
       ],
       "language_focus_topics": [
-        "The Greek Alphabet.",
-        "Nouns: Introduction to gender (masculine, feminine, neuter). Nominative and Accusative cases.",
-        "Verbs: `είμαι` (to be) - present tense. `έχω` (to have) - present tense."
+        "The Greek Alphabet (Το Ελληνικό Αλφάβητο): Recognition, pronunciation of letters, uppercase and lowercase.",
+        "Basic Pronunciation Rules: Diphthongs (e.g., αι, ει, οι, ου, υι), key consonant combinations (e.g., γγ, γκ, μπ, ντ, τσ, τζ). Voiced/unvoiced consonants.",
+        "Stress (Τόνος): Identifying and applying stress on simple words. Understanding the importance of stress.",
+        "Nouns (Ουσιαστικά): Introduction to gender (masculine -ο / -ας / -ης, feminine -α / -η, neuter -ο / -ι / -μα). Nominative and Accusative cases (singular) for common nouns.",
+        "Articles (Άρθρα): Definite (ο, η, το) and indefinite (ένας, μία, ένα) articles in Nominative and Accusative singular; agreement with nouns.",
+        "Verbs (Ρήματα): `είμαι` (to be) - present tense. `έχω` (to have) - present tense. Introduction to basic regular verbs in present tense (Type A - Conjugation 1: e.g., κάνω - I do/make, μένω - I live/stay, ξέρω - I know). Basic negation (δεν + verb).",
+        "Personal Pronouns (Προσωπικές Αντωνυμίες): Nominative case (εγώ, εσύ, αυτός, αυτή, αυτό, εμείς, εσείς, αυτοί, αυτές, αυτά).",
+        "Adjectives (Επίθετα): Basic adjectives (e.g., καλός, καλή, καλό - good; μεγάλος - big; μικρός - small). Agreement with nouns in gender, number (singular), and case (Nominative, Accusative).",
+        "Basic Question Words: Τι; (What?), Ποιος/Ποια/Ποιο; (Who?), Πού; (Where?), Πότε; (When? - very basic), Πώς; (How?).",
+        "Numbers (Αριθμοί): Cardinal numbers 0-20 (μηδέν - είκοσι).",
+        "Basic sentence structure: Subject-Verb-Object."
       ],
       "vocabulary_topics": [
-        "Greetings & Politeness: Γεια σου/σας, Καλημέρα, Ευχαριστώ, Παρακαλώ.",
-        "Personal Information: Με λένε..., Είμαι από...",
-        "Numbers: 0-10 (μηδέν - δέκα).",
-        "Colors: κόκκινο, μπλε, πράσινο."
+        "Greetings & Politeness: Γεια σου/σας, Καλημέρα, Καλησπέρα, Καληνύχτα, Αντίο, Ευχαριστώ, Παρακαλώ, Συγγνώμη, Ναι, Όχι, Τι κάνεις/κάνετε; (How are you?), Καλά/Πολύ καλά (Fine/Very well).",
+        "Personal Information: Όνομα (name), επώνυμο (surname), ηλικία (age), χώρα (country), πόλη (city), εθνικότητα (nationality). Phrases like 'Με λένε...', 'Είμαι από...'.",
+        "Numbers: 0-20.",
+        "Colors (Χρώματα): κόκκινο, μπλε, πράσινο, κίτρινο, άσπρο, μαύρο, γκρι, καφέ, ροζ, πορτοκαλί.",
+        "Days of the Week (Ημέρες της Εβδομάδας): Δευτέρα, Τρίτη, Τετάρτη, Πέμπτη, Παρασκευή, Σάββατο, Κυριακή. Σήμερα (today), αύριο (tomorrow), χθες (yesterday - recognition).",
+        "Classroom Objects & Language: βιβλίο, τετράδιο, μολύβι, στυλό, τραπέζι, καρέκλα, πίνακας, δάσκαλος/δασκάλα (teacher m/f), μαθητής/μαθήτρια (student m/f). Phrases like 'Δεν καταλαβαίνω' (I don't understand), 'Μπορείτε να επαναλάβετε;' (Can you repeat?).",
+        "Basic Family Members: μητέρα, πατέρας, αδελφός, αδελφή, γονείς (parents).",
+        "Common objects: σπίτι (house), πόρτα (door), παράθυρο (window), τηλέφωνο (telephone), κλειδί (key), τσάντα (bag).",
+        "Food & Drink (Basic): νερό (water), καφές (coffee), ψωμί (bread), μήλο (apple), πορτοκάλι (orange)."
       ],
-      "pronunciation_focus_topics": [],
-      "listening_comprehension_skills": [],
-      "reading_comprehension_skills": [],
-      "spoken_interaction_skills": [],
-      "spoken_production_skills": [],
-      "written_interaction_skills": [],
-      "written_production_skills": [],
-      "cultural_competence_topics": [],
-      "learning_strategies_suggestions": []
+      "pronunciation_focus_topics": [
+        "Accurate pronunciation of all Greek alphabet sounds and common diphthongs.",
+        "Distinction between similar sounds (e.g., ι/η/υ/ει/οι vs. ε/αι).",
+        "Correct placement of stress in familiar words.",
+        "Basic intonation for statements and simple questions."
+      ],
+      "listening_comprehension_skills": [
+        "Recognize familiar Greek words, names, and very basic phrases concerning oneself, family, and immediate concrete surroundings when people speak slowly and clearly.",
+        "Understand simple greetings, introductions, and farewells.",
+        "Follow very simple instructions related to the classroom (e.g., 'Open your book', 'Listen').",
+        "Identify numbers 0-20 and basic colors when heard."
+      ],
+      "reading_comprehension_skills": [
+        "Recognize all letters of the Greek alphabet in both cases.",
+        "Read and understand familiar simple words and short phrases (e.g., names, common objects, basic signs like 'ΕΙΣΟΔΟΣ'/'ΕΞΟΔΟΣ').",
+        "Understand very simple written instructions or labels.",
+        "Get the gist of a very short, simple text with familiar vocabulary (e.g., a simple name tag)."
+      ],
+      "spoken_interaction_skills": [
+        "Use basic greetings and introductions (e.g., Γεια σου, με λένε... / Hello, my name is...).",
+        "Ask and answer simple questions about name, origin, age (e.g., Πώς σε λένε; / What's your name?, Από πού είσαι; / Where are you from?).",
+        "Use politeness formulas (Ευχαριστώ, Παρακαλώ, Συγγνώμη).",
+        "Make very simple requests for objects (e.g., Θέλω ένα νερό, παρακαλώ / I want a water, please).",
+        "Respond to simple questions with 'ναι' or 'όχι'."
+      ],
+      "spoken_production_skills": [
+        "Say one's name, age, and where one is from.",
+        "Name basic objects, colors, and numbers 0-20.",
+        "Produce simple isolated phrases and very basic sentences about oneself.",
+        "Use basic affirmative and negative statements (e.g. Είμαι καλά. Δεν είμαι καλά.)"
+      ],
+      "written_interaction_skills": [
+        "Write one's name, nationality, and age in a simple form."
+      ],
+      "written_production_skills": [
+        "Write all Greek alphabet letters correctly (uppercase and lowercase).",
+        "Write familiar simple words (e.g., name, numbers, colors, common objects).",
+        "Write short, simple phrases about oneself (e.g., Με λένε Μαρία. Είμαι από την Ιταλία.).",
+        "Copy familiar words and short sentences."
+      ],
+      "cultural_competence_topics": [
+        "Common Greek greeting customs (e.g., handshakes, basic forms of address for 'Mr./Mrs.').",
+        "Awareness of Greece (Ελλάδα) as a country, its flag, and capital (Athens - Αθήνα).",
+        "Concept of 'namedays' (γιορτή ονόματος) - very basic awareness."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice alphabet and sounds daily.",
+        "Use flashcards with pictures for new vocabulary.",
+        "Listen to simple Greek children's songs or very basic dialogues.",
+        "Try to identify Greek letters and words in the environment (if applicable)."
+      ],
+      "example_conversation_starters": [],
+      "example_text_types": [],
+      "example_exercise_types": []
     },
     {
       "level_code": "A1",
-      "level_name": "Ο Μικρός Εξερευνητής",
+      "level_name": "Ο Μικρός Εξερευνητής (The Little Explorer)",
       "approximate_vocabulary_size": "approx. 600-800 words",
       "learning_outcomes": [
-        "Can understand and use familiar everyday Greek expressions and very basic phrases.",
-        "Can introduce him/herself and others in Greek, and can ask and answer questions about personal details.",
-        "Can interact in a simple way in Greek provided the other person talks slowly and clearly."
+        "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.",
+        "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
+        "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
       ],
-      "language_focus_topics": [
-        "Nouns: Genitive case (singular). Plural of common nouns (Nominative, Accusative, Genitive).",
-        "Adjectives: Agreement with nouns in gender, number, and case.",
-        "Verbs: Present Tense of regular verbs. Common irregular verbs (e.g., πηγαίνω, κάνω, λέω)."
+      "language_focus_grammar": [
+        "The Greek alphabet (Ελληνικό αλφάβητο) - review and mastery",
+        "Gender of nouns (masculine, feminine, neuter - ο, η, το)",
+        "Articles: definite (ο, η, το) and indefinite (ένας, μια, ένα) in Nominative case",
+        "Present tense of regular verbs - Type A (e.g., κάνω, μένω, ξέρω)",
+        "Present tense of 'to be' (είμαι) and 'to have' (έχω)",
+        "Personal pronouns in Nominative (εγώ, εσύ, αυτός, αυτή, αυτό, εμείς, εσείς, αυτοί, αυτές, αυτά)",
+        "Basic conjunctions (και - and, ή - or, αλλά - but)",
+        "Simple prepositions of place (σε - in/on/at, από - from, με - with)",
+        "Nominative and Accusative cases for articles and common nouns (singular)",
+        "Adjectives: agreement with nouns in gender and number (Nominative, singular, common adjectives like καλός, καλή, καλό)",
+        "Basic question words (τι - what, πού - where, πότε - when, πώς - how, ποιος/ποια/ποιο - who/which)",
+        "Numbers 0-100"
       ],
-      "vocabulary_topics": [
-        "Daily Life & Routine Activities.",
-        "Housing: types of dwellings, rooms.",
-        "Food & Drink: ordering in a taverna/restaurant.",
-        "Shopping: shop names, items in shops."
+      "language_focus_vocabulary_topics": [
+        "Personal information (name, nationality, age, profession, address, phone number)",
+        "Family members (basic and some extended kinship terms)",
+        "Numbers 0-100, Telephone numbers",
+        "Days of the week, months, seasons",
+        "Colors (common)",
+        "Common objects in the classroom, home, and immediate surroundings",
+        "Food and drinks (common items, ordering in a café/simple restaurant)",
+        "Greetings, farewells, and introductions (formal and informal)",
+        "Polite expressions (please, thank you, sorry, excuse me, you're welcome)",
+        "Countries and Nationalities (common ones)",
+        "Telling time (basic phrases, e.g., 'What time is it?', 'It is X o'clock', 'half past', 'quarter to/past')",
+        "Basic adjectives for description (e.g., big/small, good/bad, new/old, beautiful/ugly, happy/sad)",
+        "Daily routine verbs (e.g., wake up, eat, drink, go, sleep, study, work - infinitive and simple present)"
       ],
-      "pronunciation_focus_topics": [],
-      "listening_comprehension_skills": [],
-      "reading_comprehension_skills": [],
-      "spoken_interaction_skills": [],
-      "spoken_production_skills": [],
-      "written_interaction_skills": [],
-      "written_production_skills": [],
-      "cultural_competence_topics": [],
-      "learning_strategies_suggestions": []
+      "pronunciation_focus_topics": [
+        "Accurate pronunciation of individual Greek letters and their sounds, including potentially difficult ones (e.g., γ, χ, δ, θ, ξ, ψ).",
+        "Common diphthongs (e.g., αι, ει, οι, ου, υι) and their correct pronunciation.",
+        "Stress (τόνος): identifying and correctly applying stress in common 2-3 syllable words. Understanding that stress can change meaning.",
+        "Basic intonation patterns for statements, yes/no questions, and Wh-questions.",
+        "Distinguishing and producing voiced vs. unvoiced consonants (e.g., π/μπ, τ/ντ, κ/γκ)."
+      ],
+      "listening_comprehension_skills": [
+        "Understand simple greetings, introductions, and farewells.",
+        "Recognize familiar names, words, and very basic phrases concerning themselves, their family, and immediate concrete surroundings when people speak slowly and clearly.",
+        "Understand simple questions about personal information (name, age, nationality, where they live).",
+        "Follow short, simple instructions given slowly and clearly (e.g., 'open your book', 'listen', 'repeat').",
+        "Identify numbers, prices, and times when spoken clearly and slowly in familiar contexts (e.g., shopping).",
+        "Understand the main point of very short, simple dialogues about familiar topics (e.g., ordering a coffee)."
+      ],
+      "reading_comprehension_skills": [
+        "Recognize and read the Greek alphabet confidently.",
+        "Understand familiar names, words, and very simple sentences on notices, posters, or in catalogues (e.g., shop names, simple signs like 'Είσοδος' - Entrance, 'Έξοδος' - Exit, 'Ανοιχτό' - Open, 'Κλειστό' - Closed).",
+        "Understand short, simple texts on familiar topics if they contain very high frequency vocabulary (e.g., a simple personal introduction, a very short postcard).",
+        "Identify specific information in short, simple texts (e.g., finding a name, a number, or a place in a simple list).",
+        "Understand simple instructions (e.g., 'Click here', 'Push/Pull' on a door)."
+      ],
+      "spoken_interaction_skills": [
+        "Can interact in a simple way provided the other person is prepared to repeat or rephrase things at a slower rate of speech and help them formulate what they're trying to say.",
+        "Can ask and answer simple questions in areas of immediate need or on very familiar topics (e.g., 'What's your name? - Πώς σε λένε;', 'Where do you live? - Πού μένεις;', 'How are you? - Τι κάνεις;').",
+        "Can make simple purchases, ordering food and drink using basic phrases.",
+        "Can use basic greeting and leave-taking expressions appropriately.",
+        "Can ask for repetition or clarification using simple phrases (e.g., 'Μπορείτε να το επαναλάβετε;' - Can you repeat that?, 'Δεν κατάλαβα.' - I didn't understand.).",
+        "Can respond to simple questions with 'yes' (ναι), 'no' (όχι), or short answers."
+      ],
+      "spoken_production_skills": [
+        "Can use simple phrases and sentences to describe where they live and people they know.",
+        "Can introduce themselves and others (e.g., 'Είμαι ο/η [name]. Αυτός/Αυτή είναι ο/η [name].' - I am [name]. This is [name].).",
+        "Can state their name, age, nationality, and simple information about their family or job.",
+        "Can talk about likes and dislikes in a very simple way (e.g., 'Μου αρέσει ο καφές.' - I like coffee. 'Δεν μου αρέσει η βροχή.' - I don't like the rain).",
+        "Can name common objects, colors, and numbers learned.",
+        "Can describe their daily routine in very simple terms (e.g., 'I wake up. I eat breakfast. I go to school.')"
+      ],
+      "written_interaction_skills": [
+        "Can write a short, simple postcard (e.g., sending holiday greetings with fixed phrases).",
+        "Can fill in forms with personal details (e.g., name, nationality, address on a hotel registration form or a simple application).",
+        "Can write simple greeting messages for common occasions (e.g., 'Happy Birthday' - Χρόνια Πολλά, 'Happy Name Day').",
+        "Can respond to simple questions in writing with short answers or phrases (e.g., in a text message)."
+      ],
+      "written_production_skills": [
+        "Can write simple isolated phrases and sentences about themselves and imaginary people, where they live, and what they do.",
+        "Can write a short, simple note or message (e.g., 'I am at the supermarket.', a short shopping list).",
+        "Can list items (e.g., a shopping list with familiar food items).",
+        "Can write simple sentences describing their family, pets, or home using learned vocabulary and grammar."
+      ],
+      "cultural_competence_topics": [
+        "Common Greek greeting customs (e.g., handshakes, cheek kisses in informal settings depending on relationship and region, use of 'Γεια σου/σας').",
+        "Basic etiquette for eating out (e.g., saying 'thank you' - ευχαριστώ, 'please' - παρακαλώ, 'cheers' - γεια μας, waiting to be seated).",
+        "Understanding of 'name days' (ονομαστική εορτή) and their importance in Greek culture, often more celebrated than birthdays.",
+        "Awareness of common gestures and their meanings (e.g., 'OK' sign, waving hello/goodbye, head nod for 'yes' and slight upward nod often meaning 'no' - to be clarified).",
+        "Concept of 'philotimo' (φιλότιμο) - a complex cultural concept related to honor, duty, and hospitality (very basic awareness of its positive connotation).",
+        "Common opening hours for shops and services (e.g., 'siesta' culture in some areas, though diminishing).",
+        "Importance of coffee culture (καφές) in social life, concept of 'πάμε για καφέ' (let's go for a coffee) as a social activity.",
+        "Basic understanding of giving and receiving gifts (e.g., for name days, visits)."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice the Greek alphabet daily until proficient in reading and writing.",
+        "Use flashcards (physical or digital) for new vocabulary, especially nouns with their articles and simple verbs.",
+        "Listen to simple Greek songs, children's stories, or very basic dialogues, trying to pick out familiar words.",
+        "Try to label objects in their home or immediate environment with their Greek names.",
+        "Repeat phrases heard in class or from audio/video materials aloud to practice pronunciation and intonation.",
+        "Find a language exchange partner (even for very basic exchanges) or use language learning apps for simple conversation practice.",
+        "Set small, achievable weekly goals (e.g., learn 10 new words, practice pronunciation of 5 specific sounds for 15 minutes daily).",
+        "Don't be afraid to make mistakes; see them as part of the learning process.",
+        "Try to use newly learned words or phrases in simple sentences as soon as possible."
+      ],
+      "example_conversation_starters": [
+        "Τι κάνεις σήμερα το απόγευμα;",
+        "Πού πήγες χθες;",
+        "Τι σου αρέσει να τρως για πρωινό;",
+        "Έχεις αδέρφια;",
+        "Πώς πας στη δουλειά/σχολείο;",
+        "Θέλεις να πάμε για καφέ το Σάββατο;"
+      ],
+      "example_text_types": [
+        "Short personal emails or messages about daily activities.",
+        "Simple dialogues in shops or cafes.",
+        "Basic descriptions of people, places, or routines.",
+        "Menus with common dishes.",
+        "Public transport timetables (simplified).",
+        "Simple advertisements for everyday products."
+      ],
+      "example_exercise_types": [
+        "Fill-in-the-blanks with correct noun endings (nominative, accusative singular).",
+        "Conjugate common -ω verbs in Present tense.",
+        "Match questions with appropriate answers.",
+        "Role-play: Ordering a coffee, introducing yourself, asking for the price of an item.",
+        "Write a short paragraph describing your daily routine or your family (3-4 simple sentences).",
+        "Listening comprehension: Answer simple true/false questions about a short dialogue."
+      ]
     },
     {
       "level_code": "A2",
-      "level_name": "Ο Μαθητευόμενος Μάγος",
-      "approximate_vocabulary_size": "",
-      "learning_outcomes": [],
-      "language_focus_topics": [],
-      "vocabulary_topics": [],
-      "pronunciation_focus_topics": [],
-      "listening_comprehension_skills": [],
-      "reading_comprehension_skills": [],
-      "spoken_interaction_skills": [],
-      "spoken_production_skills": [],
-      "written_interaction_skills": [],
-      "written_production_skills": [],
-      "cultural_competence_topics": [],
-      "learning_strategies_suggestions": []
+      "level_name": "Ο Μαθητευόμενος Μάγος (The Apprentice Wizard)",
+      "approximate_vocabulary_size": "approx. 1000-1200 words",
+      "learning_outcomes": [
+        "Understand sentences and frequently used expressions related to areas of most immediate relevance (e.g., basic personal and family information, shopping, local geography, employment).",
+        "Communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.",
+        "Describe in simple terms aspects of his/her background, immediate environment, and matters in areas of immediate need.",
+        "Understand main points in short, clear, simple messages, announcements, and straightforward dialogues.",
+        "Read very short, simple texts and find specific information, understand simple narratives."
+      ],
+      "language_focus_topics": [
+        "Review of A1 topics, consolidation of Present and Simple Future.",
+        "Nouns & Adjectives: Comparative and superlative forms of common adjectives and adverbs (e.g., καλός - καλύτερος - ο καλύτερος; καλά - καλύτερα - άριστα). More irregular adjectives.",
+        "Verbs: Past Simple (Αόριστος) of regular and more common irregular verbs (active voice and introduction to medio-passive voice for common reflexive/passive meanings, e.g., σηκώθηκα - I got up, πλύθηκα - I washed myself). Imperfect Tense (Παρατατικός) for ongoing/repeated past actions or descriptions in the past (e.g., έπαιζα - I was playing / I used to play, ο καιρός ήταν καλός - the weather was good). Introduction to Present Perfect (Παρακείμενος - e.g. έχω πάει - I have gone, έχω δει - I have seen) for experiences or past actions with present relevance. Basic uses of the Subjunctive (Υποτακτική) after common expressions and conjunctions (e.g., θέλω να πάω - I want to go, πρέπει να φύγω - I must leave, μπορείς να με βοηθήσεις; - can you help me?). Modal verbs and expressions (μπορώ - I can, πρέπει - I must/should, ξέρω να - I know how to, χρειάζεται να - it is necessary to). Basic conditional sentences (Type 1: Αν/Εάν + present, θα + present/future - If I have time, I will come).",
+        "Pronouns: Object pronouns (strong and weak forms: με/εμένα, σε/εσένα, τον/αυτόν etc.). Reflexive pronouns (ο εαυτός μου - myself). Possessive pronouns (as distinct from adjectives).",
+        "Adverbs: More adverbs of time (πριν - before, μετά - after, παλιά - in the past), place, manner, frequency (πάντα, συχνά, μερικές φορές, σπάνια - rarely, ποτέ - never).",
+        "Prepositions & Conjunctions: Wider range and usage, including time prepositions (κατά τη διάρκεια - during, μέχρι - until). Causal conjunctions (επειδή - because, αφού - since/after).",
+        "Word order in questions and statements with more elements."
+      ],
+      "vocabulary_topics": [
+        "Personal details & Identity: Describing oneself in more detail (address, phone number, email, marital status - basic).",
+        "Family and friends: Describing relationships, family members (e.g. ξάδερφος/η - cousin, θείος/α - uncle/aunt, παππούς/γιαγιά - grandfather/grandmother), describing friends.",
+        "Daily routines and free time activities: Describing a typical day in more detail, hobbies, sports, going out.",
+        "Shopping: Clothes (types, materials, sizes), asking for help in shops, making complaints (simple).",
+        "Food and drink: Types of meals, basic recipes, ingredients, ordering more complex meals, expressing preferences.",
+        "Travel and transport: Buying tickets, asking for travel information, types of accommodation (ξενοδοχείο, ενοικιαζόμενα δωμάτια - rented rooms), modes of transport, understanding simple travel announcements.",
+        "Health and body: Common ailments (πονοκέφαλος - headache, πυρετός - fever), parts of the body, visiting a doctor or pharmacy, explaining simple symptoms.",
+        "Places in town & services: post office, bank, pharmacy, cinema, theatre, library, museum, restaurant, café, types of shops.",
+        "Describing people: Physical appearance (height, build, hair, eyes) and basic personality traits (φιλικός - friendly, αστείος - funny, έξυπνος - smart).",
+        "Emotions and feelings: Expressing happiness, sadness, surprise, worry (basic).",
+        "Education: School subjects, simple descriptions of school life.",
+        "Work: Simple job titles, places of work, describing basic work activities."
+      ],
+      "pronunciation_focus_topics": [
+        "Stress patterns in longer words, compound words, and simple sentences with correct phrasing.",
+        "Rhythm and intonation in connected speech for different communicative functions (e.g., expressing surprise, asking for clarification, making suggestions).",
+        "Recognizing and producing sounds that are particularly challenging for non-native speakers, focusing on consistency."
+      ],
+      "listening_comprehension_skills": [
+        "Understand enough to be able to meet needs of a concrete type provided speech is clearly and slowly articulated on familiar topics.",
+        "Understand phrases and expressions related to areas of most immediate priority (e.g. very basic personal and family information, shopping, local area, employment).",
+        "Identify the main point and some key details of short, clear, simple messages, announcements, and straightforward dialogues.",
+        "Follow short, simple narratives if the topic is familiar and language is simple."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short, simple texts (e.g., personal letters, emails, simple instructions, short newspaper articles about familiar events) containing high-frequency vocabulary.",
+        "Find specific, predictable information in simple everyday material such as advertisements, prospectuses, menus, timetables, and short official documents.",
+        "Get the gist of short narratives or simple stories with clear structure."
+      ],
+      "spoken_interaction_skills": [
+        "Engage in short social exchanges, ask and answer questions about familiar topics like work, family, free time, past activities.",
+        "Handle simple transactions in shops, post offices, or banks; order food, ask for services.",
+        "Discuss past events or experiences simply (e.g., 'What did you do yesterday?').",
+        "Make and respond to simple suggestions and invitations.",
+        "Ask for and give directions or information about places.",
+        "Express basic opinions and preferences with simple reasons."
+      ],
+      "spoken_production_skills": [
+        "Describe one’s family, other people, living conditions, educational background, and present or most recent job using simple connected sentences.",
+        "Give short, basic descriptions of events, activities, and personal experiences (past and present).",
+        "Describe plans and arrangements, habits and routines.",
+        "Explain what one likes or dislikes about something."
+      ],
+      "written_interaction_skills": [
+        "Write short, simple notes, messages, and emails related to everyday situations.",
+        "Respond to simple written questions or requests for information with relevant details.",
+        "Exchange information about familiar topics in simple written form."
+      ],
+      "written_production_skills": [
+        "Write a series of simple phrases and sentences linked with simple connectors like 'και', 'αλλά', 'επειδή', 'μετά', 'πρώτα'.",
+        "Write a short, simple postcard or email describing an event, a trip, or personal impressions.",
+        "Describe plans, arrangements, or past activities in a short paragraph.",
+        "Write a simple description of a person or a place."
+      ],
+      "cultural_competence_topics": [
+        "Understanding of basic Greek customs related to hospitality, invitations, and visiting someone's home.",
+        "Awareness of some regional differences within Greece (e.g., islands vs. mainland, common stereotypes - basic).",
+        "Common gestures and body language and their meanings (polite vs. impolite).",
+        "Understanding basic social norms in public places.",
+        "Introduction to Greek music and dance (basic recognition of popular forms)."
+      ],
+      "learning_strategies_suggestions": [
+        "Try to think in Greek for simple daily actions and narrate them internally.",
+        "Use a Greek-English dictionary to look up new words and note example sentences. Start categorizing vocabulary by topic.",
+        "Practice writing short paragraphs about familiar topics, then try to expand them by adding more details or linking ideas with conjunctions.",
+        "Watch simple Greek videos, cartoons, or TV programs with Greek subtitles if possible, focusing on understanding the gist and picking up new phrases.",
+        "Engage in short, simple conversations with native speakers or other learners, focusing on familiar A2 topics.",
+        "Record yourself speaking simple phrases or short descriptions and listen back to identify areas for pronunciation improvement.",
+        "Set specific, measurable, achievable, relevant, and time-bound (SMART) goals for learning, e.g., 'learn 15 new words related to travel this week'."
+      ],
+      "example_conversation_starters": [
+        "Τι έκανες το Σαββατοκύριακο;",
+        "Πώς ήταν ο καιρός χθες;",
+        "Μπορείς να μου περιγράψεις τον καλύτερό σου φίλο / την καλύτερή σου φίλη;",
+        "Πού θέλεις να πας διακοπές φέτος;",
+        "Τι πρέπει να αγοράσουμε από το σούπερ μάρκετ;",
+        "Πήγες στο πάρτι της Άννας; Πώς πέρασες;",
+        "Έχεις κατοικίδιο; Πώς είναι;",
+        "Ποιο είναι το αγαπημένο σου φαγητό και γιατί;"
+      ],
+      "example_text_types": [
+        "Short personal emails or messages about past events, daily routines, or future plans.",
+        "Simple dialogues in shops (e.g., buying clothes, asking for sizes, returning an item).",
+        "Basic descriptions of people's physical appearance, personality, and daily life.",
+        "Short, simple narratives about a past experience (e.g., a weekend trip, a memorable meal).",
+        "Simple recipes or instructions for everyday tasks.",
+        "Short advertisements for local events, products, or services (e.g., cinema listings, supermarket offers).",
+        "Simple weather forecasts or reports.",
+        "Short, factual texts about familiar topics (e.g., a brief description of a town or a hobby)."
+      ],
+      "example_exercise_types": [
+        "Fill-in-the-blanks with correct verb forms (Aorist, Imperfect, simple Future, basic Subjunctive).",
+        "Transform sentences from Present to Aorist or Imperfect, and vice-versa.",
+        "Create comparative and superlative forms of given adjectives and adverbs.",
+        "Role-play scenarios: Visiting a doctor and describing symptoms, asking for and giving directions, making a simple complaint in a shop, planning an outing with a friend.",
+        "Write a short paragraph describing a past event (e.g., 'My last birthday', 'What I did yesterday').",
+        "Listening comprehension: Answer specific questions (who, what, where, when, why) about a short dialogue discussing daily routines, past activities, or future plans.",
+        "Reading comprehension: Find specific information in a short, simple text (e.g., an email invitation, a simple news item, a short biography).",
+        "Sentence building exercises using given vocabulary and grammatical structures (e.g., using object pronouns, possessive pronouns, conjunctions like 'επειδή', 'όταν', 'αν').",
+        "Matching exercises: Match vocabulary to definitions, or sentence halves to form coherent sentences."
+      ]
     },
     {
       "level_code": "B1",
-      "level_name": "Ο Ταξιδευτής των Ονείρων",
-      "approximate_vocabulary_size": "",
-      "learning_outcomes": [],
-      "language_focus_topics": [],
-      "vocabulary_topics": [],
-      "pronunciation_focus_topics": [],
-      "listening_comprehension_skills": [],
-      "reading_comprehension_skills": [],
-      "spoken_interaction_skills": [],
-      "spoken_production_skills": [],
-      "written_interaction_skills": [],
-      "written_production_skills": [],
-      "cultural_competence_topics": [],
-      "learning_strategies_suggestions": []
+      "level_name": "Ο Ταξιδευτής των Ονείρων (The Dream Traveler)",
+      "approximate_vocabulary_size": "approx. 2000-2500 words",
+      "learning_outcomes": [
+        "Understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc.",
+        "Deal with most situations likely to arise whilst travelling in an area where Greek is spoken.",
+        "Produce simple connected text on topics, which are familiar, or of personal interest.",
+        "Describe experiences and events, dreams, hopes & ambitions and briefly give reasons and explanations for opinions and plans."
+      ],
+      "language_focus_topics": [
+        "Review of A2 topics, consolidation of past tenses (Aorist, Imperfect).",
+        "Verbs: All past tenses reviewed and contrasted (Aorist, Imperfect, Present Perfect, Past Perfect - Παρακείμενος, Υπερσυντέλικος). Future Continuous/Imperfective Future (e.g., θα γράφω - I will be writing). Future Perfect (Συντελεσμένος Μέλλοντας - e.g., θα έχω γράψει - I will have written). Conditional mood (would + verb - e.g., θα έκανα - I would do; Type 2 Conditional: αν + imperfect, θα + conditional). Passive voice (Παθητική φωνή) for present, past simple (Aorist/Imperfect), and future simple tenses. More uses of the Subjunctive (e.g., after impersonal expressions, conjunctions like 'για να' - in order to, 'πριν να' - before, 'ώστε να' - so that). Participles (Μετοχές) - present active (-οντας/-ώντας) and past passive (-μένος, -μένη, -μένο); their basic adjectival and adverbial uses. Introduction to reported speech (Πλάγιος λόγος): Simple statements, questions, and commands in present and past reporting.",
+        "Nouns & Adjectives: More complex agreement patterns. Comparison of adverbs. Adjectives used as nouns.",
+        "Pronouns: Relative pronouns (ο οποίος, που - who, which, that) and relative clauses. Indefinite pronouns and adverbs (κάποιος - someone, τίποτα - nothing, καθένας - everyone, κάπου - somewhere, ποτέ - never (in negative sentences)).",
+        "Syntax: Connecting ideas using a wider range of conjunctions (time: όταν, ενώ, μόλις, αφότου; reason: επειδή, αφού, καθώς; contrast: αν και, παρόλο που, όμως; purpose: για να, ώστε να). Simple reported speech.",
+        "Prepositions: Prepositions with genitive (e.g., λόγω - due to, αντί - instead of). Prepositional phrases."
+      ],
+      "vocabulary_topics": [
+        "Work and study: Job descriptions, job interviews, applying for jobs/courses, school/university life, subjects, exams.",
+        "Travel and tourism: Planning trips, booking accommodation and transport, sightseeing, describing travel experiences, common problems during travel and solutions.",
+        "Hobbies and interests: Describing them in more detail, equipment needed, expressing enthusiasm or preferences, joining clubs.",
+        "Personal relationships: Friendships, family dynamics, describing character and personality traits, expressing feelings about relationships.",
+        "Food and culture: Regional cuisines, national dishes, traditions, festivals, eating habits, discussing recipes.",
+        "Health and lifestyle: Fitness, diet, healthy habits, common illnesses and treatments, giving simple advice on health.",
+        "Current events and news: Understanding main points of simple news articles, discussing current topics simply.",
+        "Environment: Basic environmental issues (pollution, recycling), expressing concerns.",
+        "Expressing opinions, agreement, disagreement: Structuring simple arguments, giving reasons.",
+        "Feelings and emotions: Expressing a wider range of feelings (joy, sadness, anger, fear, surprise, hope, disappointment) with more nuance.",
+        "Technology: Basic terms related to computers, internet, mobile phones.",
+        "Narrative: Describing past events, telling simple stories."
+      ],
+      "pronunciation_focus_topics": [
+        "Natural intonation in longer sentences and across different types of clauses (e.g., conditional, relative).",
+        "Connected speech: common assimilations, elisions, and linking sounds to improve fluency.",
+        "Differentiating between formal and informal speech rhythm and intonation patterns.",
+        "Practicing problematic sound combinations or individual sounds for clarity."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear standard speech on familiar matters regularly encountered in work, school, leisure, etc., including short narratives.",
+        "Understand the main point in many radio or TV programmes on current affairs or topics of personal or professional interest when the delivery is relatively slow and clear.",
+        "Follow straightforward factual information about common everyday or job-related topics, identifying both general messages and specific details, provided speech is clearly articulated in a generally familiar accent.",
+        "Understand simple technical information, such as operating instructions for everyday equipment."
+      ],
+      "reading_comprehension_skills": [
+        "Understand texts that consist mainly of high frequency everyday or job-related language.",
+        "Understand the description of events, feelings and wishes in personal letters and emails well enough to correspond regularly.",
+        "Scan longer texts in order to locate desired information, and gather information from different parts of a text, or from different texts in order to fulfil a specific task.",
+        "Recognise significant points in straightforward newspaper articles on familiar subjects.",
+        "Identify the main conclusions in clearly signalled argumentative texts."
+      ],
+      "spoken_interaction_skills": [
+        "Enter unprepared into conversation on topics that are familiar, of personal interest or pertinent to everyday life (e.g. family, hobbies, work, travel and current events).",
+        "Deal with most situations likely to arise whilst travelling in an area where the language is spoken (e.g., making travel arrangements, dealing with officials, asking for help).",
+        "Express and ask for personal opinions and ideas in familiar contexts, and respond to those of others.",
+        "Narrate a story or relate the plot of a book or film and describe reactions.",
+        "Sustain a conversation on a familiar topic, even if sometimes having to search for words or rephrase.",
+        "Make a complaint."
+      ],
+      "spoken_production_skills": [
+        "Produce simple connected text on topics which are familiar or of personal interest.",
+        "Briefly give reasons and explanations for opinions, plans and actions.",
+        "Narrate a story, including the description of feelings and reactions.",
+        "Describe experiences and events, dreams, hopes and ambitions in some detail.",
+        "Relate the plot of a book or film and describe personal reactions.",
+        "Give a straightforward, prepared presentation on a familiar topic within their field, which is clear enough to be followed without difficulty most of the time, and in which the main points are explained with reasonable precision."
+      ],
+      "written_interaction_skills": [
+        "Write personal letters/emails describing experiences, feelings, and events in some detail, and commenting on the correspondent's news and views.",
+        "Exchange information in writing on familiar routine and non-routine matters within their field with some confidence.",
+        "Make notes while someone is talking or during a presentation on familiar topics."
+      ],
+      "written_production_skills": [
+        "Write simple connected text on a range of familiar subjects or subjects of personal interest, linking a series of shorter discrete elements into a linear sequence.",
+        "Write personal letters and notes asking for or conveying simple information of immediate relevance, getting across the point they feel is important.",
+        "Describe experiences, events, and impressions in a simple connected text (e.g., a travel blog entry, a diary entry).",
+        "Write a short, simple essay on a topic of interest, providing reasons for their views."
+      ],
+      "cultural_competence_topics": [
+        "Understanding of Greek social etiquette in various situations (e.g., visiting someone's home, celebrations, formal vs. informal gatherings).",
+        "Awareness of important historical and cultural figures/events in Greece and their significance.",
+        "Understanding common Greek proverbs or sayings and their general meaning.",
+        "Introduction to different regions of Greece and their distinct characteristics (islands, mainland, specific cities).",
+        "Basic understanding of the Greek educational system and work culture."
+      ],
+      "learning_strategies_suggestions": [
+        "Start reading simple Greek newspaper articles, blogs, or short stories, trying to guess meaning from context and looking up key unknown words.",
+        "Watch Greek TV shows, interviews, or movies with Greek subtitles, paying attention to colloquial language, turn-taking, and how opinions are expressed.",
+        "Practice writing longer texts like emails to friends describing experiences, diary entries detailing events and feelings, or short opinion pieces on familiar topics.",
+        "Set specific language learning goals (e.g., 'This week I will learn and use 5 new B1 conjunctions in my writing') and track progress.",
+        "Use monolingual Greek dictionaries (for learners) to understand nuances of meaning and see example sentences.",
+        "Engage in conversations with native speakers or advanced learners, focusing on expressing opinions, narrating events, and discussing future plans.",
+        "Actively try to use new grammatical structures (e.g., conditionals, passive voice, reported speech) in speaking and writing.",
+        "Summarize short texts or dialogues to practice identifying main points and paraphrasing."
+      ],
+      "example_conversation_starters": [
+        "Ποια είναι η γνώμη σου για... (ένα τρέχον θέμα, π.χ., την τηλεργασία, την προστασία του περιβάλλοντος);",
+        "Αν είχες την ευκαιρία, τι θα άλλαζες στη γειτονιά/πόλη σου και γιατί;",
+        "Πώς ήταν οι διακοπές σου; Περιέγραψέ μου μια τυπική μέρα ή ένα ενδιαφέρον περιστατικό.",
+        "Τι σχέδια έχεις για το μέλλον (επαγγελματικά/προσωπικά); Πώς σκοπεύεις να τα πραγματοποιήσεις;",
+        "Ποιο βιβλίο/ταινία σου άρεσε τελευταία και γιατί; Θα το πρότεινες;",
+        "Πώς πιστεύεις ότι η τεχνολογία επηρεάζει τη ζωή μας καθημερινά (θετικά και αρνητικά);",
+        "Ας υποθέσουμε ότι κερδίζεις ένα μεγάλο χρηματικό ποσό. Τι θα έκανες με τα χρήματα;",
+        "Ποια είναι η μεγαλύτερη πρόκληση που αντιμετώπισες ποτέ και πώς την ξεπέρασες;",
+        "Συμφωνείς ή διαφωνείς με την άποψη ότι...; Εξήγησε τους λόγους σου."
+      ],
+      "example_text_types": [
+        "Personal letters or emails describing experiences, feelings, events, hopes, ambitions, and giving opinions.",
+        "Straightforward newspaper or magazine articles on familiar subjects or current events, where the writer's stance is relatively clear.",
+        "Simple narratives or short stories with a clear sequence of events and character motivations.",
+        "Instructions or guidelines for a familiar process (e.g., a recipe, how to use a service, rules for a game).",
+        "Travel brochures or website descriptions of tourist destinations, including practical information.",
+        "Blogs or forum posts on topics of personal interest (hobbies, travel, opinions on current affairs).",
+        "Simple job advertisements or course descriptions outlining requirements and benefits.",
+        "Reviews of films, books, or restaurants expressing personal opinions and recommendations.",
+        "Short factual reports on familiar topics (e.g., a summary of a school project, a description of a local event)."
+      ],
+      "example_exercise_types": [
+        "Writing a personal email to a friend describing a recent trip or significant event, including your feelings, opinions, and perhaps a problem encountered.",
+        "Reading a short newspaper article on a current social issue and summarizing the main points, identifying the writer's opinion, and stating whether you agree or disagree, with reasons.",
+        "Participating in a role-play: Dealing with a problem while traveling (e.g., lost luggage, unsatisfactory hotel room), planning an event with friends and negotiating details, or a simple job interview.",
+        "Giving a short prepared presentation (3-5 minutes) on a familiar topic (e.g., a hobby, a dream destination, a person you admire), structuring it logically and giving reasons/explanations.",
+        "Listening to a dialogue or short monologue (e.g., a news report, an interview, a personal anecdote) and identifying main ideas, specific details, speaker's attitude, and sequence of events.",
+        "Fill-in-the-blanks or sentence transformation exercises focusing on B1 grammar (e.g., Type 2 conditionals, passive voice in different tenses, simple reported speech, future continuous, participles as adjectives).",
+        "Structured debate or discussion on a familiar topic, where learners have to express agreement/disagreement politely, justify opinions, and respond to others' arguments.",
+        "Writing a short story or narrative based on a prompt, a series of pictures, or a given opening/closing sentence, focusing on connecting ideas and using past tenses correctly.",
+        "Vocabulary exercises: Matching idiomatic expressions to their meanings, using new vocabulary related to B1 themes (work, travel, opinions, environment) in context, identifying synonyms/antonyms.",
+        "Gap-fill exercises in texts using appropriate conjunctions to link ideas (time, reason, contrast, purpose)."
+      ]
     },
     {
       "level_code": "B2",
-      "level_name": "Ο Τεχνίτης των Λέξεων",
-      "approximate_vocabulary_size": "",
-      "learning_outcomes": [],
-      "language_focus_topics": [],
-      "vocabulary_topics": [],
-      "pronunciation_focus_topics": [],
-      "listening_comprehension_skills": [],
-      "reading_comprehension_skills": [],
-      "spoken_interaction_skills": [],
-      "spoken_production_skills": [],
-      "written_interaction_skills": [],
-      "written_production_skills": [],
-      "cultural_competence_topics": [],
-      "learning_strategies_suggestions": []
+      "level_name": "Ο Τεχνίτης των Λέξεων (The Wordsmith)",
+      "approximate_vocabulary_size": "approx. 4000-6000 words",
+      "learning_outcomes": [
+        "Understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in his/her field of specialisation.",
+        "Interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
+        "Produce clear, detailed text on a wide range of subjects and explain a viewpoint on a topical issue giving the advantages and disadvantages of various options."
+      ],
+      "language_focus_topics": [
+        "Review of B1 topics with a focus on accuracy and range.",
+        "Verbs: All active and passive voice forms, including perfect and continuous aspects in all tenses. Advanced uses of subjunctive and conditional moods (e.g., mixed conditionals, hypothetical situations in the past - Type 3 Conditional: αν + past perfect, θα + conditional perfect). Gerunds and infinitives after specific verbs and prepositions. More complex participial phrases (e.g., as reduced relative clauses). Impersonal verbs and constructions.",
+        "Syntax: Complex sentence structures, including various types of subordinate clauses (time, reason, purpose, result, concession, condition, manner). Indirect speech for complex sentences (reporting verbs with different structures, changes in tense and adverbs of time/place). Emphasis through cleft sentences or word order variations. Cohesion and coherence devices (connectors, referencing).",
+        "Nouns & Adjectives: Abstract nouns and nominalizations. Nuances in adjective meanings, collocations, and idiomatic usage. Degrees of comparison for irregular adjectives and adverbs.",
+        "Adverbs: Adverbial phrases modifying verbs, adjectives, or entire clauses. Degree adverbs and intensifiers.",
+        "Idiomatic expressions and common phrasal verbs (or their Greek equivalents like fixed expressions with prepositions).",
+        "Understanding and using different registers: formal vs. informal language in grammar, vocabulary, and style."
+      ],
+      "vocabulary_topics": [
+        "Education and career: Higher education systems, academic writing, job market trends, career development strategies, professional communication.",
+        "Technology and media: Internet, social media, digital literacy, news sources and bias, impact of technology on society, ethics in media.",
+        "Social issues: Current societal problems (e.g., unemployment, immigration, inequality), discussions, debates, proposing solutions.",
+        "Arts and culture: Literature (genres, analysis), music (styles, history), film (critique, genres), theatre, visual arts, expressing nuanced critique and appreciation.",
+        "Politics and governance: Basic political systems and ideologies, current affairs, citizen participation, elections.",
+        "Environment: Global environmental challenges (climate change, biodiversity loss), sustainability, conservation efforts, environmental policies.",
+        "Abstract concepts: Discussing ideas, theories, philosophies, opinions with more depth and supporting arguments.",
+        "Formal and informal language: Recognizing and using appropriate register in different contexts.",
+        "Idioms, colloquialisms, and common sayings.",
+        "Health & well-being: Mental health, lifestyle choices, healthcare systems."
+      ],
+      "pronunciation_focus_topics": [
+        "Fine-tuning intonation to convey subtle meanings, attitudes, and emotions (e.g., irony, doubt, enthusiasm, sarcasm).",
+        "Achieving fluency and natural rhythm in extended speech, including appropriate pausing and phrasing.",
+        "Understanding and using features of connected speech typical of educated native speakers (e.g., more complex assimilations, reductions).",
+        "Developing clearer articulation of challenging sound clusters or individual phonemes."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech and lectures and follow even complex lines of argument provided the topic is reasonably familiar.",
+        "Understand most TV news and current affairs programmes, including discussions and interviews.",
+        "Understand the majority of films, plays, and radio broadcasts in standard dialect, including implicit meanings and attitudes.",
+        "Follow conversations between native speakers on a variety of topics."
+      ],
+      "reading_comprehension_skills": [
+        "Read articles and reports concerned with contemporary problems in which the writers adopt particular stances or viewpoints.",
+        "Understand contemporary literary prose and appreciate stylistic choices.",
+        "Understand specialized articles and technical texts outside own field, provided they can use a dictionary or other resources.",
+        "Identify writer's purpose, tone, and bias in various types of texts."
+      ],
+      "spoken_interaction_skills": [
+        "Interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without undue strain for either party.",
+        "Take an active part in discussion in familiar and some unfamiliar contexts, accounting for and sustaining views clearly by providing relevant explanations and arguments.",
+        "Discuss a wide range of topics, expressing and defending opinions, speculating about causes or consequences, and weighing advantages and disadvantages of different approaches.",
+        "Handle disagreements politely and negotiate solutions or compromises.",
+        "Manage conversations effectively, taking turns, interrupting politely, and helping the conversation to develop."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed descriptions and arguments on a wide range of subjects related to their field of interest or general topics.",
+        "Explain a viewpoint on a topical issue giving the advantages and disadvantages of various options, and developing an argument systematically.",
+        "Deliver a prepared presentation on a complex topic, structuring it logically and using appropriate signposting language.",
+        "Speak fluently, accurately and effectively on a wide range of general, academic, vocational or leisure topics."
+      ],
+      "written_interaction_skills": [
+        "Write clear, detailed emails, letters, or messages on a variety of complex subjects, adapting style to the recipient.",
+        "Exchange, check, and confirm information effectively, explain a problem in detail, make a formal complaint or express thanks appropriately.",
+        "Participate actively in online discussions or forums on familiar and some unfamiliar topics, expressing views clearly and responding to others' arguments."
+      ],
+      "written_production_skills": [
+        "Write clear, detailed text on a wide range of subjects related to their interests, synthesizing information and arguments from a number of sources.",
+        "Write an essay or report, passing on information or giving reasons in support of or against a particular point of view, developing an argument systematically.",
+        "Write letters, reviews, or articles highlighting the personal significance of events and experiences or expressing a viewpoint.",
+        "Summarize information from different sources and present it coherently."
+      ],
+      "cultural_competence_topics": [
+        "Deeper understanding of Greek history, societal structures, contemporary culture, and current affairs.",
+        "Nuances of formal and informal communication in Greek society, including politeness strategies.",
+        "Understanding cultural references in media, literature, and everyday conversation.",
+        "Awareness of different social and regional varieties of Greek (basic understanding).",
+        "Understanding of contemporary Greek values and attitudes on various social issues."
+      ],
+      "learning_strategies_suggestions": [
+        "Read authentic Greek newspapers, magazines, academic articles, and contemporary literature regularly, paying attention to structure, style, and vocabulary.",
+        "Watch Greek films, documentaries, and TV series without subtitles to improve comprehension of natural speech, or with Greek subtitles for detailed understanding of complex language.",
+        "Engage in debates or discussions in Greek on more complex or abstract topics, practicing expressing nuanced opinions and defending arguments.",
+        "Write essays, reports, or articles on various subjects, focusing on clear structure, logical argumentation, appropriate style, and correct use of cohesive devices.",
+        "Seek feedback on written and spoken Greek from native speakers, tutors, or advanced learners, and actively work on areas for improvement.",
+        "Actively expand vocabulary by noting down new words and expressions with their context, collocations, and nuances of meaning. Use a good monolingual dictionary.",
+        "Practice summarizing longer texts or talks, identifying the main arguments and supporting details.",
+        "Analyze texts for writer's purpose, tone, and bias. Consider how language is used to achieve specific effects."
+      ],
+      "example_conversation_starters": [
+        "Ποιες είναι οι προκλήσεις και τα οφέλη της παγκοσμιοποίησης κατά τη γνώμη σου;",
+        "Πώς μπορούμε να αντιμετωπίσουμε αποτελεσματικά την κλιματική αλλαγή; Ποιες ατομικές και συλλογικές δράσεις προτείνεις;",
+        "Συζητήστε τα πλεονεκτήματα και μειονεκτήματα της εξ αποστάσεως εκπαίδευσης/εργασίας, λαμβάνοντας υπόψη διάφορες παραμέτρους.",
+        "Ποιος πιστεύεις ότι είναι ο ρόλος των μέσων κοινωνικής δικτύωσης στη διαμόρφωση της κοινής γνώμης και στην πολιτική ζωή;",
+        "Ανέλυσε ένα πρόσφατο κοινωνικό ή πολιτικό γεγονός που τράβηξε την προσοχή σου, εξηγώντας τις πιθανές αιτίες και συνέπειές του.",
+        "Πώς η τέχνη (π.χ. λογοτεχνία, κινηματογράφος, μουσική) μπορεί να επηρεάσει την αντίληψή μας για τον κόσμο ή να προκαλέσει κοινωνικό προβληματισμό;",
+        "Ποια είναι η άποψή σου για τη σημασία της δια βίου μάθησης στην επαγγελματική εξέλιξη και την προσωπική ανάπτυξη;",
+        "Ποια μέτρα θα μπορούσαν να ληφθούν για την προώθηση της ισότητας των φύλων στην κοινωνία και στον χώρο εργασίας;"
+      ],
+      "example_text_types": [
+        "Articles and reports on contemporary problems (social, political, environmental) presenting arguments, viewpoints, and some complex information.",
+        "Contemporary literary prose (e.g., excerpts from novels, short stories) with some complexity in style, theme, or implicit meaning.",
+        "Specialized articles or technical texts related to a learner's field of interest or study (with dictionary support if needed for very specific terminology).",
+        "Interviews with public figures, experts, or academics discussing specific topics in some depth.",
+        "Editorials or opinion pieces from newspapers or reputable online sources that present a clear argument.",
+        "Documentaries or news programs discussing current affairs in depth, including different perspectives.",
+        "Academic texts or essays on familiar subjects that present information and arguments in a structured way.",
+        "Formal letters, emails, or official communications requiring careful phrasing and appropriate register.",
+        "Reviews of books, films, or cultural events that offer critical analysis and evaluation."
+      ],
+      "example_exercise_types": [
+        "Writing a well-structured essay or report on a contemporary issue (e.g., 'The impact of social media on youth', 'Advantages and disadvantages of renewable energy sources'), presenting arguments for and against, and concluding with a reasoned personal viewpoint.",
+        "Reading a complex article (e.g., an editorial, a feature article) and identifying the writer's stance, main arguments, supporting evidence, rhetorical devices used, and any implicit meanings or biases.",
+        "Participating in a structured debate or formal discussion on a controversial topic, presenting and defending opinions clearly, responding to counter-arguments persuasively, and using appropriate language for agreement/disagreement.",
+        "Giving a clear, detailed, and well-organized presentation (5-7 minutes) on a complex topic related to one's field of interest or a current event, structuring it logically and using appropriate signposting language and visual aids if applicable.",
+        "Listening to extended speech (e.g., a lecture, a documentary, a complex news report) and summarizing key information, identifying speaker's attitude and purpose, distinguishing main ideas from supporting details, and noting down specific arguments or examples.",
+        "Advanced grammar exercises: Transforming sentences using a variety of complex structures (e.g., various subordinate clauses, passive voice in complex tenses, indirect speech for nuanced statements, conditionals including mixed types, participial phrases).",
+        "Analyzing an excerpt of literary text for style, tone, character development, and use of figurative language.",
+        "Writing a formal letter or email (e.g., a letter of complaint to a company, an application for a job or course, a formal request for information).",
+        "Summarizing information from multiple sources (written or spoken) on a given topic into a coherent overview, highlighting key points and differences in perspective.",
+        "Vocabulary exercises focusing on collocations, idiomatic expressions, formal/informal register, precise meaning of abstract nouns, and using synonyms/antonyms effectively to avoid repetition and convey nuance."
+      ]
     },
     {
       "level_code": "C1",
-      "level_name": "Το Φωτεινό Αστέρι",
-      "approximate_vocabulary_size": "",
-      "learning_outcomes": [],
-      "language_focus_topics": [],
-      "vocabulary_topics": [],
-      "pronunciation_focus_topics": [],
-      "listening_comprehension_skills": [],
-      "reading_comprehension_skills": [],
-      "spoken_interaction_skills": [],
-      "spoken_production_skills": [],
-      "written_interaction_skills": [],
-      "written_production_skills": [],
-      "cultural_competence_topics": [],
-      "learning_strategies_suggestions": []
+      "level_name": "Το Φωτεινό Αστέρι (The Bright Star)",
+      "approximate_vocabulary_size": "approx. 8000-10000 words",
+      "learning_outcomes": [
+        "Understand a wide range of demanding, longer texts, and recognise implicit meaning.",
+        "Express him/herself fluently and spontaneously without much obvious searching for expressions.",
+        "Use language flexibly and effectively for social, academic and professional purposes.",
+        "Produce clear, well-structured, detailed text on complex subjects, showing controlled use of organisational patterns, connectors and cohesive devices."
+      ],
+      "language_focus_topics": [
+        "Mastery of all verb tenses, moods (indicative, subjunctive, imperative, conditional), and voices, including subtle nuances and less common uses.",
+        "Advanced syntactic structures: complex clauses (e.g., concessive, resultative, comparative), nominalization, sophisticated use of participles (conjunctive, absolute) and infinitives. Inversion for emphasis or stylistic effect.",
+        "Figurative language: Understanding and using a wide range of metaphors, similes, idioms, proverbs, and collocations.",
+        "Stylistic variations: Adapting language effectively to different genres (e.g., academic, journalistic, literary, formal correspondence) and contexts. Understanding nuances of register.",
+        "Discourse markers and cohesive devices for sophisticated argumentation, structuring text, and ensuring smooth transitions.",
+        "Rhetorical devices (e.g., irony, understatement, hyperbole) and their pragmatic effects.",
+        "Nuances of Greek grammar that differ significantly from learner's L1, including subtle aspectual differences and prepositional usage.",
+        "Word formation: Productive use of prefixes, suffixes, and compounding to understand and form new words."
+      ],
+      "vocabulary_topics": [
+        "Specialized vocabulary related to one's field of study, profession, or specific interests.",
+        "Abstract and philosophical concepts, terminology for discussing complex ideas.",
+        "Nuances of meaning between synonyms, near-synonyms, and antonyms; choosing precise vocabulary.",
+        "Low-frequency idioms, colloquial expressions, and cultural sayings.",
+        "Formal, literary, and archaic vocabulary (recognition and appropriate use).",
+        "Understanding and using wordplay, humor, irony, and sarcasm effectively.",
+        "Cultural, historical, and literary references embedded in language.",
+        "Terminology related to linguistics, rhetoric, and critical analysis."
+      ],
+      "pronunciation_focus_topics": [
+        "Mastery of intonation, stress, and rhythm to convey complex attitudes, emotions, and subtle shades of meaning.",
+        "Near-native fluency and clarity in pronunciation across various speech styles.",
+        "Understanding and potentially using regional accent variations or stylistic pronunciation for effect (optional).",
+        "Effective use of prosodic features for structuring discourse and highlighting information."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech even when it is not clearly structured and when relationships are only implied and not signalled explicitly.",
+        "Understand television programmes, films, podcasts, and lectures without too much effort, including those with colloquial language or regional accents.",
+        "Follow complex interactions between third parties in group discussion, debates, and formal meetings, even on abstract, complex, and unfamiliar topics.",
+        "Recognize a wide range of idiomatic expressions and colloquialisms, appreciating register shifts."
+      ],
+      "reading_comprehension_skills": [
+        "Understand in detail long and complex factual and literary texts, appreciating distinctions of style, register, and implicit meaning.",
+        "Understand specialised articles, abstract theoretical texts, and longer technical instructions, even when they do not relate to own field.",
+        "Critically evaluate complex texts for argumentation, bias, underlying assumptions, and stylistic effectiveness.",
+        "Read contemporary and classical Greek literature with appreciation."
+      ],
+      "spoken_interaction_skills": [
+        "Express oneself fluently, spontaneously, and almost effortlessly, with little obvious searching for expressions.",
+        "Use language flexibly and effectively for social, academic, and professional purposes, adapting style and register to the situation and audience.",
+        "Formulate ideas and opinions with precision, and relate contributions skilfully and persuasively to those of other speakers in discussions and debates.",
+        "Participate effectively and appropriately in formal meetings, academic seminars, and professional presentations.",
+        "Handle interruptions, manage turn-taking, and guide conversations smoothly."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed descriptions or arguments on complex subjects, integrating sub-themes, developing particular points at length, and rounding off with an appropriate conclusion in a well-structured and engaging manner.",
+        "Deliver well-structured and persuasive presentations on complex topics, adapting style and content to the audience and purpose.",
+        "Argue a complex case effectively, using appropriate evidence, persuasive language, and rhetorical strategies.",
+        "Speak with a high degree of grammatical accuracy, using a wide range of complex sentence structures and vocabulary precisely."
+      ],
+      "written_interaction_skills": [
+        "Write clear, well-structured, and stylistically appropriate emails, letters, and reports on complex subjects for various audiences.",
+        "Respond effectively, persuasively, and with nuance to complex written communications, addressing all points raised.",
+        "Contribute effectively to professional or academic correspondence and collaborative writing projects."
+      ],
+      "written_production_skills": [
+        "Write clear, well-structured, and detailed text on complex subjects, showing controlled use of organisational patterns, connectors, and cohesive devices to produce coherent and sophisticated discourse.",
+        "Write clear, detailed, well-structured reports, articles, or essays on complex subjects, underlining the relevant salient issues and presenting a well-reasoned argument.",
+        "Write different kinds of texts (e.g., reviews, summaries, critiques, proposals) in an appropriate and effective style, adapting content and register to the intended reader and purpose.",
+        "Express personal opinions and arguments with clarity, precision, and supporting evidence, anticipating counter-arguments."
+      ],
+      "cultural_competence_topics": [
+        "In-depth understanding of Greek culture, history, politics, social norms, and contemporary issues.",
+        "Ability to navigate complex social and professional situations with cultural sensitivity and astuteness.",
+        "Deep appreciation of Greek literature, arts, philosophy, and intellectual traditions, including historical context.",
+        "Understanding of sub-cultures, regional variations, and diversity within Greek society.",
+        "Ability to interpret subtle cultural cues and unspoken rules."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage critically with a wide range of authentic and complex Greek media (news, documentaries, podcasts), literature (classic and contemporary), and academic texts in various fields.",
+        "Participate actively in academic seminars, professional meetings, or specialized group discussions in Greek, aiming for effective and persuasive communication.",
+        "Seek opportunities for immersion and high-level interaction with educated native speakers in diverse and demanding social, academic, and professional contexts.",
+        "Focus on refining stylistic choices, rhetorical effectiveness, precision in vocabulary, and control over complex grammatical structures in both spoken and written Greek.",
+        "Undertake independent research or projects in Greek on topics of personal or professional interest, culminating in written reports or oral presentations.",
+        "Practice recognizing and using irony, humor, understatement, and other subtle forms of expression.",
+        "Develop skills in summarizing, paraphrasing, and synthesizing information from multiple complex sources.",
+        "Pay attention to and analyze discourse structure, cohesive devices, and register in different types of demanding texts and speech."
+      ],
+      "example_conversation_starters": [
+        "Πώς η σύγχρονη τεχνολογική εξέλιξη (π.χ. τεχνητή νοημοσύνη, βιοτεχνολογία) επαναπροσδιορίζει την ανθρώπινη εμπειρία και ποιες ηθικές προκλήσεις αναδύονται;",
+        "Αναλύστε την επίδραση των κοινωνικοοικονομικών ανισοτήτων στην ποιότητα της δημοκρατίας και προτείνετε πιθανές λύσεις, τεκμηριώνοντας τις απόψεις σας.",
+        "Συζητήστε τη σχέση μεταξύ πολιτιστικής ταυτότητας και παγκοσμιοποίησης. Είναι αναπόφευκτη η ομογενοποίηση ή υπάρχει χώρος για διατήρηση της πολυμορφίας και με ποιους τρόπους;",
+        "Ποιος ο ρόλος της κριτικής σκέψης και της παιδείας στα μέσα (media literacy) στην αντιμετώπιση της παραπληροφόρησης και των ψευδών ειδήσεων στη σημερινή εποχή;",
+        "Εξετάστε τις προκλήσεις και τις ευκαιρίες που παρουσιάζει η δημογραφική γήρανση για τις σύγχρονες κοινωνίες, σε τομείς όπως η οικονομία, η υγεία και οι κοινωνικές υπηρεσίες.",
+        "Πώς οι σύγχρονες αντιλήψεις περί φύλου, σεξουαλικότητας και οικογένειας επηρεάζουν κοινωνικές δομές, νομοθεσία και ατομικές ταυτότητες;",
+        "Αξιολογήστε την αποτελεσματικότητα των διεθνών οργανισμών (π.χ. ΟΗΕ, ΕΕ, ΠΟΥ) στην αντιμετώπιση παγκόσμιων προβλημάτων όπως οι πανδημίες, οι ένοπλες συγκρούσεις ή η φτώχεια.",
+        "Ποια η ευθύνη των ανεπτυγμένων χωρών απέναντι στις αναπτυσσόμενες, όσον αφορά την οικονομική βοήθεια, την κλιματική αλλαγή και τη μεταφορά τεχνογνωσίας;"
+      ],
+      "example_text_types": [
+        "Demanding, longer factual and literary texts, including those with implicit meanings, irony, satire, or complex argumentation (e.g., philosophical essays, editorials by renowned columnists, chapters from academic books).",
+        "Specialized articles, academic papers, or abstract theoretical texts even outside one's own primary field of expertise.",
+        "Contemporary and classical Greek literature (novels, poetry, drama) requiring appreciation of complex style, historical/cultural context, and literary devices.",
+        "Complex reports, policy documents, legal texts (e.g., contracts, treaties - with appropriate scaffolding if domain-specific knowledge is lacking).",
+        "Sophisticated opinion pieces, editorials, or critical essays from reputable academic journals, newspapers, or literary magazines.",
+        "Lectures, extended speeches, or academic presentations on complex, abstract, or specialized topics.",
+        "Transcripts or recordings of complex group discussions, debates, or formal negotiations involving multiple speakers and viewpoints."
+      ],
+      "example_exercise_types": [
+        "Writing a clear, well-structured, and detailed essay or research paper (2000-3000 words) on a complex academic, social, or professional subject, synthesizing information from various authentic sources and presenting a cogent, well-supported argument with appropriate citations.",
+        "Reading and critically analyzing a demanding literary text (e.g., a novel by Kazantzakis, a play by Euripides in modern translation, poetry by Seferis), discussing its themes, stylistic features, character development, historical context, and cultural significance in a written critique or oral presentation.",
+        "Participating actively and leading segments of complex discussions or debates on abstract or controversial topics, formulating precise arguments, responding skilfully and persuasively to others' contributions, managing the flow of conversation, and summarizing key outcomes.",
+        "Delivering a well-structured, persuasive, and engaging presentation (15-20 minutes) on a complex or specialized topic to a demanding and potentially critical audience, adapting style and content appropriately and handling challenging questions effectively.",
+        "Listening to and understanding extended, complex speech (e.g., academic lectures, political debates, nuanced interviews with fast native speech or regional accents) and being able to summarize key arguments, critique a speaker's position, or extract subtle information and implicit meanings.",
+        "Exercises focusing on identifying and using advanced grammatical nuances, complex sentence structures (e.g., embedded clauses, advanced participial constructions), sophisticated use of cohesive devices, and adapting register effectively for different formal/informal and academic/professional contexts.",
+        "Translating complex and stylistically nuanced texts from/to Greek, paying close attention to maintaining meaning, tone, register, and cultural equivalence (optional, depending on learning goals and specialization).",
+        "Writing formal reports, proposals, or official correspondence (e.g., a policy brief, a research proposal, a formal complaint to an ombudsman) requiring precise language, logical structure, and adherence to specific professional or academic conventions.",
+        "Identifying and analyzing rhetorical devices, irony, satire, humor, or implicit meaning in various types of authentic texts and spoken discourse, and discussing their intended effect.",
+        "Peer review and providing detailed, constructive feedback on complex written assignments or oral presentations, focusing on content, structure, language use, and persuasiveness."
+      ]
     },
     {
       "level_code": "C2",
-      "level_name": "Ο Γλωσσικός Χαμαιλέων",
-      "approximate_vocabulary_size": "",
-      "learning_outcomes": [],
-      "language_focus_topics": [],
-      "vocabulary_topics": [],
-      "pronunciation_focus_topics": [],
-      "listening_comprehension_skills": [],
-      "reading_comprehension_skills": [],
-      "spoken_interaction_skills": [],
-      "spoken_production_skills": [],
-      "written_interaction_skills": [],
-      "written_production_skills": [],
-      "cultural_competence_topics": [],
-      "learning_strategies_suggestions": []
+      "level_name": "Ο Γλωσσικός Χαμαιλέων (The Linguistic Chameleon)",
+      "approximate_vocabulary_size": "approx. 16000+ words",
+      "learning_outcomes": [
+        "Understand with ease virtually everything heard or read.",
+        "Summarise information from different spoken and written sources, reconstructing arguments and accounts in a coherent presentation.",
+        "Express him/herself spontaneously, very fluently and precisely, differentiating finer shades of meaning even in more complex situations."
+      ],
+      "language_focus_topics": [
+        "Complete and nuanced mastery of all aspects of Greek grammar, including obscure, complex, and archaic structures if encountered.",
+        "Full control over stylistic, pragmatic, and sociolinguistic aspects of the language, including register, tone, and politeness.",
+        "Ability to manipulate language creatively, effectively, and for humorous or ironic effect.",
+        "Understanding and using highly idiomatic, colloquial, and culturally-specific language with native-like proficiency.",
+        "Awareness of historical evolution of the Greek language and regional variations in grammar and usage (optional, for deep interest).",
+        "Understanding of advanced linguistic concepts as applied to Greek (e.g., discourse analysis, pragmatics)."
+      ],
+      "vocabulary_topics": [
+        "Extensive and precise vocabulary, including very specific, technical, literary, academic, and archaic terms across a wide range of domains.",
+        "Full command of idiomatic expressions, proverbs, sayings, and cultural allusions, used appropriately and naturally.",
+        "Ability to understand, use, and even coin neologisms and slang appropriately within different social contexts.",
+        "Precise differentiation of synonyms, near-synonyms, and antonyms, understanding subtle connotations and collocations.",
+        "Deep understanding of etymology, word formation processes, and semantic relationships in Greek.",
+        "Vocabulary for discussing abstract, philosophical, scientific, and highly specialized topics with precision."
+      ],
+      "pronunciation_focus_topics": [
+        "Virtually flawless pronunciation, intonation, stress, and rhythm, indistinguishable from an educated native speaker of a standard Greek dialect.",
+        "Ability to vary accent or style for specific effects or to mimic other accents if desired and appropriate.",
+        "Mastery of all prosodic features to convey meaning, emotion, and attitude with subtlety and precision."
+      ],
+      "listening_comprehension_skills": [
+        "Have no difficulty in understanding any kind of spoken language, whether live or broadcast, even when delivered at fast native speed, including speech with heavy background noise, unclear articulation, or unfamiliar accents (given some acclimatization).",
+        "Understand implicit meanings, attitudes, irony, humor, and emotions in all forms of spoken discourse.",
+        "Follow highly colloquial conversations, rapid-fire debates, and complex group interactions with ease."
+      ],
+      "reading_comprehension_skills": [
+        "Read with ease and full comprehension virtually all forms of the written language, including abstract, structurally or linguistically complex texts such as manuals, specialised articles, academic papers, and literary works from various periods.",
+        "Appreciate subtle stylistic nuances, rhetorical devices, implicit meanings, and authorial intent in all types of written texts.",
+        "Critically analyze and synthesize information from multiple complex sources."
+      ],
+      "spoken_interaction_skills": [
+        "Take part effortlessly and fluently in any conversation or discussion, demonstrating excellent familiarity with idiomatic expressions, colloquialisms, and cultural references.",
+        "Express oneself spontaneously, very fluently, and precisely, differentiating finer shades of meaning even in the most complex situations and topics.",
+        "If he/she does encounter a rare linguistic problem, backtrack and restructure around the difficulty so smoothly that other people are hardly aware of it.",
+        "Mediate effectively and diplomatically in complex or sensitive discussions between speakers of Greek and other languages, or between native Greek speakers with differing viewpoints."
+      ],
+      "spoken_production_skills": [
+        "Present a clear, smoothly-flowing, well-structured description or argument in a style appropriate to the context and purpose, with an effective logical structure which helps the recipient to notice and remember significant points effortlessly.",
+        "Speak with the fluency, accuracy, sophistication, and stylistic range of an educated native speaker on any topic.",
+        "Adapt speech flexibly and effectively to different audiences, purposes, and situations.",
+        "Use humor, irony, and other rhetorical devices effectively and appropriately."
+      ],
+      "written_interaction_skills": [
+        "Write any type of correspondence (formal, informal, professional, academic) with full command of language, style, register, and tone, achieving specific communicative goals effectively.",
+        "Engage in complex written debates or discussions with precision, persuasiveness, and stylistic flair."
+      ],
+      "written_production_skills": [
+        "Write clear, smoothly-flowing, and sophisticated text in an appropriate style for a wide variety of purposes (e.g., academic papers, professional reports, literary essays, creative writing).",
+        "Write complex letters, reports, or articles which present a case with an effective logical structure, compelling arguments, and appropriate evidence, helping the recipient to notice and remember significant points.",
+        "Write insightful summaries and critical reviews of professional or literary works.",
+        "Produce creative writing of high quality, demonstrating mastery of narrative techniques and stylistic devices."
+      ],
+      "cultural_competence_topics": [
+        "Native-like understanding and appreciation of all aspects of Greek culture, history, society, politics, and arts.",
+        "Ability to function effortlessly and appropriately in any Greek social, academic, or professional context.",
+        "Deep understanding of cultural subtexts, nuances, humor, irony, and unwritten social rules.",
+        "Ability to discuss and analyze Greek cultural phenomena with insight and sophistication."
+      ],
+      "learning_strategies_suggestions": [
+        "Maintain and continually refine language skills through continuous, active engagement with Greek language and culture at the highest and most diverse levels (e.g., reading academic journals, attending university lectures, participating in specialized professional networks).",
+        "Explore specialized areas of interest in depth (e.g., specific genres of Greek literature, advanced topics in Greek history or linguistics, contemporary Greek philosophy, scientific research in Greek).",
+        "Contribute to Greek-language content creation, translation of complex works, or participation in academic/professional discourse at a peer level with educated native speakers.",
+        "Mentor other advanced learners of Greek or engage in language teaching, if interested, to further solidify and articulate one's own understanding.",
+        "Stay updated with neologisms, evolving slang, and shifts in contemporary Greek usage across different registers and social groups.",
+        "Engage in activities requiring spontaneous and precise differentiation of fine shades of meaning (e.g., debating nuanced topics, writing literary critiques, interpreting ambiguous texts)."
+      ],
+      "example_conversation_starters": [
+        "Πώς η διεπιστημονική προσέγγιση στην έρευνα μπορεί να συμβάλει στην επίλυση σύνθετων παγκόσμιων προβλημάτων, όπως η κλιματική αλλαγή ή οι πανδημίες, και ποια είναι τα όριά της;",
+        "Αναλύστε τις φιλοσοφικές και ηθικές διαστάσεις της τεχνητής γενικής νοημοσύνης (AGI) και τις πιθανές επιπτώσεις της στην ανθρώπινη αυτονομία, την αγορά εργασίας και την κοινωνική δομή.",
+        "Συζητήστε κριτικά τις σύγχρονες θεωρίες περί οικονομικής ανάπτυξης και βιωσιμότητας, λαμβάνοντας υπόψη τις προκλήσεις της παγκόσμιας ανισότητας, της περιβαλλοντικής υποβάθμισης και των γεωπολιτικών εντάσεων.",
+        "Ποιος ο ρόλος της ιστορικής μνήμης, της συλλογικής λήθης και της ερμηνείας του παρελθόντος στη διαμόρφωση εθνικών και υπερεθνικών ταυτοτήτων, καθώς και στη διαχείριση σύγχρονων πολιτικών συγκρούσεων και διαδικασιών συμφιλίωσης;",
+        "Εξετάστε τις προκλήσεις της διαπολιτισμικής επικοινωνίας και της ηγεσίας σε ένα παγκοσμιοποιημένο επαγγελματικό περιβάλλον. Προτείνετε στρατηγικές για την ενίσχυση της κατανόησης, της εμπιστοσύνης και της αποτελεσματικής συνεργασίας μεταξύ ατόμων από διαφορετικά πολιτισμικά υπόβαθρα.",
+        "Πώς η σύγχρονη νευροεπιστήμη, η γνωσιακή ψυχολογία και η φιλοσοφία του νου μπορούν να φωτίσουν τη φύση της συνείδησης, της ελεύθερης βούλησης, της λήψης αποφάσεων και της ανθρώπινης συμπεριφοράς σε πολύπλοκα συστήματα;",
+        "Αξιολογήστε την τρέχουσα κατάσταση των ανθρωπίνων δικαιωμάτων παγκοσμίως. Συζητήστε τις προκλήσεις για την αποτελεσματική προστασία και προώθησή τους σε διαφορετικά πολιτισμικά, πολιτικά και νομικά πλαίσια, καθώς και τον ρόλο των διεθνών μηχανισμών και της κοινωνίας των πολιτών.",
+        "Αναπτύξτε μια κριτική ανάλυση των κυρίαρχων αφηγημάτων (narratives) που διαμορφώνουν την κατανόησή μας για ένα σημαντικό σύγχρονο ζήτημα (π.χ. μετανάστευση, τεχνολογική επιτήρηση, ενεργειακή μετάβαση), εξετάζοντας ποιος τα παράγει, ποια συμφέροντα εξυπηρετούν και ποιες εναλλακτικές προοπτικές παραγκωνίζονται."
+      ],
+      "example_text_types": [
+        "Highly complex, abstract, or specialized academic papers, research articles, and monographs across diverse disciplines (e.g., theoretical physics, critical literary theory, advanced econometrics).",
+        "Classical and modern Greek literary works of significant complexity, including those with archaic language, dense symbolism, experimental narrative structures, or deep philosophical underpinnings.",
+        "Philosophical treatises, critical theory texts, and advanced social, political, or economic commentary from leading intellectuals.",
+        "Intricate legal documents (e.g., court rulings, complex contracts, international treaties), detailed policy analyses, or white papers on specialized topics.",
+        "Sophisticated journalistic pieces from high-brow publications, featuring nuanced arguments, subtle irony, satire, or requiring extensive background knowledge.",
+        "Recordings or transcripts of fast-paced, highly colloquial, or regionally diverse speech; academic lectures with dense, specialized information; or high-level professional discourse in specialized fields.",
+        "Any authentic written or spoken material intended for highly educated native speakers, regardless of topic or complexity."
+      ],
+      "example_exercise_types": [
+        "Writing a publishable-quality academic paper, doctoral dissertation chapter, or critical analysis on a highly specialized or abstract topic, demonstrating original thought, mastery of relevant discourse conventions, sophisticated argumentation, and flawless command of Greek.",
+        "Delivering an impromptu, eloquent, and persuasive keynote speech or academic presentation on a wide range of complex topics with minimal or no preparation, adapting style and register effectively to diverse and potentially critical audiences, and handling challenging questions with aplomb.",
+        "Participating in, moderating, or mediating highly complex and potentially contentious discussions, debates, or high-stakes negotiations, demonstrating superior rhetorical skills, nuanced diplomatic language, and the ability to synthesize diverse viewpoints and guide towards resolution.",
+        "Critically evaluating, synthesizing, and reconstructing arguments and accounts from multiple, dense, and potentially conflicting sources (written and spoken) to produce a highly nuanced, coherent, and insightful summary, report, or original piece of scholarship.",
+        "Translating highly idiomatic, culturally specific, stylistically complex, or historically significant texts to and from Greek with near-native accuracy, sensitivity to nuance, and publishable quality (if relevant to specialization).",
+        "Producing original creative writing (e.g., short stories, poetry, drama scripts, novels) demonstrating sophisticated control of literary devices, style, register, and character development, suitable for publication or performance.",
+        "Analyzing and deconstructing complex rhetorical strategies, persuasive techniques, logical fallacies, or instances of irony, satire, and humor in various forms of sophisticated discourse, and explaining their intended effect and cultural implications.",
+        "Editing and proofreading complex Greek texts written by others to a professional standard, identifying and correcting subtle errors in grammar, style, register, argumentation, and cultural appropriateness.",
+        "Mentoring or providing expert linguistic and cultural consultation to less proficient speakers/writers of Greek, or to professionals requiring nuanced understanding of Greek language and culture.",
+        "Conducting independent research on a complex linguistic, literary, or cultural topic related to Greek, and presenting findings in a clear, well-structured, and academically rigorous manner."
+      ]
     }
   ]
 }
