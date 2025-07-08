@@ -1,4 +1,12 @@
 {
+  "1": [
+    { "pattern": "What is it?", "example": "What is it? - It is a book." },
+    { "pattern": "Is it ...?", "example": "Is it a cat? - Yes, it is. / No, it is not." },
+    { "pattern": "Is it ... or ...?", "example": "Is it tea or coffee? - It is tea." },
+    { "pattern": "It is ...", "example": "It is a pen." },
+    { "pattern": "It is not ...", "example": "It is not a dog." },
+    { "pattern": "It is not ... but it is ...", "example": "It is not juice, but it is water." }
+  ],
   "2": [
     { "prompt": "I", "answer": "am" },
     { "prompt": "you", "answer": "are" },
