@@ -1,15 +1,177 @@
 export const a0_greek_vocabulary = {
-  "Greetings & Politeness": [
+  "GR: Basic words": [
     {
       "term": "Γεια σου / Γεια σας",
       "latinisation": "Ya su / Ya sas",
       "pronunciation": "ˈʝa su / ˈʝa sas",
       "partOfSpeech": "interjection",
-      "definition": "Hello (informal/formal or plural)",
+      "definition": "Χαιρετισμός (ανεπίσημος/επίσημος ή πληθυντικός).",
       "example": "Γεια σου, Μαρία!",
       "level": "a0",
       "notes": "Γεια σου (informal singular), Γεια σας (formal singular/plural)"
     },
+    {
+      "term": "Αντίο",
+      "latinisation": "adio",
+      "pronunciation": "aˈdio",
+      "partOfSpeech": "interjection",
+      "definition": "Χαιρετισμός κατά την αναχώρηση.",
+      "example": "Αντίο, θα τα πούμε αύριο.",
+      "level": "a0",
+      "notes": ""
+    },
+    {
+      "term": "Ναι",
+      "latinisation": "ne",
+      "pronunciation": "ne",
+      "partOfSpeech": "adverb",
+      "definition": "Καταφατική απάντηση.",
+      "example": "Θέλεις καφέ; - Ναι, παρακαλώ.",
+      "level": "a0",
+      "notes": ""
+    },
+    {
+      "term": "Όχι",
+      "latinisation": "okhi",
+      "pronunciation": "ˈoçi",
+      "partOfSpeech": "adverb",
+      "definition": "Αρνητική απάντηση.",
+      "example": "Είσαι έτοιμος; - Όχι ακόμα.",
+      "level": "a0",
+      "notes": ""
+    },
+    {
+      "term": "Ευχαριστώ",
+      "latinisation": "efkharisto",
+      "pronunciation": "efxariˈsto",
+      "partOfSpeech": "verb",
+      "definition": "Έκφραση ευγνωμοσύνης.",
+      "example": "Ευχαριστώ πολύ για τη βοήθεια.",
+      "level": "a0",
+      "notes": ""
+    },
+    {
+      "term": "Παρακαλώ",
+      "latinisation": "parakalo",
+      "pronunciation": "parakaˈlo",
+      "partOfSpeech": "adverb/verb",
+      "definition": "Ευγενική απάντηση σε ευχαριστώ / Για να ζητήσεις κάτι.",
+      "example": "Μπορώ να έχω λίγο νερό, παρακαλώ; - Ορίστε. - Ευχαριστώ. - Παρακαλώ.",
+      "level": "a0",
+      "notes": "Used for both 'please' and 'you're welcome'."
+    },
+    {
+      "term": "εντάξει",
+      "latinisation": "entaksei",
+      "pronunciation": "enˈdaksi",
+      "partOfSpeech": "adverb",
+      "definition": "Έκφραση συμφωνίας ή ότι όλα είναι καλά.",
+      "example": "Είσαι εντάξει; - Ναι, όλα εντάξει.",
+      "level": "a0",
+      "notes": ""
+    },
+    {
+      "term": "ένα",
+      "latinisation": "ena",
+      "pronunciation": "ˈena",
+      "partOfSpeech": "number",
+      "definition": "Ο αριθμός 1.",
+      "example": "Θέλω ένα καφέ, παρακαλώ.",
+      "level": "a0",
+      "notes": "",
+      "gender": "n"
+    },
+    {
+      "term": "τσάι",
+      "latinisation": "tsai",
+      "pronunciation": "ˈtsai",
+      "partOfSpeech": "noun",
+      "gender": "n",
+      "definition": "Ζεστό ρόφημα από φύλλα τεϊόδεντρου.",
+      "example": "Πίνεις τσάι το πρωί;",
+      "level": "a0",
+      "notes": ""
+    },
+    {
+      "term": "καφές",
+      "latinisation": "kafes",
+      "pronunciation": "kaˈfes",
+      "partOfSpeech": "noun",
+      "gender": "m",
+      "definition": "Ρόφημα από καβουρδισμένους κόκκους καφέ.",
+      "example": "Ένας καφές, παρακαλώ.",
+      "level": "a0",
+      "notes": ""
+    },
+    {
+      "term": "νερό",
+      "latinisation": "nero",
+      "pronunciation": "neˈro",
+      "partOfSpeech": "noun",
+      "gender": "n",
+      "definition": "Άχρωμο υγρό, απαραίτητο για τη ζωή.",
+      "example": "Μπορώ να έχω λίγο νερό;",
+      "level": "a0",
+      "notes": ""
+    },
+    {
+      "term": "χυμός",
+      "latinisation": "chymos",
+      "pronunciation": "çiˈmos",
+      "partOfSpeech": "noun",
+      "gender": "m",
+      "definition": "Υγρό από φρούτα ή λαχανικά.",
+      "example": "Θέλεις χυμό πορτοκάλι;",
+      "level": "a0",
+      "notes": ""
+    },
+    {
+      "term": "μπύρα",
+      "latinisation": "bira",
+      "pronunciation": "ˈbira",
+      "partOfSpeech": "noun",
+      "gender": "f",
+      "definition": "Αλκοολούχο ποτό από ζύμωση κριθαριού.",
+      "example": "Μια κρύα μπύρα, παρακαλώ.",
+      "level": "a0",
+      "notes": ""
+    },
+    {
+      "term": "κρασί",
+      "latinisation": "krasi",
+      "pronunciation": "kraˈsi",
+      "partOfSpeech": "noun",
+      "gender": "n",
+      "definition": "Αλκοολούχο ποτό από ζύμωση σταφυλιών.",
+      "example": "Κόκκινο ή λευκό κρασί;",
+      "level": "a0",
+      "notes": ""
+    },
+    {
+      "term": "μετρητά",
+      "latinisation": "metrita",
+      "pronunciation": "metriˈta",
+      "partOfSpeech": "noun",
+      "gender": "n",
+      "plural": true,
+      "definition": "Χρήματα σε κέρματα ή χαρτονομίσματα.",
+      "example": "Πληρώνω με μετρητά.",
+      "level": "a0",
+      "notes": ""
+    },
+    {
+      "term": "κάρτα",
+      "latinisation": "karta",
+      "pronunciation": "ˈkarta",
+      "partOfSpeech": "noun",
+      "gender": "f",
+      "definition": "Πλαστικό μέσο πληρωμής (πιστωτική/χρεωστική).",
+      "example": "Μπορώ να πληρώσω με κάρτα;",
+      "level": "a0",
+      "notes": ""
+    }
+  ],
+  "Greetings & Politeness": [
     {
       "term": "Καλημέρα",
       "latinisation": "kalimera",
@@ -41,36 +203,6 @@ export const a0_greek_vocabulary = {
       "notes": ""
     },
     {
-      "term": "Αντίο",
-      "latinisation": "adio",
-      "pronunciation": "aˈdio",
-      "partOfSpeech": "interjection",
-      "definition": "Goodbye",
-      "example": "Αντίο, θα τα πούμε αύριο.",
-      "level": "a0",
-      "notes": ""
-    },
-    {
-      "term": "Ευχαριστώ",
-      "latinisation": "efkharisto",
-      "pronunciation": "efxariˈsto",
-      "partOfSpeech": "verb",
-      "definition": "Thank you",
-      "example": "Ευχαριστώ πολύ για τη βοήθεια.",
-      "level": "a0",
-      "notes": ""
-    },
-    {
-      "term": "Παρακαλώ",
-      "latinisation": "parakalo",
-      "pronunciation": "parakaˈlo",
-      "partOfSpeech": "adverb/verb",
-      "definition": "Please / You're welcome",
-      "example": "Μπορώ να έχω λίγο νερό, παρακαλώ; - Ορίστε. - Ευχαριστώ. - Παρακαλώ.",
-      "level": "a0",
-      "notes": ""
-    },
-    {
       "term": "Συγγνώμη",
       "latinisation": "signomi",
       "pronunciation": "siˈɣnomi",
@@ -78,26 +210,6 @@ export const a0_greek_vocabulary = {
       "gender": "f",
       "definition": "Sorry / Excuse me",
       "example": "Συγγνώμη, μπορώ να περάσω;",
-      "level": "a0",
-      "notes": ""
-    },
-    {
-      "term": "Ναι",
-      "latinisation": "ne",
-      "pronunciation": "ne",
-      "partOfSpeech": "adverb",
-      "definition": "Yes",
-      "example": "Θέλεις καφέ; - Ναι, παρακαλώ.",
-      "level": "a0",
-      "notes": ""
-    },
-    {
-      "term": "Όχι",
-      "latinisation": "okhi",
-      "pronunciation": "ˈoçi",
-      "partOfSpeech": "adverb",
-      "definition": "No",
-      "example": "Είσαι έτοιμος; - Όχι ακόμα.",
       "level": "a0",
       "notes": ""
     }
