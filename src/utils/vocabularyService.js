@@ -44,55 +44,53 @@ export async function loadVocabularyForLanguageLevel(lang, level) {
     }
 
     // console.log(`VocabularyService: Attempting to load vocabulary for ${langLower} ${levelLower}`);
-    try {
-        // Note: Vite/Webpack handles public directory paths.
-        // For dynamic imports from public, the path needs to be relative to the public folder.
-        // If the dictionary files are in `public/data/vocabulary/dictionary/`,
-        // and this service is in `src/utils/`, the relative path from the built `index.html` (root)
-        // to the public assets would be something like `/data/vocabulary/dictionary/...`
-        // The `import()` path is relative to the current file if it's a relative path,
-        // but for assets intended to be served, absolute paths from the public root are better.
-        // Vite specific: For assets in `public`, they are served from root.
-        // So, the path should be like `/data/vocabulary/dictionary/${langLower}/${levelLower}.js`
-        // First, try to import as a .js module
-        try {
-            const module = await import(`/data/vocabulary/dictionary/${langLower}/${levelLower}.js`);
-            if (module && module.vocabulary) {
-                // console.log(`VocabularyService: Successfully loaded JS module for ${langLower} ${levelLower}`);
-                vocabularyCache.set(cacheKey, module.vocabulary);
-                return module.vocabulary;
-            } else {
-                // console.warn(`VocabularyService: JS module loaded but 'vocabulary' export not found in ${langLower}/${levelLower}.js`);
-                // Fall through to try .json
-            }
-        } catch (jsError) {
-            // console.log(`VocabularyService: Failed to load .js module for ${langLower} ${levelLower} (${jsError.message}). Trying .json...`);
-        }
 
-        // If .js import failed or didn't have 'vocabulary' export, try fetching .json
-        try {
-            const response = await fetch(`/data/vocabulary/dictionary/${langLower}/${levelLower}.json`);
-            if (response.ok) {
-                const jsonData = await response.json();
-                // console.log(`VocabularyService: Successfully loaded JSON data for ${langLower} ${levelLower}`);
-                // Assuming the JSON data is directly the themed vocabulary object
-                vocabularyCache.set(cacheKey, jsonData);
-                return jsonData;
-            } else {
-                // console.warn(`VocabularyService: Failed to fetch .json for ${langLower} ${levelLower}. Status: ${response.status}`);
-                vocabularyCache.set(cacheKey, null); // Cache null if JSON not found or error
-                return null;
-            }
-        } catch (jsonError) {
-            // console.warn(`VocabularyService: Error fetching or parsing .json for ${langLower} ${levelLower}. Error: ${jsonError.message}`);
-            vocabularyCache.set(cacheKey, null); // Cache null on error
-            return null;
+    // First, try to fetch .json file
+    try {
+        const jsonResponse = await fetch(`/data/vocabulary/dictionary/${langLower}/${levelLower}.json`);
+        if (jsonResponse.ok) {
+            const jsonData = await jsonResponse.json();
+            // console.log(`VocabularyService: Successfully loaded JSON data for ${langLower} ${levelLower}`);
+            vocabularyCache.set(cacheKey, jsonData);
+            return jsonData;
+        } else {
+            // console.warn(`VocabularyService: Failed to fetch .json for ${langLower} ${levelLower}. Status: ${jsonResponse.status}. Trying .js...`);
         }
-    } catch (error) { // This outer catch is for unexpected errors, though most should be caught by inner handlers.
-        console.error(`VocabularyService: Unexpected error loading vocabulary for ${langLower} ${levelLower}. Error: ${error.message}`);
-        vocabularyCache.set(cacheKey, null);
-        return null;
+    } catch (jsonError) {
+        // console.warn(`VocabularyService: Error fetching or parsing .json for ${langLower} ${levelLower} (${jsonError.message}). Trying .js...`);
     }
+
+    // If .json failed or not found, try to fetch and parse .js file
+    try {
+        const jsResponse = await fetch(`/data/vocabulary/dictionary/${langLower}/${levelLower}.js`);
+        if (jsResponse.ok) {
+            const jsText = await jsResponse.text();
+            // Attempt to parse the .js file content
+            // Assuming format: export const vocabulary = { ... }; (optional semicolon)
+            let parsableText = jsText.replace(/^\s*export\s+const\s+vocabulary\s*=\s*/, '');
+            // Remove trailing semicolon if present, and any potential comments after it
+            parsableText = parsableText.replace(/;\s*(\/\/.*|\/\*[\s\S]*?\*\/)?\s*$/, '');
+
+            try {
+                const vocabularyData = JSON.parse(parsableText);
+                // console.log(`VocabularyService: Successfully fetched and parsed JS data for ${langLower} ${levelLower}`);
+                vocabularyCache.set(cacheKey, vocabularyData);
+                return vocabularyData;
+            } catch (parseError) {
+                // console.error(`VocabularyService: Failed to parse JS data for ${langLower} ${levelLower}. Content might not be valid JSON after stripping export. Error: ${parseError.message}`);
+                // console.error('Problematic text (first 500 chars):', parsableText.substring(0, 500));
+            }
+        } else {
+            // console.warn(`VocabularyService: Failed to fetch .js for ${langLower} ${levelLower}. Status: ${jsResponse.status}`);
+        }
+    } catch (jsFetchError) {
+        // console.warn(`VocabularyService: Error fetching .js for ${langLower} ${levelLower} (${jsFetchError.message})`);
+    }
+
+    // If both .json and .js attempts fail
+    // console.warn(`VocabularyService: All attempts to load vocabulary for ${langLower} ${levelLower} failed.`);
+    vocabularyCache.set(cacheKey, null); // Cache null if all attempts fail
+    return null;
 }
 
 /**
