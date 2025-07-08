@@ -1,4 +1,12 @@
 {
+  "1": [
+    { "pattern": "Qu'est-ce que c'est ?", "example": "Qu'est-ce que c'est ? - C'est un livre." },
+    { "pattern": "Est-ce que c'est ... ?", "example": "Est-ce que c'est un chat ? - Oui, c'est ça. / Non, ce n'est pas ça." },
+    { "pattern": "Est-ce que c'est ... ou ... ?", "example": "Est-ce que c'est du thé ou du café ? - C'est du thé." },
+    { "pattern": "C'est ...", "example": "C'est un stylo." },
+    { "pattern": "Ce n'est pas ...", "example": "Ce n'est pas un chien." },
+    { "pattern": "Ce n'est pas ... mais c'est ...", "example": "Ce n'est pas du jus, mais c'est de l'eau." }
+  ],
   "2": [
     { "prompt": "je", "answer": "suis" },
     { "prompt": "tu", "answer": "es" },
