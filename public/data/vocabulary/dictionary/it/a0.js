@@ -1,46 +1,28 @@
 export const a0_italian_vocabulary = {
   "Parole di Base (Basic Words)": [
     {
-      "term": "Ciao",
-      "pronunciation": "CHOW",
-      "partOfSpeech": "interjection",
-      "definition": "Hello / Hi / Bye (informal)",
-      "example": "Ciao, come stai? - Hi, how are you?",
-      "level": "a0",
-      "notes": "Used for both greeting and parting."
-    },
-    {
       "term": "Salve",
       "pronunciation": "SAL-veh",
-      "partOfSpeech": "interjection",
-      "definition": "Hello (neutral, can be used if unsure whether to be formal or informal)",
+      "partOfSpeech": "interiezione (interiezione)",
+      "definition": "Formula di saluto generica, né troppo formale né troppo informale. (Formula di saluto generica, né troppo formale né troppo informale.) - General greeting, neither too formal nor too informal.",
       "example": "Salve, posso aiutarla? - Hello, can I help you?",
       "level": "a0",
-      "notes": ""
-    },
-    {
-      "term": "Buongiorno",
-      "pronunciation": "bwon-JOR-no",
-      "partOfSpeech": "interjection",
-      "definition": "Good morning / Good day",
-      "example": "Buongiorno, signore. - Good morning, sir.",
-      "level": "a0",
-      "notes": ""
+      "notes": "Ciao (informale), Buongiorno (buona giornata/mattina). (Ciao (informal), Buongiorno (good day/morning).)"
     },
     {
       "term": "Arrivederci",
       "pronunciation": "ar-ree-ve-DER-chee",
-      "partOfSpeech": "interjection",
-      "definition": "Goodbye (general use)",
+      "partOfSpeech": "interiezione (interiezione)",
+      "definition": "Formula di commiato. (Formula di commiato.) - Farewell expression.",
       "example": "Arrivederci, a presto! - Goodbye, see you soon!",
       "level": "a0",
-      "notes": ""
+      "notes": "Ciao può anche significare arrivederci (informale). (Ciao can also mean goodbye (informal).)"
     },
     {
       "term": "Sì",
       "pronunciation": "SEE",
-      "partOfSpeech": "adverb",
-      "definition": "Yes",
+      "partOfSpeech": "avverbio (avverbio)",
+      "definition": "Risposta affermativa. (Risposta affermativa.) - Affirmative answer.",
       "example": "Sì, grazie. - Yes, thank you.",
       "level": "a0",
       "notes": ""
@@ -48,8 +30,8 @@ export const a0_italian_vocabulary = {
     {
       "term": "No",
       "pronunciation": "NO",
-      "partOfSpeech": "adverb",
-      "definition": "No",
+      "partOfSpeech": "avverbio (avverbio)",
+      "definition": "Risposta negativa. (Risposta negativa.) - Negative answer.",
       "example": "No, non voglio. - No, I don't want to.",
       "level": "a0",
       "notes": ""
@@ -57,8 +39,8 @@ export const a0_italian_vocabulary = {
     {
       "term": "Grazie",
       "pronunciation": "GRATS-yeh",
-      "partOfSpeech": "interjection",
-      "definition": "Thank you",
+      "partOfSpeech": "interiezione (interiezione)",
+      "definition": "Espressione di gratitudine. (Espressione di gratitudine.) - Expression of gratitude.",
       "example": "Grazie mille! - Thanks a lot!",
       "level": "a0",
       "notes": ""
@@ -66,8 +48,8 @@ export const a0_italian_vocabulary = {
     {
       "term": "Prego",
       "pronunciation": "PREH-go",
-      "partOfSpeech": "interjection",
-      "definition": "You're welcome / Please (when offering something)",
+      "partOfSpeech": "interiezione (interiezione)",
+      "definition": "Risposta cortese a 'grazie' / Usato per offrire qualcosa. (Risposta cortese a 'grazie' / Usato per offrire qualcosa.) - Polite response to 'thank you' / Used when offering something.",
       "example": "Grazie! - Prego. - Thank you! - You're welcome.",
       "level": "a0",
       "notes": ""
@@ -75,36 +57,36 @@ export const a0_italian_vocabulary = {
     {
       "term": "Per favore",
       "pronunciation": "per fa-VO-reh",
-      "partOfSpeech": "phrase",
-      "definition": "Please",
+      "partOfSpeech": "locuzione (locuzione)",
+      "definition": "Formula di cortesia per chiedere qualcosa. (Formula di cortesia per chiedere qualcosa.) - Polite formula for asking for something.",
       "example": "Un bicchiere d'acqua, per favore. - A glass of water, please.",
       "level": "a0",
-      "notes": "Per piacere is also common."
+      "notes": "Anche 'Per piacere' è comune. (Also 'Per piacere' is common.)"
     },
     {
       "term": "Va bene",
       "pronunciation": "va BEH-neh",
-      "partOfSpeech": "phrase",
-      "definition": "Alright / OK / It's fine",
+      "partOfSpeech": "locuzione (locuzione)",
+      "definition": "Indica accordo o che tutto è a posto. (Indica accordo o che tutto è a posto.) - Indicates agreement or that everything is fine.",
       "example": "Va bene, facciamo così. - Alright, let's do it this way.",
       "level": "a0",
-      "notes": "OK (loanword) is also very common."
+      "notes": "OK (prestito linguistico) è anche molto comune. (OK (loanword) is also very common.)"
     },
     {
       "term": "Uno",
       "pronunciation": "OO-no",
-      "partOfSpeech": "number",
-      "definition": "One",
+      "partOfSpeech": "numerale (numerale)",
+      "definition": "Il numero 1. (Il numero 1.) - The number 1.",
       "example": "Ho uno zio. - I have one uncle.",
       "level": "a0",
-      "notes": "Changes to un/un'/una before nouns depending on gender and first letter."
+      "notes": "Diventa un/un'/una davanti ai nomi a seconda del genere e della lettera iniziale. (Changes to un/un'/una before nouns depending on gender and initial letter.)"
     },
     {
       "term": "Tè",
       "pronunciation": "TEH",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "m",
-      "definition": "Tea",
+      "definition": "Bevanda calda fatta con foglie infuse della pianta del tè. (Bevanda calda fatta con foglie infuse della pianta del tè.) - Hot drink made from infused tea leaves.",
       "example": "Preferisci tè o caffè? - Do you prefer tea or coffee?",
       "level": "a0",
       "notes": "il tè"
@@ -112,9 +94,9 @@ export const a0_italian_vocabulary = {
     {
       "term": "Caffè",
       "pronunciation": "kaf-FEH",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "m",
-      "definition": "Coffee",
+      "definition": "Bevanda fatta con semi di caffè tostati e macinati. (Bevanda fatta con semi di caffè tostati e macinati.) - Drink made from roasted and ground coffee beans.",
       "example": "Prendo un caffè. - I'll have a coffee.",
       "level": "a0",
       "notes": "il caffè"
@@ -122,19 +104,19 @@ export const a0_italian_vocabulary = {
     {
       "term": "Acqua",
       "pronunciation": "AK-kwa",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "f",
-      "definition": "Water",
+      "definition": "Liquido incolore, inodore, essenziale per la vita. (Liquido incolore, inodore, essenziale per la vita.) - Colorless, odorless liquid, essential for life.",
       "example": "Vorrei dell'acqua naturale. - I would like some still water.",
       "level": "a0",
-      "notes": "l'acqua (singular)"
+      "notes": "l'acqua (singolare)"
     },
     {
       "term": "Succo",
       "pronunciation": "SOOK-ko",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "m",
-      "definition": "Juice",
+      "definition": "Liquido ottenuto da frutta o verdura. (Liquido ottenuto da frutta o verdura.) - Liquid obtained from fruit or vegetables.",
       "example": "Un succo di frutta. - A fruit juice.",
       "level": "a0",
       "notes": "il succo"
@@ -142,9 +124,9 @@ export const a0_italian_vocabulary = {
     {
       "term": "Birra",
       "pronunciation": "BEER-ra",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "f",
-      "definition": "Beer",
+      "definition": "Bevanda alcolica a base di malto fermentato. (Bevanda alcolica a base di malto fermentato.) - Alcoholic drink made from fermented malt.",
       "example": "Una birra bionda. - A lager/blonde beer.",
       "level": "a0",
       "notes": "la birra"
@@ -152,9 +134,9 @@ export const a0_italian_vocabulary = {
     {
       "term": "Vino",
       "pronunciation": "VEE-no",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "m",
-      "definition": "Wine",
+      "definition": "Bevanda alcolica ottenuta dalla fermentazione dell'uva. (Bevanda alcolica ottenuta dalla fermentazione dell'uva.) - Alcoholic drink obtained from grape fermentation.",
       "example": "Un bicchiere di vino rosso. - A glass of red wine.",
       "level": "a0",
       "notes": "il vino"
@@ -162,10 +144,10 @@ export const a0_italian_vocabulary = {
     {
       "term": "Contanti",
       "pronunciation": "kon-TAN-tee",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "m",
       "plural": true,
-      "definition": "Cash",
+      "definition": "Denaro in monete o banconote. (Denaro in monete o banconote.) - Money in coins or banknotes.",
       "example": "Pagare in contanti. - To pay in cash.",
       "level": "a0",
       "notes": "i contanti"
@@ -173,14 +155,21 @@ export const a0_italian_vocabulary = {
     {
       "term": "Carta",
       "pronunciation": "KAR-ta",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "f",
-      "definition": "Card (bank card)",
+      "definition": "Mezzo di pagamento di plastica (carta di credito/debito). (Mezzo di pagamento di plastica (carta di credito/debito).) - Plastic means of payment (credit/debit card).",
       "example": "Posso pagare con la carta? - Can I pay by card?",
       "level": "a0",
-      "notes": "la carta (e.g. carta di credito)"
+      "notes": "la carta (es. carta di credito)"
+    },
+    {
+      "term": "Scusa",
+      "pronunciation": "SKOO-za",
+      "partOfSpeech": "interiezione/verbo (interiezione/verbo)",
+      "definition": "Per chiedere scusa o attirare l'attenzione (informale). (Per chiedere scusa o attirare l'attenzione (informale).) - To apologize or attract attention (informal).",
+      "example": "Scusa, non ti avevo visto. - Sorry, I didn't see you.",
+      "level": "a0",
+      "notes": "Formale: Scusi. 'Mi dispiace' esprime rammarico. (Formal: Scusi. 'Mi dispiace' expresses regret.)"
     }
   ]
 };
-
-// module.exports = a0_italian_vocabulary; // Uncomment if using CommonJS

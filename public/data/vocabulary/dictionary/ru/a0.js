@@ -4,28 +4,28 @@ export const a0_russian_vocabulary = {
       "term": "Здравствуйте",
       "latinisation": "Zdravstvuyte",
       "pronunciation": "ZDRAST-vooy-tye",
-      "partOfSpeech": "interjection",
-      "definition": "Hello (formal)",
+      "partOfSpeech": "междометие (mezhdometiye)",
+      "definition": "Формальное приветствие. (Formal'noye privetstviye.) - Formal greeting.",
       "example": "Здравствуйте, Иван Петрович! - Hello, Ivan Petrovich!",
       "level": "a0",
-      "notes": "Привет (Privet) is informal."
+      "notes": "Привет (Privet) - неформальное приветствие. (neformal'noye privetstviye.)"
     },
     {
       "term": "До свидания",
       "latinisation": "Do svidaniya",
       "pronunciation": "da svee-DA-nee-ye",
-      "partOfSpeech": "phrase",
-      "definition": "Goodbye (formal)",
+      "partOfSpeech": "фраза (fraza)",
+      "definition": "Формальное прощание. (Formal'noye proshchaniye.) - Formal farewell.",
       "example": "До свидания, увидимся завтра. - Goodbye, see you tomorrow.",
       "level": "a0",
-      "notes": "Пока (Poka) is informal."
+      "notes": "Пока (Poka) - неформальное прощание. (neformal'noye proshchaniye.)"
     },
     {
       "term": "Да",
       "latinisation": "Da",
       "pronunciation": "DA",
-      "partOfSpeech": "particle/adverb",
-      "definition": "Yes",
+      "partOfSpeech": "частица/наречие (chastitsa/narechiye)",
+      "definition": "Утвердительный ответ. (Utverditel'nyy otvet.) - Affirmative answer.",
       "example": "Да, конечно. - Yes, of course.",
       "level": "a0",
       "notes": ""
@@ -34,8 +34,8 @@ export const a0_russian_vocabulary = {
       "term": "Нет",
       "latinisation": "Net",
       "pronunciation": "NYET",
-      "partOfSpeech": "particle/adverb",
-      "definition": "No",
+      "partOfSpeech": "частица/наречие (chastitsa/narechiye)",
+      "definition": "Отрицательный ответ. (Otritsatel'nyy otvet.) - Negative answer.",
       "example": "Нет, спасибо. - No, thank you.",
       "level": "a0",
       "notes": ""
@@ -44,8 +44,8 @@ export const a0_russian_vocabulary = {
       "term": "Спасибо",
       "latinisation": "Spasibo",
       "pronunciation": "spa-SEE-ba",
-      "partOfSpeech": "interjection/noun",
-      "definition": "Thank you",
+      "partOfSpeech": "междометие/существительное (mezhdometiye/sushchestvitel'noye)",
+      "definition": "Выражение благодарности. (Vyrazheniye blagodarnosti.) - Expression of gratitude.",
       "example": "Большое спасибо! - Thank you very much!",
       "level": "a0",
       "notes": ""
@@ -54,121 +54,129 @@ export const a0_russian_vocabulary = {
       "term": "Пожалуйста",
       "latinisation": "Pozhaluysta",
       "pronunciation": "pa-ZHA-looy-sta",
-      "partOfSpeech": "particle/interjection",
-      "definition": "You're welcome / Please",
+      "partOfSpeech": "частица/междометие (chastitsa/mezhdometiye)",
+      "definition": "Ответ на 'спасибо' / Вежливая просьба. (Otvet na 'spasibo' / Vezhlivaya pros'ba.) - Response to 'thank you' / Polite request.",
       "example": "Дайте, пожалуйста, книгу. - Give (me) the book, please. / Спасибо! - Пожалуйста. - Thank you! - You're welcome.",
       "level": "a0",
-      "notes": "Means both 'please' and 'you're welcome'."
+      "notes": "Означает и 'please', и 'you're welcome'. (Oznachayet i 'please', i 'you're welcome'.)"
     },
     {
       "term": "Хорошо",
       "latinisation": "Khorosho",
       "pronunciation": "kha-ra-SHO",
-      "partOfSpeech": "adverb/interjection",
-      "definition": "Good / Alright / OK",
+      "partOfSpeech": "наречие/междометие (narechiye/mezhdometiye)",
+      "definition": "Одобрение / Согласие. (Odobreniye / Soglasiye.) - Approval / Agreement.",
       "example": "Хорошо, я сделаю это. - Alright, I will do it.",
       "level": "a0",
-      "notes": "Ладно (Ladno) also means OK/agreed."
+      "notes": "Ладно (Ladno) также означает ОК/согласен. (Ladno takzhe oznachayet OK/soglasen.)"
     },
     {
       "term": "Один",
       "latinisation": "Odin",
       "pronunciation": "a-DEEN",
-      "partOfSpeech": "number/pronoun",
-      "definition": "One",
+      "partOfSpeech": "числительное/местоимение (chislitel'noye/mestoimeniye)",
+      "definition": "Число 1. (Chislo 1.) - The number 1.",
       "example": "Один билет, пожалуйста. - One ticket, please.",
       "level": "a0",
-      "notes": "Changes for gender: одна (f), одно (n)."
+      "notes": "Изменяется по родам: одна (ж.р.), одно (ср.р.). (Izmenyayetsya po rodam: odna (zh.r.), odno (sr.r.).)"
     },
     {
       "term": "Чай",
       "latinisation": "Chay",
       "pronunciation": "CHAI",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "существительное (sushchestvitel'noye)",
       "gender": "m",
-      "definition": "Tea",
+      "definition": "Напиток из заваренных чайных листьев. (Napitok iz zavarennykh chaynykh list'yev.) - Drink made from brewed tea leaves.",
       "example": "Я люблю чёрный чай. - I love black tea.",
       "level": "a0",
-      "notes": ""
+      "notes": "(мужской род - muzhskoy rod)"
     },
     {
       "term": "Кофе",
       "latinisation": "Kofe",
       "pronunciation": "KO-fye",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "существительное (sushchestvitel'noye)",
       "gender": "m",
-      "definition": "Coffee",
+      "definition": "Напиток из обжаренных кофейных зёрен. (Napitok iz obzharennykh kofeynykh zoren.) - Drink made from roasted coffee beans.",
       "example": "Чашка кофе. - A cup of coffee.",
       "level": "a0",
-      "notes": "Indeclinable."
+      "notes": "Несклоняемое. (Neskonyayemoye.) (мужской род - muzhskoy rod)"
     },
     {
       "term": "Вода",
       "latinisation": "Voda",
       "pronunciation": "va-DA",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "существительное (sushchestvitel'noye)",
       "gender": "f",
-      "definition": "Water",
+      "definition": "Прозрачная бесцветная жидкость. (Prozrachnaya bestsvetnaya zhidkost'.) - Transparent colorless liquid.",
       "example": "Стакан воды. - A glass of water.",
       "level": "a0",
-      "notes": ""
+      "notes": "(женский род - zhenskiy rod)"
     },
     {
       "term": "Сок",
       "latinisation": "Sok",
       "pronunciation": "SOK",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "существительное (sushchestvitel'noye)",
       "gender": "m",
-      "definition": "Juice",
+      "definition": "Жидкий напиток из фруктов или овощей. (Zhidkiy napitok iz fruktov ili ovoshchey.) - Liquid drink from fruits or vegetables.",
       "example": "Апельсиновый сок. - Orange juice.",
       "level": "a0",
-      "notes": ""
+      "notes": "(мужской род - muzhskoy rod)"
     },
     {
       "term": "Пиво",
       "latinisation": "Pivo",
       "pronunciation": "PEE-va",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "существительное (sushchestvitel'noye)",
       "gender": "n",
-      "definition": "Beer",
+      "definition": "Алкогольный напиток из солода и хмеля. (Alkohol'nyy napitok iz soloda i khmelya.) - Alcoholic drink from malt and hops.",
       "example": "Бутылка пива. - A bottle of beer.",
       "level": "a0",
-      "notes": ""
+      "notes": "(средний род - sredniy rod)"
     },
     {
       "term": "Вино",
       "latinisation": "Vino",
       "pronunciation": "vee-NO",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "существительное (sushchestvitel'noye)",
       "gender": "n",
-      "definition": "Wine",
+      "definition": "Алкогольный напиток из винограда. (Alkohol'nyy napitok iz vinograda.) - Alcoholic drink from grapes.",
       "example": "Красное вино. - Red wine.",
       "level": "a0",
-      "notes": ""
+      "notes": "(средний род - sredniy rod)"
     },
     {
       "term": "Наличные",
       "latinisation": "Nalichnyye",
       "pronunciation": "na-LEECH-ni-ye",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "существительное (sushchestvitel'noye)",
       "plural": true,
-      "definition": "Cash",
+      "definition": "Деньги в виде монет или банкнот. (Den'gi v vide monet ili banknot.) - Money in the form of coins or banknotes.",
       "example": "Платить наличными. - To pay in cash.",
       "level": "a0",
-      "notes": "Grammatically plural."
+      "notes": "Грамматически множественное число. (Grammaticheski mnozhestvennoye chislo.)"
     },
     {
       "term": "Карта",
       "latinisation": "Karta",
       "pronunciation": "KAR-ta",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "существительное (sushchestvitel'noye)",
       "gender": "f",
-      "definition": "Card (bank card)",
+      "definition": "Банковская пластиковая карта. (Bankovskaya plastikovaya karta.) - Bank plastic card.",
       "example": "Оплатить картой. - To pay by card.",
       "level": "a0",
-      "notes": "Also карточка (kartochka)."
+      "notes": "Также карточка (kartochka). (zhenskiy rod - zhenskiy rod)"
+    },
+    {
+      "term": "Извините",
+      "latinisation": "Izvinite",
+      "pronunciation": "eez-vee-NEE-tye",
+      "partOfSpeech": "глагол/междометие (glagol/mezhdometiye)",
+      "definition": "Выражение сожаления / Просьба о прощении (формально или мн.ч.). (Vyrazheniye sozhaleniya / Pros'ba o proshchenii (formal'no ili mn.ch.).) - Expression of regret / Request for forgiveness (formal or plural).",
+      "example": "Извините, я опоздал. - Sorry, I am late.",
+      "level": "a0",
+      "notes": "Неформально ед.ч.: Извини (Izvini). Простите (Prostite) также распространено и схоже по формальности. (Neformal'no yed.ch.: Izvini (Izvini). Prostite (Prostite) takzhe rasprostraneno i skhozhe po formal'nosti.)"
     }
   ]
 };
-
-// module.exports = a0_russian_vocabulary; // Uncomment if using CommonJS

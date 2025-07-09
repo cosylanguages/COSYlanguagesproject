@@ -3,26 +3,26 @@ export const a0_german_vocabulary = {
     {
       "term": "Hallo",
       "pronunciation": "haˈloː",
-      "partOfSpeech": "interjection",
-      "definition": "Hello (general greeting)",
+      "partOfSpeech": "Interjektion (Interjektion)",
+      "definition": "Allgemeine Begrüßung. (Allgemeine Begrüßung.) - General greeting.",
       "example": "Hallo, wie geht's? - Hello, how are you?",
       "level": "a0",
-      "notes": "Guten Tag is more formal for 'good day'."
+      "notes": "Guten Tag ist formeller. (Guten Tag ist formeller.)"
     },
     {
       "term": "Tschüss",
       "pronunciation": "tʃʏs",
-      "partOfSpeech": "interjection",
-      "definition": "Goodbye (informal)",
+      "partOfSpeech": "Interjektion (Interjektion)",
+      "definition": "Informeller Abschiedsgruß. (Informeller Abschiedsgruß.) - Informal farewell.",
       "example": "Tschüss, bis morgen! - Bye, see you tomorrow!",
       "level": "a0",
-      "notes": "Auf Wiedersehen is more formal."
+      "notes": "Auf Wiedersehen ist formeller. (Auf Wiedersehen ist formeller.)"
     },
     {
       "term": "Ja",
       "pronunciation": "jaː",
-      "partOfSpeech": "adverb",
-      "definition": "Yes",
+      "partOfSpeech": "Adverb (Adverb)",
+      "definition": "Bejahende Antwort. (Bejahende Antwort.) - Affirmative answer.",
       "example": "Ja, bitte. - Yes, please.",
       "level": "a0",
       "notes": ""
@@ -30,8 +30,8 @@ export const a0_german_vocabulary = {
     {
       "term": "Nein",
       "pronunciation": "naɪ̯n",
-      "partOfSpeech": "adverb",
-      "definition": "No",
+      "partOfSpeech": "Adverb (Adverb)",
+      "definition": "Verneinende Antwort. (Verneinende Antwort.) - Negative answer.",
       "example": "Nein, danke. - No, thank you.",
       "level": "a0",
       "notes": ""
@@ -39,8 +39,8 @@ export const a0_german_vocabulary = {
     {
       "term": "Danke",
       "pronunciation": "ˈdaŋkə",
-      "partOfSpeech": "interjection",
-      "definition": "Thank you",
+      "partOfSpeech": "Interjektion (Interjektion)",
+      "definition": "Ausdruck der Dankbarkeit. (Ausdruck der Dankbarkeit.) - Expression of gratitude.",
       "example": "Danke schön! - Thank you very much!",
       "level": "a0",
       "notes": ""
@@ -48,36 +48,36 @@ export const a0_german_vocabulary = {
     {
       "term": "Bitte",
       "pronunciation": "ˈbɪtə",
-      "partOfSpeech": "interjection/adverb",
-      "definition": "You're welcome / Please",
+      "partOfSpeech": "Interjektion/Adverb (Interjektion/Adverb)",
+      "definition": "Antwort auf 'Danke' / Höfliche Aufforderung. (Antwort auf 'Danke' / Höfliche Aufforderung.) - Response to 'thank you' / Polite request.",
       "example": "Bitte, ein Kaffee. - One coffee, please. / Danke! - Bitte! - Thank you! - You're welcome!",
       "level": "a0",
-      "notes": "Means both 'please' and 'you're welcome'."
+      "notes": "Bedeutet sowohl 'please' als auch 'you're welcome'. (Bedeutet sowohl 'please' als auch 'you're welcome'.)"
     },
     {
       "term": "Okay",
       "pronunciation": "oˈkeː",
-      "partOfSpeech": "adverb/interjection",
-      "definition": "Alright / OK",
+      "partOfSpeech": "Adverb/Interjektion (Adverb/Interjektion)",
+      "definition": "In Ordnung / Einverstanden. (In Ordnung / Einverstanden.) - Alright / OK.",
       "example": "Okay, machen wir das. - OK, let's do that.",
       "level": "a0",
-      "notes": "In Ordnung is also common."
+      "notes": "In Ordnung ist auch gebräuchlich. (In Ordnung ist auch gebräuchlich.)"
     },
     {
-      "term": "ein",
+      "term": "Ein",
       "pronunciation": "aɪ̯n",
-      "partOfSpeech": "article/number",
-      "definition": "One / A (masculine/neuter)",
+      "partOfSpeech": "Artikel/Numerale (Artikel/Numerale)",
+      "definition": "Die Zahl 1 / Unbestimmter Artikel (maskulin/neutral). (Die Zahl 1 / Unbestimmter Artikel (maskulin/neutral).) - The number 1 / Indefinite article (masculine/neuter).",
       "example": "Ein Buch. - A book. / Eins, zwei, drei. - One, two, three.",
       "level": "a0",
-      "notes": "As a number: eins. Before noun: ein (m/n), eine (f)."
+      "notes": "Als Zahl: eins. Vor Nomen: ein (m/n), eine (f)."
     },
     {
       "term": "Tee",
       "pronunciation": "teː",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "Nomen (Nomen)",
       "gender": "m",
-      "definition": "Tea",
+      "definition": "Heißgetränk aus Teeblättern. (Heißgetränk aus Teeblättern.) - Hot drink made from tea leaves.",
       "example": "Ich trinke gerne Tee. - I like to drink tea.",
       "level": "a0",
       "notes": "der Tee"
@@ -85,9 +85,9 @@ export const a0_german_vocabulary = {
     {
       "term": "Kaffee",
       "pronunciation": "ˈkafe",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "Nomen (Nomen)",
       "gender": "m",
-      "definition": "Coffee",
+      "definition": "Heißgetränk aus gerösteten Kaffeebohnen. (Heißgetränk aus gerösteten Kaffeebohnen.) - Hot drink made from roasted coffee beans.",
       "example": "Ein Kaffee ohne Zucker, bitte. - A coffee without sugar, please.",
       "level": "a0",
       "notes": "der Kaffee"
@@ -95,9 +95,9 @@ export const a0_german_vocabulary = {
     {
       "term": "Wasser",
       "pronunciation": "ˈvasɐ",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "Nomen (Nomen)",
       "gender": "n",
-      "definition": "Water",
+      "definition": "Farblose, geruchlose Flüssigkeit. (Farblose, geruchlose Flüssigkeit.) - Colorless, odorless liquid.",
       "example": "Ein Glas Wasser. - A glass of water.",
       "level": "a0",
       "notes": "das Wasser"
@@ -105,9 +105,9 @@ export const a0_german_vocabulary = {
     {
       "term": "Saft",
       "pronunciation": "zaft",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "Nomen (Nomen)",
       "gender": "m",
-      "definition": "Juice",
+      "definition": "Flüssigkeit aus Früchten oder Gemüse. (Flüssigkeit aus Früchten oder Gemüse.) - Liquid from fruits or vegetables.",
       "example": "Apfelsaft oder Orangensaft? - Apple juice or orange juice?",
       "level": "a0",
       "notes": "der Saft"
@@ -115,9 +115,9 @@ export const a0_german_vocabulary = {
     {
       "term": "Bier",
       "pronunciation": "biːɐ̯",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "Nomen (Nomen)",
       "gender": "n",
-      "definition": "Beer",
+      "definition": "Alkoholisches Getränk aus Malz und Hopfen. (Alkoholisches Getränk aus Malz und Hopfen.) - Alcoholic drink made from malt and hops.",
       "example": "Ein kühles Bier. - A cold beer.",
       "level": "a0",
       "notes": "das Bier"
@@ -125,9 +125,9 @@ export const a0_german_vocabulary = {
     {
       "term": "Wein",
       "pronunciation": "vaɪ̯n",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "Nomen (Nomen)",
       "gender": "m",
-      "definition": "Wine",
+      "definition": "Alkoholisches Getränk aus Trauben. (Alkoholisches Getränk aus Trauben.) - Alcoholic drink made from grapes.",
       "example": "Rotwein oder Weißwein? - Red wine or white wine?",
       "level": "a0",
       "notes": "der Wein"
@@ -135,9 +135,9 @@ export const a0_german_vocabulary = {
     {
       "term": "Bargeld",
       "pronunciation": "ˈbaːɐ̯ɡɛlt",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "Nomen (Nomen)",
       "gender": "n",
-      "definition": "Cash",
+      "definition": "Geld in Münzen oder Scheinen. (Geld in Münzen oder Scheinen.) - Money in coins or notes.",
       "example": "Ich zahle mit Bargeld. - I'll pay with cash.",
       "level": "a0",
       "notes": "das Bargeld"
@@ -145,14 +145,22 @@ export const a0_german_vocabulary = {
     {
       "term": "Karte",
       "pronunciation": "ˈkartə",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "Nomen (Nomen)",
       "gender": "f",
-      "definition": "Card (bank card)",
+      "definition": "Plastikkarte für Zahlungen (Bankkarte). (Plastikkarte für Zahlungen (Bankkarte).) - Plastic card for payments (bank card).",
       "example": "Kann ich mit Karte zahlen? - Can I pay by card?",
       "level": "a0",
-      "notes": "die Karte (e.g. EC-Karte, Kreditkarte)"
+      "notes": "die Karte (z.B. EC-Karte, Kreditkarte)"
+    },
+    {
+      "term": "Entschuldigung",
+      "pronunciation": "ɛntˈʃʊldɪɡʊŋ",
+      "partOfSpeech": "Nomen/Interjektion (Nomen/Interjektion)",
+      "gender": "f",
+      "definition": "Ausdruck des Bedauerns / Bitte um Nachsicht. (Ausdruck des Bedauerns / Bitte um Nachsicht.) - Expression of regret / Request for forbearance.",
+      "example": "Entschuldigung, wo ist der Bahnhof? - Excuse me, where is the train station?",
+      "level": "a0",
+      "notes": "die Entschuldigung. Kann direkt als 'Sorry!' verwendet werden. (Kann direkt als 'Sorry!' verwendet werden.)"
     }
   ]
 };
-
-// module.exports = a0_german_vocabulary; // Uncomment if using CommonJS

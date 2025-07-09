@@ -6,10 +6,75 @@
   "sections": [
     {
       "title": "🔍Օր 1 (Day 1)",
-      "content_placeholder": "Օրվա ընդհանուր նկարագիրը կավելացվի։"
+      "audio_tts_phrase": "COSY Հայերեն։ Օր 1։",
+      "content_blocks": [
+        {
+          "block_type": "pronunciation_rules_match",
+          "title": "Արտասանության կանոններ",
+          "rules": [
+            {"combination": "ու", "sound": "[u]", "example_words": ["սուրճ", "ջուր"]},
+            {"combination": "խ", "sound": "[χ]", "example_words": ["խնդրեմ"]},
+            {"combination": "ձ", "sound": "[dz]", "example_words": ["ձեզ"]}
+          ],
+          "sounds_to_match": ["[u]", "[χ]", "[dz]", "[p]", "[t']"]
+        },
+        {
+          "block_type": "image_match",
+          "title": "Համապատասխանեցրեք բառերը նկարներին",
+          "words": [
+            {"term": "Բարև", "image_placeholder": "barev_hello.png"},
+            {"term": "Ցտեսություն", "image_placeholder": "tstesutyun_goodbye.png"},
+            {"term": "Այո", "image_placeholder": "ayo_yes.png"},
+            {"term": "Ոչ", "image_placeholder": "voch_no.png"},
+            {"term": "Շնորհակալություն", "image_placeholder": "shnorhakalutyun_thankyou.png"},
+            {"term": "Խնդրեմ", "image_placeholder": "khndrem_yourewelcome.png"},
+            {"term": "Ներեցեք", "image_placeholder": "neretseq_sorry.png"}
+          ]
+        },
+        {
+          "block_type": "interactive_wordlist",
+          "title": "Բառացանկ",
+          "vocabulary": [
+            {"term": "Բարև", "latinisation": "Barev", "definition": "Hello"},
+            {"term": "Ցտեսություն", "latinisation": "Tstesutyun", "definition": "Goodbye"},
+            {"term": "Այո", "latinisation": "Ayo", "definition": "Yes"},
+            {"term": "Ոչ", "latinisation": "Voch", "definition": "No"},
+            {"term": "Շնորհակալություն", "latinisation": "Shnorhakalutyun", "definition": "Thank you"},
+            {"term": "Խնդրեմ", "latinisation": "Khndrem", "definition": "You're welcome / Please"},
+            {"term": "Ներեցեք", "latinisation": "Neretseq'", "definition": "Sorry / Excuse me"},
+            {"term": "Լավ", "latinisation": "Lav", "definition": "Alright / OK"},
+            {"term": "Մեկ", "latinisation": "Mek", "definition": "One"},
+            {"term": "Թեյ", "latinisation": "Tey", "definition": "Tea"},
+            {"term": "Սուրճ", "latinisation": "Surch", "definition": "Coffee"},
+            {"term": "Ջուր", "latinisation": "Jur", "definition": "Water"},
+            {"term": "Հյութ", "latinisation": "Hyut", "definition": "Juice"},
+            {"term": "Գարեջուր", "latinisation": "Garejur", "definition": "Beer"},
+            {"term": "Գինի", "latinisation": "Gini", "definition": "Wine"},
+            {"term": "Կանխիկ", "latinisation": "Kankhik", "definition": "Cash"},
+            {"term": "Քարտ", "latinisation": "Kart", "definition": "Card"}
+          ],
+          "functionality_note": "User can add all words or select individual words to their personal dictionary."
+        },
+        {
+          "block_type": "matching_opposites",
+          "title": "Համապատասխանեցրեք հականիշները",
+          "pairs": [
+            {"word1": "Բարև (Hello)", "word2": "Ցտեսություն (Goodbye)"},
+            {"word1": "Այո (Yes)", "word2": "Ոչ (No)"},
+            {"word1": "Շնորհակալություն (Thank you)", "word2": "Խնդրեմ (You're welcome)"},
+            {"word1": "Ներեցեք (Sorry)", "word2": "Ոչինչ (No problem/It's okay)"}
+          ]
+        },
+        {
+          "block_type": "vocabulary_practice_modes",
+          "title": "Բառապաշարի վարժություն (Քարտեր/Բառարան)",
+          "vocabulary_scope": "Full Day 1 vocabulary list (including 'sorry').",
+          "functionality_note": "User can practice these words using flashcards or a dictionary lookup mode."
+        }
+      ]
     },
     {
-      "title": "🎭Երկխոסություն (Dialogue)",
+      "title": "🎭Երկխոսություն (Dialogue)",
       "dialogue": [
         {"speaker": "A", "line": "Բարև (Barev)"},
         {"speaker": "B", "line": "Բարև, սո՞ւրճ, թե՞ թեյ։ (Barev, surch, te tey?)"},

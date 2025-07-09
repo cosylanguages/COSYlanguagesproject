@@ -3,26 +3,26 @@ export const a0_portuguese_vocabulary = {
     {
       "term": "Olá",
       "pronunciation": "o-LA",
-      "partOfSpeech": "interjection",
-      "definition": "Hello (general greeting)",
+      "partOfSpeech": "interjeição (interjeição)",
+      "definition": "Saudação geral. (Saudação geral.) - General greeting.",
       "example": "Olá, tudo bem? - Hello, how are you?",
       "level": "a0",
-      "notes": "Oi is common in Brazil (informal)."
+      "notes": "Oi é comum no Brasil (informal). Bom dia (bom dia/manhã). (Oi is common in Brazil (informal). Bom dia (good day/morning).)"
     },
     {
       "term": "Adeus",
       "pronunciation": "a-DEUSH",
-      "partOfSpeech": "interjection",
-      "definition": "Goodbye",
+      "partOfSpeech": "interjeição (interjeição)",
+      "definition": "Despedida. (Despedida.) - Farewell.",
       "example": "Adeus, até amanhã! - Goodbye, until tomorrow!",
       "level": "a0",
-      "notes": "Tchau (CHOW) is common and informal."
+      "notes": "Tchau (CHOW) é comum e informal. (Tchau (CHOW) is common and informal.)"
     },
     {
       "term": "Sim",
       "pronunciation": "SEENG",
-      "partOfSpeech": "adverb",
-      "definition": "Yes",
+      "partOfSpeech": "advérbio (advérbio)",
+      "definition": "Resposta afirmativa. (Resposta afirmativa.) - Affirmative answer.",
       "example": "Sim, por favor. - Yes, please.",
       "level": "a0",
       "notes": ""
@@ -30,8 +30,8 @@ export const a0_portuguese_vocabulary = {
     {
       "term": "Não",
       "pronunciation": "NOWNG",
-      "partOfSpeech": "adverb",
-      "definition": "No",
+      "partOfSpeech": "advérbio (advérbio)",
+      "definition": "Resposta negativa. (Resposta negativa.) - Negative answer.",
       "example": "Não, obrigado. - No, thank you.",
       "level": "a0",
       "notes": ""
@@ -39,17 +39,17 @@ export const a0_portuguese_vocabulary = {
     {
       "term": "Obrigado / Obrigada",
       "pronunciation": "o-bree-GA-doo / o-bree-GA-da",
-      "partOfSpeech": "interjection/adjective",
-      "definition": "Thank you",
+      "partOfSpeech": "interjeição/adjetivo (interjeição/adjetivo)",
+      "definition": "Expressão de gratidão. (Expressão de gratidão.) - Expression of gratitude.",
       "example": "Muito obrigado! - Thank you very much!",
       "level": "a0",
-      "notes": "Obrigado (male speaker), Obrigada (female speaker)."
+      "notes": "Obrigado (falante masculino), Obrigada (falante feminina). (Obrigado (male speaker), Obrigada (female speaker).)"
     },
     {
       "term": "De nada",
       "pronunciation": "de NA-da",
-      "partOfSpeech": "phrase",
-      "definition": "You're welcome",
+      "partOfSpeech": "expressão (expressão)",
+      "definition": "Resposta educada a um agradecimento. (Resposta educada a um agradecimento.) - Polite response to thanks.",
       "example": "Obrigado! - De nada. - Thank you! - You're welcome.",
       "level": "a0",
       "notes": ""
@@ -57,36 +57,36 @@ export const a0_portuguese_vocabulary = {
     {
       "term": "Por favor",
       "pronunciation": "poor fa-VOR",
-      "partOfSpeech": "phrase",
-      "definition": "Please",
+      "partOfSpeech": "expressão (expressão)",
+      "definition": "Usado em pedidos ou perguntas educadas. (Usado em pedidos ou perguntas educadas.) - Used in polite requests or questions.",
       "example": "Água, por favor. - Water, please.",
       "level": "a0",
-      "notes": "Se faz favor is also common in Portugal."
+      "notes": "Se faz favor também é comum em Portugal. (Se faz favor is also common in Portugal.)"
     },
     {
       "term": "Está bem",
       "pronunciation": "ish-TA BENG",
-      "partOfSpeech": "phrase",
-      "definition": "Alright / OK / It's fine",
+      "partOfSpeech": "expressão (expressão)",
+      "definition": "Indica acordo ou que está tudo OK. (Indica acordo ou que está tudo OK.) - Indicates agreement or that everything is OK.",
       "example": "Está bem, eu faço isso. - Alright, I'll do that.",
       "level": "a0",
-      "notes": "OK (loanword) is also very common."
+      "notes": "OK (estrangeirismo) também é muito comum. (OK (loanword) is also very common.)"
     },
     {
       "term": "Um",
       "pronunciation": "OONG",
-      "partOfSpeech": "number/article",
-      "definition": "One / A (masculine)",
+      "partOfSpeech": "numeral/artigo (numeral/artigo)",
+      "definition": "O número 1 / Artigo indefinido masculino. (O número 1 / Artigo indefinido masculino.) - The number 1 / Masculine indefinite article.",
       "example": "Um café. - One coffee / A coffee.",
       "level": "a0",
-      "notes": "Feminine: uma (OO-ma)."
+      "notes": "Feminino: uma (OO-ma). (Feminine: uma (OO-ma).)"
     },
     {
       "term": "Chá",
       "pronunciation": "SHA",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "m",
-      "definition": "Tea",
+      "definition": "Bebida quente feita por infusão de folhas secas. (Bebida quente feita por infusão de folhas secas.) - Hot drink made by infusing dried leaves.",
       "example": "Queres uma chávena de chá? - Do you want a cup of tea?",
       "level": "a0",
       "notes": "o chá"
@@ -94,9 +94,9 @@ export const a0_portuguese_vocabulary = {
     {
       "term": "Café",
       "pronunciation": "ka-FEH",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "m",
-      "definition": "Coffee",
+      "definition": "Bebida quente feita de grãos de café torrados. (Bebida quente feita de grãos de café torrados.) - Hot drink made from roasted coffee beans.",
       "example": "Um café curto, por favor. - A short coffee (espresso), please.",
       "level": "a0",
       "notes": "o café"
@@ -104,9 +104,9 @@ export const a0_portuguese_vocabulary = {
     {
       "term": "Água",
       "pronunciation": "A-gwa",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "f",
-      "definition": "Water",
+      "definition": "Líquido incolor, transparente e inodoro, essencial para a vida. (Líquido incolor, transparente e inodoro, essencial para a vida.) - Colorless, transparent, odorless liquid, essential for life.",
       "example": "Um copo de água. - A glass of water.",
       "level": "a0",
       "notes": "a água"
@@ -114,19 +114,19 @@ export const a0_portuguese_vocabulary = {
     {
       "term": "Sumo",
       "pronunciation": "SOO-moo",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "m",
-      "definition": "Juice (Portugal)",
+      "definition": "Líquido obtido de frutas ou vegetais (Portugal). (Líquido obtido de frutas ou vegetais (Portugal).) - Liquid obtained from fruits or vegetables (Portugal).",
       "example": "Sumo de laranja. - Orange juice.",
       "level": "a0",
-      "notes": "o sumo. In Brazil: suco (SOO-koo)."
+      "notes": "o sumo. No Brasil: suco (SOO-koo). (In Brazil: suco (SOO-koo).)"
     },
     {
       "term": "Cerveja",
       "pronunciation": "ser-VEY-zha",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "f",
-      "definition": "Beer",
+      "definition": "Bebida alcoólica feita de malte fermentado. (Bebida alcoólica feita de malte fermentado.) - Alcoholic drink made from fermented malt.",
       "example": "Uma cerveja fresca. - A cold beer.",
       "level": "a0",
       "notes": "a cerveja"
@@ -134,9 +134,9 @@ export const a0_portuguese_vocabulary = {
     {
       "term": "Vinho",
       "pronunciation": "VEEN-yoo",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "m",
-      "definition": "Wine",
+      "definition": "Bebida alcoólica feita de sumo de uva fermentado. (Bebida alcoólica feita de sumo de uva fermentado.) - Alcoholic drink made from fermented grape juice.",
       "example": "Vinho tinto ou vinho branco? - Red wine or white wine?",
       "level": "a0",
       "notes": "o vinho"
@@ -144,24 +144,31 @@ export const a0_portuguese_vocabulary = {
     {
       "term": "Dinheiro",
       "pronunciation": "dee-NYAY-roo",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "m",
-      "definition": "Cash / Money",
+      "definition": "Moedas ou notas usadas como meio de troca. (Moedas ou notas usadas como meio de troca.) - Coins or notes used as a medium of exchange.",
       "example": "Pagar em dinheiro. - To pay in cash.",
       "level": "a0",
-      "notes": "o dinheiro. Numerário (noo-me-RA-ree-oo) is more formal for 'cash' in Portugal."
+      "notes": "o dinheiro. Numerário (noo-me-RA-ree-oo) é mais formal para 'dinheiro vivo' em Portugal. (Numerário is more formal for 'cash' in Portugal.)"
     },
     {
       "term": "Cartão",
       "pronunciation": "kar-TOWNG",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nome (nome)",
       "gender": "m",
-      "definition": "Card (bank card)",
+      "definition": "Pequeno retângulo de plástico usado para pagamentos. (Pequeno retângulo de plástico usado para pagamentos.) - Small plastic rectangle used for payments.",
       "example": "Posso pagar com cartão? - Can I pay by card?",
       "level": "a0",
-      "notes": "o cartão (e.g. cartão de crédito, cartão multibanco)"
+      "notes": "o cartão (ex: cartão de crédito, cartão multibanco)"
+    },
+    {
+      "term": "Desculpe",
+      "pronunciation": "dish-KOOL-puh",
+      "partOfSpeech": "verbo/interjeição (verbo/interjeição)",
+      "definition": "Usado para pedir perdão ou licença (formal ou geral). (Usado para pedir perdão ou licença (formal ou geral).) - Used to ask for forgiveness or permission (formal or general).",
+      "example": "Desculpe, não percebi. - Sorry, I didn't understand.",
+      "level": "a0",
+      "notes": "Informal: Desculpa. Com licença é 'excuse me' para passar. (Informal: Desculpa. Com licença is 'excuse me' for passing.)"
     }
   ]
 };
-
-// module.exports = a0_portuguese_vocabulary; // Uncomment if using CommonJS
