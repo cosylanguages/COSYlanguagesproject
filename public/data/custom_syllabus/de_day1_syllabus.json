@@ -6,7 +6,76 @@
   "sections": [
     {
       "title": "🔍Tag 1 (Day 1)",
-      "content_placeholder": "Inhalt wird noch hinzugefügt für Tag 1 Übersicht."
+      "audio_tts_phrase": "COSY Deutsch. Tag 1.",
+      "content_blocks": [
+        {
+          "block_type": "pronunciation_rules_match",
+          "title": "Ausspracheregeln",
+          "rules": [
+            {"combination": "ei", "sound": "[aɪ]", "example_words": ["ein", "Wein"]},
+            {"combination": "ie", "sound": "[iː]", "example_words": ["Bier", "Wiedersehen"]},
+            {"combination": "au", "sound": "[aʊ]", "example_words": ["Auf Wiedersehen"]},
+            {"combination": "s (initial + vowel)", "sound": "[z]", "example_words": ["Saft", "Sorry (Entschuldigung)"]}
+          ],
+          "sounds_to_match": ["[aɪ]", "[iː]", "[aʊ]", "[z]", "[ʃ]"]
+        },
+        {
+          "block_type": "image_match",
+          "title": "Ordne die Wörter den Bildern zu",
+          "words": [
+            {"term": "Hallo", "image_placeholder": "hello_image.png"},
+            {"term": "Tschüss", "image_placeholder": "goodbye_image.png"},
+            {"term": "Ja", "image_placeholder": "yes_image.png"},
+            {"term": "Nein", "image_placeholder": "no_image.png"},
+            {"term": "Danke", "image_placeholder": "thankyou_image.png"},
+            {"term": "Bitte", "image_placeholder": "yourewelcome_image.png"},
+            {"term": "Entschuldigung", "image_placeholder": "sorry_image.png"}
+          ]
+        },
+        {
+          "block_type": "interactive_wordlist",
+          "title": "Wortliste",
+          "vocabulary": [
+            {"term": "Hallo", "definition": "Allgemeine Begrüßung."},
+            {"term": "Guten Tag", "definition": "Formellere Begrüßung am Tag."},
+            {"term": "Tschüss", "definition": "Informeller Abschiedsgruß."},
+            {"term": "Auf Wiedersehen", "definition": "Formeller Abschiedsgruß."},
+            {"term": "Ja", "definition": "Bejahende Antwort."},
+            {"term": "Nein", "definition": "Verneinende Antwort."},
+            {"term": "Danke", "definition": "Ausdruck der Dankbarkeit."},
+            {"term": "Bitte", "definition": "Antwort auf 'Danke'; höfliche Aufforderung."},
+            {"term": "Entschuldigung", "gender": "f", "definition": "Ausdruck des Bedauerns; Bitte um Nachsicht."},
+            {"term": "Okay", "definition": "In Ordnung; Einverstanden."},
+            {"term": "In Ordnung", "definition": "Alles gut; Einverstanden."},
+            {"term": "Ein", "definition": "Die Zahl 1; unbestimmter Artikel."},
+            {"term": "Tee", "gender": "m", "definition": "Heißgetränk aus Teeblättern."},
+            {"term": "Kaffee", "gender": "m", "definition": "Heißgetränk aus Kaffeebohnen."},
+            {"term": "Wasser", "gender": "n", "definition": "Farblose Flüssigkeit."},
+            {"term": "Saft", "gender": "m", "definition": "Flüssigkeit aus Früchten/Gemüse."},
+            {"term": "Bier", "gender": "n", "definition": "Alkoholisches Getränk aus Malz."},
+            {"term": "Wein", "gender": "m", "definition": "Alkoholisches Getränk aus Trauben."},
+            {"term": "Bargeld", "gender": "n", "definition": "Geld in Münzen oder Scheinen."},
+            {"term": "Karte", "gender": "f", "definition": "Plastikkarte für Zahlungen."}
+          ],
+          "functionality_note": "Der Benutzer kann alle Wörter oder ausgewählte Wörter zu seinem persönlichen Wörterbuch hinzufügen."
+        },
+        {
+          "block_type": "matching_opposites",
+          "title": "Gegensätze zuordnen",
+          "pairs": [
+            {"word1": "Hallo (Hallo)", "word2": "Tschüss (Auf Wiedersehen)"},
+            {"word1": "Ja (Ja)", "word2": "Nein (Nein)"},
+            {"word1": "Danke (Danke)", "word2": "Bitte (Gern geschehen)"},
+            {"word1": "Entschuldigung (Entschuldigung)", "word2": "Kein Problem (Kein Problem/Macht nichts)"}
+          ]
+        },
+        {
+          "block_type": "vocabulary_practice_modes",
+          "title": "Wortschatzübung (Karteikarten/Wörterbuch)",
+          "vocabulary_scope": "Vollständige Wortliste von Tag 1 (einschließlich 'Entschuldigung').",
+          "functionality_note": "Der Benutzer kann diese Wörter mit Karteikarten oder einem Wörterbuchmodus üben."
+        }
+      ]
     },
     {
       "title": "🎭Dialog (Dialogue)",

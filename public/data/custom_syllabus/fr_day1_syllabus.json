@@ -6,7 +6,75 @@
   "sections": [
     {
       "title": "🔍Jour 1 (Day 1)",
-      "content_placeholder": "Contenu à ajouter pour l'aperçu du Jour 1."
+      "audio_tts_phrase": "COSY Français. Jour 1.",
+      "content_blocks": [
+        {
+          "block_type": "pronunciation_rules_match",
+          "title": "Règles de prononciation",
+          "rules": [
+            {"combination": "on", "sound": "[ɔ̃]", "example_words": ["Bonjour", "Non"]},
+            {"combination": "ein", "sound": "[ɛ̃]", "example_words": ["Vin"]},
+            {"combination": "eau", "sound": "[o]", "example_words": ["Eau", "Au revoir"]},
+            {"combination": "u", "sound": "[y]", "example_words": ["Salut", "Jus"]}
+          ],
+          "sounds_to_match": ["[ɔ̃]", "[ɛ̃]", "[o]", "[y]", "[a]"]
+        },
+        {
+          "block_type": "image_match",
+          "title": "Associez les mots aux images",
+          "words": [
+            {"term": "Bonjour", "image_placeholder": "hello_image.png"},
+            {"term": "Au revoir", "image_placeholder": "goodbye_image.png"},
+            {"term": "Oui", "image_placeholder": "yes_image.png"},
+            {"term": "Non", "image_placeholder": "no_image.png"},
+            {"term": "Merci", "image_placeholder": "thankyou_image.png"},
+            {"term": "De rien", "image_placeholder": "yourewelcome_image.png"},
+            {"term": "Pardon", "image_placeholder": "sorry_image.png"}
+          ]
+        },
+        {
+          "block_type": "interactive_wordlist",
+          "title": "Liste de vocabulaire",
+          "vocabulary": [
+            {"term": "Bonjour", "definition": "Salutation générale utilisée pendant la journée."},
+            {"term": "Salut", "definition": "Salutation ou adieu informel."},
+            {"term": "Au revoir", "definition": "Formule pour prendre congé de quelqu'un."},
+            {"term": "Oui", "definition": "Réponse affirmative à une question."},
+            {"term": "Non", "definition": "Réponse négative à une question."},
+            {"term": "Merci", "definition": "Expression utilisée pour montrer de la gratitude."},
+            {"term": "De rien", "definition": "Réponse polie après que quelqu'un a dit 'merci'."},
+            {"term": "S'il vous plaît", "definition": "Formule de politesse pour demander quelque chose (formel/pluriel)."},
+            {"term": "Pardon", "definition": "Utilisé pour s'excuser ou pour demander à quelqu'un de répéter."},
+            {"term": "D'accord", "definition": "Indique l'accord, la compréhension ou que tout va bien."},
+            {"term": "Un", "definition": "Le nombre 1 (pour un nom masculin)."},
+            {"term": "Thé", "gender": "m", "definition": "Boisson chaude faite à partir de feuilles infusées de théier."},
+            {"term": "Café", "gender": "m", "definition": "Boisson faite à partir de grains de café torréfiés et moulus."},
+            {"term": "Eau", "gender": "f", "definition": "Liquide transparent, inodore, essentiel à la vie."},
+            {"term": "Jus", "gender": "m", "definition": "Boisson liquide obtenue en pressant des fruits ou des légumes."},
+            {"term": "Bière", "gender": "f", "definition": "Boisson alcoolisée obtenue par fermentation de malt et aromatisée au houblon."},
+            {"term": "Vin", "gender": "m", "definition": "Boisson alcoolisée obtenue par la fermentation du jus de raisin."},
+            {"term": "Espèces", "gender": "f", "definition": "Argent sous forme de pièces et de billets (utilisé au pluriel)."},
+            {"term": "Carte", "gender": "f", "definition": "Moyen de paiement en plastique (bancaire, de crédit)."}
+          ],
+          "functionality_note": "L'utilisateur peut ajouter tous les mots ou sélectionner des mots individuels à son dictionnaire personnel."
+        },
+        {
+          "block_type": "matching_opposites",
+          "title": "Associer les contraires",
+          "pairs": [
+            {"word1": "Bonjour (Salut)", "word2": "Au revoir (Salut)"},
+            {"word1": "Oui (Oui)", "word2": "Non (Non)"},
+            {"word1": "Merci (Merci)", "word2": "De rien (De rien)"},
+            {"word1": "Pardon (Pardon)", "word2": "Ce n'est pas grave (Pas de problème)"}
+          ]
+        },
+        {
+          "block_type": "vocabulary_practice_modes",
+          "title": "Pratique du vocabulaire (Cartes mémoire/Dictionnaire)",
+          "vocabulary_scope": "Liste complète du vocabulaire du Jour 1 (y compris 'pardon').",
+          "functionality_note": "L'utilisateur peut pratiquer ces mots en utilisant des cartes mémoire ou un mode dictionnaire."
+        }
+      ]
     },
     {
       "title": "🎭Dialogue",
@@ -15,7 +83,7 @@
         {"speaker": "B", "line": "Bonjour, café ou thé ?"},
         {"speaker": "A", "line": "Un café, s'il vous plaît."},
         {"speaker": "B", "line": "Un thé ?"},
-        {"speaker": "A", "line": "No, un café, s'il vous plaît."},
+        {"speaker": "A", "line": "Non, un café, s'il vous plaît."},
         {"speaker": "B", "line": "Un café ?"},
         {"speaker": "A", "line": "Oui, s'il vous plaît."},
         {"speaker": "B", "line": "D'accord."},
