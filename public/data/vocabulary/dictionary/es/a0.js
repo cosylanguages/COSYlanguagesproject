@@ -3,26 +3,26 @@ export const a0_spanish_vocabulary = {
     {
       "term": "Hola",
       "pronunciation": "O-la",
-      "partOfSpeech": "interjection",
-      "definition": "Hello (general greeting)",
+      "partOfSpeech": "interjección (interjección)",
+      "definition": "Saludo general e informal. (Saludo general e informal.) - General and informal greeting.",
       "example": "Hola, ¿qué tal? - Hello, how are you?",
       "level": "a0",
-      "notes": ""
+      "notes": "Buenos días (good morning/day) es más formal. (Buenos días (good morning/day) is more formal.)"
     },
     {
       "term": "Adiós",
       "pronunciation": "a-DYOS",
-      "partOfSpeech": "interjection",
-      "definition": "Goodbye",
+      "partOfSpeech": "interjección (interjección)",
+      "definition": "Despedida. (Despedida.) - Farewell.",
       "example": "Adiós, ¡hasta mañana! - Goodbye, until tomorrow!",
       "level": "a0",
-      "notes": "Hasta luego (see you later) is also common."
+      "notes": "Hasta luego (hasta LWEH-go) significa 'see you later' y es también común. (Hasta luego means 'see you later' and is also common.)"
     },
     {
       "term": "Sí",
       "pronunciation": "SEE",
-      "partOfSpeech": "adverb",
-      "definition": "Yes",
+      "partOfSpeech": "adverbio (adverbio)",
+      "definition": "Respuesta afirmativa. (Respuesta afirmativa.) - Affirmative answer.",
       "example": "Sí, quiero. - Yes, I want (it).",
       "level": "a0",
       "notes": ""
@@ -30,8 +30,8 @@ export const a0_spanish_vocabulary = {
     {
       "term": "No",
       "pronunciation": "NO",
-      "partOfSpeech": "adverb",
-      "definition": "No",
+      "partOfSpeech": "adverbio (adverbio)",
+      "definition": "Respuesta negativa. (Respuesta negativa.) - Negative answer.",
       "example": "No, gracias. - No, thank you.",
       "level": "a0",
       "notes": ""
@@ -39,8 +39,8 @@ export const a0_spanish_vocabulary = {
     {
       "term": "Gracias",
       "pronunciation": "GRA-thyas (Spain) / GRA-syas (LatAm)",
-      "partOfSpeech": "interjection",
-      "definition": "Thank you",
+      "partOfSpeech": "interjección (interjección)",
+      "definition": "Expresión de gratitud. (Expresión de gratitud.) - Expression of gratitude.",
       "example": "Muchas gracias por tu ayuda. - Thank you very much for your help.",
       "level": "a0",
       "notes": ""
@@ -48,8 +48,8 @@ export const a0_spanish_vocabulary = {
     {
       "term": "De nada",
       "pronunciation": "de NA-da",
-      "partOfSpeech": "phrase",
-      "definition": "You're welcome",
+      "partOfSpeech": "locución (locución)",
+      "definition": "Respuesta cortés a un agradecimiento. (Respuesta cortés a un agradecimiento.) - Polite response to thanks.",
       "example": "Gracias. - De nada. - Thank you. - You're welcome.",
       "level": "a0",
       "notes": ""
@@ -57,8 +57,8 @@ export const a0_spanish_vocabulary = {
     {
       "term": "Por favor",
       "pronunciation": "por fa-VOR",
-      "partOfSpeech": "phrase",
-      "definition": "Please",
+      "partOfSpeech": "locución (locución)",
+      "definition": "Fórmula de cortesía para pedir algo. (Fórmula de cortesía para pedir algo.) - Polite formula for asking for something.",
       "example": "Un café, por favor. - A coffee, please.",
       "level": "a0",
       "notes": ""
@@ -66,17 +66,17 @@ export const a0_spanish_vocabulary = {
     {
       "term": "Vale",
       "pronunciation": "BA-le",
-      "partOfSpeech": "interjection/adverb",
-      "definition": "Alright / OK (primarily Spain)",
+      "partOfSpeech": "interjección/adverbio (interjección/adverbio)",
+      "definition": "Indica acuerdo o conformidad (principalmente en España). (Indica acuerdo o conformidad (principalmente en España).) - Indicates agreement or conformity (primarily in Spain).",
       "example": "Vale, nos vemos luego. - OK, see you later.",
       "level": "a0",
-      "notes": "Está bien is common in Latin America and also understood in Spain."
+      "notes": "Está bien es común en Latinoamérica y también se entiende en España. (Está bien is common in Latin America and also understood in Spain.)"
     },
     {
       "term": "Está bien",
       "pronunciation": "es-TA BYEN",
-      "partOfSpeech": "phrase",
-      "definition": "Alright / OK / It's fine",
+      "partOfSpeech": "locución (locución)",
+      "definition": "Indica que algo es correcto, aceptable o satisfactorio. (Indica que algo es correcto, aceptable o satisfactorio.) - Indicates something is correct, acceptable, or satisfactory.",
       "example": "Está bien, lo haré. - Alright, I'll do it.",
       "level": "a0",
       "notes": ""
@@ -84,18 +84,18 @@ export const a0_spanish_vocabulary = {
     {
       "term": "Uno",
       "pronunciation": "OO-no",
-      "partOfSpeech": "number",
-      "definition": "One",
+      "partOfSpeech": "numeral (numeral)",
+      "definition": "El número 1. (El número 1.) - The number 1.",
       "example": "Tengo uno. - I have one.",
       "level": "a0",
-      "notes": "Changes to un (m) / una (f) before nouns."
+      "notes": "Cambia a un (m) / una (f) antes de sustantivos. (Changes to un (m) / una (f) before nouns.)"
     },
     {
       "term": "Té",
       "pronunciation": "TE",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nombre (nombre)",
       "gender": "m",
-      "definition": "Tea",
+      "definition": "Bebida caliente hecha con hojas de la planta de té. (Bebida caliente hecha con hojas de la planta de té.) - Hot drink made with tea plant leaves.",
       "example": "¿Quieres un té? - Do you want a tea?",
       "level": "a0",
       "notes": "el té"
@@ -103,9 +103,9 @@ export const a0_spanish_vocabulary = {
     {
       "term": "Café",
       "pronunciation": "ka-FE",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nombre (nombre)",
       "gender": "m",
-      "definition": "Coffee",
+      "definition": "Bebida hecha de granos de café tostados. (Bebida hecha de granos de café tostados.) - Drink made from roasted coffee beans.",
       "example": "Me gusta el café solo. - I like black coffee.",
       "level": "a0",
       "notes": "el café"
@@ -113,39 +113,39 @@ export const a0_spanish_vocabulary = {
     {
       "term": "Agua",
       "pronunciation": "A-gwa",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nombre (nombre)",
       "gender": "f",
-      "definition": "Water",
+      "definition": "Líquido incoloro, transparente e inodoro. (Líquido incoloro, transparente e inodoro.) - Colorless, transparent, odorless liquid.",
       "example": "Un vaso de agua, por favor. - A glass of water, please.",
       "level": "a0",
-      "notes": "Uses 'el' article in singular (el agua) due to starting with stressed 'a', but is feminine."
+      "notes": "Usa el artículo 'el' en singular (el agua) por empezar con 'a' tónica, pero es femenino. (Uses 'el' article in singular (el agua) due to starting with stressed 'a', but is feminine.)"
     },
     {
       "term": "Zumo",
       "pronunciation": "THOO-mo (Spain) / SOO-mo (LatAm variant)",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nombre (nombre)",
       "gender": "m",
-      "definition": "Juice (Spain)",
+      "definition": "Líquido extraído de frutas o verduras (España). (Líquido extraído de frutas o verduras (España).) - Liquid extracted from fruits or vegetables (Spain).",
       "example": "Zumo de naranja. - Orange juice.",
       "level": "a0",
-      "notes": "el zumo. Jugo (HOO-go) is used in Latin America."
+      "notes": "el zumo. Jugo (HOO-go) se usa en Latinoamérica. (Jugo is used in Latin America.)"
     },
     {
       "term": "Jugo",
       "pronunciation": "HOO-go",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nombre (nombre)",
       "gender": "m",
-      "definition": "Juice (Latin America)",
+      "definition": "Líquido extraído de frutas o verduras (Latinoamérica). (Líquido extraído de frutas o verduras (Latinoamérica).) - Liquid extracted from fruits or vegetables (Latin America).",
       "example": "Jugo de manzana. - Apple juice.",
       "level": "a0",
-      "notes": "el jugo. Zumo is used in Spain."
+      "notes": "el jugo. Zumo se usa en España. (Zumo is used in Spain.)"
     },
     {
       "term": "Cerveza",
       "pronunciation": "ser-VE-sa (Spain) / ser-VE-za (LatAm)",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nombre (nombre)",
       "gender": "f",
-      "definition": "Beer",
+      "definition": "Bebida alcohólica hecha de malta fermentada. (Bebida alcohólica hecha de malta fermentada.) - Alcoholic drink made from fermented malt.",
       "example": "Una cerveza fría. - A cold beer.",
       "level": "a0",
       "notes": "la cerveza"
@@ -153,9 +153,9 @@ export const a0_spanish_vocabulary = {
     {
       "term": "Vino",
       "pronunciation": "VEE-no",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nombre (nombre)",
       "gender": "m",
-      "definition": "Wine",
+      "definition": "Bebida alcohólica hecha de uvas fermentadas. (Bebida alcohólica hecha de uvas fermentadas.) - Alcoholic drink made from fermented grapes.",
       "example": "¿Vino tinto o blanco? - Red or white wine?",
       "level": "a0",
       "notes": "el vino"
@@ -163,9 +163,9 @@ export const a0_spanish_vocabulary = {
     {
       "term": "Efectivo",
       "pronunciation": "e-fek-TEE-vo",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nombre (nombre)",
       "gender": "m",
-      "definition": "Cash",
+      "definition": "Dinero en monedas o billetes. (Dinero en monedas o billetes.) - Money in coins or banknotes.",
       "example": "Pagar en efectivo. - To pay in cash.",
       "level": "a0",
       "notes": "el efectivo"
@@ -173,14 +173,21 @@ export const a0_spanish_vocabulary = {
     {
       "term": "Tarjeta",
       "pronunciation": "tar-KHE-ta",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "nombre (nombre)",
       "gender": "f",
-      "definition": "Card (bank card)",
+      "definition": "Medio de pago de plástico (bancaria). (Medio de pago de plástico (bancaria).) - Plastic means of payment (bank card).",
       "example": "¿Aceptan tarjeta? - Do you accept card?",
       "level": "a0",
-      "notes": "la tarjeta (e.g. tarjeta de crédito)"
+      "notes": "la tarjeta (ej. tarjeta de crédito)"
+    },
+    {
+      "term": "Perdón",
+      "pronunciation": "per-DON",
+      "partOfSpeech": "interjección/nombre (interjección/nombre)",
+      "definition": "Para disculparse o pedir que se repita algo. (Para disculparse o pedir que se repita algo.) - To apologize or ask for something to be repeated.",
+      "example": "Perdón, ¿puede repetir? - Sorry/Excuse me, can you repeat?",
+      "level": "a0",
+      "notes": "Lo siento expresa más arrepentimiento. (Lo siento expresses more regret.)"
     }
   ]
 };
-
-// module.exports = a0_spanish_vocabulary; // Uncomment if using CommonJS
