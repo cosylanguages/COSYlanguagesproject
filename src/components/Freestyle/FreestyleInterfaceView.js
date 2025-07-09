@@ -34,15 +34,7 @@ const FreestyleInterfaceView = ({
 
   // Determine visibility of major sections using the new logic
   const showDaySelector = isMenuItemVisible(activePath, 'day_selection_stage', allMenuItemsConfig);
-  const showPracticeCategories = isMenuItemVisible(activePath, 'main_practice_categories_stage', allMenuItemsConfig);
-
-  // SubPracticeMenu visibility: if a main category is active and has children
-  // The key for the main category itself (e.g., 'vocabulary') should be the active stage for SubPracticeMenu to appear.
-  const showSubPracticeMenu = currentMainCategoryKey &&
-                              activePath.includes(currentMainCategoryKey) &&
-                              allMenuItemsConfig[currentMainCategoryKey]?.children?.length > 0 &&
-                              activePath[activePath.length -1 ] === currentMainCategoryKey;
-
+  // showPracticeCategories and showSubPracticeMenu constants were removed as their logic is directly in JSX.
 
   // ExerciseHost visibility: if the last item in activePath is a leaf node (no children defined in config)
   // and it's not one of the container/stage keys.
