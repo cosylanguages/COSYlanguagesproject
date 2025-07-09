@@ -34,12 +34,14 @@ const FreestyleInterfaceView = ({
 
   // Determine visibility of major sections using the new logic
   // const showLanguageSelector = activePath.length === 0; // Show initially - ESLint: 'showLanguageSelector' is assigned a value but never used.
-  const showDaySelector = isMenuItemVisible(activePath, 'day_selection_stage', allMenuItemsConfig);
+  // Temporarily override showDaySelector to depend on selectedLanguage and activePath,
+  // bypassing the stubbed isMenuItemVisible for this specific component.
+  const showDaySelectorUpdated = selectedLanguage && activePath.includes('day_selection_stage');
   const showPracticeCategories = isMenuItemVisible(activePath, 'main_practice_categories_stage', allMenuItemsConfig);
-  
+
   // SubPracticeMenu visibility: if a main category is active and has children
-  const showSubPracticeMenu = currentMainCategoryKey && 
-                              activePath.includes(currentMainCategoryKey) && 
+  const showSubPracticeMenu = currentMainCategoryKey &&
+                              activePath.includes(currentMainCategoryKey) &&
                               allMenuItemsConfig[currentMainCategoryKey]?.children?.length > 0 &&
                               activePath[activePath.length -1 ] === currentMainCategoryKey;
 
@@ -54,14 +56,14 @@ const FreestyleInterfaceView = ({
     const lastItemConfig = allMenuItemsConfig[lastActiveItemKey];
     if (lastItemConfig && (!lastItemConfig.children || lastItemConfig.children.length === 0)) {
       // Check if it's not a "stage" or "action" key that shouldn't directly host an exercise
-      if (lastActiveItemKey !== 'day_selection_stage' && 
+      if (lastActiveItemKey !== 'day_selection_stage' &&
           lastActiveItemKey !== 'day_confirm_action' &&
           lastActiveItemKey !== 'main_practice_categories_stage') {
         showExerciseHost = true;
         // The subPracticeType for ExerciseHost is the key of the leaf node.
         // This might be a main category if it has no subs (e.g. practice_all_main_cat)
         // or a sub-practice item, or a sub-sub-practice item.
-        exerciseHostSubPracticeType = lastActiveItemKey; 
+        exerciseHostSubPracticeType = lastActiveItemKey;
       }
     }
   }
@@ -77,7 +79,7 @@ const FreestyleInterfaceView = ({
     <div className="freestyle-mode-container">
       <div className="main-menu-box">
         <h1 className="freestyle-mode-header" data-transliterable>COSYlanguage</h1>
-        
+
         {/* Language Selection - always show or manage via activePath if needed */}
         {/* For now, let's assume it's always available, or its onLanguageChange triggers the first onMenuSelect */}
         <div className="menu-section selector-container">
@@ -88,13 +90,13 @@ const FreestyleInterfaceView = ({
             selectedLanguage={selectedLanguage}
             onLanguageChange={onLanguageChange} // This is the wrapper from FreestyleModePage
           />
-          <ToggleLatinizationButton 
+          <ToggleLatinizationButton
             currentDisplayLanguage={selectedLanguage}
           />
         </div>
 
         {/* Day Selector */}
-        {showDaySelector && selectedLanguage && ( // Also check selectedLanguage as day selector needs it
+        {showDaySelectorUpdated && selectedLanguage && ( // Also check selectedLanguage as day selector needs it
           <div className="selector-container">
             <DaySelectorFreestyle
               currentDays={selectedDays}
@@ -114,7 +116,7 @@ const FreestyleInterfaceView = ({
           <div className="selector-container">
             <PracticeCategoryNav
               // activeCategory prop might need to be derived from activePath or currentMainCategoryKey
-              activeCategoryKey={currentMainCategoryKey} 
+              activeCategoryKey={currentMainCategoryKey}
               onMenuSelect={onMenuSelect} // Categories will call this with their itemKey
               // Pass menu logic props if PracticeCategoryNav itself needs to check visibility of its children
               activePath={activePath}
@@ -145,7 +147,7 @@ const FreestyleInterfaceView = ({
           <ExerciseHost
             subPracticeType={exerciseHostSubPracticeType} // Determined by activePath leaf
             language={selectedLanguage}
-            days={selectedDays.map(String)} 
+            days={selectedDays.map(String)}
             exerciseKey={exerciseKey} // To force re-mount/re-fetch
           />
         ) : (
