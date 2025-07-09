@@ -1,5 +1,5 @@
 // src/utils/syllabusService.js
-import { fetchJsonData } from './exerciseDataService'; // Assuming this is the correct path
+import * as ExerciseDataService from './exerciseDataService'; // Import all as a namespace
 
 const MAX_PROBE_DAYS = 30; // Max number of days to check for syllabus files
 
@@ -19,33 +19,23 @@ export async function getAvailableSyllabusDays(languageCode) {
     const fileName = `${languageCode}_day${i}_syllabus.json`;
     const filePath = `/data/custom_syllabus/${fileName}`;
     try {
-      // We only need to know if the file exists and potentially grab the lesson name.
-      // A full fetchJsonData might be overkill if we just need existence,
-      // but it's practical here as we also want the lesson_name.
-      const { data, error } = await fetchJsonData(filePath);
+      const { data, error, errorType } = await ExerciseDataService.fetchJsonData(filePath); // Corrected
       if (!error && data && data.lesson_name) {
         availableDays.push({
           dayNumber: i,
           lessonName: data.lesson_name,
-          fileName: fileName // Store fileName for easier fetching later
+          fileName: fileName
         });
       } else if (!error && data && !data.lesson_name) {
-        // File exists but no lesson_name, could be an issue or just a differently structured file.
-        // For now, we'll only include it if lesson_name is present.
-        // console.warn(`Syllabus file ${filePath} found but missing 'lesson_name'.`);
-        // Fallback: use day number as name if no lesson_name but file exists
          availableDays.push({
           dayNumber: i,
-          lessonName: `Day ${i} (Name TBD)`, // Fallback name
+          lessonName: `Day ${i} (Name TBD)`,
           fileName: fileName
         });
       } else if (error && errorType !== 'fileNotFound' && errorType !== 'jsonError') {
-        // Log more serious errors but continue probing other days
         // console.error(`Error probing syllabus file ${filePath}:`, error);
       }
-      // If fileNotFound or jsonError, we just skip this day.
     } catch (e) {
-      // Catch any unexpected errors during the fetch/parse itself
       console.error(`Unexpected error while probing ${filePath}:`, e);
     }
   }
@@ -65,9 +55,9 @@ export async function fetchSyllabusForDay(languageCode, dayNumber) {
   }
   const fileName = `${languageCode}_day${dayNumber}_syllabus.json`;
   const filePath = `/data/custom_syllabus/${fileName}`;
-
-  const { data, error } = await fetchJsonData(filePath);
-
+  
+  const { data, error } = await ExerciseDataService.fetchJsonData(filePath); // Corrected
+  
   if (error) {
     console.error(`Error fetching syllabus ${filePath}:`, error);
     return null;
@@ -87,7 +77,7 @@ export async function fetchSyllabusByFileName(syllabusFileName) {
         return null;
     }
     const filePath = `/data/custom_syllabus/${syllabusFileName}`;
-    const { data, error } = await fetchJsonData(filePath);
+    const { data, error } = await ExerciseDataService.fetchJsonData(filePath); // Corrected
 
     if (error) {
         console.error(`Error fetching syllabus ${filePath}:`, error);
