@@ -33,13 +33,11 @@ const FreestyleInterfaceView = ({
   const { t } = useI18n();
 
   // Determine visibility of major sections using the new logic
-  // const showLanguageSelector = activePath.length === 0; // Show initially - ESLint: 'showLanguageSelector' is assigned a value but never used.
-  // Temporarily override showDaySelector to depend on selectedLanguage and activePath,
-  // bypassing the stubbed isMenuItemVisible for this specific component.
-  const showDaySelectorUpdated = selectedLanguage && activePath.includes('day_selection_stage');
+  const showDaySelector = isMenuItemVisible(activePath, 'day_selection_stage', allMenuItemsConfig);
   const showPracticeCategories = isMenuItemVisible(activePath, 'main_practice_categories_stage', allMenuItemsConfig);
 
   // SubPracticeMenu visibility: if a main category is active and has children
+  // The key for the main category itself (e.g., 'vocabulary') should be the active stage for SubPracticeMenu to appear.
   const showSubPracticeMenu = currentMainCategoryKey &&
                               activePath.includes(currentMainCategoryKey) &&
                               allMenuItemsConfig[currentMainCategoryKey]?.children?.length > 0 &&
@@ -96,7 +94,7 @@ const FreestyleInterfaceView = ({
         </div>
 
         {/* Day Selector */}
-        {showDaySelectorUpdated && selectedLanguage && ( // Also check selectedLanguage as day selector needs it
+        {showDaySelector && selectedLanguage && ( // Also check selectedLanguage as day selector needs it
           <div className="selector-container">
             <DaySelectorFreestyle
               currentDays={selectedDays}
@@ -112,7 +110,14 @@ const FreestyleInterfaceView = ({
         )}
 
         {/* Practice Category Navigation */}
-        {showPracticeCategories && (
+        {/* PracticeCategoryNav should be visible if 'main_practice_categories_stage' is active OR one of its children (a main category like 'vocabulary') is active.
+            If 'vocabulary' is active, PracticeCategoryNav might show 'vocabulary' as selected and other main cats as options.
+            The isMenuItemVisible for 'main_practice_categories_stage' covers the first case.
+            If a specific category like 'vocabulary' is the activeStage, PracticeCategoryNav should still render.
+            Let's refine this: It should be visible if the path is at or beyond 'main_practice_categories_stage',
+            but not yet at a leaf exercise node (unless the category itself is a leaf).
+        */}
+        {isMenuItemVisible(activePath, 'main_practice_categories_stage', allMenuItemsConfig) && (
           <div className="selector-container">
             <PracticeCategoryNav
               // activeCategory prop might need to be derived from activePath or currentMainCategoryKey
@@ -127,7 +132,18 @@ const FreestyleInterfaceView = ({
         )}
 
         {/* Sub-Practice Menu */}
-        {showSubPracticeMenu && currentMainCategoryKey && (
+        {/* showSubPracticeMenu logic was: currentMainCategoryKey && activePath.includes(currentMainCategoryKey) && ...
+            This translates to: the currentMainCategoryKey (e.g. 'vocabulary') IS the active stage.
+            And it should have children to display.
+        */}
+        {currentMainCategoryKey &&
+         isMenuItemVisible(activePath, currentMainCategoryKey, allMenuItemsConfig) &&
+         allMenuItemsConfig[currentMainCategoryKey]?.children?.length > 0 &&
+         !allMenuItemsConfig[currentMainCategoryKey]?.isExercise && // Don't show sub-menu if the category itself is an exercise host
+         (
+           // Ensure we are not already at a deeper exercise level within this category
+           activePath.length === (allMenuItemsConfig[currentMainCategoryKey]?.parent.split('/').length || 0) + 2 // Path: [...parent, main_cat_stage, main_cat_key]
+         ) && (
           <div className="selector-container">
             <SubPracticeMenu
               mainCategoryKey={currentMainCategoryKey} // Pass the key of the parent category
@@ -154,10 +170,11 @@ const FreestyleInterfaceView = ({
           <p className="freestyle-mode-message">
             {/* Updated placeholder messages based on new state logic */}
             {!selectedLanguage ? t('selectLang', "Please select a language to begin.") :
-             !activePath.includes('day_confirm_action') ? t('selectDayAndConfirm', "Please select day(s) and confirm.") :
-             !currentMainCategoryKey && !showExerciseHost ? t('selectPractice', "Please select a practice category.") :
-             !currentSubPracticeKey && !showExerciseHost && allMenuItemsConfig[currentMainCategoryKey]?.children?.length > 0 ? t('selectSubPractice', "Please select a specific exercise.") :
-             !showExerciseHost ? t('freestyle.selectExerciseFromMenu', "Select an exercise from the menu.") : // Fallback if no exercise yet
+             !isMenuItemVisible(activePath, 'day_confirm_action', allMenuItemsConfig) && activePath.includes('day_selection_stage') ? t('selectDayAndConfirm', "Please select day(s) and confirm.") :
+             !isMenuItemVisible(activePath, 'main_practice_categories_stage', allMenuItemsConfig) && isMenuItemVisible(activePath, 'day_confirm_action', allMenuItemsConfig) ? t('freestyle.loadingCategories', "Loading categories...") : // Placeholder if needed
+             isMenuItemVisible(activePath, 'main_practice_categories_stage', allMenuItemsConfig) && !currentMainCategoryKey && !showExerciseHost ? t('selectPractice', "Please select a practice category.") :
+             currentMainCategoryKey && isMenuItemVisible(activePath, currentMainCategoryKey, allMenuItemsConfig) && !currentSubPracticeKey && !showExerciseHost && allMenuItemsConfig[currentMainCategoryKey]?.children?.length > 0 && !allMenuItemsConfig[currentMainCategoryKey]?.isExercise ? t('selectSubPractice', "Please select a specific exercise.") :
+             !showExerciseHost ? t('freestyle.selectExerciseFromMenu', "Select an exercise from the menu.") :
              t('freestyle.genericInstructions', "Select options above to start an exercise.")
             }
           </p>

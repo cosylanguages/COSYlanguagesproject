@@ -124,8 +124,8 @@ const FreestyleModePage = () => {
     setExerciseKey(prevKey => prevKey + 1);
 
     // After language states are updated, set the menu path to day selection stage
-    // Bypassing the stubbed handleMenuSelection for now.
-    setActivePath(['day_selection_stage']);
+    // Now using onMenuSelect to utilize the implemented handleMenuSelection.
+    onMenuSelect('day_selection_stage');
 
     const languageName = t(`language.${newLanguage}`, newLanguage.replace('COSY', ''));
     showToast(t('freestyle.languageChangedToast', `Language changed: ${languageName}`, { languageName }));
