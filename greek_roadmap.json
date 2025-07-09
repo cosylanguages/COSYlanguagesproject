@@ -13,6 +13,64 @@
         "Recognize familiar Greek names, words, and very simple sentences on notices, posters, or in simple instructions.",
         "Understand simple classroom instructions given slowly and clearly."
       ],
+      "sections": [
+        {
+          "title": "🔍Ημέρα 1 (Day 1)",
+          "content_placeholder": "Περιεχόμενο θα προστεθεί για την επισκόπηση της Ημέρας 1."
+        },
+        {
+          "title": "🎭Διάλογος (Dialogue)",
+          "dialogue": [
+            {"speaker": "A", "line": "Γεια σας."},
+            {"speaker": "B", "line": "Γεια σας, καφέ ή τσάι;"},
+            {"speaker": "A", "line": "Έναν καφέ, παρακαλώ."},
+            {"speaker": "B", "line": "Ένα τσάι;"},
+            {"speaker": "A", "line": "Όχι, έναν καφέ, παρακαλώ."},
+            {"speaker": "B", "line": "Έναν καφέ;"},
+            {"speaker": "A", "line": "Ναι, παρακαλώ."},
+            {"speaker": "B", "line": "Εντάξει."},
+            {"speaker": "A", "line": "Ευχαριστώ!"},
+            {"speaker": "B", "line": "Παρακαλώ."},
+            {"speaker": "B", "line": "Μετρητά ή κάρτα;"},
+            {"speaker": "A", "line": "Μετρητά, παρακαλώ."},
+            {"speaker": "B", "line": "Μετρητά;"},
+            {"speaker": "A", "line": "Ναι, παρακαλώ."},
+            {"speaker": "B", "line": "Εντάξει."},
+            {"speaker": "A", "line": "Ευχαριστώ."},
+            {"speaker": "B", "line": "Παρακαλώ."},
+            {"speaker": "A", "line": "Αντίο."},
+            {"speaker": "B", "line": "Αντίο."}
+          ]
+        },
+        {
+          "title": "🎬Εξάσκηση: Διάλογος (Practice: Dialogue)",
+          "content_placeholder": "Πρακτικές ασκήσεις για τον διάλογο θα προστεθούν."
+        },
+        {
+          "title": "⚙️Τι είναι αυτό; (What is it?)",
+          "grammar_points": [
+            "Τι είναι αυτό;",
+            "Αυτό είναι ...;",
+            "Αυτό είναι ... ή ...;",
+            "Αυτό είναι ... .",
+            "Αυτό δεν είναι ... .",
+            "Αυτό δεν είναι ..., αλλά είναι ... ."
+          ],
+          "example_vocabulary": ["βιβλίο (το), τραπέζι (το), στυλό (το), φλιτζάνι (το), αυτοκίνητο (το)"]
+        },
+        {
+          "title": "⚙️Το γένος (The Gender)",
+          "content_placeholder": "Περιεχόμενο σχετικό με το γραμματικό γένος θα προστεθεί."
+        },
+        {
+          "title": "🎬Εξάσκηση: Είναι (Practice: It is)",
+          "content_placeholder": "Πρακτικές ασκήσεις για τις δομές με το 'είναι' θα προστεθούν."
+        },
+        {
+          "title": "🎒Το τέλος. (The end.)",
+          "content_placeholder": "Σύνοψη ή τελικές παρατηρήσεις για την Ημέρα 1 θα προστεθούν."
+        }
+      ],
       "language_focus_topics": [
         "The Greek Alphabet (Το Ελληνικό Αλφάβητο): Recognition, pronunciation of letters, uppercase and lowercase.",
         "Basic Pronunciation Rules: Diphthongs (e.g., αι, ει, οι, ου, υι), key consonant combinations (e.g., γγ, γκ, μπ, ντ, τσ, τζ). Voiced/unvoiced consonants.",
@@ -24,9 +82,11 @@
         "Adjectives (Επίθετα): Basic adjectives (e.g., καλός, καλή, καλό - good; μεγάλος - big; μικρός - small). Agreement with nouns in gender, number (singular), and case (Nominative, Accusative).",
         "Basic Question Words: Τι; (What?), Ποιος/Ποια/Ποιο; (Who?), Πού; (Where?), Πότε; (When? - very basic), Πώς; (How?).",
         "Numbers (Αριθμοί): Cardinal numbers 0-20 (μηδέν - είκοσι).",
-        "Basic sentence structure: Subject-Verb-Object."
+        "Basic sentence structure: Subject-Verb-Object.",
+        "Day 1 Grammar - 'Αυτό είναι': Τι είναι αυτό;, Αυτό είναι ...;, Αυτό είναι ... ή ...;, Αυτό είναι ..., Αυτό δεν είναι ..., Αυτό δεν είναι ..., αλλά είναι ..."
       ],
       "vocabulary_topics": [
+        "Ημέρα 1: Βασικές Λέξεις και Φράσεις (Day 1: Basic Words and Phrases): Γεια σου/σας (hello), Αντίο (goodbye), Ναι (yes), Όχι (no), Ευχαριστώ (thank you), Παρακαλώ (you're welcome/please), Εντάξει/ΟΚ (alright/ok), Ένα (one), Τσάι (το) (tea), Καφές (ο) (coffee), Νερό (το) (water), Χυμός (ο) (juice), Μπίρα (η) (beer), Κρασί (το) (wine), Μετρητά (τα) (cash), Κάρτα (η) (card).",
         "Greetings & Politeness: Γεια σου/σας, Καλημέρα, Καλησπέρα, Καληνύχτα, Αντίο, Ευχαριστώ, Παρακαλώ, Συγγνώμη, Ναι, Όχι, Τι κάνεις/κάνετε; (How are you?), Καλά/Πολύ καλά (Fine/Very well).",
         "Personal Information: Όνομα (name), επώνυμο (surname), ηλικία (age), χώρα (country), πόλη (city), εθνικότητα (nationality). Phrases like 'Με λένε...', 'Είμαι από...'.",
         "Numbers: 0-20.",
@@ -719,7 +779,7 @@
         "Exercises focusing on identifying and using advanced grammatical nuances, complex sentence structures (e.g., embedded clauses, advanced participial constructions), sophisticated use of cohesive devices, and adapting register effectively for different formal/informal and academic/professional contexts.",
         "Translating complex and stylistically nuanced texts from/to Greek, paying close attention to maintaining meaning, tone, register, and cultural equivalence (optional, depending on learning goals and specialization).",
         "Writing formal reports, proposals, or official correspondence (e.g., a policy brief, a research proposal, a formal complaint to an ombudsman) requiring precise language, logical structure, and adherence to specific professional or academic conventions.",
-        "Identifying and analyzing rhetorical devices, irony, satire, humor, or implicit meaning in various types of authentic texts and spoken discourse, and discussing their intended effect.",
+        "Identifying and analyzing rhetorical devices, irony, satire, humor, or implicit meaning in various types of authentic texts and spoken discourse, and discussing their intended effect and cultural implications.",
         "Peer review and providing detailed, constructive feedback on complex written assignments or oral presentations, focusing on content, structure, language use, and persuasiveness."
       ]
     },
@@ -833,3 +893,5 @@
     }
   ]
 }
+
+[end of greek_roadmap.json]

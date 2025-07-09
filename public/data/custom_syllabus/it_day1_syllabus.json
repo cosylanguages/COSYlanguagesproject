@@ -1,0 +1,68 @@
+{
+  "lesson_name": "Parole di Base (Basic Words)",
+  "language": "Italian",
+  "language_code": "it",
+  "level_code": "A0",
+  "sections": [
+    {
+      "title": "🔍Giorno 1 (Day 1)",
+      "content_placeholder": "Contenuto da aggiungere per la panoramica del Giorno 1."
+    },
+    {
+      "title": "🎭Dialogo (Dialogue)",
+      "dialogue": [
+        {"speaker": "A", "line": "Salve."},
+        {"speaker": "B", "line": "Salve, caffè o tè?"},
+        {"speaker": "A", "line": "Un caffè, per favore."},
+        {"speaker": "B", "line": "Un tè?"},
+        {"speaker": "A", "line": "No, un caffè, per favore."},
+        {"speaker": "B", "line": "Un caffè?"},
+        {"speaker": "A", "line": "Sì, per favore."},
+        {"speaker": "B", "line": "Va bene."},
+        {"speaker": "A", "line": "Grazie!"},
+        {"speaker": "B", "line": "Prego."},
+        {"speaker": "B", "line": "Contanti o carta?"},
+        {"speaker": "A", "line": "Contanti, per favore."},
+        {"speaker": "B", "line": "Contanti?"},
+        {"speaker": "A", "line": "Sì, per favore."},
+        {"speaker": "B", "line": "Va bene."},
+        {"speaker": "A", "line": "Grazie."},
+        {"speaker": "B", "line": "Prego."},
+        {"speaker": "A", "line": "Arrivederci."},
+        {"speaker": "B", "line": "Arrivederci."}
+      ]
+    },
+    {
+      "title": "🎬Pratica: Dialogo (Practice: Dialogue)",
+      "content_placeholder": "Esercizi pratici per il dialogo da aggiungere."
+    },
+    {
+      "title": "⚙️Cos'è? (What is it?)",
+      "grammar_points": [
+        "Che cos'è? - What is it?",
+        "È ...? - Is it ...?",
+        "È ... o ...? - Is it ... or ...?",
+        "È ... . - It is ...",
+        "Non è ... . - It is not ...",
+        "Non è ..., ma è ... . - It is not ..., but it is..."
+      ],
+      "example_vocabulary": [
+        "libro (m) - book",
+        "tavolo (m) - table",
+        "penna (f) - pen"
+      ]
+    },
+    {
+      "title": "⚙️Il Genere (The Gender)",
+      "content_placeholder": "Contenuto relativo al genere grammaticale da aggiungere."
+    },
+    {
+      "title": "🎬Pratica: È (Practice: It is)",
+      "content_placeholder": "Esercizi pratici per le strutture con 'è' da aggiungere."
+    },
+    {
+      "title": "🎒La Fine. (The end.)",
+      "content_placeholder": "Riassunto o osservazioni conclusive per il Giorno 1 da aggiungere."
+    }
+  ]
+}

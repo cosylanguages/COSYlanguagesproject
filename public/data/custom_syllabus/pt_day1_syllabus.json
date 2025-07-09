@@ -1,0 +1,68 @@
+{
+  "lesson_name": "Palavras Básicas (Basic Words)",
+  "language": "Portuguese",
+  "language_code": "pt",
+  "level_code": "A0",
+  "sections": [
+    {
+      "title": "🔍Dia 1 (Day 1)",
+      "content_placeholder": "Conteúdo a ser adicionado para a visão geral do Dia 1."
+    },
+    {
+      "title": "🎭Diálogo (Dialogue)",
+      "dialogue": [
+        {"speaker": "A", "line": "Olá."},
+        {"speaker": "B", "line": "Olá, café ou chá?"},
+        {"speaker": "A", "line": "Um café, por favor."},
+        {"speaker": "B", "line": "Um chá?"},
+        {"speaker": "A", "line": "Não, um café, por favor."},
+        {"speaker": "B", "line": "Um café?"},
+        {"speaker": "A", "line": "Sim, por favor."},
+        {"speaker": "B", "line": "Está bem."},
+        {"speaker": "A", "line": "Obrigado!"},
+        {"speaker": "B", "line": "De nada."},
+        {"speaker": "B", "line": "Dinheiro ou cartão?"},
+        {"speaker": "A", "line": "Dinheiro, por favor."},
+        {"speaker": "B", "line": "Dinheiro?"},
+        {"speaker": "A", "line": "Sim, por favor."},
+        {"speaker": "B", "line": "Está bem."},
+        {"speaker": "A", "line": "Obrigado."},
+        {"speaker": "B", "line": "De nada."},
+        {"speaker": "A", "line": "Adeus."},
+        {"speaker": "B", "line": "Adeus."}
+      ]
+    },
+    {
+      "title": "🎬Prática: Diálogo (Practice: Dialogue)",
+      "content_placeholder": "Exercícios práticos para o diálogo a serem adicionados."
+    },
+    {
+      "title": "⚙️O que é isto? (What is it?)",
+      "grammar_points": [
+        "O que é isto? - What is it?",
+        "Isto é ...? - Is it ...?",
+        "Isto é ... ou ...? - Is it ... or ...?",
+        "Isto é ... . / É ... . - It is ...",
+        "Isto não é ... . / Não é ... . - It is not ...",
+        "Isto não é ..., mas é ... . - It is not ..., but it is..."
+      ],
+      "example_vocabulary": [
+        "livro (m) - book",
+        "mesa (f) - table",
+        "caneta (f) - pen"
+      ]
+    },
+    {
+      "title": "⚙️O Gênero (The Gender)",
+      "content_placeholder": "Conteúdo relacionado ao gênero gramatical a ser adicionado."
+    },
+    {
+      "title": "🎬Prática: É (Practice: It is)",
+      "content_placeholder": "Exercícios práticos para estruturas com 'é' a serem adicionados."
+    },
+    {
+      "title": "🎒Fim. (The end.)",
+      "content_placeholder": "Resumo ou observações finais para o Dia 1 a serem adicionados."
+    }
+  ]
+}

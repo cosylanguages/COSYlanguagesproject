@@ -1,0 +1,68 @@
+{
+  "lesson_name": "Gerioù Diazez (Basic Words)",
+  "language": "Breton",
+  "language_code": "br",
+  "level_code": "A0",
+  "sections": [
+    {
+      "title": "🔍Deiz 1 (Day 1)",
+      "content_placeholder": "Endalc'had da vezañ ouzhpennet evit Deiz 1."
+    },
+    {
+      "title": "🎭Diviz (Dialogue)",
+      "dialogue": [
+        {"speaker": "A", "line": "Demat"},
+        {"speaker": "B", "line": "Demat, kafe pe te?"},
+        {"speaker": "A", "line": "Ur c'hafe, mar plij."},
+        {"speaker": "B", "line": "Un te?"},
+        {"speaker": "A", "line": "Nann, ur c'hafe, mar plij."},
+        {"speaker": "B", "line": "Ur c'hafe?"},
+        {"speaker": "A", "line": "Ya, mar plij."},
+        {"speaker": "B", "line": "Mat eo."},
+        {"speaker": "A", "line": "Trugarez!"},
+        {"speaker": "B", "line": "Mann ebet."},
+        {"speaker": "B", "line": "Arc'hant dizolo pe kartenn?"},
+        {"speaker": "A", "line": "Arc'hant dizolo, mar plij."},
+        {"speaker": "B", "line": "Arc'hant dizolo?"},
+        {"speaker": "A", "line": "Ya, mar plij."},
+        {"speaker": "B", "line": "Mat eo."},
+        {"speaker": "A", "line": "Trugarez."},
+        {"speaker": "B", "line": "Mann ebet."},
+        {"speaker": "A", "line": "Kenavo."},
+        {"speaker": "B", "line": "Kenavo."}
+      ]
+    },
+    {
+      "title": "🎬Pleustriñ: Diviz (Practice: Dialogue)",
+      "content_placeholder": "Poelladennoù pleustriñ evit an diviz da vezañ ouzhpennet."
+    },
+    {
+      "title": "⚙️Petra eo? (What is it?)",
+      "grammar_points": [
+        "Petra eo an dra-mañ? (What is this thing?)",
+        "Hag ... eo? (Is it ...?)",
+        "Hag ... eo pe ...? (Is it ... or ...?)",
+        "... eo. (It is ...)",
+        "N'eo ket ... . (It is not ...)",
+        "N'eo ket ..., met ... eo. (It is not ..., but it is ...)"
+      ],
+      "example_vocabulary": [
+        "levr (m) - book",
+        "taol (f) - table",
+        "kador (f) - chair"
+      ]
+    },
+    {
+      "title": "⚙️Ar Reizh (The Gender)",
+      "content_placeholder": "Endalc'had a-zivout ar reizh yezhadurel da vezañ ouzhpennet."
+    },
+    {
+      "title": "🎬Pleustriñ: Hemañ/Houmañ eo (Practice: It is)",
+      "content_placeholder": "Poelladennoù pleustriñ evit ar frammoù gant 'eo' da vezañ ouzhpennet."
+    },
+    {
+      "title": "🎒An Dibenn. (The end.)",
+      "content_placeholder": "Diverradenn pe evezhiadennoù klozañ evit Deiz 1 da vezañ ouzhpennet."
+    }
+  ]
+}

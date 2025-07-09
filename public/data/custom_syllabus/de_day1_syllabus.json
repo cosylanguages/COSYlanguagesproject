@@ -1,0 +1,68 @@
+{
+  "lesson_name": "Grundwörter (Basic Words)",
+  "language": "German",
+  "language_code": "de",
+  "level_code": "A0",
+  "sections": [
+    {
+      "title": "🔍Tag 1 (Day 1)",
+      "content_placeholder": "Inhalt wird noch hinzugefügt für Tag 1 Übersicht."
+    },
+    {
+      "title": "🎭Dialog (Dialogue)",
+      "dialogue": [
+        {"speaker": "A", "line": "Hallo."},
+        {"speaker": "B", "line": "Hallo, Kaffee oder Tee?"},
+        {"speaker": "A", "line": "Einen Kaffee, bitte."},
+        {"speaker": "B", "line": "Einen Tee?"},
+        {"speaker": "A", "line": "Nein, einen Kaffee, bitte."},
+        {"speaker": "B", "line": "Einen Kaffee?"},
+        {"speaker": "A", "line": "Ja, bitte."},
+        {"speaker": "B", "line": "Okay."},
+        {"speaker": "A", "line": "Danke!"},
+        {"speaker": "B", "line": "Bitte."},
+        {"speaker": "B", "line": "Bargeld oder Karte?"},
+        {"speaker": "A", "line": "Bargeld, bitte."},
+        {"speaker": "B", "line": "Bargeld?"},
+        {"speaker": "A", "line": "Ja, bitte."},
+        {"speaker": "B", "line": "Okay."},
+        {"speaker": "A", "line": "Danke."},
+        {"speaker": "B", "line": "Bitte."},
+        {"speaker": "A", "line": "Tschüss."},
+        {"speaker": "B", "line": "Tschüss."}
+      ]
+    },
+    {
+      "title": "🎬Übung: Dialog (Practice: Dialogue)",
+      "content_placeholder": "Übungen zum Dialog werden noch hinzugefügt."
+    },
+    {
+      "title": "⚙️Was ist das? (What is it?)",
+      "grammar_points": [
+        "Was ist das? - What is it?",
+        "Ist das ...? - Is it ...?",
+        "Ist das ... oder ...? - Is it ... or ...?",
+        "Das ist ... . - It is ...",
+        "Das ist nicht ... . - It is not ...",
+        "Das ist nicht ..., sondern ... . - It is not ..., but it is..."
+      ],
+      "example_vocabulary": [
+        "Buch (das) - book",
+        "Tisch (der) - table",
+        "Stift (der) - pen"
+      ]
+    },
+    {
+      "title": "⚙️Das Genus (The Gender)",
+      "content_placeholder": "Inhalt zum grammatischen Geschlecht wird noch hinzugefügt."
+    },
+    {
+      "title": "🎬Übung: Das ist (Practice: It is)",
+      "content_placeholder": "Übungen zu 'Das ist'-Strukturen werden noch hinzugefügt."
+    },
+    {
+      "title": "🎒Das Ende. (The end.)",
+      "content_placeholder": "Zusammenfassung oder abschließende Bemerkungen für Tag 1 werden noch hinzugefügt."
+    }
+  ]
+}
