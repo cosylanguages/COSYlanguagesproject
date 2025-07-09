@@ -2,22 +2,22 @@ import React, { useState, useEffect, useCallback } from 'react'; // Removed useR
 import FreestyleInterfaceView from '../../components/Freestyle/FreestyleInterfaceView';
 import './FreestyleModePage.css';
 import { useI18n } from '../../i18n/I18nContext';
-import { 
-    getInitialMenuState, 
-    handleMenuSelection, 
-    isMenuItemVisible, 
+import {
+    getInitialMenuState,
+    handleMenuSelection,
+    isMenuItemVisible,
     allMenuItemsConfig // Imported directly, considered stable
 } from '../../utils/menuNavigationLogic';
 
 const FreestyleModePage = () => {
-  const { language: i18nLanguage, changeLanguage, t } = useI18n(); 
-  
-  const [selectedLanguage, setSelectedLanguage] = useState(i18nLanguage); 
+  const { language: i18nLanguage, changeLanguage, t } = useI18n();
+
+  const [selectedLanguage, setSelectedLanguage] = useState(i18nLanguage);
   const [selectedDays, setSelectedDays] = useState([]);
-  const [currentMainCategoryKey, setCurrentMainCategoryKey] = useState(null); 
-  const [currentSubPracticeKey, setCurrentSubPracticeKey] = useState(null);   
-  
-  const [exerciseKey, setExerciseKey] = useState(0); 
+  const [currentMainCategoryKey, setCurrentMainCategoryKey] = useState(null);
+  const [currentSubPracticeKey, setCurrentSubPracticeKey] = useState(null);
+
+  const [exerciseKey, setExerciseKey] = useState(0);
   const [toast, setToast] = useState(null);
   const [showHelp, setShowHelp] = useState(false);
 
@@ -28,7 +28,7 @@ const FreestyleModePage = () => {
     if (i18nLanguage !== selectedLanguage) {
         setSelectedLanguage(i18nLanguage);
         // Reset menu path if language changes from global context
-        setActivePath([]); 
+        setActivePath([]);
         setSelectedDays([]);
         setCurrentMainCategoryKey(null);
         setCurrentSubPracticeKey(null);
@@ -71,7 +71,7 @@ const FreestyleModePage = () => {
                 newMainCatKey = catKey;
             }
         }
-        
+
         if (newMainCatKey && newPath.length > mainCatStageIndex + 2) {
             const subKeyCandidate = newPath[mainCatStageIndex + 2];
             if (allMenuItemsConfig[subKeyCandidate]?.parent === newMainCatKey) {
@@ -85,7 +85,7 @@ const FreestyleModePage = () => {
                 }
             }
         }
-        
+
         // Update states if they have changed
         if (newMainCatKey !== currentMainCategoryKey) setCurrentMainCategoryKey(newMainCatKey);
         if (newSubPracticeKey !== currentSubPracticeKey) setCurrentSubPracticeKey(newSubPracticeKey);
@@ -95,16 +95,16 @@ const FreestyleModePage = () => {
             setCurrentMainCategoryKey(null);
             setCurrentSubPracticeKey(null);
         } else if (newMainCatKey && !newPath.includes(newMainCatKey)) {
-            setCurrentSubPracticeKey(null); 
+            setCurrentSubPracticeKey(null);
         } else if (newMainCatKey && newSubPracticeKey && !newPath.includes(newSubPracticeKey)) {
             // This case might be tricky if subPracticeKey is an exercise leaf.
             // Generally, if the path shortens such that subPracticeKey's parent is no longer the leaf, it should clear.
         }
-        
+
         if (prevActivePath.join('/') !== newPath.join('/')) {
              setExerciseKey(prev => prev + 1);
         }
-        
+
         console.log("[FreestyleModePage] New State After Select:", {days: newSelectedDays, mainCat: newMainCatKey, subPractice: newSubPracticeKey, newPath});
         return newPath;
     });
@@ -116,18 +116,18 @@ const FreestyleModePage = () => {
     if (selectedLanguage === newLanguage) return; // Avoid re-processing if language hasn't changed
 
     setSelectedLanguage(newLanguage);
-    changeLanguage(newLanguage); 
-    
+    changeLanguage(newLanguage);
+
     setSelectedDays([]);
     setCurrentMainCategoryKey(null);
     setCurrentSubPracticeKey(null);
     setExerciseKey(prevKey => prevKey + 1);
 
     // After language states are updated, set the menu path to day selection stage
-    // allMenuItemsConfig is stable and imported
-    setActivePath(handleMenuSelection([], 'day_selection_stage', allMenuItemsConfig).activePath);
-    
-    const languageName = t(`language.${newLanguage}`, newLanguage.replace('COSY', '')); 
+    // Bypassing the stubbed handleMenuSelection for now.
+    setActivePath(['day_selection_stage']);
+
+    const languageName = t(`language.${newLanguage}`, newLanguage.replace('COSY', ''));
     showToast(t('freestyle.languageChangedToast', `Language changed: ${languageName}`, { languageName }));
   };
 
@@ -135,26 +135,26 @@ const FreestyleModePage = () => {
     // This is called by DaySelectorFreestyle on every change to its internal day state.
     // It's for FreestyleModePage to be aware of the temporary selection.
     // The actual menu advancement happens when onMenuSelect is called with 'day_confirm_action'.
-    setSelectedDays(newDays); 
+    setSelectedDays(newDays);
     // No path change here directly. DaySelectorFreestyle will call onMenuSelect('day_confirm_action', {days: newDays}).
   };
-  
+
   return (
     <div className="freestyle-mode-root">
       <FreestyleInterfaceView
-        selectedLanguage={selectedLanguage} 
+        selectedLanguage={selectedLanguage}
         selectedDays={selectedDays}
-        currentMainCategoryKey={currentMainCategoryKey} 
-        currentSubPracticeKey={currentSubPracticeKey}  
+        currentMainCategoryKey={currentMainCategoryKey}
+        currentSubPracticeKey={currentSubPracticeKey}
         exerciseKey={exerciseKey}
-        
+
         activePath={activePath}
-        onMenuSelect={onMenuSelect} 
-        isMenuItemVisible={isMenuItemVisible} 
+        onMenuSelect={onMenuSelect}
+        isMenuItemVisible={isMenuItemVisible}
         allMenuItemsConfig={allMenuItemsConfig}
 
-        onLanguageChange={handleLanguageChangeWrapper} 
-        onDaysChange={handleDaysChangeWrapper} 
+        onLanguageChange={handleLanguageChangeWrapper}
+        onDaysChange={handleDaysChangeWrapper}
       />
       {toast && <div className="cosy-toast">{toast}</div>}
       <button id="floating-help-btn" onClick={() => setShowHelp(h => !h)} title={t('freestyle.helpButtonTitle', 'Help')}>?</button>
