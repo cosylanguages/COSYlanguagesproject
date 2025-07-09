@@ -17,7 +17,8 @@ export const a0_english_vocabulary = {
     { "term": "beer", "pronunciation": "bɪər", "partOfSpeech": "noun", "definition": "An alcoholic drink made from yeast-fermented malt flavoured with hops.", "example": "Would you like a beer?", "level": "a0", "notes": "" },
     { "term": "wine", "pronunciation": "waɪn", "partOfSpeech": "noun", "definition": "An alcoholic drink made from fermented grape juice.", "example": "Red wine or white wine?", "level": "a0", "notes": "" },
     { "term": "cash", "pronunciation": "kæʃ", "partOfSpeech": "noun", "definition": "Money in coins or notes, as distinct from cheques, money orders, or credit.", "example": "Do you want to pay with cash or card?", "level": "a0", "notes": "" },
-    { "term": "card", "pronunciation": "kɑːrd", "partOfSpeech": "noun", "definition": "A small rectangular piece of plastic issued by a bank, containing personal data in magnetic or electronic form and used to obtain cash or credit; a credit card or debit card.", "example": "I will pay by card.", "level": "a0", "notes": "" }
+    { "term": "card", "pronunciation": "kɑːrd", "partOfSpeech": "noun", "definition": "A small rectangular piece of plastic issued by a bank, containing personal data in magnetic or electronic form and used to obtain cash or credit; a credit card or debit card.", "example": "I will pay by card.", "level": "a0", "notes": "" },
+    { "term": "sorry", "pronunciation": "ˈsɒri", "partOfSpeech": "interjection/adjective", "definition": "Feeling distress, especially through sympathy with someone else's misfortune / Used to apologize.", "example": "I'm sorry to hear that. / Sorry, I didn't see you.", "level": "a0", "notes": "" }
   ]
 };
 

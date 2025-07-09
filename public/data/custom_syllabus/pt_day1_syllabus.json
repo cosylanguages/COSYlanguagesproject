@@ -1,0 +1,138 @@
+{
+  "lesson_name": "Palavras Básicas (Basic Words)",
+  "language": "Portuguese",
+  "language_code": "pt",
+  "level_code": "A0",
+  "sections": [
+    {
+      "title": "🔍Dia 1 (Day 1)",
+      "audio_tts_phrase": "COSY Português. Dia 1.",
+      "content_blocks": [
+        {
+          "block_type": "pronunciation_rules_match",
+          "title": "Regras de Pronúncia",
+          "rules": [
+            {"combination": "ch", "sound": "[ʃ]", "example_words": ["Chá"]},
+            {"combination": "ão", "sound": "[ɐ̃w̃]", "example_words": ["Não", "Cartão"]},
+            {"combination": "e (final, átono)", "sound": "[ə] or [ɨ]", "example_words": ["Café", "Desculpe"]},
+            {"combination": "o (final, átono)", "sound": "[u]", "example_words": ["Obrigado", "Vinho"]}
+          ],
+          "sounds_to_match": ["[ʃ]", "[ɐ̃w̃]", "[ə]", "[u]", "[k]"]
+        },
+        {
+          "block_type": "image_match",
+          "title": "Associar Palavras a Imagens",
+          "words": [
+            {"term": "Olá", "image_placeholder": "hello_image.png"},
+            {"term": "Adeus", "image_placeholder": "goodbye_image.png"},
+            {"term": "Sim", "image_placeholder": "yes_image.png"},
+            {"term": "Não", "image_placeholder": "no_image.png"},
+            {"term": "Obrigado/Obrigada", "image_placeholder": "thankyou_image.png"},
+            {"term": "De nada", "image_placeholder": "yourewelcome_image.png"},
+            {"term": "Desculpe", "image_placeholder": "sorry_image.png"}
+          ]
+        },
+        {
+          "block_type": "interactive_wordlist",
+          "title": "Lista de Vocabulário",
+          "vocabulary": [
+            {"term": "Olá", "definition": "Saudação geral."},
+            {"term": "Bom dia", "definition": "Saudação usada de manhã/durante o dia."},
+            {"term": "Adeus", "definition": "Despedida."},
+            {"term": "Tchau", "definition": "Despedida informal."},
+            {"term": "Sim", "definition": "Resposta afirmativa."},
+            {"term": "Não", "definition": "Resposta negativa."},
+            {"term": "Obrigado/Obrigada", "definition": "Expressão de gratidão."},
+            {"term": "De nada", "definition": "Resposta educada a um agradecimento."},
+            {"term": "Por favor", "definition": "Usado em pedidos ou perguntas educadas."},
+            {"term": "Desculpe", "definition": "Usado para pedir perdão ou licença."},
+            {"term": "Está bem", "definition": "Indica acordo ou que está tudo OK."},
+            {"term": "OK", "definition": "Indica acordo (estrangeirismo)."},
+            {"term": "Um", "definition": "O número 1."},
+            {"term": "Chá", "gender": "m", "definition": "Bebida quente feita por infusão de folhas secas."},
+            {"term": "Café", "gender": "m", "definition": "Bebida quente feita de grãos de café torrados."},
+            {"term": "Água", "gender": "f", "definition": "Líquido incolor, transparente e inodoro."},
+            {"term": "Sumo", "gender": "m", "definition": "Líquido obtido de frutas ou vegetais (Portugal)."},
+            {"term": "Cerveja", "gender": "f", "definition": "Bebida alcoólica feita de malte fermentado."},
+            {"term": "Vinho", "gender": "m", "definition": "Bebida alcoólica feita de sumo de uva fermentado."},
+            {"term": "Dinheiro", "gender": "m", "definition": "Moedas ou notas usadas como meio de troca."},
+            {"term": "Cartão", "gender": "m", "definition": "Pequeno retângulo de plástico usado para pagamentos."}
+          ],
+          "functionality_note": "O utilizador pode adicionar todas as palavras ou selecionar palavras individualmente para o seu dicionário pessoal."
+        },
+        {
+          "block_type": "matching_opposites",
+          "title": "Associar Opostos",
+          "pairs": [
+            {"word1": "Olá (Saudação)", "word2": "Adeus (Despedida)"},
+            {"word1": "Sim (Sim)", "word2": "Não (Não)"},
+            {"word1": "Obrigado/Obrigada (Agradecimento)", "word2": "De nada (Resposta a agradecimento)"},
+            {"word1": "Desculpe (Pedir desculpa)", "word2": "Não tem problema (Sem problema)"}
+          ]
+        },
+        {
+          "block_type": "vocabulary_practice_modes",
+          "title": "Prática de Vocabulário (Flashcards/Dicionário)",
+          "vocabulary_scope": "Lista completa de vocabulário do Dia 1 (incluindo 'desculpe').",
+          "functionality_note": "O utilizador pode praticar estas palavras usando flashcards ou um modo de dicionário."
+        }
+      ]
+    },
+    {
+      "title": "🎭Diálogo (Dialogue)",
+      "dialogue": [
+        {"speaker": "A", "line": "Olá."},
+        {"speaker": "B", "line": "Olá, café ou chá?"},
+        {"speaker": "A", "line": "Um café, por favor."},
+        {"speaker": "B", "line": "Um chá?"},
+        {"speaker": "A", "line": "Não, um café, por favor."},
+        {"speaker": "B", "line": "Um café?"},
+        {"speaker": "A", "line": "Sim, por favor."},
+        {"speaker": "B", "line": "Está bem."},
+        {"speaker": "A", "line": "Obrigado!"},
+        {"speaker": "B", "line": "De nada."},
+        {"speaker": "B", "line": "Dinheiro ou cartão?"},
+        {"speaker": "A", "line": "Dinheiro, por favor."},
+        {"speaker": "B", "line": "Dinheiro?"},
+        {"speaker": "A", "line": "Sim, por favor."},
+        {"speaker": "B", "line": "Está bem."},
+        {"speaker": "A", "line": "Obrigado."},
+        {"speaker": "B", "line": "De nada."},
+        {"speaker": "A", "line": "Adeus."},
+        {"speaker": "B", "line": "Adeus."}
+      ]
+    },
+    {
+      "title": "🎬Prática: Diálogo (Practice: Dialogue)",
+      "content_placeholder": "Exercícios práticos para o diálogo a serem adicionados."
+    },
+    {
+      "title": "⚙️O que é isto? (What is it?)",
+      "grammar_points": [
+        "O que é isto? - What is it?",
+        "Isto é ...? - Is it ...?",
+        "Isto é ... ou ...? - Is it ... or ...?",
+        "Isto é ... . / É ... . - It is ...",
+        "Isto não é ... . / Não é ... . - It is not ...",
+        "Isto não é ..., mas é ... . - It is not ..., but it is..."
+      ],
+      "example_vocabulary": [
+        "livro (m) - book",
+        "mesa (f) - table",
+        "caneta (f) - pen"
+      ]
+    },
+    {
+      "title": "⚙️O Gênero (The Gender)",
+      "content_placeholder": "Conteúdo relacionado ao gênero gramatical a ser adicionado."
+    },
+    {
+      "title": "🎬Prática: É (Practice: It is)",
+      "content_placeholder": "Exercícios práticos para estruturas com 'é' a serem adicionados."
+    },
+    {
+      "title": "🎒Fim. (The end.)",
+      "content_placeholder": "Resumo ou observações finais para o Dia 1 a serem adicionados."
+    }
+  ]
+}
