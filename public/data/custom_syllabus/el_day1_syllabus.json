@@ -6,7 +6,74 @@
   "sections": [
     {
       "title": "🔍Ημέρα 1 (Day 1)",
-      "content_placeholder": "Περιεχόμενο θα προστεθεί για την επισκόπηση της Ημέρας 1."
+      "audio_tts_phrase": "COSY Ελληνικά. Ημέρα 1.",
+      "content_blocks": [
+        {
+          "block_type": "pronunciation_rules_match",
+          "title": "Κανόνες προφοράς",
+          "rules": [
+            {"combination": "ει", "sound": "[i]", "example_words": ["Είναι", "Κρασί"]},
+            {"combination": "οι", "sound": "[i]", "example_words": ["Όχι"]},
+            {"combination": "αι", "sound": "[e]", "example_words": ["Ναι", "Τσάι"]},
+            {"combination": "ου", "sound": "[u]", "example_words": ["σου (from Γεια σου)"]},
+            {"combination": "ντ", "sound": "[d] (αρχή λέξης) / [nd] (μέση λέξης)", "example_words": ["Εντάξει"]}
+          ],
+          "sounds_to_match": ["[i]", "[e]", "[u]", "[d]/[nd]", "[k]"]
+        },
+        {
+          "block_type": "image_match",
+          "title": "Αντιστοιχίστε τις λέξεις με τις εικόνες",
+          "words": [
+            {"term": "Γεια σου/σας", "image_placeholder": "hello_image.png"},
+            {"term": "Αντίο", "image_placeholder": "goodbye_image.png"},
+            {"term": "Ναι", "image_placeholder": "yes_image.png"},
+            {"term": "Όχι", "image_placeholder": "no_image.png"},
+            {"term": "Ευχαριστώ", "image_placeholder": "thankyou_image.png"},
+            {"term": "Παρακαλώ", "image_placeholder": "yourewelcome_image.png"},
+            {"term": "Συγγνώμη", "image_placeholder": "sorry_image.png"}
+          ]
+        },
+        {
+          "block_type": "interactive_wordlist",
+          "title": "Λεξιλόγιο",
+          "vocabulary": [
+            {"term": "Γεια σου/σας", "definition": "Χαιρετισμός (ανεπίσημος/επίσημος ή πληθυντικός)."},
+            {"term": "Αντίο", "definition": "Χαιρετισμός κατά την αναχώρηση."},
+            {"term": "Ναι", "definition": "Καταφατική απάντηση."},
+            {"term": "Όχι", "definition": "Αρνητική απάντηση."},
+            {"term": "Ευχαριστώ", "definition": "Έκφραση ευγνωμοσύνης."},
+            {"term": "Παρακαλώ", "definition": "Ευγενική απάντηση σε ευχαριστώ / Για να ζητήσεις κάτι ευγενικά."},
+            {"term": "Συγγνώμη", "definition": "Έκφραση μεταμέλειας / Για να ζητήσεις την προσοχή κάποιου."},
+            {"term": "Εντάξει", "definition": "Έκφραση συμφωνίας ή ότι όλα είναι καλά."},
+            {"term": "Ένα", "definition": "Ο αριθμός 1."},
+            {"term": "Τσάι", "gender": "το", "definition": "Ζεστό ρόφημα από φύλλα του φυτού τεϊόδεντρο."},
+            {"term": "Καφές", "gender": "ο", "definition": "Ρόφημα από καβουρδισμένους και αλεσμένους κόκκους καφέ."},
+            {"term": "Νερό", "gender": "το", "definition": "Άχρωμο, άοσμο υγρό, απαραίτητο για τη ζωή."},
+            {"term": "Χυμός", "gender": "ο", "definition": "Υγρό που λαμβάνεται από φρούτα ή λαχανικά."},
+            {"term": "Μπύρα", "gender": "η", "definition": "Αλκοολούχο ποτό που παράγεται από ζύμωση κριθαριού."},
+            {"term": "Κρασί", "gender": "το", "definition": "Αλκοολούχο ποτό που παράγεται από ζύμωση σταφυλιών."},
+            {"term": "Μετρητά", "gender": "τα", "definition": "Χρήματα σε μορφή κερμάτων ή χαρτονομισμάτων."},
+            {"term": "Κάρτα", "gender": "η", "definition": "Πλαστικό μέσο πληρωμής."}
+          ],
+          "functionality_note": "Ο χρήστης μπορεί να προσθέσει όλες τις λέξεις ή να επιλέξει μεμονωμένες λέξεις στο προσωπικό του λεξικό."
+        },
+        {
+          "block_type": "matching_opposites",
+          "title": "Αντιστοίχιση αντιθέτων",
+          "pairs": [
+            {"word1": "Γεια σου/σας (Χαιρετισμός)", "word2": "Αντίο (Αποχαιρετισμός)"},
+            {"word1": "Ναι (Ναι)", "word2": "Όχι (Όχι)"},
+            {"word1": "Ευχαριστώ (Ευχαριστώ)", "word2": "Παρακαλώ (Παρακαλώ)"},
+            {"word1": "Συγγνώμη (Συγγνώμη)", "word2": "Δεν πειράζει (Δεν πειράζει)"}
+          ]
+        },
+        {
+          "block_type": "vocabulary_practice_modes",
+          "title": "Εξάσκηση λεξιλογίου (Κάρτες/Λεξικό)",
+          "vocabulary_scope": "Πλήρης λίστα λεξιλογίου Ημέρας 1 (συμπεριλαμβανομένου του 'συγγνώμη').",
+          "functionality_note": "Ο χρήστης μπορεί να εξασκηθεί σε αυτές τις λέξεις χρησιμοποιώντας κάρτες ή λειτουργία λεξικού."
+        }
+      ]
     },
     {
       "title": "🎭Διάλογος (Dialogue)",
