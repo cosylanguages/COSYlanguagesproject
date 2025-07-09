@@ -22,9 +22,11 @@
         "Verbs: Present tense of a few common verbs in 1st/2nd/3rd person singular (e.g., ունեմ - I have, ուզում եմ - I want, խոսում եմ - I speak).",
         "Basic Sentence Structure: Subject-Object-Verb (SOV) tendency. Simple statements.",
         "Negation: 'չ-' prefix with verbs (e.g., չեմ ուզում - I don't want). 'չկա' (there isn't).",
-        "Simple Questions: Intonation. Basic question words (Ո՞վ - who, Ի՞նչ - what, Որտե՞ղ - where)."
+        "Simple Questions: Intonation. Basic question words (Ո՞վ - who, Ի՞նչ - what, Որտե՞ղ - where).",
+        "Day 1 Grammar - 'It is': Սա ի՞նչ է։ (What is it?), Սա ... է՞։ (Is it ...?), Սա ... է՞, թե՞ ...։ (Is it ... or ...?), Սա ... է։ (It is ...), Սա ... չէ։ (It is not ...), Սա ... չէ, այլ ... է։ (It is not ... but it is...)."
       ],
       "vocabulary_topics": [
+        "Day 1: Basic Words and Phrases: Բարև (hello), Ցտեսություն (goodbye), Այո (yes), Ոչ (no), Շնորհակալություն (thank you), Խնդրեմ (you're welcome/please), Լավ (alright/ok), Մեկ (one), Թեյ (tea), Սուրճ (coffee), Ջուր (water), Հյութ (juice), Գարեջուր (beer), Գինի (wine), Կանխիկ (cash), Քարտ (card).",
         "Greetings: Բարև (Ձեզ), Ողջույն, Ցտեսություն, Առայժմ, Բարի լույս/օր/երեկո.",
         "Introductions & Personal Information: Անունդ ինչպե՞ս է: Անունս... է: Շատ ուրախ եմ: Որտեղի՞ց ես: Ես...-ից եմ: Ազգություն (basic).",
         "Courtesy: Շնորհակալություն, Խնդրեմ, Ներեցեք /Կներեք.",
@@ -35,6 +37,32 @@
         "Common Objects: գիրք, գրիչ, սեղան, աթոռ, տուն, մեքենա, հեռախոս.",
         "Basic Food & Drink: հաց, ջուր, կաթ, սուրճ, թեյ, պանիր, խնձոր.",
         "Classroom language: Կրկնեք, խնդրեմ: Չեմ հասկանում:"
+      ],
+      "speaking_dialogues": [
+        {
+          "title": "Day 1: Cafe Dialogue",
+          "dialogue": [
+            {"speaker": "A", "line": "Բարև (Barev)"},
+            {"speaker": "B", "line": "Բարև, սո՞ւրճ, թե՞ թեյ։ (Barev, surch, te tey?)"},
+            {"speaker": "A", "line": "Մեկ սուրճ, խնդրեմ։ (Mek surch, khndrem.)"},
+            {"speaker": "B", "line": "Մեկ թե՞յ։ (Mek tey?)"},
+            {"speaker": "A", "line": "Ոչ, մեկ սուրճ, խնդրեմ։ (Voch, mek surch, khndrem.)"},
+            {"speaker": "B", "line": "Մեկ սո՞ւրճ։ (Mek surch?)"},
+            {"speaker": "A", "line": "Այո, խնդրեմ։ (Ayo, khndrem.)"},
+            {"speaker": "B", "line": "Լավ։ (Lav.)"},
+            {"speaker": "A", "line": "Շնորհակալություն։ (Shnorhakalutyun!)"},
+            {"speaker": "B", "line": "Խնդրեմ։ (Khndrem.)"},
+            {"speaker": "B", "line": "Կանխի՞կ, թե՞ քարտով։ (Kankhik, te kartov?)"},
+            {"speaker": "A", "line": "Կանխիկ, խնդրեմ։ (Kankhik, khndrem.)"},
+            {"speaker": "B", "line": "Կանխի՞կ։ (Kankhik?)"},
+            {"speaker": "A", "line": "Այո, խնդրեմ։ (Ayo, khndrem.)"},
+            {"speaker": "B", "line": "Լավ։ (Lav.)"},
+            {"speaker": "A", "line": "Շնորհակալություն։ (Shnorhakalutyun.)"},
+            {"speaker": "B", "line": "Խնդրեմ։ (Khndrem.)"},
+            {"speaker": "A", "line": "Ցտեսություն։ (Tstesutyun.)"},
+            {"speaker": "B", "line": "Ցտեսություն։ (Tstesutyun.)"}
+          ]
+        }
       ],
       "pronunciation_focus_topics": [
         "Mastering the sounds of all Armenian letters, including unique sounds not found in English.",

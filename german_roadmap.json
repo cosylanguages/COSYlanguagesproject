@@ -11,12 +11,72 @@
         "Introduce him/herself and others simply (e.g., Ich bin... / Mein Name ist...).",
         "Ask and answer simple questions about personal details (name, origin)."
       ],
+      "sections": [
+        {
+          "title": "🔍Tag 1 (Day 1)",
+          "content_placeholder": "Inhalt wird noch hinzugefügt für Tag 1 Übersicht."
+        },
+        {
+          "title": "🎭Dialog (Dialogue)",
+          "dialogue": [
+            {"speaker": "A", "line": "Hallo."},
+            {"speaker": "B", "line": "Hallo, Kaffee oder Tee?"},
+            {"speaker": "A", "line": "Einen Kaffee, bitte."},
+            {"speaker": "B", "line": "Einen Tee?"},
+            {"speaker": "A", "line": "Nein, einen Kaffee, bitte."},
+            {"speaker": "B", "line": "Einen Kaffee?"},
+            {"speaker": "A", "line": "Ja, bitte."},
+            {"speaker": "B", "line": "Okay."},
+            {"speaker": "A", "line": "Danke!"},
+            {"speaker": "B", "line": "Bitte."},
+            {"speaker": "B", "line": "Bargeld oder Karte?"},
+            {"speaker": "A", "line": "Bargeld, bitte."},
+            {"speaker": "B", "line": "Bargeld?"},
+            {"speaker": "A", "line": "Ja, bitte."},
+            {"speaker": "B", "line": "Okay."},
+            {"speaker": "A", "line": "Danke."},
+            {"speaker": "B", "line": "Bitte."},
+            {"speaker": "A", "line": "Tschüss."},
+            {"speaker": "B", "line": "Tschüss."}
+          ]
+        },
+        {
+          "title": "🎬Übung: Dialog (Practice: Dialogue)",
+          "content_placeholder": "Übungen zum Dialog werden noch hinzugefügt."
+        },
+        {
+          "title": "⚙️Was ist das? (What is it?)",
+          "grammar_points": [
+            "Was ist das?",
+            "Ist das ...?",
+            "Ist das ... oder ...?",
+            "Das ist ... .",
+            "Das ist nicht ... .",
+            "Das ist nicht ..., sondern ... ."
+          ],
+          "example_vocabulary": ["Buch (das), Tisch (der), Stift (der), Tasse (die), Auto (das)"]
+        },
+        {
+          "title": "⚙️Das Genus (The Gender)",
+          "content_placeholder": "Inhalt zum grammatischen Geschlecht wird noch hinzugefügt."
+        },
+        {
+          "title": "🎬Übung: Das ist (Practice: It is)",
+          "content_placeholder": "Übungen zu 'Das ist'-Strukturen werden noch hinzugefügt."
+        },
+        {
+          "title": "🎒Das Ende. (The end.)",
+          "content_placeholder": "Zusammenfassung oder abschließende Bemerkungen für Tag 1 werden noch hinzugefügt."
+        }
+      ],
       "language_focus_topics": [
         "The German Alphabet (Das Alphabet) and pronunciation of letters, including umlauts (ä, ö, ü) and ß.",
         "Nouns: Introduction to grammatical gender (der, die, das). Nominative case singular.",
-        "Verbs: Present tense of 'sein' (to be) and 'haben' (to have)."
+        "Verbs: Present tense of 'sein' (to be) and 'haben' (to have).",
+        "Day 1 Grammar - 'Das ist': Was ist das?, Ist das ...?, Ist das ... oder ...?, Das ist ..., Das ist nicht ..., Das ist nicht ..., sondern ..."
       ],
       "vocabulary_topics": [
+        "Tag 1: Grundwörter und Redewendungen (Day 1: Basic Words and Phrases): Hallo/Guten Tag (hello), Tschüss/Auf Wiedersehen (goodbye), Ja (yes), Nein (no), Danke (thank you), Bitte (you're welcome/please), Okay/In Ordnung (alright/ok), Ein (one), Tee (der) (tea), Kaffee (der) (coffee), Wasser (das) (water), Saft (der) (juice), Bier (das) (beer), Wein (der) (wine), Bargeld (das) (cash), Karte (die) (card).",
         "Greetings: Hallo, Guten Morgen/Tag/Abend, Tschüss.",
         "Personal Information: Wie heißt du/heißen Sie? Ich heiße...",
         "Numbers: 0-10 (null-zehn).",

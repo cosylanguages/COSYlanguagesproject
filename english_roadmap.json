@@ -11,6 +11,64 @@
         "Interact in a very simple way provided the other person talks slowly and clearly and is prepared to help.",
         "Recognize familiar names, words, and very simple sentences, for example on notices and posters or in catalogues."
       ],
+      "sections": [
+        {
+          "title": "🔍Day 1",
+          "content_placeholder": "Content to be added for Day 1 overview."
+        },
+        {
+          "title": "🎭Dialogue",
+          "dialogue": [
+            {"speaker": "A", "line": "Hello."},
+            {"speaker": "B", "line": "Hello, coffee or tea?"},
+            {"speaker": "A", "line": "One coffee please."},
+            {"speaker": "B", "line": "One tea?"},
+            {"speaker": "A", "line": "No, one coffee please."},
+            {"speaker": "B", "line": "One coffee?"},
+            {"speaker": "A", "line": "Yes, please."},
+            {"speaker": "B", "line": "Alright."},
+            {"speaker": "A", "line": "Thank you!"},
+            {"speaker": "B", "line": "You're welcome."},
+            {"speaker": "B", "line": "Cash or card?"},
+            {"speaker": "A", "line": "Cash please."},
+            {"speaker": "B", "line": "Cash?"},
+            {"speaker": "A", "line": "Yes please."},
+            {"speaker": "B", "line": "Ok."},
+            {"speaker": "A", "line": "Thank you."},
+            {"speaker": "B", "line": "You're welcome."},
+            {"speaker": "A", "line": "Goodbye."},
+            {"speaker": "B", "line": "Goodbye."}
+          ]
+        },
+        {
+          "title": "🎬Practice: Dialogue",
+          "content_placeholder": "Practice exercises for the dialogue to be added."
+        },
+        {
+          "title": "⚙️What is it?",
+          "grammar_points": [
+            "What is it?",
+            "Is it ...?",
+            "Is it ... or ...?",
+            "It is ... .",
+            "It is not ... .",
+            "It is not ... but it is... ."
+          ],
+          "example_vocabulary": ["book, table, pen, cup, car"]
+        },
+        {
+          "title": "🍸Coffee or tea, or ...?",
+          "content_placeholder": "Content related to choosing between items, countable/uncountable nouns for drinks/food to be added."
+        },
+        {
+          "title": "🎬Practice: It is",
+          "content_placeholder": "Practice exercises for 'it is' structures to be added."
+        },
+        {
+          "title": "🎒The end.",
+          "content_placeholder": "Summary or concluding remarks for Day 1 to be added."
+        }
+      ],
       "language_focus_topics": [
         "Verb 'to be' (am/is/are) – positive, negative, question forms.",
         "Subject pronouns (I, you, he, she, it, we, they).",
@@ -20,9 +78,11 @@
         "Basic questions with 'be' (e.g., What's this?, Where is...?, Is this...?).",
         "Nouns: singular and basic regular plurals (-s, -es).",
         "Numbers 1-20.",
-        "Basic prepositions of place (in, on, under)."
+        "Basic prepositions of place (in, on, under).",
+        "Day 1 Grammar - 'It is': What is it?, Is it ...?, Is it ... or ...?, It is ..., It is not ..., It is not ... but it is..."
       ],
       "vocabulary_topics": [
+        "Day 1: Basic Words and Phrases: hello, goodbye, yes, no, thank you, you're welcome, please, alright/ok, one, tea, coffee, water, juice, beer, wine, cash, card.",
         "Numbers 1-20.",
         "Basic everyday objects (e.g., book, pen, table, chair, door, window, bag, phone, key, computer).",
         "Colors (e.g., red, blue, green, yellow, black, white, orange, pink, brown, grey, purple).",
@@ -65,8 +125,7 @@
         "State one's name, age, and country of origin.",
         "Count from 1 to 20.",
         "Name basic colors.",
-        "Produce simple isolated phrases and very basic sentences about oneself and immediate surroundings.",
-        "Use basic affirmative and negative statements (e.g. Είμαι καλά. Δεν είμαι καλά.)"
+        "Produce simple isolated phrases and very basic sentences about oneself and immediate surroundings."
       ],
       "written_interaction_skills": [
         "Respond to simple written prompts with single words or short phrases (e.g., filling in name on a list)."
@@ -753,3 +812,5 @@
     }
   ]
 }
+
+[end of english_roadmap.json]

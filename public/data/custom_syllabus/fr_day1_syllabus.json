@@ -1,0 +1,68 @@
+{
+  "lesson_name": "Mots de Base (Basic Words)",
+  "language": "French",
+  "language_code": "fr",
+  "level_code": "A0",
+  "sections": [
+    {
+      "title": "🔍Jour 1 (Day 1)",
+      "content_placeholder": "Contenu à ajouter pour l'aperçu du Jour 1."
+    },
+    {
+      "title": "🎭Dialogue",
+      "dialogue": [
+        {"speaker": "A", "line": "Bonjour."},
+        {"speaker": "B", "line": "Bonjour, café ou thé ?"},
+        {"speaker": "A", "line": "Un café, s'il vous plaît."},
+        {"speaker": "B", "line": "Un thé ?"},
+        {"speaker": "A", "line": "No, un café, s'il vous plaît."},
+        {"speaker": "B", "line": "Un café ?"},
+        {"speaker": "A", "line": "Oui, s'il vous plaît."},
+        {"speaker": "B", "line": "D'accord."},
+        {"speaker": "A", "line": "Merci !"},
+        {"speaker": "B", "line": "De rien."},
+        {"speaker": "B", "line": "Espèces ou carte ?"},
+        {"speaker": "A", "line": "Espèces, s'il vous plaît."},
+        {"speaker": "B", "line": "Espèces ?"},
+        {"speaker": "A", "line": "Oui, s'il vous plaît."},
+        {"speaker": "B", "line": "D'accord."},
+        {"speaker": "A", "line": "Merci."},
+        {"speaker": "B", "line": "De rien."},
+        {"speaker": "A", "line": "Au revoir."},
+        {"speaker": "B", "line": "Au revoir."}
+      ]
+    },
+    {
+      "title": "🎬Pratique : Dialogue (Practice: Dialogue)",
+      "content_placeholder": "Exercices pratiques pour le dialogue à ajouter."
+    },
+    {
+      "title": "⚙️Qu'est-ce que c'est ? (What is it?)",
+      "grammar_points": [
+        "Qu'est-ce que c'est ?",
+        "Est-ce que c'est ... ?",
+        "Est-ce que c'est ... ou ... ?",
+        "C'est ... .",
+        "Ce n'est pas ... .",
+        "Ce n'est pas ..., mais c'est ... ."
+      ],
+      "example_vocabulary": [
+        "livre (m) - book",
+        "table (f) - table",
+        "stylo (m) - pen"
+      ]
+    },
+    {
+      "title": "⚙️Le Genre (The Gender)",
+      "content_placeholder": "Contenu lié au genre grammatical à ajouter."
+    },
+    {
+      "title": "🎬Pratique : C'est (Practice: It is)",
+      "content_placeholder": "Exercices pratiques pour les structures avec 'c'est' à ajouter."
+    },
+    {
+      "title": "🎒La Fin. (The end.)",
+      "content_placeholder": "Résumé ou remarques finales pour le Jour 1 à ajouter."
+    }
+  ]
+}

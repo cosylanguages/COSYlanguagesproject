@@ -1,0 +1,68 @@
+{
+  "lesson_name": "Basic Words",
+  "language": "English",
+  "language_code": "en",
+  "level_code": "A0",
+  "sections": [
+    {
+      "title": "🔍Day 1",
+      "content_placeholder": "Content to be added for Day 1 overview."
+    },
+    {
+      "title": "🎭Dialogue",
+      "dialogue": [
+        {"speaker": "A", "line": "Hello."},
+        {"speaker": "B", "line": "Hello, coffee or tea?"},
+        {"speaker": "A", "line": "One coffee please."},
+        {"speaker": "B", "line": "One tea?"},
+        {"speaker": "A", "line": "No, one coffee please."},
+        {"speaker": "B", "line": "One coffee?"},
+        {"speaker": "A", "line": "Yes, please."},
+        {"speaker": "B", "line": "Alright."},
+        {"speaker": "A", "line": "Thank you!"},
+        {"speaker": "B", "line": "You're welcome."},
+        {"speaker": "B", "line": "Cash or card?"},
+        {"speaker": "A", "line": "Cash please."},
+        {"speaker": "B", "line": "Cash?"},
+        {"speaker": "A", "line": "Yes please."},
+        {"speaker": "B", "line": "Ok."},
+        {"speaker": "A", "line": "Thank you."},
+        {"speaker": "B", "line": "You're welcome."},
+        {"speaker": "A", "line": "Goodbye."},
+        {"speaker": "B", "line": "Goodbye."}
+      ]
+    },
+    {
+      "title": "🎬Practice: Dialogue",
+      "content_placeholder": "Practice exercises for the dialogue to be added."
+    },
+    {
+      "title": "⚙️What is it?",
+      "grammar_points": [
+        "What is it?",
+        "Is it ...?",
+        "Is it ... or ...?",
+        "It is ... .",
+        "It is not ... .",
+        "It is not ... but it is... ."
+      ],
+      "example_vocabulary": [
+        "book",
+        "table",
+        "pen"
+      ]
+    },
+    {
+      "title": "🍸Coffee or tea, or ...?",
+      "content_placeholder": "Content related to choosing between items, countable/uncountable nouns for drinks/food to be added."
+    },
+    {
+      "title": "🎬Practice: It is",
+      "content_placeholder": "Practice exercises for 'it is' structures to be added."
+    },
+    {
+      "title": "🎒The end.",
+      "content_placeholder": "Summary or concluding remarks for Day 1 to be added."
+    }
+  ]
+}

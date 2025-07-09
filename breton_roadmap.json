@@ -13,6 +13,66 @@
         "Interact in a very simple way if the other person speaks slowly, clearly, and is prepared to help.",
         "Recognize familiar names, words, and very simple sentences in Breton."
       ],
+      "sections": [
+        {
+          "title": "🔍Deiz 1 (Day 1)",
+          "content_placeholder": "Endalc'had da zont (Content to come)"
+        },
+        {
+          "title": "🎭Diviz (Dialogue)",
+          "dialogue": [
+            {"speaker": "A", "line": "Demat"},
+            {"speaker": "B", "line": "Demat, kafe pe te?"},
+            {"speaker": "A", "line": "Ur c'hafe, mar plij."},
+            {"speaker": "B", "line": "Un te?"},
+            {"speaker": "A", "line": "Nann, ur c'hafe, mar plij."},
+            {"speaker": "B", "line": "Ur c'hafe?"},
+            {"speaker": "A", "line": "Ya, mar plij."},
+            {"speaker": "B", "line": "Mat eo."},
+            {"speaker": "A", "line": "Trugarez!"},
+            {"speaker": "B", "line": "Mann ebet."},
+            {"speaker": "B", "line": "Arc'hant dizolo pe kartenn?"},
+            {"speaker": "A", "line": "Arc'hant dizolo, mar plij."},
+            {"speaker": "B", "line": "Arc'hant dizolo?"},
+            {"speaker": "A", "line": "Ya, mar plij."},
+            {"speaker": "B", "line": "Mat eo."},
+            {"speaker": "A", "line": "Trugarez."},
+            {"speaker": "B", "line": "Mann ebet."},
+            {"speaker": "A", "line": "Kenavo."},
+            {"speaker": "B", "line": "Kenavo."}
+          ]
+        },
+        {
+          "title": "🎬Pleustriñ: Diviz (Practice: Dialogue)",
+          "content_placeholder": "Endalc'had da zont (Content to come)"
+        },
+        {
+          "title": "⚙️Petra eo? (What is it?)",
+          "grammar_points": [
+            "Petra eo an dra-mañ? (What is this thing?)",
+            "Hag ... eo? (Is it ...?)",
+            "Hag ... eo pe ...? (Is it ... or ...?)",
+            "... eo. (It is ...)",
+            "N'eo ket ... . (It is not ...)",
+            "N'eo ket ..., met ... eo. (It is not ..., but it is ...)"
+          ],
+          "example_vocabulary": [
+            "ti (house), levr (book), kador (chair), taol (table)"
+          ]
+        },
+        {
+          "title": "⚙️Ar Reizh (The Gender)",
+          "content_placeholder": "Endalc'had da zont (Content to come)"
+        },
+        {
+          "title": "🎬Pleustriñ: Hemañ/Houmañ eo (Practice: It is)",
+          "content_placeholder": "Endalc'had da zont (Content to come)"
+        },
+        {
+          "title": "🎒An Dibenn. (The end.)",
+          "content_placeholder": "Endalc'had da zont (Content to come)"
+        }
+      ],
       "language_focus_topics": [
         "The Breton Alphabet (Lizherenneg) and pronunciation of letters (including ch, c'h, gn,ilh).",
         "Basic pronunciation rules: Vowel sounds (including nasal vowels likeañ, eñ, iñ, oñ, uñ). Consonant sounds.",
@@ -24,9 +84,11 @@
         "Verbs: Present tense of 'endevout/kaout' (to have) - basic forms (am eus, az peus, en deus/he deus).",
         "Basic Sentence Structure: Verb-Subject-Object (VSO) tendency for simple sentences. Simple affirmative and negative statements.",
         "Negation: 'ne ... ket' structure around the verb (e.g., Ne glevan ket - I don't hear).",
-        "Simple Questions: Intonation. Basic question words (Piv? Petra? Pelec'h? Pegoulz?)."
+        "Simple Questions: Intonation. Basic question words (Piv? Petra? Pelec'h? Pegoulz?).",
+        "Day 1 Grammar - 'Petra eo?' (What is it?): Petra eo an dra-mañ?, Hag ... eo?, Hag ... eo pe ...?, ... eo., N'eo ket ... ., N'eo ket ..., met ... eo."
       ],
       "vocabulary_topics": [
+        "Deiz 1: Gerioù Diazez (Day 1: Basic Words): Demat/Salud (hello), Kenavo (goodbye), Ya (yes), Nann (no), Trugarez (thank you), Mann ebet (you're welcome), Mar plij (please), Mat eo (alright/ok), Unan (one), Te (tea), Kafe (coffee), Dour (water), Chug (juice), Bier (beer), Gwin (wine), Arc'hant dizolo (cash), Kartenn (card).",
         "Greetings: Demat, Kenavo, Salud, Mont a ra? Mat an traoù?, Trist eo an amzer.",
         "Introductions & Personal Information: Pe anv out? ... eo ma anv. Plijet bras. Eus pelec'h out? Eus ... on.",
         "Courtesy: Trugarez, Mar plij, Digarezit.",
