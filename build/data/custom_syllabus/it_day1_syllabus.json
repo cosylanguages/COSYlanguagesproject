@@ -1,0 +1,138 @@
+{
+  "lesson_name": "Parole di Base (Basic Words)",
+  "language": "Italian",
+  "language_code": "it",
+  "level_code": "A0",
+  "sections": [
+    {
+      "title": "🔍Giorno 1 (Day 1)",
+      "audio_tts_phrase": "COSY Italiano. Giorno 1.",
+      "content_blocks": [
+        {
+          "block_type": "pronunciation_rules_match",
+          "title": "Regole di Pronuncia",
+          "rules": [
+            {"combination": "ci", "sound": "[tʃi]", "example_words": ["Arrivederci", "Ciao"]},
+            {"combination": "gi", "sound": "[dʒi]", "example_words": ["Buongiorno", "Prego"]},
+            {"combination": "gn", "sound": "[ɲ]", "example_words": ["Buongiorno"]},
+            {"combination": "z", "sound": "[ts]/[dz]", "example_words": ["Grazie"]}
+          ],
+          "sounds_to_match": ["[tʃi]", "[dʒi]", "[ɲ]", "[ts]", "[k]"]
+        },
+        {
+          "block_type": "image_match",
+          "title": "Abbina le parole alle immagini",
+          "words": [
+            {"term": "Salve", "image_placeholder": "hello_image.png"},
+            {"term": "Arrivederci", "image_placeholder": "goodbye_image.png"},
+            {"term": "Sì", "image_placeholder": "yes_image.png"},
+            {"term": "No", "image_placeholder": "no_image.png"},
+            {"term": "Grazie", "image_placeholder": "thankyou_image.png"},
+            {"term": "Prego", "image_placeholder": "yourewelcome_image.png"},
+            {"term": "Scusa", "image_placeholder": "sorry_image.png"}
+          ]
+        },
+        {
+          "block_type": "interactive_wordlist",
+          "title": "Elenco Vocaboli",
+          "vocabulary": [
+            {"term": "Salve", "definition": "Formula di saluto generica."},
+            {"term": "Ciao", "definition": "Saluto o commiato informale."},
+            {"term": "Buongiorno", "definition": "Saluto usato di mattina/giorno."},
+            {"term": "Arrivederci", "definition": "Formula di commiato."},
+            {"term": "Sì", "definition": "Risposta affermativa."},
+            {"term": "No", "definition": "Risposta negativa."},
+            {"term": "Grazie", "definition": "Espressione di gratitudine."},
+            {"term": "Prego", "definition": "Risposta cortese a 'grazie'."},
+            {"term": "Per favore", "definition": "Formula di cortesia per chiedere qualcosa."},
+            {"term": "Scusa", "definition": "Per chiedere scusa (informale)."},
+            {"term": "Va bene", "definition": "Indica accordo o che tutto è a posto."},
+            {"term": "OK", "definition": "Indica accordo (prestito)."},
+            {"term": "Uno", "definition": "Il numero 1."},
+            {"term": "Tè", "gender": "m", "definition": "Bevanda calda fatta con foglie infuse."},
+            {"term": "Caffè", "gender": "m", "definition": "Bevanda da semi di caffè tostati."},
+            {"term": "Acqua", "gender": "f", "definition": "Liquido incolore, essenziale."},
+            {"term": "Succo", "gender": "m", "definition": "Liquido da frutta o verdura."},
+            {"term": "Birra", "gender": "f", "definition": "Bevanda alcolica da malto fermentato."},
+            {"term": "Vino", "gender": "m", "definition": "Bevanda alcolica da uva fermentata."},
+            {"term": "Contanti", "gender": "m", "plural": true, "definition": "Denaro in monete o banconote."},
+            {"term": "Carta", "gender": "f", "definition": "Mezzo di pagamento di plastica."}
+          ],
+          "functionality_note": "L'utente può aggiungere tutte le parole o selezionare parole singole al proprio dizionario personale."
+        },
+        {
+          "block_type": "matching_opposites",
+          "title": "Abbina gli opposti",
+          "pairs": [
+            {"word1": "Salve (Ciao/Buongiorno)", "word2": "Arrivederci (Ciao)"},
+            {"word1": "Sì (Sì)", "word2": "No (No)"},
+            {"word1": "Grazie (Grazie)", "word2": "Prego (Prego)"},
+            {"word1": "Scusa (Scusa)", "word2": "Non fa niente (Nessun problema)"}
+          ]
+        },
+        {
+          "block_type": "vocabulary_practice_modes",
+          "title": "Pratica Vocaboli (Flashcard/Dizionario)",
+          "vocabulary_scope": "Elenco completo dei vocaboli del Giorno 1 (incluso 'scusa').",
+          "functionality_note": "L'utente può praticare queste parole usando flashcard o una modalità dizionario."
+        }
+      ]
+    },
+    {
+      "title": "🎭Dialogo (Dialogue)",
+      "dialogue": [
+        {"speaker": "A", "line": "Salve."},
+        {"speaker": "B", "line": "Salve, caffè o tè?"},
+        {"speaker": "A", "line": "Un caffè, per favore."},
+        {"speaker": "B", "line": "Un tè?"},
+        {"speaker": "A", "line": "No, un caffè, per favore."},
+        {"speaker": "B", "line": "Un caffè?"},
+        {"speaker": "A", "line": "Sì, per favore."},
+        {"speaker": "B", "line": "Va bene."},
+        {"speaker": "A", "line": "Grazie!"},
+        {"speaker": "B", "line": "Prego."},
+        {"speaker": "B", "line": "Contanti o carta?"},
+        {"speaker": "A", "line": "Contanti, per favore."},
+        {"speaker": "B", "line": "Contanti?"},
+        {"speaker": "A", "line": "Sì, per favore."},
+        {"speaker": "B", "line": "Va bene."},
+        {"speaker": "A", "line": "Grazie."},
+        {"speaker": "B", "line": "Prego."},
+        {"speaker": "A", "line": "Arrivederci."},
+        {"speaker": "B", "line": "Arrivederci."}
+      ]
+    },
+    {
+      "title": "🎬Pratica: Dialogo (Practice: Dialogue)",
+      "content_placeholder": "Esercizi pratici per il dialogo da aggiungere."
+    },
+    {
+      "title": "⚙️Cos'è? (What is it?)",
+      "grammar_points": [
+        "Che cos'è? - What is it?",
+        "È ...? - Is it ...?",
+        "È ... o ...? - Is it ... or ...?",
+        "È ... . - It is ...",
+        "Non è ... . - It is not ...",
+        "Non è ..., ma è ... . - It is not ..., but it is..."
+      ],
+      "example_vocabulary": [
+        "libro (m) - book",
+        "tavolo (m) - table",
+        "penna (f) - pen"
+      ]
+    },
+    {
+      "title": "⚙️Il Genere (The Gender)",
+      "content_placeholder": "Contenuto relativo al genere grammaticale da aggiungere."
+    },
+    {
+      "title": "🎬Pratica: È (Practice: It is)",
+      "content_placeholder": "Esercizi pratici per le strutture con 'è' da aggiungere."
+    },
+    {
+      "title": "🎒La Fine. (The end.)",
+      "content_placeholder": "Riassunto o osservazioni conclusive per il Giorno 1 da aggiungere."
+    }
+  ]
+}
