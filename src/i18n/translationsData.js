@@ -32,7 +32,8 @@ const translations = {
         grammar_conjugation_practice: "Conjugation Practice"
       },
       sentenceSkills: {
-        sentence_unscramble_exercise: "Sentence Unscramble"
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks" // New
       }
     },
     sentenceUnscramble: {
@@ -41,6 +42,13 @@ const translations = {
       hintLabel: "Hint:",
       dropWordsHere: "Click words below to build the sentence here...",
       clickToRemoveWord: "Click to remove word"
+    },
+    fillInTheBlanks: { // New
+      title: "Fill in the Blanks",
+      translationLabel: "Meaning:",
+      hintLabel: "Hint:",
+      ariaLabelBlank: "Blank number {number}",
+      answersShown: "Answers are shown above."
     },
     controls: {
         checkAnswer: "Check Answer",
@@ -52,7 +60,21 @@ const translations = {
         correct: "Correct!",
         incorrect: "Incorrect, try again."
     },
-    loadingExercise: "Loading exercise...",
+    loadingExercise: "Loading exercise...", // Generic
+    loadingExercises: "Loading exercises...", // For hosts
+    errors: { // Common errors
+        loadDataError: "Failed to load data.",
+        exerciseHost: {
+            notFound: "Exercise type \"<strong>{subPracticeType}</strong>\" not found or not yet implemented.",
+            title: "Exercise Error",
+            suggestion: "Please check the mapping in ExerciseHost.js or select another exercise."
+        }
+    },
+    exercises: { // Common exercise messages
+        noDataForLanguage: "No exercises found for this language.",
+        allCompleted: "All exercises completed! Resetting...",
+        noExercisesAvailable: "No exercises available at the moment."
+    },
     studySets: {
       myTitle: "My Study Sets",
       createNewSet: "Create New Set",
@@ -119,7 +141,7 @@ const translations = {
     myStudySetsPage: {
       title: "Manage Your Study Sets",
       backToList: "← Back to Set List",
-      errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted." // New key
+      errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
     }
   },
   COSYfrench: {
@@ -152,7 +174,8 @@ const translations = {
         grammar_conjugation_practice: "Pratique de Conjugaison"
       },
       sentenceSkills: {
-        sentence_unscramble_exercise: "Remettre la Phrase en Ordre"
+        sentence_unscramble_exercise: "Remettre la Phrase en Ordre",
+        fill_in_the_blanks_exercise: "Compléter les Trous" // New
       }
     },
     sentenceUnscramble: {
@@ -161,6 +184,13 @@ const translations = {
       hintLabel: "Indice :",
       dropWordsHere: "Cliquez sur les mots ci-dessous pour construire la phrase ici...",
       clickToRemoveWord: "Cliquez pour enlever le mot"
+    },
+    fillInTheBlanks: { // New
+      title: "Compléter les Trous",
+      translationLabel: "Signification :",
+      hintLabel: "Indice :",
+      ariaLabelBlank: "Espace {number}",
+      answersShown: "Les réponses sont affichées ci-dessus."
     },
     controls: {
         checkAnswer: "Vérifier la Réponse",
@@ -173,6 +203,20 @@ const translations = {
         incorrect: "Incorrect, réessayez."
     },
     loadingExercise: "Chargement de l'exercice...",
+    loadingExercises: "Chargement des exercices...",
+    errors: {
+        loadDataError: "Échec du chargement des données.",
+         exerciseHost: {
+            notFound: "Type d'exercice \"<strong>{subPracticeType}</strong>\" non trouvé ou pas encore implémenté.",
+            title: "Erreur d'Exercice",
+            suggestion: "Veuillez vérifier le mappage dans ExerciseHost.js ou sélectionner un autre exercice."
+        }
+    },
+    exercises: {
+        noDataForLanguage: "Aucun exercice trouvé pour cette langue.",
+        allCompleted: "Tous les exercices terminés ! Réinitialisation...",
+        noExercisesAvailable: "Aucun exercice disponible pour le moment."
+    },
     studySets: {
       myTitle: "Mes Decks d'Étude",
       createNewSet: "Créer un Nouveau Deck",
@@ -239,7 +283,7 @@ const translations = {
     myStudySetsPage: {
       title: "Gérer Vos Decks d'Étude",
       backToList: "← Retour à la Liste des Decks",
-      errorSetNotFoundForPlayer: "Impossible de trouver le deck à étudier. Il a peut-être été supprimé." // New key
+      errorSetNotFoundForPlayer: "Impossible de trouver le deck à étudier. Il a peut-être été supprimé."
     }
   }
 };

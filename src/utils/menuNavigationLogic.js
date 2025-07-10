@@ -79,7 +79,7 @@ export const allMenuItemsConfig = {
   },
   'sentence_skills': { // New Category
     parent: 'main_practice_categories_stage',
-    children: ['sentence_unscramble_exercise']
+    children: ['sentence_unscramble_exercise', 'fill_in_the_blanks_exercise'] // Added fill_in_the_blanks_exercise
   },
   'reading': {
     parent: 'main_practice_categories_stage',
@@ -121,6 +121,7 @@ export const allMenuItemsConfig = {
 
   // Sentence Skills Sub-Practice Exercises (Leaf nodes) - New
   'sentence_unscramble_exercise': { parent: 'sentence_skills', isExercise: true, i18nKey: 'subPractice.sentenceSkills.sentence_unscramble_exercise' },
+  'fill_in_the_blanks_exercise': { parent: 'sentence_skills', isExercise: true, i18nKey: 'subPractice.sentenceSkills.fill_in_the_blanks_exercise' },
 
   // Reading Sub-Practice Exercises (Leaf nodes)
   'reading_story_exercise': { parent: 'reading', isExercise: true },

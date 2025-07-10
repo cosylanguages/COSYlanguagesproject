@@ -7,9 +7,9 @@ import RandomWordPracticeHost from './exercises/vocabulary/RandomWordPracticeHos
 import RandomImagePracticeHost from './exercises/vocabulary/RandomImagePracticeHost';
 import ListeningPracticeHost from './exercises/vocabulary/ListeningPracticeHost';
 import PracticeAllVocabHost from './exercises/vocabulary/PracticeAllVocabHost';
-import MainPracticeAllHost from './MainPracticeAllHost'; // Import the new Main Practice All Host
+import MainPracticeAllHost from './MainPracticeAllHost';
 
-// Specific Vocabulary Exercise Components (to be used by Hosts)
+// Specific Vocabulary Exercise Components
 import ShowWordExercise from './exercises/vocabulary/ShowWordExercise';
 import IdentifyImageExercise from './exercises/vocabulary/IdentifyImageExercise';
 import TranscribeWordExercise from './exercises/vocabulary/TranscribeWordExercise';
@@ -25,8 +25,9 @@ import TypeVerbExercise from './exercises/grammar/TypeVerbExercise';
 import FillGapsExercise from './exercises/grammar/FillGapsExercise';
 import WordOrderExercise from './exercises/grammar/WordOrderExercise';
 
-// Sentence Skills Components (New)
+// Sentence Skills Components
 import SentenceUnscramblePracticeHost from './exercises/common/SentenceUnscramblePracticeHost';
+import FillInTheBlanksPracticeHost from './exercises/common/FillInTheBlanksPracticeHost'; // New Import
 
 // Reading Exercise Components
 import StoryReadingExercise from './exercises/reading/StoryReadingExercise';
@@ -57,49 +58,50 @@ const PlaceholderExercise = ({ name, subPracticeType }) => {
 };
 
 const exerciseMap = {
-  // Vocabulary Host Keys (from allMenuItemsConfig)
-  'vocab_random_word_host': RandomWordPracticeHost, // This might need to be 'vocab_random_word_exercise' if that's the key used in menu
-  'vocab_random_image_host': RandomImagePracticeHost, // Same as above, check keys
-  'vocab_listening_host': ListeningPracticeHost, // This is a host for listening sub-types
+  // Vocabulary Host Keys
+  'vocab_random_word_host': RandomWordPracticeHost,
+  'vocab_random_image_host': RandomImagePracticeHost,
+  'vocab_listening_host': ListeningPracticeHost,
   'vocab_practice_all_sub_host': PracticeAllVocabHost,
   'practice_all_main_cat': MainPracticeAllHost,
 
-  // Direct specific exercises (ensure these keys match menu items if directly linked)
-  'vocab_random_word_exercise': RandomWordPracticeHost, // Pointing to host for consistency
-  'vocab_random_image_exercise': RandomImagePracticeHost, // Pointing to host
-  'vocab_match_image_word_exercise': MatchImageWordExercise, // This is a specific component
-  'vocab_listening_exercise': ListeningPracticeHost, // This is a host
+  // Direct specific vocabulary exercises
+  'vocab_random_word_exercise': RandomWordPracticeHost,
+  'vocab_random_image_exercise': RandomImagePracticeHost,
+  'vocab_match_image_word_exercise': MatchImageWordExercise,
+  'vocab_listening_exercise': ListeningPracticeHost,
   'vocab_type_opposite_exercise': TypeOppositeExercise,
   'vocab_match_opposites_exercise': MatchOppositesExercise,
   'vocab_build_word_exercise': BuildWordExercise,
 
-  // Grammar (keys from allMenuItemsConfig)
+  // Grammar
   'grammar_fill_gaps_exercise': FillGapsExercise,
   'grammar_type_verb_exercise': TypeVerbExercise,
-  'grammar_select_article_exercise': SelectArticleExercise, // Changed from 'gender-articles'
-  'grammar_word_order_exercise': WordOrderExercise,     // Changed from 'word-order'
+  'grammar_select_article_exercise': SelectArticleExercise,
+  'grammar_word_order_exercise': WordOrderExercise,
   'grammar_conjugation_practice': ConjugationPracticeExercise,
 
-  // Sentence Skills (New)
+  // Sentence Skills
   'sentence_unscramble_exercise': SentenceUnscramblePracticeHost,
+  'fill_in_the_blanks_exercise': FillInTheBlanksPracticeHost, // New Entry
 
   // Reading
-  'reading_story_exercise': StoryReadingExercise, // Changed from 'story'
-  'reading_interesting_fact_exercise': InterestingFactExercise, // Changed from 'interesting-fact'
+  'reading_story_exercise': StoryReadingExercise,
+  'reading_interesting_fact_exercise': InterestingFactExercise,
 
   // Speaking
-  'speaking_question_exercise': SpeakingQuestionExercise, // Changed from 'question-practice'
-  'speaking_monologue_exercise': MonologueExercise,   // Changed from 'monologue'
-  'speaking_role_play_exercise': RolePlayExercise,   // Changed from 'role-play'
+  'speaking_question_exercise': SpeakingQuestionExercise,
+  'speaking_monologue_exercise': MonologueExercise,
+  'speaking_role_play_exercise': RolePlayExercise,
 
   // Writing
-  'writing_question_exercise': WritingQuestionExercise, // Changed from 'writing-question'
-  'writing_storytelling_exercise': StorytellingExercise, // Changed from 'storytelling'
-  'writing_diary_exercise': DiaryPracticeExercise,      // Changed from 'diary'
+  'writing_question_exercise': WritingQuestionExercise,
+  'writing_storytelling_exercise': StorytellingExercise,
+  'writing_diary_exercise': DiaryPracticeExercise,
 
-  // Legacy/Other (review if still needed or covered by above)
-  'listening': ListeningPracticeHost, // Catch-all for general listening category
-  'possessives': () => <PlaceholderExercise name="Possessives" subPracticeType="possessives" />,
+  // General Listening (if directly selected as a category)
+  'listening': ListeningPracticeHost,
+  'possessives': () => <PlaceholderExercise name="Possessives" subPracticeType="possessives" />, // Placeholder
 };
 
 const ExerciseHost = ({ subPracticeType, language, days, exerciseKey }) => {
@@ -112,31 +114,17 @@ const ExerciseHost = ({ subPracticeType, language, days, exerciseKey }) => {
   let ExerciseComponent = exerciseMap[subPracticeType];
 
   if (!ExerciseComponent) {
-    console.warn(`[ExerciseHost] Exercise type "${subPracticeType}" not found directly in exerciseMap. Attempting fallback.`);
-    // Fallback for simple keys if subPracticeType might be namespaced (e.g. old system)
-    const simpleKey = subPracticeType.split('/').pop();
-    if (exerciseMap[simpleKey]) {
-        ExerciseComponent = exerciseMap[simpleKey];
-        console.log(`[ExerciseHost] Found component using simple key fallback: ${simpleKey}`);
-    } else {
-        // Fallback for keys that might have a prefix in some older data structure
-        const foundKey = Object.keys(exerciseMap).find(key => subPracticeType.endsWith(`/${key}`) || key.endsWith(`/${subPracticeType}`));
-        if (foundKey) {
-          ExerciseComponent = exerciseMap[foundKey];
-          console.log(`[ExerciseHost] Found component using endsWith fallback: ${foundKey}`);
-        }
-    }
-
-    if (!ExerciseComponent) {
-      const notFoundText = t('errors.exerciseHost.notFound', `Exercise type "<strong>${subPracticeType}</strong>" not found or not yet implemented.`, { subPracticeType });
-      return (
-        <div style={{ color: 'red', textAlign: 'center', padding: '20px', border: '1px solid red', borderRadius: '5px' }}>
-          <h3><TransliterableText text={t('errors.exerciseHost.title', 'Exercise Error')} langOverride={i18nLanguage} /></h3>
-          <p dangerouslySetInnerHTML={{ __html: notFoundText }} />
-          <p><TransliterableText text={t('errors.exerciseHost.suggestion', 'Please check the mapping in ExerciseHost.js or select another exercise.')} langOverride={i18nLanguage} /></p>
-        </div>
-      );
-    }
+    console.warn(`[ExerciseHost] Exercise type "${subPracticeType}" not found directly in exerciseMap.`);
+    // Basic fallback removed for clarity, direct match is preferred.
+    // If specific fallbacks are needed, they should be explicit or handled by menu logic.
+    const notFoundText = t('errors.exerciseHost.notFound', `Exercise type "<strong>${subPracticeType}</strong>" not found or not yet implemented.`, { subPracticeType });
+    return (
+      <div style={{ color: 'red', textAlign: 'center', padding: '20px', border: '1px solid red', borderRadius: '5px' }}>
+        <h3><TransliterableText text={t('errors.exerciseHost.title', 'Exercise Error')} langOverride={i18nLanguage} /></h3>
+        <p dangerouslySetInnerHTML={{ __html: notFoundText }} />
+        <p><TransliterableText text={t('errors.exerciseHost.suggestion', 'Please check the mapping in ExerciseHost.js or select another exercise.')} langOverride={i18nLanguage} /></p>
+      </div>
+    );
   }
 
   return <ExerciseComponent language={language} days={days} exerciseKey={exerciseKey} subPracticeType={subPracticeType} />;
