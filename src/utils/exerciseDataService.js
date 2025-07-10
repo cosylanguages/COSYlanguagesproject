@@ -11,7 +11,7 @@ async function fetchJsonData(filePath) {
     // Prepend PUBLIC_URL to ensure correct pathing, especially in production builds or subfolder deployments.
     // filePath is expected to start with a leading slash like '/data/...'
     const fullPath = `${process.env.PUBLIC_URL || ''}${filePath}`;
-    const response = await fetch(fullPath); 
+    const response = await fetch(fullPath);
     if (response.ok) {
       try {
         const data = await response.json();
@@ -47,7 +47,7 @@ const langFileMap = {
   'COSYarmenian': 'armenian',   // Was 'ԾՈՍՅհայկական'
   'COSYbrezhoneg': 'breton',
   'COSYtatar': 'tatar',         // Was 'COSYtatarça'
-  'COSYbachkir': 'bashkir'      // Was 'COSYbashkort' 
+  'COSYbachkir': 'bashkir'      // Was 'COSYbashkort'
 };
 
 function getLanguageFileKey(languageIdentifier) {
@@ -62,7 +62,7 @@ function getLanguageFileKey(languageIdentifier) {
  */
 function filterDataByDays(allData, days) {
   if (!allData) return Array.isArray(days) ? [] : {}; // Return empty array for multiple days, object for single/opposites
-  
+
   let dayData;
   if (Array.isArray(days)) {
     dayData = [];
@@ -91,13 +91,13 @@ export async function loadVocabularyData(languageIdentifier, days) {
 export async function loadImageData(languageIdentifier, days) {
   const filePath = `/data/vocabulary/images/images.json`; // Single file for all image metadata
   const { data: allImageData, error, errorType } = await fetchJsonData(filePath);
-  
+
   if (error) return { data: [], error, errorType };
 
   const imageDataForDays = filterDataByDays(allImageData, days);
-  
+
   // Filter images that have a translation for the current language
-  const filteredImages = Array.isArray(imageDataForDays) 
+  const filteredImages = Array.isArray(imageDataForDays)
     ? imageDataForDays.filter(img => img.translations && img.translations[languageIdentifier])
     : []; // If not an array (e.g. error or unexpected structure), return empty
 
@@ -119,7 +119,7 @@ export async function loadOppositesData(languageIdentifier, days) {
     const mergedOpposites = dayData.reduce((acc, dayObj) => ({ ...acc, ...dayObj }), {});
     return { data: mergedOpposites, error: null, errorType: null };
   }
-  
+
   return { data: dayData, error: null, errorType: null };
 }
 
@@ -141,7 +141,7 @@ export async function loadPossessivesData(languageIdentifier, days) {
   const { data, error, errorType } = await fetchJsonData(filePath);
   // Possessives data is an object where keys are day numbers and values are arrays of exercise items.
   // If error, return empty object as per conventions for object-based data.
-  if (error) return { data: {}, error, errorType }; 
+  if (error) return { data: {}, error, errorType };
   return { data: filterDataByDays(data, days), error: null, errorType: null };
 }
 
@@ -182,12 +182,12 @@ export async function loadWritingPromptsData(languageIdentifier, days) {
   // Writing prompts could be similar, e.g., /data/writing/prompts_[langKey].json
   // Based on writing.js, it seems to use 'story_prompts_en.json' and filters by day.
   // We'll use the actual langKey here.
-  const filePath = `/data/writing/story_prompts_${langKey}.json`; 
+  const filePath = `/data/writing/story_prompts_${langKey}.json`;
   const { data, error, errorType } = await fetchJsonData(filePath);
   // Default structure from writing.js if error or no data
   const defaultData = { what_happens_next: [], what_happened_before: [] };
   if (error) return { data: defaultData, error, errorType };
-  
+
   const dayFilteredData = filterDataByDays(data, days);
 
   // Handle cases where dayFilteredData might not be the expected structure
@@ -201,13 +201,37 @@ export async function loadWritingPromptsData(languageIdentifier, days) {
     });
     return { data: mergedPrompts, error: null, errorType: null };
   }
-  
+
   // If dayFilteredData is an object (single day selected) or null/undefined
-  return { 
-    data: (dayFilteredData && typeof dayFilteredData === 'object' && !Array.isArray(dayFilteredData)) ? dayFilteredData : defaultData, 
-    error: null, 
-    errorType: null 
+  return {
+    data: (dayFilteredData && typeof dayFilteredData === 'object' && !Array.isArray(dayFilteredData)) ? dayFilteredData : defaultData,
+    error: null,
+    errorType: null
   };
+}
+
+/**
+ * Loads sentence unscramble exercise data for a given language.
+ * Data is expected to be an object where keys are language codes (e.g., "COSYfrench")
+ * and values are arrays of exercise items for that language.
+ * @param {string} languageIdentifier - The language identifier (e.g., "COSYfrench").
+ * @returns {Promise<{data: Array, error: string|null, errorType: string|null}>}
+ */
+export async function loadSentenceUnscrambleData(languageIdentifier) {
+  const filePath = `/data/exercises/sentenceUnscramble.json`;
+  const { data: allLanguageData, error, errorType } = await fetchJsonData(filePath);
+
+  if (error) {
+    return { data: [], error, errorType };
+  }
+
+  if (allLanguageData && allLanguageData[languageIdentifier]) {
+    return { data: allLanguageData[languageIdentifier], error: null, errorType: null };
+  } else {
+    // Language not found in the data file, or data structure is unexpected
+    console.warn(`Sentence unscramble data for language ${languageIdentifier} not found in ${filePath}.`);
+    return { data: [], error: `No sentence unscramble data for ${languageIdentifier}.`, errorType: 'dataNotFound' };
+  }
 }
 
 export { fetchJsonData };
