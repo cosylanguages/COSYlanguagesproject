@@ -49,7 +49,7 @@ export const allMenuItemsConfig = {
   'main_practice_categories_stage': {
     parent: 'day_confirm_action', // After days are confirmed
     // Component PracticeCategoryNav is active here.
-    children: ['vocabulary', 'grammar', 'reading', 'speaking', 'writing', 'listening', 'practice_all_main_cat']
+    children: ['vocabulary', 'grammar', 'sentence_skills', 'reading', 'speaking', 'writing', 'listening', 'practice_all_main_cat'] // Added sentence_skills
   },
 
   // Main Categories
@@ -74,8 +74,12 @@ export const allMenuItemsConfig = {
       'grammar_type_verb_exercise',
       'grammar_select_article_exercise',
       'grammar_word_order_exercise',
-      'grammar_conjugation_practice' // Added new exercise
+      'grammar_conjugation_practice'
     ]
+  },
+  'sentence_skills': { // New Category
+    parent: 'main_practice_categories_stage',
+    children: ['sentence_unscramble_exercise']
   },
   'reading': {
     parent: 'main_practice_categories_stage',
@@ -91,12 +95,10 @@ export const allMenuItemsConfig = {
   },
   'listening': {
     parent: 'main_practice_categories_stage',
-    // This key directly maps to ListeningPracticeHost in ExerciseHost
     isExercise: true
   },
   'practice_all_main_cat': {
     parent: 'main_practice_categories_stage',
-    // This key directly maps to MainPracticeAllHost in ExerciseHost
     isExercise: true
   },
 
@@ -104,7 +106,7 @@ export const allMenuItemsConfig = {
   'vocab_random_word_exercise': { parent: 'vocabulary', isExercise: true },
   'vocab_random_image_exercise': { parent: 'vocabulary', isExercise: true },
   'vocab_match_image_word_exercise': { parent: 'vocabulary', isExercise: true },
-  'vocab_listening_exercise': { parent: 'vocabulary', isExercise: true }, // This is a sub-host
+  'vocab_listening_exercise': { parent: 'vocabulary', isExercise: true },
   'vocab_type_opposite_exercise': { parent: 'vocabulary', isExercise: true },
   'vocab_match_opposites_exercise': { parent: 'vocabulary', isExercise: true },
   'vocab_build_word_exercise': { parent: 'vocabulary', isExercise: true },
@@ -115,7 +117,10 @@ export const allMenuItemsConfig = {
   'grammar_type_verb_exercise': { parent: 'grammar', isExercise: true },
   'grammar_select_article_exercise': { parent: 'grammar', isExercise: true },
   'grammar_word_order_exercise': { parent: 'grammar', isExercise: true },
-  'grammar_conjugation_practice': { parent: 'grammar', isExercise: true, i18nKey: 'subPractice.grammar.grammar_conjugation_practice' }, // Added new exercise definition
+  'grammar_conjugation_practice': { parent: 'grammar', isExercise: true, i18nKey: 'subPractice.grammar.grammar_conjugation_practice' },
+
+  // Sentence Skills Sub-Practice Exercises (Leaf nodes) - New
+  'sentence_unscramble_exercise': { parent: 'sentence_skills', isExercise: true, i18nKey: 'subPractice.sentenceSkills.sentence_unscramble_exercise' },
 
   // Reading Sub-Practice Exercises (Leaf nodes)
   'reading_story_exercise': { parent: 'reading', isExercise: true },
@@ -150,101 +155,55 @@ export function handleMenuSelection(currentActivePath, clickedItemKey, menuConfi
 
   let newPath = [];
 
-  // Handle 'entry_point' or direct stage calls like 'day_selection_stage'
   if (clickedItemKey === 'day_selection_stage' || itemConfig.parent === 'entry_point' || !itemConfig.parent) {
     newPath = [clickedItemKey];
   } else {
-    // General case: find parent in current path and build new path from there
     const parentKey = itemConfig.parent;
-    if (!parentKey) { // Should ideally not happen if not 'day_selection_stage'
+    if (!parentKey) {
         console.warn(`[handleMenuSelection] Item "${clickedItemKey}" has no parent but isn't a recognized root.`);
-        newPath = [clickedItemKey]; // Fallback: start new path
+        newPath = [clickedItemKey];
     } else {
         const parentIndex = currentActivePath.lastIndexOf(parentKey);
         if (parentIndex !== -1) {
-            // Parent is in the current path, slice up to and including parent, then add clicked item
             newPath = [...currentActivePath.slice(0, parentIndex + 1), clickedItemKey];
         } else {
-            // Parent is NOT in the current path. This implies a jump or incorrect current path.
-            // For robustness, we could try to rebuild from root to parent, then add clickedItem.
-            // For now, let's assume a simpler scenario: if parent is defined, it means we are navigating deeper from it.
-            // If the parent is not in the path, it's likely a fresh navigation to a category after day_confirm_action
-            // or similar.
-            // Example: currentPath=['day_selection_stage', 'day_confirm_action', 'main_practice_categories_stage']
-            // clickedItemKey='vocabulary' (parent 'main_practice_categories_stage')
-            // newPath should be ['day_selection_stage', 'day_confirm_action', 'main_practice_categories_stage', 'vocabulary']
-
-            // A more robust way to handle this: If the item's parent is defined,
-            // and the current path doesn't seem to lead to it directly,
-            // we might need to reconstruct a valid path up to the parent.
-            // However, the `parentIndex !== -1` check should mostly handle standard navigation.
-            // If parentIndex is -1, it implies a jump.
-            // For now, if parent is not in path, we'll just append, which might be wrong in complex jumps.
-            // A better approach for jumps might be to define 'entryPoints' or specific handlers.
-            // Let's refine this: if parent is defined, and the current path exists, assume we're appending to current valid path up to parent.
-            // If currentActivePath doesn't contain parent, it's likely a fresh selection into a new branch.
-
-            // If the last item in currentActivePath is the parent of the clicked item, then it's a direct child selection.
             if (currentActivePath.length > 0 && currentActivePath[currentActivePath.length -1] === parentKey) {
                  newPath = [...currentActivePath, clickedItemKey];
             } else {
-                 // This case means the parent is not the immediate predecessor.
-                 // This could be a jump, or the currentActivePath is stale.
-                 // For initial category selection after 'main_practice_categories_stage',
-                 // currentActivePath = [..., 'main_practice_categories_stage']
-                 // clickedItemKey = 'vocabulary', parent = 'main_practice_categories_stage'
-                 // So, this will correctly become [..., 'main_practice_categories_stage', 'vocabulary']
-
-                 // If the parent is somewhere in the path, but not last, it means we are navigating back up to a sibling branch.
-                 // Or, if it's the 'day_confirm_action' leading to 'main_practice_categories_stage'
                  if (itemConfig.parent === 'day_confirm_action' && clickedItemKey === 'main_practice_categories_stage') {
-                     // This is a specific transition from day confirmation to categories.
-                     // The path should be what currentActivePath was, plus 'main_practice_categories_stage'
-                     // Assuming currentActivePath was [day_selection_stage, day_confirm_action]
                      newPath = [...currentActivePath, clickedItemKey];
-                 } else if (menuConfig[parentKey] && menuConfig[parentKey].parent) { // Multi-level parent check
-                    // Attempt to build a path if parent exists and has a known structure
-                    // This part can get complex and needs a clear strategy for "jumping" vs "extending" path
-                    // For now, let's assume simple extension if parent is found
+                 } else if (menuConfig[parentKey] && menuConfig[parentKey].parent) {
                     let pathReconstruction = [parentKey, clickedItemKey];
                     let currentParent = menuConfig[parentKey].parent;
                     while(currentParent && menuConfig[currentParent]) {
                         pathReconstruction.unshift(currentParent);
-                        if (currentParent === 'day_selection_stage') break; // Common root after language
+                        if (currentParent === 'day_selection_stage') break;
                         currentParent = menuConfig[currentParent].parent;
-                         if (!currentParent) pathReconstruction.unshift('day_selection_stage'); // Ensure base
+                         if (!currentParent) pathReconstruction.unshift('day_selection_stage');
                     }
                     if(!pathReconstruction.includes('day_selection_stage') && pathReconstruction.length > 0) {
-                        // Ensure day_selection_stage is at the root if not already there from parent traversal
-                        // This is a heuristic based on current app flow.
-                        // newPath = ['day_selection_stage', ...pathReconstruction];
                     }
-                    // For now, let's keep it simple: if parentIndex was -1, it's likely a new branch from a completed stage.
-                    // The onMenuSelect in FreestyleModePage handles some of this logic by setting currentMain/Sub keys.
-                    // This function should primarily focus on path construction based on parent/child/nextStage.
                     newPath = [...currentActivePath.slice(0, currentActivePath.indexOf(parentKey) + 1), clickedItemKey];
-                    if (currentActivePath.indexOf(parentKey) === -1) { // Parent not in path, fresh branch
+                    if (currentActivePath.indexOf(parentKey) === -1) {
                         if (parentKey === 'main_practice_categories_stage' && currentActivePath.includes('day_confirm_action')) {
-                             newPath = [...currentActivePath, parentKey, clickedItemKey]; // Path was up to day_confirm_action
+                             newPath = [...currentActivePath, parentKey, clickedItemKey];
                         } else {
-                            newPath = [parentKey, clickedItemKey]; // Fallback to parent and child
+                            newPath = [parentKey, clickedItemKey];
                         }
                     }
 
                 } else {
-                     newPath = [parentKey, clickedItemKey]; // Fallback if parent has no further parent
+                     newPath = [parentKey, clickedItemKey];
                 }
             }
         }
     }
   }
 
-  // Append nextStage if defined for the clicked item
   if (itemConfig.nextStage) {
     newPath.push(itemConfig.nextStage);
   }
 
-  // console.log(`[handleMenuSelection] PrevPath: "${currentActivePath.join(' -> ')}", Clicked: "${clickedItemKey}", NewPath: "${newPath.join(' -> ')}"`);
   return { activePath: newPath };
 }
 
@@ -258,49 +217,25 @@ export function handleMenuSelection(currentActivePath, clickedItemKey, menuConfi
 export function isMenuItemVisible(currentActivePath, itemKey, menuConfig) {
   const itemConfig = menuConfig[itemKey];
   if (!itemConfig) {
-    // console.warn(`[isMenuItemVisible] Item key "${itemKey}" not found in menuConfig.`);
     return false;
   }
 
   const pathLength = currentActivePath.length;
   const currentActiveStage = pathLength > 0 ? currentActivePath[pathLength - 1] : null;
 
-  // Rule 1: If the itemKey IS the current active stage, the item (component container) is considered visible.
   if (itemKey === currentActiveStage) {
-    // This is for stages like 'main_practice_categories_stage' or 'vocabulary' (when it acts as a parent for sub-menu)
-    // OR for leaf exercise nodes.
     return true;
   }
 
-  // Rule 2: If the itemKey's PARENT is the current active stage, it's a direct child choice.
   if (itemConfig.parent === currentActiveStage) {
-    // This covers buttons within a stage, e.g., 'vocabulary' button when 'main_practice_categories_stage' is active.
-    // Special handling for mode selectors within day_selection_stage like 'day_single_input' (buttons)
     if (currentActiveStage === 'day_selection_stage' && (itemKey === 'day_single_input' || itemKey === 'day_range_input')) {
-        // These buttons are visible if day_selection_stage is the active one,
-        // AND a specific mode ('day_single_input' or 'day_range_input') isn't already the current stage.
-        // i.e. path is just ['day_selection_stage']
         return pathLength === 1;
     }
-    return true; // General child visibility
+    return true;
   }
 
-  // Rule 3: Visibility for content sections controlled by mode selectors (e.g., the actual input fields for single day)
-  // These are visible if their itemKey (which acts as a mode selector) is the currentActiveStage.
-  // Example: itemKey 'day_single_input' (for the input fields section), currentActivePath is ['day_selection_stage', 'day_single_input']
-  // This rule is effectively covered by Rule 1 (itemKey === currentActiveStage).
-  // The distinction for 'isModeSelector' might be more relevant for `handleMenuSelection` or UI rendering.
-
-  // Initial state: If path is empty, nothing is "visible" by this function's logic.
-  // Components make initial calls to onMenuSelect to populate the path.
   if (pathLength === 0) {
     return false;
   }
-
-  // Fallback: Not visible
-  // console.log(`[isMenuItemVisible] Item "${itemKey}" determined NOT visible. Path: ${currentActivePath.join('/')}, Parent: ${itemConfig.parent}, CurrentStage: ${currentActiveStage}`);
   return false;
 }
-
-// console.log('[menuNavigationLogic.js] Loaded with reconstructed allMenuItemsConfig and implemented isMenuItemVisible.');
-// The handleMenuSelection function remains a placeholder for now.
