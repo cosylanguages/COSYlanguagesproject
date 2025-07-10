@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { getStudySets, deleteStudySet } from '../../utils/studySetService';
 import { useI18n } from '../../i18n/I18nContext';
-import { useNavigate } from 'react-router-dom'; // For navigation
+// import { useNavigate } from 'react-router-dom'; // Not currently used directly
 import './StudySetList.css';
 
-// Added props: onCreateNew, onEditSetDetails, onEditSetCards
-const StudySetList = ({ onCreateNew, onEditSetDetails, onEditSetCards }) => {
+// Added props: onCreateNew, onEditSetDetails, onEditSetCards, onLaunchStudyPlayer
+const StudySetList = ({ onCreateNew, onEditSetDetails, onEditSetCards, onLaunchStudyPlayer }) => {
   const { t, language: currentUILanguage } = useI18n();
   const [studySets, setStudySets] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -36,9 +36,12 @@ const StudySetList = ({ onCreateNew, onEditSetDetails, onEditSetCards }) => {
   };
 
   const handleStudySet = (setId) => {
-    // TODO: This will likely involve navigation or calling a prop from parent to launch player
-    console.log(`Study set with ID: ${setId}`);
-    alert(t('studySets.studySetFunctionality', 'Study functionality coming soon!'));
+    if (onLaunchStudyPlayer) {
+      onLaunchStudyPlayer(setId);
+    } else {
+      console.log(`Study set with ID: ${setId} (handler not provided)`);
+      alert(t('studySets.studySetFunctionality', 'Study functionality coming soon!'));
+    }
   };
 
   const handleEditSet = (setId) => {

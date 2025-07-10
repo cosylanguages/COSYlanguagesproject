@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
-import { loginTeacher as apiLoginTeacher, logoutUser as apiLogoutUser } from './api/auth';
+import { loginTeacher as apiLoginTeacher, logoutUser as apiLogoutUser } from '../api/auth'; // Corrected path
 
 export const AuthContext = createContext();
 
