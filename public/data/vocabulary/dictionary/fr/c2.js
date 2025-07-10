@@ -10,13 +10,9 @@ const c2_french_vocabulary = {
     { "term": "ubuesque", "definition": "Absurde, grotesque et souvent cruel, à la manière du personnage d'Ubu Roi d'Alfred Jarry.", "gender": null, "example": "Une situation ubuesque qui défie toute logique.", "notes": "Référence culturelle." }
   ],
   "Expressions Idiomatiques, Proverbes et Allusions Culturelles (niveau natif)": [
-    { "term": "battre son plein", "definition": "Être à son apogée, à son maximum d'intensité.", "gender": null, "example": "La fête battait son plein quand nous sommes arrivés.", "notes": "Expression." },
     { "term": "c'est monnaie courante", "definition": "C'est habituel, fréquent.", "gender": null, "example": "Les retards sont monnaie courante sur cette ligne.", "notes": "Expression." },
     { "term": "une levée de boucliers", "definition": "Protestation vive et générale.", "gender": "f", "example": "Sa proposition a provoqué une levée de boucliers.", "notes": "Expression." },
-    { "term": "faire long feu", "definition": "Ne pas durer, échouer (pour un projet, une entreprise).", "gender": null, "example": "Son projet de réforme n'a pas fait long feu.", "notes": "Expression." },
     { "term": "un travail de Romain / de Bénédictin", "definition": "Travail considérable, de longue haleine et minutieux.", "gender": "m", "example": "La traduction de ces archives a été un travail de Bénédictin.", "notes": "Allusion culturelle." },
-    { "term": "chercher la petite bête", "definition": "Critiquer des détails insignifiants, être excessivement pointilleux.", "gender": null, "example": "Il trouve toujours à redire, il adore chercher la petite bête.", "notes": "Expression idiomatique." },
-    { "term": "mettre la charrue avant les bœufs", "definition": "Faire les choses dans le désordre, commencer par la fin.", "gender": null, "example": "Vouloir acheter la voiture avant d'avoir le permis, c'est mettre la charrue avant les bœufs.", "notes": "Expression idiomatique." },
     { "term": "ce n'est pas la mer à boire", "definition": "Ce n'est pas si difficile ou impossible que ça.", "gender": null, "example": "Apprendre cette leçon par cœur, ce n'est pas la mer à boire.", "notes": "Expression idiomatique." },
     { "term": "une épée de Damoclès", "definition": "Un danger constant, une menace qui pèse sur quelqu'un.", "gender": "f", "example": "Cette échéance est une véritable épée de Damoclès suspendue au-dessus de nos têtes.", "notes": "Allusion culturelle/mythologique." }
   ],
@@ -65,8 +61,7 @@ const c2_french_vocabulary = {
     { "term": "icelui / icelle", "definition": "Forme ancienne ou littéraire de 'celui-ci' / 'celle-ci'.", "gender": "m/f", "example": "Le roi et la reine ; icelui portait une couronne, icelle une tiare.", "notes": "Archaïque/Très littéraire." },
     { "term": "moult", "definition": "Beaucoup de (forme ancienne ou plaisante).", "gender": null, "example": "Il y avait moult invités à la fête.", "notes": "Archaïque/Plaisant." },
     { "term": "nonobstant", "definition": "Malgré, cependant (conjonction ou préposition).", "gender": null, "example": "Nonobstant ces difficultés, le projet avance.", "notes": "Soutenu/Formel." },
-    { "term": "derechef", "definition": "De nouveau, une seconde fois.", "gender": null, "example": "Il tenta derechef de résoudre l'énigme.", "notes": "Soutenu/Littéraire." },
-    { "term": "quérir", "definition": "Chercher (forme ancienne ou littéraire).", "gender": null, "example": "Il est allé quérir de l'aide.", "notes": "Archaïque/Littéraire. Surtout à l'infinitif." }
+    { "term": "derechef", "definition": "De nouveau, une seconde fois.", "gender": null, "example": "Il tenta derechef de résoudre l'énigme.", "notes": "Soutenu/Littéraire." }
   ],
   "Analyse Critique du Discours et de la Langue": [
     { "term": "la pragmatique", "definition": "Étude du langage en contexte et de son utilisation par les locuteurs.", "gender": "f", "example": "Une analyse pragmatique de l'énoncé.", "notes": "Linguistique." },
@@ -86,8 +81,7 @@ const c2_french_vocabulary = {
     { "term": "un compromis", "definition": "Accord obtenu par des concessions mutuelles.", "gender": "m", "example": "Trouver un compromis acceptable pour les deux parties.", "notes": "" },
     { "term": "une concession", "definition": "Abandon d'un avantage, d'une prétention, en vue d'un accord.", "gender": "f", "example": "Faire des concessions pour parvenir à la paix.", "notes": "" },
     { "term": "un préalable", "definition": "Condition qui doit être remplie avant toute autre chose.", "gender": "m", "example": "La libération des otages est un préalable à toute négociation.", "notes": "" },
-    { "term": "une feuille de route (diplomatique)", "definition": "Plan d'action convenu pour résoudre un conflit ou atteindre un objectif diplomatique.", "gender": "f", "example": "La feuille de route pour la paix au Moyen-Orient.", "notes": "" },
-    { "term": "ratifier (un traité)", "definition": "Approuver officiellement et rendre exécutoire (un accord international).", "gender": null, "example": "Le parlement doit ratifier le traité.", "notes": "" }
+    { "term": "une feuille de route (diplomatique)", "definition": "Plan d'action convenu pour résoudre un conflit ou atteindre un objectif diplomatique.", "gender": "f", "example": "La feuille de route pour la paix au Moyen-Orient.", "notes": "" }
   ]
 };
 

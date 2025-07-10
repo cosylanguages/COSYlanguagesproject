@@ -28,13 +28,6 @@
     "theme": "Crime"
   },
   {
-    "term": "abhor",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Negative feelings"
-  },
-  {
     "term": "abhorrence",
     "level": "C1",
     "definition": "TODO: Definition",
@@ -70,13 +63,6 @@
     "theme": "Cramming for success: study and academic work"
   },
   {
-    "term": "accelerate",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Speed: fast and slow"
-  },
-  {
     "term": "Accidents will happen!",
     "level": "C1",
     "definition": "TODO: Definition",
@@ -110,20 +96,6 @@
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "Economy and finance"
-  },
-  {
-    "term": "acknowledge",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Cramming for success: study and academic work"
-  },
-  {
-    "term": "acquit",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Apology, regret and reconciliation"
   },
   {
     "term": "acquittal",
@@ -166,13 +138,6 @@
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "Suffixes: forming new words"
-  },
-  {
-    "term": "adhere",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Beliefs"
   },
   {
     "term": "adherence",
@@ -224,13 +189,6 @@
     "theme": "Medical language"
   },
   {
-    "term": "advocate",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Academic writing: making sense"
-  },
-  {
     "term": "affinity",
     "level": "C1",
     "definition": "TODO: Definition",
@@ -274,13 +232,6 @@
   },
   {
     "term": "aggregate (n.)",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Number: statistics and quantity"
-  },
-  {
-    "term": "aggregate (v.)",
     "level": "C1",
     "definition": "TODO: Definition",
     "example": "TODO: Example",
@@ -385,13 +336,6 @@
     "theme": "British politics"
   },
   {
-    "term": "allege",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The letter of the law"
-  },
-  {
     "term": "alleviate debt",
     "level": "C1",
     "definition": "TODO: Definition",
@@ -411,13 +355,6 @@
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "War and peace"
-  },
-  {
-    "term": "allude",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Academic writing: text structure"
   },
   {
     "term": "ally",
@@ -446,13 +383,6 @@
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "War and peace"
-  },
-  {
-    "term": "amend",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "The letter of the law"
   },
   {
     "term": "amendment",
@@ -553,13 +483,6 @@
     "theme": "Talking about books"
   },
   {
-    "term": "anticipate",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Promises and bets"
-  },
-  {
     "term": "anti-corruption squad",
     "level": "C1",
     "definition": "TODO: Definition",
@@ -579,13 +502,6 @@
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "Easily confused words"
-  },
-  {
-    "term": "append",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Academic writing: making sense"
   },
   {
     "term": "applause",
@@ -693,20 +609,6 @@
     "theme": "Modality: expressing facts, opinions, desires"
   },
   {
-    "term": "assemble",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Industries: from manufacturing to service"
-  },
-  {
-    "term": "assert",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Academic writing: text structure"
-  },
-  {
     "term": "asterisk",
     "level": "C1",
     "definition": "TODO: Definition",
@@ -763,13 +665,6 @@
     "theme": "Red tape"
   },
   {
-    "term": "attribute (to)",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Beliefs"
-  },
-  {
     "term": "auburn",
     "level": "C1",
     "definition": "TODO: Definition",
@@ -782,13 +677,6 @@
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "At work: careers"
-  },
-  {
-    "term": "authorise",
-    "level": "C1",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Permission: getting the go-ahead"
   },
   {
     "term": "authoritative",
@@ -823,14 +711,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "The horse racing competition took place in the arena.",
-    "level": "c1",
-    "theme": "File5_Sport"
-  },
-  {
-    "term": "beat",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Arsenal beat Chelsea 2-0.",
     "level": "c1",
     "theme": "File5_Sport"
   },
@@ -883,22 +763,6 @@
     "theme": "File5_Sport"
   },
   {
-    "term": "draw",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "We don’t want to draw – we want to win the match.",
-    "level": "c1",
-    "theme": "File5_Sport"
-  },
-  {
-    "term": "eliminate",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "We will eliminate their team from the competition.",
-    "level": "c1",
-    "theme": "File5_Sport"
-  },
-  {
     "term": "fan",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -931,22 +795,6 @@
     "theme": "File5_Sport"
   },
   {
-    "term": "knock out",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "Can we knock out their team from the competition?",
-    "level": "c1",
-    "theme": "File5_Sport"
-  },
-  {
-    "term": "lose",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "They accept money to lose matches.",
-    "level": "c1",
-    "theme": "File5_Sport"
-  },
-  {
     "term": "pitch",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -975,14 +823,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "The referee blew his whistle.",
-    "level": "c1",
-    "theme": "File5_Sport"
-  },
-  {
-    "term": "send off",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "I think the referee should send off that player.",
     "level": "c1",
     "theme": "File5_Sport"
   },
@@ -1043,42 +883,10 @@
     "theme": "File5_Sport"
   },
   {
-    "term": "train",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "How many hours do you train for every day?",
-    "level": "c1",
-    "theme": "File5_Sport"
-  },
-  {
     "term": "umpire",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "The umpire sent one of the players off the field.",
-    "level": "c1",
-    "theme": "File5_Sport"
-  },
-  {
-    "term": "warm up",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "It’s important to warm up before you do exercise.",
-    "level": "c1",
-    "theme": "File5_Sport"
-  },
-  {
-    "term": "win",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I really want to win this competition.",
-    "level": "c1",
-    "theme": "File5_Sport"
-  },
-  {
-    "term": "work out",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "I like to work out at the gym three times a week.",
     "level": "c1",
     "theme": "File5_Sport"
   },
@@ -1089,30 +897,6 @@
     "example": "I teach Ashtanga yoga on Monday evenings.",
     "level": "c1",
     "theme": "File5_Sport"
-  },
-  {
-    "term": "be together",
-    "partOfSpeech": "v phr",
-    "definition": "TODO: Definition",
-    "example": "I want us to be together forever.",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
-    "term": "become friends",
-    "partOfSpeech": "v phr",
-    "definition": "TODO: Definition",
-    "example": "When did you first become friends?",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
-    "term": "break up",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "I find it really hard to break up with someone.",
-    "level": "c1",
-    "theme": "File5_Relationships"
   },
   {
     "term": "classmate",
@@ -1147,34 +931,10 @@
     "theme": "File5_Relationships"
   },
   {
-    "term": "dump",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I’m going to dump my boyfriend this evening.",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
     "term": "ex",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "I had a text message from my ex yesterday.",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
-    "term": "fall out with",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "I never fall out with my sister.",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
-    "term": "fancy",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Do you fancy anyone in your drama class?",
     "level": "c1",
     "theme": "File5_Relationships"
   },
@@ -1195,46 +955,6 @@
     "theme": "File5_Relationships"
   },
   {
-    "term": "get in touch",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "Please get in touch when you are next in town.",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
-    "term": "get married",
-    "partOfSpeech": "v phr",
-    "definition": "TODO: Definition",
-    "example": "I’d like to get married before I’m 30.",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
-    "term": "get on",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "Do you get on with your parents?",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
-    "term": "get to know",
-    "partOfSpeech": "v phr",
-    "definition": "TODO: Definition",
-    "example": "I want to get to know you.",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
-    "term": "go out together",
-    "partOfSpeech": "v phr",
-    "definition": "TODO: Definition",
-    "example": "How long did you and Nick go out together?",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
     "term": "have a crush on",
     "partOfSpeech": "phr",
     "definition": "TODO: Definition",
@@ -1251,26 +971,10 @@
     "theme": "File5_Relationships"
   },
   {
-    "term": "lose touch",
-    "partOfSpeech": "v phr",
-    "definition": "TODO: Definition",
-    "example": "Don’t lose touch – let’s exchange numbers.",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
     "term": "mate",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "Nicola’s not my girlfriend – she’s just a mate.",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
-    "term": "meet",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I find it quite difficult to meet new people.",
     "level": "c1",
     "theme": "File5_Relationships"
   },
@@ -1283,14 +987,6 @@
     "theme": "File5_Relationships"
   },
   {
-    "term": "propose",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I want to propose to my girlfriend tonight.",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
     "term": "romantic",
     "partOfSpeech": "adj",
     "definition": "TODO: Definition",
@@ -1299,26 +995,10 @@
     "theme": "File5_Relationships"
   },
   {
-    "term": "split up",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "When did you split up with Marco?",
-    "level": "c1",
-    "theme": "File5_Relationships"
-  },
-  {
     "term": "audition",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "The actress was driving to an audition.",
-    "level": "c1",
-    "theme": "File5_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "award",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "They will award the title to the winner of the race.",
     "level": "c1",
     "theme": "File5_UsefulWordsAndPhrases"
   },
@@ -1435,14 +1115,6 @@
     "theme": "File5_UsefulWordsAndPhrases"
   },
   {
-    "term": "run",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I want to run a company when I grow up.",
-    "level": "c1",
-    "theme": "File5_UsefulWordsAndPhrases"
-  },
-  {
     "term": "shift",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -1479,14 +1151,6 @@
     "partOfSpeech": "adj",
     "definition": "TODO: Definition",
     "example": "I’m really superstitious so I hate the number 13.",
-    "level": "c1",
-    "theme": "File5_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "sweat",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I always sweat a lot when I play tennis.",
     "level": "c1",
     "theme": "File5_UsefulWordsAndPhrases"
   },
@@ -1531,14 +1195,6 @@
     "theme": "File5_UsefulWordsAndPhrases"
   },
   {
-    "term": "turn out",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "Don’t worry – everything will turn out okay.",
-    "level": "c1",
-    "theme": "File5_UsefulWordsAndPhrases"
-  },
-  {
     "term": "winner",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -1559,14 +1215,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "Have you ever met a celebrity?",
-    "level": "c1",
-    "theme": "File5_MoreWordsInFile5"
-  },
-  {
-    "term": "cheat",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Why did you cheat in your exams?",
     "level": "c1",
     "theme": "File5_MoreWordsInFile5"
   },
@@ -1603,26 +1251,10 @@
     "theme": "File5_MoreWordsInFile5"
   },
   {
-    "term": "protest",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "You shouldn’t protest against the referee’s decision.",
-    "level": "c1",
-    "theme": "File5_MoreWordsInFile5"
-  },
-  {
     "term": "quarter-finals",
     "partOfSpeech": "n pl",
     "definition": "TODO: Definition",
     "example": "We got through to the quarter-finals of the competition.",
-    "level": "c1",
-    "theme": "File5_MoreWordsInFile5"
-  },
-  {
-    "term": "recover",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "How long did it take to recover from the accident?",
     "level": "c1",
     "theme": "File5_MoreWordsInFile5"
   },
@@ -1723,22 +1355,6 @@
     "theme": "File6_Cinema"
   },
   {
-    "term": "based on",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "The film is based on a popular novel.",
-    "level": "c1",
-    "theme": "File6_Cinema"
-  },
-  {
-    "term": "be on",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "When will the new series of Downton Abbey be on?",
-    "level": "c1",
-    "theme": "File6_Cinema"
-  },
-  {
     "term": "cast",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -1755,26 +1371,10 @@
     "theme": "File6_Cinema"
   },
   {
-    "term": "direct",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "He’s an actor but now he wants to direct a film.",
-    "level": "c1",
-    "theme": "File6_Cinema"
-  },
-  {
     "term": "drama",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "I watched an excellent drama set during the war.",
-    "level": "c1",
-    "theme": "File6_Cinema"
-  },
-  {
-    "term": "dub",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "They usually dub American movies into German.",
     "level": "c1",
     "theme": "File6_Cinema"
   },
@@ -1915,14 +1515,6 @@
     "theme": "File6_Cinema"
   },
   {
-    "term": "set",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "They set the film in the Italian Alps.",
-    "level": "c1",
-    "theme": "File6_Cinema"
-  },
-  {
     "term": "shoot on location",
     "partOfSpeech": "phr",
     "definition": "TODO: Definition",
@@ -2027,22 +1619,6 @@
     "theme": "File6_TheBody"
   },
   {
-    "term": "bite",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Did that dog just bite you?",
-    "level": "c1",
-    "theme": "File6_TheBody"
-  },
-  {
-    "term": "clap",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Clap your hands!",
-    "level": "c1",
-    "theme": "File6_TheBody"
-  },
-  {
     "term": "ears",
     "partOfSpeech": "n pl",
     "definition": "TODO: Definition",
@@ -2115,14 +1691,6 @@
     "theme": "File6_TheBody"
   },
   {
-    "term": "kick",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Kick the ball as far as you can.",
-    "level": "c1",
-    "theme": "File6_TheBody"
-  },
-  {
     "term": "knees",
     "partOfSpeech": "n pl",
     "definition": "TODO: Definition",
@@ -2163,26 +1731,10 @@
     "theme": "File6_TheBody"
   },
   {
-    "term": "nod",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Nod your head if you want to say yes.",
-    "level": "c1",
-    "theme": "File6_TheBody"
-  },
-  {
     "term": "nose",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "I have a large nose just like my mother.",
-    "level": "c1",
-    "theme": "File6_TheBody"
-  },
-  {
-    "term": "point",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Can you point at the person who stole your money?",
     "level": "c1",
     "theme": "File6_TheBody"
   },
@@ -2195,30 +1747,6 @@
     "theme": "File6_TheBody"
   },
   {
-    "term": "smell",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I can smell garlic.",
-    "level": "c1",
-    "theme": "File6_TheBody"
-  },
-  {
-    "term": "smile",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "She’ll smile at you if you smile at her.",
-    "level": "c1",
-    "theme": "File6_TheBody"
-  },
-  {
-    "term": "stare",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Don’t stare at people – it’s rude.",
-    "level": "c1",
-    "theme": "File6_TheBody"
-  },
-  {
     "term": "stomach",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -2227,26 +1755,10 @@
     "theme": "File6_TheBody"
   },
   {
-    "term": "taste",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Taste this cake – it’s delicious.",
-    "level": "c1",
-    "theme": "File6_TheBody"
-  },
-  {
     "term": "teeth",
     "partOfSpeech": "n pl",
     "definition": "TODO: Definition",
     "example": "I brush my teeth twice a day.",
-    "level": "c1",
-    "theme": "File6_TheBody"
-  },
-  {
-    "term": "throw",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Throw the ball back to Jason.",
     "level": "c1",
     "theme": "File6_TheBody"
   },
@@ -2271,22 +1783,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "I broke a tooth on a hard bread roll.",
-    "level": "c1",
-    "theme": "File6_TheBody"
-  },
-  {
-    "term": "touch",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "If you touch the screen it will open the website.",
-    "level": "c1",
-    "theme": "File6_TheBody"
-  },
-  {
-    "term": "whistle",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I like to whistle a tune while I do the gardening.",
     "level": "c1",
     "theme": "File6_TheBody"
   },
@@ -2355,22 +1851,6 @@
     "theme": "File6_UsefulWordsAndPhrases"
   },
   {
-    "term": "dress up",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "I like to dress up when we go out for meals.",
-    "level": "c1",
-    "theme": "File6_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "dye",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I want to dye my hair blond.",
-    "level": "c1",
-    "theme": "File6_UsefulWordsAndPhrases"
-  },
-  {
     "term": "dyed",
     "partOfSpeech": "adj",
     "definition": "TODO: Definition",
@@ -2403,34 +1883,10 @@
     "theme": "File6_UsefulWordsAndPhrases"
   },
   {
-    "term": "grow up",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "I don’t want to grow up so I still live with my parents.",
-    "level": "c1",
-    "theme": "File6_UsefulWordsAndPhrases"
-  },
-  {
     "term": "homeless",
     "partOfSpeech": "adj",
     "definition": "TODO: Definition",
     "example": "I gave money to the homeless man at the station.",
-    "level": "c1",
-    "theme": "File6_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "identify",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I identify more with my work than with my private life.",
-    "level": "c1",
-    "theme": "File6_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "inhabit",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "What kind of people inhabit this land?",
     "level": "c1",
     "theme": "File6_UsefulWordsAndPhrases"
   },
@@ -2447,14 +1903,6 @@
     "partOfSpeech": "adj",
     "definition": "TODO: Definition",
     "example": "My aunt is very intellectual – she knows so much.",
-    "level": "c1",
-    "theme": "File6_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "judge",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "It’s wrong to judge people by their appearance.",
     "level": "c1",
     "theme": "File6_UsefulWordsAndPhrases"
   },
@@ -2479,14 +1927,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "My aunt is a nurse and works in a hospital in London.",
-    "level": "c1",
-    "theme": "File6_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "photograph",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I would like to photograph this wonderful building.",
     "level": "c1",
     "theme": "File6_UsefulWordsAndPhrases"
   },
@@ -2539,26 +1979,10 @@
     "theme": "File6_UsefulWordsAndPhrases"
   },
   {
-    "term": "transform",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "They will transform this area into a shopping centre.",
-    "level": "c1",
-    "theme": "File6_UsefulWordsAndPhrases"
-  },
-  {
     "term": "webcam",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "I use a webcam to communicate with friends abroad.",
-    "level": "c1",
-    "theme": "File6_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "welcome",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "We will welcome you here whenever you want to visit.",
     "level": "c1",
     "theme": "File6_UsefulWordsAndPhrases"
   },
@@ -2635,14 +2059,6 @@
     "theme": "File6_MoreWordsInFile6"
   },
   {
-    "term": "go viral",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "Do you think this video clip will go viral?",
-    "level": "c1",
-    "theme": "File6_MoreWordsInFile6"
-  },
-  {
     "term": "ID card",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -2679,14 +2095,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "The Brontë sisters all used a pen-name.",
-    "level": "c1",
-    "theme": "File6_MoreWordsInFile6"
-  },
-  {
-    "term": "persist",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Our brains persist in using stereotypes.",
     "level": "c1",
     "theme": "File6_MoreWordsInFile6"
   },
@@ -2763,3 +2171,4 @@
     "theme": "File6_MoreWordsInFile6"
   }
 ]
+>>>>>>> REPLACE

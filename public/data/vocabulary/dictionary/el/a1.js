@@ -1,16 +1,6 @@
 export const a1_greek_vocabulary = {
   "Daily Life & Routine Activities": [
     {
-      "term": "ξυπνάω / ξυπνώ",
-      "latinisation": "xipnao / xipno",
-      "pronunciation": "ksipˈnao / ksiˈpno",
-      "partOfSpeech": "verb",
-      "definition": "to wake up",
-      "example": "Ξυπνάω στις εφτά κάθε πρωί.",
-      "level": "a1",
-      "notes": ""
-    },
-    {
       "term": "τρώω πρωινό",
       "latinisation": "troo proino",
       "pronunciation": "ˈtroo proiˈno",
@@ -37,26 +27,6 @@ export const a1_greek_vocabulary = {
       "partOfSpeech": "phrase",
       "definition": "to go to work",
       "example": "Πηγαίνω στη δουλειά με τα πόδια.",
-      "level": "a1",
-      "notes": ""
-    },
-    {
-      "term": "διαβάζω",
-      "latinisation": "dhiavazo",
-      "pronunciation": "ðiaˈvazo",
-      "partOfSpeech": "verb",
-      "definition": "to study / to read",
-      "example": "Διαβάζω για τις εξετάσεις.",
-      "level": "a1",
-      "notes": ""
-    },
-    {
-      "term": "κοιμάμαι",
-      "latinisation": "kimate",
-      "pronunciation": "ciˈmame",
-      "partOfSpeech": "verb",
-      "definition": "to sleep",
-      "example": "Κοιμάμαι νωρίς τα βράδια.",
       "level": "a1",
       "notes": ""
     }
@@ -347,16 +317,6 @@ export const a1_greek_vocabulary = {
       "partOfSpeech": "phrase",
       "definition": "it is sunny",
       "example": "Σήμερα έχει ήλιο και ζέστη.",
-      "level": "a1",
-      "notes": ""
-    },
-    {
-      "term": "βρέχει",
-      "latinisation": "vrekhi",
-      "pronunciation": "ˈvreçi",
-      "partOfSpeech": "verb",
-      "definition": "it is raining",
-      "example": "Πάρε ομπρέλα, βρέχει.",
       "level": "a1",
       "notes": ""
     },

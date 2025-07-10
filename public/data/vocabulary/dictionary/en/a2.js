@@ -1,26 +1,10 @@
 export const a2_english_vocabulary = {
   "Hobbies & Interests": [
-    { "term": "do sport", "pronunciation": "duː spɔːrt", "partOfSpeech": "v phr", "definition": "Participate in sports.", "example": "I do sport three times a week.", "level": "a2", "notes": "" },
     { "term": "free time", "pronunciation": "friː taɪm", "partOfSpeech": "n", "definition": "Time when one is not working or occupied; leisure time.", "example": "In my free time, I go to dance lessons.", "level": "a2", "notes": "" },
-    { "term": "go out", "pronunciation": "goʊ aʊt", "partOfSpeech": "phr v", "definition": "Leave one's home to go to a social event.", "example": "We only go out at weekends.", "level": "a2", "notes": "" },
-    { "term": "go to the beach", "pronunciation": "goʊ tuː ðə biːtʃ", "partOfSpeech": "v phr", "definition": "Visit a sandy or pebbly shore by the sea.", "example": "We often go to the beach in the summer.", "level": "a2", "notes": "" },
-    { "term": "meet friends", "pronunciation": "miːt frɛndz", "partOfSpeech": "v phr", "definition": "Get together with friends socially.", "example": "I meet friends at a café after school.", "level": "a2", "notes": "" },
-    { "term": "play computer games", "pronunciation": "pleɪ kəmˈpjuːtər geɪmz", "partOfSpeech": "v phr", "definition": "Engage in games played on a computer.", "example": "Many people play computer games in their free time.", "level": "a2", "notes": "" },
-    { "term": "play tennis", "pronunciation": "pleɪ ˈtɛnɪs", "partOfSpeech": "v phr", "definition": "Participate in the sport of tennis.", "example": "They sometimes play tennis after work.", "level": "a2", "notes": "" },
-    { "term": "play the piano", "pronunciation": "pleɪ ðə piˈænoʊ", "partOfSpeech": "v phr", "definition": "Perform music on a piano.", "example": "I play the piano, but I’m not very good at it.", "level": "a2", "notes": "" },
-    { "term": "relax", "pronunciation": "rɪˈlæks", "partOfSpeech": "v", "definition": "Make or become less tense or anxious.", "example": "How do you relax before a match?", "level": "a2", "notes": "" },
-    { "term": "swim", "pronunciation": "swɪm", "partOfSpeech": "v", "definition": "Propel the body through water by using the limbs.", "example": "I don’t like the gym, so I swim for exercise.", "level": "a2", "notes": "" },
-    { "term": "travel", "pronunciation": "ˈtrævəl", "partOfSpeech": "v", "definition": "Make a journey, typically of some length.", "example": "I usually travel to work by bus.", "level": "a2", "notes": "" },
-    { "term": "walk", "pronunciation": "wɔːk", "partOfSpeech": "v", "definition": "Move at a regular pace by lifting and setting down each foot in turn, never having both feet off the ground at once.", "example": "I walk in the mountains near my town.", "level": "a2", "notes": "" },
-    { "term": "buying clothes", "pronunciation": "ˈbaɪɪŋ kloʊðz", "partOfSpeech": "v phr", "definition": "The activity of purchasing garments.", "example": "I like going to the shops and buying clothes.", "level": "a2", "notes": "" },
     { "term": "camping", "pronunciation": "ˈkæmpɪŋ", "partOfSpeech": "n", "definition": "The activity of spending a holiday living in a tent.", "example": "We go camping every summer.", "level": "a2", "notes": "" },
     { "term": "cooking", "pronunciation": "ˈkʊkɪŋ", "partOfSpeech": "n", "definition": "The practice or skill of preparing food by combining, mixing, and heating ingredients.", "example": "I like doing the cooking for my family.", "level": "a2", "notes": "" },
     { "term": "cycling", "pronunciation": "ˈsaɪklɪŋ", "partOfSpeech": "n", "definition": "The sport or activity of riding a bicycle.", "example": "I like going cycling on good days.", "level": "a2", "notes": "" },
-    { "term": "doing yoga", "pronunciation": "ˈduːɪŋ ˈjoʊgə", "partOfSpeech": "v phr", "definition": "The practice of yoga.", "example": "I love doing yoga.", "level": "a2", "notes": "" },
-    { "term": "eating out", "pronunciation": "ˈiːtɪŋ aʊt", "partOfSpeech": "v phr", "definition": "Having a meal in a restaurant rather than at home.", "example": "I like eating out in restaurants with my friends.", "level": "a2", "notes": "" },
     { "term": "flying", "pronunciation": "ˈflaɪɪŋ", "partOfSpeech": "n", "definition": "The action of flying through the air.", "example": "I hate flying. I don't like planes.", "level": "a2", "notes": "" },
-    { "term": "going for a walk", "pronunciation": "ˈgoʊɪŋ fɔːr ə wɔːk", "partOfSpeech": "v phr", "definition": "Taking a walk, typically for leisure or exercise.", "example": "I am going for a walk at the weekend.", "level": "a2", "notes": "" },
-    { "term": "going to the cinema", "pronunciation": "ˈgoʊɪŋ tuː ðə ˈsɪnəmə", "partOfSpeech": "v phr", "definition": "Visiting a cinema to watch a film.", "example": "I like going to the cinema. I love action films!", "level": "a2", "notes": "" },
     { "term": "painting", "pronunciation": "ˈpeɪntɪŋ", "partOfSpeech": "n", "definition": "The process or art of using paint, in a picture, as a protective coating, or as decoration.", "example": "Do you like painting?", "level": "a2", "notes": "" },
     { "term": "reading", "pronunciation": "ˈriːdɪŋ", "partOfSpeech": "n", "definition": "The action or skill of reading written or printed matter silently or aloud.", "example": "I love reading. I read seven or eight books a month.", "level": "a2", "notes": "" },
     { "term": "running", "pronunciation": "ˈrʌnɪŋ", "partOfSpeech": "n", "definition": "The action or movement of a runner.", "example": "I like running in the park in the morning.", "level": "a2", "notes": "" },
@@ -28,8 +12,7 @@ export const a2_english_vocabulary = {
     { "term": "singing", "pronunciation": "ˈsɪŋɪŋ", "partOfSpeech": "n", "definition": "The activity of making musical sounds with the voice.", "example": "I love singing!", "level": "a2", "notes": "" },
     { "term": "sleeping", "pronunciation": "ˈsliːpɪŋ", "partOfSpeech": "n", "definition": "The state of being asleep.", "example": "I like sleeping. I am very tired.", "level": "a2", "notes": "" },
     { "term": "swimming", "pronunciation": "ˈswɪmɪŋ", "partOfSpeech": "n", "definition": "The sport or activity of propelling oneself through water using the limbs.", "example": "Do you want to go swimming? We can go to the beach.", "level": "a2", "notes": "" },
-    { "term": "travelling", "pronunciation": "ˈtrævəlɪŋ", "partOfSpeech": "n", "definition": "The action of making a journey.", "example": "I love travelling. I want to go to China next.", "level": "a2", "notes": "" },
-    { "term": "watching TV series", "pronunciation": "ˈwɒtʃɪŋ ˌtiːˈviː ˈsɪəriːz", "partOfSpeech": "v phr", "definition": "The activity of viewing television programmes that have a continuing story.", "example": "I like watching TV series.", "level": "a2", "notes": "" }
+    { "term": "travelling", "pronunciation": "ˈtrævəlɪŋ", "partOfSpeech": "n", "definition": "The action of making a journey.", "example": "I love travelling. I want to go to China next.", "level": "a2", "notes": "" }
   ],
   "Time & Dates": [
     { "term": "January", "pronunciation": "ˈdʒænjuəri", "partOfSpeech": "n", "definition": "The first month of the year.", "example": "My birthday is in January.", "level": "a2", "notes": "" },
@@ -139,34 +122,18 @@ export const a2_english_vocabulary = {
     { "term": "building", "pronunciation": "ˈbɪldɪŋ", "partOfSpeech": "n", "definition": "A structure with a roof and walls, such as a house or factory.", "example": "How old is this building?", "level": "a2", "notes": "" },
     { "term": "between", "pronunciation": "bɪˈtwiːn", "partOfSpeech": "prep", "definition": "At, into, or across the space separating (two objects or regions).", "example": "The restaurant is between the gym and the cinema.", "level": "a2", "notes": "" },
     { "term": "Excuse me. Is there a…near here?", "pronunciation": "ɪkˈskjuːs miː ɪz ðɛər ə … nɪər hɪər", "partOfSpeech": "phrase", "definition": "A polite way to ask for directions to a nearby place.", "example": "Excuse me. Is there a bank near here?", "level": "a2", "notes": "" },
-    { "term": "go straight on", "pronunciation": "goʊ streɪt ɒn", "partOfSpeech": "v phr", "definition": "Continue in the same direction without turning.", "example": "Turn left and then go straight on.", "level": "a2", "notes": "" },
     { "term": "on the corner", "pronunciation": "ɒn ðə ˈkɔːrnər", "partOfSpeech": "prep phr", "definition": "Located at the point where two streets meet.", "example": "The coffee shop is on the corner.", "level": "a2", "notes": "" },
     { "term": "on the left", "pronunciation": "ɒn ðə lɛft", "partOfSpeech": "prep phr", "definition": "Situated on the left-hand side.", "example": "Your hotel is on the left.", "level": "a2", "notes": "" },
     { "term": "on the right", "pronunciation": "ɒn ðə raɪt", "partOfSpeech": "prep phr", "definition": "Situated on the right-hand side.", "example": "The park is on the right.", "level": "a2", "notes": "" },
     { "term": "opposite", "pronunciation": "ˈɒpəzɪt", "partOfSpeech": "prep", "definition": "In a position on the other side of a specific area from; facing.", "example": "The car park is opposite the bank.", "level": "a2", "notes": "" },
-    { "term": "turn left", "pronunciation": "tɜːrn lɛft", "partOfSpeech": "v phr", "definition": "Change direction to the left.", "example": "Turn left at the Italian restaurant.", "level": "a2", "notes": "" },
-    { "term": "turn right", "pronunciation": "tɜːrn raɪt", "partOfSpeech": "v phr", "definition": "Change direction to the right.", "example": "Walk out of the train station and turn right.", "level": "a2", "notes": "" },
     { "term": "Is there a cash machine near here?", "pronunciation": "ɪz ðɛər ə kæʃ məˈʃiːn nɪər hɪər", "partOfSpeech": "phrase", "definition": "Asking for the location of a nearby ATM.", "example": "Excuse me. Is there a cash machine near here?", "level": "a2", "notes": "" }
   ],
   "Work & Daily Actions": [
-    { "term": "stay", "pronunciation": "steɪ", "partOfSpeech": "v", "definition": "Remain in the same place.", "example": "I like to stay at home on Sundays and read a book.", "level": "a2", "notes": "" },
     { "term": "driving instructor", "pronunciation": "ˈdraɪvɪŋ ɪnˈstrʌktər", "partOfSpeech": "n", "definition": "A person who teaches people how to drive a motor vehicle.", "example": "I have a good driving instructor. He is very patient.", "level": "a2", "notes": "" },
     { "term": "driving licence", "pronunciation": "ˈdraɪvɪŋ ˈlaɪsəns", "partOfSpeech": "n", "definition": "An official document authorizing an individual to drive a motor vehicle.", "example": "Do you have a driving licence?", "level": "a2", "notes": "" },
-    { "term": "fail", "pronunciation": "feɪl", "partOfSpeech": "v", "definition": "Be unsuccessful in achieving one's goal, especially in an examination.", "example": "I am nervous that I will fail the test.", "level": "a2", "notes": "" },
-    { "term": "learn to drive", "pronunciation": "lɜːrn tuː draɪv", "partOfSpeech": "v phr", "definition": "Acquire the skill of operating a motor vehicle.", "example": "When do you learn to drive? We can learn at 17.", "level": "a2", "notes": "" },
-    { "term": "pass", "pronunciation": "pɑːs", "partOfSpeech": "v", "definition": "Go past or across; leave behind or on one side in proceeding. Also: be successful in (an examination, test, or course).", "example": "I want to pass my test.", "level": "a2", "notes": "" },
     { "term": "practical test", "pronunciation": "ˈpræktɪkəl tɛst", "partOfSpeech": "n", "definition": "An examination of someone's ability to do something, rather than their knowledge of it.", "example": "You do the theory test first and then the practical test.", "level": "a2", "notes": "" },
-    { "term": "start the car", "pronunciation": "stɑːrt ðə kɑːr", "partOfSpeech": "v phr", "definition": "Initiate the engine of a car.", "example": "OK, we are ready. Please start the car.", "level": "a2", "notes": "" },
-    { "term": "take a test", "pronunciation": "teɪk ə tɛst", "partOfSpeech": "v phr", "definition": "Undergo an examination.", "example": "Do you have to take a test to get a licence?", "level": "a2", "notes": "" },
     { "term": "theory test", "pronunciation": "ˈθɪəri tɛst", "partOfSpeech": "n", "definition": "An examination of someone's knowledge of the theoretical aspects of a subject.", "example": "There are two tests: a theory test and a practical test.", "level": "a2", "notes": "" },
-    { "term": "clean a room", "pronunciation": "kliːn ə ruːm", "partOfSpeech": "v phr", "definition": "Make a room free from dirt, marks, or mess.", "example": "How long does it take you to clean a room?", "level": "a2", "notes": "" },
-    { "term": "make changes", "pronunciation": "meɪk ˈtʃeɪndʒɪz", "partOfSpeech": "v phr", "definition": "Alter or modify something.", "example": "My boss wants to make changes at the company.", "level": "a2", "notes": "" },
-    { "term": "make friends", "pronunciation": "meɪk frɛndz", "partOfSpeech": "v phr", "definition": "Form friendships with people.", "example": "Do you make friends with people at work?", "level": "a2", "notes": "" },
-    { "term": "repair something", "pronunciation": "rɪˈpɛər ˈsʌmθɪŋ", "partOfSpeech": "v phr", "definition": "Restore something damaged, faulty, or worn to a good condition.", "example": "Can you help me repair something, please?", "level": "a2", "notes": "" },
-    { "term": "serve breakfast", "pronunciation": "sɜːrv ˈbrɛkfəst", "partOfSpeech": "v phr", "definition": "Provide breakfast for customers or guests.", "example": "The hotel serves breakfast between 6.30 a.m. and 9 a.m.", "level": "a2", "notes": "" },
-    { "term": "wash the dishes", "pronunciation": "wɒʃ ðə ˈdɪʃɪz", "partOfSpeech": "v phr", "definition": "Clean plates, cutlery, and cooking utensils after use.", "example": "Can you wash the dishes after dinner?", "level": "a2", "notes": "" },
-    { "term": "work experience", "pronunciation": "wɜːrk ɪkˈspɪəriəns", "partOfSpeech": "n", "definition": "Practical experience of a particular job acquired over a period of time.", "example": "I got work experience by working at a hotel for two weeks.", "level": "a2", "notes": "" },
-    { "term": "work hard", "pronunciation": "wɜːrk hɑːrd", "partOfSpeech": "v phr", "definition": "Put a lot of effort into one's work.", "example": "You must work hard. We are very busy today.", "level": "a2", "notes": "" }
+    { "term": "work experience", "pronunciation": "wɜːrk ɪkˈspɪəriəns", "partOfSpeech": "n", "definition": "Practical experience of a particular job acquired over a period of time.", "example": "I got work experience by working at a hotel for two weeks.", "level": "a2", "notes": "" }
   ],
   "Describing People & Things": [
     { "term": "exciting", "pronunciation": "ɪkˈsaɪtɪŋ", "partOfSpeech": "adj", "definition": "Causing great enthusiasm and eagerness.", "example": "Is it a good film? ~ Yes, it's exciting.", "level": "a2", "notes": "" },
@@ -247,10 +214,8 @@ export const a2_english_vocabulary = {
     { "term": "well", "pronunciation": "wɛl", "partOfSpeech": "adj", "definition": "In a good or satisfactory way.", "example": "Very well, thank you.", "level": "a2", "notes": "" },
     { "term": "alone", "pronunciation": "əˈloʊn", "partOfSpeech": "adj", "definition": "Having no one else present; on one's own.", "example": "Are you alone in the house? ~ No, my brother is here.", "level": "a2", "notes": "" },
     { "term": "at parties", "pronunciation": "æt ˈpɑːrtiz", "partOfSpeech": "prep phr", "definition": "During social gatherings.", "example": "Do you like to dance at parties?", "level": "a2", "notes": "" },
-    { "term": "concentrate", "pronunciation": "ˈkɒnsəntreɪt", "partOfSpeech": "v", "definition": "Focus all one's attention on a particular object or activity.", "example": "Please be quiet! I can't concentrate.", "level": "a2", "notes": "" },
     { "term": "frightened", "pronunciation": "ˈfraɪtnd", "partOfSpeech": "adj", "definition": "Afraid or anxious.", "example": "I feel frightened when I go through the park at night.", "level": "a2", "notes": "" },
     { "term": "very loudly", "pronunciation": "ˈvɛri ˈlaʊdli", "partOfSpeech": "adv phr", "definition": "At a high volume.", "example": "They play their music very loudly.", "level": "a2", "notes": "" },
-    { "term": "hear", "pronunciation": "hɪər", "partOfSpeech": "v", "definition": "Perceive with the ear the sound made by (someone or something).", "example": "I can hear my phone but I can't see it.", "level": "a2", "notes": "" },
     { "term": "noise", "pronunciation": "nɔɪz", "partOfSpeech": "n", "definition": "A sound, especially one that is loud or unpleasant or that causes disturbance.", "example": "What's that noise? Is it your phone?", "level": "a2", "notes": "" },
     { "term": "outside", "pronunciation": "ˌaʊtˈsaɪd", "partOfSpeech": "prep", "definition": "Situated or moving beyond the confines or boundaries of.", "example": "Let's eat lunch outside. It's a beautiful day.", "level": "a2", "notes": "" },
     { "term": "towards", "pronunciation": "təˈwɔːrdz", "partOfSpeech": "prep", "definition": "In the direction of.", "example": "Take the bus towards the city centre.", "level": "a2", "notes": "" },
@@ -265,8 +230,7 @@ export const a2_english_vocabulary = {
   "Health & Body": [
     { "term": "exam", "pronunciation": "ɪgˈzæm", "partOfSpeech": "n", "definition": "A formal test of a person's knowledge or proficiency in a subject or skill.", "example": "Good luck in your exam tomorrow!", "level": "a2", "notes": "" },
     { "term": "eyes", "pronunciation": "aɪz", "partOfSpeech": "pl n", "definition": "The pair of globular organs in the head through which people and vertebrate animals see.", "example": "He has brown eyes and black hair.", "level": "a2", "notes": "" },
-    { "term": "operation", "pronunciation": "ˌɒpəˈreɪʃən", "partOfSpeech": "n", "definition": "An act of surgery performed on a patient.", "example": "She has to have an operation in hospital.", "level": "a2", "notes": "" },
-    { "term": "shave", "pronunciation": "ʃeɪv", "partOfSpeech": "v", "definition": "Cut the hair off one's face or another part of one's body with a razor.", "example": "You can shave or you can grow a beard.", "level": "a2", "notes": "" }
+    { "term": "operation", "pronunciation": "ˌɒpəˈreɪʃən", "partOfSpeech": "n", "definition": "An act of surgery performed on a patient.", "example": "She has to have an operation in hospital.", "level": "a2", "notes": "" }
   ],
   "Work & Professions": [
     { "term": "boss", "pronunciation": "bɒs", "partOfSpeech": "n", "definition": "A person who is in charge of a worker, group, or organization.", "example": "My boss says that we have to work hard today.", "level": "a2", "notes": "" },
@@ -281,22 +245,13 @@ export const a2_english_vocabulary = {
     { "term": "visitor", "pronunciation": "ˈvɪzɪtər", "partOfSpeech": "n", "definition": "A person visiting a place or person, especially socially or as a tourist.", "example": "It costs £5 for visitors to go the castle.", "level": "a2", "notes": "" },
     { "term": "abroad", "pronunciation": "əˈbrɔːd", "partOfSpeech": "adv", "definition": "In or to a foreign country or countries.", "example": "Do you want to go abroad or stay in the UK for your holiday?", "level": "a2", "notes": "" },
     { "term": "sports club", "pronunciation": "spɔːrts klʌb", "partOfSpeech": "n", "definition": "An organization for people who take part in a particular sport.", "example": "We play football at a sports club.", "level": "a2", "notes": "" },
-    { "term": "trumpet", "pronunciation": "ˈtrʌmpɪt", "partOfSpeech": "n", "definition": "A brass instrument with a flared bell and three buttons pressed to vary the notes.", "example": "He is learning to play the trumpet.", "level": "a2", "notes": "" },
-    { "term": "visit", "pronunciation": "ˈvɪzɪt", "partOfSpeech": "v", "definition": "Go to see and spend time with (someone) socially.", "example": "Please come on holiday here and visit me.", "level": "a2", "notes": "" }
+    { "term": "trumpet", "pronunciation": "ˈtrʌmpɪt", "partOfSpeech": "n", "definition": "A brass instrument with a flared bell and three buttons pressed to vary the notes.", "example": "He is learning to play the trumpet.", "level": "a2", "notes": "" }
   ],
   "Describing People & Things": [
     { "term": "cheaper than", "pronunciation": "ˈtʃiːpər ðæn", "partOfSpeech": "adj phr", "definition": "Less expensive compared to something else.", "example": "Life here is cheaper than life in the UK.", "level": "a2", "notes": "" },
     { "term": "designer", "pronunciation": "dɪˈzaɪnər", "partOfSpeech": "n", "definition": "A person who plans the form, look, or workings of something before its being made or built, typically by drawing it in detail.", "example": "She's a famous designer. She makes beautiful clothes.", "level": "a2", "notes": "" },
     { "term": "fresh", "pronunciation": "frɛʃ", "partOfSpeech": "adj", "definition": "(Of food) recently made or obtained; not tinned, frozen, or otherwise preserved.", "example": "The fruit is very fresh. It's delicious.", "level": "a2", "notes": "" },
     { "term": "full", "pronunciation": "fʊl", "partOfSpeech": "adj", "definition": "Containing or holding as much or as many as possible; having no empty space.", "example": "The hall is full. There are no empty seats.", "level": "a2", "notes": "" }
-  ],
-  "General Verbs": [
-    { "term": "decide", "pronunciation": "dɪˈsaɪd", "partOfSpeech": "v", "definition": "Come to a resolution in the mind as a result of consideration.", "example": "I can't decide where to go on holiday.", "level": "a2", "notes": "" },
-    { "term": "invite", "pronunciation": "ɪnˈvaɪt", "partOfSpeech": "v", "definition": "Make a polite, formal, or friendly request to (someone) to go somewhere or to do something.", "example": "Did he invite you to the party?", "level": "a2", "notes": "" },
-    { "term": "miss", "pronunciation": "mɪs", "partOfSpeech": "v", "definition": "Feel regret or sadness at no longer being able to enjoy the presence of.", "example": "I will miss you when you go home.", "level": "a2", "notes": "" },
-    { "term": "offer", "pronunciation": "ˈɒfər", "partOfSpeech": "v", "definition": "Present or proffer (something) for someone to accept or reject as desired.", "example": "Did she offer you a job?", "level": "a2", "notes": "" },
-    { "term": "pick", "pronunciation": "pɪk", "partOfSpeech": "v", "definition": "Harvest (fruit, flowers, or vegetables).", "example": "Do you want to pick some fresh fruit at a farm?", "level": "a2", "notes": "" },
-    { "term": "return", "pronunciation": "rɪˈtɜːrn", "partOfSpeech": "v", "definition": "Come or go back to a place or person.", "example": "I return in two weeks – on the 27th.", "level": "a2", "notes": "" }
   ],
   "General Nouns": [
     { "term": "lock", "pronunciation": "lɒk", "partOfSpeech": "n", "definition": "A mechanism for keeping a door, lid, etc., fastened, typically operated by a key.", "example": "The door has a strong lock.", "level": "a2", "notes": "" },

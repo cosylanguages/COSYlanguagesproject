@@ -23,16 +23,6 @@ export const c2_greek_vocabulary = {
       "notes": "Philosophical term."
     },
     {
-      "term": "μετουσιώνω",
-      "latinisation": "metousiono",
-      "pronunciation": "metusiˈono",
-      "partOfSpeech": "verb",
-      "definition": "to transubstantiate, to transform the essence of something",
-      "example": "Ο καλλιτέχνης μετουσιώνει την εμπειρία του σε έργο τέχνης.",
-      "level": "c2",
-      "notes": "Literary/Formal."
-    },
-    {
       "term": "πεμπτουσία",
       "latinisation": "pemptousia",
       "pronunciation": "pembtuˈsia",

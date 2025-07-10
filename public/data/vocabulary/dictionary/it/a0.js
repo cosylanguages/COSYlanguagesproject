@@ -161,15 +161,6 @@ export const a0_italian_vocabulary = {
       "example": "Posso pagare con la carta? - Can I pay by card?",
       "level": "a0",
       "notes": "la carta (es. carta di credito)"
-    },
-    {
-      "term": "Scusa",
-      "pronunciation": "SKOO-za",
-      "partOfSpeech": "interiezione/verbo (interiezione/verbo)",
-      "definition": "Per chiedere scusa o attirare l'attenzione (informale). (Per chiedere scusa o attirare l'attenzione (informale).) - To apologize or attract attention (informal).",
-      "example": "Scusa, non ti avevo visto. - Sorry, I didn't see you.",
-      "level": "a0",
-      "notes": "Formale: Scusi. 'Mi dispiace' esprime rammarico. (Formal: Scusi. 'Mi dispiace' expresses regret.)"
     }
   ]
 };
