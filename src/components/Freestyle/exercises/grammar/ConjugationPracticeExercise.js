@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { loadConjugationData } from '../../../../utils/conjugationDataService';
+import { loadConjugationData, loadEnglishIrregularVerbsData } from '../../../../utils/conjugationDataService';
 import { processConjugationData } from '../../../../utils/conjugationProcessor';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
@@ -114,32 +114,32 @@ const ConjugationPracticeExercise = ({ language, exerciseKey }) => {
           const verbWithTenses = verbs.filter(v => v.tenses && Object.keys(v.tenses).length > 0);
           if (verbWithTenses.length > 0) {
             const randomVerb = getRandomElement(verbWithTenses);
-          const availableTenses = Object.keys(randomVerb.tenses);
-          const randomTenseName = getRandomElement(availableTenses);
-          const tenseForms = randomVerb.tenses[randomTenseName]?.forms;
+            const availableTenses = Object.keys(randomVerb.tenses);
+            const randomTenseName = getRandomElement(availableTenses);
+            const tenseForms = randomVerb.tenses[randomTenseName]?.forms;
 
-          if (tenseForms && Object.keys(tenseForms).length > 0) {
-            const randomPronoun = getRandomElement(Object.keys(tenseForms));
-            const conjugatedForm = tenseForms[randomPronoun];
-            const direction = Math.random() < 0.5 ? 'toEnglish' : 'fromEnglish';
+            if (tenseForms && Object.keys(tenseForms).length > 0) {
+              const randomPronoun = getRandomElement(Object.keys(tenseForms));
+              const conjugatedForm = tenseForms[randomPronoun];
+              const direction = Math.random() < 0.5 ? 'toEnglish' : 'fromEnglish';
 
-            setCurrentVerb(randomVerb);
-            setTranslationTask({
-              tenseName: randomTenseName,
-              pronoun: randomPronoun,
-              conjugatedForm: conjugatedForm,
-              direction: direction,
-            });
-            setCurrentExerciseMode('translateForm');
+              setCurrentVerb(randomVerb);
+              setTranslationTask({
+                tenseName: randomTenseName,
+                pronoun: randomPronoun,
+                conjugatedForm: conjugatedForm,
+                direction: direction,
+              });
+              setCurrentExerciseMode('translateForm');
+            } else {
+              console.warn(`Verb ${randomVerb.infinitive} has no forms for tense ${randomTenseName}.`);
+              setError(t('exercises.errorGeneratingTranslationTask', 'Error generating translation task.'));
+            }
           } else {
-             console.warn(`Verb ${randomVerb.infinitive} has no forms for tense ${randomTenseName}.`);
-             setError(t('exercises.errorGeneratingTranslationTask', 'Error generating translation task.'));
+            setError(t('exercises.noVerbsForTranslation', 'No verbs suitable for translation exercise found.'));
           }
-        } else {
-          setError(t('exercises.noVerbsForTranslation', 'No verbs suitable for translation exercise found.'));
         }
       }
-
     } catch (err) {
       console.error("ConjugationPracticeExercise - Error setting up:", err);
       setError(err.message || t('errors.unexpectedError', 'An unexpected error occurred.'));

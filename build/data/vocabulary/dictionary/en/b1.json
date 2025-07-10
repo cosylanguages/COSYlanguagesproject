@@ -16,22 +16,6 @@
     "level": "b1"
   },
   {
-    "id": "become",
-    "word": "become",
-    "partOfSpeech": "v",
-    "definition": "Begin to be.",
-    "example": "I wish my brother hadn’t become a Goth.",
-    "level": "b1"
-  },
-  {
-    "id": "bite",
-    "word": "bite",
-    "partOfSpeech": "v",
-    "definition": "(Of a person or animal) use the teeth to cut into something in order to eat it or grip it.",
-    "example": "I bite my nails when I’m nervous.",
-    "level": "b1"
-  },
-  {
     "id": "carefully",
     "word": "carefully",
     "partOfSpeech": "adv",
@@ -48,30 +32,6 @@
     "level": "b1"
   },
   {
-    "id": "choose",
-    "word": "choose",
-    "partOfSpeech": "v",
-    "definition": "Pick out (someone or something) as being the best or most appropriate of two or more alternatives.",
-    "example": "Choose the recipes that you’d like to try.",
-    "level": "b1"
-  },
-  {
-    "id": "climb",
-    "word": "climb",
-    "partOfSpeech": "v",
-    "definition": "Go or come up (a slope, stairs, or other upright structure).",
-    "example": "I’d like to climb a mountain next year.",
-    "level": "b1"
-  },
-  {
-    "id": "download",
-    "word": "download",
-    "partOfSpeech": "v",
-    "definition": "Copy (data) from one computer system to another, typically over the internet.",
-    "example": "When I find a good song I like to download the lyrics.",
-    "level": "b1"
-  },
-  {
     "id": "fashionably",
     "word": "fashionably",
     "partOfSpeech": "adv",
@@ -80,35 +40,11 @@
     "level": "b1"
   },
   {
-    "id": "go_on_a_safari",
-    "word": "go on a safari",
-    "partOfSpeech": "v phr",
-    "definition": "Undertake an expedition to observe or hunt animals in their natural habitat, especially in East Africa.",
-    "example": "Would you like to go on a safari?",
-    "level": "b1"
-  },
-  {
     "id": "incredibly_slowly",
     "word": "incredibly slowly",
     "partOfSpeech": "adv phr",
     "definition": "At a speed that is difficult to believe.",
     "example": "People in this city speak incredibly slowly.",
-    "level": "b1"
-  },
-  {
-    "id": "learn",
-    "word": "learn",
-    "partOfSpeech": "v",
-    "definition": "Gain or acquire knowledge of or skill in (something) by study, experience, or being taught.",
-    "example": "I want to learn to cook before I leave home.",
-    "level": "b1"
-  },
-  {
-    "id": "log_in",
-    "word": "log in",
-    "partOfSpeech": "phr v",
-    "definition": "Go through the procedures to begin use of a computer system.",
-    "example": "You need to log in before you can use the internet.",
     "level": "b1"
   },
   {
@@ -144,27 +80,11 @@
     "level": "b1"
   },
   {
-    "id": "search_for",
-    "word": "search for",
-    "partOfSpeech": "v",
-    "definition": "Try to find something by looking or otherwise seeking carefully and thoroughly.",
-    "example": "You should search for a job on the internet.",
-    "level": "b1"
-  },
-  {
     "id": "social_network",
     "word": "social network",
     "partOfSpeech": "n",
     "definition": "A network of social interactions and personal relationships.",
     "example": "Have you ever used a social network?",
-    "level": "b1"
-  },
-  {
-    "id": "upload",
-    "word": "upload",
-    "partOfSpeech": "v",
-    "definition": "Transfer (data) from one computer to another, typically to one that is larger or remote from the user or functioning as a server.",
-    "example": "How do I upload the program?",
     "level": "b1"
   },
   {
@@ -325,14 +245,6 @@
     "partOfSpeech": "adj",
     "definition": "Relating to or belonging to a profession.",
     "example": "It’s my dream to become a professional actor.",
-    "level": "b1"
-  },
-  {
-    "id": "promise",
-    "word": "promise",
-    "partOfSpeech": "v",
-    "definition": "Assure someone that one will certainly do something or that something will happen.",
-    "example": "Promise that you’ll send me a postcard from your holiday.",
     "level": "b1"
   },
   {
@@ -936,22 +848,6 @@
     "theme": "File1_Personality"
   },
   {
-    "term": "obey",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "You should obey your parents.",
-    "level": "b1",
-    "theme": "File1_Personality"
-  },
-  {
-    "term": "offend",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "You should try not to offend people.",
-    "level": "b1",
-    "theme": "File1_Personality"
-  },
-  {
     "term": "opinion",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -1272,14 +1168,6 @@
     "theme": "File1_UsefulWordsAndPhrases"
   },
   {
-    "term": "fight",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "My brother always wants to fight with me.",
-    "level": "b1",
-    "theme": "File1_UsefulWordsAndPhrases"
-  },
-  {
     "term": "fresh",
     "partOfSpeech": "adj",
     "definition": "TODO: Definition",
@@ -1424,14 +1312,6 @@
     "theme": "File1_UsefulWordsAndPhrases"
   },
   {
-    "term": "share",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I share a lot of hobbies with my sister.",
-    "level": "b1",
-    "theme": "File1_UsefulWordsAndPhrases"
-  },
-  {
     "term": "sick",
     "partOfSpeech": "adj",
     "definition": "TODO: Definition",
@@ -1456,14 +1336,6 @@
     "theme": "File1_UsefulWordsAndPhrases"
   },
   {
-    "term": "suffocate",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "He tried to suffocate me under the bedcovers!",
-    "level": "b1",
-    "theme": "File1_UsefulWordsAndPhrases"
-  },
-  {
     "term": "tension",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -1472,26 +1344,10 @@
     "theme": "File1_UsefulWordsAndPhrases"
   },
   {
-    "term": "value",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Now that I am older I really value my parents.",
-    "level": "b1",
-    "theme": "File1_UsefulWordsAndPhrases"
-  },
-  {
     "term": "alternative therapy",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "Have you tried alternative therapy, like hypnotherapy?",
-    "level": "b1",
-    "theme": "File1_MoreWordsInFile1"
-  },
-  {
-    "term": "argue",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "My parents argue but they will never get divorced.",
     "level": "b1",
     "theme": "File1_MoreWordsInFile1"
   },
@@ -1572,14 +1428,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "I want to find a cure for my headaches.",
-    "level": "b1",
-    "theme": "File1_MoreWordsInFile1"
-  },
-  {
-    "term": "cut down on",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "I need to cut down on sugar and fat to lose weight.",
     "level": "b1",
     "theme": "File1_MoreWordsInFile1"
   },
@@ -1768,14 +1616,6 @@
     "theme": "File1_MoreWordsInFile1"
   },
   {
-    "term": "afford",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I can’t afford to go on holiday this year.",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
     "term": "bank account",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -1792,14 +1632,6 @@
     "theme": "File2_Money"
   },
   {
-    "term": "borrow",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Can I borrow some money, please?",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
     "term": "cash machine",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -1808,26 +1640,10 @@
     "theme": "File2_Money"
   },
   {
-    "term": "charge",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "How much do you charge for a haircut?",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
     "term": "coin",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "I found a 10p coin on the pavement.",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
-    "term": "cost",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "These shoes cost £70.",
     "level": "b1",
     "theme": "File2_Money"
   },
@@ -1844,54 +1660,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "I had a lot of debt when I left university.",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
-    "term": "earn",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "How much do doctors earn in your country?",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
-    "term": "inherit",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "She will inherit a lot of money when her parents die.",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
-    "term": "invest",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "You should invest some money in the stock market.",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
-    "term": "lend",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Can you lend me £30 until tomorrow?",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
-    "term": "live off",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "I have to live off my parents while I’m at university.",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
-    "term": "live on",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "If I lose my job, I’ll have no money to live on.",
     "level": "b1",
     "theme": "File2_Money"
   },
@@ -1920,30 +1688,6 @@
     "theme": "File2_Money"
   },
   {
-    "term": "owe",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "You owe me £10.",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
-    "term": "pay back",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "I pay back £50 of the loan to the bank every month.",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
-    "term": "raise",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "How much money did you raise for the school?",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
     "term": "salary",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -1952,34 +1696,10 @@
     "theme": "File2_Money"
   },
   {
-    "term": "save",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I try to save some money every month.",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
-    "term": "take out",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "I never take out more than £50 at a cash machine.",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
     "term": "tax",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "How much tax do you have to pay every month?",
-    "level": "b1",
-    "theme": "File2_Money"
-  },
-  {
-    "term": "waste",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Don’t waste your money on things you don’t need.",
     "level": "b1",
     "theme": "File2_Money"
   },
@@ -2176,22 +1896,6 @@
     "theme": "File2_UsefulWordsAndPhrases"
   },
   {
-    "term": "inspire",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I’ve been listening to music to inspire me.",
-    "level": "b1",
-    "theme": "File2_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "kayak",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Why did you agree to kayak down the Amazon?",
-    "level": "b1",
-    "theme": "File2_UsefulWordsAndPhrases"
-  },
-  {
     "term": "make money",
     "partOfSpeech": "phr",
     "definition": "TODO: Definition",
@@ -2224,14 +1928,6 @@
     "theme": "File2_UsefulWordsAndPhrases"
   },
   {
-    "term": "put aside",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "Every week I put aside some money for a holiday.",
-    "level": "b1",
-    "theme": "File2_UsefulWordsAndPhrases"
-  },
-  {
     "term": "recession",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -2248,26 +1944,10 @@
     "theme": "File2_UsefulWordsAndPhrases"
   },
   {
-    "term": "sponsor",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "She asked me to sponsor her for a charity programme.",
-    "level": "b1",
-    "theme": "File2_UsefulWordsAndPhrases"
-  },
-  {
     "term": "starving",
     "partOfSpeech": "adj",
     "definition": "TODO: Definition",
     "example": "I was starving when I came home from school.",
-    "level": "b1",
-    "theme": "File2_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "suffer",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I really suffer in hot weather.",
     "level": "b1",
     "theme": "File2_UsefulWordsAndPhrases"
   },
@@ -2372,14 +2052,6 @@
     "partOfSpeech": "phr",
     "definition": "TODO: Definition",
     "example": "My parents drive me mad with their arguing!",
-    "level": "b1",
-    "theme": "File2_MoreWordsInFile2"
-  },
-  {
-    "term": "employ",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "We employ a gardener who comes once a week.",
     "level": "b1",
     "theme": "File2_MoreWordsInFile2"
   },

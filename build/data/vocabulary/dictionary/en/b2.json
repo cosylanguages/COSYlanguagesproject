@@ -42,13 +42,6 @@
     "theme": "All the rage: clothes and fashion"
   },
   {
-    "term": "account for",
-    "level": "B2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Academic writing: text structure"
-  },
-  {
     "term": "aches and pains",
     "level": "B2",
     "definition": "TODO: Definition",
@@ -196,13 +189,6 @@
     "theme": "Agreement, disagreement and compromise"
   },
   {
-    "term": "approve of",
-    "level": "B2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Agreement, disagreement and compromise"
-  },
-  {
     "term": "approximately",
     "level": "B2",
     "definition": "TODO: Definition",
@@ -238,25 +224,11 @@
     "theme": "Birth and death: from cradle to grave"
   },
   {
-    "term": "assess",
-    "level": "B2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Cramming for success: study and academic work"
-  },
-  {
     "term": "association",
     "level": "B2",
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "Connotation: making associations"
-  },
-  {
-    "term": "attempt",
-    "level": "B2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Language variation"
   },
   {
     "term": "audition",
@@ -278,21 +250,6 @@
     "definition": "TODO: Definition",
     "example": "TODO: Example",
     "theme": "Negative feelings"
-  },
-  {
-    "term": "call after",
-    "level": "B2",
-    "definition": "TODO: Definition",
-    "example": "TODO: Example",
-    "theme": "Birth, marriage and death"
-  },
-  {
-    "term": "avoid",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Avoid the motorway – there is a huge traffic jam.",
-    "level": "b2",
-    "theme": "File3_Transport"
   },
   {
     "term": "bus stop",
@@ -335,42 +292,10 @@
     "theme": "File3_Transport"
   },
   {
-    "term": "cross",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "What’s the quickest way to cross a busy city?",
-    "level": "b2",
-    "theme": "File3_Transport"
-  },
-  {
     "term": "cycle lane",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "It’s safer to use a cycle lane when you’re on your bike.",
-    "level": "b2",
-    "theme": "File3_Transport"
-  },
-  {
-    "term": "end up",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "If I get on that bus, I’ll end up in the wrong place!",
-    "level": "b2",
-    "theme": "File3_Transport"
-  },
-  {
-    "term": "get stuck",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "I always get stuck in traffic on my way to work.",
-    "level": "b2",
-    "theme": "File3_Transport"
-  },
-  {
-    "term": "go over",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "Don’t go over the speed limit.",
     "level": "b2",
     "theme": "File3_Transport"
   },
@@ -431,14 +356,6 @@
     "theme": "File3_Transport"
   },
   {
-    "term": "run out",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "What will we do if we run out of petrol?",
-    "level": "b2",
-    "theme": "File3_Transport"
-  },
-  {
     "term": "rush hour",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -459,14 +376,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "You must wear a seat belt in cars in this country.",
-    "level": "b2",
-    "theme": "File3_Transport"
-  },
-  {
-    "term": "set off",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "We set off early to avoid the traffic.",
     "level": "b2",
     "theme": "File3_Transport"
   },
@@ -531,14 +440,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "My uncle is a builder and he has his own van.",
-    "level": "b2",
-    "theme": "File3_Transport"
-  },
-  {
-    "term": "watch / look out!",
-    "partOfSpeech": "phr",
-    "definition": "TODO: Definition",
-    "example": "Look out! You’re going to crash!",
     "level": "b2",
     "theme": "File3_Transport"
   },
@@ -863,22 +764,6 @@
     "theme": "File3_UsefulWordsAndPhrases"
   },
   {
-    "term": "choke",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Try not to choke on that apple.",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "claim",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "They claim that women use more words than men.",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
     "term": "confusing",
     "partOfSpeech": "adj",
     "definition": "TODO: Definition",
@@ -895,14 +780,6 @@
     "theme": "File3_UsefulWordsAndPhrases"
   },
   {
-    "term": "fit",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "They want to fit me with a hearing aid.",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
     "term": "generally",
     "partOfSpeech": "adv",
     "definition": "TODO: Definition",
@@ -915,14 +792,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "Have you got any gossip to share?",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "gossip",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "She likes to gossip with her friends over coffee.",
     "level": "b2",
     "theme": "File3_UsefulWordsAndPhrases"
   },
@@ -951,14 +820,6 @@
     "theme": "File3_UsefulWordsAndPhrases"
   },
   {
-    "term": "multitask",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Do you think women can multitask better than men?",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
     "term": "permit",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -975,22 +836,6 @@
     "theme": "File3_UsefulWordsAndPhrases"
   },
   {
-    "term": "range",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "There is a wide range of products to choose from.",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "reach",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "When do you think you will reach the station?",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
     "term": "recorder",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -999,26 +844,10 @@
     "theme": "File3_UsefulWordsAndPhrases"
   },
   {
-    "term": "reduce",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Laughing can reduce stress.",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
     "term": "route",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "Which is the best route to the station?",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "rush",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I was late so I had to rush to school.",
     "level": "b2",
     "theme": "File3_UsefulWordsAndPhrases"
   },
@@ -1043,54 +872,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "The stereotype of British people is that they always talk about the weather.",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "stereotype",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "They stereotype women as being better at looking after children.",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "stick",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Men usually stick to one subject for longer when they chat.",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "swap",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "We like to get together and swap opinions.",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "talk about",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "I like to talk about politics with my friends.",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "tend",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Women tend to gossip more than men.",
-    "level": "b2",
-    "theme": "File3_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "turn around",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "Turn around because you’re going the wrong way!",
     "level": "b2",
     "theme": "File3_UsefulWordsAndPhrases"
   },
@@ -1211,14 +992,6 @@
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
     "example": "I never use public transport because I love driving.",
-    "level": "b2",
-    "theme": "File3_MoreWordsInFile3"
-  },
-  {
-    "term": "publish",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Will they publish your article in the magazine?",
     "level": "b2",
     "theme": "File3_MoreWordsInFile3"
   },
@@ -1383,14 +1156,6 @@
     "theme": "File4_UsefulWordsAndPhrases"
   },
   {
-    "term": "dial",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Can you dial the number for me?",
-    "level": "b2",
-    "theme": "File4_UsefulWordsAndPhrases"
-  },
-  {
     "term": "disappointed",
     "partOfSpeech": "adj",
     "definition": "TODO: Definition",
@@ -1507,14 +1272,6 @@
     "partOfSpeech": "adj",
     "definition": "TODO: Definition",
     "example": "Using this website is frustrating.",
-    "level": "b2",
-    "theme": "File4_UsefulWordsAndPhrases"
-  },
-  {
-    "term": "hang up",
-    "partOfSpeech": "phr v",
-    "definition": "TODO: Definition",
-    "example": "Don’t hang up until you’ve heard what I want to say.",
     "level": "b2",
     "theme": "File4_UsefulWordsAndPhrases"
   },
@@ -1647,14 +1404,6 @@
     "theme": "File4_UsefulWordsAndPhrases"
   },
   {
-    "term": "accompany",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "Can I accompany you to the bus stop?",
-    "level": "b2",
-    "theme": "File4_MoreWordsInFile4"
-  },
-  {
     "term": "Afrikaans",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -1695,38 +1444,6 @@
     "theme": "File4_MoreWordsInFile4"
   },
   {
-    "term": "criticize",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "You should never criticize her cooking.",
-    "level": "b2",
-    "theme": "File4_MoreWordsInFile4"
-  },
-  {
-    "term": "declare",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "You should not declare what you will and will not eat.",
-    "level": "b2",
-    "theme": "File4_MoreWordsInFile4"
-  },
-  {
-    "term": "deserve",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "People with you deserve more attention than those at the end of the phone.",
-    "level": "b2",
-    "theme": "File4_MoreWordsInFile4"
-  },
-  {
-    "term": "doubt",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I doubt that he’ll get good exam results because he is really lazy.",
-    "level": "b2",
-    "theme": "File4_MoreWordsInFile4"
-  },
-  {
     "term": "excursion",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -1747,14 +1464,6 @@
     "partOfSpeech": "n pl",
     "definition": "TODO: Definition",
     "example": "I’m studying hard for my finals at the moment.",
-    "level": "b2",
-    "theme": "File4_MoreWordsInFile4"
-  },
-  {
-    "term": "generate",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I didn’t think the competition would generate this amount of media attention.",
     "level": "b2",
     "theme": "File4_MoreWordsInFile4"
   },
@@ -1795,14 +1504,6 @@
     "partOfSpeech": "adv",
     "definition": "TODO: Definition",
     "example": "If you learn some basic phrases it instantly shows that you respect the culture and language.",
-    "level": "b2",
-    "theme": "File4_MoreWordsInFile4"
-  },
-  {
-    "term": "insulting",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "The player was sent off for insulting the referee.",
     "level": "b2",
     "theme": "File4_MoreWordsInFile4"
   },
@@ -1871,14 +1572,6 @@
     "theme": "File4_MoreWordsInFile4"
   },
   {
-    "term": "ought",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "John just called so you ought to call him back.",
-    "level": "b2",
-    "theme": "File4_MoreWordsInFile4"
-  },
-  {
     "term": "permission",
     "partOfSpeech": "n",
     "definition": "TODO: Definition",
@@ -1907,14 +1600,6 @@
     "partOfSpeech": "adj",
     "definition": "TODO: Definition",
     "example": "It’s easier to learn a language with Roman letters.",
-    "level": "b2",
-    "theme": "File4_MoreWordsInFile4"
-  },
-  {
-    "term": "scuba dive",
-    "partOfSpeech": "v",
-    "definition": "TODO: Definition",
-    "example": "I want to learn to scuba dive when we go to Spain.",
     "level": "b2",
     "theme": "File4_MoreWordsInFile4"
   },
@@ -2023,3 +1708,4 @@
     "theme": "File4_MoreWordsInFile4"
   }
 ]
+>>>>>>> REPLACE
