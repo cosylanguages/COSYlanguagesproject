@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
-import { useAuth } from '../../AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 import { fetchDays as fetchTeacherDays } from '../../api/days'; // Renamed for clarity
 import { fetchLessonSections as fetchTeacherLessonSections, getLessonSectionDetails as getTeacherLessonSectionDetails } from '../../api/lessonSections'; // For Teacher
 import { getAvailableSyllabusDays, fetchSyllabusByFileName } from '../../utils/syllabusService'; // For Student

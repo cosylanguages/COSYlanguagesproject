@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth } from '../../AuthContext'; // Adjusted path
+import { useAuth } from '../../contexts/AuthContext'; // Adjusted path
 import { useNavigate } from 'react-router-dom';
 import Button from '../Common/Button'; // Import Button
 import Label from '../Common/Label';   // Import Label

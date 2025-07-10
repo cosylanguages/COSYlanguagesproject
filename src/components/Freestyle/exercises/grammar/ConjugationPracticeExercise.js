@@ -33,7 +33,7 @@ const ConjugationPracticeExercise = ({ language, exerciseKey }) => {
 
   const checkAnswersRef = React.useRef(null); // For child components to expose their check function
 
-  const tensesForTable = ['présent', 'futur simple', 'passé composé', 'imparfait'];
+  const tensesForTable = React.useMemo(() => ['présent', 'futur simple', 'passé composé', 'imparfait'], []);
 
   const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -64,8 +64,6 @@ const ConjugationPracticeExercise = ({ language, exerciseKey }) => {
       exerciseTypes.push('irregularEnglishVerbQuiz');
     }
     const chosenMode = getRandomElement(exerciseTypes);
-    // const chosenMode = language === 'COSYenglish' ? 'irregularEnglishVerbQuiz' : 'translateForm'; // TODO: Randomize later
-
     setCurrentExerciseMode(chosenMode); // Set mode early
 
     try {
@@ -99,8 +97,8 @@ const ConjugationPracticeExercise = ({ language, exerciseKey }) => {
         }
         setProcessedVerbs(verbs); // Set for table or translation modes
 
-        // currentExerciseMode is already set, now populate data for that mode
-        if (currentExerciseMode === 'fillTable') {
+        // Populate data for the chosen mode
+        if (chosenMode === 'fillTable') {
           const suitableVerbForTable = verbs.find(v =>
             v.tenses && tensesForTable.some(tKey => v.tenses[tKey.toLowerCase()])
           );
@@ -110,7 +108,7 @@ const ConjugationPracticeExercise = ({ language, exerciseKey }) => {
             console.warn(`No verb found with any of the specified tenses for table: ${tensesForTable.join(', ')}.`);
             setError(t('exercises.noSuitableVerbForTable', 'Could not find a suitable verb for the table exercise.'));
           }
-        } else if (currentExerciseMode === 'translateForm') {
+        } else if (chosenMode === 'translateForm') {
           const verbWithTenses = verbs.filter(v => v.tenses && Object.keys(v.tenses).length > 0);
           if (verbWithTenses.length > 0) {
             const randomVerb = getRandomElement(verbWithTenses);
@@ -130,7 +128,7 @@ const ConjugationPracticeExercise = ({ language, exerciseKey }) => {
                 conjugatedForm: conjugatedForm,
                 direction: direction,
               });
-              setCurrentExerciseMode('translateForm');
+              // setCurrentExerciseMode('translateForm'); // Already set by chosenMode
             } else {
               console.warn(`Verb ${randomVerb.infinitive} has no forms for tense ${randomTenseName}.`);
               setError(t('exercises.errorGeneratingTranslationTask', 'Error generating translation task.'));
@@ -146,7 +144,7 @@ const ConjugationPracticeExercise = ({ language, exerciseKey }) => {
     } finally {
       setIsLoading(false);
     }
-  }, [language, t]);
+  }, [language, t, tensesForTable]); // Added tensesForTable, currentExerciseMode logic fixed by using chosenMode
 
   useEffect(() => {
     if (language) {
@@ -155,7 +153,7 @@ const ConjugationPracticeExercise = ({ language, exerciseKey }) => {
       setIsLoading(false);
       setError(t('errors.selectLang',"Please select a language."));
     }
-  }, [language, exerciseKey, setupExercise]); // exerciseKey to re-trigger when user wants a new "session"
+  }, [language, exerciseKey, setupExercise, t]); // Added t
 
   const handleNextExercise = () => {
     setupExercise();

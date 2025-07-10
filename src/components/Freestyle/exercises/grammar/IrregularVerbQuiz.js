@@ -52,7 +52,7 @@ const IrregularVerbQuiz = ({
     }
   }, [isRevealedExternally, verb, isFullyAnswered, onSetCorrect, onSetFeedback, t]);
 
-  const checkForms = () => {
+  const checkForms = React.useCallback(() => {
     if (isFullyAnswered && !isRevealedExternally) return;
 
     const normalizedPSInput = normalizeString(pastSimpleInput);
@@ -83,7 +83,11 @@ const IrregularVerbQuiz = ({
       setIsFullyAnswered(false);
       return false;
     }
-  };
+  }, [
+    isFullyAnswered, isRevealedExternally, pastSimpleInput, pastParticipleInput,
+    verb, onSetFeedback, t, onSetCorrect, setIsPastSimpleCorrect,
+    setIsPastParticipleCorrect, setIsFullyAnswered
+  ]);
 
   useEffect(() => {
     if (onCheckAnswer) {

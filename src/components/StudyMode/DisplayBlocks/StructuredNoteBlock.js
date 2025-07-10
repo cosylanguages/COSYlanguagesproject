@@ -1,6 +1,6 @@
 import React from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
-import { useAuth } from '../../../AuthContext'; // To check if current user is student or teacher for visibility
+import { useAuth } from '../../../contexts/AuthContext'; // To check if current user is student or teacher for visibility
 import { getHeadingForColor } from '../../../config/templateSections'; // To generate title from color
 import './StructuredNoteBlock.css'; // Basic styling for the block
 

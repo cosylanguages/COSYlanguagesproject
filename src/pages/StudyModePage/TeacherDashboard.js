@@ -16,7 +16,7 @@ import { getBlockElementId } from './StudyModePage'; // Assuming it's exported f
 import DayManager from '../../components/StudyMode/DayManager';
 import LessonSectionManager from '../../components/StudyMode/LessonSectionManager';
 import { getLessonSectionDetails, updateLessonSection } from '../../api/lessonSections'; // Import APIs
-import { useAuth } from '../../AuthContext'; // To get the auth token
+import { useAuth } from '../../contexts/AuthContext'; // To get the auth token
 
 import './TeacherDashboard.css'; 
 import '../../components/StudyMode/ConfigBlocks/ConfigBlocks.css';
