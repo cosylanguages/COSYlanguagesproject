@@ -1,0 +1,70 @@
+/* Button.css */
+
+/* Size modifiers */
+/* .btn-sm might be defined in index.css or here if more specific styling is needed */
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem; /* Corresponds to --font-size-sm */
+  border-radius: var(--border-radius-sm);
+}
+
+/* .btn-lg might be defined in index.css or here */
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem; /* Corresponds to --font-size-lg */
+  border-radius: var(--border-radius-lg);
+}
+
+/* Additional custom variants if needed, for example: */
+.btn-light {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-medium); /* Using a variable from index.css */
+  border-color: var(--color-border);
+}
+
+.btn-light:hover {
+  background-color: #d3d9df; /* Slightly darker shade of surface-medium */
+}
+
+.btn-dark {
+  color: var(--color-text-on-dark);
+  background-color: var(--color-text-headings); /* Using a dark variable */
+  border-color: var(--color-text-headings);
+}
+
+.btn-dark:hover {
+  background-color: #23272b; /* Slightly lighter shade */
+}
+
+.btn-link {
+  font-weight: 400;
+  color: var(--color-link);
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-link:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* Custom variants for specific use cases discovered during refactoring can be added here.
+   For example, if 'toggle-latinization-btn' needs to be a variant:
+.btn-toggle-latinization {
+  padding: 8px 18px;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(78,84,200,0.15);
+  transition: background 0.3s, box-shadow 0.3s;
+  font-weight: 600;
+}
+
+.btn-toggle-latinization:hover {
+  background: linear-gradient(90deg, #4148b3 0%, #7c82e6 100%);
+  box-shadow: 0 4px 12px rgba(78,84,200,0.25);
+}
+*/

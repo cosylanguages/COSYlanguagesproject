@@ -216,6 +216,93 @@ h4 { font-size: var(--font-size-h4); }
   border-color: var(--color-secondary-dark);
 }
 
+.btn-success {
+  color: var(--color-text-on-dark);
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+.btn-success:hover {
+  background-color: #1e7e34; /* Darker success */
+  border-color: #1c7430;
+}
+
+.btn-danger {
+  color: var(--color-text-on-dark);
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+.btn-danger:hover {
+  background-color: #b21f2d; /* Darker danger */
+  border-color: #a71d2a;
+}
+
+.btn-warning {
+  color: var(--color-text-primary); /* Dark text for light warning */
+  background-color: var(--color-warning);
+  border-color: var(--color-warning);
+}
+.btn-warning:hover {
+  background-color: #d39e00; /* Darker warning */
+  border-color: #c69500;
+}
+
+.btn-info {
+  color: var(--color-text-on-dark);
+  background-color: var(--color-info);
+  border-color: var(--color-info);
+}
+.btn-info:hover {
+  background-color: #117a8b; /* Darker info */
+  border-color: #10707f;
+}
+
+.btn-light {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-medium);
+  border-color: var(--color-border);
+}
+.btn-light:hover {
+  background-color: #d3d9df;
+  border-color: #c8ced3;
+}
+
+.btn-dark {
+  color: var(--color-text-on-dark);
+  background-color: var(--color-text-headings);
+  border-color: var(--color-text-headings);
+}
+.btn-dark:hover {
+  background-color: #23272b;
+  border-color: #1d2124;
+}
+
+.btn-link {
+  font-weight: 400;
+  color: var(--color-link);
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+.btn-link:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* Size modifiers */
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  border-radius: var(--border-radius-sm);
+}
+
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-lg);
+  line-height: 1.5;
+  border-radius: var(--border-radius-lg);
+}
+
 /* Add more global styles or utility classes as needed */
 .text-center {
   text-align: center;

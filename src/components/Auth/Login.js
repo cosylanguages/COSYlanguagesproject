@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../AuthContext'; // Adjusted path
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; // We'll create this for basic styling
+import Button from '../Common/Button'; // Import Button
+import Label from '../Common/Label';   // Import Label
 import TransliterableText from '../Common/TransliterableText';
+import './Login.css';
 
 const Login = () => {
     const [pin, setPin] = useState('');
@@ -12,15 +14,13 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!pin.trim()) {
-            // setErrorState locally if preferred, or rely on authError from context
-            alert('PIN cannot be empty.'); 
+            alert('PIN cannot be empty.');
             return;
         }
         const success = await login(pin);
         if (success) {
-            navigate('/'); // Redirect to home/dashboard after successful login
+            navigate('/');
         }
-        // authError from context will display API errors
     };
 
     return (
@@ -28,7 +28,7 @@ const Login = () => {
             <form onSubmit={handleSubmit} className="login-form">
                 <h2><TransliterableText text="Teacher Login" /></h2>
                 <div className="form-group">
-                    <label htmlFor="pin"><TransliterableText text="PIN:" /></label>
+                    <Label htmlFor="pin"><TransliterableText text="PIN:" /></Label>
                     <input
                         type="password"
                         id="pin"
@@ -39,9 +39,14 @@ const Login = () => {
                     />
                 </div>
                 {authError && <p className="error-message"><TransliterableText text={authError} /></p>}
-                <button type="submit" className="login-button" disabled={loadingAuth}>
+                <Button
+                    type="submit"
+                    className="login-button"
+                    disabled={loadingAuth}
+                    variant="primary" // Assuming login button should look like a primary action
+                >
                     <TransliterableText text={loadingAuth ? 'Logging in...' : 'Login'} />
-                </button>
+                </Button>
             </form>
         </div>
     );

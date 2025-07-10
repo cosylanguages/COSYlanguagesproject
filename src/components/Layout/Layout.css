@@ -17,7 +17,7 @@
 
 .header-title-area {
   /* Takes up available space, pushing nav and controls to the right if needed */
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .app-header h1 {
@@ -94,25 +94,15 @@
 }
 
 .logout-button {
-  background-color: #d9534f; /* Reddish color for logout */
-  color: white;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease;
+  /* background-color, color, border, border-radius, cursor, transition
+     are now handled by the Button component with variant="danger". */
+  padding: 0.4rem 0.8rem; /* Specific padding */
+  font-size: 0.9rem;      /* Specific font size */
   white-space: nowrap;
 }
 
-.logout-button:hover:not(:disabled) {
-  background-color: #c9302c;
-}
-
-.logout-button:disabled {
-  background-color: #aaa;
-  cursor: not-allowed;
-}
+/* .logout-button:hover is handled by .btn-danger:hover */
+/* .logout-button:disabled is handled by Button's disabled state and global .btn-danger:disabled (if defined) */
 
 /* Responsive adjustments for header */
 @media (max-width: 768px) {
@@ -128,11 +118,11 @@
     width: 100%; /* Full width for nav links */
     margin-top: 0.5rem;
   }
-  
+
   .app-header nav ul li {
     width: 100%;
   }
-  
+
   .app-header nav a,
   .login-link {
     display: block; /* Make links take full width */
@@ -147,7 +137,7 @@
   }
   .user-info {
     /* Ensure user info doesn't cause overflow issues */
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
   }
 }
 
@@ -161,7 +151,7 @@
   .user-info {
     font-size: 0.85rem;
   }
-  .logout-button {
+  .logout-button { /* Keep responsive adjustments for logout button */
     font-size: 0.85rem;
     padding: 0.3rem 0.6rem;
   }

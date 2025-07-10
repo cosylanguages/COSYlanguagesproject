@@ -9,77 +9,27 @@
 }
 
 .action-button {
-  padding: 10px 15px;
-  font-size: 1em; /* Relative font size */
-  border-radius: 5px;
-  border: 1px solid transparent; /* Base border */
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
-  display: inline-flex; /* Helps align emoji and text */
+  /* Styles like padding, font-size, border-radius, border, cursor, transition,
+     background-color, color are now primarily handled by the Button component's
+     base .btn style and its variants (.btn-primary, .btn-success, etc.)
+     from src/index.css. */
+
+  /* Keep flex properties for aligning content (e.g., emoji and text) within the button,
+     as .btn doesn't define these. */
+  display: inline-flex;
   align-items: center;
-  gap: 5px; /* Space between emoji and text if emoji is part of text */
-  background-color: #f8f9fa; /* Default light background */
-  color: #333; /* Default text color */
-  border-color: #ddd; /* Default border */
+  gap: 5px; /* Space between emoji/icon and text */
 }
 
-.action-button:hover:not(:disabled) {
-  opacity: 0.85;
-  transform: translateY(-1px); /* Slight lift on hover */
-}
+/* Specific button styling for background/color/border (e.g., .action-button-check,
+   .action-button-reveal, .action-button-hint, .action-button-randomize, .action-button-next)
+   and their hover/active/disabled states are now handled by the variants passed to
+   the Button component (e.g., variant="success", variant="info") and styled in src/index.css. */
 
-.action-button:active:not(:disabled) {
-  transform: translateY(0px); /* Press down effect */
-}
+/* For example, .action-button-check styling is now covered by .btn-success */
+/* .action-button-reveal styling is now covered by .btn-info */
+/* etc. */
 
-.action-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-  background-color: #e9ecef; /* Slightly different background for disabled */
-}
-
-/* Specific button styling (examples, can be adjusted) */
-.action-button-check {
-  background-color: #28a745; /* Green */
-  color: white;
-  border-color: #28a745;
-}
-.action-button-check:hover:not(:disabled) {
-  background-color: #218838;
-}
-
-.action-button-reveal {
-  background-color: #17a2b8; /* Info/Teal */
-  color: white;
-  border-color: #17a2b8;
-}
-.action-button-reveal:hover:not(:disabled) {
-  background-color: #138496;
-}
-
-.action-button-hint {
-  background-color: #ffc107; /* Yellow */
-  color: #212529; /* Dark text for yellow */
-  border-color: #ffc107;
-}
-.action-button-hint:hover:not(:disabled) {
-  background-color: #e0a800;
-}
-
-.action-button-randomize {
-  background-color: #6c757d; /* Secondary/Grey */
-  color: white;
-  border-color: #6c757d;
-}
-.action-button-randomize:hover:not(:disabled) {
-  background-color: #5a6268;
-}
-
-.action-button-next {
-  background-color: #007bff; /* Primary/Blue */
-  color: white;
-  border-color: #007bff;
-}
-.action-button-next:hover:not(:disabled) {
-  background-color: #0069d9;
-}
+/* Hover, active, and disabled states are also handled by the global styles for .btn and its variants. */
+/* Any remaining specific hover/active/disabled behavior for .action-button
+   not covered by global styles would be defined here if necessary, but the goal is to rely on global styles. */
