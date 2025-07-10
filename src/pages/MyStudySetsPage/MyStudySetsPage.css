@@ -1,0 +1,23 @@
+.my-study-sets-page {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.my-study-sets-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.back-to-list-btn {
+  margin-bottom: 20px;
+  /* Assuming .btn and .btn-secondary styles are globally available or defined elsewhere */
+}
+
+/* Styles for StudySetList, StudySetEditor, FlashcardEditor will be in their own CSS files */
+/* This file is primarily for the page layout itself. */
+
+/* Add any page-specific layout rules here if needed */
+/* For example, if using a grid or flexbox for arranging components when multiple are shown */
+/* (Though current logic shows one main component at a time) */

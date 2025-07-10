@@ -1,0 +1,139 @@
+.flashcard-editor-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff; /* Changed from #f9f9f9 for better contrast with form */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.flashcard-editor-container h3,
+.flashcard-editor-container h4 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.card-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.card-form h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #0056b3; /* A slightly different color for sub-heading */
+}
+
+.card-form .form-group {
+  margin-bottom: 15px;
+}
+
+.card-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: normal; /* Less bold than set editor labels */
+  color: #444;
+  font-size: 0.95em;
+}
+
+.card-form input[type="text"],
+.card-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 0.95em;
+}
+
+.card-form input[type="text"]:focus,
+.card-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 0.15rem rgba(0,123,255,.25);
+}
+
+.card-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.card-form .form-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start; /* Align to start for card form */
+  gap: 10px;
+}
+
+.flashcard-list {
+  list-style: none;
+  padding: 0;
+}
+
+.flashcard-item {
+  background-color: #fdfdfd;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.flashcard-item .card-terms p {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+.flashcard-item .card-terms p strong {
+  color: #17a2b8; /* Info color for labels */
+}
+.flashcard-item .card-terms small em {
+  color: #6c757d; /* Muted color for example sentence */
+}
+
+
+.flashcard-item .card-actions {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically for smaller space */
+  gap: 8px;
+  margin-left: 15px; /* Space between terms and actions */
+}
+
+/* Assuming general .btn, .btn-primary, .btn-secondary, .btn-danger, .btn-sm styles exist */
+/* These are often defined globally or inherited. If not, add them here or in a common CSS file. */
+/* Example: */
+.btn {
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9em;
+  border: 1px solid transparent;
+}
+.btn-sm {
+  padding: 5px 8px;
+  font-size: 0.8em;
+}
+.btn-primary { background-color: #007bff; color: white; border-color: #007bff;}
+.btn-primary:hover { background-color: #0056b3; border-color: #0056b3;}
+.btn-secondary { background-color: #6c757d; color: white; border-color: #6c757d;}
+.btn-secondary:hover { background-color: #545b62; border-color: #545b62;}
+.btn-danger { background-color: #dc3545; color: white; border-color: #dc3545;}
+.btn-danger:hover { background-color: #c82333; border-color: #c82333;}
+
+.error-message { /* Consistent with other editors */
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+}
