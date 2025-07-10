@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useI18n } from '../../i18n/I18nContext'; // Import useI18n for title
-import './Modal.css'; 
+import Button from './Button'; // Import the new Button component
+import './Modal.css';
 
 const PinModal = ({ onSubmit, onClose, error }) => {
   const [pin, setPin] = useState('');
@@ -21,19 +22,19 @@ const PinModal = ({ onSubmit, onClose, error }) => {
             value={pin}
             onChange={(e) => setPin(e.target.value)}
             placeholder={t('enterPinPlaceholder', 'Enter PIN')} // Added placeholder translation
-            maxLength="8" 
+            maxLength="8"
             className="pin-modal-input" // Added class for styling
           />
           {error && <p className="pin-modal-error">{error}</p>} {/* Added class for styling */}
           <div className="modal-actions pin-modal-actions"> {/* Added class & kept modal-actions for base styling */}
             {onClose && (
-                <button type="button" onClick={onClose} className="btn btn-secondary">
+                <Button type="button" onClick={onClose} variant="secondary">
                     {t('buttons.cancel', 'Cancel')}
-                </button>
+                </Button>
             )}
-            <button type="submit" className="btn btn-primary">
+            <Button type="submit" variant="primary">
               {t('buttons.submit', 'Submit')}
-            </button>
+            </Button>
           </div>
         </form>
       </div>

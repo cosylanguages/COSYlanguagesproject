@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Button from './Button'; // Import the new Button component
 import './Modal.css';
 
 const Modal = ({ isOpen, onClose, title, children }) => {
@@ -27,7 +28,14 @@ const Modal = ({ isOpen, onClose, title, children }) => {
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <div className="modal-header">
                     {title && <h3 id="modal-title" className="modal-title">{title}</h3>}
-                    <button onClick={onClose} className="modal-close-button" aria-label="Close modal">&times;</button>
+                    <Button
+                        onClick={onClose}
+                        className="modal-close-button"
+                        ariaLabel="Close modal"
+                        variant="default" // Or a more specific variant if created
+                    >
+                        &times;
+                    </Button>
                 </div>
                 <div className="modal-body">
                     {children}
