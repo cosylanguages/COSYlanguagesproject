@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet, Link, NavLink, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../AuthContext'; // Adjusted path
+import { useAuth } from '../../contexts/AuthContext'; // Adjusted path
 import { useI18n } from '../../i18n/I18nContext'; // Import useI18n
 import Button from '../Common/Button'; // Import Button
 import TransliterableText from '../Common/TransliterableText';

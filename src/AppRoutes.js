@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; // Removed useEffect
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
-// import { usePlan } from './PlanContext'; // Commented out as PlanOverview is commented
-import { useAuth } from './AuthContext';
+// import { usePlan } from './contexts/PlanContext'; // Commented out as PlanOverview is commented
+import { useAuth } from './contexts/AuthContext';
 import { useI18n } from './i18n/I18nContext';
 import Layout from './components/Layout/Layout';
 import Login from './components/Auth/Login';

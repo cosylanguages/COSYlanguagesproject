@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
-import { useAuth } from '../../../AuthContext';
+import { useAuth } from '../../../contexts/AuthContext';
 import { fetchStudySets } from '../../../api/studySets'; // Assuming this API function exists or will be created
 import './StudySetList.css'; // To be created
 
