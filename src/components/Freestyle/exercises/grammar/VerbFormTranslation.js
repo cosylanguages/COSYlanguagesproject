@@ -24,7 +24,7 @@ const VerbFormTranslation = ({
   const targetLanguageForm = conjugatedForm; // e.g., "vais"
 
   let questionPrompt = '';
-  let correctAnswerNormalized = '';
+  // let correctAnswerNormalized = ''; // Removed as per no-unused-vars
 
   if (translationDirection === 'toEnglish') {
     // User sees "je vais" (for example), needs to type "to go"
@@ -32,7 +32,7 @@ const VerbFormTranslation = ({
       pronoun: getLatinizedText(pronoun, language),
       form: getLatinizedText(conjugatedForm, language),
     });
-    correctAnswerNormalized = normalizeString(infinitiveTranslation);
+    // correctAnswerNormalized = normalizeString(infinitiveTranslation); // Removed
   } else { // fromEnglish
     // User sees "to go", "je", "présent", needs to type "vais"
     questionPrompt = t('translate.englishToFormPrompt', `What is the form of "{translation}" for "{pronoun}" in the {tenseName} tense?`, {
@@ -40,7 +40,7 @@ const VerbFormTranslation = ({
       pronoun: getLatinizedText(pronoun, language),
       tenseName: getLatinizedText(tenseName, language),
     });
-    correctAnswerNormalized = normalizeString(targetLanguageForm);
+    // correctAnswerNormalized = normalizeString(targetLanguageForm); // Removed
   }
 
   useEffect(() => {
@@ -72,7 +72,7 @@ const VerbFormTranslation = ({
     if (onSetCorrect) onSetCorrect(false);
   };
 
-  const checkSingleAnswer = () => {
+  const checkSingleAnswer = React.useCallback(() => {
     if (isAnswered && userInput !== '') return; // Don't re-check if already answered correctly, unless input is cleared
 
     const normalizedInput = normalizeString(userInput);
@@ -102,7 +102,10 @@ const VerbFormTranslation = ({
       setIsAnswered(false); // Allow user to try again
     }
     return isCorrect;
-  };
+  }, [
+    isAnswered, userInput, translationDirection, infinitiveTranslation,
+    targetLanguageForm, onSetFeedback, t, onSetCorrect, setIsAnswered
+  ]);
 
   // Expose checkSingleAnswer to parent via onCheckAnswer ref
   useEffect(() => {

@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
-import { PlanProvider } from './PlanContext';
-import { AuthProvider } from './AuthContext';
+import { PlanProvider } from './contexts/PlanContext';
+import { AuthProvider } from './contexts/AuthContext';
 import { I18nProvider } from './i18n/I18nContext';
 import { LatinizationProvider } from './contexts/LatinizationContext';
 import { UserProfileProvider } from './contexts/UserProfileContext'; // Added UserProfileProvider

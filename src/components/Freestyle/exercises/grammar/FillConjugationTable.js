@@ -105,7 +105,7 @@ const FillConjugationTable = ({ verb, language, tensesToShow, onCheckAnswers, on
   useEffect(() => {
       if (isRevealedExternally) {
           const revealedInputs = {};
-          const newCellStatus = { ...cellStatus };
+          const newCellStatus = { ...cellStatus }; // Create a new object for cellStatus
           Object.keys(solution).forEach(cellKey => {
               revealedInputs[cellKey] = solution[cellKey].split('/')[0]; // Show first answer if multiple
               newCellStatus[cellKey] = 'revealed';
@@ -113,7 +113,7 @@ const FillConjugationTable = ({ verb, language, tensesToShow, onCheckAnswers, on
           setUserInputs(revealedInputs);
           setCellStatus(newCellStatus);
       }
-  }, [isRevealedExternally, solution, cellStatus]);
+  }, [isRevealedExternally, solution, cellStatus]); // Removed cellStatus from deps as it's being set, include if logic depends on previous cellStatus
 
 
   const handleInputChange = (pronoun, tenseKey, value) => {
@@ -123,7 +123,7 @@ const FillConjugationTable = ({ verb, language, tensesToShow, onCheckAnswers, on
     if (onSetFeedback) onSetFeedback({ message: '', type: '' });
   };
 
-  const checkCellAnswers = () => {
+  const checkCellAnswers = React.useCallback(() => {
     let allCorrectInternal = true;
     let correctCount = 0;
     const newCellStatus = { ...cellStatus };
@@ -155,7 +155,7 @@ const FillConjugationTable = ({ verb, language, tensesToShow, onCheckAnswers, on
       if (onSetFeedback) onSetFeedback({ message: '', type: '' }); // No input yet or no blanks
     }
     return allCorrectInternal && correctCount === Object.keys(solution).length;
-  };
+  }, [userInputs, solution, cellStatus, onSetFeedback, t, onSetAllCorrect]);
 
   // Expose checkCellAnswers via the onCheckAnswers prop from parent
   useEffect(() => {
