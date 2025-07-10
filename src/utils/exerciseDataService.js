@@ -210,4 +210,6 @@ export async function loadWritingPromptsData(languageIdentifier, days) {
   };
 }
 
+export { fetchJsonData };
+
 console.log('[ExerciseDataService] Service loaded.');

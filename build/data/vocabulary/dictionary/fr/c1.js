@@ -1,19 +1,14 @@
 const c1_french_vocabulary = {
   "Langage Formel et Soutenu": [
-    { "term": "corroborer", "definition": "Confirmer, appuyer (une affirmation, une théorie).", "gender": null, "example": "Les nouvelles preuves corroborent sa version des faits.", "notes": "Soutenu." },
     { "term": "subséquent(e)", "definition": "Qui suit, qui vient après.", "gender": null, "example": "Les événements subséquents ont confirmé nos craintes.", "notes": "Soutenu." },
     { "term": "intrinsèque", "definition": "Qui appartient essentiellement à quelque chose, qui lui est propre.", "gender": null, "example": "La valeur intrinsèque de cette œuvre est indéniable.", "notes": "Soutenu." },
     { "term": "extrinsèque", "definition": "Qui vient du dehors, qui n'appartient pas à l'essence de quelque chose.", "gender": null, "example": "Les facteurs extrinsèques ont influencé sa décision.", "notes": "Soutenu." },
-    { "term": "obvier à", "definition": "Prévenir une difficulté, un inconvénient en prenant les mesures nécessaires.", "gender": null, "example": "Pour obvier à ce problème, nous avons mis en place un nouveau système.", "notes": "Soutenu, suivi de 'à'." },
     { "term": "une diligence", "definition": "Soin attentif et appliqué ; rapidité et zèle dans l'exécution.", "gender": "f", "example": "Faire preuve de diligence dans son travail.", "notes": "Soutenu." },
     { "term": "une assertion", "definition": "Proposition que l'on avance et que l'on soutient comme vraie.", "gender": "f", "example": "Son assertion a été contestée par plusieurs experts.", "notes": "Soutenu." },
     { "term": "fallacieux(-euse)", "definition": "Trompeur, illusoire.", "gender": null, "example": "Un argument fallacieux.", "notes": "Soutenu." },
     { "term": "probant(e)", "definition": "Qui prouve, qui est convaincant.", "gender": null, "example": "Des preuves probantes.", "notes": "Soutenu." },
     { "term": "une panacée", "definition": "Remède universel censé guérir tous les maux.", "gender": "f", "example": "Cette solution n'est pas une panacée, mais elle aide.", "notes": "Souvent utilisé de manière critique." },
-    { "term": "corroborer", "definition": "Confirmer, appuyer (une affirmation, une théorie) par de nouvelles preuves ou témoignages.", "gender": null, "example": "Les récentes découvertes archéologiques corroborent l'hypothèse des historiens.", "notes": "Soutenu. Verbe transitif." },
-    { "term": "une diligence (faire preuve de)", "definition": "Soin attentif, zèle et rapidité que l'on apporte à l'exécution de quelque chose.", "gender": "f", "example": "Il a fait preuve d'une grande diligence dans la gestion de ce dossier complexe.", "notes": "Soutenu. 'Faire preuve de diligence'." },
-    { "term": "subséquent(e)", "definition": "Qui suit immédiatement dans le temps ou dans un ordre logique.", "gender": null, "example": "Les mesures prises et les ajustements subséquents ont permis d'améliorer la situation.", "notes": "Soutenu. Adjectif." },
-    { "term": "obvier à (un problème, une difficulté)", "definition": "Prendre les dispositions nécessaires pour éviter un inconvénient, un danger.", "gender": null, "example": "Pour obvier aux risques d'inondation, des digues ont été construites.", "notes": "Soutenu. Verbe transitif indirect (obvier à quelque chose)." }
+    { "term": "une diligence (faire preuve de)", "definition": "Soin attentif, zèle et rapidité que l'on apporte à l'exécution de quelque chose.", "gender": "f", "example": "Il a fait preuve d'une grande diligence dans la gestion de ce dossier complexe.", "notes": "Soutenu. 'Faire preuve de diligence'." }
   ],
   "Actualités et Débats d'Idées (avancé)": [
     { "term": "une conjoncture (économique, politique)", "definition": "Situation d'ensemble résultant d'un concours de circonstances, en particulier dans le domaine économique ou politique.", "gender": "f", "example": "La conjoncture économique actuelle est marquée par une forte inflation.", "notes": "" },
@@ -90,7 +85,6 @@ const c1_french_vocabulary = {
     { "term": "avoir du pain sur la planche", "definition": "Avoir beaucoup de travail à faire.", "gender": null, "example": "Je ne peux pas sortir ce soir, j'ai du pain sur la planche.", "notes": "" },
     { "term": "chercher midi à quatorze heures", "definition": "Compliquer inutilement les choses simples.", "gender": null, "example": "La solution est évidente, arrête de chercher midi à quatorze heures.", "notes": "" },
     { "term": "se tenir à carreau", "definition": "Rester tranquille, se méfier, ne pas s'exposer.", "gender": null, "example": "Après cet avertissement, il a intérêt à se tenir à carreau.", "notes": "" },
-    { "term": "passer du coq à l'âne", "definition": "Passer brusquement d'un sujet à un autre sans transition logique.", "gender": null, "example": "Dans la conversation, il passait constamment du coq à l'âne.", "notes": "" },
     { "term": "ne pas être dans son assiette", "definition": "Ne pas se sentir bien, être mal à l'aise ou de mauvaise humeur.", "gender": null, "example": "Il est un peu distant aujourd'hui, il ne doit pas être dans son assiette.", "notes": "Expression idiomatique." },
     { "term": "avoir la puce à l'oreille", "definition": "Se douter de quelque chose, être intrigué ou méfiant.", "gender": null, "example": "Son silence m'a mis la puce à l'oreille.", "notes": "Expression idiomatique." },
     { "term": "coûter un bras", "definition": "Être extrêmement cher.", "gender": null, "example": "Cette réparation de voiture va me coûter un bras !", "notes": "Variante de 'coûter les yeux de la tête'." },
@@ -106,7 +100,6 @@ const c1_french_vocabulary = {
     { "term": "explicite", "definition": "Qui est énoncé clairement, sans rien laisser d'implicite.", "gender": null, "example": "Des instructions explicites.", "notes": "" },
     { "term": "endémique", "definition": "Qui sévit de façon permanente dans une région (maladie) ; propre à une région.", "gender": null, "example": "Une maladie endémique. Une plante endémique de cette île.", "notes": "" },
     { "term": "sporadique", "definition": "Qui apparaît ça et là, de temps en temps, irrégulièrement.", "gender": null, "example": "Des incidents sporadiques.", "notes": "" },
-    { "term": "subodorer", "definition": "Pressentir, deviner quelque chose de caché, de secret.", "gender": null, "example": "J'ai subodoré une ruse.", "notes": "Soutenu." },
     { "term": "désuet(ète)", "definition": "Qui n'est plus en usage, démodé, vieilli.", "gender": null, "example": "Cette expression est devenue désuète.", "notes": "Soutenu. Féminin: désuète." },
     { "term": "vernaculaire", "definition": "Propre à un pays, à ses habitants (en parlant d'une langue).", "gender": null, "example": "Le français vernaculaire du Québec.", "notes": "Linguistique." },
     { "term": "péremptoire", "definition": "Qui détruit d'avance toute objection ; indiscutable, catégorique.", "gender": null, "example": "Un ton péremptoire.", "notes": "Soutenu." },
@@ -120,8 +113,6 @@ const c1_french_vocabulary = {
     { "term": "un jalon / un point d'étape", "definition": "Événement marquant une étape importante dans un projet.", "gender": "m", "example": "Atteindre le premier jalon du projet.", "notes": "" },
     { "term": "le leadership / le meneur d'hommes", "definition": "Capacité à diriger, à influencer un groupe.", "gender": "m", "example": "Faire preuve de leadership.", "notes": "" },
     { "term": "la rentabilité", "definition": "Capacité à produire des bénéfices.", "gender": "f", "example": "Analyser la rentabilité d'un investissement.", "notes": "" },
-    { "term": "externaliser / l'externalisation (outsourcing)", "definition": "Confier une partie de ses activités à un prestataire extérieur.", "gender": null, "example": "Externaliser le service client.", "notes": "Anglicisme 'outsourcing' fréquent." },
-    { "term": "optimiser", "definition": "Rendre optimal, améliorer au maximum.", "gender": null, "example": "Optimiser les processus de production.", "notes": "" },
     { "term": "une performance", "definition": "Résultat obtenu ; exploit.", "gender": "f", "example": "Évaluer la performance des employés. Une performance sportive remarquable.", "notes": "" },
     { "term": "un appel d'offres", "definition": "Procédure par laquelle un commanditaire demande à plusieurs entreprises de faire une proposition chiffrée pour la réalisation d'un projet.", "gender": "m", "example": "Notre entreprise a répondu à un appel d'offres public.", "notes": "" },
     { "term": "la RSE (Responsabilité Sociétale des Entreprises)", "definition": "Intégration volontaire par les entreprises de préoccupations sociales et environnementales à leurs activités commerciales.", "gender": "f", "example": "De plus en plus d'entreprises mettent en place une politique de RSE.", "notes": "" },

@@ -364,15 +364,15 @@ body {
 /* Languages with local flags - paths might need adjustment based on project structure */
 /* Assuming assets are in public folder, so /assets/icons/ is relative to public URL */
 .bashkir-bg { /* Key: bashkir */
-  background-image: url('/assets/icons/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+  background-image: url('/public/assets/icons/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
 .tatar-bg { /* Key: tatar */
-  background-image: url('/assets/icons/Flag_of_Tatarstan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+  background-image: url('/public/assets/icons/Flag_of_Tatarstan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
 .breton-bg { /* Key: breton */
-  background-image: url('/assets/icons/Flag_of_Brittany.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+  background-image: url('/public/assets/icons/Flag_of_Brittany.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
 .greek-bg { /* Key: greek */

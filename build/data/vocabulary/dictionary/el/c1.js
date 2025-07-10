@@ -96,16 +96,6 @@ export const c1_greek_vocabulary = {
       "example": "Τα επιχειρήματά του ήταν απολύτως εύλογα.",
       "level": "c1",
       "notes": "Agrees in gender: εύλογη, εύλογο."
-    },
-    {
-      "term": "προκύπτει",
-      "latinisation": "prokiptei",
-      "pronunciation": "proˈcipti",
-      "partOfSpeech": "verb",
-      "definition": "to arise, to result, to emerge",
-      "example": "Από την ανάλυση προκύπτει ότι απαιτούνται περαιτέρω μέτρα.",
-      "level": "c1",
-      "notes": "Impersonal verb often used."
     }
   ],
   "Idioms and colloquialisms": [

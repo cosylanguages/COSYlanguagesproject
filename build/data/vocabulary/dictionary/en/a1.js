@@ -213,7 +213,7 @@ export const a1_english_vocabulary = {
     { "term": "sir", "pronunciation": "sɜːr", "partOfSpeech": "n", "definition": "A polite and formal way of addressing a man.", "example": "Good afternoon, sir. Do you have a reservation?", "level": "a1", "notes": "" },
     { "term": "sports car", "pronunciation": "spɔːrts kɑːr", "partOfSpeech": "n", "definition": "A low, fast car, typically with seating for only two people.", "example": "I like this sports car. It's very fast!", "level": "a1", "notes": "" },
     { "term": "OK", "pronunciation": "ˌoʊˈkeɪ", "partOfSpeech": "interjection", "definition": "said to show that we are agreeing...", "example": "Ok, you can go out with your friends tonight.", "level": "a1", "notes": "" }
-  ]
+  ],
 };
 
 // If using CommonJS (older style, check project setup if unsure):
