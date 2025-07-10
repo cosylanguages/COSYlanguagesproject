@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+// import { useParams, useNavigate } from 'react-router-dom'; // Commented out for now to simplify testing
 import { getStudySetById, saveStudySet } from '../../utils/studySetService';
 import { useI18n } from '../../i18n/I18nContext';
 import './StudySetEditor.css';
@@ -7,8 +7,8 @@ import './StudySetEditor.css';
 // Added props: setIdProp (for explicit ID passing), onSetSaved, onCancel
 const StudySetEditor = ({ setIdProp, onSetSaved, onCancel }) => {
   const { t, currentLangKey } = useI18n();
-  // const { setId: paramSetId } = useParams(); // Keep if direct routing to editor is also desired
-  // const navigate = useNavigate(); // Keep if direct navigation from here is needed
+  // const { setId: paramSetId } = useParams(); // Commented out
+  // const navigate = useNavigate(); // Commented out
 
   const actualSetId = setIdProp; // Prioritize prop for ID
   const isEditMode = Boolean(actualSetId);

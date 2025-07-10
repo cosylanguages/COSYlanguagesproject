@@ -7,7 +7,7 @@ const translations = {
     navHome: "Home",
     navFreestyle: "Freestyle",
     navStudyMode: "Study",
-    navMyStudySets: "My Sets", // New Nav Link
+    navMyStudySets: "My Sets",
     selectPractice: "🧭 Choose Your Practice:",
     selectDay: "🗓️ Select Day(s):",
     mainHeading: "COSYlanguages",
@@ -16,7 +16,7 @@ const translations = {
     cancel: "Cancel",
     editButton: "Edit",
     deleteButton: "Delete",
-    auth: { // For ProtectedRoute
+    auth: {
       loadingStatus: "Loading authentication status..."
     },
     vocabulary: "🔠 Vocabulary",
@@ -116,9 +116,10 @@ const translations = {
       exampleDisplay: "Ex:",
       selectSetPrompt: "Select a study set to manage its cards."
     },
-    myStudySetsPage: { // New Page translations
+    myStudySetsPage: {
       title: "Manage Your Study Sets",
-      backToList: "← Back to Set List"
+      backToList: "← Back to Set List",
+      errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted." // New key
     }
   },
   COSYfrench: {
@@ -126,7 +127,7 @@ const translations = {
     navHome: "Accueil",
     navFreestyle: "Mode Libre",
     navStudyMode: "Mode Étude",
-    navMyStudySets: "Mes Decks", // New Nav Link
+    navMyStudySets: "Mes Decks",
     selectPractice: "🧭 Choisissez Votre Pratique :",
     selectDay: "🗓️ Sélectionnez le(s) Jour(s) :",
     mainHeading: "COSYlangues",
@@ -235,9 +236,10 @@ const translations = {
       exampleDisplay: "Ex :",
       selectSetPrompt: "Sélectionnez un deck d'étude pour gérer ses fiches."
     },
-    myStudySetsPage: { // New Page translations
+    myStudySetsPage: {
       title: "Gérer Vos Decks d'Étude",
-      backToList: "← Retour à la Liste des Decks"
+      backToList: "← Retour à la Liste des Decks",
+      errorSetNotFoundForPlayer: "Impossible de trouver le deck à étudier. Il a peut-être été supprimé." // New key
     }
   }
 };
