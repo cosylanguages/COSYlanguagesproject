@@ -22,6 +22,7 @@ import MatchImageWordExercise from './exercises/vocabulary/MatchImageWordExercis
 // import ArticleWordExercise from './exercises/grammar/ArticleWordExercise'; // Not currently in map
 // import MatchArticlesWordsExercise from './exercises/grammar/MatchArticlesWordsExercise'; // Not currently in map
 import SelectArticleExercise from './exercises/grammar/SelectArticleExercise';
+import ConjugationPracticeExercise from './exercises/grammar/ConjugationPracticeExercise'; // Added
 import TypeVerbExercise from './exercises/grammar/TypeVerbExercise'; // Not currently in map, but should be
 // import MatchVerbsPronounsExercise from './exercises/grammar/MatchVerbsPronounsExercise'; // Not currently in map
 import FillGapsExercise from './exercises/grammar/FillGapsExercise'; // Not currently in map
@@ -76,6 +77,7 @@ const exerciseMap = {
   // Grammar (ensure keys match allMenuItemsConfig if these are directly selectable)
   'grammar_fill_gaps': FillGapsExercise, // Assuming this key from config
   'grammar_type_verb': TypeVerbExercise, // Assuming this key from config
+  'grammar_conjugation_practice': ConjugationPracticeExercise, // Added
   'gender-articles': SelectArticleExercise, 
   'verbs-conjugation': WordOrderExercise, // This was likely a placeholder name for a specific type
   'word-order': WordOrderExercise, // Adding if 'word-order' is a distinct key

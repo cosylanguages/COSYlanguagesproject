@@ -73,7 +73,8 @@ export const allMenuItemsConfig = {
       'grammar_fill_gaps_exercise',
       'grammar_type_verb_exercise',
       'grammar_select_article_exercise',
-      'grammar_word_order_exercise'
+      'grammar_word_order_exercise',
+      'grammar_conjugation_practice' // Added new exercise
     ]
   },
   'reading': {
@@ -114,6 +115,7 @@ export const allMenuItemsConfig = {
   'grammar_type_verb_exercise': { parent: 'grammar', isExercise: true },
   'grammar_select_article_exercise': { parent: 'grammar', isExercise: true },
   'grammar_word_order_exercise': { parent: 'grammar', isExercise: true },
+  'grammar_conjugation_practice': { parent: 'grammar', isExercise: true, i18nKey: 'subPractice.grammar.grammar_conjugation_practice' }, // Added new exercise definition
 
   // Reading Sub-Practice Exercises (Leaf nodes)
   'reading_story_exercise': { parent: 'reading', isExercise: true },
