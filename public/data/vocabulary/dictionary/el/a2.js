@@ -122,16 +122,6 @@ export const a2_greek_vocabulary = {
       "example": "Τι νούμερο φοράτε;",
       "level": "a2",
       "notes": "νούμερο (n), μέγεθος (n)"
-    },
-    {
-      "term": "δοκιμάζω",
-      "latinisation": "dhokimazo",
-      "pronunciation": "ðociˈmazo",
-      "partOfSpeech": "verb",
-      "definition": "to try on (clothes)",
-      "example": "Μπορώ να το δοκιμάσω αυτό το φόρεμα;",
-      "level": "a2",
-      "notes": ""
     }
   ],
   "Food and drink": [
@@ -156,16 +146,6 @@ export const a2_greek_vocabulary = {
       "example": "Ποια είναι τα υλικά για αυτή τη συνταγή;",
       "level": "a2",
       "notes": "Plural form."
-    },
-    {
-      "term": "παραγγέλνω",
-      "latinisation": "parangelno",
-      "pronunciation": "paraˈŋɟelno",
-      "partOfSpeech": "verb",
-      "definition": "to order (food)",
-      "example": "Θα παραγγείλουμε πίτσα απόψε.",
-      "level": "a2",
-      "notes": ""
     }
   ],
   "Travel and transport": [

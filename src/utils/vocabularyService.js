@@ -174,7 +174,25 @@ export async function loadAllLevelsForLanguageAsFlatList(lang) {
             // console.warn(`VocabularyService: Error processing level ${level} for language ${lang}: ${error.message}`);
         }
     }
-    // console.log(`VocabularyService: Finished loading all levels for ${lang}. Total items: ${combinedVocabulary.length}`);
+
+    // Attempt to load the verbs.js file
+    try {
+        // console.log(`VocabularyService: - Attempting to load verbs.js for ${lang}`);
+        // We can reuse getAllVocabularyAsFlatList by passing 'verbs' as a pseudo-level
+        // as it internally calls loadVocabularyForLanguageLevel which handles .js files
+        // and expects the 'vocabulary' export.
+        const verbsVocabList = await getAllVocabularyAsFlatList(lang, 'verbs');
+        if (verbsVocabList && verbsVocabList.length > 0) {
+            combinedVocabulary = [...combinedVocabulary, ...verbsVocabList];
+            // console.log(`VocabularyService: - Loaded ${verbsVocabList.length} items from verbs.js for ${lang}. New total: ${combinedVocabulary.length}`);
+        } else {
+            // console.log(`VocabularyService: - No vocabulary found in verbs.js for ${lang} or it failed to load.`);
+        }
+    } catch (error) {
+        // console.warn(`VocabularyService: Error processing verbs.js for language ${lang}: ${error.message}`);
+    }
+
+    // console.log(`VocabularyService: Finished loading all levels and verbs.js for ${lang}. Total items: ${combinedVocabulary.length}`);
     return combinedVocabulary;
 }
 
