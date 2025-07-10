@@ -2,9 +2,9 @@ import React from 'react';
 import { Outlet, Link, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../AuthContext'; // Adjusted path
 import { useI18n } from '../../i18n/I18nContext'; // Import useI18n
-// import LanguageSelector from '../LanguageSelector/LanguageSelector'; // Import LanguageSelector - REMOVED
+import Button from '../Common/Button'; // Import Button
 import TransliterableText from '../Common/TransliterableText';
-import './Layout.css'; 
+import './Layout.css';
 
 const Layout = () => {
   const { isAuthenticated, currentUser, logout, loadingAuth } = useAuth();
@@ -38,13 +38,17 @@ const Layout = () => {
           </ul>
         </nav>
         <div className="header-controls">
-          {/* <LanguageSelector /> - REMOVED */}
           {isAuthenticated && currentUser && (
             <div className="user-info">
               <span><TransliterableText text={t('welcomeUser', { name: currentUser.username || currentUser.role || 'User' }) || `Welcome, ${currentUser.username || currentUser.role || 'User'}!`} /></span>
-              <button onClick={handleLogout} disabled={loadingAuth} className="logout-button">
+              <Button
+                onClick={handleLogout}
+                disabled={loadingAuth}
+                className="logout-button" // Keep for any specific layout adjustments if needed
+                variant="danger" // Using danger variant for logout
+              >
                 <TransliterableText text={loadingAuth ? (t('loggingOut') || 'Logging out...') : (t('btnLogout') || 'Logout')} />
-              </button>
+              </Button>
             </div>
           )}
           {!isAuthenticated && !loadingAuth && (

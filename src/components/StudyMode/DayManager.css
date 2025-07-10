@@ -26,19 +26,13 @@
     border-radius: var(--border-radius-sm);
 }
 
-.add-day-form button {
-    padding: var(--spacing-sm) var(--spacing-md);
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    border-radius: var(--border-radius-sm);
-    cursor: pointer;
+/* Styling for the Button component within .add-day-form */
+.add-day-form .btn { /* Target the .btn class of the Button component */
+    padding: var(--spacing-sm) var(--spacing-md); /* Custom padding: 8px 16px */
+    border-radius: var(--border-radius-sm); /* Custom border-radius */
     white-space: nowrap;
-}
-
-.add-day-form button:disabled {
-    background-color: var(--color-secondary);
-    cursor: not-allowed;
+    /* background-color, color, border, cursor, disabled states
+       are handled by Button variant="primary" and global styles. */
 }
 
 .day-list {
@@ -73,35 +67,33 @@
     color: white;
     font-weight: bold;
 }
-.day-list-item.selected .day-actions button {
-    color: white; /* Make icons white on selected background */
-    border-color: rgba(255,255,255,0.5);
-}
-
 
 .day-title {
     flex-grow: 1;
     margin-right: var(--spacing-sm);
 }
 
-.day-actions button {
-    background: none;
-    border: 1px solid transparent; /* Keep layout consistent */
-    color: var(--color-text-secondary);
-    cursor: pointer;
-    padding: var(--spacing-xs);
+/* Styling for Button components within .day-actions */
+.day-actions .btn { /* Target .btn class of Button components */
+    padding: var(--spacing-xs); /* Custom very small padding: 4px */
     margin-left: var(--spacing-xs);
-    font-size: 0.9em;
-}
-.day-actions button:hover:not(:disabled) {
-    color: var(--color-text-primary);
-    border-color: var(--color-border); /* Show border on hover */
+    /* font-size is handled by size="sm" on the Button component (0.875rem) */
+    /* background, border, color, cursor, hover/disabled states
+       are handled by Button size="sm", variant="light" and global styles. */
 }
 
-.day-actions button:disabled {
-    color: #ccc;
-    cursor: not-allowed;
+/* Specific styles for buttons (btn-rename, btn-delete might have icon color tweaks if needed) */
+/* .btn-rename, .btn-delete can be used if further distinction beyond variant="light" is required */
+
+.day-list-item.selected .day-actions .btn {
+    color: white; /* Make icons/text white on selected background */
+    border-color: rgba(255,255,255,0.5); /* Optional: Adjust border for selected state */
 }
+/* Ensure hover on selected items' buttons is also visible */
+.day-list-item.selected .day-actions .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect on selected buttons */
+}
+
 
 .error-message { /* Consistent error message styling */
     color: var(--color-danger);
