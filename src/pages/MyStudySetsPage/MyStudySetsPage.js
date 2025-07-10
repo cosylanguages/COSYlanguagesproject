@@ -1,56 +1,60 @@
 import React, { useState } from 'react';
-import { useNavigate, useParams, useLocation } from 'react-router-dom';
+// Removed unused: useParams, useLocation. useNavigate might be used later for routing.
+// import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import StudySetList from '../../components/StudySets/StudySetList';
 import StudySetEditor from '../../components/StudySets/StudySetEditor';
 import FlashcardEditor from '../../components/StudySets/FlashcardEditor';
+import FlashcardPlayer from '../../components/StudyMode/StudentTools/FlashcardPlayer'; // Import FlashcardPlayer
+import { getStudySetById } from '../../utils/studySetService'; // To fetch set for player
 import { useI18n } from '../../i18n/I18nContext';
-import './MyStudySetsPage.css'; // To be created
+import './MyStudySetsPage.css';
 
 const MyStudySetsPage = () => {
   const { t } = useI18n();
-  const navigate = useNavigate();
+  // const navigate = useNavigate(); // Keep for future routing if needed
 
-  // This page will manage different views: list, edit-set, edit-cards
-  // We can use local state or URL params to manage the view.
-  // For simplicity with current setup, let's use local state.
-  // A more robust solution might use nested routes.
+  const [currentView, setCurrentView] = useState('list'); // 'list', 'editSet', 'editCards', 'studyPlayer'
+  const [selectedSetId, setSelectedSetId] = useState(null);
+  const [setForPlayer, setSetForPlayer] = useState(null); // To hold the full set data for the player
+  // const [isCreatingNewSet, setIsCreatingNewSet] = useState(false); // This state might be redundant if selectedSetId handles 'new'
 
-  const [currentView, setCurrentView] = useState('list'); // 'list', 'editSet', 'editCards'
-  const [selectedSetId, setSelectedSetId] = useState(null); // For editing an existing set or its cards
-  const [isCreatingNewSet, setIsCreatingNewSet] = useState(false);
-
-  // --- Navigation/View Handlers ---
   const showListView = () => {
     setCurrentView('list');
     setSelectedSetId(null);
-    setIsCreatingNewSet(false);
-    // Consider if navigate('/') or navigate('/my-sets') is needed to clear URL params if used
+    setSetForPlayer(null);
+    // setIsCreatingNewSet(false);
   };
 
   const handleCreateNewSet = () => {
-    setSelectedSetId(null); // Clear any selected set ID
-    setIsCreatingNewSet(true);
+    setSelectedSetId(null);
+    // setIsCreatingNewSet(true);
     setCurrentView('editSet');
-    // navigate('/my-sets/new'); // If using routing
   };
 
   const handleEditSetDetails = (setId) => {
     setSelectedSetId(setId);
-    setIsCreatingNewSet(false);
+    // setIsCreatingNewSet(false);
     setCurrentView('editSet');
-    // navigate(`/my-sets/${setId}/edit-details`); // If using routing
   };
 
   const handleEditSetCards = (setId) => {
     setSelectedSetId(setId);
-    setIsCreatingNewSet(false); // Should already be false if coming from editing details
+    // setIsCreatingNewSet(false);
     setCurrentView('editCards');
-    // navigate(`/my-sets/${setId}/edit-cards`); // If using routing
   };
 
-  // --- Callbacks from Editors ---
+  const handleLaunchStudyPlayer = (setId) => {
+    const setToPlay = getStudySetById(setId);
+    if (setToPlay) {
+      setSelectedSetId(setId); // Keep track of which set is being studied
+      setSetForPlayer(setToPlay);
+      setCurrentView('studyPlayer');
+    } else {
+      alert(t('myStudySetsPage.errorSetNotFoundForPlayer', 'Could not find the set to study.'));
+    }
+  };
+
   const onSetSaved = (savedSetId) => {
-    // After saving set details (new or edit), proceed to card editor for that set
     handleEditSetCards(savedSetId);
   };
 
@@ -59,19 +63,19 @@ const MyStudySetsPage = () => {
   };
 
   const onCardEditorFinished = () => {
-    // After finishing card editing, could go to set details or back to list.
-    // For now, back to list.
     showListView();
   };
 
+  const onPlayerExit = () => {
+    showListView();
+  };
 
-  // Render logic based on currentView
   let content;
   if (currentView === 'editSet') {
     content = (
       <StudySetEditor
-        key={selectedSetId || 'new'} // Ensure re-render if selectedSetId changes
-        setIdProp={selectedSetId} // Pass explicitly to avoid confusion with useParams if nested routing was used
+        key={selectedSetId || 'new-set-editor'}
+        setIdProp={selectedSetId}
         onSetSaved={onSetSaved}
         onCancel={onSetEditorCancelled}
       />
@@ -80,16 +84,26 @@ const MyStudySetsPage = () => {
     content = (
       <FlashcardEditor
         setId={selectedSetId}
-        onFinished={onCardEditorFinished} // Prop to signal completion
+        onFinished={onCardEditorFinished}
       />
     );
-  } else { // Default to 'list' view
+  } else if (currentView === 'studyPlayer' && setForPlayer) {
+    content = (
+      <FlashcardPlayer
+        studySetId={setForPlayer.id} // Pass the ID
+        initialSetData={setForPlayer} // Pass the full set data
+        onExitPlayer={onPlayerExit}
+        source="student" // Assuming these are student's personal sets from local storage
+      />
+    );
+  }
+  else {
     content = (
       <StudySetList
         onCreateNew={handleCreateNewSet}
-        onEditSetDetails={handleEditSetDetails} // Pass handler to edit set details
-        onEditSetCards={handleEditSetCards}   // Pass handler to edit cards of a set
-        // onStudySet will be handled by StudySetList for now (placeholder alert)
+        onEditSetDetails={handleEditSetDetails}
+        onEditSetCards={handleEditSetCards}
+        onLaunchStudyPlayer={handleLaunchStudyPlayer} // New prop
       />
     );
   }
