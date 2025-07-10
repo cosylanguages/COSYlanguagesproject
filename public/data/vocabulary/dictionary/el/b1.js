@@ -44,26 +44,6 @@ export const b1_greek_vocabulary = {
       "notes": "φοιτητής (m), φοιτήτρια (f)"
     },
     {
-      "term": "εργάζομαι",
-      "latinisation": "erghazome",
-      "pronunciation": "erˈɣazome",
-      "partOfSpeech": "verb",
-      "definition": "to work",
-      "example": "Εργάζομαι ως προγραμματιστής σε μια εταιρεία.",
-      "level": "b1",
-      "notes": ""
-    },
-    {
-      "term": "σπουδάζω",
-      "latinisation": "spoudhazo",
-      "pronunciation": "spuˈðazo",
-      "partOfSpeech": "verb",
-      "definition": "to study (at university level)",
-      "example": "Τι σπουδάζεις; - Σπουδάζω ιατρική.",
-      "level": "b1",
-      "notes": ""
-    },
-    {
       "term": "πτυχίο",
       "latinisation": "ptikhio",
       "pronunciation": "ptiˈçio",
@@ -188,16 +168,6 @@ export const b1_greek_vocabulary = {
       "notes": ""
     },
     {
-      "term": "αθλούμαι",
-      "latinisation": "athloume",
-      "pronunciation": "aˈθlume",
-      "partOfSpeech": "verb",
-      "definition": "to exercise, to do sports",
-      "example": "Μου αρέσει να αθλούμαι τακτικά.",
-      "level": "b1",
-      "notes": ""
-    },
-    {
       "term": "ζωγραφική",
       "latinisation": "zoghrafiki",
       "pronunciation": "zoɣrafiˈci",
@@ -275,46 +245,6 @@ export const b1_greek_vocabulary = {
       "gender": "f",
       "definition": "opinion",
       "example": "Ποια είναι η γνώμη σου για αυτό το θέμα;",
-      "level": "b1",
-      "notes": ""
-    },
-    {
-      "term": "συμφωνώ",
-      "latinisation": "simfono",
-      "pronunciation": "simfoˈno",
-      "partOfSpeech": "verb",
-      "definition": "to agree",
-      "example": "Συμφωνώ απόλυτα μαζί σου.",
-      "level": "b1",
-      "notes": ""
-    },
-    {
-      "term": "διαφωνώ",
-      "latinisation": "dhiafono",
-      "pronunciation": "ðiafoˈno",
-      "partOfSpeech": "verb",
-      "definition": "to disagree",
-      "example": "Διαφωνώ με αυτή την άποψη.",
-      "level": "b1",
-      "notes": ""
-    },
-    {
-      "term": "πιστεύω",
-      "latinisation": "pistevo",
-      "pronunciation": "pisˈtevo",
-      "partOfSpeech": "verb",
-      "definition": "to believe",
-      "example": "Πιστεύω ότι έχεις δίκιο.",
-      "level": "b1",
-      "notes": ""
-    },
-    {
-      "term": "νομίζω",
-      "latinisation": "nomizo",
-      "pronunciation": "noˈmizo",
-      "partOfSpeech": "verb",
-      "definition": "to think, to suppose",
-      "example": "Νομίζω ότι θα βρέξει αύριο.",
       "level": "b1",
       "notes": ""
     },

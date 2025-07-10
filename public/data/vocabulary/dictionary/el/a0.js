@@ -41,26 +41,6 @@ export const a0_greek_vocabulary = {
       "notes": ""
     },
     {
-      "term": "Ευχαριστώ",
-      "latinisation": "Efcharisto",
-      "pronunciation": "efxariˈsto",
-      "partOfSpeech": "ρήμα (ríma)",
-      "definition": "Έκφραση ευγνωμοσύνης.",
-      "example": "Ευχαριστώ πολύ για τη βοήθεια.",
-      "level": "a0",
-      "notes": ""
-    },
-    {
-      "term": "Παρακαλώ",
-      "latinisation": "Parakalo",
-      "pronunciation": "parakaˈlo",
-      "partOfSpeech": "επίρρημα/ρήμα (epírrima/ríma)",
-      "definition": "Ευγενική απάντηση σε ευχαριστώ / Για να ζητήσεις κάτι ευγενικά.",
-      "example": "Μπορώ να έχω λίγο νερό, παρακαλώ; - Ορίστε. - Ευχαριστώ. - Παρακαλώ.",
-      "level": "a0",
-      "notes": "Χρησιμοποιείται και για 'please' και για 'you're welcome'."
-    },
-    {
       "term": "Εντάξει",
       "latinisation": "Entaksei",
       "pronunciation": "enˈdaksi",
@@ -234,16 +214,6 @@ export const a0_greek_vocabulary = {
       "example": "Είμαι από την Ελλάδα.",
       "level": "a0",
       "notes": ""
-    },
-    {
-      "term": "Είμαι",
-      "latinisation": "Ime",
-      "pronunciation": "ˈime",
-      "partOfSpeech": "ρήμα (ríma)",
-      "definition": "Πρώτο πρόσωπο ενικού του ρήματος 'to be'.",
-      "example": "Είμαι καλά.",
-      "level": "a0",
-      "notes": "Ρήμα 'to be'"
     }
   ],
   "Numbers": [
