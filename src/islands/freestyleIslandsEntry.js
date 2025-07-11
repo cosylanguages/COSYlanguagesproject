@@ -11,34 +11,31 @@ import ToggleLatinizationButton from '../components/Common/ToggleLatinizationBut
 import DaySelectorFreestyle from '../components/Freestyle/DaySelectorFreestyle';
 import PracticeCategoryNav from '../components/Freestyle/PracticeCategoryNav';
 import SubPracticeMenu from '../components/Freestyle/SubPracticeMenu';
+import ExerciseHost from '../components/Freestyle/ExerciseHost'; // Import ExerciseHost
 
-// Config (can be a subset if needed, or full for simplicity if it doesn't cause issues)
+// Config
 import { allMenuItemsConfig as fullMenuConfig } from '../utils/menuNavigationLogic';
 
 // Styles
 import '../components/LanguageSelector/LanguageSelector.css';
 import '../components/Freestyle/DaySelectorFreestyle.css';
-import '../components/Freestyle/PracticeCategoryNav.css'; // For PracticeCategoryNav & SubPracticeMenu
+import '../components/Freestyle/PracticeCategoryNav.css';
 import '../pages/FreestyleModePage/FreestyleModePage.css';
 
 // --- Global state for islands (simple version) ---
 let globalSelectedLanguage = null;
 let globalConfirmedDays = [];
+let exerciseInstanceKey = 0; // For unique key for ExerciseHost
 
 // --- Language Island ---
 export const LanguageIslandApp = () => {
   const { language: i18nLanguage, changeLanguage, t } = useI18n();
-  // Initialize from context, useEffect will handle updates.
   const [selectedLanguage, setSelectedLanguage] = useState(i18nLanguage);
   const [toast, setToast] = useState(null);
 
   useEffect(() => {
-    // If the language from context (i18nLanguage) changes, update the local selectedLanguage
     if (i18nLanguage !== selectedLanguage) {
       setSelectedLanguage(i18nLanguage);
-      // We might also want to update globalSelectedLanguage here if context is the source of truth
-      // globalSelectedLanguage = i18nLanguage;
-      // For now, handleLanguageChangeForIsland is the main place globalSelectedLanguage is set.
     }
   }, [i18nLanguage, selectedLanguage]);
 
@@ -48,7 +45,7 @@ export const LanguageIslandApp = () => {
     if (selectedLanguage === newLanguage) return;
     setSelectedLanguage(newLanguage);
     changeLanguage(newLanguage);
-    globalSelectedLanguage = newLanguage; // Update global state
+    globalSelectedLanguage = newLanguage;
 
     const languageName = t(`language.${newLanguage}`, newLanguage.replace('COSY', ''));
     showToast(t('freestyle.languageChangedToast', `Language changed: ${languageName}`, { languageName }));
@@ -73,33 +70,32 @@ export const LanguageIslandWrapper = () => <I18nProvider><LatinizationProvider><
 // --- Day Selector Island ---
 export const DaySelectorIslandApp = ({ language }) => {
   const [currentDays, setCurrentDays] = useState([]);
-  const [currentInputMode, setCurrentInputMode] = useState('choice'); // 'choice', 'single', 'range'
+  const [currentInputMode, setCurrentInputMode] = useState('choice');
 
-  const localMenuConfigForDaySelector = {
+  const localMenuConfigForDaySelector = { /* ... as before ... */
     'day_selection_stage': { children: ['day_single_input', 'day_range_input', 'day_confirm_action'] },
     'day_single_input': { parent: 'day_selection_stage', isModeSelector: true },
     'day_range_input': { parent: 'day_selection_stage', isModeSelector: true },
     'day_confirm_action': { parent: 'day_selection_stage' }
   };
-  const getActivePathForDaySelector = () => { /* ... see previous version, simplified ... */
+  const getActivePathForDaySelector = () => {
     if (currentInputMode === 'single') return ['day_selection_stage', 'day_single_input'];
     if (currentInputMode === 'range') return ['day_selection_stage', 'day_range_input'];
-    return ['day_selection_stage']; // choice
+    return ['day_selection_stage'];
   };
-  const isMenuItemVisibleForDaySelector = (path, itemKey) => { /* ... see previous, simplified ... */
+  const isMenuItemVisibleForDaySelector = (path, itemKey) => {
     const currentActiveStage = path.length > 0 ? path[path.length - 1] : null;
-    if (itemKey === currentActiveStage) return true; // Current stage is visible
-    if (localMenuConfigForDaySelector[itemKey]?.parent === currentActiveStage) return true; // Direct children of current stage
-    if (currentActiveStage === 'day_selection_stage' && (itemKey === 'day_single_input' || itemKey === 'day_range_input')) return currentInputMode === 'choice'; // Show mode buttons
+    if (itemKey === currentActiveStage) return true;
+    if (localMenuConfigForDaySelector[itemKey]?.parent === currentActiveStage) return true;
+    if (currentActiveStage === 'day_selection_stage' && (itemKey === 'day_single_input' || itemKey === 'day_range_input')) return currentInputMode === 'choice';
     return false;
  };
-
 
   const handleDaySelectorMenuSelect = (itemKey, payload) => {
     if (itemKey === 'day_single_input') setCurrentInputMode('single');
     else if (itemKey === 'day_range_input') setCurrentInputMode('range');
     else if (itemKey === 'day_confirm_action' && payload && payload.days) {
-      globalConfirmedDays = payload.days; // Update global state
+      globalConfirmedDays = payload.days;
       window.dispatchEvent(new CustomEvent('dayIslandConfirm', { detail: { confirmedDays: payload.days } }));
     }
   };
@@ -113,18 +109,12 @@ export const DaySelectorIslandWrapper = ({ language }) => <I18nProvider><Latiniz
 // --- Practice Navigation Island ---
 export const PracticeNavIslandApp = ({ language, days }) => {
   const [activeMainCatKey, setActiveMainCatKey] = useState(null);
-  // This path will be simpler: e.g., ['main_practice_categories_stage'] or ['main_practice_categories_stage', 'vocabulary']
   const [currentIslandNavPath, setCurrentIslandNavPath] = useState(['main_practice_categories_stage']);
-
-  // Use the full menu config for now, as PracticeCategoryNav and SubPracticeMenu expect it.
-  // We can create a subset if this proves too complex or brings in unwanted parts.
   const localNavMenuConfig = fullMenuConfig;
 
   const localIsMenuItemVisible = (path, itemKey, config) => {
-    // Simplified: A main category is visible if path is at 'main_practice_categories_stage'.
-    // A sub-practice item is visible if its parent main category is the last element in path.
     const currentStage = path[path.length - 1];
-    if (itemKey === currentStage) return true; // The stage itself
+    if (itemKey === currentStage) return true;
     if (config[itemKey]?.parent === 'main_practice_categories_stage' && currentStage === 'main_practice_categories_stage') return true;
     if (config[itemKey]?.parent === activeMainCatKey && currentStage === activeMainCatKey) return true;
     return false;
@@ -134,47 +124,46 @@ export const PracticeNavIslandApp = ({ language, days }) => {
     const itemConfig = localNavMenuConfig[itemKey];
     if (!itemConfig) return;
 
-    if (itemConfig.parent === 'main_practice_categories_stage') { // Clicked a main category
+    if (itemConfig.parent === 'main_practice_categories_stage') {
       setActiveMainCatKey(itemKey);
       setCurrentIslandNavPath(['main_practice_categories_stage', itemKey]);
-      if (itemConfig.isExercise) { // Main category is itself an exercise (e.g., listening, practice_all)
-        window.dispatchEvent(new CustomEvent('exerciseSelected', { detail: { language, days, exercise: itemKey } }));
-      }
-    } else if (itemConfig.parent === activeMainCatKey) { // Clicked a sub-practice item
       if (itemConfig.isExercise) {
-        window.dispatchEvent(new CustomEvent('exerciseSelected', { detail: { language, days, exercise: itemKey } }));
+        exerciseInstanceKey++; // Increment key for remount
+        window.dispatchEvent(new CustomEvent('exerciseSelected', { detail: { language, days, exercise: itemKey, key: exerciseInstanceKey } }));
+      }
+    } else if (itemConfig.parent === activeMainCatKey) {
+      if (itemConfig.isExercise) {
+        exerciseInstanceKey++; // Increment key for remount
+        window.dispatchEvent(new CustomEvent('exerciseSelected', { detail: { language, days, exercise: itemKey, key: exerciseInstanceKey } }));
       } else {
-        // Handle deeper menus if any (not typical for current config beyond one sub-level)
         setCurrentIslandNavPath(['main_practice_categories_stage', activeMainCatKey, itemKey]);
       }
     }
   };
-
-  const showSubMenu = activeMainCatKey && localNavMenuConfig[activeMainCatKey] && localNavMenuConfig[activeMainCatKey].children && !localNavMenuConfig[activeMainCatKey].isExercise;
+  const showSubMenu = activeMainCatKey && localNavMenuConfig[activeMainCatKey]?.children && !localNavMenuConfig[activeMainCatKey]?.isExercise;
 
   return (
     <>
-      <PracticeCategoryNav
-        activePath={currentIslandNavPath}
-        onMenuSelect={localOnMenuSelect}
-        isMenuItemVisible={localIsMenuItemVisible}
-        allMenuItemsConfig={localNavMenuConfig}
-        activeCategoryKey={activeMainCatKey}
-      />
-      {showSubMenu && (
-        <SubPracticeMenu
-          mainCategoryKey={activeMainCatKey}
-          activeSubPracticeKey={null} // SubPracticeMenu might need its own active state if we allow deeper nav
-          activePath={currentIslandNavPath}
-          onMenuSelect={localOnMenuSelect}
-          isMenuItemVisible={localIsMenuItemVisible}
-          allMenuItemsConfig={localNavMenuConfig}
-        />
-      )}
+      <PracticeCategoryNav activePath={currentIslandNavPath} onMenuSelect={localOnMenuSelect} isMenuItemVisible={localIsMenuItemVisible} allMenuItemsConfig={localNavMenuConfig} activeCategoryKey={activeMainCatKey} />
+      {showSubMenu && <SubPracticeMenu mainCategoryKey={activeMainCatKey} activeSubPracticeKey={null} activePath={currentIslandNavPath} onMenuSelect={localOnMenuSelect} isMenuItemVisible={localIsMenuItemVisible} allMenuItemsConfig={localNavMenuConfig} />}
     </>
   );
 };
 export const PracticeNavIslandWrapper = ({ language, days }) => <I18nProvider><LatinizationProvider><PracticeNavIslandApp language={language} days={days} /></LatinizationProvider></I18nProvider>;
+
+// --- Exercise Host Island ---
+export const ExerciseHostIslandApp = ({ language, days, subPracticeType, exerciseKey }) => {
+  // ExerciseHost uses useI18n internally.
+  return (
+    <ExerciseHost
+      language={language}
+      days={days}
+      subPracticeType={subPracticeType}
+      exerciseKey={exerciseKey}
+    />
+  );
+};
+export const ExerciseHostIslandWrapper = ({ language, days, subPracticeType, exerciseKey }) => <I18nProvider><LatinizationProvider><ExerciseHostIslandApp language={language} days={days} subPracticeType={subPracticeType} exerciseKey={exerciseKey} /></LatinizationProvider></I18nProvider>;
 
 
 // --- Main Mounting & Event Handling Logic ---
@@ -186,9 +175,10 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined' && (typeof 
 
   window.addEventListener('languageIslandChange', (event) => {
     const { selectedLanguage } = event.detail;
-    globalSelectedLanguage = selectedLanguage; // Store globally
+    globalSelectedLanguage = selectedLanguage;
     const daySelectorContainer = document.getElementById('day-selector-island-container');
     const practiceNavContainer = document.getElementById('practice-nav-island-container');
+    const exerciseHostContainer = document.getElementById('exercise-host-container');
     const controlsPlaceholder = document.getElementById('freestyle-controls-placeholder-text');
 
     if (daySelectorContainer && selectedLanguage) {
@@ -196,42 +186,55 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined' && (typeof 
       if (controlsPlaceholder) controlsPlaceholder.style.display = 'none';
       if (!daySelectorContainer._reactRoot) daySelectorContainer._reactRoot = ReactDOM.createRoot(daySelectorContainer);
       daySelectorContainer._reactRoot.render(<React.StrictMode><DaySelectorIslandWrapper language={selectedLanguage} /></React.StrictMode>);
-    } else {
-      if (daySelectorContainer) daySelectorContainer.style.display = 'none';
-      if (practiceNavContainer) practiceNavContainer.style.display = 'none'; // Hide nav if lang deselected
+    } else { // Language deselected or not available
+      if (daySelectorContainer) { daySelectorContainer.style.display = 'none'; if(daySelectorContainer._reactRoot) {daySelectorContainer._reactRoot.unmount(); daySelectorContainer._reactRoot = null;}}
+      if (practiceNavContainer) { practiceNavContainer.style.display = 'none'; if(practiceNavContainer._reactRoot) {practiceNavContainer._reactRoot.unmount(); practiceNavContainer._reactRoot = null;}}
+      if (exerciseHostContainer && exerciseHostContainer._reactRoot) { exerciseHostContainer._reactRoot.unmount(); exerciseHostContainer._reactRoot = null; exerciseHostContainer.innerHTML = '<p>Exercise Area</p>';}
       if (controlsPlaceholder) controlsPlaceholder.style.display = 'block';
-      if (daySelectorContainer?._reactRoot) { daySelectorContainer._reactRoot.unmount(); daySelectorContainer._reactRoot = null; }
-      if (practiceNavContainer?._reactRoot) { practiceNavContainer._reactRoot.unmount(); practiceNavContainer._reactRoot = null; }
+      globalConfirmedDays = []; // Reset days
     }
   });
 
   window.addEventListener('dayIslandConfirm', (event) => {
     const { confirmedDays } = event.detail;
-    globalConfirmedDays = confirmedDays; // Store globally
+    globalConfirmedDays = confirmedDays;
     const practiceNavContainer = document.getElementById('practice-nav-island-container');
     const daySelectorContainer = document.getElementById('day-selector-island-container');
+    const exerciseHostContainer = document.getElementById('exercise-host-container');
+
 
     if (practiceNavContainer && globalSelectedLanguage && confirmedDays.length > 0) {
-      if (daySelectorContainer) daySelectorContainer.style.border = '2px solid green'; // Visual feedback
+      if (daySelectorContainer) daySelectorContainer.style.border = '2px solid green';
       practiceNavContainer.style.display = 'block';
       if (!practiceNavContainer._reactRoot) practiceNavContainer._reactRoot = ReactDOM.createRoot(practiceNavContainer);
       practiceNavContainer._reactRoot.render(<React.StrictMode><PracticeNavIslandWrapper language={globalSelectedLanguage} days={confirmedDays} /></React.StrictMode>);
     } else {
-      if (practiceNavContainer) practiceNavContainer.style.display = 'none';
+      if (practiceNavContainer) { practiceNavContainer.style.display = 'none'; if(practiceNavContainer._reactRoot) {practiceNavContainer._reactRoot.unmount(); practiceNavContainer._reactRoot = null;}}
     }
-    // Update placeholder text or clear it
-    const controlsContainer = document.getElementById('freestyle-controls-container');
-    const nextStepMsg = controlsContainer?.querySelector('#next-step-msg');
-    if(nextStepMsg) nextStepMsg.remove();
+    // Clear exercise host if days change
+    if (exerciseHostContainer && exerciseHostContainer._reactRoot) { exerciseHostContainer._reactRoot.unmount(); exerciseHostContainer._reactRoot = null; exerciseHostContainer.innerHTML = '<p>Exercise Area</p>';}
   });
 
   window.addEventListener('exerciseSelected', (event) => {
-    const { language, days, exercise } = event.detail;
-    console.log('FreestyleIslandsEntry: Exercise selected:', { language, days, exercise });
+    const { language, days, exercise, key: exerciseKeyFromEvent } = event.detail;
+    console.log('FreestyleIslandsEntry: Exercise selected:', { language, days, exercise, key: exerciseKeyFromEvent });
     const exerciseHostContainer = document.getElementById('exercise-host-container');
     if (exerciseHostContainer) {
-      exerciseHostContainer.innerHTML = `<p>Exercise <strong>${exercise}</strong> selected for language <strong>${language}</strong>, days <strong>${days.join(', ')}</strong>. Mount ExerciseHost here.</p>`;
-      // TODO: Mount the actual ExerciseHost component here
+      // Clear any placeholder text
+      const placeholder = exerciseHostContainer.querySelector('p');
+      if(placeholder) placeholder.remove();
+
+      if (!exerciseHostContainer._reactRoot) exerciseHostContainer._reactRoot = ReactDOM.createRoot(exerciseHostContainer);
+      exerciseHostContainer._reactRoot.render(
+        <React.StrictMode>
+          <ExerciseHostIslandWrapper
+            language={language}
+            days={days}
+            subPracticeType={exercise}
+            exerciseKey={exerciseKeyFromEvent}
+          />
+        </React.StrictMode>
+      );
     }
   });
 }
