@@ -54,22 +54,17 @@ const LanguageSelectorFreestyle = ({ onLanguageChange }) => { // Accept onLangua
 
         if (currentLangKey && currentLangKey !== "null") { // Ensure currentLangKey is not the string "null"
             const langClassName = `${currentLangKey}-bg`; // Uses new standardized key
-            // A more robust check for class existence might be needed if dynamic loading of CSS is complex.
-            // This check might be intensive, consider if truly necessary.
-            const classExists = Array.from(document.styleSheets).some(sheet => {
-                try {
-                  return Array.from(sheet.cssRules || []).some(rule => rule.selectorText === `.${langClassName}`);
-                } catch (e) { return false; }
-            });
 
-            if (classExists) {
-                body.classList.add(langClassName);
-                body.classList.add('lang-bg'); // General class for styling shared background properties
-            } else {
-                body.classList.add('lang-bg-fallback');
-            }
+            // Remove the classExists check and unconditionally add classes
+            body.classList.add(langClassName);
+            body.classList.add('lang-bg'); // General class for styling shared background properties
+
         } else {
-            body.classList.add('no-language-selected-bg');
+            // If no language is selected (e.g., placeholder is chosen),
+            // ensure specific language class is removed (handled by classesToRemove)
+            // and apply a default or "no language" state if desired.
+            body.classList.add('no-language-selected-bg'); // This class can define a specific look for when no language is chosen.
+                                                            // If not defined, default body styles will apply.
         }
     }, [currentLangKey, allTranslations]); // Added allTranslations to dependency array
 
