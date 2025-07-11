@@ -84,8 +84,15 @@ function AppRoutes() {
                       <MyStudySetsPage />
                     </ProtectedRoute>
                   }
-                />
-                {/* We might want nested routes for /my-sets/new, /my-sets/:setId/edit etc. later */}
+                >
+                  {/* Nested routes for MyStudySetsPage. MyStudySetsPage will need an <Outlet /> */}
+                  {/* For now, MyStudySetsPage handles views internally. These are placeholders if we switch to full routing. */}
+                  {/* <Route index element={<StudySetList />} /> */} {/* If StudySetList becomes a route child */}
+                  {/* <Route path="new" element={<StudySetEditor mode="create" />} /> */}
+                  {/* <Route path=":setId/edit" element={<StudySetEditor mode="edit" />} /> */}
+                  {/* <Route path=":setId/cards" element={<FlashcardEditor />} /> */}
+                  {/* <Route path=":setId/study" element={<FlashcardPlayer />} /> */}
+                </Route>
                 {/* Temp route for testing ShowWordExercise */}
                 <Route path="study/random-word" element={<ShowWordExercise />} />
             </Route>
