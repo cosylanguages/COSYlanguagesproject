@@ -185,6 +185,61 @@
   }
 }
 
+/* Styles moved from freestyle.html inline styles */
+/* Body styles might be better in a global CSS like index.css if not already present,
+   but including here if this CSS is meant to be self-contained for the freestyle page. */
+body.freestyle-page-active { /* Scoping body style to when freestyle page is active, if possible/needed */
+  font-family: sans-serif;
+  margin: 0; /* Usually handled by reset/normalize */
+  padding: 20px; /* This might conflict with .freestyle-mode-container padding */
+  background-color: #f4f4f4; /* Default page background */
+  color: #333;
+}
+
+.island-placeholder {
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px dashed #ccc;
+  border-radius: 4px; /* Consider var(--border-radius-md) */
+  background-color: #f9f9f9; /* Consider var(--color-surface-raised) */
+}
+
+/* Specific island container styling - can be merged with .selector-container if appropriate
+   or if they need distinct spacing beyond what .island-placeholder provides.
+   The existing .selector-container already provides margin-bottom.
+*/
+#language-selector-island-container.island-placeholder {
+  /* margin-bottom: 20px; -- Covered by .selector-container or .island-placeholder */
+}
+
+#freestyle-controls-container.island-placeholder {
+  /* margin-bottom: 20px; -- Covered by .selector-container or .island-placeholder */
+}
+
+/* Styling for the exercise host container.
+   It already has class .freestyle-mode-exercise-host (from existing CSS)
+   and .island-placeholder (new).
+   The inline style was: padding-top: 20px; border-top: 1px solid #eee;
+   The existing .freestyle-mode-exercise-host has:
+   border-top: 4px solid var(--color-primary, #007bff);
+   padding: var(--spacing-xl, 30px);
+   So, the specific inline styles might be redundant or can be merged if needed.
+   Let's assume the existing .freestyle-mode-exercise-host styles are preferred.
+*/
+#exercise-host-container.island-placeholder {
+  /* padding-top: 20px; */ /* Covered by .freestyle-mode-exercise-host padding */
+  /* border-top: 1px solid #eee; */ /* Overridden by .freestyle-mode-exercise-host border-top */
+}
+
+/* General label style, if not covered by more specific component styles */
+/* This might be too broad. Prefer styling labels within their components or specific containers.
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+*/
+
 @media (max-width: 480px) {
   .freestyle-mode-container {
     padding: var(--spacing-md, 15px);

@@ -12,23 +12,13 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>COSYlanguages - Freestyle</title>
-    <!-- Basic styling -->
-    <style>
-      body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; color: #333; }
-      .container { max-width: 1200px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-      h1 { color: #333; text-align: center; }
-      .island-placeholder { padding: 15px; margin-bottom: 15px; border: 1px dashed #ccc; border-radius: 4px; background-color: #f9f9f9; }
-      #language-selector-island-container { margin-bottom: 20px; }
-      #freestyle-controls-container { margin-bottom: 20px; }
-      #exercise-host-container { padding-top: 20px; border-top: 1px solid #eee; }
-      label { display: block; margin-bottom: 5px; font-weight: bold; }
-    </style>
+    <!-- Inline styles removed, moved to FreestyleModePage.css -->
 </head>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <div class="container">
-        <h1>Freestyle Mode</h1>
+    <div class="freestyle-mode-container"> {/* Changed class to match existing CSS */}
+        <h1 class="freestyle-mode-header">Freestyle Mode</h1> {/* Added class for consistency */}
 
         <div id="language-selector-island-container" class="island-placeholder">
             <!-- React Language Selector Island will be mounted here -->
