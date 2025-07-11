@@ -13,10 +13,16 @@ import MainPracticeAllHost from './MainPracticeAllHost';
 // import ShowWordExercise from './exercises/vocabulary/ShowWordExercise'; // Unused
 // import IdentifyImageExercise from './exercises/vocabulary/IdentifyImageExercise'; // Unused
 // import TranscribeWordExercise from './exercises/vocabulary/TranscribeWordExercise'; // Unused
-import TypeOppositeExercise from './exercises/vocabulary/TypeOppositeExercise';
-import MatchOppositesExercise from './exercises/vocabulary/MatchOppositesExercise';
-import BuildWordExercise from './exercises/vocabulary/BuildWordExercise';
-import MatchImageWordExercise from './exercises/vocabulary/MatchImageWordExercise';
+import TypeOppositeExercise from './exercises/vocabulary/TypeOppositeExercise'; // Potentially to be merged or removed
+import MatchOppositesExercise from './exercises/vocabulary/MatchOppositesExercise'; // Potentially to be merged or removed
+import BuildWordExercise from './exercises/vocabulary/BuildWordExercise'; // Potentially to be merged or removed (replaced by LettersScramble)
+import MatchImageWordExercise from './exercises/vocabulary/MatchImageWordExercise'; // Potentially to be merged or removed
+
+// New Vocabulary Exercise Stubs
+import RandomWordImageExercise from './exercises/vocabulary/RandomWordImageExercise';
+import GenericMatchItExercise from './exercises/vocabulary/GenericMatchItExercise';
+import LettersScrambleExercise from './exercises/vocabulary/LettersScrambleExercise';
+import TrueFalseExercise from './exercises/vocabulary/TrueFalseExercise';
 
 // Grammar Exercise Components
 import SelectArticleExercise from './exercises/grammar/SelectArticleExercise';
@@ -62,17 +68,23 @@ const exerciseMap = {
   'vocab_random_word_host': RandomWordPracticeHost,
   'vocab_random_image_host': RandomImagePracticeHost,
   'vocab_listening_host': ListeningPracticeHost,
-  'vocab_practice_all_sub_host': PracticeAllVocabHost,
-  'practice_all_main_cat': MainPracticeAllHost,
+  'vocab_practice_all_sub_host': PracticeAllVocabHost, // This might need review later if it's still relevant
+  'practice_all_main_cat': MainPracticeAllHost, // This was removed from main categories config
 
-  // Direct specific vocabulary exercises
-  'vocab_random_word_exercise': RandomWordPracticeHost,
-  'vocab_random_image_exercise': RandomImagePracticeHost,
-  'vocab_match_image_word_exercise': MatchImageWordExercise,
-  'vocab_listening_exercise': ListeningPracticeHost,
-  'vocab_type_opposite_exercise': TypeOppositeExercise,
-  'vocab_match_opposites_exercise': MatchOppositesExercise,
-  'vocab_build_word_exercise': BuildWordExercise,
+  // New Vocabulary Exercise Mappings
+  'vocabulary_random_word_image': RandomWordImageExercise,
+  'vocabulary_opposites_match': GenericMatchItExercise,
+  'vocabulary_letters_scramble': LettersScrambleExercise,
+  'vocabulary_true_false': TrueFalseExercise,
+
+  // Old/Obsolete specific vocabulary exercises (commented out, to be removed if not reused/merged)
+  // 'vocab_random_word_exercise': RandomWordPracticeHost, // Replaced by vocabulary_random_word_image
+  // 'vocab_random_image_exercise': RandomImagePracticeHost, // Replaced by vocabulary_random_word_image
+  // 'vocab_match_image_word_exercise': MatchImageWordExercise, // Potentially part of vocabulary_opposites_match
+  // 'vocab_listening_exercise': ListeningPracticeHost, // Listening removed as a main/vocab category for now
+  // 'vocab_type_opposite_exercise': TypeOppositeExercise, // Potentially part of vocabulary_opposites_match
+  // 'vocab_match_opposites_exercise': MatchOppositesExercise, // Potentially part of vocabulary_opposites_match
+  // 'vocab_build_word_exercise': BuildWordExercise, // Replaced by vocabulary_letters_scramble
 
   // Grammar
   'grammar_fill_gaps_exercise': FillGapsExercise,

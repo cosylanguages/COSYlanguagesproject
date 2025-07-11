@@ -50,7 +50,7 @@ export const allMenuItemsConfig = {
   'main_practice_categories_stage': {
     parent: 'day_confirm_action', // After days are confirmed
     // Component PracticeCategoryNav is active here.
-    children: ['vocabulary', 'grammar', 'sentence_skills', 'reading', 'speaking', 'writing', 'listening', 'practice_all_main_cat'] // Added sentence_skills
+    children: ['vocabulary', 'grammar', 'reading', 'speaking', 'writing']
   },
 
   // Main Categories
@@ -58,18 +58,15 @@ export const allMenuItemsConfig = {
     parent: 'main_practice_categories_stage',
     // Component SubPracticeMenu is active here.
     children: [
-      'vocab_random_word_exercise',
-      'vocab_random_image_exercise',
-      'vocab_match_image_word_exercise',
-      'vocab_listening_exercise',
-      'vocab_type_opposite_exercise',
-      'vocab_match_opposites_exercise',
-      'vocab_build_word_exercise',
-      'vocab_practice_all_sub_host'
+      'vocabulary_random_word_image',
+      'vocabulary_opposites_match',
+      'vocabulary_letters_scramble',
+      'vocabulary_true_false'
     ]
   },
   'grammar': {
     parent: 'main_practice_categories_stage',
+    // Children can be refined or kept if they are still relevant under "Grammar"
     children: [
       'grammar_fill_gaps_exercise',
       'grammar_type_verb_exercise',
@@ -77,10 +74,6 @@ export const allMenuItemsConfig = {
       'grammar_word_order_exercise',
       'grammar_conjugation_practice'
     ]
-  },
-  'sentence_skills': { // New Category
-    parent: 'main_practice_categories_stage',
-    children: ['sentence_unscramble_exercise', 'fill_in_the_blanks_exercise'] // Added fill_in_the_blanks_exercise
   },
   'reading': {
     parent: 'main_practice_categories_stage',
@@ -94,24 +87,26 @@ export const allMenuItemsConfig = {
     parent: 'main_practice_categories_stage',
     children: ['writing_question_exercise', 'writing_storytelling_exercise', 'writing_diary_exercise']
   },
-  'listening': {
-    parent: 'main_practice_categories_stage',
-    isExercise: true
-  },
-  'practice_all_main_cat': {
-    parent: 'main_practice_categories_stage',
-    isExercise: true
-  },
 
-  // Vocabulary Sub-Practice Exercises (Leaf nodes)
-  'vocab_random_word_exercise': { parent: 'vocabulary', isExercise: true },
-  'vocab_random_image_exercise': { parent: 'vocabulary', isExercise: true },
-  'vocab_match_image_word_exercise': { parent: 'vocabulary', isExercise: true },
-  'vocab_listening_exercise': { parent: 'vocabulary', isExercise: true },
-  'vocab_type_opposite_exercise': { parent: 'vocabulary', isExercise: true },
-  'vocab_match_opposites_exercise': { parent: 'vocabulary', isExercise: true },
-  'vocab_build_word_exercise': { parent: 'vocabulary', isExercise: true },
-  'vocab_practice_all_sub_host': { parent: 'vocabulary', isExercise: true },
+  // Vocabulary Sub-Practice Exercises (Leaf nodes) - To be defined based on new requirements
+  // 'vocab_random_word_exercise': { parent: 'vocabulary', isExercise: true },
+  // 'vocab_match_opposites_exercise': { parent: 'vocabulary', isExercise: true },
+  // 'vocab_letters_scramble_exercise': { parent: 'vocabulary', isExercise: true }, // old naming
+  // 'vocab_true_false_exercise': { parent: 'vocabulary', isExercise: true }, // old naming
+
+  // New Vocabulary Sub-Practice Exercises (Leaf nodes)
+  'vocabulary_random_word_image': { parent: 'vocabulary', isExercise: true, i18nKey: 'subPractice.vocabulary.vocabulary_random_word_image' },
+  'vocabulary_opposites_match': { parent: 'vocabulary', isExercise: true, i18nKey: 'subPractice.vocabulary.vocabulary_opposites_match' },
+  'vocabulary_letters_scramble': { parent: 'vocabulary', isExercise: true, i18nKey: 'subPractice.vocabulary.vocabulary_letters_scramble' },
+  'vocabulary_true_false': { parent: 'vocabulary', isExercise: true, i18nKey: 'subPractice.vocabulary.vocabulary_true_false' },
+
+  // REMOVE OLD/UNUSED VOCABULARY SUB-PRACTICE DEFINITIONS:
+  // 'vocab_random_image_exercise': { parent: 'vocabulary', isExercise: true },
+  // 'vocab_match_image_word_exercise': { parent: 'vocabulary', isExercise: true },
+  // 'vocab_listening_exercise': { parent: 'vocabulary', isExercise: true },
+  // 'vocab_type_opposite_exercise': { parent: 'vocabulary', isExercise: true },
+  // 'vocab_build_word_exercise': { parent: 'vocabulary', isExercise: true },
+  // 'vocab_practice_all_sub_host': { parent: 'vocabulary', isExercise: true },
 
   // Grammar Sub-Practice Exercises (Leaf nodes)
   'grammar_fill_gaps_exercise': { parent: 'grammar', isExercise: true },
@@ -119,10 +114,6 @@ export const allMenuItemsConfig = {
   'grammar_select_article_exercise': { parent: 'grammar', isExercise: true },
   'grammar_word_order_exercise': { parent: 'grammar', isExercise: true },
   'grammar_conjugation_practice': { parent: 'grammar', isExercise: true, i18nKey: 'subPractice.grammar.grammar_conjugation_practice' },
-
-  // Sentence Skills Sub-Practice Exercises (Leaf nodes) - New
-  'sentence_unscramble_exercise': { parent: 'sentence_skills', isExercise: true, i18nKey: 'subPractice.sentenceSkills.sentence_unscramble_exercise' },
-  'fill_in_the_blanks_exercise': { parent: 'sentence_skills', isExercise: true, i18nKey: 'subPractice.sentenceSkills.fill_in_the_blanks_exercise' },
 
   // Reading Sub-Practice Exercises (Leaf nodes)
   'reading_story_exercise': { parent: 'reading', isExercise: true },
