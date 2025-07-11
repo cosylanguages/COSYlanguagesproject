@@ -1,0 +1,2226 @@
+[
+  {
+    "id": "attachment",
+    "word": "attachment",
+    "partOfSpeech": "n",
+    "definition": "A computer file appended to an email.",
+    "example": "I’m sending an attachment with this email.",
+    "level": "b1"
+  },
+  {
+    "id": "beautifully",
+    "word": "beautifully",
+    "partOfSpeech": "adv",
+    "definition": "In a way that pleases the senses or mind aesthetically.",
+    "example": "My niece plays the piano beautifully.",
+    "level": "b1"
+  },
+  {
+    "id": "carefully",
+    "word": "carefully",
+    "partOfSpeech": "adv",
+    "definition": "In a way that deliberately avoids harm or errors; cautiously.",
+    "example": "He wrote down the phone number carefully.",
+    "level": "b1"
+  },
+  {
+    "id": "casually",
+    "word": "casually",
+    "partOfSpeech": "adv",
+    "definition": "In a relaxed and informal way.",
+    "example": "She dresses casually at the weekends.",
+    "level": "b1"
+  },
+  {
+    "id": "fashionably",
+    "word": "fashionably",
+    "partOfSpeech": "adv",
+    "definition": "In a way that conforms to the current style.",
+    "example": "He dresses fashionably.",
+    "level": "b1"
+  },
+  {
+    "id": "incredibly_slowly",
+    "word": "incredibly slowly",
+    "partOfSpeech": "adv phr",
+    "definition": "At a speed that is difficult to believe.",
+    "example": "People in this city speak incredibly slowly.",
+    "level": "b1"
+  },
+  {
+    "id": "online",
+    "word": "online",
+    "partOfSpeech": "adj",
+    "definition": "Connected to, served by, or available through a system and especially a computer system or telecommunications system (such as the internet).",
+    "example": "How often do you go online?",
+    "level": "b1"
+  },
+  {
+    "id": "perfectly",
+    "word": "perfectly",
+    "partOfSpeech": "adv",
+    "definition": "In a manner or way that could not be better.",
+    "example": "My sister speaks Spanish perfectly.",
+    "level": "b1"
+  },
+  {
+    "id": "politely",
+    "word": "politely",
+    "partOfSpeech": "adv",
+    "definition": "In a respectful and considerate manner.",
+    "example": "You must speak politely when working with customers.",
+    "level": "b1"
+  },
+  {
+    "id": "quite_dangerously",
+    "word": "quite dangerously",
+    "partOfSpeech": "adv phr",
+    "definition": "In a manner that is somewhat likely to cause harm or injury.",
+    "example": "I think people drive quite dangerously in my country.",
+    "level": "b1"
+  },
+  {
+    "id": "social_network",
+    "word": "social network",
+    "partOfSpeech": "n",
+    "definition": "A network of social interactions and personal relationships.",
+    "example": "Have you ever used a social network?",
+    "level": "b1"
+  },
+  {
+    "id": "wifi",
+    "word": "wifi",
+    "partOfSpeech": "n",
+    "definition": "A facility allowing computers, smartphones, or other devices to connect to the Internet or communicate with one another wirelessly within a particular area.",
+    "example": "Is there wifi in this hotel?",
+    "level": "b1"
+  },
+  {
+    "id": "can_i_pay_by_credit_card",
+    "word": "Can I pay by credit card?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking if payment by credit card is accepted.",
+    "example": "Can I pay by credit card? I don’t have any cash.",
+    "level": "b1"
+  },
+  {
+    "id": "coach",
+    "word": "coach",
+    "partOfSpeech": "n",
+    "definition": "A comfortably equipped single-decker bus used for longer journeys.",
+    "example": "We use a coach to take the children on school days out.",
+    "level": "b1"
+  },
+  {
+    "id": "have_a_good_journey",
+    "word": "Have a good journey.",
+    "partOfSpeech": "phrase",
+    "definition": "A parting wish for a pleasant trip.",
+    "example": "Have a good journey and see you next month.",
+    "level": "b1"
+  },
+  {
+    "id": "how_much_is_it_to_go",
+    "word": "How much is it?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking the cost of travel.",
+    "example": "How much is it to go from London to Manchester?",
+    "level": "b1"
+  },
+  {
+    "id": "i_cant_believe_it",
+    "word": "I can’t believe it!",
+    "partOfSpeech": "phrase",
+    "definition": "An expression of surprise or disbelief.",
+    "example": "I can’t believe it! I won the competition!",
+    "level": "b1"
+  },
+  {
+    "id": "see_you_in_new_york",
+    "word": "See you in [New York].",
+    "partOfSpeech": "phrase",
+    "definition": "Expressing an intention to meet someone in a specific place.",
+    "example": "See you in New York in September.",
+    "level": "b1"
+  },
+  {
+    "id": "single_or_return",
+    "word": "Single or return?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking whether a one-way or round-trip ticket is required.",
+    "example": "Single or return? ~ Single, please.",
+    "level": "b1"
+  },
+  {
+    "id": "standard_or_first_class",
+    "word": "Standard or first class?",
+    "partOfSpeech": "phrase",
+    "definition": "Asking about the preferred class of travel.",
+    "example": "Standard or first class? ~ Standard, please.",
+    "level": "b1"
+  },
+  {
+    "id": "tram",
+    "word": "tram",
+    "partOfSpeech": "n",
+    "definition": "A passenger vehicle powered by electricity conveying passengers in towns and cities along routes laid with rails.",
+    "example": "I like to travel by tram when I am in Germany.",
+    "level": "b1"
+  },
+  {
+    "id": "dangerously",
+    "word": "dangerously",
+    "partOfSpeech": "adv",
+    "definition": "In a way that is likely to cause harm or injury.",
+    "example": "My mum drives really dangerously.",
+    "level": "b1"
+  },
+  {
+    "id": "formal",
+    "word": "formal",
+    "partOfSpeech": "adj",
+    "definition": "Done in accordance with rules of convention or etiquette; suitable for or constituting an official or important situation or occasion.",
+    "example": "You need to wear formal clothes for the dinner party.",
+    "level": "b1"
+  },
+  {
+    "id": "healthcare",
+    "word": "healthcare",
+    "partOfSpeech": "n",
+    "definition": "The maintenance and improvement of physical and mental health, especially through the provision of medical services.",
+    "example": "Healthcare in the UK is free.",
+    "level": "b1"
+  },
+  {
+    "id": "healthily",
+    "word": "healthily",
+    "partOfSpeech": "adv",
+    "definition": "In a way that promotes good health.",
+    "example": "Frank eats very healthily.",
+    "level": "b1"
+  },
+  {
+    "id": "informal",
+    "word": "informal",
+    "partOfSpeech": "adj",
+    "definition": "Having a relaxed, friendly, or unofficial style, manner, or nature.",
+    "example": "Emails are often more informal than letters.",
+    "level": "b1"
+  },
+  {
+    "id": "insurance",
+    "word": "insurance",
+    "partOfSpeech": "n",
+    "definition": "An arrangement by which a company or the state undertakes to provide a guarantee of compensation for specified loss, damage, illness, or death in return for payment of a specified premium.",
+    "example": "You need to have health insurance in the US.",
+    "level": "b1"
+  },
+  {
+    "id": "on_the_other_hand",
+    "word": "on the other hand",
+    "partOfSpeech": "phrase",
+    "definition": "Used to present a contrasting point of view.",
+    "example": "British people are quite reserved, but on the other hand it is harder to make friends in the US than in the UK.",
+    "level": "b1"
+  },
+  {
+    "id": "pessimistic",
+    "word": "pessimistic",
+    "partOfSpeech": "adj",
+    "definition": "Tending to see the worst aspect of things or believe that the worst will happen.",
+    "example": "I find British people quite pessimistic.",
+    "level": "b1"
+  },
+  {
+    "id": "portion",
+    "word": "portion",
+    "partOfSpeech": "n",
+    "definition": "A part of a whole; an amount, section, or piece of something.",
+    "example": "I’m not hungry, so I’ll just have a small portion.",
+    "level": "b1"
+  },
+  {
+    "id": "professional",
+    "word": "professional",
+    "partOfSpeech": "adj",
+    "definition": "Relating to or belonging to a profession.",
+    "example": "It’s my dream to become a professional actor.",
+    "level": "b1"
+  },
+  {
+    "id": "queue",
+    "word": "queue",
+    "partOfSpeech": "n",
+    "definition": "A line or sequence of people or vehicles awaiting their turn to be attended to or to proceed.",
+    "example": "I talk to everyone – even people next to me in the queue.",
+    "level": "b1"
+  },
+  {
+    "id": "real",
+    "word": "real",
+    "partOfSpeech": "adj",
+    "definition": "Actually existing as a thing or occurring in fact; not imagined or supposed.",
+    "example": "Real friends are hard to find.",
+    "level": "b1"
+  },
+  {
+    "id": "reserved",
+    "word": "reserved",
+    "partOfSpeech": "adj",
+    "definition": "Slow to reveal emotion or opinions.",
+    "example": "Some people say that British people are too reserved.",
+    "level": "b1"
+  },
+  {
+    "id": "the_cost_of_living",
+    "word": "the cost of living",
+    "partOfSpeech": "n phr",
+    "definition": "The level of prices relating to a range of everyday items.",
+    "example": "The cost of living is really high in London.",
+    "level": "b1"
+  },
+  {
+    "id": "unhealthily",
+    "word": "unhealthily",
+    "partOfSpeech": "adv",
+    "definition": "In a way that is not conducive to good health.",
+    "example": "Julia eats really unhealthily.",
+    "level": "b1"
+  },
+  {
+    "id": "website",
+    "word": "website",
+    "partOfSpeech": "n",
+    "definition": "A set of related web pages located under a single domain name.",
+    "example": "What’s your favourite website?",
+    "level": "b1"
+  },
+  {
+    "id": "wide_variety",
+    "word": "wide variety",
+    "partOfSpeech": "n phr",
+    "definition": "A broad range of different things.",
+    "example": "In the UK you can buy a wide variety.",
+    "level": "b1"
+  },
+  {
+    "id": "worst",
+    "word": "worst",
+    "partOfSpeech": "adj",
+    "definition": "Of the poorest quality or the lowest standard; less good than any other person or thing of the same kind.",
+    "example": "The worst thing was living away from home.",
+    "level": "b1"
+  },
+  {
+    "term": "aubergine",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "You need an aubergine for this pasta dish.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "baked",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I had a baked potato with tuna for my lunch.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "beans",
+    "partOfSpeech": "n pl",
+    "definition": "TODO: Definition",
+    "example": "These beans are overcooked.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "beef",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "We always eat roast beef on Sundays.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "beetroot",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I always put beetroot in my salads.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "boiled",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I like to have boiled eggs for breakfast.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "cabbage",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I don’t like the taste of cabbage.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "cherries",
+    "partOfSpeech": "n pl",
+    "definition": "TODO: Definition",
+    "example": "Cherries are really delicious.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "chicken",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Chicken is a low-fat meat.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "courgette",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I used a courgette in this recipe.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "crab",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Can I have a crab sandwich, please?",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "cucumber",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I don’t like the taste of cucumber.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "duck",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I love duck with orange sauce.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "egg",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I had a fried egg for breakfast.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "fish",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I love oily fish like salmon.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "fried",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Fried bread is too oily for me.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "fruit",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "You should eat some fresh fruit every day.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "grapes",
+    "partOfSpeech": "n pl",
+    "definition": "TODO: Definition",
+    "example": "Do you prefer red or green grapes?",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "grilled",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I would like the grilled steak, please.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "lamb",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I always order a lamb curry at that Indian restaurant.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "lemon",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I always like to have some lemon with my fish.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "mango",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Is there any mango in this fruit salad?",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "meat",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "My sister doesn’t eat meat because she’s a vegetarian.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "melon",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "This melon isn’t sweet enough.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "mussels",
+    "partOfSpeech": "n pl",
+    "definition": "TODO: Definition",
+    "example": "We had some delicious mussels and chips in Belgium.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "peach",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I would like a peach for dessert, please.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "pear",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Would you like a pear or an apple?",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "pepper",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "We need one red pepper and one onion.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "pork",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Many people do not eat pork in Morocco.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "prawns",
+    "partOfSpeech": "n pl",
+    "definition": "TODO: Definition",
+    "example": "We had prawns with lemon juice and garlic.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "raspberries",
+    "partOfSpeech": "n pl",
+    "definition": "TODO: Definition",
+    "example": "We had raspberries and ice cream.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "roast",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "We always have roast potatoes on Sundays.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "salmon",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Oily fish like salmon is very good for you.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "seafood",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "My mum loves seafood, especially prawns and mussels.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "squid",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I ordered fried squid for my starter.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "steamed",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Steamed vegetables are very healthy.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "tuna",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I made a tuna salad for my dinner.",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "vegetable",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Is an avocado a fruit or a vegetable?",
+    "level": "b1",
+    "theme": "File1_FoodAndCooking"
+  },
+  {
+    "term": "affectionate",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Dogs are friendly and affectionate pets.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "aggressive",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "He’s very aggressive and often gets into fights.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "ambitious",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Paul is ambitious and studies very hard at school.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "anxious",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "My sister is very anxious and is always stressed.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "attractive",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Darren’s new girlfriend is attractive.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "bad-tempered",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Our neighbour is bad-tempered so I don’t talk to him.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "bossy",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "My husband is bossy and tells me what to do.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "charming",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Nicola’s new boyfriend is charming and friendly.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "clever",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "My sister is clever and wants to study medicine.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "competitive",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I don’t play football with Jason – he’s too competitive!",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "dishonest",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I think Jenny is being dishonest about her past.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "disorganized",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Our secretary is so disorganized.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "friendly",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Our new neighbour is friendly.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "generous",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Diane is generous and often buys me presents.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "hard-working",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Mary is hard-working so she will pass her exams.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "honest",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Wendy is so honest – she always tells the truth.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "imaginative",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "My daughter is imaginative and loves stories.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "immature",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "He’s nearly 26 now, but he’s still so immature.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "impatient",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Megan is always so impatient.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "independent",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Karen lives on her own and likes to be independent.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "insecure",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Stuart is insecure about the way he looks.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "insensitive",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "She asked about his divorce which was insensitive.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "irresponsible",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Don’t go out with Vanessa – she’s too irresponsible.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "jealous",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Louise is jealous of Pete because he has a great job.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "kind",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "My wife is kind and enjoys helping others.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "lazy",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Ian never does any housework – he’s so lazy.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "mature",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "She’s only 12, but she’s very mature for her age.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "mean",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "My sister never shares her things – she’s really mean.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "moody",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Our teenage son is moody and bad-tempered.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "opinion",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "What’s your opinion of the new government?",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "organized",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Our administrator is really organized.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "outgoing",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "James is outgoing and has many friends.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "patient",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "You need to be patient if you are a driving instructor.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "quiet",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Anna is so quiet – it’s hard to talk to her.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "rebellious",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Julie is rebellious and ignores her parents.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "reliable",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Ken is not very reliable – he’s always late.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "responsible",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Our son is very responsible and hard-working.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "self-confident",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "She’s a self-confident and sociable child.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "selfish",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Jane is really selfish and only ever thinks of herself.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "sensible",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Our teenage daughter is sensible so we can trust her.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "sensitive",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Helen is always crying – she’s really sensitive.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "shy",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I’m shy and find it hard to meet new people.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "sociable",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Jack is sociable and has lots of friends.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "spoilt",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Rachel is spoilt – her parents always give her money.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "stubborn",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "My dad is stubborn and never changes his mind.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "stupid",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "My parents think that all my friends are stupid.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "talkative",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Lucy is very talkative – we chatted for hours.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "tidy",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Harry is really tidy so his house always looks great.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "unambitious",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I was unambitious at school so I didn’t study much.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "unfriendly",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I think our new boss is rather unfriendly.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "unimaginative",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "The children’s story was boring and unimaginative.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "unkind",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Don’t be unkind to your poor brother.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "unreliable",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I won’t ask Colin for help because he is unreliable.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "unselfish",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Adam is unselfish and always thinks of others.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "unsociable",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Chris never comes out with us – he’s unsociable.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "untidy",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Jim is very untidy – his bedroom is a mess.",
+    "level": "b1",
+    "theme": "File1_Personality"
+  },
+  {
+    "term": "adult",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I think I became an adult when I left home.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "arrangement",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Have you made an arrangement for tomorrow?",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "attention",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I didn’t get as much attention as my brother when we were children.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "bedcovers",
+    "partOfSpeech": "n pl",
+    "definition": "TODO: Definition",
+    "example": "I hid from my sister under the bedcovers.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "boarding school",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I was sent away to boarding school when I was 11.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "carbohydrates",
+    "partOfSpeech": "n pl",
+    "definition": "TODO: Definition",
+    "example": "Rice is an important source of carbohydrates.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "childhood",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I had a happy childhood.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "close family",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Do you think you have a close family?",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "decline",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "There is a decline in traditional family structures.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "depressed",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "After he lost his job he became depressed.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "emotional",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "She’s really emotional and often cries.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "extended family",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I have a big extended family, including 18 cousins!",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "extrovert",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "My dad is an extrovert and loves meeting new people.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "fresh",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I bought some wonderful fresh fish today.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "frozen",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Have we got any frozen vegetables?",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "gang",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I’m not comfortable with being one of a gang.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "gathering",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "My parents have arranged a family gathering.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "immediate family",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I have four people in my immediate family.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "innocent",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "My sister hit me but my mum thought she was innocent.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "intention",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "His intention is to study hard and go to university.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "low-fat",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Would you like a low-fat yoghurt?",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "mood",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Don’t talk to Barry today – he’s in a bad mood.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "newborn",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "That newborn baby is so tiny.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "no wonder",
+    "partOfSpeech": "phr",
+    "definition": "TODO: Definition",
+    "example": "My parents were always nicer to me so no wonder my sister hated me.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "only child",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I don’t have any brothers or sisters – I’m an only child.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "prediction",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "His prediction is that people will holiday in space.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "protein",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Meat is a good source of protein.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "raw",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I hate the taste of raw onions.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "relative",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I’m my mother’s closest relative.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "relaxed",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "My mother is really relaxed and never gets stressed.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "rivalry",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "There is a lot of rivalry between me and my sister.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "sick",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "He’s been off sick for two weeks.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "spicy",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I love spicy Thai curries.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "stressed",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Richard works too hard and is always stressed.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "tension",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "There was tension at home because our parents argued.",
+    "level": "b1",
+    "theme": "File1_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "alternative therapy",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Have you tried alternative therapy, like hypnotherapy?",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "aware",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Are you aware that you are your aunt’s only relative?",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "cake",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I made a chocolate cake for my girlfriend’s birthday.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "carton",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Can you get me a carton of orange juice?",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "chef",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "My brother is a chef in an Italian restaurant.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "chocolate",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Clients receive free chocolate at the end of the night.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "concentration",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Blueberries can improve concentration.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "container",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "This is a plastic container for pasta.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "creamy",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "We ordered pasta in a creamy sauce.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "cuisine",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I love Indian cuisine.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "cure",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I want to find a cure for my headaches.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "decision",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Have you made a decision about your holiday yet?",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "dramatic",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "The results of the experiment were dramatic.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "efficiently",
+    "partOfSpeech": "adv",
+    "definition": "TODO: Definition",
+    "example": "Food that is high in protein helps your brain to work more efficiently.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "endorphins",
+    "partOfSpeech": "n pl",
+    "definition": "TODO: Definition",
+    "example": "The brain releases endorphins when you eat chocolate.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "expert",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "My aunt is an expert on Victorian literature.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "feel a bit down",
+    "partOfSpeech": "phr",
+    "definition": "TODO: Definition",
+    "example": "I always feel a bit down after a holiday.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "focused",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "After my morning coffee I feel really focused.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "food supplement",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I take a food supplement every day.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "jar",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Can you pass me that jar of strawberry jam?",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "margarine",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Do you prefer butter or margarine?",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "meeting",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I have a meeting with my boss at 10.00 a.m.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "mushroom",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I’ll have a ham and mushroom pizza, please.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "nightclub",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "We went to a nightclub until 2.00 a.m.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "public holiday",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "It’s a public holiday on Monday so we won’t go to work.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "salt",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Don’t put too much salt on your dinner.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "sausage",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Would you like a sausage or a burger?",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "steak",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I ordered steak and chips at the restaurant.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "sugar",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I always have sugar in my coffee.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "takeaway",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "We ordered a takeaway pizza.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "tinned",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I don’t like the taste of tinned tuna.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "violence",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Late night violence can be a problem in some towns.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "vitamin",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "There is a lot of vitamin C in oranges.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "weapon",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Chocolate could become a secret weapon in the fight against crime.",
+    "level": "b1",
+    "theme": "File1_MoreWordsInFile1"
+  },
+  {
+    "term": "bank account",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "How much money do you have in your bank account?",
+    "level": "b1",
+    "theme": "File2_Money"
+  },
+  {
+    "term": "bill",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "The electricity bill came through the post today.",
+    "level": "b1",
+    "theme": "File2_Money"
+  },
+  {
+    "term": "cash machine",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I took £30 out of the cash machine.",
+    "level": "b1",
+    "theme": "File2_Money"
+  },
+  {
+    "term": "coin",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I found a 10p coin on the pavement.",
+    "level": "b1",
+    "theme": "File2_Money"
+  },
+  {
+    "term": "credit card",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "The payment had been taken from my credit card.",
+    "level": "b1",
+    "theme": "File2_Money"
+  },
+  {
+    "term": "debt",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I had a lot of debt when I left university.",
+    "level": "b1",
+    "theme": "File2_Money"
+  },
+  {
+    "term": "loan",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I need a loan from the bank to start my own business.",
+    "level": "b1",
+    "theme": "File2_Money"
+  },
+  {
+    "term": "mortgage",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "The bank gave me a mortgage to buy a house.",
+    "level": "b1",
+    "theme": "File2_Money"
+  },
+  {
+    "term": "note",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I left a £20 note on my desk.",
+    "level": "b1",
+    "theme": "File2_Money"
+  },
+  {
+    "term": "salary",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Lawyers get a good salary.",
+    "level": "b1",
+    "theme": "File2_Money"
+  },
+  {
+    "term": "tax",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "How much tax do you have to pay every month?",
+    "level": "b1",
+    "theme": "File2_Money"
+  },
+  {
+    "term": "worth",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "How much is your house worth?",
+    "level": "b1",
+    "theme": "File2_Money"
+  },
+  {
+    "term": "boiling",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "It’s boiling at the moment – 34 degrees Celsius!",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "boutique",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "She works in a designer clothes boutique.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "broke",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I was always broke when I was a student.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "cheque",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I wrote a cheque for £300.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "consecutive",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "She ran three consecutive marathons in 24 hours.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "contract",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "We signed the contract.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "current",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I had to paddle against the current.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "delicious",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "The food was delicious.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "delighted",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "My parents are delighted that I’m getting married.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "dyslexia",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "My son can’t read very well because he has dyslexia.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "enormous",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "His house is enormous and has six bedrooms.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "exhausted",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I was exhausted after the race.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "exhaustion",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I suffered from heat exhaustion.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "fantastic",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I’ve had a fantastic time here.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "figures",
+    "partOfSpeech": "n pl",
+    "definition": "TODO: Definition",
+    "example": "He calculated figures in his head.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "filthy",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "John’s kitchen is filthy.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "freezing",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "The sea was freezing so we didn’t swim.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "furious",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Lyn is furious that you didn’t invite her to the party.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "gamble",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Starting my own business was a bit of a gamble.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "go on sale",
+    "partOfSpeech": "phr",
+    "definition": "TODO: Definition",
+    "example": "When will his new book go on sale?",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "hilarious",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "The film was hilarious – we laughed so much.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "humidity",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "The humidity here is 80 per cent in the summer.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "infested",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "The river is infested with crocodiles.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "make money",
+    "partOfSpeech": "phr",
+    "definition": "TODO: Definition",
+    "example": "I want to make money from my paintings.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "millionaire",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Jeff became a millionaire, but lost most of his money.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "paddle",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "We used a wooden paddle to move the boat.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "positive",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Did you have a positive experience when you went abroad?",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "recession",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "Our business lost a lot of money during the recession.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "risky",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "This is a very risky trip.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "starving",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I was starving when I came home from school.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "target",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "100 km per day is my target.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "terrified",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "Are there any animals that you’re terrified of?",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "tiny",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "My flat is really tiny with only two rooms.",
+    "level": "b1",
+    "theme": "File2_UsefulWordsAndPhrases"
+  },
+  {
+    "term": "ache",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I have an ache in my right arm from playing tennis.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "ashamed",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "He felt so ashamed that he couldn’t read.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "bandaged",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "He came to work with a bandaged head.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "best-seller",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "His autobiography became a best-seller.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "burst into tears",
+    "partOfSpeech": "phr",
+    "definition": "TODO: Definition",
+    "example": "When I finished the race I burst into tears.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "charity",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "My sister works for a children’s charity.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "consumer society",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "We live in a consumer society where people want new things all the time.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "cynical",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I’m always very cynical about our government.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "door-to-door",
+    "partOfSpeech": "adv",
+    "definition": "TODO: Definition",
+    "example": "I went door-to-door trying to sell insurance.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "drive someone mad",
+    "partOfSpeech": "phr",
+    "definition": "TODO: Definition",
+    "example": "My parents drive me mad with their arguing!",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "fee",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "My lawyer has an hourly fee of £150!",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "foot the bill",
+    "partOfSpeech": "phr",
+    "definition": "TODO: Definition",
+    "example": "My children use the phone but I foot the bill.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "ghost writer",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "She used a ghost writer to write her autobiography.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "good cause",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I ran a marathon to make money for a good cause.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "gorilla",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I saw a big gorilla at the zoo.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "instalment",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I paid back the first instalment on my loan.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "instinctively",
+    "partOfSpeech": "adv",
+    "definition": "TODO: Definition",
+    "example": "He instinctively knew what people wanted.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "interest",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "How much interest do you pay on your credit card?",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "lorry",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "A big red lorry parked outside our house.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "mechanic",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I had to pay the mechanic £100 to repair my car.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "melted",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "There was melted chocolate at the bottom of my bag.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "presenter",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I want to be a TV presenter when I grow up.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "prize",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I won first prize in the competition.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "proud",
+    "partOfSpeech": "adj",
+    "definition": "TODO: Definition",
+    "example": "I was so proud of my son when he passed his exams.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "rough idea",
+    "partOfSpeech": "n phr",
+    "definition": "TODO: Definition",
+    "example": "I usually have a rough idea about what I spend my money on.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "salesman",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "My brother is a used car salesman.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "scam",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "That email saying we had won some money was a scam.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "shopping spree",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I always go on a shopping spree when I get paid.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "store",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "He works in a grocery store.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "surface",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "I can see my reflection in the surface of the water.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  },
+  {
+    "term": "tape",
+    "partOfSpeech": "n",
+    "definition": "TODO: Definition",
+    "example": "My fingers are bandaged with white tape.",
+    "level": "b1",
+    "theme": "File2_MoreWordsInFile2"
+  }
+]

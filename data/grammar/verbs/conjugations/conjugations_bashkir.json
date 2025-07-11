@@ -1,0 +1,152 @@
+{
+  "language_code": "ba",
+  "language_name": "Bashkir",
+  "notes": "Bashkir is an agglutinative language with vowel harmony. The forms shown are illustrative and may not capture all nuances. Expert review is essential.",
+  "verbs": [
+    {
+      "infinitive": "булырға",
+      "translation_en": "to be",
+      "tags": ["irregular", "auxiliary"],
+      "tenses": {
+        "хәҙерге заман (present)": {
+          "mood": "indicative",
+          "forms": { "мин": "мын", "һин": "һың", "ул": "", "беҙ": "быҙ", "һеҙ": "һығыҙ", "улар": "" },
+          "notes": "Present tense of 'to be' often uses predicative endings on nouns/adjectives, not separate verb forms for 'am/is/are'."
+        },
+        "билдәле үткән заман (definite past)": {
+          "mood": "indicative",
+          "forms": { "мин": "булдым", "һин": "булдың", "ул": "булды", "беҙ": "булдыҡ", "һеҙ": "булдығыҙ", "улар": "булдылар" }
+        },
+        "билдәле киләсәк заман (definite future)": {
+          "mood": "indicative",
+          "forms": { "мин": "булырмын", "һин": "булырһың", "ул": "булыр", "беҙ": "булырбыҙ", "һеҙ": "булырһығыҙ", "улар": "булырҙар" }
+        },
+        "шарт һөйкәлеше (conditional)": {
+          "mood": "conditional",
+          "forms": { "мин": "булһам", "һин": "булһаң", "ул": "булһа", "беҙ": "булһаҡ", "һеҙ": "булһағыҙ", "улар": "булһалар" }
+        }
+      }
+    },
+    {
+      "infinitive": "эйә булырға",
+      "translation_en": "to have (possess)",
+      "tags": ["compound"],
+      "notes": "More commonly 'минең ... бар' (I have...). This is 'to become an owner'.",
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "ул": "эйә була" } },
+        "билдәле үткән заман (definite past)": { "forms": { "ул": "эйә булды" } }
+      }
+    },
+    {
+      "infinitive": "оҡшарға",
+      "translation_en": "to like",
+      "tags": [],
+      "notes": "Often used with dative: 'миңә оҡшай' (I like it - it pleases me).",
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "ул": "оҡшай" } },
+        "билдәле үткән заман (definite past)": { "forms": { "ул": "оҡшаны" } }
+      }
+    },
+    {
+      "infinitive": "уйларға",
+      "translation_en": "to think",
+      "tags": [],
+      "tenses": {
+        "хәҙերге заман (present)": { "forms": { "мин": "уйлайым", "ул": "уйлай" } },
+        "билдәле үткән заман (definite past)": { "forms": { "мин": "уйланым", "ул": "уйланы" } }
+      }
+    },
+    {
+      "infinitive": "белергә",
+      "translation_en": "to know (facts/skills)",
+      "tags": [],
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "мин": "беләм", "ул": "белә" } },
+        "билдәле үткән заман (definite past)": { "forms": { "мин": "белдем", "ул": "белде" } }
+      }
+    },
+    {
+      "infinitive": "танырға",
+      "translation_en": "to know (people/places)",
+      "tags": [],
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "мин": "таныйым", "ул": "таный" } },
+        "билдәле үткән заман (definite past)": { "forms": { "мин": "таныным", "ул": "таныны" } }
+      }
+    },
+    {
+      "infinitive": "теләргә",
+      "translation_en": "to want",
+      "tags": [],
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "мин": "теләйем", "ул": "теләй" } },
+        "билдәле үткән заман (definite past)": { "forms": { "мин": "теләнем", "ул": "теләне" } },
+        "шарт һөйкәлеше (conditional)": { "translation_en_tense": "would like", "forms": { "мин": "теләр инем", "ул": "теләр ине" } }
+      }
+    },
+    {
+      "infinitive": "эшләргә",
+      "translation_en": "to work",
+      "tags": [],
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "мин": "эшләйем", "ул": "эшләй" } },
+        "билдәле үткән заман (definite past)": { "forms": { "мин": "эшләнем", "ул": "эшләне" } }
+      }
+    },
+    {
+      "infinitive": "уҡырға",
+      "translation_en": "to study/read",
+      "tags": [],
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "мин": "уҡыйым", "ул": "уҡый" } },
+        "билдәле үткән заман (definite past)": { "forms": { "мин": "уҡыным", "ул": "уҡыны" } }
+      }
+    },
+    {
+      "infinitive": "барырға",
+      "translation_en": "to go",
+      "tags": [],
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "мин": "барам", "ул": "бара" } },
+        "билдәле үткән заман (definite past)": { "forms": { "мин": "барҙым", "ул": "барҙы" } }
+      }
+    },
+    {
+      "infinitive": "булдырырға",
+      "translation_en": "to be able to (can)",
+      "tags": [],
+      "notes": "Can also use -а/-ә ала (e.g. бара алам - I can go)",
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "мин": "булдырам", "ул": "булдыра" } },
+        "билдәле үткән заман (definite past)": { "forms": { "мин": "булдырҙым", "ул": "булдырҙы" } }
+      }
+    },
+    {
+      "infinitive": "ашарға",
+      "translation_en": "to eat",
+      "tags": [],
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "мин": "ашайым", "ул": "ашай" } },
+        "билдәле үткән заман (definite past)": { "forms": { "мин": "ашаным", "ул": "ашаны" } }
+      }
+    },
+    {
+      "infinitive": "эсергә",
+      "translation_en": "to drink",
+      "tags": [],
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "мин": "эсәм", "ул": "эсә" } },
+        "билдәле үткән заман (definite past)": { "forms": { "мин": "эстем", "ул": "эсте" } }
+      }
+    },
+    {
+      "infinitive": "һөйләргә",
+      "translation_en": "to speak",
+      "tags": [],
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "мин": "һөйләйем", "ул": "һөйләй" } },
+        "билдәле үткән заман (definite past)": { "forms": { "мин": "һөйләнем", "ул": "һөйләне" } }
+      }
+    }
+  ]
+}
