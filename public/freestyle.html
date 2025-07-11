@@ -17,76 +17,32 @@
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <div class="freestyle-mode-container"> {/* Changed class to match existing CSS */}
-        <h1 class="freestyle-mode-header">Freestyle Mode</h1> {/* Added class for consistency */}
+    <div class="freestyle-mode-container">
+        <h1 class="freestyle-mode-header">Freestyle Mode</h1>
 
         <div id="language-selector-island-container" class="island-placeholder">
             <!-- React Language Selector Island will be mounted here -->
-            <p>Loading Language Selector...</p>
         </div>
-        <div id="freestyle-debug-status" style="padding: 5px; margin-bottom: 10px; background-color: #eee; border: 1px solid #ddd;"></div>
 
         <div id="freestyle-controls-container" class="island-placeholder">
             <!-- Mount point for Day Selector Island -->
             <div id="day-selector-island-container" class="island-placeholder" style="display: none;">
-                <p>Loading Day Selector...</p>
+                <!-- Day Selector Island will be mounted here -->
             </div>
             <!-- Mount point for Practice Navigation Island -->
             <div id="practice-nav-island-container" class="island-placeholder" style="display: none;">
-                <p>Loading Practice Navigation...</p>
+                <!-- Practice Navigation Island will be mounted here -->
             </div>
-            <p id="freestyle-controls-placeholder-text">Select language and days to see exercises.</p>
+            <!-- This placeholder text can be removed if components manage their initial states well -->
+            <!-- <p id="freestyle-controls-placeholder-text">Select language and days to see exercises.</p> -->
         </div>
 
         <div id="exercise-host-container" class="island-placeholder">
             <!-- React Exercise Host Island will be mounted here -->
-            <p>Exercise Area</p>
         </div>
     </div>
 
-    <!--
-      This script tag will eventually point to the bundled JavaScript for the islands.
-      The path might need adjustment based on the build output (e.g., /static/js/freestyleIslands.js).
-      For development, if we create a separate entry point, the dev server will handle it.
-    -->
-    <!-- <script defer src="/static/js/freestyleIslands.js"></script> -->
-    <!-- For now, we will create a specific entry point for the language island. -->
-    <!-- Let's assume a naming convention like `languageSelectorIsland.bundle.js` for the output -->
-    <!-- We'll refine this path once we set up the actual island JS and build process. -->
-
-    <!-- Attempt to load the island script directly for development -->
-    <!-- NOTE: This path assumes the dev server can serve from src or that a build process will place it here.
-         For CRA, direct src linking might not work without `type="module"` and specific handling.
-         A more robust solution will involve configuring build entry points.
-    -->
-    <!-- Script tag removed: HtmlWebpackPlugin will now inject the correct bundle. -->
-
-    <script>
-        // Listener for the custom event from the language island
-        window.addEventListener('languageIslandChange', function(event) {
-            console.log('Message received in freestyle.html (debug listener): Language changed to:', event.detail.selectedLanguage);
-            const debugStatusDiv = document.getElementById('freestyle-debug-status');
-            if (debugStatusDiv) {
-                debugStatusDiv.innerHTML = `<p>Debug: Language set to <strong>${event.detail.selectedLanguage}</strong>. Waiting for Day Selector...</p>`;
-            }
-        });
-
-        window.addEventListener('dayIslandConfirm', function(event) {
-            console.log('Message received in freestyle.html (debug listener): Days confirmed:', event.detail.confirmedDays);
-            const debugStatusDiv = document.getElementById('freestyle-debug-status');
-            if (debugStatusDiv) { // Append to existing or set new
-                debugStatusDiv.innerHTML += `<br><p>Debug: Days confirmed: <strong>${event.detail.confirmedDays.join(', ')}</strong>. Waiting for Practice Nav...</p>`;
-            }
-        });
-
-        window.addEventListener('exerciseSelected', function(event) {
-            console.log('Message received in freestyle.html (debug listener): Exercise selected:', event.detail.exercise);
-            const debugStatusDiv = document.getElementById('freestyle-debug-status');
-            if (debugStatusDiv) {
-                debugStatusDiv.innerHTML += `<br><p>Debug: Exercise selected: <strong>${event.detail.exercise}</strong>. Waiting for Exercise Host...</p>`;
-            }
-        });
-    </script>
+    <!-- Script tags for bundles are typically injected by the build process (e.g., HtmlWebpackPlugin) -->
     <div id="help-popup-island-container"></div> <!-- Placeholder for Help Popup Island -->
 </body>
 </html>
