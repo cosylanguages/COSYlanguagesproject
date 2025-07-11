@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react'; // Removed useCallback
 import { useI18n } from '../../../i18n/I18nContext';
 import { useAuth } from '../../../contexts/AuthContext';
-import { fetchStudySetById, updateStudySet } from '../../../api/studySets'; 
+import { fetchStudySetById } from '../../../api/studySets'; // Removed updateStudySet
 import { pronounceText } from '../../../utils/speechUtils'; // Added
 import './FlashcardPlayer.css'; 
 

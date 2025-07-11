@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { getStudySets, deleteStudySet } from '../../utils/studySetService';
 import { useI18n } from '../../i18n/I18nContext';
 // import { useNavigate } from 'react-router-dom'; // Not currently used directly
@@ -6,13 +6,13 @@ import './StudySetList.css';
 
 // Added props: onCreateNew, onEditSetDetails, onEditSetCards, onLaunchStudyPlayer
 const StudySetList = ({ onCreateNew, onEditSetDetails, onEditSetCards, onLaunchStudyPlayer }) => {
-  const { t, language: currentUILanguage } = useI18n();
+  const { t } = useI18n(); // currentUILanguage was unused
   const [studySets, setStudySets] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   // const navigate = useNavigate(); // Not used directly if parent handles navigation
 
-  const loadSets = () => {
+  const loadSets = useCallback(() => {
     setIsLoading(true);
     setError(null);
     try {
@@ -24,11 +24,11 @@ const StudySetList = ({ onCreateNew, onEditSetDetails, onEditSetCards, onLaunchS
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [t]); // t is a dependency of loadSets because it uses setError(t(...))
 
   useEffect(() => {
     loadSets();
-  }, [t]); // Reload if language changes for t function, though sets are not language-specific from service
+  }, [loadSets]); // loadSets is now memoized
 
   const handleCreateNew = () => {
     if (onCreateNew) onCreateNew();

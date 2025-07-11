@@ -16,7 +16,7 @@ const shuffleArray = (array) => {
 };
 
 const SentenceUnscrambleExercise = ({ exerciseData, onCorrect, onIncorrect }) => {
-  const { t, language } = useI18n();
+  const { t } = useI18n(); // language was unused
   const [scrambledWords, setScrambledWords] = useState([]);
   const [userOrderedWords, setUserOrderedWords] = useState([]);
   const [isCorrect, setIsCorrect] = useState(null); // null, true, false
