@@ -81,7 +81,7 @@ h4 { font-size: var(--font-size-h4); }
   --color-primary-dark: #0056b3;
   --color-secondary: #6c757d;
   --color-secondary-dark: #5a6268; /* Added from old theme */
-  
+
   /* Semantic Colors */
   --color-success: #28a745; /* Main accent for success */
   --color-danger: #dc3545;  /* Main accent for danger/error */
@@ -98,7 +98,7 @@ h4 { font-size: var(--font-size-h4); }
   --color-text-secondary: #6c757d;  /* Grey text */
   --color-text-headings: #343a40;
   --color-text-on-dark: #ffffff;    /* For text on dark/primary/secondary backgrounds - matches old --text-color-light */
-  
+
   /* State Colors (Backgrounds, Text, Borders) */
   --color-success-bg: #d4edda;
   --color-success-text: #155724;
@@ -113,7 +113,7 @@ h4 { font-size: var(--font-size-h4); }
   --border-radius-md: 0.25rem;
   --border-radius-lg: 0.3rem; /* Approx 5px */
   --border-radius-xl: 12px; /* Explicitly larger for cards/modals */
-  
+
   /* Links */
   --color-link: var(--color-primary);
   --color-link-hover: var(--color-primary-dark);
@@ -121,8 +121,8 @@ h4 { font-size: var(--font-size-h4); }
   /* Typography */
   --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-family-headings: var(--font-family-base); 
-  --font-size-base: 1rem; 
+  --font-family-headings: var(--font-family-base);
+  --font-size-base: 1rem;
   --font-size-sm: 0.875rem; /* Old --font-size-small was 0.85rem */
   --font-size-lg: 1.25rem;  /* Old --font-size-large was 1.15rem */
   --font-size-h1: 2.25rem;
@@ -212,7 +212,7 @@ h4 { font-size: var(--font-size-h4); }
 
 .btn-secondary:hover {
   color: var(--color-text-on-dark);
-  background-color: var(--color-secondary-dark); 
+  background-color: var(--color-secondary-dark);
   border-color: var(--color-secondary-dark);
 }
 
@@ -332,55 +332,58 @@ body {
 }
 
 /* Individual Language Backgrounds */
-/* Ensure class names match the keys in src/i18n/translationsData.js (e.g., 'english', 'greek') */
-.english-bg { /* Key: english */
+/* Class names now match the keys in src/i18n/translationsData.js */
+.COSYenglish-bg {
   background-image: url('https://flagcdn.com/gb.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.french-bg { /* Key: french */
+.COSYfrench-bg {
   background-image: url('https://flagcdn.com/fr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.russian-bg { /* Key: russian */
+.ТАКОЙрусский-bg {
   background-image: url('https://flagcdn.com/ru.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.italian-bg { /* Key: italian */
+.COSYitaliano-bg {
   background-image: url('https://flagcdn.com/it.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.spanish-bg { /* Key: spanish */
+.COSYespañol-bg {
   background-image: url('https://flagcdn.com/es.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.german-bg { /* Key: german */
+.COSYdeutsch-bg {
   background-image: url('https://flagcdn.com/de.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.armenian-bg { /* Key: armenian */
+.ԾՈՍՅհայերեն-bg { /* Armenian */
   background-image: url('https://flagcdn.com/am.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-/* Languages with local flags - paths might need adjustment based on project structure */
-/* Assuming assets are in public folder, so /assets/icons/ is relative to public URL */
-.bashkir-bg { /* Key: bashkir */
-  background-image: url('/public/assets/icons/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+/* Local flags - paths corrected to be relative to public root */
+.ТАКОЙбашҡортса-bg { /* Bashkir */
+  background-image: url('/assets/icons/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.tatar-bg { /* Key: tatar */
-  background-image: url('/public/assets/icons/Flag_of_Tatarstan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+.ТАКОЙтатарча-bg { /* Tatar */
+  background-image: url('/assets/icons/Flag_of_Tatarstan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.breton-bg { /* Key: breton */
-  background-image: url('/public/assets/icons/Flag_of_Brittany.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+.COSYbrezhoneg-bg { /* Breton */
+  background-image: url('/assets/icons/Flag_of_Brittany.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.greek-bg { /* Key: greek */
+.ΚΟΖΥελληνικά-bg { /* Greek */
   background-image: url('https://flagcdn.com/gr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-.portuguese-bg { /* Key: portuguese */
+.COSYportuguês-bg { /* Portuguese */
   background-image: url('https://flagcdn.com/pt.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+}
+
+.COSYქართული-bg { /* Georgian */
+  background-image: url('https://flagcdn.com/ge.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
 /* Fallback for unknown language backgrounds */
