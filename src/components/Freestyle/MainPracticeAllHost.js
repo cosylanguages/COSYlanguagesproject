@@ -58,7 +58,7 @@ const MainPracticeAllHost = ({ language, days, exerciseKey: hostKey }) => {
     const randomIndex = Math.floor(Math.random() * managedSubHosts.length);
     const selectedHost = managedSubHosts[randomIndex];
     
-    console.log(`MainPracticeAllHost: Selecting sub-host: ${selectedHost.defaultName}`);
+    // console.log(`MainPracticeAllHost: Selecting sub-host: ${selectedHost.defaultName}`);
     setCurrentSubHostInfo(selectedHost);
     setCurrentSubHost(() => selectedHost.Component);
     setSubHostKey(prev => prev + 1); // Ensure the selected sub-host re-initializes
@@ -68,13 +68,13 @@ const MainPracticeAllHost = ({ language, days, exerciseKey: hostKey }) => {
   useEffect(() => {
     // This effect runs when the main hostKey (passed from ExerciseHost for MainPracticeAllHost itself) changes,
     // or on initial mount. It signifies a new "Practice All" session.
-    console.log(`MainPracticeAllHost: hostKey changed to ${hostKey}, selecting new initial sub-host.`);
+    // console.log(`MainPracticeAllHost: hostKey changed to ${hostKey}, selecting new initial sub-host.`);
     selectAndLoadRandomSubHost();
   }, [hostKey, selectAndLoadRandomSubHost]);
 
   // This handler is for the "Next Category" button specific to MainPracticeAllHost
   const handleNextSubHostRequest = () => {
-    console.log(`MainPracticeAllHost: User requested next sub-host category.`);
+    // console.log(`MainPracticeAllHost: User requested next sub-host category.`);
     selectAndLoadRandomSubHost();
   };
 
