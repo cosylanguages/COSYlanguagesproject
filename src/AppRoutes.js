@@ -61,7 +61,20 @@ const ProtectedRoute = ({ children }) => {
 
 
 function AppRoutes() {
-    const { isAuthenticated } = useAuth(); // Used for the catch-all route
+    const { isAuthenticated, loadingAuth } = useAuth();
+    const { t } = useI18n(); // For loading message translation
+
+    // Define the catch-all element logic
+    let catchAllElement;
+    if (loadingAuth) {
+        catchAllElement = <div>{t('auth.loadingStatus', 'Loading authentication status...')}</div>;
+    } else if (isAuthenticated) {
+        // Authenticated users hitting an unknown SPA path go to the SPA root (which redirects to freestyle.html)
+        catchAllElement = <Navigate to="/" replace />;
+    } else {
+        // Unauthenticated users hitting an unknown SPA path go to freestyle.html directly
+        catchAllElement = <Navigate to="/freestyle.html" replace />;
+    }
 
     return (
         <Routes>
@@ -106,7 +119,7 @@ function AppRoutes() {
                 <Route path="study/random-word" element={<ShowWordExercise />} />
             </Route>
             {/* Catch-all route */}
-            <Route path="*" element={isAuthenticated ? <Navigate to="/" replace /> : <Navigate to="/login" replace />} />
+            <Route path="*" element={catchAllElement} />
         </Routes>
     );
 }
