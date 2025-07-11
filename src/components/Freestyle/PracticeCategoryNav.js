@@ -21,12 +21,10 @@ const PracticeCategoryNav = ({
   const categoryDisplayInfo = {
     vocabulary: { translationKey: 'vocabulary', defaultLabel: '🔠 Vocabulary', icon: '🔠' },
     grammar: { translationKey: 'grammar', defaultLabel: '🧩 Grammar', icon: '🧩' },
-    sentence_skills: { translationKey: 'sentenceSkills', defaultLabel: '📝 Sentence Skills', icon: '📝' }, // New Category
     reading: { translationKey: 'reading', defaultLabel: '📚 Reading', icon: '📚' },
     speaking: { translationKey: 'speaking', defaultLabel: '🗣️ Speaking', icon: '🗣️' },
     writing: { translationKey: 'writing', defaultLabel: '✍️ Writing', icon: '✍️' },
-    listening: { translationKey: 'listening', defaultLabel: '🎧 Listening', icon: '🎧' }, // Added Listening
-    practice_all_main_cat: { translationKey: 'practiceAll', defaultLabel: '🔁 Practice All', icon: '🔁' },
+    // sentence_skills, listening, and practice_all_main_cat removed
     // Add other categories as needed
   };
 

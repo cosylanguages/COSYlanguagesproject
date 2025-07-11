@@ -1,0 +1,142 @@
+.letters-scramble-exercise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md, 1rem);
+  padding: var(--spacing-md, 1rem);
+  background-color: var(--color-surface, #f8f9fa);
+  border-radius: var(--border-radius-lg, 8px);
+  box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.1));
+  max-width: 500px;
+  margin: var(--spacing-lg, 1.5rem) auto;
+}
+
+.letters-scramble-exercise h3 {
+  color: var(--color-primary, #007bff);
+  margin-bottom: var(--spacing-sm, 0.5rem);
+}
+
+.hint-text {
+  font-style: italic;
+  color: var(--color-text-secondary, #6c757d);
+  margin-bottom: var(--spacing-md, 1rem);
+  font-size: var(--font-size-sm, 0.875rem);
+}
+
+.formed-word-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px; /* Placeholder height */
+  padding: var(--spacing-sm, 0.5rem);
+  border: 2px dashed var(--color-border, #dee2e6);
+  border-radius: var(--border-radius-md, 4px);
+  background-color: var(--color-background, #fff);
+  width: 100%;
+  margin-bottom: var(--spacing-md, 1rem);
+}
+
+.placeholder-text {
+  color: var(--color-text-secondary, #6c757d);
+  font-style: italic;
+}
+
+.letter-pool-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs, 0.25rem);
+  padding: var(--spacing-sm, 0.5rem);
+  background-color: var(--color-surface-medium, #e9ecef);
+  border-radius: var(--border-radius-md, 4px);
+  width: 100%;
+}
+
+.letter-tile {
+  padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem);
+  margin: var(--spacing-xs, 0.25rem);
+  border: 1px solid var(--color-border, #ced4da);
+  border-radius: var(--border-radius-sm, 0.2rem);
+  background-color: var(--color-primary-light, #cfe8fc); /* A light primary for pool tiles */
+  color: var(--color-primary-dark, #004085);
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 40px;
+  text-align: center;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.letter-tile.pool:hover {
+  background-color: var(--color-primary, #007bff);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.letter-tile.formed {
+  background-color: var(--color-success-light, #d4edda); /* Light success for formed word */
+  color: var(--color-success-dark, #155724);
+  border-color: var(--color-success, #28a745);
+}
+
+.letter-tile.formed:hover {
+  background-color: var(--color-warning-light, #fff3cd); /* Light warning to indicate it can be moved back */
+  color: var(--color-warning-dark, #856404);
+}
+
+.action-buttons {
+  display: flex;
+  gap: var(--spacing-md, 1rem);
+  margin-top: var(--spacing-sm, 0.5rem);
+}
+
+.check-button, .next-button { /* Shared styles from RandomWordImageExercise.css could be globalized */
+  padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem);
+  font-size: var(--font-size-base, 1rem);
+  border-radius: var(--border-radius-md, 4px);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+}
+
+.check-button {
+  background-color: var(--color-primary, #007bff);
+  color: white;
+}
+.check-button:disabled {
+  background-color: var(--color-secondary, #6c757d);
+  cursor: not-allowed;
+}
+.check-button:hover:not(:disabled) {
+  background-color: var(--color-primary-dark, #0056b3);
+}
+
+.next-button {
+  background-color: var(--color-success, #28a745);
+  color: white;
+}
+.next-button:hover {
+  background-color: #1e7e34; /* Darker success */
+}
+
+.feedback-message { /* Shared styles from RandomWordImageExercise.css could be globalized */
+  margin-top: var(--spacing-sm, 0.5rem);
+  padding: var(--spacing-sm, 0.5rem);
+  border-radius: var(--border-radius-sm, 0.2rem);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.feedback-message.correct {
+  background-color: var(--color-success-bg, #d4edda);
+  color: var(--color-success-text, #155724);
+  border: 1px solid var(--color-success-border, #c3e6cb);
+}
+
+.feedback-message.incorrect {
+  background-color: var(--color-danger-bg, #f8d7da);
+  color: var(--color-danger-text, #721c24);
+  border: 1px solid var(--color-danger-border, #f5c6cb);
+}
