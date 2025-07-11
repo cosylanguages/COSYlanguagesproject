@@ -12,12 +12,45 @@ import LessonSectionsPanel from '../../components/StudyMode/LessonSectionsPanel'
 import ToolsPanel from '../../components/StudyMode/ToolsPanel';
 import TransliterableText from '../../components/Common/TransliterableText';
 import ToggleLatinizationButton from '../../components/Common/ToggleLatinizationButton';
+import StudyModePracticeTypeSelector from '../../components/StudyMode/StudyModePracticeTypeSelector';
+import StudyModeSubPracticeTypeSelector from '../../components/StudyMode/StudyModeSubPracticeTypeSelector'; // Added import
 
 import './StudyModePage.css';
 
 // Helper function (can be moved to a utility file if used elsewhere)
 // Added index as a fallback for block IDs if not present in syllabus JSON
 export const getBlockElementId = (blockId, index) => `lesson-block-content-${blockId || `gen-${index}`}`;
+
+// Helper function to map syllabus block_type to practice/sub-practice categories
+const getPracticeCategoriesForBlock = (block) => {
+  if (!block || !block.block_type) {
+    return null;
+  }
+
+  // This mapping needs to be comprehensive based on Step 1 analysis and actual block_types
+  switch (block.block_type) {
+    case 'image_match':
+      return { practiceType: 'vocabulary', subPracticeType: 'image_match' };
+    case 'matching_opposites':
+      return { practiceType: 'vocabulary', subPracticeType: 'matching_pairs' }; // Assuming 'matching_pairs' is the key used in selector
+    case 'interactive_wordlist':
+      return { practiceType: 'vocabulary', subPracticeType: 'word_list' };
+    case 'vocabulary_practice_modes': // This might offer multiple sub-types; for now, map to a primary one or a generic one
+      return { practiceType: 'vocabulary', subPracticeType: 'flashcards' }; // Assuming 'flashcards'
+    case 'pronunciation_rules_match':
+      return { practiceType: 'pronunciation', subPracticeType: 'rules_match' };
+    // --- Cases requiring more info or syllabus structure changes ---
+    // case 'fill_in_the_blanks_exercise': // Example if such a block_type exists
+    //   return { practiceType: 'grammar', subPracticeType: 'fill_blanks' };
+    // case 'dialogue_player': // Example
+    //   return { practiceType: 'dialogue', subPracticeType: 'read_comprehend' };
+    default:
+      // Could also check block.title or section.title for keywords if necessary
+      // For now, if block_type doesn't map, it won't be picked up by type filters
+      return null;
+  }
+};
+
 
 const StudyModePage = () => {
   const { t, language, currentLangKey } = useI18n();
@@ -43,6 +76,10 @@ const StudyModePage = () => {
   // For teachers: selectedSectionId = API section ID (string)
   const [selectedSectionId, setSelectedSectionId] = useState(null);
 
+  // New state for student practice/sub-practice selection
+  const [selectedPracticeType, setSelectedPracticeType] = useState(null); // e.g., 'vocabulary', 'grammar'
+  const [selectedSubPracticeType, setSelectedSubPracticeType] = useState(null); // e.g., 'flashcards', 'matching'
+
   const [currentExerciseBlocks, setCurrentExerciseBlocks] = useState([]);
 
   // UI State
@@ -60,6 +97,8 @@ const StudyModePage = () => {
     setLessonSectionsForPanel([]);
     setSelectedSectionId(null);
     setCurrentExerciseBlocks([]);
+    setSelectedPracticeType(null); // Reset practice type
+    setSelectedSubPracticeType(null); // Reset sub-practice type
     setError(null);
 
     if (selectedRole === 'student' && currentLangKey) {
@@ -96,6 +135,8 @@ const StudyModePage = () => {
       setLessonSectionsForPanel([]);
       setSelectedSectionId(null); // Also clear selected section
       setCurrentExerciseBlocks([]); // And blocks
+      setSelectedPracticeType(null); // Reset on day change
+      setSelectedSubPracticeType(null); // Reset on day change
       return;
     }
 
@@ -151,25 +192,18 @@ const StudyModePage = () => {
     }
   }, [selectedRole, selectedDayId, days, authToken, t]); // `days` is needed to find fileName for student
 
-  // Effect to set exercise blocks when a section is selected
+  // Effect to set exercise blocks based on selections (section for teacher, practice types for student)
   useEffect(() => {
-    // Clear blocks if no section is selected or if relevant data is missing
-    if (!selectedSectionId) {
+    if (selectedRole === 'teacher') {
+      if (!selectedSectionId || !authToken) {
         setCurrentExerciseBlocks([]);
         return;
-    }
-
-    if (selectedRole === 'student' && currentSyllabus && currentSyllabus.sections) {
-      // For students, selectedSectionId is the title of the section
-      const section = currentSyllabus.sections.find(s => s.title === selectedSectionId);
-      setCurrentExerciseBlocks(section?.content_blocks || []);
-    } else if (selectedRole === 'teacher' && authToken && selectedSectionId) {
-      // For teachers, selectedSectionId is the API ID of the section
+      }
       setIsLoading(true);
-      getTeacherLessonSectionDetails(authToken, selectedSectionId) // Use renamed import for teacher data
+      getTeacherLessonSectionDetails(authToken, selectedSectionId)
         .then(data => {
           setCurrentExerciseBlocks(data.exerciseBlocks || []);
-          setError(null); // Clear previous errors
+          setError(null);
         })
         .catch(err => {
           console.error(`Error fetching teacher section details for section ${selectedSectionId}:`, err);
@@ -178,10 +212,45 @@ const StudyModePage = () => {
         })
         .finally(() => setIsLoading(false));
     } else if (selectedRole === 'student') {
-        // This case handles if currentSyllabus is temporarily null or sections are missing
+      if (currentSyllabus && currentSyllabus.sections && selectedPracticeType && selectedSubPracticeType) {
+        let filteredBlocks = [];
+        currentSyllabus.sections.forEach(section => {
+          if (section.content_blocks) {
+            section.content_blocks.forEach(block => {
+              const categories = getPracticeCategoriesForBlock(block);
+              if (categories &&
+                  categories.practiceType === selectedPracticeType &&
+                  categories.subPracticeType === selectedSubPracticeType) {
+                filteredBlocks.push(block);
+              }
+            });
+          }
+        });
+        setCurrentExerciseBlocks(filteredBlocks);
+        // User will see "No lesson content is currently available." from StudentDashboard if filteredBlocks is empty.
+        // A more specific message like "No exercises found for your filter combination" could be added later if needed.
+      } else if (selectedSectionId && !selectedPracticeType && currentSyllabus && currentSyllabus.sections) {
+        // Fallback: If section is selected AND practice types are NOT, show section content (old behavior)
+        // This allows browsing sections if practice types haven't been engaged yet.
+        const section = currentSyllabus.sections.find(s => s.title === selectedSectionId);
+        setCurrentExerciseBlocks(section?.content_blocks || []);
+      } else {
+        // Clear blocks if syllabus isn't loaded or if practice types are expected but not fully selected
         setCurrentExerciseBlocks([]);
+      }
+    } else {
+      // No role selected or other conditions not met
+      setCurrentExerciseBlocks([]);
     }
-  }, [selectedRole, currentSyllabus, selectedSectionId, authToken, t]);
+  }, [
+    selectedRole,
+    currentSyllabus,
+    selectedSectionId,
+    selectedPracticeType,
+    selectedSubPracticeType,
+    authToken,
+    t
+  ]);
 
 
   // --- UI Handlers and Local Storage ---
@@ -203,6 +272,8 @@ const StudyModePage = () => {
         setLessonSectionsForPanel([]);
         setSelectedSectionId(null);
         setCurrentExerciseBlocks([]);
+         setSelectedPracticeType(null); // Reset on role change
+         setSelectedSubPracticeType(null); // Reset on role change
         setError(null);
       }
       return newRole;
@@ -212,12 +283,17 @@ const StudyModePage = () => {
   const handleDaySelectSmP = (dayIdValue) => { // dayIdValue is dayNumber (string) for students, API ID for teachers
     setSelectedDayId(dayIdValue);
     // Reset downstream states as new day selection invalidates current section/blocks
-    setSelectedSectionId(null);
+    setSelectedSectionId(null); // Student section selection might be removed or changed
     setCurrentExerciseBlocks([]);
+    setSelectedPracticeType(null); // Reset on day change
+    setSelectedSubPracticeType(null); // Reset on day change
+
     if (selectedRole === 'student') {
         // currentSyllabus and lessonSectionsForPanel will be reset and refetched by the useEffect dependent on selectedDayId
         setCurrentSyllabus(null);
-        setLessonSectionsForPanel([]);
+        // For students, lesson sections panel might be replaced or its content source changed
+        // if practice types become the primary navigation after day selection.
+        setLessonSectionsForPanel([]); // Keep for now, might be repopulated based on new flow
     } else {
         // For teacher, lessonSectionsForPanel also reset and refetched by its useEffect
         setLessonSectionsForPanel([]);
@@ -226,10 +302,32 @@ const StudyModePage = () => {
 
   const handleSectionSelectSmP = (sectionIdentifier) => { // sectionIdentifier is title for student, ID for teacher
     setSelectedSectionId(sectionIdentifier);
+    // For student, selecting a section might be less relevant if practice types are used.
+    // If sections are still browsable, this is fine. If not, this handler might only apply to teachers.
+    // Also, if a student selects a section, we might want to clear practice/sub-practice types
+    // if section-based browsing and practice-type browsing are mutually exclusive.
+    if (selectedRole === 'student') {
+        setSelectedPracticeType(null);
+        setSelectedSubPracticeType(null);
+        // Exercise blocks will be set by the useEffect watching selectedSectionId (for now)
+    }
     const mainContentPanel = document.getElementById('main-content-panel');
     if (mainContentPanel) {
       mainContentPanel.scrollTo({ top: 0, behavior: 'smooth' });
     }
+  };
+
+  // Placeholder handlers for new selectors
+  const handlePracticeTypeSelect = (practiceType) => {
+    setSelectedPracticeType(practiceType);
+    setSelectedSubPracticeType(null); // Reset sub-practice type when main practice type changes
+    setSelectedSectionId(null); // Clear section if practice type is selected
+    setCurrentExerciseBlocks([]); // Will be repopulated based on new selection
+  };
+
+  const handleSubPracticeTypeSelect = (subPracticeType) => {
+    setSelectedSubPracticeType(subPracticeType);
+    setCurrentExerciseBlocks([]); // Will be repopulated based on new selection
   };
 
   const renderStudentDaySelector = () => {
@@ -314,6 +412,25 @@ const StudyModePage = () => {
       </div>
 
       {renderStudentDaySelector()}
+
+      {/* Practice Type Selector for Students */}
+      {selectedRole === 'student' && currentLangKey && selectedDayId && (
+        <StudyModePracticeTypeSelector
+          selectedPracticeType={selectedPracticeType}
+          onPracticeTypeSelect={handlePracticeTypeSelect}
+          // availablePracticeTypes prop can be used later for dynamic types
+        />
+      )}
+
+      {/* Sub-Practice Type Selector for Students */}
+      {selectedRole === 'student' && selectedPracticeType && (
+        <StudyModeSubPracticeTypeSelector
+          selectedPracticeType={selectedPracticeType}
+          selectedSubPracticeType={selectedSubPracticeType}
+          onSubPracticeTypeSelect={handleSubPracticeTypeSelect}
+          // availableSubPracticeTypes prop can be used later
+        />
+      )}
 
       {error && <p className="error-message" role="alert">{error}</p>}
       {/* More specific loading message handling: show only if role is selected & no days yet & not an error state */}

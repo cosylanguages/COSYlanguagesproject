@@ -1,0 +1,53 @@
+.studymode-subpractice-type-selector-container {
+  margin-top: 15px; /* Space it from the main practice type selector */
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fdfdfd; /* Slightly different background if desired */
+}
+
+.studymode-subpractice-type-label {
+  font-size: 1.05em; /* Slightly smaller than main practice type label */
+  color: #444; /* Slightly lighter color */
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.studymode-subpractice-type-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Slightly smaller gap */
+  justify-content: flex-start;
+}
+
+.studymode-subpractice-type-btn {
+  padding: 8px 12px; /* Slightly smaller padding */
+  font-size: 0.9em;
+  color: #5cb85c; /* Bootstrap success green */
+  background-color: #ffffff;
+  border: 1px solid #5cb85c;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  text-align: center;
+}
+
+.studymode-subpractice-type-btn:hover {
+  background-color: #f0f9f0; /* Lighter green on hover */
+  color: #3d8b3d;
+}
+
+.studymode-subpractice-type-btn.active {
+  background-color: #5cb85c; /* Bootstrap success green */
+  color: #ffffff;
+  border-color: #4cae4c;
+  font-weight: bold;
+}
+
+.studymode-subpractice-type-btn:disabled {
+  background-color: #f0f0f0;
+  color: #aaa;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
