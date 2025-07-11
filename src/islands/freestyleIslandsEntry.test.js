@@ -135,3 +135,121 @@ describe('LanguageIslandApp (via LanguageIslandWrapper)', () => {
     expect(screen.getByText("Language changed: French")).toBeInTheDocument();
   });
 });
+
+// --- Tests for DaySelectorIslandApp ---
+
+const mockDaySelectorFreestyleInner = jest.fn(); // This will be our tracker for assertions
+
+jest.mock('../components/Freestyle/DaySelectorFreestyle', () => {
+  // This is the factory that returns the mock component.
+  console.log('JEST_MOCK_DEBUG: Defining mock for DaySelectorFreestyle');
+  return function MockedDaySelectorFreestyle(props) {
+    // This function is the actual mock component that gets rendered.
+    mockDaySelectorFreestyleInner(props); // It calls our tracker function.
+    return (
+      <div data-testid="day-selector-freestyle-mock">
+        <button data-testid="dsf-single-mode" onClick={() => props.onMenuSelect('day_single_input')}>Single</button>
+        <button data-testid="dsf-range-mode" onClick={() => props.onMenuSelect('day_range_input')}>Range</button>
+        <input data-testid="dsf-days-input" onChange={(e) => props.onDaysChange(e.target.value.split(',').map(Number))} />
+        <button data-testid="dsf-confirm" onClick={() => props.onMenuSelect('day_confirm_action', { days: props.currentDays })}>Confirm</button>
+        <span data-testid="dsf-active-path">{props.activePath.join('/')}</span>
+        <span data-testid="dsf-current-days">{props.currentDays.join(',')}</span>
+      </div>
+    );
+  };
+});
+
+import { DaySelectorIslandWrapper } from './freestyleIslandsEntry'; // This import should now get the mocked version
+
+describe('DaySelectorIslandApp (via DaySelectorIslandWrapper)', () => {
+  beforeEach(() => {
+    // Reset and reconfigure mocks for each test
+    // mockChangeLanguageFn is defined globally and cleared in LanguageIslandApp tests' beforeEach
+    // mockTFn is defined globally and cleared in LanguageIslandApp tests' beforeEach
+    // Ensure useI18n is set up for these tests too
+    useI18n.mockImplementation(() => ({
+      language: 'COSYenglish',
+      changeLanguage: mockChangeLanguageFn, // Can reuse the global one if cleared properly
+      t: mockTFn, // Can reuse the global one if cleared properly
+      getTranslationsForLang: jest.fn((lang, namespace) => ({})),
+    }));
+
+    mockDaySelectorFreestyleInner.mockClear(); // Clear the tracker for DaySelectorFreestyle mock
+    jest.spyOn(window, 'dispatchEvent').mockClear();
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  test('renders DaySelectorFreestyle with initial props', () => {
+    render(<DaySelectorIslandWrapper language="COSYenglish" />);
+
+    expect(screen.getByTestId('day-selector-freestyle-mock')).toBeInTheDocument();
+    expect(mockDaySelectorFreestyleInner).toHaveBeenCalledTimes(1); // Use the inner tracker
+
+    const initialProps = mockDaySelectorFreestyleInner.mock.calls[0][0]; // Use the inner tracker
+    expect(initialProps.language).toBe('COSYenglish');
+    expect(initialProps.currentDays).toEqual([]);
+    expect(initialProps.activePath).toEqual(['day_selection_stage']); // Initial mode is 'choice'
+    // Check if essential handlers are passed
+    expect(typeof initialProps.onDaysChange).toBe('function');
+    expect(typeof initialProps.onMenuSelect).toBe('function');
+    expect(typeof initialProps.isMenuItemVisible).toBe('function');
+    expect(initialProps.allMenuItemsConfig).toBeDefined();
+  });
+
+  test('switches to single day input mode', () => {
+    render(<DaySelectorIslandWrapper language="COSYenglish" />);
+    fireEvent.click(screen.getByTestId('dsf-single-mode'));
+
+    // mockDaySelectorFreestyleInner is called again on re-render
+    expect(mockDaySelectorFreestyleInner).toHaveBeenCalledTimes(2);
+    const newProps = mockDaySelectorFreestyleInner.mock.calls[1][0];
+    expect(newProps.activePath).toEqual(['day_selection_stage', 'day_single_input']);
+    expect(newProps.currentDays).toEqual([]); // Days should reset on mode change
+  });
+
+  test('switches to range day input mode', () => {
+    render(<DaySelectorIslandWrapper language="COSYenglish" />);
+    fireEvent.click(screen.getByTestId('dsf-range-mode'));
+
+    expect(mockDaySelectorFreestyleInner).toHaveBeenCalledTimes(2); // Use the inner tracker
+    const newProps = mockDaySelectorFreestyleInner.mock.calls[1][0]; // Use the inner tracker
+    expect(newProps.activePath).toEqual(['day_selection_stage', 'day_range_input']);
+    expect(newProps.currentDays).toEqual([]);
+  });
+
+  test('updates currentDays on onDaysChange callback', () => {
+    render(<DaySelectorIslandWrapper language="COSYenglish" />);
+    // First, switch to a mode, e.g., single day, to ensure DaySelectorFreestyle is interactive
+    fireEvent.click(screen.getByTestId('dsf-single-mode'));
+
+    // Simulate DaySelectorFreestyle calling onDaysChange
+    // The mock input calls props.onDaysChange(e.target.value.split(',').map(Number))
+    fireEvent.change(screen.getByTestId('dsf-days-input'), { target: { value: '5,6' } });
+
+    expect(mockDaySelectorFreestyleInner).toHaveBeenCalledTimes(3); // Initial, mode switch, days change
+    const newProps = mockDaySelectorFreestyleInner.mock.calls[2][0]; // Use the inner tracker
+    expect(newProps.currentDays).toEqual([5, 6]);
+  });
+
+  test('dispatches dayIslandConfirm event on confirm action', () => {
+    const dispatchEventSpy = jest.spyOn(window, 'dispatchEvent');
+    render(<DaySelectorIslandWrapper language="COSYenglish" />);
+
+    // Set some days first
+    fireEvent.click(screen.getByTestId('dsf-single-mode')); // Switch to single mode
+    fireEvent.change(screen.getByTestId('dsf-days-input'), { target: { value: '10' } }); // Set day
+
+    // Now confirm
+    // The mock confirm button calls props.onMenuSelect('day_confirm_action', { days: props.currentDays })
+    // props.currentDays should be [10] at this point
+    fireEvent.click(screen.getByTestId('dsf-confirm'));
+
+    expect(dispatchEventSpy).toHaveBeenCalledTimes(1);
+    const dispatchedEvent = dispatchEventSpy.mock.calls[0][0];
+    expect(dispatchedEvent.type).toBe('dayIslandConfirm');
+    expect(dispatchedEvent.detail).toEqual({ confirmedDays: [10] });
+  });
+});
