@@ -3,8 +3,8 @@ import { useI18n } from '../../i18n/I18nContext';
 import './DaySelectorFreestyle.css'; 
 
 const DaySelectorFreestyle = ({ 
-    currentDays, // from FreestyleModePage (reflects confirmed or temp days)
-    onDaysChange, // wrapper from FreestyleModePage to update temp days
+    currentDays, // reflects confirmed or temporary day selections (managed by parent island)
+    onDaysChange, // wrapper to update temporary day selections in parent island
     language,
     // New props from menu logic system
     activePath,

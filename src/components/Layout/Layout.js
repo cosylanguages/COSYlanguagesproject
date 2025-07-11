@@ -27,10 +27,12 @@ const Layout = () => {
         <nav className="app-nav">
           <ul>
             <li>
-              <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}><TransliterableText text={t('navHome') || 'Home'} /></NavLink>
+              {/* Changed NavLink to <a> for Home, pointing to freestyle.html */}
+              <a href="/freestyle.html" className={window.location.pathname.endsWith('/') || window.location.pathname.endsWith('/freestyle.html') ? "active-link" : ""}><TransliterableText text={t('navHome') || 'Home'} /></a>
             </li>
             <li>
-              <NavLink to="/freestyle" className={({ isActive }) => isActive ? "active-link" : ""}><TransliterableText text={t('navFreestyle') || 'Freestyle'} /></NavLink>
+              {/* Changed NavLink to <a> for Freestyle, pointing to freestyle.html */}
+              <a href="/freestyle.html" className={window.location.pathname.endsWith('/freestyle.html') ? "active-link" : ""}><TransliterableText text={t('navFreestyle') || 'Freestyle'} /></a>
             </li>
             <li>
               <NavLink to="/study" className={({ isActive }) => isActive ? "active-link" : ""}><TransliterableText text={t('navStudyMode') || 'Study'} /></NavLink>

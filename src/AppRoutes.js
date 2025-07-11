@@ -6,7 +6,7 @@ import { useI18n } from './i18n/I18nContext';
 import Layout from './components/Layout/Layout';
 import Login from './components/Auth/Login';
 import StudyModePage from './pages/StudyModePage/StudyModePage';
-import FreestyleModePage from './pages/FreestyleModePage/FreestyleModePage';
+// FreestyleModePage is no longer imported or used here
 import MyStudySetsPage from './pages/MyStudySetsPage/MyStudySetsPage'; // Import MyStudySetsPage
 import ShowWordExercise from './components/Freestyle/exercises/vocabulary/ShowWordExercise';
 import PinModal from './components/Common/PinModal';
@@ -67,8 +67,17 @@ function AppRoutes() {
         <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Layout />}>
-                <Route index element={<FreestyleModePage />} />
-                <Route path="freestyle" element={<FreestyleModePage />} />
+                {/* Redirect root path to /freestyle.html */}
+                <Route index element={<Navigate to="/freestyle.html" replace />} />
+                {/*
+                  The route <Route path="freestyle" ... /> is removed.
+                  The web server will serve public/freestyle.html directly for the /freestyle or /freestyle.html path.
+                  If your server setup (e.g., in development with webpack-dev-server or in production)
+                  doesn't automatically serve freestyle.html for the path /freestyle, you might need to:
+                  1. Explicitly link to /freestyle.html in your navigation.
+                  2. Configure server rewrites (e.g., /freestyle -> /freestyle.html).
+                  For simplicity, we will assume direct links to /freestyle.html or server behavior that handles this.
+                */}
                 <Route
                   path="study"
                   element={
