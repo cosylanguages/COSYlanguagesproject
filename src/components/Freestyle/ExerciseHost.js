@@ -10,9 +10,9 @@ import PracticeAllVocabHost from './exercises/vocabulary/PracticeAllVocabHost';
 import MainPracticeAllHost from './MainPracticeAllHost';
 
 // Specific Vocabulary Exercise Components
-import ShowWordExercise from './exercises/vocabulary/ShowWordExercise';
-import IdentifyImageExercise from './exercises/vocabulary/IdentifyImageExercise';
-import TranscribeWordExercise from './exercises/vocabulary/TranscribeWordExercise';
+// import ShowWordExercise from './exercises/vocabulary/ShowWordExercise'; // Unused
+// import IdentifyImageExercise from './exercises/vocabulary/IdentifyImageExercise'; // Unused
+// import TranscribeWordExercise from './exercises/vocabulary/TranscribeWordExercise'; // Unused
 import TypeOppositeExercise from './exercises/vocabulary/TypeOppositeExercise';
 import MatchOppositesExercise from './exercises/vocabulary/MatchOppositesExercise';
 import BuildWordExercise from './exercises/vocabulary/BuildWordExercise';
