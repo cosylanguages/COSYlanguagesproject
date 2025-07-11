@@ -43,12 +43,41 @@ export const LanguageIslandApp = () => {
   const showToast = (message, duration = 2500) => { setToast(message); setTimeout(() => setToast(null), duration); };
 
   const handleLanguageChangeForIsland = (newLanguage) => {
-    if (selectedLanguage === newLanguage) return;
+    // Prevent processing if the new language is null, undefined, or empty, or same as current
+    if (!newLanguage || selectedLanguage === newLanguage) {
+      // If newLanguage is null/empty and it's different from selectedLanguage (which might be valid),
+      // it implies the selector was cleared. We might want to reset things or do nothing.
+      // For now, just preventing call to changeLanguage(null).
+      // If newLanguage is truly undefined or null from a dropdown, it means "no selection".
+      // We should ensure LanguageSelectorFreestyle provides a valid key or an empty string.
+      // If it's an empty string, I18nContext's changeLanguage will handle it by reverting.
+      // The main goal here is to prevent explicitly calling changeLanguage(null).
+      if (newLanguage === null || newLanguage === undefined) {
+        console.warn('[LanguageIslandApp] Attempted to set language to null/undefined. Ignoring.');
+        return;
+      }
+      if (selectedLanguage === newLanguage) return; // No actual change
+    }
+
+    // At this point, newLanguage should be a non-null, non-empty string if it passed the first check.
+    // I18nContext.changeLanguage will validate if it's a known key.
     setSelectedLanguage(newLanguage);
-    changeLanguage(newLanguage);
+    changeLanguage(newLanguage); // This will internally default to COSYenglish if newLanguage is invalid
+
+    // Update globalSelectedLanguage and dispatch event only if newLanguage is valid (or becomes valid after context defaults)
+    // We need to get the actual language set by I18nContext if it defaulted.
+    // However, i18nLanguage in this component's scope won't update until the next render cycle after context changes.
+    // For simplicity, we'll dispatch with newLanguage. If it's invalid, subsequent islands might not find translations
+    // but I18nContext should ensure they get *some* default.
+    // A more robust way would be to listen to an event from I18nContext itself, or pass the defaulted language back.
+
+    // For now, assume newLanguage (if not null) is what we proceed with.
+    // The I18nContext's own defaulting mechanism handles invalid keys passed to its changeLanguage.
     globalSelectedLanguage = newLanguage;
 
-    const languageName = t(`language.${newLanguage}`, newLanguage.replace('COSY', ''));
+    // The t() function will use the current language from context for the toast.
+    // If newLanguage was invalid and context defaulted, this toast might be slightly off until next render.
+    const languageName = t(`language.${newLanguage}`, String(newLanguage).replace('COSY', ''));
     showToast(t('freestyle.languageChangedToast', `Language changed: ${languageName}`, { languageName }));
     window.dispatchEvent(new CustomEvent('languageIslandChange', { detail: { selectedLanguage: newLanguage } }));
   };
