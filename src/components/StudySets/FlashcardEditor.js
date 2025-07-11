@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { getStudySetById, addCardToSet, updateCardInSet, deleteCardFromSet } from '../../utils/studySetService';
 import { useI18n } from '../../i18n/I18nContext';
-import './FlashcardEditor.css'; // To be created
+import './FlashcardEditor.css';
 
-const FlashcardEditor = ({ setId }) => {
+const FlashcardEditor = ({ setId, onFinished }) => { // Added onFinished to props
   const { t } = useI18n();
   const [studySet, setStudySet] = useState(null);
   const [cards, setCards] = useState([]);
@@ -199,7 +199,10 @@ const FlashcardEditor = ({ setId }) => {
               <div className="card-terms">
                 <p><strong>{t('flashcardEditor.term1Display', 'Term 1:')}</strong> {card.term1}</p>
                 <p><strong>{t('flashcardEditor.term2Display', 'Term 2:')}</strong> {card.term2}</p>
-                {card.exampleSentence && <p><small><em>{t('flashcardEditor.exampleDisplay', 'Ex:')} {card.exampleSentence}</em></small></p>}
+                {card.exampleSentence && <p className="card-detail"><small><em>{t('flashcardEditor.exampleDisplay', 'Ex:')} {card.exampleSentence}</em></small></p>}
+                {card.notes && <p className="card-detail card-notes"><small><em>{t('flashcardEditor.notesLabel', 'Notes:')} {card.notes}</em></small></p>}
+                {card.imageURI && <p className="card-detail card-meta"><small><i>{t('flashcardEditor.hasImage', '(has image)')}</i></small></p>}
+                {card.audioURI && <p className="card-detail card-meta"><small><i>{t('flashcardEditor.hasAudio', '(has audio)')}</i></small></p>}
               </div>
               <div className="card-actions">
                 <button onClick={() => handleEditCard(card)} className="btn btn-secondary btn-sm">
@@ -213,6 +216,11 @@ const FlashcardEditor = ({ setId }) => {
           ))}
         </ul>
       )}
+      <div className="editor-actions">
+        <button onClick={onFinished} className="btn btn-default">
+          {t('flashcardEditor.doneButton', 'Done Editing Cards')}
+        </button>
+      </div>
     </div>
   );
 };

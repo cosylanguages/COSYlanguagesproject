@@ -33,7 +33,7 @@ const translations = {
       },
       sentenceSkills: {
         sentence_unscramble_exercise: "Sentence Unscramble",
-        fill_in_the_blanks_exercise: "Fill in the Blanks" // New
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       }
     },
     sentenceUnscramble: {
@@ -43,7 +43,7 @@ const translations = {
       dropWordsHere: "Click words below to build the sentence here...",
       clickToRemoveWord: "Click to remove word"
     },
-    fillInTheBlanks: { // New
+    fillInTheBlanks: {
       title: "Fill in the Blanks",
       translationLabel: "Meaning:",
       hintLabel: "Hint:",
@@ -60,9 +60,9 @@ const translations = {
         correct: "Correct!",
         incorrect: "Incorrect, try again."
     },
-    loadingExercise: "Loading exercise...", // Generic
-    loadingExercises: "Loading exercises...", // For hosts
-    errors: { // Common errors
+    loadingExercise: "Loading exercise...",
+    loadingExercises: "Loading exercises...",
+    errors: {
         loadDataError: "Failed to load data.",
         exerciseHost: {
             notFound: "Exercise type \"<strong>{subPracticeType}</strong>\" not found or not yet implemented.",
@@ -70,7 +70,7 @@ const translations = {
             suggestion: "Please check the mapping in ExerciseHost.js or select another exercise."
         }
     },
-    exercises: { // Common exercise messages
+    exercises: {
         noDataForLanguage: "No exercises found for this language.",
         allCompleted: "All exercises completed! Resetting...",
         noExercisesAvailable: "No exercises available at the moment."
@@ -136,7 +136,10 @@ const translations = {
       term1Display: "Term 1:",
       term2Display: "Term 2:",
       exampleDisplay: "Ex:",
-      selectSetPrompt: "Select a study set to manage its cards."
+      selectSetPrompt: "Select a study set to manage its cards.",
+      doneButton: "Done Editing Cards", // New
+      hasImage: "(has image)", // New
+      hasAudio: "(has audio)" // New
     },
     myStudySetsPage: {
       title: "Manage Your Study Sets",
@@ -175,7 +178,7 @@ const translations = {
       },
       sentenceSkills: {
         sentence_unscramble_exercise: "Remettre la Phrase en Ordre",
-        fill_in_the_blanks_exercise: "Compléter les Trous" // New
+        fill_in_the_blanks_exercise: "Compléter les Trous"
       }
     },
     sentenceUnscramble: {
@@ -185,7 +188,7 @@ const translations = {
       dropWordsHere: "Cliquez sur les mots ci-dessous pour construire la phrase ici...",
       clickToRemoveWord: "Cliquez pour enlever le mot"
     },
-    fillInTheBlanks: { // New
+     fillInTheBlanks: {
       title: "Compléter les Trous",
       translationLabel: "Signification :",
       hintLabel: "Indice :",
@@ -278,7 +281,10 @@ const translations = {
       term1Display: "Terme 1 :",
       term2Display: "Terme 2 :",
       exampleDisplay: "Ex :",
-      selectSetPrompt: "Sélectionnez un deck d'étude pour gérer ses fiches."
+      selectSetPrompt: "Sélectionnez un deck d'étude pour gérer ses fiches.",
+      doneButton: "Terminer la Modification des Fiches", // New
+      hasImage: "(contient image)", // New
+      hasAudio: "(contient audio)" // New
     },
     myStudySetsPage: {
       title: "Gérer Vos Decks d'Étude",
