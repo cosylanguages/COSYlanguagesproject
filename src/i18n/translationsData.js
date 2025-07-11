@@ -2,7 +2,7 @@
 // Ajoutez ici vos traductions réelles au besoin
 
 const translations = {
-  COSYenglish: {
+  COSYenglish: { // Standardized: COSY + english
     greeting: "Hello",
     navHome: "Home",
     navFreestyle: "Freestyle",
@@ -147,7 +147,7 @@ const translations = {
       errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
     }
   },
-  COSYfrench: {
+  COSYfrench: { // Standardized: COSY + french
     greeting: "Bonjour",
     navHome: "Accueil",
     navFreestyle: "Mode Libre",
@@ -292,7 +292,7 @@ const translations = {
       errorSetNotFoundForPlayer: "Impossible de trouver le deck à étudier. Il a peut-être été supprimé."
     }
   },
-  COSYitaliano: {
+  COSYitalian: { // Standardized: COSY + italian (was COSYitaliano)
     languageNameInEnglish: "Italian",
     languageNameNative: "Italiano",
     greeting: "Hello (Italian Placeholder)", // Placeholder
@@ -439,7 +439,7 @@ const translations = {
       errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
     }
   },
-  COSYespañol: {
+  COSYspanish: { // Standardized: COSY + spanish (was COSYespañol)
     languageNameInEnglish: "Spanish",
     languageNameNative: "Español",
     greeting: "Hello (Spanish Placeholder)", // Placeholder
@@ -586,7 +586,7 @@ const translations = {
       errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
     }
   },
-  COSYportuguês: {
+  COSYportuguese: { // Standardized: COSY + portuguese (was COSYportuguês)
     languageNameInEnglish: "Portuguese",
     languageNameNative: "Português",
     greeting: "Hello (Portuguese Placeholder)", // Placeholder
@@ -733,7 +733,7 @@ const translations = {
       errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
     }
   },
-  COSYbrezhoneg: {
+  COSYbreton: { // Standardized: COSY + breton (was COSYbrezhoneg)
     languageNameInEnglish: "Breton",
     languageNameNative: "Brezhoneg",
     greeting: "Hello (Breton Placeholder)", // Placeholder
@@ -880,7 +880,7 @@ const translations = {
       errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
     }
   },
-  COSYdeutsch: {
+  COSYgerman: { // Standardized: COSY + german (was COSYdeutsch)
     languageNameInEnglish: "German",
     languageNameNative: "Deutsch",
     greeting: "Hello (German Placeholder)", // Placeholder
@@ -1027,7 +1027,7 @@ const translations = {
       errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
     }
   },
-  ТАКОЙрусский: {
+  COSYrussian: { // Standardized: COSY + russian (was ТАКОЙрусский)
     languageNameInEnglish: "Russian",
     languageNameNative: "Русский",
     greeting: "Hello (Russian Placeholder)", // Placeholder
@@ -1174,7 +1174,7 @@ const translations = {
       errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
     }
   },
-  ΚΟΖΥελληνικά: {
+  COSYgreek: { // Standardized: COSY + greek (was ΚΟΖΥελληνικά)
     languageNameInEnglish: "Greek",
     languageNameNative: "Ελληνικά",
     greeting: "Hello (Greek Placeholder)", // Placeholder
@@ -1321,7 +1321,7 @@ const translations = {
       errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
     }
   },
-  ТАКОЙтатарча: {
+  COSYtatar: { // Standardized: COSY + tatar (was ТАКОЙтатарча)
     languageNameInEnglish: "Tatar",
     languageNameNative: "Татарча",
     greeting: "Hello (Tatar Placeholder)", // Placeholder
@@ -1468,7 +1468,7 @@ const translations = {
       errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
     }
   },
-  ТАКОЙбашҡортса: {
+  COSYbashkir: { // Standardized: COSY + bashkir (was ТАКОЙбашҡортса)
     languageNameInEnglish: "Bashkir",
     languageNameNative: "Башҡортса",
     greeting: "Hello (Bashkir Placeholder)", // Placeholder
@@ -1615,7 +1615,7 @@ const translations = {
       errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
     }
   },
-  ԾՈՍՅհայերեն: {
+  COSYarmenian: { // Standardized: COSY + armenian (was ԾՈՍՅհայերեն)
     languageNameInEnglish: "Armenian",
     languageNameNative: "Հայերեն",
     greeting: "Hello (Armenian Placeholder)", // Placeholder
@@ -1762,7 +1762,7 @@ const translations = {
       errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
     }
   },
-  COSYქართული: {
+  COSYgeorgian: { // Standardized: COSY + georgian (was COSYქართული)
     languageNameInEnglish: "Georgian",
     languageNameNative: "ქართული",
     greeting: "Hello (Georgian Placeholder)", // Placeholder
