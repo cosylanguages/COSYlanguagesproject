@@ -95,7 +95,7 @@ export function I18nProvider({ children }) {
             translationString = tempString;
         }
         return translationString;
-    }, [language, currentTranslations]);
+    }, [currentTranslations]); // Removed 'language' dependency
 
     const getTranslationsForLang = useCallback((langKey, translationKey) => {
         if (translations && translations[langKey] && translations[langKey][translationKey] !== undefined) {
