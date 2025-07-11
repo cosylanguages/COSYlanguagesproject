@@ -24,7 +24,7 @@ import '../pages/FreestyleModePage/FreestyleModePage.css';
 
 // --- Global state for islands (simple version) ---
 let globalSelectedLanguage = null;
-let globalConfirmedDays = [];
+// let globalConfirmedDays = []; // Removed as it's unused; days are passed via events/props
 let exerciseInstanceKey = 0; // For unique key for ExerciseHost
 
 // --- Language Island ---
@@ -95,7 +95,7 @@ export const DaySelectorIslandApp = ({ language }) => {
     if (itemKey === 'day_single_input') setCurrentInputMode('single');
     else if (itemKey === 'day_range_input') setCurrentInputMode('range');
     else if (itemKey === 'day_confirm_action' && payload && payload.days) {
-      globalConfirmedDays = payload.days;
+      // globalConfirmedDays = payload.days; // No longer needed
       window.dispatchEvent(new CustomEvent('dayIslandConfirm', { detail: { confirmedDays: payload.days } }));
     }
   };
@@ -191,13 +191,13 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined' && (typeof 
       if (practiceNavContainer) { practiceNavContainer.style.display = 'none'; if(practiceNavContainer._reactRoot) {practiceNavContainer._reactRoot.unmount(); practiceNavContainer._reactRoot = null;}}
       if (exerciseHostContainer && exerciseHostContainer._reactRoot) { exerciseHostContainer._reactRoot.unmount(); exerciseHostContainer._reactRoot = null; exerciseHostContainer.innerHTML = '<p>Exercise Area</p>';}
       if (controlsPlaceholder) controlsPlaceholder.style.display = 'block';
-      globalConfirmedDays = []; // Reset days
+      // globalConfirmedDays = []; // No longer needed
     }
   });
 
   window.addEventListener('dayIslandConfirm', (event) => {
     const { confirmedDays } = event.detail;
-    globalConfirmedDays = confirmedDays;
+    // globalConfirmedDays = confirmedDays; // No longer needed, passed directly where required
     const practiceNavContainer = document.getElementById('practice-nav-island-container');
     const daySelectorContainer = document.getElementById('day-selector-island-container');
     const exerciseHostContainer = document.getElementById('exercise-host-container');
