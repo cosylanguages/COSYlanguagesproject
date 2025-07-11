@@ -26,11 +26,12 @@ const LanguageSelectorFreestyle = ({ onLanguageChange }) => { // Accept onLangua
 
     const handleChange = (event) => {
         const newLangKey = event.target.value;
-        // Call the onLanguageChange prop passed from LanguageIslandApp
-        if (onLanguageChange) {
+        // Call the onLanguageChange prop only if a valid language is selected
+        if (newLangKey && onLanguageChange) { // Check if newLangKey is not empty
             onLanguageChange(newLangKey);
         }
-        // The I18nContext's changeLanguage will be called by the callback in LanguageIslandApp
+        // If newLangKey is empty (placeholder selected), do nothing.
+        // The I18nContext's changeLanguage will not be called for an empty selection.
     };
 
     // This useEffect for body class might be redundant if the main LanguageSelector also does it.
