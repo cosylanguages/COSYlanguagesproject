@@ -13,10 +13,10 @@ import MainPracticeAllHost from './MainPracticeAllHost';
 // import ShowWordExercise from './exercises/vocabulary/ShowWordExercise'; // Unused
 // import IdentifyImageExercise from './exercises/vocabulary/IdentifyImageExercise'; // Unused
 // import TranscribeWordExercise from './exercises/vocabulary/TranscribeWordExercise'; // Unused
-import TypeOppositeExercise from './exercises/vocabulary/TypeOppositeExercise'; // Potentially to be merged or removed
-import MatchOppositesExercise from './exercises/vocabulary/MatchOppositesExercise'; // Potentially to be merged or removed
-import BuildWordExercise from './exercises/vocabulary/BuildWordExercise'; // Potentially to be merged or removed (replaced by LettersScramble)
-import MatchImageWordExercise from './exercises/vocabulary/MatchImageWordExercise'; // Potentially to be merged or removed
+// import TypeOppositeExercise from './exercises/vocabulary/TypeOppositeExercise'; // Potentially to be merged or removed - Unused
+// import MatchOppositesExercise from './exercises/vocabulary/MatchOppositesExercise'; // Potentially to be merged or removed - Unused
+// import BuildWordExercise from './exercises/vocabulary/BuildWordExercise'; // Potentially to be merged or removed (replaced by LettersScramble) - Unused
+// import MatchImageWordExercise from './exercises/vocabulary/MatchImageWordExercise'; // Potentially to be merged or removed - Unused
 
 // New Vocabulary Exercise Stubs
 import RandomWordImageExercise from './exercises/vocabulary/RandomWordImageExercise';
