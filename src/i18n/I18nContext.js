@@ -10,79 +10,73 @@ export function useI18n() {
 export function I18nProvider({ children }) {
     const [language, setLanguage] = useState(() => {
         const savedLanguage = localStorage.getItem('cosyLanguage');
-        if (savedLanguage === "null" || savedLanguage === null || savedLanguage === undefined) {
-            return null; // Explicitly handle "null" string from localStorage or no value
+        // Ensure savedLanguage is a valid key in translations, otherwise default to 'COSYenglish'
+        if (savedLanguage && translations[savedLanguage]) {
+            return savedLanguage;
         }
-        // Ensure fallback uses the new standardized key
-        return (translations[savedLanguage]) ? savedLanguage : 'english';
+        return 'COSYenglish'; // Default to COSYenglish if no valid language is saved or "null" is stored
     });
 
     const [currentTranslations, setCurrentTranslations] = useState({});
 
     useEffect(() => {
-        if (language === null) {
-            localStorage.removeItem('cosyLanguage'); // Remove item if language is null
-            setCurrentTranslations({}); // No translations for null language
-            document.documentElement.lang = 'en'; // Default doc lang to 'en' (ISO code)
-        } else if (translations && translations[language]) {
-            localStorage.setItem('cosyLanguage', language); // Save standardized key
+        // language state should always be a valid key (e.g. 'COSYenglish') due to initialization logic.
+        if (translations[language]) {
+            localStorage.setItem('cosyLanguage', language);
             setCurrentTranslations(translations[language]);
-            // Set document.documentElement.lang based on the standardized key
-            // This assumes standardized keys are suitable or can be mapped to ISO 639-1 codes
-            // For simple English names like "english", "french", we can map them or use them directly if that's the convention.
-            // For this iteration, we'll use the first two letters if the key is long enough, otherwise the key itself.
-            // A more robust mapping to ISO codes would be ideal in the long run.
-            let langCode = language.toLowerCase(); // Start with the key itself
-            if (translations[language] && translations[language].languageCode) {
-                langCode = translations[language].languageCode; // Use languageCode if defined in locale file
-            } else if (language.length > 2 && !['bashkir', 'breton', 'tatar'].includes(language)) { // crude way to get ISO-like codes for some
+            let langCode = language.toLowerCase();
+            if (translations[language].languageCode) {
+                langCode = translations[language].languageCode;
+            } else if (language.length > 2 && !['bashkir', 'breton', 'tatar'].includes(language)) {
                 langCode = language.substring(0, 2);
             }
             document.documentElement.lang = langCode;
-
-        } else if (translations && translations.english) { // Fallback to standardized 'english'
-            console.warn(`Translations for language key "${language}" not found. Defaulting to English.`);
-            setCurrentTranslations(translations.english);
-            localStorage.setItem('cosyLanguage', 'english'); // Persist the fallback with standardized key
-            document.documentElement.lang = 'en';
-            // To prevent potential loops if `language` state was invalid and needs resetting:
-            if (language !== 'english') {
-                 setLanguage('english'); // This will trigger a re-render and this effect again.
-            }
         } else {
-            setCurrentTranslations({});
-            localStorage.removeItem('cosyLanguage');
-            document.documentElement.lang = 'en'; // Default doc lang
-            console.error(`Critical: Default English translations ('english') not found.`);
+            // This case implies 'language' state is somehow invalid, or COSYenglish itself is missing.
+            console.error(`Critical: Translations for language key "${language}" not found. Attempting to default to COSYenglish.`);
+            if (translations.COSYenglish) {
+                setCurrentTranslations(translations.COSYenglish);
+                localStorage.setItem('cosyLanguage', 'COSYenglish');
+                document.documentElement.lang = translations.COSYenglish.languageCode || 'en';
+                if (language !== 'COSYenglish') { // Correct state if it was somehow invalid
+                    setLanguage('COSYenglish');
+                }
+            } else {
+                // Absolute fallback if COSYenglish is also missing (problem with translationsData.js)
+                setCurrentTranslations({});
+                localStorage.removeItem('cosyLanguage'); // Remove invalid stored key
+                document.documentElement.lang = 'en'; // Default doc lang
+                console.error(`CRITICAL: Default 'COSYenglish' translations not found in translationsData.js.`);
+            }
         }
     }, [language]);
 
     const changeLanguage = useCallback((langKey) => {
-        if (langKey === null) {
-            setLanguage(null);
-        } else if (translations && translations[langKey]) {
+        if (translations && translations[langKey]) {
             setLanguage(langKey);
         } else {
-            console.warn(`Attempted to change to invalid language key "${langKey}". Setting to null (no selection).`);
-            setLanguage(null); // Fallback to null if the key is invalid
+            console.warn(`Attempted to change to invalid language key "${langKey}". Reverting to COSYenglish.`);
+            setLanguage('COSYenglish'); // Fallback to a known good default
         }
     }, []);
 
     const t = useCallback((key, defaultValueOrOptions, optionsOnly) => {
         let defaultValue = typeof defaultValueOrOptions === 'string' ? defaultValueOrOptions : key;
-        let options = typeof defaultValueOrOptions === 'object' ? defaultValueOrOptions : optionsOnly;
+        let options = typeof defaultValueOrOptions === 'object' && !Array.isArray(defaultValueOrOptions) ? defaultValueOrOptions : optionsOnly;
         if (typeof optionsOnly === 'object' && typeof defaultValueOrOptions === 'string') {
-            options = optionsOnly; // Correctly assign options if defaultvalue is also provided
+            options = optionsOnly;
         }
 
         let translationString;
-        if (language && currentTranslations && currentTranslations[key] !== undefined) {
+        // currentTranslations should always be populated (even with COSYenglish as fallback)
+        if (currentTranslations && currentTranslations[key] !== undefined) {
             translationString = currentTranslations[key];
-        } else if (translations && translations.english && translations.english[key] !== undefined) {
-            // Fallback to English (using standardized key 'english') if current language is null or key is missing
-            translationString = translations.english[key];
-        } else {
-            translationString = defaultValue; // Use provided default or the key itself
+        } else if (translations.COSYenglish && translations.COSYenglish[key] !== undefined) {
+            // Explicit fallback to COSYenglish if key is missing in current language
+            translationString = translations.COSYenglish[key];
+        }
+        else {
+            translationString = defaultValue;
         }
 
         if (options && typeof translationString === 'string') {
