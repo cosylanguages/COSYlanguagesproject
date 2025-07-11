@@ -537,6 +537,41 @@ textarea.exercise-input {
     margin-top: var(--spacing-lg); /* old: calc(var(--spacing-unit, 10px) * 2) */
     margin-bottom: var(--spacing-sm);
 }
+
+/* Language Flag Backgrounds */
+body.lang-bg {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background fixed during scroll */
+  transition: background-image 0.5s ease-in-out; /* Smooth transition for background change */
+}
+
+body.COSYbreton-bg {
+  background-image: url('./assets/icons/Flag_of_Brittany.png');
+}
+
+body.COSYbashkir-bg {
+  background-image: url('./assets/icons/Flag_of_Bashkortostan.png');
+}
+
+body.COSYtatar-bg {
+  background-image: url('./assets/icons/Flag_of_Tatarstan.png');
+}
+
+/* Fallback for languages without a specific flag, if needed */
+/* For now, they will just have the .lang-bg properties if a language is selected,
+   or .no-language-selected-bg if no language is selected or the key is invalid.
+   If .lang-bg itself had a default background-color, that would apply.
+   Otherwise, it will be the body's default background from index.css
+*/
+
+body.no-language-selected-bg {
+  /* Define a specific background for when no language is selected or placeholder is active */
+  /* For example, a neutral color or a generic pattern */
+  background-color: #f0f0f0; /* A light neutral grey */
+  background-image: none; /* Ensure no previous flag image persists */
+}
 .navigation-buttons { /* Specific override for navigation buttons if used */
     justify-content: space-between;
 }
