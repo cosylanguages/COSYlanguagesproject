@@ -5,8 +5,8 @@ import './PracticeCategoryNav.css';
 
 // Props now include menu navigation logic utilities
 const PracticeCategoryNav = ({ 
-    activePath, // From FreestyleModePage
-    onMenuSelect, // From FreestyleModePage
+    activePath, // From parent island (e.g., PracticeNavIslandApp)
+    onMenuSelect, // From parent island
     isMenuItemVisible, // Function from menuNavigationLogic
     allMenuItemsConfig, // The menu config
     // activeCategoryKey is still useful for styling the "active" button
@@ -78,8 +78,8 @@ const PracticeCategoryNav = ({
         {practiceCategoriesToDisplay.length === 0 && !isAnyCategoryActiveOrBeyond && (
             <p>{t('freestyle.noCategoriesAvailable', 'No practice categories available at this stage.')}</p>
         )}
-         {/* If a category is active and its children are shown, this nav might only show the active category,
-             or rely on the parent (FreestyleInterfaceView) to hide this nav and show SubPracticeMenu instead.
+         {/* If a category is active and its children are shown, this nav might only show the active category.
+             The parent island (PracticeNavIslandApp) handles showing the SubPracticeMenu alongside or instead.
              The current filtering logic ensures only relevant buttons are shown.
           */}
       </div>

@@ -19,7 +19,8 @@ export function getInitialMenuState() {
  */
 export const allMenuItemsConfig = {
   // This 'entry_point' is conceptual. Language selection is the true entry.
-  // Upon language selection, FreestyleModePage should call onMenuSelect('day_selection_stage').
+  // Upon language selection, the LanguageIslandApp dispatches an event, which leads to showing the DaySelectorIsland.
+  // The DaySelectorIsland's appearance/functionality implicitly represents the 'day_selection_stage'.
   'entry_point': {
     nextStage: 'day_selection_stage'
   },

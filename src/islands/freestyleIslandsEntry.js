@@ -12,6 +12,7 @@ import DaySelectorFreestyle from '../components/Freestyle/DaySelectorFreestyle';
 import PracticeCategoryNav from '../components/Freestyle/PracticeCategoryNav';
 import SubPracticeMenu from '../components/Freestyle/SubPracticeMenu';
 import ExerciseHost from '../components/Freestyle/ExerciseHost'; // Import ExerciseHost
+import HelpPopupIsland from '../components/Freestyle/HelpPopupIsland'; // Import HelpPopupIsland
 
 // Config
 import { allMenuItemsConfig as fullMenuConfig } from '../utils/menuNavigationLogic';
@@ -20,7 +21,7 @@ import { allMenuItemsConfig as fullMenuConfig } from '../utils/menuNavigationLog
 import '../components/LanguageSelector/LanguageSelector.css';
 import '../components/Freestyle/DaySelectorFreestyle.css';
 import '../components/Freestyle/PracticeCategoryNav.css';
-import '../pages/FreestyleModePage/FreestyleModePage.css';
+import '../components/Freestyle/freestyle-shared.css'; // Corrected path
 
 // --- Global state for islands (simple version) ---
 let globalSelectedLanguage = null;
@@ -166,11 +167,20 @@ export const ExerciseHostIslandApp = ({ language, days, subPracticeType, exercis
 export const ExerciseHostIslandWrapper = ({ language, days, subPracticeType, exerciseKey }) => <I18nProvider><LatinizationProvider><ExerciseHostIslandApp language={language} days={days} subPracticeType={subPracticeType} exerciseKey={exerciseKey} /></LatinizationProvider></I18nProvider>;
 
 
+// --- Help Popup Island Wrapper (if needed, or mount directly) ---
+// For consistency and providing contexts if they were needed (though HelpPopupIsland is simple)
+export const HelpPopupIslandWrapper = () => <I18nProvider><LatinizationProvider><HelpPopupIsland /></LatinizationProvider></I18nProvider>;
+
 // --- Main Mounting & Event Handling Logic ---
 if (typeof window !== 'undefined' && typeof document !== 'undefined' && (typeof process === 'undefined' || process.env.NODE_ENV !== 'test')) {
   const languageContainer = document.getElementById('language-selector-island-container');
   if (languageContainer) {
     ReactDOM.createRoot(languageContainer).render(<React.StrictMode><LanguageIslandWrapper /></React.StrictMode>);
+  }
+
+  const helpPopupContainer = document.getElementById('help-popup-island-container');
+  if (helpPopupContainer) {
+    ReactDOM.createRoot(helpPopupContainer).render(<React.StrictMode><HelpPopupIslandWrapper /></React.StrictMode>);
   }
 
   window.addEventListener('languageIslandChange', (event) => {
