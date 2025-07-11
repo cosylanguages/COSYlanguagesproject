@@ -94,8 +94,23 @@
 .flashcard-item .card-terms p strong {
   color: #17a2b8; /* Info color for labels */
 }
-.flashcard-item .card-terms small em {
-  color: #6c757d; /* Muted color for example sentence */
+
+.flashcard-item .card-detail {
+  margin-top: 3px;
+  font-size: 0.9em;
+}
+
+.flashcard-item .card-detail small em {
+  color: #6c757d; /* Muted color for example sentence, notes */
+}
+
+.flashcard-item .card-notes small em {
+  color: #5a6268;
+}
+
+.flashcard-item .card-meta small i {
+  color: #868e96; /* Lighter for meta indicators */
+  font-style: normal;
 }
 
 
