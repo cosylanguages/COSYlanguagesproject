@@ -172,18 +172,19 @@ export const ExerciseHostIslandWrapper = ({ language, days, subPracticeType, exe
 export const HelpPopupIslandWrapper = () => <I18nProvider><LatinizationProvider><HelpPopupIsland /></LatinizationProvider></I18nProvider>;
 
 // --- Main Mounting & Event Handling Logic ---
-if (typeof window !== 'undefined' && typeof document !== 'undefined' && (typeof process === 'undefined' || process.env.NODE_ENV !== 'test')) {
-  const languageContainer = document.getElementById('language-selector-island-container');
-  if (languageContainer) {
-    ReactDOM.createRoot(languageContainer).render(<React.StrictMode><LanguageIslandWrapper /></React.StrictMode>);
-  }
+function mountFreestyleIslands() {
+  if (typeof window !== 'undefined' && typeof document !== 'undefined' && (typeof process === 'undefined' || process.env.NODE_ENV !== 'test')) {
+    const languageContainer = document.getElementById('language-selector-island-container');
+    if (languageContainer) {
+      ReactDOM.createRoot(languageContainer).render(<React.StrictMode><LanguageIslandWrapper /></React.StrictMode>);
+    }
 
-  const helpPopupContainer = document.getElementById('help-popup-island-container');
-  if (helpPopupContainer) {
-    ReactDOM.createRoot(helpPopupContainer).render(<React.StrictMode><HelpPopupIslandWrapper /></React.StrictMode>);
-  }
+    const helpPopupContainer = document.getElementById('help-popup-island-container');
+    if (helpPopupContainer) {
+      ReactDOM.createRoot(helpPopupContainer).render(<React.StrictMode><HelpPopupIslandWrapper /></React.StrictMode>);
+    }
 
-  window.addEventListener('languageIslandChange', (event) => {
+    window.addEventListener('languageIslandChange', (event) => {
     const { selectedLanguage } = event.detail;
     globalSelectedLanguage = selectedLanguage;
     const daySelectorContainer = document.getElementById('day-selector-island-container');
@@ -247,4 +248,14 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined' && (typeof 
       );
     }
   });
+  } // end of main if block
+} // end of mountFreestyleIslands function
+
+// Wait for the DOM to be fully loaded before trying to mount the islands
+if (typeof window !== 'undefined') {
+  if (document.readyState === 'loading') { // Document is still loading
+    document.addEventListener('DOMContentLoaded', mountFreestyleIslands);
+  } else { // Document has already loaded
+    mountFreestyleIslands();
+  }
 }
