@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import '../LanguageSelector/LanguageSelector.css'; // Import unified CSS
 
-const LanguageSelectorFreestyle = () => { // selectedLanguage prop is no longer needed, gets from context
-    const { allTranslations, changeLanguage, currentLangKey, t } = useI18n();
+const LanguageSelectorFreestyle = ({ onLanguageChange }) => { // Accept onLanguageChange prop
+    const { allTranslations, currentLangKey, t } = useI18n(); // Removed changeLanguage
 
     const availableLanguages = Object.keys(allTranslations).map(langKey => {
         // Skip "null" if it somehow ends up in allTranslations keys, though it shouldn't
@@ -26,8 +26,11 @@ const LanguageSelectorFreestyle = () => { // selectedLanguage prop is no longer 
 
     const handleChange = (event) => {
         const newLangKey = event.target.value;
-        // If the placeholder "-- Select Language --" is chosen, its value is "", so pass null to context
-        changeLanguage(newLangKey === "" ? null : newLangKey);
+        // Call the onLanguageChange prop passed from LanguageIslandApp
+        if (onLanguageChange) {
+            onLanguageChange(newLangKey);
+        }
+        // The I18nContext's changeLanguage will be called by the callback in LanguageIslandApp
     };
 
     // This useEffect for body class might be redundant if the main LanguageSelector also does it.
