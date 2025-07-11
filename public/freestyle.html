@@ -36,8 +36,12 @@
         </div>
 
         <div id="freestyle-controls-container" class="island-placeholder">
-            <!-- Other controls like Day selection, Category, Sub-practice will go here -->
-            <p>Freestyle Controls Area</p>
+            <!-- Mount point for Day Selector Island -->
+            <div id="day-selector-island-container" class="island-placeholder" style="display: none;">
+                <p>Loading Day Selector...</p>
+            </div>
+            <!-- Other controls like Category, Sub-practice will go here later -->
+            <p id="freestyle-controls-placeholder-text">Freestyle Controls Area</p>
         </div>
 
         <div id="exercise-host-container" class="island-placeholder">
@@ -61,7 +65,7 @@
          For CRA, direct src linking might not work without `type="module"` and specific handling.
          A more robust solution will involve configuring build entry points.
     -->
-    <script type="module" src="../src/islands/languageSelectorIsland.js"></script>
+    <!-- Script tag removed: HtmlWebpackPlugin will now inject the correct bundle. -->
 
     <script>
         // Listener for the custom event from the language island
