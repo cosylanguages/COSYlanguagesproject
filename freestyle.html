@@ -1,77 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="COSYlanguages Freestyle Mode"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>COSYlanguages - Freestyle</title>
-    <!-- Basic styling -->
-    <style>
-      body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; color: #333; }
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/COSYlanguagesproject/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="COSYlanguages Freestyle Mode"/><link rel="apple-touch-icon" href="/COSYlanguagesproject/logo192.png"/><link rel="manifest" href="/COSYlanguagesproject/manifest.json"/><title>COSYlanguages - Freestyle</title><style>body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; color: #333; }
       .container { max-width: 1200px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
       h1 { color: #333; text-align: center; }
       .island-placeholder { padding: 15px; margin-bottom: 15px; border: 1px dashed #ccc; border-radius: 4px; background-color: #f9f9f9; }
       #language-selector-island-container { margin-bottom: 20px; }
       #freestyle-controls-container { margin-bottom: 20px; }
       #exercise-host-container { padding-top: 20px; border-top: 1px solid #eee; }
-      label { display: block; margin-bottom: 5px; font-weight: bold; }
-    </style>
-</head>
-<body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-
-    <div class="container">
-        <h1>Freestyle Mode</h1>
-
-        <div id="language-selector-island-container" class="island-placeholder">
-            <!-- React Language Selector Island will be mounted here -->
-            <p>Loading Language Selector...</p>
-        </div>
-
-        <div id="freestyle-controls-container" class="island-placeholder">
-            <!-- Other controls like Day selection, Category, Sub-practice will go here -->
-            <p>Freestyle Controls Area</p>
-        </div>
-
-        <div id="exercise-host-container" class="island-placeholder">
-            <!-- React Exercise Host Island will be mounted here -->
-            <p>Exercise Area</p>
-        </div>
-    </div>
-
-    <!--
-      This script tag will eventually point to the bundled JavaScript for the islands.
-      The path might need adjustment based on the build output (e.g., /static/js/freestyleIslands.js).
-      For development, if we create a separate entry point, the dev server will handle it.
-    -->
-    <!-- <script defer src="/static/js/freestyleIslands.js"></script> -->
-    <!-- For now, we will create a specific entry point for the language island. -->
-    <!-- Let's assume a naming convention like `languageSelectorIsland.bundle.js` for the output -->
-    <!-- We'll refine this path once we set up the actual island JS and build process. -->
-
-    <!-- Attempt to load the island script directly for development -->
-    <!-- NOTE: This path assumes the dev server can serve from src or that a build process will place it here.
-         For CRA, direct src linking might not work without `type="module"` and specific handling.
-         A more robust solution will involve configuring build entry points.
-    -->
-    <script type="module" src="../src/islands/languageSelectorIsland.js"></script>
-
-    <script>
-        // Listener for the custom event from the language island
+      label { display: block; margin-bottom: 5px; font-weight: bold; }</style><script defer="defer" src="/COSYlanguagesproject/static/js/freestyle.df2adf86.js"></script><link href="/COSYlanguagesproject/static/css/freestyle.4126c8d2.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div class="container"><h1>Freestyle Mode</h1><div id="language-selector-island-container" class="island-placeholder"><p>Loading Language Selector...</p></div><div id="freestyle-controls-container" class="island-placeholder"><div id="day-selector-island-container" class="island-placeholder" style="display: none;"><p>Loading Day Selector...</p></div><div id="practice-nav-island-container" class="island-placeholder" style="display: none;"><p>Loading Practice Navigation...</p></div><p id="freestyle-controls-placeholder-text">Select language and days to see exercises.</p></div><div id="exercise-host-container" class="island-placeholder"><p>Exercise Area</p></div></div><script>// Listener for the custom event from the language island
         window.addEventListener('languageIslandChange', function(event) {
             console.log('Message received in freestyle.html: Language changed to:', event.detail.selectedLanguage);
             const controlsContainer = document.getElementById('freestyle-controls-container');
             if (controlsContainer) {
                 controlsContainer.innerHTML = `<p>Language set to: <strong>${event.detail.selectedLanguage}</strong>. Next step would be to load Day Selector.</p>`;
             }
-        });
-    </script>
-</body>
-</html>
+        });</script></body></html>
