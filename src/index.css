@@ -35,6 +35,13 @@ body {
   display: flex; /* Ensure body takes full height for sticky footer */
   flex-direction: column; /* Ensure body takes full height for sticky footer */
   min-height: 100vh; /* Ensure body takes full height for sticky footer */
+  /* Keeping the gradient from the old CSS as a base or fallback */
+  background-image: linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 20px solid lime !important; /* MINIMAL TEST */
 }
 
 img, picture, video, canvas, svg {
@@ -313,16 +320,6 @@ h4 { font-size: var(--font-size-h4); }
 /* etc. for more spacing utilities */
 
 /* Language Flag Backgrounds */
-/* Default body background - can be overridden by language-specific classes */
-body {
-  /* Keeping the gradient from the old CSS as a base or fallback */
-  background-image: linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
 /* Base for language-specific backgrounds */
 .lang-bg {
   background-attachment: fixed !important;
