@@ -18,7 +18,7 @@ import HelpPopupIsland from '../components/Freestyle/HelpPopupIsland'; // Import
 import { allMenuItemsConfig as fullMenuConfig } from '../utils/menuNavigationLogic';
 
 // Styles
-import '../../index.css'; // Import global styles
+import '../index.css'; // Import global styles
 import '../components/LanguageSelector/LanguageSelector.css';
 import '../components/Freestyle/DaySelectorFreestyle.css';
 import '../components/Freestyle/PracticeCategoryNav.css';
