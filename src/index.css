@@ -361,17 +361,17 @@ body {
   background-image: url('https://flagcdn.com/am.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
-/* Local flags - paths corrected to be relative to public root */
+/* Local flags - paths corrected to use %PUBLIC_URL% */
 .ТАКОЙбашҡортса-bg { /* Bashkir */
-  background-image: url('/assets/icons/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+  background-image: url(%PUBLIC_URL%/assets/icons/Flag_of_Bashkortostan.png), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
 .ТАКОЙтатарча-bg { /* Tatar */
-  background-image: url('/assets/icons/Flag_of_Tatarstan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+  background-image: url(%PUBLIC_URL%/assets/icons/Flag_of_Tatarstan.png), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
 .COSYbrezhoneg-bg { /* Breton */
-  background-image: url('/assets/icons/Flag_of_Brittany.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
+  background-image: url(%PUBLIC_URL%/assets/icons/Flag_of_Brittany.png), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
 }
 
 .ΚΟΖΥελληνικά-bg { /* Greek */
