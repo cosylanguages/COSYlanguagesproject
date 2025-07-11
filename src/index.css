@@ -30,18 +30,12 @@ html {
 
 body {
   font-family: var(--font-family-base);
-  background-color: var(--color-background);
+  background-color: var(--color-background); /* Default background for main app */
   color: var(--color-text-primary);
   display: flex; /* Ensure body takes full height for sticky footer */
   flex-direction: column; /* Ensure body takes full height for sticky footer */
   min-height: 100vh; /* Ensure body takes full height for sticky footer */
-  /* Keeping the gradient from the old CSS as a base or fallback */
-  background-image: linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  border: 20px solid lime !important; /* MINIMAL TEST */
+  /* Language-specific backgrounds and test border removed from here */
 }
 
 img, picture, video, canvas, svg {
@@ -319,75 +313,7 @@ h4 { font-size: var(--font-size-h4); }
 .mb-1 { margin-bottom: var(--spacing-sm); }
 /* etc. for more spacing utilities */
 
-/* Language Flag Backgrounds */
-/* Base for language-specific backgrounds */
-.lang-bg {
-  background-attachment: fixed !important;
-  background-size: cover, cover !important; /* Ensure cover for both flag and gradient */
-  background-position: center center !important;
-  background-repeat: no-repeat, no-repeat !important; /* Ensure no-repeat for both */
-}
-
-/* Individual Language Backgrounds */
-/* Class names now match the keys in src/i18n/translationsData.js */
-.COSYenglish-bg {
-  background-image: url('https://flagcdn.com/gb.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-.COSYfrench-bg {
-  background-image: url('https://flagcdn.com/fr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-.ТАКОЙрусский-bg {
-  background-image: url('https://flagcdn.com/ru.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-.COSYitaliano-bg {
-  background-image: url('https://flagcdn.com/it.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-.COSYespañol-bg {
-  background-image: url('https://flagcdn.com/es.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-.COSYdeutsch-bg {
-  background-image: url('https://flagcdn.com/de.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-.ԾՈՍՅհայերեն-bg { /* Armenian */
-  background-image: url('https://flagcdn.com/am.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-/* Local flags - paths corrected to be relative from src/ to public/ */
-.ТАКОЙбашҡортса-bg { /* Bashkir */
-  background-image: url(../public/assets/icons/Flag_of_Bashkortostan.png), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-.ТАКОЙтатарча-bg { /* Tatar */
-  background-image: url(../public/assets/icons/Flag_of_Tatarstan.png), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-.COSYbrezhoneg-bg { /* Breton */
-  background-image: url(../public/assets/icons/Flag_of_Brittany.png), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-.ΚΟΖΥελληνικά-bg { /* Greek */
-  background-image: url('https://flagcdn.com/gr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-.COSYportuguês-bg { /* Portuguese */
-  background-image: url('https://flagcdn.com/pt.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-.COSYქართული-bg { /* Georgian */
-  background-image: url('https://flagcdn.com/ge.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%) !important;
-}
-
-/* Fallback for unknown language backgrounds */
-.lang-bg-fallback {
-  background-image: linear-gradient(135deg, #bdbdbd 0%, #e0e0e0 100%) !important;
-  background-color: #e0e0e0 !important;
-}
+/* Language Flag Backgrounds section removed - will be moved to freestyle-shared.css */
 
 /* Style for ToggleLatinizationButton */
 .toggle-latinization-btn {
