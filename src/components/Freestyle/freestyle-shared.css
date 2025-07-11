@@ -548,15 +548,94 @@ body.lang-bg {
 }
 
 body.COSYbreton-bg {
-  background-image: url('./assets/icons/Flag_of_Brittany.png');
+  background-image: url('./assets/icons/Flag_of_Brittany.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 body.COSYbashkir-bg {
-  background-image: url('./assets/icons/Flag_of_Bashkortostan.png');
+  background-image: url('./assets/icons/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 body.COSYtatar-bg {
-  background-image: url('./assets/icons/Flag_of_Tatarstan.png');
+  background-image: url('./assets/icons/Flag_of_Tatarstan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.COSYenglish-bg {
+  background-image: url('https://flagcdn.com/gb.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.COSYfrench-bg {
+  background-image: url('https://flagcdn.com/fr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.COSYitalian-bg {
+  background-image: url('https://flagcdn.com/it.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.COSYspanish-bg {
+  background-image: url('https://flagcdn.com/es.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.COSYportuguese-bg {
+  background-image: url('https://flagcdn.com/pt.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.COSYgerman-bg {
+  background-image: url('https://flagcdn.com/de.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.COSYgreek-bg {
+  background-image: url('https://flagcdn.com/gr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.COSYrussian-bg {
+  background-image: url('https://flagcdn.com/ru.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.COSYarmenian-bg {
+  background-image: url('https://flagcdn.com/am.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.COSYgeorgian-bg {
+  background-image: url('https://flagcdn.com/ge.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: cover, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 /* Fallback for languages without a specific flag, if needed */
