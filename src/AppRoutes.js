@@ -9,6 +9,7 @@ import StudyModePage from './pages/StudyModePage/StudyModePage';
 // FreestyleModePage is no longer imported or used here
 import MyStudySetsPage from './pages/MyStudySetsPage/MyStudySetsPage'; // Import MyStudySetsPage
 import ShowWordExercise from './components/Freestyle/exercises/vocabulary/ShowWordExercise';
+import IrregularVerbsPractice from './components/Freestyle/IrregularVerbs/IrregularVerbsPractice';
 import PinModal from './components/Common/PinModal';
 
 const STUDY_MODE_PIN = "1234";
@@ -96,6 +97,14 @@ function AppRoutes() {
                   element={
                     <StudyModeProtectedRoute>
                       <StudyModePage />
+                    </StudyModeProtectedRoute>
+                  }
+                />
+                <Route
+                  path="study/irregular-verbs/*"
+                  element={
+                    <StudyModeProtectedRoute>
+                      <IrregularVerbsPractice />
                     </StudyModeProtectedRoute>
                   }
                 />
