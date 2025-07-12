@@ -155,7 +155,7 @@ export const PracticeNavIslandApp = ({ language, days }) => {
   const localNavMenuConfig = fullMenuConfig;
 
   const activeStage = navPath[navPath.length - 1];
-  const activeMainCatKey = navPath.includes('vocabulary') ? 'vocabulary' : navPath.includes('grammar') ? 'grammar' : navPath.includes('reading') ? 'reading' : navPath.includes('speaking') ? 'speaking' : navPath.includes('writing') ? 'writing' : null;
+  // const activeMainCatKey = navPath.includes('vocabulary') ? 'vocabulary' : navPath.includes('grammar') ? 'grammar' : navPath.includes('reading') ? 'reading' : navPath.includes('speaking') ? 'speaking' : navPath.includes('writing') ? 'writing' : null; // This is no longer needed for visibility logic
 
   const localIsMenuItemVisible = (path, itemKey, config) => {
     const currentActiveStage = path[path.length - 1];
