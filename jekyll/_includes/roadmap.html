@@ -1,0 +1,100 @@
+{% for level in site.data.armenian_roadmap.levels %}
+  <div class="level">
+    <h2>{{ level.level_code }}: {{ level.level_name }}</h2>
+    <p><strong>Approximate vocabulary size:</strong> {{ level.approximate_vocabulary_size }}</p>
+
+    <h3>Learning Outcomes</h3>
+    <ul>
+      {% for outcome in level.learning_outcomes %}
+        <li>{{ outcome }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Language Focus</h3>
+    <ul>
+      {% for topic in level.language_focus_topics %}
+        <li>{{ topic }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Vocabulary Topics</h3>
+    <ul>
+      {% for topic in level.vocabulary_topics %}
+        <li>{{ topic }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Speaking Dialogues</h3>
+    {% for dialogue in level.speaking_dialogues %}
+      <h4>{{ dialogue.title }}</h4>
+      <ul>
+        {% for line in dialogue.dialogue %}
+          <li><strong>{{ line.speaker }}:</strong> {{ line.line }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+
+    <h3>Pronunciation Focus</h3>
+    <ul>
+      {% for topic in level.pronunciation_focus_topics %}
+        <li>{{ topic }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Listening Comprehension Skills</h3>
+    <ul>
+      {% for skill in level.listening_comprehension_skills %}
+        <li>{{ skill }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Reading Comprehension Skills</h3>
+    <ul>
+      {% for skill in level.reading_comprehension_skills %}
+        <li>{{ skill }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Spoken Interaction Skills</h3>
+    <ul>
+      {% for skill in level.spoken_interaction_skills %}
+        <li>{{ skill }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Spoken Production Skills</h3>
+    <ul>
+      {% for skill in level.spoken_production_skills %}
+        <li>{{ skill }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Written Interaction Skills</h3>
+    <ul>
+      {% for skill in level.written_interaction_skills %}
+        <li>{{ skill }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Written Production Skills</h3>
+    <ul>
+      {% for skill in level.written_production_skills %}
+        <li>{{ skill }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Cultural Competence Topics</h3>
+    <ul>
+      {% for topic in level.cultural_competence_topics %}
+        <li>{{ topic }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Learning Strategies Suggestions</h3>
+    <ul>
+      {% for suggestion in level.learning_strategies_suggestions %}
+        <li>{{ suggestion }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}

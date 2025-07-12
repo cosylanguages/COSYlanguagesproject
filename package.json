@@ -10,10 +10,11 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "npm run jekyll:build && craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build",
+    "jekyll:build": "cd jekyll && bundle install --path vendor/bundle && bundle exec jekyll build --destination ../public/jekyll"
   },
   "eslintConfig": {
     "extends": [
