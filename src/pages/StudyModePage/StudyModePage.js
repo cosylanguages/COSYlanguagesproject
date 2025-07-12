@@ -12,6 +12,7 @@ import LessonSectionsPanel from '../../components/StudyMode/LessonSectionsPanel'
 import ToolsPanel from '../../components/StudyMode/ToolsPanel';
 import TransliterableText from '../../components/Common/TransliterableText';
 import ToggleLatinizationButton from '../../components/Common/ToggleLatinizationButton';
+import Button from '../../components/Common/Button';
 
 import './StudyModePage.css';
 
@@ -304,6 +305,9 @@ const StudyModePage = () => {
         <ToggleLatinizationButton
           currentDisplayLanguage={currentLangKey || language}
         />
+        <Button onClick={() => window.location.href = '/COSYlanguagesproject/freestyle.html'}>
+          Freestyle
+        </Button>
       </div>
 
       <div className="study-menu-section">
