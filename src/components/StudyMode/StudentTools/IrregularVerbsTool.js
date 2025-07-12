@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils'; // Added
-import './IrregularVerbsTool.css'; 
+import './IrregularVerbsTool.css';
 
 const IrregularVerbsTool = () => {
     const { t, language: currentUILanguage } = useI18n();
@@ -33,7 +33,7 @@ const IrregularVerbsTool = () => {
                 const langFileNamePart = currentUILanguage.replace('COSY', '').toLowerCase();
                 filePath = `/data/grammar/verbs/irregular/irregular_verbs_${langFileNamePart}.json`;
             }
-            
+
             setIsConjugationData(dataIsConjugations);
 
             try {
@@ -74,9 +74,9 @@ const IrregularVerbsTool = () => {
     const filteredVerbs = useMemo(() => {
         if (!searchTerm) return verbs;
         const lowerSearchTerm = searchTerm.toLowerCase();
-        
+
         if (isConjugationData) { // French conjugation data
-            return verbs.filter(verb => 
+            return verbs.filter(verb =>
                 verb.infinitive?.toLowerCase().includes(lowerSearchTerm)
             );
         } else { // Standard irregular verbs
@@ -84,17 +84,18 @@ const IrregularVerbsTool = () => {
                 verb.base?.toLowerCase().includes(lowerSearchTerm) ||
                 verb.pastSimple?.toLowerCase().includes(lowerSearchTerm) ||
                 verb.pastParticiple?.toLowerCase().includes(lowerSearchTerm) ||
+                // We don't use translations
                 (verb.translation && typeof verb.translation === 'string' && verb.translation.toLowerCase().includes(lowerSearchTerm))
             );
         }
-    }, [verbs, searchTerm, currentUILanguage, isConjugationData]);
+    }, [verbs, searchTerm, isConjugationData]);
 
     if (isLoading) return <p>{t('loadingIrregularVerbs') || 'Loading irregular verbs...'}</p>;
-    
+
     // Display message if no data is available for the language
     if (noDataForLanguage) {
-        const titleText = currentUILanguage === 'COSYenglish' 
-            ? t('irregularVerbsToolTitle', 'Irregular Verbs List') 
+        const titleText = currentUILanguage === 'COSYenglish'
+            ? t('irregularVerbsToolTitle', 'Irregular Verbs List')
             : t('conjugationsToolTitle', 'Conjugations List');
         return (
             <div className="irregular-verbs-tool">
@@ -107,14 +108,14 @@ const IrregularVerbsTool = () => {
     // Display general error message if one occurred (and not handled by noDataForLanguage)
     if (error) return <p className="error-message">{error}</p>;
 
-    const titleText = currentUILanguage === 'COSYenglish' 
-        ? t('irregularVerbsToolTitle', 'Irregular Verbs List') 
+    const titleText = currentUILanguage === 'COSYenglish'
+        ? t('irregularVerbsToolTitle', 'Irregular Verbs List')
         : t('conjugationsToolTitle', 'Conjugations List');
 
     return (
         <div className="irregular-verbs-tool">
             <h3>{titleText} ({currentUILanguage.replace('COSY','')})</h3>
-            <input 
+            <input
                 type="text"
                 className="search-irregular-verbs"
                 placeholder={t('searchVerbsPlaceholder') || 'Search verbs...'}
