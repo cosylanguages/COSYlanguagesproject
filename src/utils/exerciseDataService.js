@@ -50,7 +50,7 @@ const langFileMap = {
   'COSYbachkir': 'ba'
 };
 
-function getLanguageFileKey(languageIdentifier) {
+export function getLanguageFileKey(languageIdentifier) {
   return langFileMap[languageIdentifier] || 'english'; // Default to English
 }
 
