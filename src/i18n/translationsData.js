@@ -60,7 +60,8 @@ const translations = {
         checkAnswer: "Check Answer",
         revealAnswer: "Reveal Answer",
         nextExercise: "Next Exercise",
-        tryAgain: "Try Again"
+        tryAgain: "Try Again",
+        goBack: "Go Back"
     },
     feedback: {
         correct: "Correct!",
@@ -212,7 +213,8 @@ const translations = {
         checkAnswer: "Vérifier la Réponse",
         revealAnswer: "Révéler la Réponse",
         nextExercise: "Exercice Suivant",
-        tryAgain: "Réessayer"
+        tryAgain: "Réessayer",
+        goBack: "Retour"
     },
     feedback: {
         correct: "Correct !",
