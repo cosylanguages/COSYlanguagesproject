@@ -43,6 +43,14 @@ export const LanguageIslandApp = () => {
 
   const showToast = (message, duration = 2500) => { setToast(message); setTimeout(() => setToast(null), duration); };
 
+  // Placeholder for navigation until react-router is integrated into this island
+  const navigateToStudyMode = () => {
+    // In a full SPA with React Router, this would be: navigate('/study');
+    // For freestyle.html, we redirect to the main app's study page.
+    // Assuming the main app is at the root and handles /study route.
+    window.location.href = '/study';
+  };
+
   const handleLanguageChangeForIsland = (newLanguage) => {
     // Prevent processing if the new language is null, undefined, or empty, or same as current
     if (!newLanguage || selectedLanguage === newLanguage) {
@@ -91,6 +99,9 @@ export const LanguageIslandApp = () => {
         </label>
         <LanguageSelectorFreestyle selectedLanguage={selectedLanguage} onLanguageChange={handleLanguageChangeForIsland} />
         <ToggleLatinizationButton currentDisplayLanguage={selectedLanguage} />
++        <button onClick={navigateToStudyMode} className="study-mode-switch-btn">
++          {t('switchToStudyMode', 'Study Mode')}
++        </button>
       </div>
       {toast && <div className="cosy-toast">{toast}</div>}
     </>
