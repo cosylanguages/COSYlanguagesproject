@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/COSYlanguagesproject/static/css/main.97e88d51.css",
-    "main.js": "/COSYlanguagesproject/static/js/main.b73bda63.js",
-    "freestyle.css": "/COSYlanguagesproject/static/css/freestyle.f633798d.css",
-    "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.d4d70cb4.js",
+    "main.js": "/COSYlanguagesproject/static/js/main.a1aab6d1.js",
+    "freestyle.css": "/COSYlanguagesproject/static/css/freestyle.cc3d0ccc.css",
+    "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.341d97bb.js",
     "static/js/815.c0ee68b1.chunk.js": "/COSYlanguagesproject/static/js/815.c0ee68b1.chunk.js",
     "static/js/197.4b4a4460.chunk.js": "/COSYlanguagesproject/static/js/197.4b4a4460.chunk.js",
     "static/js/318.aa710a9c.chunk.js": "/COSYlanguagesproject/static/js/318.aa710a9c.chunk.js",
@@ -13,15 +13,15 @@
     "index.html": "/COSYlanguagesproject/index.html",
     "freestyle.html": "/COSYlanguagesproject/freestyle.html",
     "main.97e88d51.css.map": "/COSYlanguagesproject/static/css/main.97e88d51.css.map",
-    "main.b73bda63.js.map": "/COSYlanguagesproject/static/js/main.b73bda63.js.map",
-    "freestyle.f633798d.css.map": "/COSYlanguagesproject/static/css/freestyle.f633798d.css.map",
-    "freestyle.d4d70cb4.js.map": "/COSYlanguagesproject/static/js/freestyle.d4d70cb4.js.map",
+    "main.a1aab6d1.js.map": "/COSYlanguagesproject/static/js/main.a1aab6d1.js.map",
+    "freestyle.cc3d0ccc.css.map": "/COSYlanguagesproject/static/css/freestyle.cc3d0ccc.css.map",
+    "freestyle.341d97bb.js.map": "/COSYlanguagesproject/static/js/freestyle.341d97bb.js.map",
     "815.c0ee68b1.chunk.js.map": "/COSYlanguagesproject/static/js/815.c0ee68b1.chunk.js.map",
     "197.4b4a4460.chunk.js.map": "/COSYlanguagesproject/static/js/197.4b4a4460.chunk.js.map",
     "318.aa710a9c.chunk.js.map": "/COSYlanguagesproject/static/js/318.aa710a9c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.97e88d51.css",
-    "static/js/main.b73bda63.js"
+    "static/js/main.a1aab6d1.js"
   ]
 }
