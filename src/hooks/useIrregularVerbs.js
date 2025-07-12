@@ -8,7 +8,7 @@ const useIrregularVerbs = (levels, variety) => {
     useEffect(() => {
         const fetchVerbs = async () => {
             try {
-                const response = await fetch('/data/grammar/verbs/irregular_verbs.json');
+                const response = await fetch('/data/grammar/verbs/irregular/irregular_verbs.json');
                 if (!response.ok) {
                     throw new Error('Failed to fetch irregular verbs');
                 }
