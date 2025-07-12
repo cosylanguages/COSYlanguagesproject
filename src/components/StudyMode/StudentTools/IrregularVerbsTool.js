@@ -84,8 +84,7 @@ const IrregularVerbsTool = () => {
                 verb.base?.toLowerCase().includes(lowerSearchTerm) ||
                 verb.pastSimple?.toLowerCase().includes(lowerSearchTerm) ||
                 verb.pastParticiple?.toLowerCase().includes(lowerSearchTerm) ||
-                (verb.translation && typeof verb.translation === 'string' && verb.translation.toLowerCase().includes(lowerSearchTerm)) ||
-                (verb.translation && typeof verb.translation === 'object' && verb.translation[currentUILanguage]?.toLowerCase().includes(lowerSearchTerm))
+                (verb.translation && typeof verb.translation === 'string' && verb.translation.toLowerCase().includes(lowerSearchTerm))
             );
         }
     }, [verbs, searchTerm, currentUILanguage, isConjugationData]);
@@ -159,19 +158,14 @@ const IrregularVerbsTool = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredVerbs.map((verb, index) => {
-                            const translationText = typeof verb.translation === 'object' 
-                                ? verb.translation[currentUILanguage] || verb.translation['COSYenglish'] || '' 
-                                : verb.translation || '';
-                            return (
-                                <tr key={verb.id || verb.base || index}>
-                                    <td>{verb.base} {verb.base && <button onClick={() => pronounceText(verb.base, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
-                                    <td>{verb.pastSimple} {verb.pastSimple && <button onClick={() => pronounceText(verb.pastSimple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
-                                    <td>{verb.pastParticiple} {verb.pastParticiple && <button onClick={() => pronounceText(verb.pastParticiple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
-                                    <td>{translationText} {translationText && <button onClick={() => pronounceText(translationText, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
-                                </tr>
-                            );
-                        })}
+                        {filteredVerbs.map((verb, index) => (
+                            <tr key={verb.id || verb.base || index}>
+                                <td>{verb.base} {verb.base && <button onClick={() => pronounceText(verb.base, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
+                                <td>{verb.pastSimple} {verb.pastSimple && <button onClick={() => pronounceText(verb.pastSimple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
+                                <td>{verb.pastParticiple} {verb.pastParticiple && <button onClick={() => pronounceText(verb.pastParticiple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
+                                <td>{verb.translation} {verb.translation && <button onClick={() => pronounceText(verb.translation, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             )}
