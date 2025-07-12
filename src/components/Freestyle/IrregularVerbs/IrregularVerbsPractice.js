@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import IrregularVerbLevelSelector from './IrregularVerbLevelSelector';
-import useIrregularVerbs from '../../../hooks/useIrregularVerbs';
+import useIrregularVerbs from '../../hooks/useIrregularVerbs';
 import IrregularVerbQuiz from '../exercises/grammar/IrregularVerbQuiz';
 import FillLettersExercise from './FillLettersExercise';
 import FillBlanksExercise from './FillBlanksExercise';
