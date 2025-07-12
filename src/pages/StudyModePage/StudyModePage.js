@@ -86,7 +86,7 @@ const StudyModePage = () => {
         })
         .finally(() => setIsLoading(false));
     }
-  }, [selectedRole, currentLangKey, authToken, t]);
+  }, [selectedRole, language, currentLangKey, authToken, t]);
 
 
   // Effect to load lesson sections / full syllabus content when a day is selected
