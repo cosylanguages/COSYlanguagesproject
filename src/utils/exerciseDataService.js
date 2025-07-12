@@ -36,18 +36,18 @@ async function fetchJsonData(filePath) {
 
 // Corrected langFileMap to align with keys from translationsData.js / I18nContext
 const langFileMap = {
-  'COSYenglish': 'english',
-  'COSYfrench': 'french',       // Was 'COSYfrançais'
-  'COSYespañol': 'spanish',
-  'COSYitalian': 'italian',     // Was 'COSYitaliano'
-  'COSYdeutsch': 'german',
-  'COSYportugese': 'portuguese', // Was 'COSYportuguês'
-  'COSYgreek': 'greek',         // Was 'ΚΟΖΥελληνικά'
-  'COSYrussian': 'russian',     // Was 'ТАКОЙрусский'
-  'COSYarmenian': 'armenian',   // Was 'ԾՈՍՅհայկական'
-  'COSYbrezhoneg': 'breton',
-  'COSYtatar': 'tatar',         // Was 'COSYtatarça'
-  'COSYbachkir': 'bashkir'      // Was 'COSYbashkort'
+  'COSYenglish': 'en',
+  'COSYfrench': 'fr',
+  'COSYespañol': 'es',
+  'COSYitalian': 'it',
+  'COSYdeutsch': 'de',
+  'COSYportugese': 'pt',
+  'COSYgreek': 'el',
+  'COSYrussian': 'ru',
+  'COSYarmenian': 'hy',
+  'COSYbrezhoneg': 'br',
+  'COSYtatar': 'tt',
+  'COSYbachkir': 'ba'
 };
 
 function getLanguageFileKey(languageIdentifier) {

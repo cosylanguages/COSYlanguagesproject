@@ -63,9 +63,9 @@ const StudyModePage = () => {
     setCurrentExerciseBlocks([]);
     setError(null);
 
-    if (selectedRole === 'student' && currentLangKey) {
+    if (selectedRole === 'student' && language) {
       setIsLoading(true);
-      getAvailableSyllabusDays(currentLangKey)
+      getAvailableSyllabusDays(language)
         .then(syllabusDays => {
           setDays(syllabusDays || []);
         })
