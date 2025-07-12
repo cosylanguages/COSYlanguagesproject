@@ -9,27 +9,22 @@ const MAX_PROBE_DAYS = 30; // Max number of days to check for syllabus files
  * @param {string} languageCode - The language code (e.g., 'en', 'fr').
  * @returns {Promise<Array<{ dayNumber: number, lessonName: string, fileName: string }>>} An array of available days.
  */
-export async function getAvailableSyllabusDays(languageCode) {
-  if (!languageCode) {
-    console.error("SyllabusService: languageCode is required for getAvailableSyllabusDays.");
+export async function getAvailableSyllabusDays(languageIdentifier) {
+  if (!languageIdentifier) {
+    console.error("SyllabusService: languageIdentifier is required for getAvailableSyllabusDays.");
     return [];
   }
+  const languageCode = ExerciseDataService.getLanguageFileKey(languageIdentifier);
   const availableDays = [];
   for (let i = 1; i <= MAX_PROBE_DAYS; i++) {
     const fileName = `${languageCode}_day${i}_syllabus.json`;
     const filePath = `/data/custom_syllabus/${fileName}`;
     try {
-      const { data, error, errorType } = await ExerciseDataService.fetchJsonData(filePath); // Corrected
-      if (!error && data && data.lesson_name) {
+      const { data, error, errorType } = await ExerciseDataService.fetchJsonData(filePath);
+      if (!error && data) {
         availableDays.push({
           dayNumber: i,
-          lessonName: data.lesson_name,
-          fileName: fileName
-        });
-      } else if (!error && data && !data.lesson_name) {
-         availableDays.push({
-          dayNumber: i,
-          lessonName: `Day ${i} (Name TBD)`,
+          lessonName: data.lesson_name || `Day ${i} (Name TBD)`,
           fileName: fileName
         });
       } else if (error && errorType !== 'fileNotFound' && errorType !== 'jsonError') {
@@ -48,15 +43,16 @@ export async function getAvailableSyllabusDays(languageCode) {
  * @param {number|string} dayNumber - The day number to fetch.
  * @returns {Promise<object|null>} The syllabus data object, or null if not found or error.
  */
-export async function fetchSyllabusForDay(languageCode, dayNumber) {
-  if (!languageCode || dayNumber === undefined || dayNumber === null) {
-    console.error("SyllabusService: languageCode and dayNumber are required for fetchSyllabusForDay.");
+export async function fetchSyllabusForDay(languageIdentifier, dayNumber) {
+  if (!languageIdentifier || dayNumber === undefined || dayNumber === null) {
+    console.error("SyllabusService: languageIdentifier and dayNumber are required for fetchSyllabusForDay.");
     return null;
   }
+  const languageCode = ExerciseDataService.getLanguageFileKey(languageIdentifier);
   const fileName = `${languageCode}_day${dayNumber}_syllabus.json`;
   const filePath = `/data/custom_syllabus/${fileName}`;
   
-  const { data, error } = await ExerciseDataService.fetchJsonData(filePath); // Corrected
+  const { data, error } = await ExerciseDataService.fetchJsonData(filePath);
   
   if (error) {
     console.error(`Error fetching syllabus ${filePath}:`, error);
