@@ -150,15 +150,17 @@ export const DaySelectorIslandWrapper = ({ language }) => <I18nProvider><Latiniz
 
 // --- Practice Navigation Island ---
 export const PracticeNavIslandApp = ({ language, days }) => {
-  const [activeMainCatKey, setActiveMainCatKey] = useState(null);
-  const [currentIslandNavPath, setCurrentIslandNavPath] = useState(['main_practice_categories_stage']);
+  const { t } = useI18n();
+  const [navPath, setNavPath] = useState(['main_practice_categories_stage']);
   const localNavMenuConfig = fullMenuConfig;
 
+  const activeStage = navPath[navPath.length - 1];
+  const activeMainCatKey = navPath.includes('vocabulary') ? 'vocabulary' : navPath.includes('grammar') ? 'grammar' : navPath.includes('reading') ? 'reading' : navPath.includes('speaking') ? 'speaking' : navPath.includes('writing') ? 'writing' : null;
+
   const localIsMenuItemVisible = (path, itemKey, config) => {
-    const currentStage = path[path.length - 1];
-    if (itemKey === currentStage) return true;
-    if (config[itemKey]?.parent === 'main_practice_categories_stage' && currentStage === 'main_practice_categories_stage') return true;
-    if (config[itemKey]?.parent === activeMainCatKey && currentStage === activeMainCatKey) return true;
+    const currentActiveStage = path[path.length - 1];
+    if (itemKey === currentActiveStage) return true; // The stage itself is "visible" as the active container
+    if (config[itemKey]?.parent === currentActiveStage) return true; // Children of the active stage are visible
     return false;
   };
 
@@ -166,29 +168,56 @@ export const PracticeNavIslandApp = ({ language, days }) => {
     const itemConfig = localNavMenuConfig[itemKey];
     if (!itemConfig) return;
 
-    if (itemConfig.parent === 'main_practice_categories_stage') {
-      setActiveMainCatKey(itemKey);
-      setCurrentIslandNavPath(['main_practice_categories_stage', itemKey]);
-      if (itemConfig.isExercise) {
-        exerciseInstanceKey++; // Increment key for remount
-        window.dispatchEvent(new CustomEvent('exerciseSelected', { detail: { language, days, exercise: itemKey, key: exerciseInstanceKey } }));
-      }
-    } else if (itemConfig.parent === activeMainCatKey) {
-      if (itemConfig.isExercise) {
-        exerciseInstanceKey++; // Increment key for remount
-        window.dispatchEvent(new CustomEvent('exerciseSelected', { detail: { language, days, exercise: itemKey, key: exerciseInstanceKey } }));
-      } else {
-        setCurrentIslandNavPath(['main_practice_categories_stage', activeMainCatKey, itemKey]);
-      }
+    // Navigate deeper into the menu
+    const newPath = [...navPath, itemKey];
+    setNavPath(newPath);
+
+    if (itemConfig.isExercise) {
+      exerciseInstanceKey++; // Increment key for remount
+      window.dispatchEvent(new CustomEvent('exerciseSelected', { detail: { language, days, exercise: itemKey, key: exerciseInstanceKey } }));
     }
   };
-  const showSubMenu = activeMainCatKey && localNavMenuConfig[activeMainCatKey]?.children && !localNavMenuConfig[activeMainCatKey]?.isExercise;
+
+  const goBack = () => {
+    if (navPath.length > 1) {
+      const newPath = navPath.slice(0, navPath.length - 1);
+      setNavPath(newPath);
+      // If we go back, we should clear the exercise
+      window.dispatchEvent(new CustomEvent('exerciseSelected', { detail: { exercise: null } }));
+    }
+  };
+
+  const showMainMenu = activeStage === 'main_practice_categories_stage';
+  const showSubMenu = localNavMenuConfig[activeStage]?.parent === 'main_practice_categories_stage' && !localNavMenuConfig[activeStage]?.isExercise;
+  const showBackButton = navPath.length > 1;
 
   return (
-    <>
-      <PracticeCategoryNav activePath={currentIslandNavPath} onMenuSelect={localOnMenuSelect} isMenuItemVisible={localIsMenuItemVisible} allMenuItemsConfig={localNavMenuConfig} activeCategoryKey={activeMainCatKey} />
-      {showSubMenu && <SubPracticeMenu mainCategoryKey={activeMainCatKey} activeSubPracticeKey={null} activePath={currentIslandNavPath} onMenuSelect={localOnMenuSelect} isMenuItemVisible={localIsMenuItemVisible} allMenuItemsConfig={localNavMenuConfig} />}
-    </>
+    <div className="practice-nav-island-content">
+      {showBackButton && (
+        <button onClick={goBack} className="go-back-button">
+          &larr; {t('controls.goBack', 'Go Back')}
+        </button>
+      )}
+      {showMainMenu && (
+        <PracticeCategoryNav
+          activePath={navPath}
+          onMenuSelect={localOnMenuSelect}
+          isMenuItemVisible={localIsMenuItemVisible}
+          allMenuItemsConfig={localNavMenuConfig}
+          activeCategoryKey={null} // activeCategoryKey is now implicitly handled by navPath
+        />
+      )}
+      {showSubMenu && (
+        <SubPracticeMenu
+          mainCategoryKey={activeStage}
+          activeSubPracticeKey={null} // activeSubPracticeKey can be derived from navPath if needed
+          activePath={navPath}
+          onMenuSelect={localOnMenuSelect}
+          isMenuItemVisible={localIsMenuItemVisible}
+          allMenuItemsConfig={localNavMenuConfig}
+        />
+      )}
+    </div>
   );
 };
 export const PracticeNavIslandWrapper = ({ language, days }) => <I18nProvider><LatinizationProvider><PracticeNavIslandApp language={language} days={days} /></LatinizationProvider></I18nProvider>;
