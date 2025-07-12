@@ -28,7 +28,7 @@ const IrregularVerbsTool = () => {
                 filePath = `/data/grammar/verbs/conjugations/conjugations_french.json`; // Assuming files are in public folder
                 dataIsConjugations = true;
             } else if (currentUILanguage === 'COSYenglish') {
-                filePath = `/data/grammar/verbs/irregular/irregular_verbs_COSYenglish.json`;
+                filePath = `/data/grammar/verbs/irregular/irregular_verbs_en.json`;
             } else {
                 const langFileNamePart = currentUILanguage.replace('COSY', '').toLowerCase();
                 filePath = `/data/grammar/verbs/irregular/irregular_verbs_${langFileNamePart}.json`;
