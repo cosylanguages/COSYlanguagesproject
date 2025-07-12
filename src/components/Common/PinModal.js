@@ -16,6 +16,7 @@ const PinModal = ({ onSubmit, onClose, error }) => {
     <div className="modal-overlay"> {/* Changed from modal-backdrop */}
       <div className="modal-content pin-modal-content">
         <h2>{t('pinPromptMessage', 'Enter PIN for Study Mode')}</h2>
+        <p>Please enter the PIN to access the study mode. If you do not have a PIN, please contact the administrator.</p>
         <form onSubmit={handleSubmit}>
           <input
             type="password"

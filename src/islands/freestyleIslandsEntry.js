@@ -48,7 +48,7 @@ export const LanguageIslandApp = () => {
     // In a full SPA with React Router, this would be: navigate('/study');
     // For freestyle.html, we redirect to the main app's study page.
     // Assuming the main app is at the root and handles /study route.
-    window.location.href = '/study';
+    window.location.href = '/COSYlanguagesproject/study';
   };
 
   const handleLanguageChangeForIsland = (newLanguage) => {
