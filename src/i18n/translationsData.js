@@ -29,15 +29,18 @@ const translations = {
     // practiceAll: "🔁 Practice All", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Conjugation Practice"
+        grammar_conjugation_practice: "Conjugation Practice",
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       },
       vocabulary: {
         vocabulary_random_word_image: "Random Word/Image",
         vocabulary_opposites_match: "Opposites/Match It",
         vocabulary_letters_scramble: "Letters",
-        vocabulary_true_false: "True/False"
+        vocabulary_true_false: "True/False",
+        vocabulary_listening: "Listening",
+        vocabulary_practice_all: "Practice All"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Unscramble the Sentence",
@@ -148,7 +151,8 @@ const translations = {
       title: "Manage Your Study Sets",
       backToList: "← Back to Set List",
       errorSetNotFoundForPlayer: "Could not find the set to study. It may have been deleted."
-    }
+    },
+    switchToStudyMode: "Study Mode"
   },
   COSYfrench: { // Standardized: COSY + french
     greeting: "Bonjour",
@@ -177,15 +181,18 @@ const translations = {
     // practiceAll: "🔁 Tout Pratiquer", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Pratique de Conjugaison"
+        grammar_conjugation_practice: "Pratique de Conjugaison",
+        sentence_unscramble_exercise: "Remettre la Phrase en Ordre",
+        fill_in_the_blanks_exercise: "Compléter les Trous"
       },
       vocabulary: {
         vocabulary_random_word_image: "Mot/Image Aléatoire",
         vocabulary_opposites_match: "Contraires/Associer",
         vocabulary_letters_scramble: "Lettres",
-        vocabulary_true_false: "Vrai/Faux"
+        vocabulary_true_false: "Vrai/Faux",
+        vocabulary_listening: "Écoute",
+        vocabulary_practice_all: "Tout Pratiquer"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Remettre la Phrase en Ordre",
@@ -296,7 +303,8 @@ const translations = {
       title: "Gérer Vos Decks d'Étude",
       backToList: "← Retour à la Liste des Decks",
       errorSetNotFoundForPlayer: "Impossible de trouver le deck à étudier. Il a peut-être été supprimé."
-    }
+    },
+    switchToStudyMode: "Mode Étude"
   },
   COSYitalian: { // Standardized: COSY + italian (was COSYitaliano)
     languageNameInEnglish: "Italian",
@@ -327,15 +335,18 @@ const translations = {
     // practiceAll: "🔁 Practice All", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Conjugation Practice"
+        grammar_conjugation_practice: "Conjugation Practice",
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       },
       vocabulary: {
         vocabulary_random_word_image: "Random Word/Image",
         vocabulary_opposites_match: "Opposites/Match It",
         vocabulary_letters_scramble: "Letters",
-        vocabulary_true_false: "True/False"
+        vocabulary_true_false: "True/False",
+        vocabulary_listening: "Listening",
+        vocabulary_practice_all: "Practice All"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Unscramble the Sentence",
@@ -477,15 +488,18 @@ const translations = {
     // practiceAll: "🔁 Practice All", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Conjugation Practice"
+        grammar_conjugation_practice: "Conjugation Practice",
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       },
       vocabulary: {
         vocabulary_random_word_image: "Random Word/Image",
         vocabulary_opposites_match: "Opposites/Match It",
         vocabulary_letters_scramble: "Letters",
-        vocabulary_true_false: "True/False"
+        vocabulary_true_false: "True/False",
+        vocabulary_listening: "Listening",
+        vocabulary_practice_all: "Practice All"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Unscramble the Sentence",
@@ -627,15 +641,18 @@ const translations = {
     // practiceAll: "🔁 Practice All", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Conjugation Practice"
+        grammar_conjugation_practice: "Conjugation Practice",
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       },
       vocabulary: {
         vocabulary_random_word_image: "Random Word/Image",
         vocabulary_opposites_match: "Opposites/Match It",
         vocabulary_letters_scramble: "Letters",
-        vocabulary_true_false: "True/False"
+        vocabulary_true_false: "True/False",
+        vocabulary_listening: "Listening",
+        vocabulary_practice_all: "Practice All"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Unscramble the Sentence",
@@ -777,15 +794,18 @@ const translations = {
     // practiceAll: "🔁 Practice All", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Conjugation Practice"
+        grammar_conjugation_practice: "Conjugation Practice",
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       },
       vocabulary: {
         vocabulary_random_word_image: "Random Word/Image",
         vocabulary_opposites_match: "Opposites/Match It",
         vocabulary_letters_scramble: "Letters",
-        vocabulary_true_false: "True/False"
+        vocabulary_true_false: "True/False",
+        vocabulary_listening: "Listening",
+        vocabulary_practice_all: "Practice All"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Unscramble the Sentence",
@@ -927,15 +947,18 @@ const translations = {
     // practiceAll: "🔁 Practice All", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Conjugation Practice"
+        grammar_conjugation_practice: "Conjugation Practice",
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       },
       vocabulary: {
         vocabulary_random_word_image: "Random Word/Image",
         vocabulary_opposites_match: "Opposites/Match It",
         vocabulary_letters_scramble: "Letters",
-        vocabulary_true_false: "True/False"
+        vocabulary_true_false: "True/False",
+        vocabulary_listening: "Listening",
+        vocabulary_practice_all: "Practice All"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Unscramble the Sentence",
@@ -1077,15 +1100,18 @@ const translations = {
     // practiceAll: "🔁 Practice All", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Conjugation Practice"
+        grammar_conjugation_practice: "Conjugation Practice",
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       },
       vocabulary: {
         vocabulary_random_word_image: "Random Word/Image",
         vocabulary_opposites_match: "Opposites/Match It",
         vocabulary_letters_scramble: "Letters",
-        vocabulary_true_false: "True/False"
+        vocabulary_true_false: "True/False",
+        vocabulary_listening: "Listening",
+        vocabulary_practice_all: "Practice All"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Unscramble the Sentence",
@@ -1227,15 +1253,18 @@ const translations = {
     // practiceAll: "🔁 Practice All", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Conjugation Practice"
+        grammar_conjugation_practice: "Conjugation Practice",
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       },
       vocabulary: {
         vocabulary_random_word_image: "Random Word/Image",
         vocabulary_opposites_match: "Opposites/Match It",
         vocabulary_letters_scramble: "Letters",
-        vocabulary_true_false: "True/False"
+        vocabulary_true_false: "True/False",
+        vocabulary_listening: "Listening",
+        vocabulary_practice_all: "Practice All"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Unscramble the Sentence",
@@ -1377,15 +1406,18 @@ const translations = {
     // practiceAll: "🔁 Practice All", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Conjugation Practice"
+        grammar_conjugation_practice: "Conjugation Practice",
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       },
       vocabulary: {
         vocabulary_random_word_image: "Random Word/Image",
         vocabulary_opposites_match: "Opposites/Match It",
         vocabulary_letters_scramble: "Letters",
-        vocabulary_true_false: "True/False"
+        vocabulary_true_false: "True/False",
+        vocabulary_listening: "Listening",
+        vocabulary_practice_all: "Practice All"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Unscramble the Sentence",
@@ -1527,15 +1559,18 @@ const translations = {
     // practiceAll: "🔁 Practice All", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Conjugation Practice"
+        grammar_conjugation_practice: "Conjugation Practice",
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       },
       vocabulary: {
         vocabulary_random_word_image: "Random Word/Image",
         vocabulary_opposites_match: "Opposites/Match It",
         vocabulary_letters_scramble: "Letters",
-        vocabulary_true_false: "True/False"
+        vocabulary_true_false: "True/False",
+        vocabulary_listening: "Listening",
+        vocabulary_practice_all: "Practice All"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Unscramble the Sentence",
@@ -1677,15 +1712,18 @@ const translations = {
     // practiceAll: "🔁 Practice All", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Conjugation Practice"
+        grammar_conjugation_practice: "Conjugation Practice",
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       },
       vocabulary: {
         vocabulary_random_word_image: "Random Word/Image",
         vocabulary_opposites_match: "Opposites/Match It",
         vocabulary_letters_scramble: "Letters",
-        vocabulary_true_false: "True/False"
+        vocabulary_true_false: "True/False",
+        vocabulary_listening: "Listening",
+        vocabulary_practice_all: "Practice All"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Unscramble the Sentence",
@@ -1827,15 +1865,18 @@ const translations = {
     // practiceAll: "🔁 Practice All", // Removed as a main category
     subPractice: {
       grammar: {
-        grammar_conjugation_practice: "Conjugation Practice"
+        grammar_conjugation_practice: "Conjugation Practice",
+        sentence_unscramble_exercise: "Sentence Unscramble",
+        fill_in_the_blanks_exercise: "Fill in the Blanks"
       },
       vocabulary: {
         vocabulary_random_word_image: "Random Word/Image",
         vocabulary_opposites_match: "Opposites/Match It",
         vocabulary_letters_scramble: "Letters",
-        vocabulary_true_false: "True/False"
+        vocabulary_true_false: "True/False",
+        vocabulary_listening: "Listening",
+        vocabulary_practice_all: "Practice All"
       }
-      // sentenceSkills block removed
     },
     sentenceUnscramble: {
       title: "Unscramble the Sentence",

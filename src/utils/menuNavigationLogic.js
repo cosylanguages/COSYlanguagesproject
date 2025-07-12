@@ -61,18 +61,21 @@ export const allMenuItemsConfig = {
       'vocabulary_random_word_image',
       'vocabulary_opposites_match',
       'vocabulary_letters_scramble',
-      'vocabulary_true_false'
+      'vocabulary_true_false',
+      'vocabulary_listening',
+      'vocabulary_practice_all'
     ]
   },
   'grammar': {
     parent: 'main_practice_categories_stage',
-    // Children can be refined or kept if they are still relevant under "Grammar"
     children: [
       'grammar_fill_gaps_exercise',
       'grammar_type_verb_exercise',
       'grammar_select_article_exercise',
       'grammar_word_order_exercise',
-      'grammar_conjugation_practice'
+      'grammar_conjugation_practice',
+      'sentence_unscramble_exercise',
+      'fill_in_the_blanks_exercise'
     ]
   },
   'reading': {
@@ -107,6 +110,8 @@ export const allMenuItemsConfig = {
   // 'vocab_type_opposite_exercise': { parent: 'vocabulary', isExercise: true },
   // 'vocab_build_word_exercise': { parent: 'vocabulary', isExercise: true },
   // 'vocab_practice_all_sub_host': { parent: 'vocabulary', isExercise: true },
+  'vocabulary_listening': { parent: 'vocabulary', isExercise: true, i18nKey: 'subPractice.vocabulary.vocabulary_listening' }, // Maps to ListeningPracticeHost
+  'vocabulary_practice_all': { parent: 'vocabulary', isExercise: true, i18nKey: 'subPractice.vocabulary.vocabulary_practice_all' }, // Maps to PracticeAllVocabHost
 
   // Grammar Sub-Practice Exercises (Leaf nodes)
   'grammar_fill_gaps_exercise': { parent: 'grammar', isExercise: true },
@@ -114,6 +119,8 @@ export const allMenuItemsConfig = {
   'grammar_select_article_exercise': { parent: 'grammar', isExercise: true },
   'grammar_word_order_exercise': { parent: 'grammar', isExercise: true },
   'grammar_conjugation_practice': { parent: 'grammar', isExercise: true, i18nKey: 'subPractice.grammar.grammar_conjugation_practice' },
+  'sentence_unscramble_exercise': { parent: 'grammar', isExercise: true, i18nKey: 'subPractice.grammar.sentence_unscramble_exercise' },
+  'fill_in_the_blanks_exercise': { parent: 'grammar', isExercise: true, i18nKey: 'subPractice.grammar.fill_in_the_blanks_exercise' },
 
   // Reading Sub-Practice Exercises (Leaf nodes)
   'reading_story_exercise': { parent: 'reading', isExercise: true },
