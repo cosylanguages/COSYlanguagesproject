@@ -56,6 +56,26 @@
   max-width: 400px; /* Match selector width */
 }
 
+/* Button to switch from Freestyle to Study Mode */
+.study-mode-switch-btn {
+  background-color: var(--color-secondary, #6c757d);
+  color: var(--color-text-on-dark, white);
+  padding: var(--spacing-sm, 8px) var(--spacing-md, 15px);
+  border-radius: var(--border-radius-md, 6px);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--font-size-base, 1rem);
+  box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.075));
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease-in-out, transform 0.15s ease;
+  margin-top: var(--spacing-md, 1rem); /* Add some space above it */
+}
+
+.study-mode-switch-btn:hover {
+  background-color: var(--color-secondary-dark, #545b62);
+  transform: translateY(-1px);
+}
 
 .study-mode-button {
   background-color: var(--color-primary, #007bff);

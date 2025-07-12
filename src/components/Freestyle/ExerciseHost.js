@@ -111,9 +111,13 @@ const exerciseMap = {
   'writing_storytelling_exercise': StorytellingExercise,
   'writing_diary_exercise': DiaryPracticeExercise,
 
-  // General Listening (if directly selected as a category)
-  'listening': ListeningPracticeHost,
+  // General Listening (if directly selected as a category) - Obsolete, now under vocabulary
+  // 'listening': ListeningPracticeHost,
   'possessives': () => <PlaceholderExercise name="Possessives" subPracticeType="possessives" />, // Placeholder
+
+  // New Vocabulary mappings based on user feedback
+  'vocabulary_listening': ListeningPracticeHost,
+  'vocabulary_practice_all': PracticeAllVocabHost,
 };
 
 const ExerciseHost = ({ subPracticeType, language, days, exerciseKey }) => {
