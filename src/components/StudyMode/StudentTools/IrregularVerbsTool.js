@@ -28,7 +28,7 @@ const IrregularVerbsTool = () => {
                 filePath = `/data/grammar/verbs/conjugations/conjugations_french.json`; // Assuming files are in public folder
                 dataIsConjugations = true;
             } else if (currentUILanguage === 'COSYenglish') {
-                filePath = `/data/grammar/verbs/irregular/irregular_verbs_en.json`;
+                filePath = `/data/vocabulary/dictionary/en/verbs.js`;
             } else {
                 const langFileNamePart = currentUILanguage.replace('COSY', '').toLowerCase();
                 filePath = `/data/grammar/verbs/irregular/irregular_verbs_${langFileNamePart}.json`;
@@ -40,25 +40,24 @@ const IrregularVerbsTool = () => {
                 const response = await fetch(filePath);
                 if (!response.ok) {
                     if (response.status === 404) {
-                        setNoDataForLanguage(true); // Set specific state for 404
+                        setNoDataForLanguage(true);
                         console.warn(`Irregular verbs data not found for ${currentUILanguage} at ${filePath}.`);
-                        setVerbs([]); // Ensure verbs list is empty
-                        // No error thrown here for 404, will be handled by conditional rendering
+                        setVerbs([]);
                     } else {
-                        // For other HTTP errors, still treat as a general error
                         throw new Error(t('irregularVerbsLoadHttpError', { status: response.status }) || `Failed to load data: ${response.status}`);
                     }
-                } else { // response.ok, proceed to parse JSON
-                    const data = await response.json();
+                } else {
+                    const text = await response.text();
+                    const jsonText = text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1);
+                    const data = JSON.parse(jsonText);
                     if (dataIsConjugations) {
                         setVerbs(data.verbs || []);
                     } else {
-                        setVerbs(Array.isArray(data) ? data : []);
+                        setVerbs(data.Verbs || []);
                     }
                 }
-            } catch (err) { // This will now primarily catch non-404 fetch errors or JSON parsing errors
+            } catch (err) {
                 console.error(`Error loading irregular verbs for ${currentUILanguage} from ${filePath}:`, err);
-                // If we are in this catch, it's a non-404 error, so set the general error.
                 setError(err.message);
                 setVerbs([]);
             } finally {
