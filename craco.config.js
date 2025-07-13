@@ -21,9 +21,7 @@ module.exports = {
           template: paths.appHtml, // public/index.html
           filename: 'index.html',
           chunks: ['main'], // Only include the main bundle related chunks
-          // Ensure other CRA defaults are preserved if needed (e.g. favicon, manifest)
-          // We might need to explicitly pass publicPath, etc. if CRA's default plugin did.
-          // For simplicity, starting with minimal options.
+          publicPath: env === 'production' ? '/COSYlanguagesproject/' : '/',
         })
       );
 
@@ -34,6 +32,7 @@ module.exports = {
           template: path.resolve(__dirname, 'public/freestyle.html'),
           filename: 'freestyle.html',
           chunks: ['freestyle'], // Only include the freestyle bundle related chunks
+          publicPath: env === 'production' ? '/COSYlanguagesproject/' : '/',
         })
       );
 
