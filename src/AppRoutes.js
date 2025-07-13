@@ -35,18 +35,17 @@ const StudyModeProtectedRoute = ({ children }) => {
 
     const handleModalClose = () => {
         setShowPinModal(false);
-        navigate('/');
+        // We don't navigate away, just close the modal.
+        // The user can then try to navigate to /study again if they wish.
     }
 
     if (isPinVerified) {
         return children;
     }
 
-    if (showPinModal) {
-        return <PinModal onSubmit={handlePinSubmit} onClose={handleModalClose} error={t('auth.incorrectPin', pinError)} />;
-    }
-
-    return <Navigate to="/" replace />;
+    // If not verified, always show the PIN modal.
+    // The conditional rendering of the modal is handled inside this component's logic.
+    return <PinModal onSubmit={handlePinSubmit} onClose={handleModalClose} error={pinError} />;
 };
 
 // ProtectedRoute for general authentication (if needed for pages like MyStudySetsPage)
