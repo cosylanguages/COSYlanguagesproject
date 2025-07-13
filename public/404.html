@@ -13,33 +13,32 @@
       // e.g. http://user.github.io/repo/?p=/some/path&q=X#hash
       // Note: this 404.html file must be at least 512 bytes for Internet Explorer to display it.
 
-      var l = window.location;
-      // segmentCount is the number of segments of the path that represent the base URL
-      // For example, if your site is at https://user.github.io/repo/, segmentCount should be 1.
-      // If at https://user.github.io/, segmentCount should be 0.
-      var segmentCount = l.pathname.startsWith('/COSYlanguagesproject/') ? 1 : 0;
-      // A more generic way if you don't want to hardcode 'COSYlanguagesproject':
-      // var segmentCount = l.hostname.endsWith('github.io') && l.pathname.split('/')[1] && l.pathname.split('/')[1] !== '' ? 1 : 0;
-      // However, given that basename is hardcoded in src/index.js for prod, being specific here is okay.
+      (function() {
+        var l = window.location;
+        // Correctly determine the basename from the script tag.
+        // This makes the script more portable and less dependent on hardcoded values.
+        var SCRIPT_NAME = 'spa-github-pages-script';
+        var script = document.getElementById(SCRIPT_NAME);
+        // The script src will be like "https://user.github.io/repo/404.html" or "/repo/404.html"
+        // We want to extract the "/repo" part.
+        var path = script.src.substring(l.origin.length, script.src.lastIndexOf('/'));
 
+        var segmentCount = path.startsWith('/') ? path.split('/').length -1 : 0;
 
-      var newPath = l.pathname.slice(1).split('/').slice(segmentCount).join('/');
-      var newSearch = l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '';
-      var newHash = l.hash;
+        var newPath = l.pathname.slice(1).split('/').slice(segmentCount).join('/');
+        var newSearch = l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '';
+        var newHash = l.hash;
 
-      // Construct the new URL to redirect to.
-      // It should go to the root of the SPA, which is index.html in the base directory.
-      // Base directory path:
-      var baseDir = l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/';
-      if (baseDir === "//") baseDir = "/"; // Handles case where segmentCount is 0 and path was /something -> //?p=...
+        var baseDir = path + '/';
 
-      var redirectTo = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-                       baseDir + 
-                       '?p=/' + newPath + // Ensure 'p' starts with a slash
-                       newSearch +
-                       newHash;
-      
-      l.replace(redirectTo);
+        var redirectTo = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+                         baseDir +
+                         '?p=/' + newPath +
+                         newSearch +
+                         newHash;
+
+        l.replace(redirectTo);
+      })();
 
     </script>
   </head>
