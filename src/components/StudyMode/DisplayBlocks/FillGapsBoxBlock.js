@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import './FillGapsBoxBlock.css';
+import '../../Freestyle/freestyle-shared.css';
 
 // Helper to shuffle an array
 const shuffleArray = (array) => {
@@ -105,7 +106,7 @@ const FillGapsBoxBlock = ({ blockData }) => {
 
 
     return (
-        <div className="fill-gaps-box-block">
+        <div className="fill-gaps-box-block cosy-exercise-container">
             {title && getLocalizedText(title) && <h4>{getLocalizedText(title)}</h4>}
             {instructions && getLocalizedText(instructions) && <p className="instructions">{getLocalizedText(instructions)}</p>}
 

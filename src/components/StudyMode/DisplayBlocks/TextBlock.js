@@ -3,6 +3,7 @@ import { useI18n } from '../../../i18n/I18nContext';
 import TransliterableText from '../../Common/TransliterableText'; // Added
 import { pronounceText } from '../../../utils/speechUtils'; // Added for TTS
 import './SimpleTextDisplay.css'; 
+import '../../Freestyle/freestyle-shared.css';
 
 const TextBlock = ({ blockData }) => {
     const { t, language: globalLanguage } = useI18n(); // Renamed to avoid conflict with blockData.lang
@@ -27,7 +28,7 @@ const TextBlock = ({ blockData }) => {
     const contentTextForTTS = textToShow; // Raw text for TTS
 
     return (
-        <div className="text-block display-simple-block"> 
+        <div className="text-block display-simple-block cosy-exercise-container">
             <h4>
                 <TransliterableText text={title} langOverride={effectiveLang} />
                 {titleTextForTTS && (
