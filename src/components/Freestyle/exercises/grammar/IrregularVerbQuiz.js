@@ -4,8 +4,8 @@ import { normalizeString } from '../../../../utils/stringUtils';
 import useLatinization from '../../../../hooks/useLatinization'; // Though not strictly needed for English, good for consistency
 
 const IrregularVerbQuiz = ({
-  verb, // { base, pastSimple, pastParticiple, translation_en }
-  language, // Should be 'COSYenglish' for this component
+  verb, // { base, pastSimple, pastParticiple, translation }
+  language,
   onCheckAnswer,
   onSetFeedback,
   isRevealedExternally,

@@ -14,7 +14,6 @@ global.fetch = jest.fn(() =>
           definition: 'To exist or live.',
           example: 'I want to be a doctor.',
           level: 'A1',
-          variety: 'COSYenglish',
         },
         {
           infinitive: 'go',
@@ -23,7 +22,6 @@ global.fetch = jest.fn(() =>
           definition: 'To move from one place to another.',
           example: 'I go to school by bus.',
           level: 'A1',
-          variety: 'COSYenglish',
         },
         {
           infinitive: 'eat',
@@ -32,15 +30,14 @@ global.fetch = jest.fn(() =>
           definition: 'To put food into the mouth and chew and swallow it.',
           example: 'I like to eat apples.',
           level: 'A2',
-          variety: 'COSYenglish',
         },
       ]),
   })
 );
 
 describe('useIrregularVerbs', () => {
-  it('should fetch and return all verbs when no levels or variety are provided', async () => {
-    const { result } = renderHook(() => useIrregularVerbs());
+  it('should fetch and return all verbs when no levels are provided', async () => {
+    const { result } = renderHook(() => useIrregularVerbs(null, 'en'));
 
     await waitFor(() => expect(result.current.loading).toBe(false));
 
@@ -49,7 +46,7 @@ describe('useIrregularVerbs', () => {
   });
 
   it('should filter verbs by level', async () => {
-    const { result } = renderHook(() => useIrregularVerbs('A1'));
+    const { result } = renderHook(() => useIrregularVerbs('A1', 'en'));
 
     await waitFor(() => expect(result.current.loading).toBe(false));
 
@@ -59,15 +56,7 @@ describe('useIrregularVerbs', () => {
   });
 
   it('should filter verbs by multiple levels', async () => {
-    const { result } = renderHook(() => useIrregularVerbs('A1,A2'));
-
-    await waitFor(() => expect(result.current.loading).toBe(false));
-
-    expect(result.current.verbs).toHaveLength(3);
-  });
-
-  it('should filter verbs by variety', async () => {
-    const { result } = renderHook(() => useIrregularVerbs(null, 'COSYenglish'));
+    const { result } = renderHook(() => useIrregularVerbs('A1,A2', 'en'));
 
     await waitFor(() => expect(result.current.loading).toBe(false));
 
@@ -82,7 +71,7 @@ describe('useIrregularVerbs', () => {
       })
     );
 
-    const { result } = renderHook(() => useIrregularVerbs());
+    const { result } = renderHook(() => useIrregularVerbs(null, 'en'));
 
     await waitFor(() => expect(result.current.loading).toBe(false));
 
