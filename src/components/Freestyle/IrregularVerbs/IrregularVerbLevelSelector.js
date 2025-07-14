@@ -21,7 +21,7 @@ const IrregularVerbLevelSelector = () => {
     };
 
     const handleStart = () => {
-        navigate(`/study/irregular-verbs/practice?levels=${selectedLevels.join(',')}&lang=${language}`);
+        navigate(`/freestyle/irregular-verbs/practice?levels=${selectedLevels.join(',')}&lang=${language}`);
     };
 
     return (
