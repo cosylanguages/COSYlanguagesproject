@@ -305,7 +305,7 @@ const StudyModePage = () => {
         <ToggleLatinizationButton
           currentDisplayLanguage={currentLangKey || language}
         />
-        <Button onClick={() => window.location.href = '/COSYlanguagesproject/freestyle.html'}>
+        <Button onClick={() => window.location.href = '/freestyle'}>
           Freestyle 🚀
         </Button>
       </div>
