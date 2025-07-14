@@ -19,6 +19,7 @@ const STUDY_MODE_PIN = "1234";
 // StudyModeProtectedRoute component (for PIN access)
 const StudyModeProtectedRoute = ({ children }) => {
     const [isPinVerified, setIsPinVerified] = useState(sessionStorage.getItem('studyModeUnlocked') === 'true');
+    const [showPinModal, setShowPinModal] = useState(!isPinVerified);
     const [pinError, setPinError] = useState('');
     const navigate = useNavigate();
 
@@ -26,6 +27,7 @@ const StudyModeProtectedRoute = ({ children }) => {
         if (pin === STUDY_MODE_PIN) {
             sessionStorage.setItem('studyModeUnlocked', 'true');
             setIsPinVerified(true);
+            setShowPinModal(false);
             setPinError('');
         } else {
             setPinError('Incorrect PIN. Please try again.');
@@ -33,6 +35,7 @@ const StudyModeProtectedRoute = ({ children }) => {
     };
 
     const handleModalClose = () => {
+        setShowPinModal(false);
         navigate('/freestyle');
     }
 
@@ -40,9 +43,13 @@ const StudyModeProtectedRoute = ({ children }) => {
         return children;
     }
 
-    // If not verified, always show the PIN modal.
-    // The conditional rendering of the modal is handled inside this component's logic.
-    return <PinModal onSubmit={handlePinSubmit} onClose={handleModalClose} error={pinError} />;
+    if (showPinModal) {
+        return <PinModal onSubmit={handlePinSubmit} onClose={handleModalClose} error={pinError} />;
+    }
+
+    // If the modal is closed and PIN is not verified, redirect to freestyle
+    // This can happen if the user closes the modal without entering the PIN
+    return <Navigate to="/freestyle" replace />;
 };
 
 // ProtectedRoute for general authentication (if needed for pages like MyStudySetsPage)
