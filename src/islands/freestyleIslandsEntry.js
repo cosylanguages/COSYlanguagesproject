@@ -48,7 +48,7 @@ export const LanguageIslandApp = () => {
     // In a full SPA with React Router, this would be: navigate('/study');
     // For freestyle.html, we redirect to the main app's study page.
     // Assuming the main app is at the root and handles /study route.
-    window.location.href = '/COSYlanguagesproject/study';
+    window.location.href = '/COSYlanguagesproject/';
   };
 
   const handleLanguageChangeForIsland = (newLanguage) => {
@@ -245,11 +245,19 @@ export const HelpPopupIslandWrapper = () => <I18nProvider><LatinizationProvider>
 function mountFreestyleIslands() {
   if (typeof window !== 'undefined' && typeof document !== 'undefined' && (typeof process === 'undefined' || process.env.NODE_ENV !== 'test')) {
     const languageContainer = document.getElementById('language-selector-island-container');
+    const daySelectorContainer = document.getElementById('day-selector-island-container');
+    const practiceNavContainer = document.getElementById('practice-nav-island-container');
+    const exerciseHostContainer = document.getElementById('exercise-host-container');
+    const helpPopupContainer = document.getElementById('help-popup-island-container');
+
+    if (!languageContainer || !daySelectorContainer || !practiceNavContainer || !exerciseHostContainer || !helpPopupContainer) {
+      return;
+    }
+
     if (languageContainer) {
       ReactDOM.createRoot(languageContainer).render(<React.StrictMode><LanguageIslandWrapper /></React.StrictMode>);
     }
 
-    const helpPopupContainer = document.getElementById('help-popup-island-container');
     if (helpPopupContainer) {
       ReactDOM.createRoot(helpPopupContainer).render(<React.StrictMode><HelpPopupIslandWrapper /></React.StrictMode>);
     }
