@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import IrregularVerbLevelSelector from './IrregularVerbLevelSelector';
 import useIrregularVerbs from '../../../hooks/useIrregularVerbs.js';
 import IrregularVerbQuiz from '../exercises/grammar/IrregularVerbQuiz';
@@ -73,7 +73,7 @@ const IrregularVerbsPractice = () => {
                 <button onClick={() => setExerciseType('quiz')} className={exerciseType === 'quiz' ? 'selected' : ''}>Quiz</button>
                 <button onClick={() => setExerciseType('fill-letters')} className={exerciseType === 'fill-letters' ? 'selected' : ''}>Fill Letters</button>
                 <button onClick={() => setExerciseType('fill-blanks')} className={exerciseType === 'fill-blanks' ? 'selected' : ''}>Fill Blanks</button>
-                <Link to="/study" className="study-mode-button">Study Mode</Link>
+                <a href="/" className="study-mode-button">Study Mode</a>
             </div>
             <div
                 className="verb-definition-container"

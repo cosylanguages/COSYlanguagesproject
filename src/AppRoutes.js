@@ -8,6 +8,7 @@ import Login from './components/Auth/Login';
 import StudyModePage from './pages/StudyModePage/StudyModePage';
 // FreestyleModePage is no longer imported or used here
 import MyStudySetsPage from './pages/MyStudySetsPage/MyStudySetsPage'; // Import MyStudySetsPage
+import FreestyleModePage from './pages/FreestyleModePage/FreestyleModePage';
 import ShowWordExercise from './components/Freestyle/exercises/vocabulary/ShowWordExercise';
 import IrregularVerbsPractice from './components/Freestyle/IrregularVerbs/IrregularVerbsPractice';
 import PinModal from './components/Common/PinModal';
@@ -67,28 +68,19 @@ function AppRoutes() {
     if (loadingAuth) {
         catchAllElement = <div>{t('auth.loadingStatus', 'Loading authentication status...')}</div>;
     } else if (isAuthenticated) {
-        // Authenticated users hitting an unknown SPA path go to the SPA root (which redirects to freestyle.html)
+        // Authenticated users hitting an unknown SPA path go to the SPA root
         catchAllElement = <Navigate to="/" replace />;
     } else {
-        // Unauthenticated users hitting an unknown SPA path go to freestyle.html directly
-        catchAllElement = <Navigate to="/freestyle.html" replace />;
+        // Unauthenticated users hitting an unknown SPA path go to the login page
+        catchAllElement = <Navigate to="/login" replace />;
     }
 
     return (
         <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Layout />}>
-                {/* Redirect root path to /freestyle.html */}
-                <Route index element={<Navigate to="/freestyle.html" replace />} />
-                {/*
-                  The route <Route path="freestyle" ... /> is removed.
-                  The web server will serve public/freestyle.html directly for the /freestyle or /freestyle.html path.
-                  If your server setup (e.g., in development with webpack-dev-server or in production)
-                  doesn't automatically serve freestyle.html for the path /freestyle, you might need to:
-                  1. Explicitly link to /freestyle.html in your navigation.
-                  2. Configure server rewrites (e.g., /freestyle -> /freestyle.html).
-                  For simplicity, we will assume direct links to /freestyle.html or server behavior that handles this.
-                */}
+                <Route index element={<Navigate to="/freestyle" replace />} />
+                <Route path="freestyle" element={<FreestyleModePage />} />
                 <Route
                   path="study"
                   element={
