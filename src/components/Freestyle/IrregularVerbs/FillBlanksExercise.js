@@ -14,7 +14,7 @@ const FillBlanksExercise = ({ verb, onCorrect, onIncorrect }) => {
         setCorrectAnswer(randomForm.form);
 
         if (verb.example) {
-            const blankedSentence = verb.example.replace(new RegExp(verb.base, 'gi'), '______');
+            const blankedSentence = verb.example.replace(new RegExp(randomForm.form, 'gi'), '______');
             setSentence(blankedSentence);
         } else {
             setSentence(`(No example sentence available for this verb)`);

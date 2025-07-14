@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CosyLanguageSelector from '../../../LanguageSelector/CosyLanguageSelector';
+import CosyLanguageSelector from '../../LanguageSelector/CosyLanguageSelector';
 import './IrregularVerbLevelSelector.css';
 
 const IrregularVerbLevelSelector = () => {
