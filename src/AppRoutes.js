@@ -19,7 +19,6 @@ const STUDY_MODE_PIN = "1234";
 // StudyModeProtectedRoute component (for PIN access)
 const StudyModeProtectedRoute = ({ children }) => {
     const [isPinVerified, setIsPinVerified] = useState(sessionStorage.getItem('studyModeUnlocked') === 'true');
-    const [showPinModal, setShowPinModal] = useState(!isPinVerified);
     const [pinError, setPinError] = useState('');
     const navigate = useNavigate();
 
@@ -27,7 +26,6 @@ const StudyModeProtectedRoute = ({ children }) => {
         if (pin === STUDY_MODE_PIN) {
             sessionStorage.setItem('studyModeUnlocked', 'true');
             setIsPinVerified(true);
-            setShowPinModal(false);
             setPinError('');
         } else {
             setPinError('Incorrect PIN. Please try again.');
@@ -35,7 +33,6 @@ const StudyModeProtectedRoute = ({ children }) => {
     };
 
     const handleModalClose = () => {
-        setShowPinModal(false);
         navigate('/freestyle');
     }
 
