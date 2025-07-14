@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import CosyLanguageSelector from '../../../LanguageSelector/CosyLanguageSelector';
 import './IrregularVerbLevelSelector.css';
 
 const IrregularVerbLevelSelector = () => {
     const [selectedLevels, setSelectedLevels] = useState([]);
-    const [languageVariety, setLanguageVariety] = useState('all');
+    const [language, setLanguage] = useState('en');
     const navigate = useNavigate();
 
     const levels = ['a0', 'a1', 'a2', 'b1', 'b2', 'c1', 'c2', 'all'];
@@ -20,12 +21,13 @@ const IrregularVerbLevelSelector = () => {
     };
 
     const handleStart = () => {
-        navigate(`/study/irregular-verbs/practice?levels=${selectedLevels.join(',')}&variety=${languageVariety}`);
+        navigate(`/study/irregular-verbs/practice?levels=${selectedLevels.join(',')}&lang=${language}`);
     };
 
     return (
         <div className="level-selector-container">
             <h2>Select Irregular Verb Levels</h2>
+            <CosyLanguageSelector selectedLanguage={language} onLanguageChange={setLanguage} />
             <div className="level-options">
                 {levels.map(level => (
                     <button
@@ -36,14 +38,6 @@ const IrregularVerbLevelSelector = () => {
                         {level.toUpperCase()}
                     </button>
                 ))}
-            </div>
-            <div className="language-variety-selector">
-                <label htmlFor="language-variety">Language Variety:</label>
-                <select id="language-variety" value={languageVariety} onChange={e => setLanguageVariety(e.target.value)}>
-                    <option value="all">All</option>
-                    <option value="american">American English</option>
-                    <option value="british">British English</option>
-                </select>
             </div>
             <button className="start-button" onClick={handleStart} disabled={selectedLevels.length === 0}>
                 Start Practice

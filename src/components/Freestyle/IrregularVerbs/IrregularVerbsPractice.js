@@ -11,8 +11,8 @@ import './IrregularVerbsPractice.css';
 const IrregularVerbsPractice = () => {
     const [searchParams] = useSearchParams();
     const levels = searchParams.get('levels');
-    const variety = searchParams.get('variety');
-    const { verbs, loading, error } = useIrregularVerbs(levels, variety);
+    const lang = searchParams.get('lang');
+    const { verbs, loading, error } = useIrregularVerbs(levels, lang);
     const [currentVerbIndex, setCurrentVerbIndex] = useState(0);
     const [showDefinition, setShowDefinition] = useState(false);
     const [exerciseType, setExerciseType] = useState('quiz'); // 'quiz', 'fill-letters', 'fill-blanks'
@@ -23,7 +23,7 @@ const IrregularVerbsPractice = () => {
         }
     }, [verbs]);
 
-    if (!levels) {
+    if (!levels || !lang) {
         return <IrregularVerbLevelSelector />;
     }
 
@@ -50,7 +50,7 @@ const IrregularVerbsPractice = () => {
                 return (
                     <IrregularVerbQuiz
                         verb={currentVerb}
-                        language="COSYenglish"
+                        language={lang}
                         onCheckAnswer={() => {}}
                         onSetFeedback={() => {}}
                         isRevealedExternally={false}
