@@ -19,6 +19,8 @@ export const availableTemplateSectionTypes = {
         "Move the word to the gap (Fill Gaps from Box)": "interactive/move-word-gap", // Matches config-fill-gaps-box
         "Enter the word in the blank (Fill Gaps with Hint)": "grammar/fillgaps", // Matches config-fill-gaps-hint
         "Select the word form for the gap (Choose Correct Option)": "grammar/selectform", // Matches config-choose-correct-option
+        "Conjugation Practice": "grammar/conjugation",
+        "Irregular Verb Practice": "grammar/irregular-verb",
         // "Move the word to the image": "interactive/move-word-image", // No direct config UI
         // "Enter a word for the image": "vocabulary/image-word-entry", // No direct config UI
         // "Select the form of the word for the image": "vocabulary/image-word-form", // No direct config UI
@@ -76,7 +78,9 @@ export const templateTypeToConfigId = {
     "utility/note": "config-structured-note",
     "utility/link": "config-utility-link",
     "interactive/label-pictures": "config-label-pictures", // Added based on study-mode.html
-    "interactive/match-pictures": "config-match-pictures"  // Added based on study-mode.html
+    "interactive/match-pictures": "config-match-pictures",  // Added based on study-mode.html
+    "grammar/conjugation": "config-conjugation",
+    "grammar/irregular-verb": "config-irregular-verb"
     // ... other types from availableTemplateSectionTypes that have a direct config UI
     // "speaking/user-recording" - No direct config UI in HTML
     // "assessment/test" - No direct config UI in HTML
@@ -97,7 +101,7 @@ export const getEmojiForTemplateType = (typePath) => {
     if (pathLower.includes('gif') || pathLower === 'visuals/gif') return '✨';
     if (pathLower.includes('video') || pathLower === 'media/video') return '▶️';
     if (pathLower.includes('audio') || pathLower.includes('voice') || pathLower === 'media/audio') return '🔊';
-    if (pathLower.includes('gap') || pathLower.includes('fillgaps') || pathLower.includes('selectform')) return '✍️';
+    if (pathLower.includes('gap') || pathLower.includes('fillgaps') || pathLower.includes('selectform') || pathLower.includes('conjugation') || pathLower.includes('irregular-verb')) return '✍️';
     if (pathLower.includes('test') || pathLower.includes('assessment')) return '📝';
     if (pathLower.includes('truefalse') || pathLower.includes('select') || pathLower.includes('mcq')) return '✅';
     if (pathLower.includes('order') || pathLower.includes('sort') || pathLower.includes('unscramble')) return '🔀';
