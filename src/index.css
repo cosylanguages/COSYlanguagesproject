@@ -78,38 +78,38 @@ h4 { font-size: var(--font-size-h4); }
 /* CSS Custom Properties (Variables) */
 :root {
   /* Core Colors */
-  --color-primary: #007bff;
-  --color-primary-dark: #0056b3;
-  --color-secondary: #6c757d;
-  --color-secondary-dark: #5a6268; /* Added from old theme */
+  --color-primary: #FFC107;
+  --color-primary-dark: #FFA000;
+  --color-secondary: #2196F3;
+  --color-secondary-dark: #1976D2;
 
   /* Semantic Colors */
-  --color-success: #28a745; /* Main accent for success */
-  --color-danger: #dc3545;  /* Main accent for danger/error */
-  --color-warning: #ffc107;
-  --color-info: #17a2b8;
+  --color-success: #4CAF50;
+  --color-danger: #F44336;
+  --color-warning: #FF9800;
+  --color-info: #03A9F4;
 
   /* Backgrounds & Surfaces */
-  --color-background: #ffffff;
-  --color-surface: #f8f9fa;         /* Light grey, for cards, panels - matches old --light-grey */
-  --color-surface-medium: #e9ecef;  /* Matches old --medium-grey */
+  --color-background: #F5F5F5;
+  --color-surface: #FFFFFF;
+  --color-surface-medium: #EEEEEE;
 
   /* Text Colors */
-  --color-text-primary: #212529;    /* Dark text for light backgrounds - similar to old --text-color-dark */
-  --color-text-secondary: #6c757d;  /* Grey text */
-  --color-text-headings: #343a40;
-  --color-text-on-dark: #ffffff;    /* For text on dark/primary/secondary backgrounds - matches old --text-color-light */
+  --color-text-primary: #333333;
+  --color-text-secondary: #757575;
+  --color-text-headings: #212121;
+  --color-text-on-dark: #ffffff;
 
   /* State Colors (Backgrounds, Text, Borders) */
-  --color-success-bg: #d4edda;
-  --color-success-text: #155724;
-  --color-success-border: #c3e6cb;
-  --color-danger-bg: #f8d7da;
-  --color-danger-text: #721c24;
-  --color-danger-border: #f5c6cb;
+  --color-success-bg: #E8F5E9;
+  --color-success-text: #2E7D32;
+  --color-success-border: #A5D6A7;
+  --color-danger-bg: #FFEBEE;
+  --color-danger-text: #C62828;
+  --color-danger-border: #EF9A9A;
 
   /* Borders */
-  --color-border: #dee2e6;          /* Matches old --border-color */
+  --color-border: #E0E0E0;
   --border-radius-sm: 0.2rem;
   --border-radius-md: 0.25rem;
   --border-radius-lg: 0.3rem; /* Approx 5px */
@@ -203,6 +203,8 @@ h4 { font-size: var(--font-size-h4); }
   color: var(--color-text-on-dark);
   background-color: var(--color-primary-dark);
   border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary {
