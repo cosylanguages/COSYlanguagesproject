@@ -49,7 +49,7 @@ const RandomImagePracticeHost = ({ language, days, exerciseKey: hostKey }) => {
   }
 
   return (
-    <div className="random-image-practice-host-container">
+    <div className="random-image-practice-host-container cosy-exercise-container">
       {/* Optional: Display the type of current random image exercise for debugging
       <p style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '0.9em' }}>
         Current image mode: {currentExerciseInfo?.name || 'N/A'}

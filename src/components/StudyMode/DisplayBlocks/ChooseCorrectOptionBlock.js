@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import './ChooseCorrectOptionBlock.css';
+import '../../Freestyle/freestyle-shared.css';
 
 const parseSentencePattern = (pattern) => {
     if (!pattern) return null;
@@ -58,7 +59,7 @@ const ChooseCorrectOptionBlock = ({ blockData }) => {
     };
 
     return (
-        <div className="choose-correct-option-block">
+        <div className="choose-correct-option-block cosy-exercise-container">
             {title && getLocalizedText(title) && <h4>{getLocalizedText(title)}</h4>}
             {instructions && getLocalizedText(instructions) && <p className="instructions">{getLocalizedText(instructions)}</p>}
 

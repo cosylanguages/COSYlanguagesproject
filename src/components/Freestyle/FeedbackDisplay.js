@@ -31,50 +31,56 @@ const FeedbackDisplay = ({ message, type, language }) => {
   }
 
   let style = {
-    padding: '10px',
+    padding: '15px',
     margin: '10px 0',
-    borderRadius: '4px',
+    borderRadius: '8px',
     textAlign: 'center',
     minHeight: '24px', // Ensure it doesn't collapse when empty
+    fontWeight: 'bold',
+    animation: 'fadeIn 0.5s ease-in-out'
   };
+
+  if (type === 'correct') {
+    style.animation = 'correct-answer-animation 0.5s ease-in-out';
+  }
 
   let textPrefix = '';
 
   switch (type) {
     case 'correct':
-      style.backgroundColor = '#d4edda';
-      style.color = '#155724';
-      style.borderColor = '#c3e6cb';
-      textPrefix = '✅ ';
+      style.backgroundColor = 'var(--color-success-bg)';
+      style.color = 'var(--color-success-text)';
+      style.borderColor = 'var(--color-success-border)';
+      textPrefix = '🎉 ';
       break;
     case 'incorrect':
-      style.backgroundColor = '#f8d7da';
-      style.color = '#721c24';
-      style.borderColor = '#f5c6cb';
-      textPrefix = '❌ ';
+      style.backgroundColor = 'var(--color-danger-bg)';
+      style.color = 'var(--color-danger-text)';
+      style.borderColor = 'var(--color-danger-border)';
+      textPrefix = '🤔 ';
       break;
     case 'hint':
-      style.backgroundColor = '#fff3cd';
-      style.color = '#856404';
-      style.borderColor = '#ffeeba';
+      style.backgroundColor = 'var(--color-warning-bg)';
+      style.color = 'var(--color-warning-text)';
+      style.borderColor = 'var(--color-warning-border)';
       textPrefix = '💡 ';
       break;
     case 'info':
-      style.backgroundColor = '#d1ecf1';
-      style.color = '#0c5460';
-      style.borderColor = '#bee5eb';
+      style.backgroundColor = 'var(--color-info-bg)';
+      style.color = 'var(--color-info-text)';
+      style.borderColor = 'var(--color-info-border)';
       textPrefix = 'ℹ️ ';
       break;
     case 'error':
-      style.backgroundColor = '#f8d7da'; // Same as incorrect
-      style.color = '#721c24';
-      style.borderColor = '#f5c6cb';
+      style.backgroundColor = 'var(--color-danger-bg)'; // Same as incorrect
+      style.color = 'var(--color-danger-text)';
+      style.borderColor = 'var(--color-danger-border)';
       textPrefix = '⚠️ ';
       break;
     default: // Neutral / no specific type
-      style.backgroundColor = '#e9ecef';
-      style.color = '#495057';
-      style.borderColor = '#ced4da';
+      style.backgroundColor = 'var(--color-surface-medium)';
+      style.color = 'var(--color-text-primary)';
+      style.borderColor = 'var(--color-border)';
   }
   
   // Apply visual indication for latinized text if necessary
