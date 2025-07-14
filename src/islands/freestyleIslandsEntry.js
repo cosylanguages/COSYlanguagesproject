@@ -45,10 +45,7 @@ export const LanguageIslandApp = () => {
 
   // Placeholder for navigation until react-router is integrated into this island
   const navigateToStudyMode = () => {
-    // In a full SPA with React Router, this would be: navigate('/study');
-    // For freestyle.html, we redirect to the main app's study page.
-    // Assuming the main app is at the root and handles /study route.
-    window.location.href = '/COSYlanguagesproject/';
+    window.location.href = '/study';
   };
 
   const handleLanguageChangeForIsland = (newLanguage) => {
