@@ -1,27 +1,20 @@
 {
   "files": {
-    "main.css": "/COSYlanguagesproject/static/css/main.14bfdbae.css",
-    "main.js": "/COSYlanguagesproject/static/js/main.186d01ff.js",
-    "freestyle.css": "/COSYlanguagesproject/static/css/freestyle.7d437040.css",
-    "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.21918aec.js",
-    "static/js/815.c0ee68b1.chunk.js": "/COSYlanguagesproject/static/js/815.c0ee68b1.chunk.js",
-    "static/js/197.4b4a4460.chunk.js": "/COSYlanguagesproject/static/js/197.4b4a4460.chunk.js",
-    "static/js/318.aa710a9c.chunk.js": "/COSYlanguagesproject/static/js/318.aa710a9c.chunk.js",
+    "main.css": "/COSYlanguagesproject/static/css/main.d5b517a4.css",
+    "main.js": "/COSYlanguagesproject/static/js/main.3f092b76.js",
+    "static/js/815.37c6be97.chunk.js": "/COSYlanguagesproject/static/js/815.37c6be97.chunk.js",
+    "static/js/197.b12028d9.chunk.js": "/COSYlanguagesproject/static/js/197.b12028d9.chunk.js",
     "static/media/Flag_of_Brittany.png": "/COSYlanguagesproject/static/media/Flag_of_Brittany.84b981fe6c89698ceeab.png",
     "static/media/Flag_of_Bashkortostan.png": "/COSYlanguagesproject/static/media/Flag_of_Bashkortostan.1cd8a83298aaa54ba536.png",
     "static/media/Flag_of_Tatarstan.png": "/COSYlanguagesproject/static/media/Flag_of_Tatarstan.99455ff699f291d20b27.png",
     "index.html": "/COSYlanguagesproject/index.html",
-    "freestyle.html": "/COSYlanguagesproject/freestyle.html",
-    "main.14bfdbae.css.map": "/COSYlanguagesproject/static/css/main.14bfdbae.css.map",
-    "main.186d01ff.js.map": "/COSYlanguagesproject/static/js/main.186d01ff.js.map",
-    "freestyle.7d437040.css.map": "/COSYlanguagesproject/static/css/freestyle.7d437040.css.map",
-    "freestyle.21918aec.js.map": "/COSYlanguagesproject/static/js/freestyle.21918aec.js.map",
-    "815.c0ee68b1.chunk.js.map": "/COSYlanguagesproject/static/js/815.c0ee68b1.chunk.js.map",
-    "197.4b4a4460.chunk.js.map": "/COSYlanguagesproject/static/js/197.4b4a4460.chunk.js.map",
-    "318.aa710a9c.chunk.js.map": "/COSYlanguagesproject/static/js/318.aa710a9c.chunk.js.map"
+    "main.d5b517a4.css.map": "/COSYlanguagesproject/static/css/main.d5b517a4.css.map",
+    "main.3f092b76.js.map": "/COSYlanguagesproject/static/js/main.3f092b76.js.map",
+    "815.37c6be97.chunk.js.map": "/COSYlanguagesproject/static/js/815.37c6be97.chunk.js.map",
+    "197.b12028d9.chunk.js.map": "/COSYlanguagesproject/static/js/197.b12028d9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.14bfdbae.css",
-    "static/js/main.186d01ff.js"
+    "static/css/main.d5b517a4.css",
+    "static/js/main.3f092b76.js"
   ]
 }
