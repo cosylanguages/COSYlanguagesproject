@@ -294,7 +294,7 @@ const StudyModePage = () => {
   return (
     <div className="study-mode-page-container">
       <h1>
-        <TransliterableText text={t('studyMode.mainHeading', 'COSYlanguages - Study Mode')} />
+        <TransliterableText text={t('studyMode.mainHeading', 'COSYlanguages - Study Mode 🎓')} />
       </h1>
 
       <div className="study-menu-section">
@@ -306,7 +306,7 @@ const StudyModePage = () => {
           currentDisplayLanguage={currentLangKey || language}
         />
         <Button onClick={() => window.location.href = '/COSYlanguagesproject/freestyle.html'}>
-          Freestyle
+          Freestyle 🚀
         </Button>
       </div>
 

@@ -168,7 +168,7 @@ const DaySelectorFreestyle = ({
   return (
     <div className="day-selector-card">
       <div className="day-selector-title">
-        <span role="img" aria-label="calendar">📅</span>
+        <span role="img" aria-label="calendar">🗓️</span>
         {t('titles.chooseYourDay', 'Choose Your Day(s)')}
       </div>
 

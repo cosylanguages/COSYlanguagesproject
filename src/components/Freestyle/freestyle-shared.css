@@ -47,7 +47,18 @@
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-md, 1rem); /* Add gap between items in the menu box */
-  animation: fadeInUp 0.5s ease-out 0.1s forwards; /* Stagger animation slightly */
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .freestyle-mode-header {
@@ -586,10 +597,9 @@ textarea.exercise-input {
 
 /* Language Flag Backgrounds */
 body.lang-bg {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Keeps the background fixed during scroll */
+  background-image: url('https://www.transparenttextures.com/patterns/inspiration-geometry.png');
+  background-color: var(--color-background);
+  background-attachment: fixed;
   transition: background-image 0.5s ease-in-out; /* Smooth transition for background change */
 }
 

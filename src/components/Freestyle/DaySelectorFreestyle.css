@@ -4,11 +4,12 @@
   padding: var(--spacing-lg, 24px) var(--spacing-xl, 32px);
   border: 1px solid var(--color-border-light, #e0e0e0);
   border-radius: var(--border-radius-xl, 12px); /* Use XL radius */
-  background-color: var(--color-background, #fff);
-  box-shadow: var(--shadow-md); /* Use theme variable directly */
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-lg); /* Use theme variable directly */
   max-width: 450px; /* Slightly wider */
   min-width: 300px;
   text-align: center;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .day-selector-title {
