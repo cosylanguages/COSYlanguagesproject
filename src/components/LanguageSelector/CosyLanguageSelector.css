@@ -1,0 +1,41 @@
+.cosy-language-select .cosy-language-select__control {
+  background-color: #fff;
+  border-color: #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  min-width: 200px;
+}
+
+.cosy-language-select .cosy-language-select__control--is-focused {
+  border-color: var(--color-primary, #007bff);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+}
+
+.cosy-language-select .cosy-language-select__menu {
+  border-radius: 5px;
+}
+
+.cosy-language-select .cosy-language-select__option {
+  padding: 10px 15px;
+}
+
+.cosy-language-select .cosy-language-select__option--is-focused {
+  background-color: var(--color-primary-light, #d6eaff);
+}
+
+.cosy-language-select .cosy-language-select__option--is-selected {
+  background-color: var(--color-primary, #007bff);
+  color: #fff;
+}
+
+.cosy-language-option {
+  display: flex;
+  align-items: center;
+}
+
+.language-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
