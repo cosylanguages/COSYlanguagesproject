@@ -47,7 +47,7 @@ const ListeningPracticeHost = ({ language, days, exerciseKey: hostKey }) => {
   }
 
   return (
-    <div className="listening-practice-host-container">
+    <div className="listening-practice-host-container cosy-exercise-container">
       {/* Optional: Display the type of current listening exercise for debugging
       <p style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '0.9em' }}>
         Current listening mode: {currentExerciseInfo?.name || 'N/A'}

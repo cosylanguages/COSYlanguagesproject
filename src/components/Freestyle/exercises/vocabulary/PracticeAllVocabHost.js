@@ -73,12 +73,12 @@ const PracticeAllVocabHost = ({ language, days, exerciseKey: hostKey, onComplete
   }
 
   return (
-    <div className="practice-all-vocab-host-container">
-      <h3 style={{ textAlign: 'center', marginBottom: '10px', color: '#555', fontSize:'1.1em' }}>
+    <div className="practice-all-vocab-host-container cosy-exercise-container">
+      <h3 style={{ textAlign: 'center', marginBottom: '10px', color: 'var(--color-text-headings)', fontSize:'1.2em' }}>
         {t('titles.practiceAllVocab', 'Practice All Vocabulary')}
       </h3>
       {currentExerciseInfo && currentExerciseInfo.name !== "No Vocab Exercises Available" && (
-        <p style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '0.9em', color: '#777', marginTop: '0', marginBottom: '15px' }}>
+        <p style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '1.0em', color: 'var(--color-text-secondary)', marginTop: '0', marginBottom: '15px' }}>
           Current activity: {currentExerciseInfo.name}
         </p>
       )}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'; // Removed useEffect
-import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 // import { usePlan } from './contexts/PlanContext'; // Commented out as PlanOverview is commented
 import { useAuth } from './contexts/AuthContext';
 import { useI18n } from './i18n/I18nContext';
@@ -17,10 +17,8 @@ const STUDY_MODE_PIN = "1234";
 // StudyModeProtectedRoute component (for PIN access)
 const StudyModeProtectedRoute = ({ children }) => {
     const [isPinVerified, setIsPinVerified] = useState(sessionStorage.getItem('studyModeUnlocked') === 'true');
-    const [showPinModal, setShowPinModal] = useState(!isPinVerified);
+    const [setShowPinModal] = useState(!isPinVerified);
     const [pinError, setPinError] = useState('');
-    const navigate = useNavigate();
-    const { t } = useI18n();
 
     const handlePinSubmit = (pin) => {
         if (pin === STUDY_MODE_PIN) {

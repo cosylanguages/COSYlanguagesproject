@@ -55,7 +55,7 @@ const RandomWordPracticeHost = ({ language, days, exerciseKey: hostKey }) => {
   }
 
   return (
-    <div className="random-word-practice-host-container">
+    <div className="random-word-practice-host-container cosy-exercise-container">
       {/* Optional: Display the type of current random word exercise for debugging or clarity */}
       {/* <p style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '0.9em' }}>
         Current mode: {currentExerciseInfo?.name || 'N/A'}
