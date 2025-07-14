@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet, Link, NavLink, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext'; // Adjusted path
+import { useAuth } from '../../contexts/AuthContext';
 import { useI18n } from '../../i18n/I18nContext'; // Import useI18n
 import Button from '../Common/Button'; // Import Button
 import TransliterableText from '../Common/TransliterableText';
@@ -27,12 +27,7 @@ const Layout = () => {
         <nav className="app-nav">
           <ul>
             <li>
-              {/* Changed NavLink to <a> for Home, pointing to freestyle.html */}
-              <a href="/freestyle.html" className={window.location.pathname.endsWith('/') || window.location.pathname.endsWith('/freestyle.html') ? "active-link" : ""}><TransliterableText text={t('navHome') || 'Home'} /></a>
-            </li>
-            <li>
-              {/* Changed NavLink to <a> for Freestyle, pointing to freestyle.html */}
-              <a href="/freestyle.html" className={window.location.pathname.endsWith('/freestyle.html') ? "active-link" : ""}><TransliterableText text={t('navFreestyle') || 'Freestyle'} /></a>
+              <NavLink to="/freestyle" className={({ isActive }) => isActive ? "active-link" : ""}><TransliterableText text={t('navFreestyle') || 'Freestyle'} /></NavLink>
             </li>
             <li>
               <NavLink to="/study" className={({ isActive }) => isActive ? "active-link" : ""}><TransliterableText text={t('navStudyMode') || 'Study'} /></NavLink>

@@ -1,0 +1,14 @@
+.freestyle-mode-container {
+    padding: 20px;
+}
+
+.freestyle-mode-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.island-placeholder {
+    border: 1px dashed #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
