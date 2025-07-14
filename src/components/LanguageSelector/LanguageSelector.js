@@ -23,17 +23,19 @@ const LanguageSelector = () => {
         // Skip "null" key if it appears, ensure the langKey actual entry exists
         if (langKey === "null" || !allTranslations[langKey]) return null;
 
-        const nativeName = allTranslations[langKey]?.languageNameNative;
+        const langData = allTranslations[langKey];
+        const cosyName = langData?.cosyName;
+        const logo = langData?.logo;
         let name;
 
-        if (nativeName) {
-            name = nativeName; // Use native name directly
+        if (cosyName) {
+            name = cosyName; // Use cosy name directly
         } else {
-            // Fallback to the language key, capitalized, if nativeName is somehow missing
+            // Fallback to the language key, capitalized, if cosyName is somehow missing
             name = langKey.charAt(0).toUpperCase() + langKey.slice(1);
         }
-        // Storing nativeName directly in 'name' for sorting, and also for display.
-        return { key: langKey, name: name, nativeName: nativeName || name }; // ensure nativeName field for sorting
+        // Storing cosyName directly in 'name' for sorting, and also for display.
+        return { key: langKey, name: name, cosyName: cosyName || name, logo: logo }; // ensure cosyName field for sorting
     }).filter(Boolean) // Filter out any null entries from map
       .sort((a, b) => {
         const indexA = popularLanguageOrder.indexOf(a.key);
@@ -121,6 +123,7 @@ const LanguageSelector = () => {
                 <option value="">{t('languageSelector.selectPlaceholder', '-- Select Language --')}</option>
                 {availableLanguages.map(lang => (
                     <option key={lang.key} value={lang.key}>
+                        <img src={lang.logo} alt={`${lang.cosyName} logo`} className="language-logo" />
                         <TransliterableText text={lang.name} />
                     </option>
                 ))}
