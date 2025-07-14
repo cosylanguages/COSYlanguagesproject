@@ -80,8 +80,8 @@
 }
 
 .role-btn { 
-  padding: var(--spacing-sm, 0.6rem) var(--spacing-lg, 1.75rem); /* Slightly more padding */
-  font-size: var(--font-size-base, 1.05rem); /* Slightly larger font */
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
   font-weight: 600; /* Bolder */
   border-radius: var(--border-radius-lg, 8px); /* Consistent with other main buttons */
   border: 2px solid transparent; /* Prepare for border transition */
@@ -224,7 +224,7 @@
 @media (max-width: 992px) { /* Tablet and below */
   .dashboard-layout {
     flex-direction: column;
-    max-width: 700px; /* Adjust max-width when stacked */
+    max-width: 100%; /* Adjust max-width when stacked */
   }
 
   .layout-left-panel,
@@ -234,7 +234,7 @@
     min-width: auto; 
   }
   .study-mode-page-container {
-    padding: var(--spacing-lg, 20px);
+    padding: var(--spacing-md, 15px);
   }
 }
 
@@ -250,7 +250,7 @@
   }
 
   .study-mode-page-container h1 {
-    font-size: var(--font-size-h2, 1.875rem);
+    font-size: 1.5rem;
   }
 }
 
