@@ -236,13 +236,14 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .freestyle-mode-header {
-    font-size: var(--font-size-h2, 1.8rem); /* Adjust header font size for smaller screens */
+    font-size: 1.5rem;
   }
 
   .main-menu-box {
     padding: var(--spacing-lg, 20px);
     margin-bottom: var(--spacing-lg, 25px);
     gap: var(--spacing-sm, 0.75rem);
+    max-width: 100%;
   }
 
   .study-mode-button {
@@ -252,7 +253,7 @@
 
   .freestyle-mode-exercise-host {
     padding: var(--spacing-lg, 20px);
-    max-width: 95%;
+    max-width: 100%;
   }
 
   .freestyle-mode-message {
