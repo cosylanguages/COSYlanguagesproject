@@ -85,12 +85,12 @@ const MainPracticeAllHost = ({ language, days, exerciseKey: hostKey }) => {
   const subHostDisplayName = currentSubHostInfo ? t(currentSubHostInfo.nameKey, currentSubHostInfo.defaultName) : "";
 
   return (
-    <div className="main-practice-all-host-container" style={{padding: '10px', border: '1px solid #ccc', borderRadius: '8px', backgroundColor: '#f0f0f0'}}>
-      <h2 style={{ textAlign: 'center', marginTop: '0', marginBottom: '5px' }}>
+    <div className="main-practice-all-host-container" style={{padding: '20px', border: '1px solid var(--color-border)', borderRadius: '12px', backgroundColor: 'var(--color-surface)', boxShadow: 'var(--shadow-lg)'}}>
+      <h2 style={{ textAlign: 'center', marginTop: '0', marginBottom: '10px', color: 'var(--color-text-headings)' }}>
         <TransliterableText text={t('titles.practiceAllMain', 'Practice All Categories')} langOverride={i18nLanguage} />
       </h2>
       {subHostDisplayName && (
-        <p style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '1em', color: '#333', marginTop: '0', marginBottom: '15px' }}>
+        <p style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '1.1em', color: 'var(--color-text-secondary)', marginTop: '0', marginBottom: '20px' }}>
           <TransliterableText text={t('practiceHosts.currentCategory', `Current Focus: ${subHostDisplayName}`, { categoryName: subHostDisplayName })} langOverride={i18nLanguage} />
         </p>
       )}
