@@ -1,5 +1,5 @@
 import React, { useState } from 'react'; // Removed useEffect
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 // import { usePlan } from './contexts/PlanContext'; // Commented out as PlanOverview is commented
 import { useAuth } from './contexts/AuthContext';
 import { useI18n } from './i18n/I18nContext';
@@ -9,6 +9,8 @@ import StudyModePage from './pages/StudyModePage/StudyModePage';
 // FreestyleModePage is no longer imported or used here
 import MyStudySetsPage from './pages/MyStudySetsPage/MyStudySetsPage'; // Import MyStudySetsPage
 import FreestyleModePage from './pages/FreestyleModePage/FreestyleModePage';
+import DictionaryPage from './pages/DictionaryPage/DictionaryPage';
+import IrregularVerbsPage from './pages/IrregularVerbsPage/IrregularVerbsPage';
 import ShowWordExercise from './components/Freestyle/exercises/vocabulary/ShowWordExercise';
 import PinModal from './components/Common/PinModal';
 
@@ -17,8 +19,9 @@ const STUDY_MODE_PIN = "1234";
 // StudyModeProtectedRoute component (for PIN access)
 const StudyModeProtectedRoute = ({ children }) => {
     const [isPinVerified, setIsPinVerified] = useState(sessionStorage.getItem('studyModeUnlocked') === 'true');
-    const [setShowPinModal] = useState(!isPinVerified);
+    const [showPinModal, setShowPinModal] = useState(!isPinVerified);
     const [pinError, setPinError] = useState('');
+    const navigate = useNavigate();
 
     const handlePinSubmit = (pin) => {
         if (pin === STUDY_MODE_PIN) {
@@ -33,8 +36,7 @@ const StudyModeProtectedRoute = ({ children }) => {
 
     const handleModalClose = () => {
         setShowPinModal(false);
-        // We don't navigate away, just close the modal.
-        // The user can then try to navigate to /study again if they wish.
+        navigate('/freestyle');
     }
 
     if (isPinVerified) {
@@ -88,6 +90,8 @@ function AppRoutes() {
                     </StudyModeProtectedRoute>
                   }
                 />
+                <Route path="dictionary" element={<DictionaryPage />} />
+                <Route path="irregular-verbs" element={<IrregularVerbsPage />} />
                 <Route
                   path="my-sets"
                   element={
