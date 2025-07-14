@@ -41,3 +41,10 @@
     border-color: var(--color-primary, #007bff); 
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.15); 
 }
+
+.language-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
