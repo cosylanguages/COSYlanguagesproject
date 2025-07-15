@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { I18nProvider } from '../../i18n/I18nContext';
 import { LatinizationProvider } from '../../contexts/LatinizationContext';
 import { LanguageIslandWrapper, DaySelectorIslandWrapper, PracticeNavIslandWrapper, ExerciseHostIslandWrapper, HelpPopupIslandWrapper } from '../../islands/freestyleIslandsEntry';
-import '../../freestyle-shared.css';
+import '../../components/Freestyle/freestyle-shared.css';
 import './FreestyleModePage.css';
 
 const FreestyleModePage = () => {
