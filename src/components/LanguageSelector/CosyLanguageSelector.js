@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Select from 'react-select';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
@@ -6,7 +6,32 @@ import logos from '../../assets/icons/cosylanguages_logos';
 import './CosyLanguageSelector.css';
 
 const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
-  const { allTranslations, t } = useI18n();
+  const { allTranslations, t, currentLangKey } = useI18n();
+
+  useEffect(() => {
+    const body = document.body;
+    const currentLanguageKeys = Object.keys(allTranslations || {});
+    const classesToRemove = Array.from(body.classList).filter(cls =>
+        cls.endsWith('-bg') ||
+        cls === 'lang-bg' ||
+        cls === 'lang-bg-fallback' ||
+        currentLanguageKeys.some(key => cls.startsWith(key + '-bg')) ||
+        cls.startsWith('COSY') ||
+        cls.startsWith('ТАКОЙ') ||
+        cls.startsWith('ΚΟΖΥ') ||
+        cls.startsWith('ԾՈՍՅ') ||
+        cls === 'no-language-selected-bg'
+    );
+    classesToRemove.forEach(cls => body.classList.remove(cls));
+
+    if (currentLangKey && currentLangKey !== "null") {
+        const langClassName = `${currentLangKey}-bg`;
+        body.classList.add(langClassName);
+        body.classList.add('lang-bg');
+    } else {
+        body.classList.add('no-language-selected-bg');
+    }
+  }, [currentLangKey, allTranslations]);
 
   const availableLanguages = Object.keys(allTranslations)
     .map((langKey) => {
