@@ -3,7 +3,7 @@ import { useI18n } from '../../../i18n/I18nContext';
 import TransliterableText from '../../Common/TransliterableText'; // Added
 import { pronounceText } from '../../../utils/speechUtils'; // Added for TTS
 import './SimpleTextDisplay.css'; 
-import '../../Freestyle/freestyle-shared.css';
+import '../../../freestyle-shared.css';
 
 const TextBlock = ({ blockData }) => {
     const { t, language: globalLanguage } = useI18n(); // Renamed to avoid conflict with blockData.lang
