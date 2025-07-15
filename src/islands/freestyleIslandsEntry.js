@@ -22,7 +22,7 @@ import '../index.css'; // Import global styles
 import '../components/LanguageSelector/LanguageSelector.css';
 import '../components/Freestyle/DaySelectorFreestyle.css';
 import '../components/Freestyle/PracticeCategoryNav.css';
-import '../freestyle-shared.css';
+import '../components/Freestyle/freestyle-shared.css';
 
 // --- Global state for islands (simple version) ---
 let globalSelectedLanguage = null;

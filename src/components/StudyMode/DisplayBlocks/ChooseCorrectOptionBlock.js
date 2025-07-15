@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import './ChooseCorrectOptionBlock.css';
-import '../../../freestyle-shared.css';
+import '../../Freestyle/freestyle-shared.css';
 
 const parseSentencePattern = (pattern) => {
     if (!pattern) return null;
