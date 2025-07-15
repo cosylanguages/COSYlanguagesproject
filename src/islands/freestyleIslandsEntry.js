@@ -43,9 +43,8 @@ export const LanguageIslandApp = () => {
 
   const showToast = (message, duration = 2500) => { setToast(message); setTimeout(() => setToast(null), duration); };
 
-  // Placeholder for navigation until react-router is integrated into this island
   const navigateToStudyMode = () => {
-    window.location.href = '/study';
+    window.dispatchEvent(new CustomEvent('navigateTo', { detail: '/study' }));
   };
 
   const handleLanguageChangeForIsland = (newLanguage) => {
