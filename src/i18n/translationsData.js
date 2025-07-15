@@ -4,7 +4,7 @@
 const translations = {
   COSYenglish: { // Standardized: COSY + english
     cosyName: "COSYenglish",
-    logo: "/icons/cosylanguages_logos/cosyenglish.png",
+    logo: "assets/icons/cosylanguages_logos/cosyenglish.png",
     greeting: "Hello",
     navHome: "Home",
     navFreestyle: "Freestyle",
@@ -159,7 +159,7 @@ const translations = {
   },
   COSYfrench: { // Standardized: COSY + french
     cosyName: "COSYfrench",
-    logo: "/icons/cosylanguages_logos/cosyfrench.png",
+    logo: "assets/icons/cosylanguages_logos/cosyfrench.png",
     greeting: "Bonjour",
     navHome: "Accueil",
     navFreestyle: "Mode Libre",
@@ -314,7 +314,7 @@ const translations = {
   },
   COSYitalian: { // Standardized: COSY + italian (was COSYitaliano)
     cosyName: "COSYitaliano",
-    logo: "/icons/cosylanguages_logos/cosyitalian.png",
+    logo: "assets/icons/cosylanguages_logos/cosyitalian.png",
     languageNameInEnglish: "Italian",
     languageNameNative: "Italiano",
     greeting: "Hello (Italian Placeholder)", // Placeholder
@@ -469,7 +469,7 @@ const translations = {
   },
   COSYspanish: { // Standardized: COSY + spanish (was COSYespañol)
     cosyName: "COSYespañol",
-    logo: "/icons/cosylanguages_logos/cosyspanish.png",
+    logo: "assets/icons/cosylanguages_logos/cosyspanish.png",
     languageNameInEnglish: "Spanish",
     languageNameNative: "Español",
     greeting: "Hello (Spanish Placeholder)", // Placeholder
@@ -624,7 +624,7 @@ const translations = {
   },
   COSYportuguese: { // Standardized: COSY + portuguese (was COSYportuguês)
     cosyName: "COSYportuguês",
-    logo: "/icons/cosylanguages_logos/cosyportugese.png",
+    logo: "assets/icons/cosylanguages_logos/cosyportugese.png",
     languageNameInEnglish: "Portuguese",
     languageNameNative: "Português",
     greeting: "Hello (Portuguese Placeholder)", // Placeholder
@@ -779,7 +779,7 @@ const translations = {
   },
   COSYbreton: { // Standardized: COSY + breton (was COSYbrezhoneg)
     cosyName: "COSYbrezhoneg",
-    logo: "/icons/cosylanguages_logos/cosybreton.png",
+    logo: "assets/icons/cosylanguages_logos/cosybreton.png",
     languageNameInEnglish: "Breton",
     languageNameNative: "Brezhoneg",
     greeting: "Hello (Breton Placeholder)", // Placeholder
@@ -934,7 +934,7 @@ const translations = {
   },
   COSYgerman: { // Standardized: COSY + german (was COSYdeutsch)
     cosyName: "COSYdeutsch",
-    logo: "/icons/cosylanguages_logos/cosygerman.png",
+    logo: "assets/icons/cosylanguages_logos/cosygerman.png",
     languageNameInEnglish: "German",
     languageNameNative: "Deutsch",
     greeting: "Hello (German Placeholder)", // Placeholder
@@ -1089,7 +1089,7 @@ const translations = {
   },
   COSYrussian: { // Standardized: COSY + russian (was ТАКОЙрусский)
     cosyName: "ТАКОЙрусский",
-    logo: "/icons/cosylanguages_logos/cosyrussian.png",
+    logo: "assets/icons/cosylanguages_logos/cosyrussian.png",
     languageNameInEnglish: "Russian",
     languageNameNative: "Русский",
     greeting: "Hello (Russian Placeholder)", // Placeholder
@@ -1244,7 +1244,7 @@ const translations = {
   },
   COSYgreek: { // Standardized: COSY + greek (was ΚΟΖΥελληνικά)
     cosyName: "ΚΟΖΥελληνικά",
-    logo: "/icons/cosylanguages_logos/cosygreek.png",
+    logo: "assets/icons/cosylanguages_logos/cosygreek.png",
     languageNameInEnglish: "Greek",
     languageNameNative: "Ελληνικά",
     greeting: "Hello (Greek Placeholder)", // Placeholder
@@ -1399,7 +1399,7 @@ const translations = {
   },
   COSYtatar: { // Standardized: COSY + tatar (was ТАКОЙтатарча)
     cosyName: "ТАКОЙтатарча",
-    logo: "/icons/cosylanguages_logos/cosytatar.png",
+    logo: "assets/icons/cosylanguages_logos/cosytatar.png",
     languageNameInEnglish: "Tatar",
     languageNameNative: "Татарча",
     greeting: "Hello (Tatar Placeholder)", // Placeholder
@@ -1554,7 +1554,7 @@ const translations = {
   },
   COSYbashkir: { // Standardized: COSY + bashkir (was ТАКОЙбашҡортса)
     cosyName: "ТАКОЙбашҡортса",
-    logo: "/icons/cosylanguages_logos/cosybachkir.png",
+    logo: "assets/icons/cosylanguages_logos/cosybachkir.png",
     languageNameInEnglish: "Bashkir",
     languageNameNative: "Башҡортса",
     greeting: "Hello (Bashkir Placeholder)", // Placeholder
@@ -1709,7 +1709,7 @@ const translations = {
   },
   COSYarmenian: { // Standardized: COSY + armenian (was ԾՈՍՅհայերեն)
     cosyName: "ԾՈՍՅհայերեն",
-    logo: "/icons/cosylanguages_logos/cosyarmenian.png",
+    logo: "assets/icons/cosylanguages_logos/cosyarmenian.png",
     languageNameInEnglish: "Armenian",
     languageNameNative: "Հայերեն",
     greeting: "Hello (Armenian Placeholder)", // Placeholder
@@ -1864,7 +1864,7 @@ const translations = {
   },
   COSYgeorgian: { // Standardized: COSY + georgian (was COSYქართული)
     cosyName: "COSYქართული",
-    logo: "/icons/cosylanguages_logos/cosygeorgian.png",
+    logo: "assets/icons/cosylanguages_logos/cosygeorgian.png",
     languageNameInEnglish: "Georgian",
     languageNameNative: "ქართული",
     greeting: "Hello (Georgian Placeholder)", // Placeholder
