@@ -2,6 +2,7 @@ import React from 'react';
 import Select from 'react-select';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
+import logos from '../../assets/icons/cosylanguages_logos';
 import './CosyLanguageSelector.css';
 
 const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
@@ -13,7 +14,8 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
 
       const langData = allTranslations[langKey];
       const cosyName = langData?.cosyName;
-      const logo = langData?.logo;
+      const logoKey = langKey.toLowerCase();
+      const logo = logos[logoKey];
       let name;
 
       if (cosyName) {
@@ -29,7 +31,8 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
         nativeName: langData?.languageNameNative,
       };
     })
-    .filter(Boolean);
+    .filter(Boolean)
+    .sort((a, b) => a.label.localeCompare(b.label));
 
   const handleChange = (selectedOption) => {
     onLanguageChange(selectedOption ? selectedOption.value : null);
