@@ -18,7 +18,7 @@ if (rootElement) {
   root.render(
     <React.StrictMode>
       {isProd ? (
-        <HashRouter basename="/COSYlanguagesproject">
+        <HashRouter>
           <I18nProvider>
             <LatinizationProvider>
               <AuthProvider>
