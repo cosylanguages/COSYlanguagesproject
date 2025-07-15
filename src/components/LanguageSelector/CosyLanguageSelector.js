@@ -7,16 +7,6 @@ import './CosyLanguageSelector.css';
 const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
   const { allTranslations, t } = useI18n();
 
-  const popularLanguageOrder = [
-    'english',
-    'spanish',
-    'french',
-    'portuguese',
-    'russian',
-    'german',
-    'italian',
-  ];
-
   const availableLanguages = Object.keys(allTranslations)
     .map((langKey) => {
       if (langKey === 'null' || !allTranslations[langKey]) return null;
@@ -39,22 +29,7 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
         nativeName: langData?.languageNameNative,
       };
     })
-    .filter(Boolean)
-    .sort((a, b) => {
-      const indexA = popularLanguageOrder.indexOf(a.value);
-      const indexB = popularLanguageOrder.indexOf(b.value);
-
-      if (indexA !== -1 && indexB !== -1) {
-        return indexA - indexB;
-      }
-      if (indexA !== -1) {
-        return -1;
-      }
-      if (indexB !== -1) {
-        return 1;
-      }
-      return (a.nativeName || a.label).localeCompare(b.nativeName || b.label);
-    });
+    .filter(Boolean);
 
   const handleChange = (selectedOption) => {
     onLanguageChange(selectedOption ? selectedOption.value : null);

@@ -107,12 +107,47 @@ export function I18nProvider({ children }) {
         return {}; // Return empty object or specific default if key not found in target or English
     }, []);
 
+    const popularLanguageOrder = [
+        'COSYenglish',
+        'COSYspanish',
+        'COSYfrench',
+        'COSYportuguese',
+        'COSYrussian',
+        'COSYgerman',
+        'COSYitalian',
+    ];
+
+    const sortedLanguages = Object.keys(translations)
+        .filter(langKey => langKey !== 'null' && translations[langKey])
+        .sort((a, b) => {
+            const indexA = popularLanguageOrder.indexOf(a);
+            const indexB = popularLanguageOrder.indexOf(b);
+
+            if (indexA !== -1 && indexB !== -1) {
+                return indexA - indexB;
+            }
+            if (indexA !== -1) {
+                return -1;
+            }
+            if (indexB !== -1) {
+                return 1;
+            }
+            const langA = translations[a];
+            const langB = translations[b];
+            return (langA.languageNameNative || a).localeCompare(langB.languageNameNative || b);
+        });
+
+    const sortedTranslations = {};
+    sortedLanguages.forEach(langKey => {
+        sortedTranslations[langKey] = translations[langKey];
+    });
+
     const value = {
         language, // This can be null now
         currentLangKey: language,
         changeLanguage,
         t,
-        allTranslations: translations,
+        allTranslations: sortedTranslations,
         getTranslationsForLang
     };
 
