@@ -626,21 +626,21 @@ body.lang-bg {
 }
 
 body.COSYbreton-bg {
-  background-image: url('../public/assets/flags/Flag_of_Brittany.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('./assets/flags/Flag_of_Brittany.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYbashkir-bg {
-  background-image: url('../public/assets/flags/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('./assets/flags/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYtatar-bg {
-  background-image: url('../public/assets/flags/Flag_of_Tatarstan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('./assets/flags/Flag_of_Tatarstan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
