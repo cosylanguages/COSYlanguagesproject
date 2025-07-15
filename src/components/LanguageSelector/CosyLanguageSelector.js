@@ -2,8 +2,37 @@ import React, { useEffect } from 'react';
 import Select from 'react-select';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
-import logos from '../../assets/icons/cosylanguages_logos';
 import './CosyLanguageSelector.css';
+import cosyarmenian from '../../assets/icons/cosylanguages_logos/cosyarmenian.png';
+import cosybachkir from '../../assets/icons/cosylanguages_logos/cosybachkir.png';
+import cosybreton from '../../assets/icons/cosylanguages_logos/cosybreton.png';
+import cosyenglish from '../../assets/icons/cosylanguages_logos/cosyenglish.png';
+import cosyfrench from '../../assets/icons/cosylanguages_logos/cosyfrench.png';
+import cosygeorgian from '../../assets/icons/cosylanguages_logos/cosygeorgian.png';
+import cosygerman from '../../assets/icons/cosylanguages_logos/cosygerman.png';
+import cosygreek from '../../assets/icons/cosylanguages_logos/cosygreek.png';
+import cosyitalian from '../../assets/icons/cosylanguages_logos/cosyitalian.png';
+import cosyportuguese from '../../assets/icons/cosylanguages_logos/cosyportuguese.png';
+import cosyrussian from '../../assets/icons/cosylanguages_logos/cosyrussian.png';
+import cosyspanish from '../../assets/icons/cosylanguages_logos/cosyspanish.png';
+import cosytatar from '../../assets/icons/cosylanguages_logos/cosytatar.png';
+
+const logos = {
+  cosyarmenian,
+  cosybachkir,
+  cosybreton,
+  cosyenglish,
+  cosyfrench,
+  cosygeorgian,
+  cosygerman,
+  cosygreek,
+  cosyitalian,
+  cosyportuguese,
+  cosyrussian,
+  cosyspanish,
+  cosytatar,
+};
+
 
 const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
   const { allTranslations, t, currentLangKey } = useI18n();
