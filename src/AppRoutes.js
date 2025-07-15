@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; // Removed useEffect
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 // import { usePlan } from './contexts/PlanContext'; // Commented out as PlanOverview is commented
 import { useAuth } from './contexts/AuthContext';
@@ -67,6 +67,19 @@ const ProtectedRoute = ({ children }) => {
 function AppRoutes() {
     const { isAuthenticated, loadingAuth } = useAuth();
     const { t } = useI18n(); // For loading message translation
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const handleNavigate = (event) => {
+            navigate(event.detail);
+        };
+
+        window.addEventListener('navigateTo', handleNavigate);
+
+        return () => {
+            window.removeEventListener('navigateTo', handleNavigate);
+        };
+    }, [navigate]);
 
     // Define the catch-all element logic
     let catchAllElement;
