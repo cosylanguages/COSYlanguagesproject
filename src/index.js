@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
 import { PlanProvider } from './contexts/PlanContext';
 import { AuthProvider } from './contexts/AuthContext';
@@ -18,7 +18,7 @@ if (rootElement) {
   root.render(
     <React.StrictMode>
       {isProd ? (
-        <BrowserRouter basename="/COSYlanguagesproject">
+        <HashRouter basename="/COSYlanguagesproject">
           <I18nProvider>
             <LatinizationProvider>
               <AuthProvider>
@@ -30,9 +30,9 @@ if (rootElement) {
               </AuthProvider>
             </LatinizationProvider>
           </I18nProvider>
-        </BrowserRouter>
+        </HashRouter>
       ) : (
-        <BrowserRouter>
+        <HashRouter>
           <I18nProvider>
             <LatinizationProvider>
               <AuthProvider>
@@ -44,7 +44,7 @@ if (rootElement) {
               </AuthProvider>
             </LatinizationProvider>
           </I18nProvider>
-        </BrowserRouter>
+        </HashRouter>
       )}
     </React.StrictMode>
   );
