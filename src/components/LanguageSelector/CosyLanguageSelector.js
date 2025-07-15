@@ -18,19 +18,19 @@ import cosyspanish from '../../assets/icons/cosylanguages_logos/cosyspanish.png'
 import cosytatar from '../../assets/icons/cosylanguages_logos/cosytatar.png';
 
 const logos = {
-  cosyarmenian,
-  cosybachkir,
-  cosybreton,
-  cosyenglish,
-  cosyfrench,
-  cosygeorgian,
-  cosygerman,
-  cosygreek,
-  cosyitalian,
-  cosyportuguese,
-  cosyrussian,
-  cosyspanish,
-  cosytatar,
+  COSYarmenian: cosyarmenian,
+  COSYbashkir: cosybachkir,
+  COSYbreton: cosybreton,
+  COSYenglish: cosyenglish,
+  COSYfrench: cosyfrench,
+  COSYgeorgian: cosygeorgian,
+  COSYgerman: cosygerman,
+  COSYgreek: cosygreek,
+  COSYitalian: cosyitalian,
+  COSYportuguese: cosyportuguese,
+  COSYrussian: cosyrussian,
+  COSYspanish: cosyspanish,
+  COSYtatar: cosytatar,
 };
 
 
@@ -68,7 +68,7 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
 
       const langData = allTranslations[langKey];
       const cosyName = langData?.cosyName;
-      const logoKey = langKey.toLowerCase();
+      const logoKey = langKey;
       const logo = logos[logoKey];
       let name;
 
