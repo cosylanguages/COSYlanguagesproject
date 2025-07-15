@@ -22,7 +22,7 @@ const LanguageSelectorFreestyle = ({ onLanguageChange }) => { // Accept onLangua
         }
 
         return { key: langKey, name: name };
-    }).filter(Boolean); // Remove any null entries
+    }).filter(Boolean);
 
     const handleChange = (event) => {
         const newLangKey = event.target.value;
