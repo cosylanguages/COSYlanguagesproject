@@ -1,22 +1,35 @@
 {
   "files": {
-    "main.css": "/static/css/main.96ab7545.css",
-    "main.js": "/static/js/main.eecf0cc5.js",
+    "main.css": "/static/css/main.e8a92535.css",
+    "main.js": "/static/js/main.608b9fc8.js",
     "static/js/815.37c6be97.chunk.js": "/static/js/815.37c6be97.chunk.js",
     "static/js/197.b12028d9.chunk.js": "/static/js/197.b12028d9.chunk.js",
     "static/js/318.41473770.chunk.js": "/static/js/318.41473770.chunk.js",
+    "static/media/cosyportuguese.png": "/static/media/cosyportuguese.ff735702ca54387f49d2.png",
+    "static/media/cosyenglish.png": "/static/media/cosyenglish.e5a1af13447f667d2664.png",
+    "static/media/cosyspanish.png": "/static/media/cosyspanish.e09b388e0ca33bde4c18.png",
+    "static/media/cosybreton.png": "/static/media/cosybreton.b254325cd77315c10fca.png",
+    "static/media/cosygeorgian.png": "/static/media/cosygeorgian.9ba243480ff4ad810af7.png",
+    "static/media/cosybachkir.png": "/static/media/cosybachkir.b207d049af5e00fb9e4a.png",
+    "static/media/cosyitalian.png": "/static/media/cosyitalian.6e28531ee17f0b1493e9.png",
+    "static/media/cosyfrench.png": "/static/media/cosyfrench.f916c26d679bfde7bbaf.png",
+    "static/media/cosygreek.png": "/static/media/cosygreek.fc4c598eb4febde47254.png",
+    "static/media/cosytatar.png": "/static/media/cosytatar.34eb2ad85b167bbe7f8e.png",
+    "static/media/cosygerman.png": "/static/media/cosygerman.51c3f116ff1a8882cd29.png",
+    "static/media/cosyrussian.png": "/static/media/cosyrussian.f5db6a1ad5bdab665e49.png",
+    "static/media/cosyarmenian.png": "/static/media/cosyarmenian.f9c9c4c10717916ac92d.png",
     "static/media/Flag_of_Brittany.png": "/static/media/Flag_of_Brittany.84b981fe6c89698ceeab.png",
     "static/media/Flag_of_Bashkortostan.png": "/static/media/Flag_of_Bashkortostan.1cd8a83298aaa54ba536.png",
     "static/media/Flag_of_Tatarstan.png": "/static/media/Flag_of_Tatarstan.99455ff699f291d20b27.png",
     "index.html": "/index.html",
-    "main.96ab7545.css.map": "/static/css/main.96ab7545.css.map",
-    "main.eecf0cc5.js.map": "/static/js/main.eecf0cc5.js.map",
+    "main.e8a92535.css.map": "/static/css/main.e8a92535.css.map",
+    "main.608b9fc8.js.map": "/static/js/main.608b9fc8.js.map",
     "815.37c6be97.chunk.js.map": "/static/js/815.37c6be97.chunk.js.map",
     "197.b12028d9.chunk.js.map": "/static/js/197.b12028d9.chunk.js.map",
     "318.41473770.chunk.js.map": "/static/js/318.41473770.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96ab7545.css",
-    "static/js/main.eecf0cc5.js"
+    "static/css/main.e8a92535.css",
+    "static/js/main.608b9fc8.js"
   ]
 }
