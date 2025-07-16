@@ -1,65 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
-import './DaySelectorFreestyle.css'; 
+import './DaySelectorFreestyle.css';
 
-const DaySelectorFreestyle = ({ 
+const DaySelectorFreestyle = ({
     currentDays, // reflects confirmed or temporary day selections (managed by parent island)
     onDaysChange, // wrapper to update temporary day selections in parent island
     language,
-    // New props from menu logic system
-    activePath,
-    onMenuSelect,
-    isMenuItemVisible,
-    allMenuItemsConfig 
+    onConfirm
 }) => {
   // Internal state for managing the input values before confirmation
   const [internalSingleDay, setInternalSingleDay] = useState('');
   const [internalDayFrom, setInternalDayFrom] = useState('');
   const [internalDayTo, setInternalDayTo] = useState('');
   const [thematicName, setThematicName] = useState('');
+  const [selectionMode, setSelectionMode] = useState('single'); // 'single' or 'range'
 
   const { t, getTranslationsForLang } = useI18n();
-  const MAX_DAYS = 30; 
+  const MAX_DAYS = 30;
   const daysOptions = Array.from({ length: MAX_DAYS }, (_, i) => i + 1);
 
-  // Determine visibility of input sections based on activePath
-  const showSingleDayInputSection = isMenuItemVisible(activePath, 'day_single_input', allMenuItemsConfig);
-  const showDayRangeInputSection = isMenuItemVisible(activePath, 'day_range_input', allMenuItemsConfig);
-  
-  // Show mode choice buttons if day_selection_stage is active but no specific input mode is.
-  const showModeChoiceButtons = activePath.length > 0 && activePath[activePath.length - 1] === 'day_selection_stage';
-
-  // Refs to store previous values of dependencies for the main effect
-  const prevCurrentDaysRef = React.useRef();
-  const prevShowSingleDayInputSectionRef = React.useRef();
-  const prevShowDayRangeInputSectionRef = React.useRef();
+  // Determine visibility of input sections based on selectionMode
+  const showSingleDayInputSection = selectionMode === 'single';
+  const showDayRangeInputSection = selectionMode === 'range';
 
   useEffect(() => {
-    const prevCurrentDays = prevCurrentDaysRef.current;
-    const prevShowSingleDay = prevShowSingleDayInputSectionRef.current;
-    const prevShowRangeDay = prevShowDayRangeInputSectionRef.current;
-
-    const currentDaysChanged = prevCurrentDays !== currentDays;
-    const singleDayVisibilityChanged = prevShowSingleDay !== showSingleDayInputSection;
-    const rangeDayVisibilityChanged = prevShowRangeDay !== showDayRangeInputSection;
-
-    prevCurrentDaysRef.current = currentDays;
-    prevShowSingleDayInputSectionRef.current = showSingleDayInputSection;
-    prevShowDayRangeInputSectionRef.current = showDayRangeInputSection;
-
-    if (!currentDaysChanged && !singleDayVisibilityChanged && !rangeDayVisibilityChanged) {
-      return; // No relevant prop/visibility change, so don't interfere with fresh user input
-    }
-
-    // Prop or visibility has changed, synchronize internal state.
     if (showSingleDayInputSection) {
       if (currentDays && currentDays.length === 1) {
         setInternalSingleDay(String(currentDays[0]));
       } else {
         setInternalSingleDay('');
       }
-    } else if (singleDayVisibilityChanged && !showSingleDayInputSection) {
-      setInternalSingleDay(''); // Clear if section just became hidden
+    } else {
+      setInternalSingleDay('');
     }
 
     if (showDayRangeInputSection) {
@@ -70,12 +42,12 @@ const DaySelectorFreestyle = ({
         setInternalDayFrom('');
         setInternalDayTo('');
       }
-    } else if (rangeDayVisibilityChanged && !showDayRangeInputSection) {
-      setInternalDayFrom(''); // Clear if section just became hidden
+    } else {
+      setInternalDayFrom('');
       setInternalDayTo('');
     }
-  }, [currentDays, showSingleDayInputSection, showDayRangeInputSection]); // Correct dependencies
-  
+  }, [currentDays, selectionMode, showDayRangeInputSection, showSingleDayInputSection]);
+
   useEffect(() => {
     if (showSingleDayInputSection && internalSingleDay && language) {
       const langTranslations = getTranslationsForLang(language, 'dayNames');
@@ -104,7 +76,7 @@ const DaySelectorFreestyle = ({
       if (from <= to) {
         onDaysChange(Array.from({ length: to - from + 1 }, (_, i) => from + i));
       } else {
-        onDaysChange([]); 
+        onDaysChange([]);
       }
     } else if (!fromValue && !internalDayTo) {
         onDaysChange([]);
@@ -144,14 +116,12 @@ const DaySelectorFreestyle = ({
     }
 
     if (daysToConfirm.length > 0) {
-      onDaysChange(daysToConfirm); // Ensure parent has the final confirmed days
-      onMenuSelect('day_confirm_action', { days: daysToConfirm });
+      onConfirm(daysToConfirm);
     } else {
-      // Maybe show a small validation message if trying to confirm empty/invalid days
       console.warn("DaySelectorFreestyle: Attempted to confirm with no valid days selected.");
     }
   };
-  
+
   const isConfirmButtonDisabled = () => {
     if (showSingleDayInputSection) {
       return !internalSingleDay;
@@ -172,16 +142,28 @@ const DaySelectorFreestyle = ({
         {t('titles.chooseYourDay', 'Choose Your Day(s)')}
       </div>
 
-      {showModeChoiceButtons && (
-        <div className="mode-choice-buttons">
-          <button onClick={() => onMenuSelect('day_single_input')} className="btn btn-outline">
-            {t('daySelector.selectSingleDayMode', 'Select Single Day')}
-          </button>
-          <button onClick={() => onMenuSelect('day_range_input')} className="btn btn-outline">
-            {t('daySelector.selectDayRangeMode', 'Select Day Range')}
-          </button>
-        </div>
-      )}
+      <div className="mode-choice-buttons">
+        <label>
+          <input
+            type="radio"
+            name="selectionMode"
+            value="single"
+            checked={selectionMode === 'single'}
+            onChange={() => setSelectionMode('single')}
+          />
+          {t('daySelector.selectSingleDayMode', 'Select Single Day')}
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="selectionMode"
+            value="range"
+            checked={selectionMode === 'range'}
+            onChange={() => setSelectionMode('range')}
+          />
+          {t('daySelector.selectDayRangeMode', 'Select Day Range')}
+        </label>
+      </div>
 
       {showSingleDayInputSection && (
         <div className="day-select-dropdown-container">
@@ -230,18 +212,15 @@ const DaySelectorFreestyle = ({
         </div>
       )}
 
-      {/* Confirm Button - visible when either input mode is active */}
-      {(showSingleDayInputSection || showDayRangeInputSection) && (
-        <div style={{ marginTop: '15px', textAlign: 'center' }}>
-          <button 
-            onClick={handleConfirmDays} 
-            disabled={isConfirmButtonDisabled()}
-            className="btn btn-primary"
-          >
-            {t('buttons.confirmDays', 'Confirm Days & Show Exercises')}
-          </button>
-        </div>
-      )}
+      <div style={{ marginTop: '15px', textAlign: 'center' }}>
+        <button
+          onClick={handleConfirmDays}
+          disabled={isConfirmButtonDisabled()}
+          className="btn btn-primary"
+        >
+          {t('buttons.confirmDays', 'Confirm Days & Show Exercises')}
+        </button>
+      </div>
     </div>
   );
 };
