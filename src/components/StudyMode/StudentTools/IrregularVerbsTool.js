@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
-import { pronounceText } from '../../../utils/speechUtils'; // Added
+import { pronounceText } from '../../../utils/speechUtils';
+import IrregularVerbsPractice from '../../Freestyle/IrregularVerbs/IrregularVerbsPractice'; // Import the practice component
 import './IrregularVerbsTool.css';
 
 const IrregularVerbsTool = () => {
@@ -10,7 +11,8 @@ const IrregularVerbsTool = () => {
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
     const [isConjugationData, setIsConjugationData] = useState(false);
-    const [noDataForLanguage, setNoDataForLanguage] = useState(false); // New state for missing data
+    const [noDataForLanguage, setNoDataForLanguage] = useState(false);
+    const [isPracticeMode, setIsPracticeMode] = useState(false); // State to toggle practice mode
 
     useEffect(() => {
         const loadVerbs = async () => {
@@ -18,14 +20,13 @@ const IrregularVerbsTool = () => {
             setError(null);
             setVerbs([]);
             setIsConjugationData(false);
-            setNoDataForLanguage(false); // Reset this state on each load attempt
+            setNoDataForLanguage(false);
 
             let filePath = '';
             let dataIsConjugations = false;
 
-            // Determine file path based on language (similar to old system)
             if (currentUILanguage === 'COSYfrançais') {
-                filePath = `/data/grammar/verbs/conjugations/conjugations_french.json`; // Assuming files are in public folder
+                filePath = `/data/grammar/verbs/conjugations/conjugations_french.json`;
                 dataIsConjugations = true;
             } else if (currentUILanguage === 'COSYenglish') {
                 filePath = `/data/vocabulary/dictionary/en/verbs.js`;
@@ -74,24 +75,27 @@ const IrregularVerbsTool = () => {
         if (!searchTerm) return verbs;
         const lowerSearchTerm = searchTerm.toLowerCase();
 
-        if (isConjugationData) { // French conjugation data
+        if (isConjugationData) {
             return verbs.filter(verb =>
                 verb.infinitive?.toLowerCase().includes(lowerSearchTerm)
             );
-        } else { // Standard irregular verbs
+        } else {
             return verbs.filter(verb =>
                 verb.base?.toLowerCase().includes(lowerSearchTerm) ||
                 verb.pastSimple?.toLowerCase().includes(lowerSearchTerm) ||
                 verb.pastParticiple?.toLowerCase().includes(lowerSearchTerm) ||
-                // We don't use translations
                 (verb.translation && typeof verb.translation === 'string' && verb.translation.toLowerCase().includes(lowerSearchTerm))
             );
         }
     }, [verbs, searchTerm, isConjugationData]);
 
+    // If in practice mode, render the IrregularVerbsPractice component
+    if (isPracticeMode) {
+        return <IrregularVerbsPractice />;
+    }
+
     if (isLoading) return <p>{t('loadingIrregularVerbs') || 'Loading irregular verbs...'}</p>;
 
-    // Display message if no data is available for the language
     if (noDataForLanguage) {
         const titleText = currentUILanguage === 'COSYenglish'
             ? t('irregularVerbsToolTitle', 'Irregular Verbs List')
@@ -104,7 +108,6 @@ const IrregularVerbsTool = () => {
         );
     }
 
-    // Display general error message if one occurred (and not handled by noDataForLanguage)
     if (error) return <p className="error-message">{error}</p>;
 
     const titleText = currentUILanguage === 'COSYenglish'
@@ -113,7 +116,12 @@ const IrregularVerbsTool = () => {
 
     return (
         <div className="irregular-verbs-tool">
-            <h3>{titleText} ({currentUILanguage.replace('COSY','')})</h3>
+            <div className="tool-header">
+                <h3>{titleText} ({currentUILanguage.replace('COSY','')})</h3>
+                <button onClick={() => setIsPracticeMode(true)} className="btn-primary">
+                    {t('practiceButton', 'Practice')}
+                </button>
+            </div>
             <input
                 type="text"
                 className="search-irregular-verbs"
@@ -126,7 +134,7 @@ const IrregularVerbsTool = () => {
                 <p>{t('noIrregularVerbsFound') || 'No irregular verbs found for this language or search term.'}</p>
             )}
 
-            {isConjugationData ? ( // Display for French conjugations
+            {isConjugationData ? (
                 <div className="conjugation-table-container">
                     {filteredVerbs.map((verb, index) => (
                         <div key={verb.infinitive || index} className="conjugation-verb-entry">
@@ -147,7 +155,7 @@ const IrregularVerbsTool = () => {
                         </div>
                     ))}
                 </div>
-            ) : ( // Display for standard irregular verbs
+            ) : (
                 <table className="irregular-verbs-table">
                     <thead>
                         <tr>
