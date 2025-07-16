@@ -8,7 +8,7 @@ import './Layout.css';
 
 const Layout = () => {
   const { isAuthenticated, currentUser, logout, loadingAuth } = useAuth();
-  const { t, language } = useI18n(); // Get translation function
+  const { t } = useI18n(); // Get translation function
   const navigate = useNavigate();
 
   const handleLogout = async () => {
