@@ -42,13 +42,11 @@ const IrregularVerbsTool = () => {
             let filePath = '';
             let dataIsConjugations = false;
 
+            const langFileNamePart = currentUILanguage.replace('COSY', '').toLowerCase();
             if (currentUILanguage === 'COSYfrançais') {
                 filePath = `/data/grammar/verbs/conjugations/conjugations_french.json`;
                 dataIsConjugations = true;
-            } else if (currentUILanguage === 'COSYenglish') {
-                filePath = `/data/vocabulary/dictionary/en/verbs.js`;
             } else {
-                const langFileNamePart = currentUILanguage.replace('COSY', '').toLowerCase();
                 filePath = `/data/grammar/verbs/irregular/irregular_verbs_${langFileNamePart}.json`;
             }
 
