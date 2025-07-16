@@ -15,14 +15,24 @@
   cursor: pointer;
   font-weight: 500;
   margin-bottom: calc(var(--spacing-unit, 10px) * 1.5);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   align-self: flex-start; /* Align to the left of the container */
-  transition: background-color 0.2s, box-shadow 0.2s;
+  transition: all 0.3s ease;
+}
+
+.go-back-button:before {
+    content: '←';
+    font-size: 1.2rem;
+    line-height: 1;
 }
 
 .go-back-button:hover {
   background-color: var(--medium-grey, #e9ecef);
   box-shadow: var(--shadow-sm);
+  padding-left: calc(var(--spacing-unit, 10px) * 1);
+  padding-right: calc(var(--spacing-unit, 10px) * 2);
 }
 
 .freestyle-mode-container {
@@ -47,7 +57,23 @@
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-unit, 10px); /* Add gap between items in the menu box */
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.main-menu-box > * {
+    animation: slideIn 0.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes fadeIn {
@@ -626,21 +652,28 @@ body.lang-bg {
 }
 
 body.COSYbreton-bg {
-  background-image: url('../public/assets/flags/Flag_of_Brittany.png'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
-  background-size: cover, cover;
+  background-image: url('/assets/flags/Flag_of_Brittany.png'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
+  background-size: 200% 200%, cover;
   background-position: center center;
   background-repeat: no-repeat;
+  animation: gradient-animation 10s ease-in-out infinite;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 body.COSYbashkir-bg {
-  background-image: url('../public/assets/flags/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('/assets/flags/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYtatar-bg {
-  background-image: url('../public/assets/flags/Flag_of_Tatarstan.png'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('/assets/flags/Flag_of_Tatarstan.png'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
