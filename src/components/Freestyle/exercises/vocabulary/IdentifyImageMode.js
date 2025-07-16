@@ -92,7 +92,7 @@ const IdentifyImageMode = ({ imageObject, language, onDone, exerciseKeyInternal 
   // Ensure imagePath is correctly formed, PUBLIC_URL is for assets bundled with create-react-app
   const imagePath = imageObject.imagePath 
     ? `${process.env.PUBLIC_URL}${imageObject.imagePath.startsWith('/') ? '' : '/'}${imageObject.imagePath}`
-    : `${process.env.PUBLIC_URL}/assets/vocabulary_images/placeholder.png`; // Fallback image
+    : `/assets/vocabulary_images/placeholder.png`; // Fallback image
 
   return (
     <div style={{ textAlign: 'center', padding: '20px', border: '1px solid #eee', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
@@ -101,7 +101,7 @@ const IdentifyImageMode = ({ imageObject, language, onDone, exerciseKeyInternal 
         src={imagePath}
         alt={imageObject.altText || t('altText.identifyImage', "Identify this image")}
         style={{ maxWidth: '300px', maxHeight: '300px', margin: '15px auto', display: 'block', border: '1px solid #ccc', objectFit: 'contain' }}
-        onError={(e) => { e.target.onerror = null; e.target.src=`${process.env.PUBLIC_URL}/assets/vocabulary_images/placeholder.png`; }}
+        onError={(e) => { e.target.onerror = null; e.target.src=`/assets/vocabulary_images/placeholder.png`; }}
       />
       <input
         type="text"
