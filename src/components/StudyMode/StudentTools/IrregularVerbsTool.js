@@ -64,12 +64,14 @@ const IrregularVerbsTool = () => {
                     }
                 } else {
                     const text = await response.text();
-                    const jsonText = text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1);
-                    const data = JSON.parse(jsonText);
+                    const data = JSON.parse(text);
                     if (dataIsConjugations) {
                         setVerbs(data.verbs || []);
                     } else {
-                        setVerbs(data.Verbs || []);
+                        const allVerbs = data.reduce((acc, category) => {
+                            return acc.concat(category.verbs);
+                        }, []);
+                        setVerbs(allVerbs);
                     }
                 }
             } catch (err) {
