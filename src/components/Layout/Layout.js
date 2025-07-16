@@ -33,7 +33,6 @@ const Layout = () => {
               <NavLink to="/study" className={({ isActive }) => isActive ? "active-link" : ""}><TransliterableText text={t('navStudyMode') || 'Study'} /></NavLink>
             </li>
             <li>
-              <NavLink to={`/study/irregular-verbs?variety=${language}`} className={({ isActive }) => isActive ? "active-link" : ""}><TransliterableText text={t('navIrregularVerbs') || 'Irregular Verbs'} /></NavLink>
             </li>
             {isAuthenticated && ( // Only show "My Sets" if authenticated
               <li>
