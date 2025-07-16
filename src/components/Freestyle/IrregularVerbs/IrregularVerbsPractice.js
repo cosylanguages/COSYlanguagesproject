@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import IrregularVerbLevelSelector from './IrregularVerbLevelSelector';
-import useIrregularVerbs from '../../../hooks/useIrregularVerbs.js';
+import useVerbs from '../../../hooks/useVerbs.js';
 import IrregularVerbQuiz from '../exercises/grammar/IrregularVerbQuiz';
 import FillLettersExercise from './FillLettersExercise';
 import FillBlanksExercise from './FillBlanksExercise';
@@ -12,10 +12,11 @@ const IrregularVerbsPractice = () => {
     const [searchParams] = useSearchParams();
     const levels = searchParams.get('levels');
     const lang = searchParams.get('lang');
-    const { verbs, loading, error } = useIrregularVerbs(levels, lang);
+    const { verbs, loading, error } = useVerbs(levels, lang);
     const [currentVerbIndex, setCurrentVerbIndex] = useState(0);
     const [showDefinition, setShowDefinition] = useState(false);
     const [exerciseType, setExerciseType] = useState('quiz'); // 'quiz', 'fill-letters', 'fill-blanks'
+    const [category, setCategory] = useState('all');
 
     useEffect(() => {
         if (verbs.length > 0) {
@@ -35,11 +36,17 @@ const IrregularVerbsPractice = () => {
         return <div>Error loading verbs: {error.message}</div>;
     }
 
-    const currentVerb = verbs[currentVerbIndex];
+    const getCategories = () => {
+        const categories = new Set(verbs.map(verb => verb.verb_group));
+        return ['all', ...Array.from(categories)];
+    };
+
+    const filteredVerbs = category === 'all' ? verbs : verbs.filter(verb => verb.verb_group === category);
+    const currentVerb = filteredVerbs[currentVerbIndex];
 
     const handleNext = () => {
         setShowDefinition(false);
-        setCurrentVerbIndex(prevIndex => (prevIndex + 1) % verbs.length);
+        setCurrentVerbIndex(prevIndex => (prevIndex + 1) % filteredVerbs.length);
     };
 
     const renderExercise = () => {
@@ -75,6 +82,17 @@ const IrregularVerbsPractice = () => {
                 <button onClick={() => setExerciseType('fill-blanks')} className={exerciseType === 'fill-blanks' ? 'selected' : ''}>Fill Blanks</button>
                 <a href="/" className="study-mode-button">Study Mode</a>
             </div>
+            <div className="category-selector">
+                {getCategories().map(cat => (
+                    <button
+                        key={cat}
+                        onClick={() => setCategory(cat)}
+                        className={category === cat ? 'selected' : ''}
+                    >
+                        {cat}
+                    </button>
+                ))}
+            </div>
             <div
                 className="verb-definition-container"
                 onMouseEnter={() => setShowDefinition(true)}
@@ -83,8 +101,7 @@ const IrregularVerbsPractice = () => {
                 {renderExercise()}
                 {showDefinition && currentVerb && (
                     <div className="verb-definition-popup">
-                        <p><strong>Definition:</strong> {currentVerb.definition}</p>
-                        <p><strong>Example:</strong> {currentVerb.example}</p>
+                        <p><strong>Translation:</strong> {currentVerb.translation}</p>
                     </div>
                 )}
             </div>
@@ -101,7 +118,7 @@ const IrregularVerbsPractice = () => {
                 }}
                 isAnswerCorrect={false}
                 isRevealed={false}
-                onRandomize={() => setCurrentVerbIndex(Math.floor(Math.random() * verbs.length))}
+                onRandomize={() => setCurrentVerbIndex(Math.floor(Math.random() * filteredVerbs.length))}
             />
         </div>
     );

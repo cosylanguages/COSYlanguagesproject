@@ -164,9 +164,19 @@
     {
       "infinitive": "komz",
       "translation_en": "to speak",
+      "verb_group": "regular",
       "tags": ["regular"],
       "tenses": {
         "amzer-vremañ (present)": { "forms": { "me": "komzan", "eñ/hi": "komz" } }
+      }
+    },
+    {
+      "infinitive": "lenn",
+      "translation_en": "to read",
+      "verb_group": "regular",
+      "tags": ["regular"],
+      "tenses": {
+        "amzer-vremañ (present)": { "forms": { "me": "lennan", "eñ/hi": "lenn" } }
       }
     }
   ]
