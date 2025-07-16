@@ -42,7 +42,10 @@ const IrregularVerbsTool = () => {
             let filePath = '';
             let dataIsConjugations = false;
 
-            const langFileNamePart = currentUILanguage.replace('COSY', '').toLowerCase();
+            let langFileNamePart = currentUILanguage.replace('COSY', '').toLowerCase();
+            if (langFileNamePart === 'english') {
+                langFileNamePart = 'en';
+            }
             if (currentUILanguage === 'COSYfrançais') {
                 filePath = `/data/grammar/verbs/conjugations/conjugations_french.json`;
                 dataIsConjugations = true;
