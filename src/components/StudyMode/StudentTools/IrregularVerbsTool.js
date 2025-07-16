@@ -42,15 +42,20 @@ const IrregularVerbsTool = () => {
             let filePath = '';
             let dataIsConjugations = false;
 
-            let langFileNamePart = currentUILanguage.replace('COSY', '').toLowerCase();
-            if (langFileNamePart === 'english') {
-                langFileNamePart = 'en';
-            }
-            if (currentUILanguage === 'COSYfrançais') {
-                filePath = `/data/grammar/verbs/conjugations/conjugations_french.json`;
-                dataIsConjugations = true;
+            const langConfig = {
+                'COSYenglish': { path: '/data/grammar/verbs/irregular/irregular_verbs_en.json', isConjugation: false },
+                'COSYfrançais': { path: '/data/grammar/verbs/conjugations/conjugations_french.json', isConjugation: true }
+            };
+
+            const config = langConfig[currentUILanguage];
+
+            if (config) {
+                filePath = config.path;
+                dataIsConjugations = config.isConjugation;
             } else {
+                let langFileNamePart = currentUILanguage.replace('COSY', '').toLowerCase();
                 filePath = `/data/grammar/verbs/irregular/irregular_verbs_${langFileNamePart}.json`;
+                dataIsConjugations = false; // Default to irregular verbs for other languages
             }
 
             setIsConjugationData(dataIsConjugations);
