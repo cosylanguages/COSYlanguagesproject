@@ -1,7 +1,6 @@
 /**
  * Plays a sound effect.
  * @param {string} soundName - The name of the sound (e.g., 'click', 'success', 'error', 'select').
- *                             Assumes .mp3 files are in `public/assets/sounds/`.
  */
 export function playSound(soundName) {
   const validSounds = ['click', 'success', 'error', 'select'];
