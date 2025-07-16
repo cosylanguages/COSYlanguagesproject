@@ -77,8 +77,8 @@ h4 { font-size: var(--font-size-h4); }
 
 /* CSS Custom Properties (Variables) */
 :root {
-    --primary-color: #007bff;
-    --primary-hover-color: #0056b3;
+    --primary-color: #0abbb5;
+    --primary-hover-color: #089a95;
     --secondary-color: #6c757d;
     --secondary-hover-color: #5a6268;
     --text-color-light: #fff;
