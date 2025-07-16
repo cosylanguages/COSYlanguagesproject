@@ -107,8 +107,6 @@ function AppRoutes() {
                     </StudyModeProtectedRoute>
                   }
                 />
-                <Route path="dictionary" element={<DictionaryPage />} />
-                <Route path="irregular-verbs" element={<IrregularVerbsPage />} />
                 <Route
                   path="my-sets"
                   element={
@@ -125,8 +123,6 @@ function AppRoutes() {
                   {/* <Route path=":setId/cards" element={<FlashcardEditor />} /> */}
                   {/* <Route path=":setId/study" element={<FlashcardPlayer />} /> */}
                 </Route>
-                {/* Temp route for testing ShowWordExercise */}
-                <Route path="study/random-word" element={<ShowWordExercise />} />
             </Route>
             {/* Catch-all route */}
             <Route path="*" element={catchAllElement} />
