@@ -44,33 +44,7 @@ const FreestyleModePage = () => {
                     );
                 }
 
-                window.addEventListener('languageIslandChange', (event) => {
-                    const { selectedLanguage } = event.detail;
-                    const daySelectorContainer = document.getElementById('day-selector-island-container');
-                    const practiceNavContainer = document.getElementById('practice-nav-island-container');
-                    const exerciseHostContainer = document.getElementById('exercise-host-container');
-
-                    if (daySelectorContainer && selectedLanguage) {
-                        daySelectorContainer.style.display = 'block';
-                        if (!daySelectorContainer._reactRoot) daySelectorContainer._reactRoot = ReactDOM.createRoot(daySelectorContainer);
-                        daySelectorContainer._reactRoot.render(
-                            <React.StrictMode>
-                                <I18nProvider>
-                                    <LatinizationProvider>
-                                        <DaySelectorIslandWrapper language={selectedLanguage} />
-                                    </LatinizationProvider>
-                                </I18nProvider>
-                            </React.StrictMode>
-                        );
-                    } else {
-                        if (daySelectorContainer) { daySelectorContainer.style.display = 'none'; if (daySelectorContainer._reactRoot) { daySelectorContainer._reactRoot.unmount(); daySelectorContainer._reactRoot = null; } }
-                        if (practiceNavContainer) { practiceNavContainer.style.display = 'none'; if (practiceNavContainer._reactRoot) { practiceNavContainer._reactRoot.unmount(); practiceNavContainer._reactRoot = null; } }
-                        if (exerciseHostContainer && exerciseHostContainer._reactRoot) { exerciseHostContainer._reactRoot.unmount(); exerciseHostContainer._reactRoot = null; exerciseHostContainer.innerHTML = '<p>Exercise Area</p>'; }
-                    }
-                });
-
-                window.addEventListener('dayIslandConfirm', (event) => {
-                    const { confirmedDays } = event.detail;
+                const handleDayConfirm = (confirmedDays) => {
                     const practiceNavContainer = document.getElementById('practice-nav-island-container');
                     const daySelectorContainer = document.getElementById('day-selector-island-container');
                     const exerciseHostContainer = document.getElementById('exercise-host-container');
@@ -92,6 +66,31 @@ const FreestyleModePage = () => {
                         if (practiceNavContainer) { practiceNavContainer.style.display = 'none'; if (practiceNavContainer._reactRoot) { practiceNavContainer._reactRoot.unmount(); practiceNavContainer._reactRoot = null; } }
                     }
                     if (exerciseHostContainer && exerciseHostContainer._reactRoot) { exerciseHostContainer._reactRoot.unmount(); exerciseHostContainer._reactRoot = null; exerciseHostContainer.innerHTML = '<p>Exercise Area</p>'; }
+                };
+
+                window.addEventListener('languageIslandChange', (event) => {
+                    const { selectedLanguage } = event.detail;
+                    const daySelectorContainer = document.getElementById('day-selector-island-container');
+                    const practiceNavContainer = document.getElementById('practice-nav-island-container');
+                    const exerciseHostContainer = document.getElementById('exercise-host-container');
+
+                    if (daySelectorContainer && selectedLanguage) {
+                        daySelectorContainer.style.display = 'block';
+                        if (!daySelectorContainer._reactRoot) daySelectorContainer._reactRoot = ReactDOM.createRoot(daySelectorContainer);
+                        daySelectorContainer._reactRoot.render(
+                            <React.StrictMode>
+                                <I18nProvider>
+                                    <LatinizationProvider>
+                                        <DaySelectorIslandWrapper language={selectedLanguage} onConfirm={handleDayConfirm} />
+                                    </LatinizationProvider>
+                                </I18nProvider>
+                            </React.StrictMode>
+                        );
+                    } else {
+                        if (daySelectorContainer) { daySelectorContainer.style.display = 'none'; if (daySelectorContainer._reactRoot) { daySelectorContainer._reactRoot.unmount(); daySelectorContainer._reactRoot = null; } }
+                        if (practiceNavContainer) { practiceNavContainer.style.display = 'none'; if (practiceNavContainer._reactRoot) { practiceNavContainer._reactRoot.unmount(); practiceNavContainer._reactRoot = null; } }
+                        if (exerciseHostContainer && exerciseHostContainer._reactRoot) { exerciseHostContainer._reactRoot.unmount(); exerciseHostContainer._reactRoot = null; exerciseHostContainer.innerHTML = '<p>Exercise Area</p>'; }
+                    }
                 });
 
                 window.addEventListener('exerciseSelected', (event) => {
