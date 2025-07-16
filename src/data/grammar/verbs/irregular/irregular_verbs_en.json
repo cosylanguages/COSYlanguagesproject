@@ -172,8 +172,7 @@
         "translation": "creep"
       },
       {
-        "base":. I have updated the file `public/data/grammar/verbs/irregular/irregular_verbs_COSYenglish.json` to use the correct key for the translation. Now, I will update the `IrregularVerbsTool.js` file to correctly handle the 'translation' key in each verb object. I will modify the component to check for the 'translation' key and use its value for translation display and search filtering.
-"cut",
+        "base": "cut",
         "pastSimple": "cut",
         "pastParticiple": "cut",
         "translation": "cut"

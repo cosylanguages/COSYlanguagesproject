@@ -4,8 +4,8 @@ import { pronounceText } from '../../../utils/speechUtils';
 import { getStudySets, addCardToSet } from '../../../utils/studySetService';
 import IrregularVerbsPractice from '../../Freestyle/IrregularVerbs/IrregularVerbsPractice'; // Import the practice component
 import './IrregularVerbsTool.css';
-import irregularVerbsEn from '../../../../public/data/grammar/verbs/irregular/irregular_verbs_en.json';
-import conjugationsFr from '../../../../public/data/grammar/verbs/conjugations/conjugations_french.json';
+import irregularVerbsEn from '../../../data/grammar/verbs/irregular/irregular_verbs_en.json';
+import conjugationsFr from '../../../data/grammar/verbs/conjugations/conjugations_french.json';
 
 const IrregularVerbsTool = () => {
     const { t, language: currentUILanguage } = useI18n();
