@@ -106,42 +106,14 @@ export const LanguageIslandApp = () => {
 export const LanguageIslandWrapper = () => <I18nProvider><LatinizationProvider><LanguageIslandApp /></LatinizationProvider></I18nProvider>;
 
 // --- Day Selector Island ---
-export const DaySelectorIslandApp = ({ language }) => {
+export const DaySelectorIslandApp = ({ language, onConfirm }) => {
   const [currentDays, setCurrentDays] = useState([]);
-  const [currentInputMode, setCurrentInputMode] = useState('choice');
 
-  const localMenuConfigForDaySelector = { /* ... as before ... */
-    'day_selection_stage': { children: ['day_single_input', 'day_range_input', 'day_confirm_action'] },
-    'day_single_input': { parent: 'day_selection_stage', isModeSelector: true },
-    'day_range_input': { parent: 'day_selection_stage', isModeSelector: true },
-    'day_confirm_action': { parent: 'day_selection_stage' }
-  };
-  const getActivePathForDaySelector = () => {
-    if (currentInputMode === 'single') return ['day_selection_stage', 'day_single_input'];
-    if (currentInputMode === 'range') return ['day_selection_stage', 'day_range_input'];
-    return ['day_selection_stage'];
-  };
-  const isMenuItemVisibleForDaySelector = (path, itemKey) => {
-    const currentActiveStage = path.length > 0 ? path[path.length - 1] : null;
-    if (itemKey === currentActiveStage) return true;
-    if (localMenuConfigForDaySelector[itemKey]?.parent === currentActiveStage) return true;
-    if (currentActiveStage === 'day_selection_stage' && (itemKey === 'day_single_input' || itemKey === 'day_range_input')) return currentInputMode === 'choice';
-    return false;
- };
-
-  const handleDaySelectorMenuSelect = (itemKey, payload) => {
-    if (itemKey === 'day_single_input') setCurrentInputMode('single');
-    else if (itemKey === 'day_range_input') setCurrentInputMode('range');
-    else if (itemKey === 'day_confirm_action' && payload && payload.days) {
-      // globalConfirmedDays = payload.days; // No longer needed
-      window.dispatchEvent(new CustomEvent('dayIslandConfirm', { detail: { confirmedDays: payload.days } }));
-    }
-  };
   const handleDaysChangeInIsland = (newDays) => setCurrentDays(newDays);
 
-  return <DaySelectorFreestyle currentDays={currentDays} onDaysChange={handleDaysChangeInIsland} language={language} activePath={getActivePathForDaySelector()} onMenuSelect={handleDaySelectorMenuSelect} isMenuItemVisible={isMenuItemVisibleForDaySelector} allMenuItemsConfig={localMenuConfigForDaySelector} />;
+  return <DaySelectorFreestyle currentDays={currentDays} onDaysChange={handleDaysChangeInIsland} language={language} onConfirm={onConfirm} />;
 };
-export const DaySelectorIslandWrapper = ({ language }) => <I18nProvider><LatinizationProvider><DaySelectorIslandApp language={language} /></LatinizationProvider></I18nProvider>;
+export const DaySelectorIslandWrapper = ({ language, onConfirm }) => <I18nProvider><LatinizationProvider><DaySelectorIslandApp language={language} onConfirm={onConfirm} /></LatinizationProvider></I18nProvider>;
 
 
 // --- Practice Navigation Island ---
