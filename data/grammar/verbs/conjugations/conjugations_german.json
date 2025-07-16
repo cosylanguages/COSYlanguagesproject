@@ -440,6 +440,7 @@
     {
       "infinitive": "sprechen",
       "translation_en": "to speak",
+      "verb_group": "irregular",
       "tags": ["irregular", "stem-vowel-change"],
       "tenses": {
         "präsens": {
@@ -461,6 +462,34 @@
         "konjunktiv II": {
           "mood": "konjunktiv",
           "forms": { "ich": "spräche", "du": "sprächest", "er/sie/es": "spräche", "wir": "sprächen", "ihr": "sprächet", "sie/Sie": "sprächen" }
+        }
+      }
+    },
+    {
+      "infinitive": "machen",
+      "translation_en": "to do/make",
+      "verb_group": "regular",
+      "tags": ["regular"],
+      "tenses": {
+        "präsens": {
+          "mood": "indicativ",
+          "forms": { "ich": "mache", "du": "machst", "er/sie/es": "macht", "wir": "machen", "ihr": "macht", "sie/Sie": "machen" }
+        },
+        "perfekt": {
+          "mood": "indicativ", "auxiliary_verb": "haben", "past_participle": "gemacht",
+          "forms": { "ich": "habe gemacht", "du": "hast gemacht", "er/sie/es": "hat gemacht", "wir": "haben gemacht", "ihr": "habt gemacht", "sie/Sie": "haben gemacht" }
+        },
+        "präteritum": {
+          "mood": "indicativ",
+          "forms": { "ich": "machte", "du": "machtest", "er/sie/es": "machte", "wir": "machten", "ihr": "machtet", "sie/Sie": "machten" }
+        },
+        "futur I": {
+          "mood": "indicativ", "auxiliary_verb": "werden",
+          "forms": { "ich": "werde machen", "du": "wirst machen", "er/sie/es": "wird machen", "wir": "werden machen", "ihr": "werdet machen", "sie/Sie": "werden machen" }
+        },
+        "konjunktiv II": {
+          "mood": "konjunktiv",
+          "forms": { "ich": "machte", "du": "machtest", "er/sie/es": "machte", "wir": "machten", "ihr": "machtet", "sie/Sie": "machten" }
         }
       }
     }

@@ -142,10 +142,21 @@
     {
       "infinitive": "һөйләргә",
       "translation_en": "to speak",
+      "verb_group": "regular",
       "tags": [],
       "tenses": {
         "хәҙерге заман (present)": { "forms": { "мин": "һөйләйем", "ул": "һөйләй" } },
         "билдәле үткән заман (definite past)": { "forms": { "мин": "һөйләнем", "ул": "һөйләне" } }
+      }
+    },
+    {
+      "infinitive": "яҙырға",
+      "translation_en": "to write",
+      "verb_group": "regular",
+      "tags": [],
+      "tenses": {
+        "хәҙерге заман (present)": { "forms": { "мин": "яҙам", "ул": "яҙа" } },
+        "билдәле үткән заман (definite past)": { "forms": { "мин": "яҙҙым", "ул": "яҙҙы" } }
       }
     }
   ]
