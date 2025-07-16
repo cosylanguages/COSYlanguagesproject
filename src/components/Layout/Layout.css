@@ -6,8 +6,8 @@
 }
 
 .app-header {
-  background-color: #333;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
   padding: 0.8rem 1rem; /* Adjusted padding */
   display: flex;
   justify-content: space-between;
@@ -40,7 +40,7 @@
 
 .app-header nav a,
 .login-link { /* Style login link similarly to nav links */
-  color: #adf;
+  color: var(--text-color-light);
   text-decoration: none;
   font-size: 0.95rem; /* Adjusted font size */
   padding: 0.4rem 0.6rem; /* Adjusted padding */
@@ -52,7 +52,7 @@
 .app-header nav a.active-link,
 .login-link:hover,
 .login-link.active-link {
-  background-color: #555;
+  background-color: var(--primary-hover-color);
   text-decoration: none;
 }
 
@@ -72,12 +72,12 @@
 }
 
 .app-footer {
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: var(--light-grey);
+  color: var(--text-color-dark);
   text-align: center;
   padding: 0.5rem;
   font-size: 0.8rem;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--border-color);
 }
 
 /* Styles for user info and logout button */
