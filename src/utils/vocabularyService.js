@@ -159,40 +159,26 @@ export async function getVocabularyByTheme(lang, level, themeName) {
 export async function loadAllLevelsForLanguageAsFlatList(lang) {
     let combinedVocabulary = [];
     // console.log(`VocabularyService: Loading all levels for language ${lang}`);
-    for (const level of CEFR_LEVELS) {
+    const levelsToTry = [...CEFR_LEVELS, 'verbs']; // Add 'verbs' to the list of things to try
+
+    for (const level of levelsToTry) {
         try {
-            // console.log(`VocabularyService: - Attempting level ${level} for ${lang}`);
+            // console.log(`VocabularyService: - Attempting level/file ${level} for ${lang}`);
             const levelVocab = await getAllVocabularyAsFlatList(lang, level);
             if (levelVocab && levelVocab.length > 0) {
                 combinedVocabulary = [...combinedVocabulary, ...levelVocab];
                 // console.log(`VocabularyService: - Loaded ${levelVocab.length} items for ${lang} ${level}. Total so far: ${combinedVocabulary.length}`);
             } else {
-                // console.log(`VocabularyService: - No vocabulary found for ${lang} ${level} or already logged as failed.`);
+                // This is expected if a file for a level doesn't exist, so no warning is needed here.
+                // console.log(`VocabularyService: - No vocabulary found for ${lang} ${level}.`);
             }
         } catch (error) {
-            // Errors are logged by getAllVocabularyAsFlatList/loadVocabularyForLanguageLevel
+            // Errors are logged by the called functions, so just a warning here is sufficient.
             // console.warn(`VocabularyService: Error processing level ${level} for language ${lang}: ${error.message}`);
         }
     }
 
-    // Attempt to load the verbs.js file
-    try {
-        // console.log(`VocabularyService: - Attempting to load verbs.js for ${lang}`);
-        // We can reuse getAllVocabularyAsFlatList by passing 'verbs' as a pseudo-level
-        // as it internally calls loadVocabularyForLanguageLevel which handles .js files
-        // and expects the 'vocabulary' export.
-        const verbsVocabList = await getAllVocabularyAsFlatList(lang, 'verbs');
-        if (verbsVocabList && verbsVocabList.length > 0) {
-            combinedVocabulary = [...combinedVocabulary, ...verbsVocabList];
-            // console.log(`VocabularyService: - Loaded ${verbsVocabList.length} items from verbs.js for ${lang}. New total: ${combinedVocabulary.length}`);
-        } else {
-            // console.log(`VocabularyService: - No vocabulary found in verbs.js for ${lang} or it failed to load.`);
-        }
-    } catch (error) {
-        // console.warn(`VocabularyService: Error processing verbs.js for language ${lang}: ${error.message}`);
-    }
-
-    // console.log(`VocabularyService: Finished loading all levels and verbs.js for ${lang}. Total items: ${combinedVocabulary.length}`);
+    // console.log(`VocabularyService: Finished loading all levels and special files for ${lang}. Total items: ${combinedVocabulary.length}`);
     return combinedVocabulary;
 }
 
