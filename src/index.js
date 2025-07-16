@@ -7,7 +7,8 @@ import { AuthProvider } from './contexts/AuthContext';
 import { I18nProvider } from './i18n/I18nContext';
 import { LatinizationProvider } from './contexts/LatinizationContext';
 import { UserProfileProvider } from './contexts/UserProfileContext'; // Added UserProfileProvider
-import './index.css'; 
+import './index.css';
+import './components/Common/animations.css';
 
 
 const rootElement = document.getElementById('root');
