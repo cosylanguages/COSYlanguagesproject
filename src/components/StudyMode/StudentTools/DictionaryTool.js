@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils';
+import { getStudySets, addCardToSet } from '../../../utils/studySetService';
 import { loadAllLevelsForLanguageAsFlatList, CEFR_LEVELS as importedCefrLevels } from '../../../utils/vocabularyService'; // Import service
 import './DictionaryTool.css';
 
@@ -15,6 +16,22 @@ const DictionaryTool = () => {
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedLevel, setSelectedLevel] = useState(''); // Empty string means all levels
+
+    const handleAddWordToFlashcards = (word) => {
+        const studySets = getStudySets();
+        if (studySets.length === 0) {
+            alert("Please create a study set first.");
+            return;
+        }
+        const firstSetId = studySets[0].id;
+        const cardData = {
+            term1: word.term,
+            term2: word.definition,
+            notes: word.example
+        };
+        addCardToSet(firstSetId, cardData);
+        alert(`Word "${word.term}" added to study set "${studySets[0].name}".`);
+    };
 
     useEffect(() => {
         const loadVocabularyForCurrentLanguage = async () => {
@@ -119,6 +136,7 @@ const DictionaryTool = () => {
                         {item.example && <p className="vocab-example"><strong>{t('dictionary.example', 'Example:')}</strong> <em>{item.example}</em></p>}
                         {/* We might want to show example_translation if available */}
                         {item.theme && <p className="vocab-theme"><small>{t('dictionary.theme', 'Theme:')} {item.theme}</small></p>}
+                        <button className="btn-icon" onClick={() => handleAddWordToFlashcards(item)}>➕</button>
                     </div>
                 ))}
             </div>
