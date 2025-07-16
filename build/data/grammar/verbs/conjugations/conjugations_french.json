@@ -363,6 +363,7 @@
     {
       "infinitive": "boire",
       "translation_en": "to drink",
+      "verb_group": "irregular",
       "tags": ["irregular"],
       "tenses": {
         "présent": {
@@ -384,6 +385,62 @@
         "passé simple": {
           "mood": "indicatif",
           "forms": { "je": "bus", "tu": "bus", "il/elle/on": "but", "nous": "bûmes", "vous": "bûtes", "ils/elles": "burent" }
+        }
+      }
+    },
+    {
+      "infinitive": "finir",
+      "translation_en": "to finish",
+      "verb_group": "-ir",
+      "tags": ["regular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "finis", "tu": "finis", "il/elle/on": "finit", "nous": "finissons", "vous": "finissez", "ils/elles": "finissent" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "fini",
+          "forms": { "j'": "ai fini", "tu": "as fini", "il/elle/on": "a fini", "nous": "avons fini", "vous": "avez fini", "ils/elles": "ont fini" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "je": "finissais", "tu": "finissais", "il/elle/on": "finissait", "nous": "finissions", "vous": "finissiez", "ils/elles": "finissaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "je": "finirai", "tu": "finiras", "il/elle/on": "finira", "nous": "finirons", "vous": "finirez", "ils/elles": "finiront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "je": "finis", "tu": "finis", "il/elle/on": "finit", "nous": "finîmes", "vous": "finîtes", "ils/elles": "finirent" }
+        }
+      }
+    },
+    {
+      "infinitive": "choisir",
+      "translation_en": "to choose",
+      "verb_group": "-ir",
+      "tags": ["regular"],
+      "tenses": {
+        "présent": {
+          "mood": "indicatif",
+          "forms": { "je": "choisis", "tu": "choisis", "il/elle/on": "choisit", "nous": "choisissons", "vous": "choisissez", "ils/elles": "choisissent" }
+        },
+        "passé composé": {
+          "mood": "indicatif", "auxiliary_verb": "avoir", "past_participle": "choisi",
+          "forms": { "j'": "ai choisi", "tu": "as choisi", "il/elle/on": "a choisi", "nous": "avons choisi", "vous": "avez choisi", "ils/elles": "ont choisi" }
+        },
+        "imparfait": {
+          "mood": "indicatif",
+          "forms": { "je": "choisissais", "tu": "choisissais", "il/elle/on": "choisissait", "nous": "choisissions", "vous": "choisissiez", "ils/elles": "choisissaient" }
+        },
+        "futur simple": {
+          "mood": "indicatif",
+          "forms": { "je": "choisirai", "tu": "choisiras", "il/elle/on": "choisira", "nous": "choisirons", "vous": "choisirez", "ils/elles": "choisiront" }
+        },
+        "passé simple": {
+          "mood": "indicatif",
+          "forms": { "je": "choisis", "tu": "choisis", "il/elle/on": "choisit", "nous": "choisîmes", "vous": "choisîtes", "ils/elles": "choisirent" }
         }
       }
     }
