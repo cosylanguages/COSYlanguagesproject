@@ -13,7 +13,6 @@ const IrregularVerbsTool = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
-    const [isConjugationData, setIsConjugationData] = useState(false);
     const [noDataForLanguage, setNoDataForLanguage] = useState(false);
     const [isPracticeMode, setIsPracticeMode] = useState(false); // State to toggle practice mode
 
@@ -38,7 +37,6 @@ const IrregularVerbsTool = () => {
             setIsLoading(true);
             setError(null);
             setVerbs([]);
-            setIsConjugationData(false);
             setNoDataForLanguage(false);
 
             if (currentUILanguage === 'COSYenglish') {
@@ -46,10 +44,8 @@ const IrregularVerbsTool = () => {
                     return acc.concat(category.verbs);
                 }, []);
                 setVerbs(allVerbs);
-                setIsConjugationData(false);
             } else if (currentUILanguage === 'COSYfrançais') {
                 setVerbs(conjugationsFr.verbs || []);
-                setIsConjugationData(true);
             } else {
                 setNoDataForLanguage(true);
             }
