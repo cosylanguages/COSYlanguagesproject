@@ -503,6 +503,7 @@
     {
       "infinitive": "hablar",
       "translation_en": "to speak",
+      "verb_group": "-ar",
       "tags": ["regular"],
       "tenses": {
         "presente": {
@@ -528,6 +529,38 @@
         "condicional simple": {
           "mood": "indicativo",
           "forms": { "yo": "hablaría", "tú": "hablarías", "él/ella/Ud.": "hablaría", "nosotros": "hablaríamos", "vosotros": "hablaríais", "ellos/ellas/Uds.": "hablarían" }
+        }
+      }
+    },
+    {
+      "infinitive": "vivir",
+      "translation_en": "to live",
+      "verb_group": "-ir",
+      "tags": ["regular"],
+      "tenses": {
+        "presente": {
+          "mood": "indicativo",
+          "forms": { "yo": "vivo", "tú": "vives", "él/ella/Ud.": "vive", "nosotros": "vivimos", "vosotros": "vivís", "ellos/ellas/Uds.": "viven" }
+        },
+        "pretérito perfecto compuesto": {
+          "mood": "indicativo", "auxiliary_verb": "haber", "past_participle": "vivido",
+          "forms": { "yo": "he vivido", "tú": "has vivido", "él/ella/Ud.": "ha vivido", "nosotros": "hemos vivido", "vosotros": "habéis vivido", "ellos/ellas/Uds.": "han vivido" }
+        },
+        "imperfecto": {
+          "mood": "indicativo",
+          "forms": { "yo": "vivía", "tú": "vivías", "él/ella/Ud.": "vivía", "nosotros": "vivíamos", "vosotros": "vivíais", "ellos/ellas/Uds.": "vivían" }
+        },
+        "pretérito indefinido": {
+          "mood": "indicativo",
+          "forms": { "yo": "viví", "tú": "viviste", "él/ella/Ud.": "vivió", "nosotros": "vivimos", "vosotros": "vivisteis", "ellos/ellas/Uds.": "vivieron" }
+        },
+        "futuro simple": {
+          "mood": "indicativo",
+          "forms": { "yo": "viviré", "tú": "vivirás", "él/ella/Ud.": "vivirá", "nosotros": "viviremos", "vosotros": "viviréis", "ellos/ellas/Uds.": "vivirán" }
+        },
+        "condicional simple": {
+          "mood": "indicativo",
+          "forms": { "yo": "viviría", "tú": "vivirías", "él/ella/Ud.": "viviría", "nosotros": "viviríamos", "vosotros": "viviríais", "ellos/ellas/Uds.": "vivirían" }
         }
       }
     }
