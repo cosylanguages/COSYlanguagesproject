@@ -33,6 +33,7 @@ const IrregularVerbsTool = () => {
 
     useEffect(() => {
         const loadVerbs = async () => {
+            console.log("currentUILanguage:", currentUILanguage);
             setIsLoading(true);
             setError(null);
             setVerbs([]);
