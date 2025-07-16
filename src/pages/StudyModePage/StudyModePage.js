@@ -313,9 +313,6 @@ const StudyModePage = () => {
         <Button onClick={() => navigate('/dictionary')}>
           Dictionary 📖
         </Button>
-        <Button onClick={() => navigate('/irregular-verbs')}>
-          Irregular Verbs 📝
-        </Button>
       </div>
 
       <div className="study-menu-section">
