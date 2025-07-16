@@ -61,23 +61,29 @@ const IrregularVerbsTool = () => {
         }
     }, [currentUILanguage, t]);
 
-    const filteredVerbs = useMemo(() => {
-        if (!searchTerm) return verbs;
+    const groupedAndFilteredVerbs = useMemo(() => {
         const lowerSearchTerm = searchTerm.toLowerCase();
 
-        if (isConjugationData) {
-            return verbs.filter(verb =>
-                verb.infinitive?.toLowerCase().includes(lowerSearchTerm)
-            );
-        } else {
-            return verbs.filter(verb =>
-                verb.base?.toLowerCase().includes(lowerSearchTerm) ||
-                verb.pastSimple?.toLowerCase().includes(lowerSearchTerm) ||
-                verb.pastParticiple?.toLowerCase().includes(lowerSearchTerm) ||
-                (verb.translation && typeof verb.translation === 'string' && verb.translation.toLowerCase().includes(lowerSearchTerm))
-            );
+        const filtered = verbs.filter(verb =>
+            verb.base?.toLowerCase().includes(lowerSearchTerm) ||
+            verb.pastSimple?.toLowerCase().includes(lowerSearchTerm) ||
+            verb.pastParticiple?.toLowerCase().includes(lowerSearchTerm) ||
+            (verb.translation && typeof verb.translation === 'string' && verb.translation.toLowerCase().includes(lowerSearchTerm))
+        );
+
+        if (!searchTerm) {
+            return filtered.reduce((acc, verb) => {
+                const firstLetter = verb.base[0].toUpperCase();
+                if (!acc[firstLetter]) {
+                    acc[firstLetter] = [];
+                }
+                acc[firstLetter].push(verb);
+                return acc;
+            }, {});
         }
-    }, [verbs, searchTerm, isConjugationData]);
+        return { 'Search Results': filtered };
+
+    }, [verbs, searchTerm]);
 
     // If in practice mode, render the IrregularVerbsPractice component
     if (isPracticeMode) {
@@ -120,55 +126,37 @@ const IrregularVerbsTool = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
 
-            {filteredVerbs.length === 0 && !isLoading && (
+            {Object.keys(groupedAndFilteredVerbs).length === 0 && !isLoading && (
                 <p>{t('noIrregularVerbsFound') || 'No irregular verbs found for this language or search term.'}</p>
             )}
 
-            {isConjugationData ? (
-                <div className="conjugation-table-container">
-                    {filteredVerbs.map((verb, index) => (
-                        <div key={verb.infinitive || index} className="conjugation-verb-entry">
-                            <h4>{verb.infinitive}</h4>
-                            {verb.tenses && Object.entries(verb.tenses).map(([tenseName, forms]) => (
-                                <div key={tenseName} className="tense-section">
-                                    <h5>{tenseName}</h5>
-                                    <ul>
-                                        {Object.entries(forms).map(([pronoun, form]) => (
-                                            <li key={pronoun}>
-                                                <strong>{pronoun}:</strong> {form}
-                                                {form && <button onClick={() => pronounceText(form, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}
-                                            </li>
-                                        ))}
-                                    </ul>
+            <div className="irregular-verbs-list">
+                {Object.entries(groupedAndFilteredVerbs).map(([letter, verbs]) => (
+                    <details key={letter} open={searchTerm.length > 0}>
+                        <summary>{letter}</summary>
+                        <div className="verb-cards-container">
+                            {verbs.map((verb, index) => (
+                                <div key={verb.id || verb.base || index} className="verb-card">
+                                    <div className="verb-card-header">
+                                        <h4>{verb.base}</h4>
+                                        <button className="btn-icon" onClick={() => handleAddVerbToFlashcards(verb)}>➕</button>
+                                    </div>
+                                    <div className="verb-card-body">
+                                        <p><strong>Past Simple:</strong> {verb.pastSimple}</p>
+                                        <p><strong>Past Participle:</strong> {verb.pastParticiple}</p>
+                                        <p><strong>Translation:</strong> {verb.translation}</p>
+                                    </div>
+                                    <div className="verb-card-footer">
+                                        <button onClick={() => pronounceText(verb.base, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>
+                                        <button onClick={() => pronounceText(verb.pastSimple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>
+                                        <button onClick={() => pronounceText(verb.pastParticiple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>
+                                    </div>
                                 </div>
                             ))}
                         </div>
-                    ))}
-                </div>
-            ) : (
-                <table className="irregular-verbs-table">
-                    <thead>
-                        <tr>
-                            <th>{t('verbHeaderBase') || 'Base'}</th>
-                            <th>{t('verbHeaderPastSimple') || 'Past Simple'}</th>
-                            <th>{t('verbHeaderPastParticiple') || 'Past Participle'}</th>
-                            <th>{t('verbHeaderTranslation') || 'Translation'}</th>
-                            <th>{t('verbHeaderAddToFlashcards') || 'Add'}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {filteredVerbs.map((verb, index) => (
-                            <tr key={verb.id || verb.base || index}>
-                                <td>{verb.base} {verb.base && <button onClick={() => pronounceText(verb.base, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
-                                <td>{verb.pastSimple} {verb.pastSimple && <button onClick={() => pronounceText(verb.pastSimple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
-                                <td>{verb.pastParticiple} {verb.pastParticiple && <button onClick={() => pronounceText(verb.pastParticiple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
-                                <td>{verb.translation} {verb.translation && <button onClick={() => pronounceText(verb.translation, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
-                                <td><button className="btn-icon" onClick={() => handleAddVerbToFlashcards(verb)}>➕</button></td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            )}
+                    </details>
+                ))}
+            </div>
         </div>
     );
 };
