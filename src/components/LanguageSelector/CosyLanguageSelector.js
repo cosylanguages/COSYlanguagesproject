@@ -3,34 +3,20 @@ import Select from 'react-select';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
 import './CosyLanguageSelector.css';
-import cosyarmenian from '../../assets/icons/cosylanguages_logos/cosyarmenian.png';
-import cosybachkir from '../../assets/icons/cosylanguages_logos/cosybachkir.png';
-import cosybreton from '../../assets/icons/cosylanguages_logos/cosybreton.png';
-import cosyenglish from '../../assets/icons/cosylanguages_logos/cosyenglish.png';
-import cosyfrench from '../../assets/icons/cosylanguages_logos/cosyfrench.png';
-import cosygeorgian from '../../assets/icons/cosylanguages_logos/cosygeorgian.png';
-import cosygerman from '../../assets/icons/cosylanguages_logos/cosygerman.png';
-import cosygreek from '../../assets/icons/cosylanguages_logos/cosygreek.png';
-import cosyitalian from '../../assets/icons/cosylanguages_logos/cosyitalian.png';
-import cosyportuguese from '../../assets/icons/cosylanguages_logos/cosyportuguese.png';
-import cosyrussian from '../../assets/icons/cosylanguages_logos/cosyrussian.png';
-import cosyspanish from '../../assets/icons/cosylanguages_logos/cosyspanish.png';
-import cosytatar from '../../assets/icons/cosylanguages_logos/cosytatar.png';
-
 const logos = {
-  COSYarmenian: cosyarmenian,
-  COSYbashkir: cosybachkir,
-  COSYbreton: cosybreton,
-  COSYenglish: cosyenglish,
-  COSYfrench: cosyfrench,
-  COSYgeorgian: cosygeorgian,
-  COSYgerman: cosygerman,
-  COSYgreek: cosygreek,
-  COSYitalian: cosyitalian,
-  COSYportuguese: cosyportuguese,
-  COSYrussian: cosyrussian,
-  COSYspanish: cosyspanish,
-  COSYtatar: cosytatar,
+  COSYarmenian: '/assets/icons/cosylanguages_logos/cosyarmenian.png',
+  COSYbashkir: '/assets/icons/cosylanguages_logos/cosybachkir.png',
+  COSYbreton: '/assets/icons/cosylanguages_logos/cosybreton.png',
+  COSYenglish: '/assets/icons/cosylanguages_logos/cosyenglish.png',
+  COSYfrench: '/assets/icons/cosylanguages_logos/cosyfrench.png',
+  COSYgeorgian: '/assets/icons/cosylanguages_logos/cosygeorgian.png',
+  COSYgerman: '/assets/icons/cosylanguages_logos/cosygerman.png',
+  COSYgreek: '/assets/icons/cosylanguages_logos/cosygreek.png',
+  COSYitalian: '/assets/icons/cosylanguages_logos/cosyitalian.png',
+  COSYportuguese: '/assets/icons/cosylanguages_logos/cosyportuguese.png',
+  COSYrussian: '/assets/icons/cosylanguages_logos/cosyrussian.png',
+  COSYspanish: '/assets/icons/cosylanguages_logos/cosyspanish.png',
+  COSYtatar: '/assets/icons/cosylanguages_logos/cosytatar.png',
 };
 
 
