@@ -33,7 +33,6 @@ const IrregularVerbsTool = () => {
 
     useEffect(() => {
         const loadVerbs = async () => {
-            console.log("currentUILanguage:", currentUILanguage);
             setIsLoading(true);
             setError(null);
             setVerbs([]);
@@ -44,18 +43,18 @@ const IrregularVerbsTool = () => {
             let dataIsConjugations = false;
 
             const langConfig = {
-                'COSYenglish': { path: '/data/grammar/verbs/irregular/irregular_verbs_en.json', isConjugation: false },
-                'COSYfrançais': { path: '/data/grammar/verbs/conjugations/conjugations_french.json', isConjugation: true }
+                'COSYenglish': { path: 'data/grammar/verbs/irregular/irregular_verbs_en.json', isConjugation: false },
+                'COSYfrançais': { path: 'data/grammar/verbs/conjugations/conjugations_french.json', isConjugation: true }
             };
 
             const config = langConfig[currentUILanguage];
 
             if (config) {
-                filePath = config.path;
+                filePath = `${process.env.PUBLIC_URL}/${config.path}`;
                 dataIsConjugations = config.isConjugation;
             } else {
                 let langFileNamePart = currentUILanguage.replace('COSY', '').toLowerCase();
-                filePath = `/data/grammar/verbs/irregular/irregular_verbs_${langFileNamePart}.json`;
+                filePath = `${process.env.PUBLIC_URL}/data/grammar/verbs/irregular/irregular_verbs_${langFileNamePart}.json`;
                 dataIsConjugations = false; // Default to irregular verbs for other languages
             }
 
