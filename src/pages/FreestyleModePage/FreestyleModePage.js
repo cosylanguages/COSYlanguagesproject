@@ -44,12 +44,12 @@ const FreestyleModePage = () => {
                     );
                 }
 
-                const handleDayConfirm = (confirmedDays) => {
+                const handleDayConfirm = (confirmedDays, selectedLanguage) => {
                     const practiceNavContainer = document.getElementById('practice-nav-island-container');
                     const daySelectorContainer = document.getElementById('day-selector-island-container');
                     const exerciseHostContainer = document.getElementById('exercise-host-container');
 
-                    if (practiceNavContainer && window.globalSelectedLanguage && confirmedDays.length > 0) {
+                    if (practiceNavContainer && selectedLanguage && confirmedDays.length > 0) {
                         if (daySelectorContainer) daySelectorContainer.style.border = '2px solid green';
                         practiceNavContainer.style.display = 'block';
                         if (!practiceNavContainer._reactRoot) practiceNavContainer._reactRoot = ReactDOM.createRoot(practiceNavContainer);
@@ -57,7 +57,7 @@ const FreestyleModePage = () => {
                             <React.StrictMode>
                                 <I18nProvider>
                                     <LatinizationProvider>
-                                        <PracticeNavIslandWrapper language={window.globalSelectedLanguage} days={confirmedDays} />
+                                        <PracticeNavIslandWrapper language={selectedLanguage} days={confirmedDays} />
                                     </LatinizationProvider>
                                 </I18nProvider>
                             </React.StrictMode>
@@ -81,7 +81,7 @@ const FreestyleModePage = () => {
                             <React.StrictMode>
                                 <I18nProvider>
                                     <LatinizationProvider>
-                                        <DaySelectorIslandWrapper language={selectedLanguage} onConfirm={handleDayConfirm} />
+                                        <DaySelectorIslandWrapper language={selectedLanguage} onConfirm={(confirmedDays) => handleDayConfirm(confirmedDays, selectedLanguage)} />
                                     </LatinizationProvider>
                                 </I18nProvider>
                             </React.StrictMode>
