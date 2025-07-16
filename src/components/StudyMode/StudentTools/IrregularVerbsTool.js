@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils';
+import { getStudySets, addCardToSet } from '../../../utils/studySetService';
 import IrregularVerbsPractice from '../../Freestyle/IrregularVerbs/IrregularVerbsPractice'; // Import the practice component
 import './IrregularVerbsTool.css';
 
@@ -13,6 +14,22 @@ const IrregularVerbsTool = () => {
     const [isConjugationData, setIsConjugationData] = useState(false);
     const [noDataForLanguage, setNoDataForLanguage] = useState(false);
     const [isPracticeMode, setIsPracticeMode] = useState(false); // State to toggle practice mode
+
+    const handleAddVerbToFlashcards = (verb) => {
+        const studySets = getStudySets();
+        if (studySets.length === 0) {
+            alert("Please create a study set first.");
+            return;
+        }
+        const firstSetId = studySets[0].id;
+        const cardData = {
+            term1: verb.base,
+            term2: `${verb.pastSimple}, ${verb.pastParticiple}`,
+            notes: verb.translation
+        };
+        addCardToSet(firstSetId, cardData);
+        alert(`Verb "${verb.base}" added to study set "${studySets[0].name}".`);
+    };
 
     useEffect(() => {
         const loadVerbs = async () => {
@@ -163,6 +180,7 @@ const IrregularVerbsTool = () => {
                             <th>{t('verbHeaderPastSimple') || 'Past Simple'}</th>
                             <th>{t('verbHeaderPastParticiple') || 'Past Participle'}</th>
                             <th>{t('verbHeaderTranslation') || 'Translation'}</th>
+                            <th>{t('verbHeaderAddToFlashcards') || 'Add'}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -172,6 +190,7 @@ const IrregularVerbsTool = () => {
                                 <td>{verb.pastSimple} {verb.pastSimple && <button onClick={() => pronounceText(verb.pastSimple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
                                 <td>{verb.pastParticiple} {verb.pastParticiple && <button onClick={() => pronounceText(verb.pastParticiple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
                                 <td>{verb.translation} {verb.translation && <button onClick={() => pronounceText(verb.translation, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
+                                <td><button className="btn-icon">➕</button></td>
                             </tr>
                         ))}
                     </tbody>
