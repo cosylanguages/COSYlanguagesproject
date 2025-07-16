@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd4866ed.css",
-    "main.js": "/static/js/main.c21e2f58.js",
+    "main.css": "/static/css/main.8d4e9d34.css",
+    "main.js": "/static/js/main.a3b6ec97.js",
     "static/js/815.37c6be97.chunk.js": "/static/js/815.37c6be97.chunk.js",
     "static/js/197.b12028d9.chunk.js": "/static/js/197.b12028d9.chunk.js",
     "static/media/Flag_of_Brittany.png": "/static/media/Flag_of_Brittany.84b981fe6c89698ceeab.png",
     "static/media/Flag_of_Bashkortostan.png": "/static/media/Flag_of_Bashkortostan.1cd8a83298aaa54ba536.png",
     "static/media/Flag_of_Tatarstan.png": "/static/media/Flag_of_Tatarstan.99455ff699f291d20b27.png",
     "index.html": "/index.html",
-    "main.fd4866ed.css.map": "/static/css/main.fd4866ed.css.map",
-    "main.c21e2f58.js.map": "/static/js/main.c21e2f58.js.map",
+    "main.8d4e9d34.css.map": "/static/css/main.8d4e9d34.css.map",
+    "main.a3b6ec97.js.map": "/static/js/main.a3b6ec97.js.map",
     "815.37c6be97.chunk.js.map": "/static/js/815.37c6be97.chunk.js.map",
     "197.b12028d9.chunk.js.map": "/static/js/197.b12028d9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd4866ed.css",
-    "static/js/main.c21e2f58.js"
+    "static/css/main.8d4e9d34.css",
+    "static/js/main.a3b6ec97.js"
   ]
 }
