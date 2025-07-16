@@ -19,7 +19,50 @@ export const a0_english_vocabulary = {
     { "term": "cash", "pronunciation": "kæʃ", "partOfSpeech": "noun", "definition": "Money in coins or notes, as distinct from cheques, money orders, or credit.", "example": "Do you want to pay with cash or card?", "level": "a0", "notes": "" },
     { "term": "card", "pronunciation": "kɑːrd", "partOfSpeech": "noun", "definition": "A small rectangular piece of plastic issued by a bank, containing personal data in magnetic or electronic form and used to obtain cash or credit; a credit card or debit card.", "example": "I will pay by card.", "level": "a0", "notes": "" },
     { "term": "sorry", "pronunciation": "ˈsɒri", "partOfSpeech": "interjection/adjective", "definition": "Feeling distress, especially through sympathy with someone else's misfortune / Used to apologize.", "example": "I'm sorry to hear that. / Sorry, I didn't see you.", "level": "a0", "notes": "" }
-  ]
+  ],
+  "Opposites": [
+    { "term": "Hello", "opposite": "Goodbye" },
+    { "term": "Yes", "opposite": "No" },
+    { "term": "Thank you", "opposite": "You're welcome" },
+    { "term": "Boy", "opposite": "Girl" },
+    { "term": "Woman", "opposite": "Man" },
+    { "term": "Person", "opposite": "Thing" },
+    { "term": "Student", "opposite": "Teacher" },
+    { "term": "He", "opposite": "She" },
+    { "term": "Mother", "opposite": "Father" },
+    { "term": "Brother", "opposite": "Sister" },
+    { "term": "Son", "opposite": "Daughter" },
+    { "term": "Husband", "opposite": "Wife" },
+    { "term": "Good", "opposite": "Bad" },
+    { "term": "Big", "opposite": "Small" },
+    { "term": "Easy", "opposite": "Difficult" },
+    { "term": "Interesting", "opposite": "Boring" },
+    { "term": "Cold", "opposite": "Hot" },
+    { "term": "Expensive", "opposite": "Cheap" }
+  ],
+  "Words": {
+    "1": [
+      "Hello", "Goodbye", "Yes", "No", "Thank you", "You're welcome", "Alright", "Day", "Sorry", "Water", "Juice", "Beer", "Wine", "Coffee", "Tea", "Card", "Cash"
+    ],
+    "2": [
+      "Boy", "Girl", "Teacher", "Student", "Woman", "Man", "Thing", "Person", "Drink", "Nice to meet you"
+    ],
+    "3": [
+      "Mother", "Father", "Son", "Daughter", "Sister", "Brother", "Husband", "Wife", "Friend", "Family"
+    ],
+    "4": [
+      "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Parent", "Child", "Number"
+    ],
+    "5": [
+      "Good", "Bad", "Big", "Small", "Easy", "Difficult", "Interesting", "Boring", "Cold", "Hot", "Expensive", "Cheap"
+    ],
+    "6": [
+      "Red wine", "White wine", "Green tea", "Black tea", "Iced tea", "Iced coffee", "Orange juice", "Apple juice", "Film", "Series", "Music", "Book"
+    ],
+    "10": [
+      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+    ]
+  }
 };
 
 // If using CommonJS (older style, check project setup if unsure):
