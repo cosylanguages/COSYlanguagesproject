@@ -4,6 +4,8 @@ import { pronounceText } from '../../../utils/speechUtils';
 import { getStudySets, addCardToSet } from '../../../utils/studySetService';
 import IrregularVerbsPractice from '../../Freestyle/IrregularVerbs/IrregularVerbsPractice'; // Import the practice component
 import './IrregularVerbsTool.css';
+import irregularVerbsEn from '../../../../public/data/grammar/verbs/irregular/irregular_verbs_en.json';
+import conjugationsFr from '../../../../public/data/grammar/verbs/conjugations/conjugations_french.json';
 
 const IrregularVerbsTool = () => {
     const { t, language: currentUILanguage } = useI18n();
@@ -32,63 +34,26 @@ const IrregularVerbsTool = () => {
     };
 
     useEffect(() => {
-        const loadVerbs = async () => {
+        const loadVerbs = () => {
             setIsLoading(true);
             setError(null);
             setVerbs([]);
             setIsConjugationData(false);
             setNoDataForLanguage(false);
 
-            let filePath = '';
-            let dataIsConjugations = false;
-
-            const langConfig = {
-                'COSYenglish': { path: 'data/grammar/verbs/irregular/irregular_verbs_en.json', isConjugation: false },
-                'COSYfrançais': { path: 'data/grammar/verbs/conjugations/conjugations_french.json', isConjugation: true }
-            };
-
-            const config = langConfig[currentUILanguage];
-
-            if (config) {
-                filePath = `${process.env.PUBLIC_URL}/${config.path}`;
-                dataIsConjugations = config.isConjugation;
+            if (currentUILanguage === 'COSYenglish') {
+                const allVerbs = irregularVerbsEn.reduce((acc, category) => {
+                    return acc.concat(category.verbs);
+                }, []);
+                setVerbs(allVerbs);
+                setIsConjugationData(false);
+            } else if (currentUILanguage === 'COSYfrançais') {
+                setVerbs(conjugationsFr.verbs || []);
+                setIsConjugationData(true);
             } else {
-                let langFileNamePart = currentUILanguage.replace('COSY', '').toLowerCase();
-                filePath = `${process.env.PUBLIC_URL}/data/grammar/verbs/irregular/irregular_verbs_${langFileNamePart}.json`;
-                dataIsConjugations = false; // Default to irregular verbs for other languages
+                setNoDataForLanguage(true);
             }
-
-            setIsConjugationData(dataIsConjugations);
-
-            try {
-                const response = await fetch(filePath);
-                if (!response.ok) {
-                    if (response.status === 404) {
-                        setNoDataForLanguage(true);
-                        console.warn(`Irregular verbs data not found for ${currentUILanguage} at ${filePath}.`);
-                        setVerbs([]);
-                    } else {
-                        throw new Error(t('irregularVerbsLoadHttpError', { status: response.status }) || `Failed to load data: ${response.status}`);
-                    }
-                } else {
-                    const text = await response.text();
-                    const data = JSON.parse(text);
-                    if (dataIsConjugations) {
-                        setVerbs(data.verbs || []);
-                    } else {
-                        const allVerbs = data.reduce((acc, category) => {
-                            return acc.concat(category.verbs);
-                        }, []);
-                        setVerbs(allVerbs);
-                    }
-                }
-            } catch (err) {
-                console.error(`Error loading irregular verbs for ${currentUILanguage} from ${filePath}:`, err);
-                setError(err.message);
-                setVerbs([]);
-            } finally {
-                setIsLoading(false);
-            }
+            setIsLoading(false);
         };
 
         if (currentUILanguage) {
