@@ -441,6 +441,7 @@
     {
       "infinitive": "parlare",
       "translation_en": "to speak",
+      "verb_group": "-are",
       "tags": ["regular"],
       "tenses": {
         "presente": {
@@ -466,6 +467,70 @@
         "condizionale presente": {
           "mood": "condizionale",
           "forms": { "io": "parlerei", "tu": "parleresti", "lui/lei/Lei": "parlerebbe", "noi": "parleremmo", "voi": "parlereste", "loro": "parlerebbero" }
+        }
+      }
+    },
+    {
+      "infinitive": "vendere",
+      "translation_en": "to sell",
+      "verb_group": "-ere",
+      "tags": ["regular"],
+      "tenses": {
+        "presente": {
+          "mood": "indicativo",
+          "forms": { "io": "vendo", "tu": "vendi", "lui/lei/Lei": "vende", "noi": "vendiamo", "voi": "vendete", "loro": "vendono" }
+        },
+        "passato prossimo": {
+          "mood": "indicativo", "auxiliary_verb": "avere", "past_participle": "venduto",
+          "forms": { "io": "ho venduto", "tu": "hai venduto", "lui/lei/Lei": "ha venduto", "noi": "abbiamo venduto", "voi": "avete venduto", "loro": "hanno venduto" }
+        },
+        "imperfetto": {
+          "mood": "indicativo",
+          "forms": { "io": "vendevo", "tu": "vendevi", "lui/lei/Lei": "vendeva", "noi": "vendevamo", "voi": "vendevate", "loro": "vendevano" }
+        },
+        "passato remoto": {
+          "mood": "indicativo",
+          "forms": { "io": "vendei", "tu": "vendesti", "lui/lei/Lei": "vendé", "noi": "vendemmo", "voi": "vendeste", "loro": "venderono" }
+        },
+        "futuro semplice": {
+          "mood": "indicativo",
+          "forms": { "io": "venderò", "tu": "venderai", "lui/lei/Lei": "venderà", "noi": "venderemo", "voi": "venderete", "loro": "venderanno" }
+        },
+        "condizionale presente": {
+          "mood": "condizionale",
+          "forms": { "io": "venderei", "tu": "venderesti", "lui/lei/Lei": "venderebbe", "noi": "venderemmo", "voi": "vendereste", "loro": "venderebbero" }
+        }
+      }
+    },
+    {
+      "infinitive": "dormire",
+      "translation_en": "to sleep",
+      "verb_group": "-ire",
+      "tags": ["regular"],
+      "tenses": {
+        "presente": {
+          "mood": "indicativo",
+          "forms": { "io": "dormo", "tu": "dormi", "lui/lei/Lei": "dorme", "noi": "dormiamo", "voi": "dormite", "loro": "dormono" }
+        },
+        "passato prossimo": {
+          "mood": "indicativo", "auxiliary_verb": "avere", "past_participle": "dormito",
+          "forms": { "io": "ho dormito", "tu": "hai dormito", "lui/lei/Lei": "ha dormito", "noi": "abbiamo dormito", "voi": "avete dormito", "loro": "hanno dormito" }
+        },
+        "imperfetto": {
+          "mood": "indicativo",
+          "forms": { "io": "dormivo", "tu": "dormivi", "lui/lei/Lei": "dormiva", "noi": "dormivamo", "voi": "dormivate", "loro": "dormivano" }
+        },
+        "passato remoto": {
+          "mood": "indicativo",
+          "forms": { "io": "dormii", "tu": "dormisti", "lui/lei/Lei": "dormì", "noi": "dormimmo", "voi": "dormiste", "loro": "dormirono" }
+        },
+        "futuro semplice": {
+          "mood": "indicativo",
+          "forms": { "io": "dormirò", "tu": "dormirai", "lui/lei/Lei": "dormirà", "noi": "dormiremo", "voi": "dormirete", "loro": "dormiranno" }
+        },
+        "condizionale presente": {
+          "mood": "condizionale",
+          "forms": { "io": "dormirei", "tu": "dormiresti", "lui/lei/Lei": "dormirebbe", "noi": "dormiremmo", "voi": "dormireste", "loro": "dormirebbero" }
         }
       }
     }

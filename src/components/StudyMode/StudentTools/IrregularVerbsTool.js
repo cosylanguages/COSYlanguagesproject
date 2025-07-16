@@ -190,7 +190,7 @@ const IrregularVerbsTool = () => {
                                 <td>{verb.pastSimple} {verb.pastSimple && <button onClick={() => pronounceText(verb.pastSimple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
                                 <td>{verb.pastParticiple} {verb.pastParticiple && <button onClick={() => pronounceText(verb.pastParticiple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
                                 <td>{verb.translation} {verb.translation && <button onClick={() => pronounceText(verb.translation, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>}</td>
-                                <td><button className="btn-icon">➕</button></td>
+                                <td><button className="btn-icon" onClick={() => handleAddVerbToFlashcards(verb)}>➕</button></td>
                             </tr>
                         ))}
                     </tbody>

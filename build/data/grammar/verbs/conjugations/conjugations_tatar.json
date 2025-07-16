@@ -141,10 +141,21 @@
     {
       "infinitive": "сөйләргә",
       "translation_en": "to speak",
+      "verb_group": "regular",
       "tags": [],
       "tenses": {
         "хәзерге заман (present)": { "forms": { "мин": "сөйлим", "ул": "сөйли" } },
         "билгеле үткән заман (definite past)": { "forms": { "мин": "сөйләдем", "ул": "сөйләде" } }
+      }
+    },
+    {
+      "infinitive": "язарга",
+      "translation_en": "to write",
+      "verb_group": "regular",
+      "tags": [],
+      "tenses": {
+        "хәзерге заман (present)": { "forms": { "мин": "язам", "ул": "яза" } },
+        "билгеле үткән заман (definite past)": { "forms": { "мин": "яздым", "ул": "язды" } }
       }
     }
   ]
