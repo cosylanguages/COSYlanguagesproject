@@ -310,9 +310,6 @@ const StudyModePage = () => {
         <Button onClick={() => window.location.href = '/freestyle'}>
           Freestyle 🚀
         </Button>
-        <Button onClick={() => navigate('/dictionary')}>
-          Dictionary 📖
-        </Button>
       </div>
 
       <div className="study-menu-section">
