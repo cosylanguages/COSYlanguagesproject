@@ -8,7 +8,7 @@
 
 .go-back-button {
   background-color: var(--light-grey, #f8f9fa);
-  color: var(--primary-color, #007bff);
+  color: var(--primary-color, #0abbb5);
   border: 1px solid var(--border-color, #dee2e6);
   padding: var(--spacing-unit, 10px) calc(var(--spacing-unit, 10px) * 1.5);
   border-radius: 0.3rem;
@@ -21,7 +21,7 @@
 }
 
 .go-back-button:hover {
-  background-color: var(--color-surface-medium, #e9ecef);
+  background-color: var(--medium-grey, #e9ecef);
   box-shadow: var(--shadow-sm);
 }
 
@@ -127,7 +127,7 @@
 }
 
 .study-mode-button {
-  background-color: var(--primary-color, #007bff);
+  background-color: var(--primary-color, #0abbb5);
   color: var(--text-color-light, white);
   padding: calc(var(--spacing-unit, 10px) * 1.2) calc(var(--spacing-unit, 10px) * 3);
   border-radius: 8px;
@@ -141,7 +141,7 @@
 }
 
 .study-mode-button:hover {
-  background-color: var(--primary-hover-color, #0056b3);
+  background-color: var(--primary-hover-color, #089a95);
   transform: translateY(-4px) scale(1.05); /* More lift and scale */
   box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Stronger shadow */
 }
@@ -352,7 +352,7 @@ body.freestyle-page-active { /* Scoping body style to when freestyle page is act
 */
 /* Styles for labels within the old .container (now freestyle-main-content-wrapper) */
 .freestyle-main-content-wrapper label { /* Assuming .freestyle-main-content-wrapper replaces old .container */
-    color: var(--color-text-on-dark); /* Original: var(--text-color-light) */
+    color: var(--text-color-light); /* Original: var(--text-color-light) */
     text-align: center;
 }
 .freestyle-main-content-wrapper label:hover {
@@ -365,7 +365,7 @@ body.freestyle-page-active { /* Scoping body style to when freestyle page is act
    Let's map it to a new class or adapt .main-menu-box if it serves this purpose.
    If .main-menu-box is for the initial menu, and this is for the main content area: */
 .freestyle-main-content-wrapper { /* Renamed from old .container */
-    background: linear-gradient(135deg, hsla(178, 90%, 38%, 0.97) 0%, hsla(178, 90%, 48%, 0.90) 100%);
+    background: linear-gradient(135deg, hsla(179, 99%, 37%, 0.97) 0%, hsla(179, 99%, 47%, 0.9) 100%);
     padding: var(--spacing-lg); /* old: 20px -> var(--spacing-lg) or var(--spacing-xl) */
     border-radius: var(--border-radius-xl); /* old: 12px */
     box-shadow: 0 6px 20px rgba(31, 38, 135, 0.15);
@@ -416,8 +416,8 @@ body.freestyle-page-active { /* Scoping body style to when freestyle page is act
 
 
 .result-area { /* From old CSS, for displaying exercise results/feedback */
-    background-color: var(--color-surface); /* old: var(--light-grey) */
-    color: var(--color-text-primary); /* old: var(--text-color-dark) */
+    background-color: var(--light-grey); /* old: var(--light-grey) */
+    color: var(--text-color-dark); /* old: var(--text-color-dark) */
     border-radius: var(--border-radius-lg); /* old: 10px */
     padding: var(--spacing-xl); /* old: 25px */
     margin: var(--spacing-xl) auto; /* old: 25px auto */
@@ -429,7 +429,7 @@ body.freestyle-page-active { /* Scoping body style to when freestyle page is act
     animation: popIn 0.5s cubic-bezier(.23,1.01,.32,1) 0.1s both; /* popIn needs to be defined or available */
     width: 100%;
     max-width: 700px;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -445,16 +445,16 @@ body.freestyle-page-active { /* Scoping body style to when freestyle page is act
 /* Styles for buttons within .practice-types (now .practice-category-buttons) */
 /* PracticeCategoryNav.js renders buttons with .practice-category-btn */
 .practice-category-btn { /* Merging styles from old .practice-types button */
-    color: var(--color-text-on-dark);
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
+    color: var(--text-color-light);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
     padding: 0.7em 1.3em; /* from old */
     font-size: 0.95rem; /* from old */
     /* Other .btn properties like font-weight, border-radius, transition are in global .btn */
 }
 .practice-category-btn:hover {
-    background-color: var(--color-primary-dark);
-    border-color: var(--color-primary-dark);
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
 }
 
 /* Styles for buttons within .practice-options (now .sub-practice-menu-container .practice-category-buttons button) */
@@ -476,7 +476,7 @@ body.freestyle-page-active { /* Scoping body style to when freestyle page is act
 .sub-practice-btn.active, /* Assuming .active is used by React component for active state */
 .sub-practice-btn.active-option-btn { /* Keep old class if used */
     background: linear-gradient(90deg, #ffb74d 0%, #00bdbd 100%);
-    color: var(--color-text-on-dark);
+    color: var(--text-color-light);
     box-shadow: 0 2px 16px #ffe08299;
     transform: scale(1.12);
 }
@@ -493,9 +493,9 @@ body.freestyle-page-active { /* Scoping body style to when freestyle page is act
     padding: 0.6em 1em;
     font-size: var(--font-size-base); /* old: var(--font-size-normal) */
     margin-bottom: var(--spacing-sm); /* old: var(--spacing-unit, 10px) */
-    border: 1px solid var(--color-border);
-    background-color: var(--color-surface); /* old: var(--light-grey) */
-    color: var(--color-text-primary); /* old: var(--text-color-dark) */
+    border: 1px solid var(--border-color);
+    background-color: var(--light-grey); /* old: var(--light-grey) */
+    color: var(--text-color-dark); /* old: var(--text-color-dark) */
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     width: auto;
     min-width: 200px;
@@ -504,8 +504,8 @@ body.freestyle-page-active { /* Scoping body style to when freestyle page is act
 .freestyle-main-content-wrapper input[type="text"]:focus,
 .freestyle-main-content-wrapper textarea:focus,
 .freestyle-main-content-wrapper select:focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(10, 187, 181, 0.25);
     background-color: var(--color-background); /* old: #fff */
 }
 
@@ -543,7 +543,7 @@ textarea.exercise-input {
 .reading-exercise-container,
 .speaking-exercise-container,
 .writing-exercise-container {
-    background-color: var(--color-background); /* old: #fff */
+    background-color: #fff; /* old: #fff */
     border-radius: var(--border-radius-lg); /* old: 10px */
     padding: var(--spacing-lg); /* old: var(--spacing-unit, 10px) * 2 -> 20px */
     box-shadow: var(--shadow-md); /* old: 0 4px 12px rgba(0,0,0,0.1) */
@@ -558,9 +558,9 @@ textarea.exercise-input {
 .verb-prompt,
 #speaking-question-text,
 #writing-question-text { /* #id selectors might be too specific if components don't use them */
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-large);
     margin-bottom: var(--spacing-md); /* old: calc(var(--spacing-unit, 10px) * 1.5) */
-    color: var(--color-text-primary); /* old: var(--text-color-dark) */
+    color: var(--text-color-dark); /* old: var(--text-color-dark) */
     font-weight: 500;
     text-align: center;
     line-height: 1.4;
@@ -568,8 +568,8 @@ textarea.exercise-input {
 #speaking-question-text,
 #writing-question-text { /* These specific IDs from old CSS */
     text-align: left;
-    background-color: var(--color-surface); /* old: var(--light-grey) */
-    border-left: 4px solid var(--color-primary);
+    background-color: var(--light-grey); /* old: var(--light-grey) */
+    border-left: 4px solid var(--primary-color);
     padding: var(--spacing-sm); /* old: var(--spacing-unit, 10px) */
     border-radius: var(--border-radius-sm); /* old: 4px */
 }
@@ -587,17 +587,17 @@ textarea.exercise-input {
 .exercise-feedback.correct,
 .exercise-feedback span.correct,
 .exercise-feedback span[style*="#27ae60"] {
-    color: var(--color-success-text) !important;
-    background-color: var(--color-success-bg) !important;
-    border-color: var(--color-success-border) !important;
+    color: var(--success-text) !important;
+    background-color: var(--success-bg) !important;
+    border-color: var(--success-border) !important;
     display: block;
 }
 .exercise-feedback.incorrect,
 .exercise-feedback span.incorrect,
 .exercise-feedback span[style*="#e74c3c"] {
-    color: var(--color-danger-text) !important;
-    background-color: var(--color-danger-bg) !important;
-    border-color: var(--color-danger-border) !important;
+    color: var(--error-text) !important;
+    background-color: var(--error-bg) !important;
+    border-color: var(--error-border) !important;
     display: block;
 }
 
@@ -626,91 +626,91 @@ body.lang-bg {
 }
 
 body.COSYbreton-bg {
-  background-image: url('../public/assets/flags/Flag_of_Brittany.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('../public/assets/flags/Flag_of_Brittany.png'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYbashkir-bg {
-  background-image: url('../public/assets/flags/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('../public/assets/flags/Flag_of_Bashkortostan.png'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYtatar-bg {
-  background-image: url('../public/assets/flags/Flag_of_Tatarstan.png'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('../public/assets/flags/Flag_of_Tatarstan.png'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYenglish-bg {
-  background-image: url('https://flagcdn.com/gb.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('https://flagcdn.com/gb.svg'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYfrench-bg {
-  background-image: url('https://flagcdn.com/fr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('https://flagcdn.com/fr.svg'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYitalian-bg {
-  background-image: url('https://flagcdn.com/it.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('https://flagcdn.com/it.svg'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYspanish-bg {
-  background-image: url('https://flagcdn.com/es.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('https://flagcdn.com/es.svg'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYportuguese-bg {
-  background-image: url('https://flagcdn.com/pt.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('https://flagcdn.com/pt.svg'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYgerman-bg {
-  background-image: url('https://flagcdn.com/de.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('https://flagcdn.com/de.svg'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYgreek-bg {
-  background-image: url('https://flagcdn.com/gr.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('https://flagcdn.com/gr.svg'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYrussian-bg {
-  background-image: url('https://flagcdn.com/ru.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('https://flagcdn.com/ru.svg'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYarmenian-bg {
-  background-image: url('https://flagcdn.com/am.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('https://flagcdn.com/am.svg'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 body.COSYgeorgian-bg {
-  background-image: url('https://flagcdn.com/ge.svg'), linear-gradient(135deg, #00bdbd 0%, #1de9b6 60%, #ffe082 100%);
+  background-image: url('https://flagcdn.com/ge.svg'), linear-gradient(135deg, #0abbb5 0%, #1de9b6 60%, #ffe082 100%);
   background-size: cover, cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -737,8 +737,8 @@ body.no-language-selected-bg {
 .word-display-container { padding: var(--spacing-sm) var(--spacing-md); }
 .word-display {
     font-size: 1.8rem; font-weight: bold; margin: var(--spacing-sm) 0;
-    padding:var(--spacing-sm); background-color: var(--color-surface);
-    border-radius: var(--border-radius-sm); color: var(--color-primary);
+    padding:var(--spacing-sm); background-color: var(--light-grey);
+    border-radius: var(--border-radius-sm); color: var(--primary-color);
 }
 .opposites-exercise { padding: var(--spacing-md); }
 .word-pair {
@@ -746,16 +746,16 @@ body.no-language-selected-bg {
     gap: var(--spacing-sm); margin: var(--spacing-md) 0;
 }
 .word-box {
-    padding: var(--spacing-sm) var(--spacing-md); background: var(--color-surface-medium);
-    color: var(--color-text-primary); border-radius: var(--border-radius-md); font-size: 1.1rem;
+    padding: var(--spacing-sm) var(--spacing-md); background: var(--medium-grey);
+    color: var(--text-color-dark); border-radius: var(--border-radius-md); font-size: 1.1rem;
 }
-.opposite-arrow { font-size: 1.5rem; color: var(--color-text-secondary); } /* old: var(--dark-grey) */
-.opposite-answer { background: var(--color-background); border: 2px dashed var(--color-primary); } /* old: #fff */
+.opposite-arrow { font-size: 1.5rem; color: var(--dark-grey); } /* old: var(--dark-grey) */
+.opposite-answer { background: #fff; border: 2px dashed var(--primary-color); } /* old: #fff */
 
 .build-word-exercise { max-width: 500px; }
 .vocabulary-image {
     max-width: 200px; max-height: 150px; display: block; margin: var(--spacing-md) auto;
-    border: 1px solid var(--color-surface-medium); border-radius: var(--border-radius-sm);
+    border: 1px solid var(--medium-grey); border-radius: var(--border-radius-sm);
     transition: transform 0.2s ease-in-out;
 }
 .vocabulary-image:hover { transform: scale(1.05); }
@@ -766,18 +766,18 @@ body.no-language-selected-bg {
 .match-col { flex: 1; display: flex; flex-direction: column; gap: var(--spacing-sm); }
 .match-item {
     padding: var(--spacing-sm); margin: 0;
-    border: 1px solid var(--color-surface-medium); border-radius: var(--border-radius-sm); cursor: pointer;
-    background-color: var(--color-background);
+    border: 1px solid var(--medium-grey); border-radius: var(--border-radius-sm); cursor: pointer;
+    background-color: #fff;
     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.15s ease-in-out;
 }
-.match-item:hover { border-color: var(--color-primary); background-color: var(--color-surface); }
+.match-item:hover { border-color: var(--primary-color); background-color: var(--light-grey); }
 .match-item.selected {
-    border-color: var(--color-primary); background-color: var(--color-primary);
-    color: var(--color-text-on-dark); transform: scale(1.05);
+    border-color: var(--primary-color); background-color: var(--primary-color);
+    color: var(--text-color-light); transform: scale(1.05);
 }
 .match-item.matched {
-    border-color: var(--color-success-border); background-color: var(--color-success-bg);
-    color: var(--color-success-text); cursor: default;
+    border-color: var(--success-border); background-color: var(--success-bg);
+    color: var(--success-text); cursor: default;
 }
 .match-item.disabled { pointer-events: none; opacity: 0.7; }
 .match-item.incorrect-flash { animation: incorrectFlash 0.5s; } /* incorrectFlash to be defined */
@@ -790,11 +790,11 @@ body.no-language-selected-bg {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing-sm); margin: var(--spacing-md) 0; padding: var(--spacing-sm);
-    background: var(--color-surface); border-radius: var(--border-radius-md);
+    background: var(--light-grey); border-radius: var(--border-radius-md);
 }
 .word-tile, .letter-tile {
-    padding: var(--spacing-sm) var(--spacing-sm); background: var(--color-primary);
-    color: var(--color-text-on-dark);
+    padding: var(--spacing-sm) var(--spacing-sm); background: var(--primary-color);
+    color: var(--text-color-light);
     border-radius: var(--border-radius-sm); cursor: grab; user-select: none;
     min-width: 35px; min-height: 35px;
     display: flex; justify-content: center; align-items: center;
@@ -803,20 +803,20 @@ body.no-language-selected-bg {
 }
 .word-tile:hover, .letter-tile:hover {
     transform: translateY(-2px); box-shadow: var(--shadow-sm);
-    background-color: var(--color-primary-dark);
+    background-color: var(--primary-hover-color);
 }
 .letter-tile.dragging { opacity: 0.6; transform: scale(1.1); }
 .word-slots, .letter-slots {
     display:flex; justify-content:center; gap: var(--spacing-xs); margin: var(--spacing-md) 0;
 }
 .word-slot, .letter-slot {
-    min-width: 35px; min-height: 35px; background: var(--color-surface-medium);
-    border: 1px dashed var(--color-text-secondary); border-radius: var(--border-radius-sm);
+    min-width: 35px; min-height: 35px; background: var(--medium-grey);
+    border: 1px dashed var(--dark-grey); border-radius: var(--border-radius-sm);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.letter-slot.hovered { background: var(--color-surface); border-style: solid; }
+.letter-slot.hovered { background: var(--light-grey); border-style: solid; }
 
 /* Randomizer Button from old CSS - existing #floating-help-btn might be similar or adaptable */
 /* This .randomizer-button has many !important flags. If this is a distinct button, add it.
@@ -827,7 +827,7 @@ body.no-language-selected-bg {
   align-items: center !important;
   justify-content: center !important;
   padding: 0 !important;
-  color: var(--color-text-primary) !important; /* old: var(--text-color-dark) */
+  color: var(--text-color-dark) !important; /* old: var(--text-color-dark) */
   line-height: 1 !important;
   text-decoration: none !important;
   margin-left: var(--spacing-sm) !important; /* old: 10px */
@@ -851,12 +851,12 @@ body.no-language-selected-bg {
 .tf-statement { font-size: 1.1em; margin-bottom: var(--spacing-sm); }
 .tf-btns { gap: var(--spacing-sm); margin-bottom: var(--spacing-sm); }
 .choose4-container { gap: var(--spacing-sm); margin: var(--spacing-md) 0 var(--spacing-sm) 0; }
-.choose4-question { font-size: 1.1rem; color: var(--color-primary); margin-bottom: var(--spacing-xs); }
+.choose4-question { font-size: 1.1rem; color: var(--primary-color); margin-bottom: var(--spacing-xs); }
 .choose4-options { gap: var(--spacing-sm); }
 #reset-progress-btn {
     padding: 0.6em 1.2em; font-size: 0.9rem; font-weight: bold;
-    color: var(--color-text-primary); background-color: var(--color-surface-medium);
-    border: 1px solid var(--color-text-secondary); border-radius: var(--border-radius-md); cursor: pointer;
+    color: var(--text-color-dark); background-color: var(--medium-grey);
+    border: 1px solid var(--dark-grey); border-radius: var(--border-radius-md); cursor: pointer;
     margin: var(--spacing-md) auto 0 auto; display: block; /* old: 18px */
 }
 #reset-progress-btn:hover {
@@ -874,7 +874,7 @@ body.no-language-selected-bg {
 /* Speaking and Writing Exercises from old CSS */
 .speaking-exercise-container h3,
 .writing-exercise-container h3 {
-    color: var(--color-primary);
+    color: var(--primary-color);
 }
 #speaking-record-btn { /* Specific ID from old CSS */
     font-size: 2.5em !important;
@@ -883,8 +883,8 @@ body.no-language-selected-bg {
     line-height: 1 !important;
 }
 #speaking-record-btn.recording {
-    background-color: var(--color-danger-bg); /* old: var(--error-bg) */
-    color: var(--color-danger-text); /* old: var(--error-text) */
+    background-color: var(--error-bg); /* old: var(--error-bg) */
+    color: var(--error-text); /* old: var(--error-text) */
     animation: pulseAnimation 1.5s infinite; /* pulseAnimation needs to be defined */
 }
 #speaking-transcript { /* Specific ID from old CSS */
@@ -893,8 +893,8 @@ body.no-language-selected-bg {
     min-height: 30px;
     font-style: italic;
     color: #555;
-    background-color: var(--color-surface); /* old: #f9f9f9 */
-    border: 1px dashed var(--color-border);
+    background-color: #f9f9f9; /* old: #f9f9f9 */
+    border: 1px dashed var(--border-color);
     border-radius: var(--border-radius-sm);
     line-height: 1.5;
 }
@@ -903,7 +903,7 @@ body.no-language-selected-bg {
     max-width: 100%;
     padding: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius-sm);
     font-size: var(--font-size-base);
     line-height: 1.5;
@@ -911,8 +911,8 @@ body.no-language-selected-bg {
     resize: vertical;
 }
 #writing-answer-area:focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(10, 187, 181, 0.25);
 }
 #submit-writing-answer-btn { /* Specific ID from old CSS */
     padding: var(--spacing-sm) var(--spacing-md);
@@ -928,7 +928,7 @@ body.no-language-selected-bg {
 .floating-popup {  /* From old CSS */
   position: fixed; left: 50%; top: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--color-background); /* old: #fff */
+  background-color: #fff; /* old: #fff */
   padding: var(--spacing-lg); /* old: 20px */
   border-radius: var(--border-radius-lg);  /* old: 8px */
   box-shadow: var(--shadow-lg);  /* old: 0 5px 15px rgba(0,0,0,0.2) */
@@ -937,7 +937,7 @@ body.no-language-selected-bg {
 }
 .floating-popup .popup-header {
     font-size: 1.1rem; font-weight: bold; margin-bottom: var(--spacing-sm);
-    color: var(--color-primary);
+    color: var(--primary-color);
 }
 .floating-popup .popup-content {
     margin-bottom: var(--spacing-md); font-size: 0.9rem; line-height: 1.5;
@@ -945,10 +945,10 @@ body.no-language-selected-bg {
 .floating-popup .popup-actions { text-align: right; }
 .floating-popup .close-btn {
     background: none; border: none; font-size: 1.2rem;
-    color: var(--color-text-secondary); cursor: pointer; padding: var(--spacing-xs);
+    color: var(--dark-grey); cursor: pointer; padding: var(--spacing-xs);
     transition: color 0.2s ease-in-out;
 }
-.floating-popup .close-btn:hover { color: var(--color-primary); }
+.floating-popup .close-btn:hover { color: var(--primary-color); }
 /* Ensure these are visible if display:flex is set by JS */
 #floating-tip-popup[style*="display: flex"] { display: flex !important; }
 #translation-popup[style*="display: flex"] { display: flex !important; }
@@ -958,7 +958,7 @@ body.no-language-selected-bg {
 @keyframes popIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
 @keyframes gamestatsLevelUp {
     0% { transform: scale(1); box-shadow: var(--shadow-sm); }
-    50% { transform: scale(1.15) rotate(-3deg); box-shadow: 0 4px 10px rgba(0,123,255,0.5); }
+    50% { transform: scale(1.15) rotate(-3deg); box-shadow: 0 4px 10px rgba(10, 187, 181, 0.5); }
     100% { transform: scale(1); box-shadow: var(--shadow-sm); }
 }
 .result-area span[style*='#27ae60']::after {  content: ' ✨'; animation: sparkle 0.7s linear; }
@@ -968,8 +968,8 @@ body.no-language-selected-bg {
     100% { opacity: 0; transform: scale(0.7) rotate(-10deg); }
 }
 @keyframes incorrectFlash {
-    0%, 100% { background-color: var(--color-danger-bg); } /* old: var(--error-bg) */
-    50% { background-color: var(--color-background); } /* old: #fff */
+    0%, 100% { background-color: var(--error-bg); } /* old: var(--error-bg) */
+    50% { background-color: #fff; } /* old: #fff */
 }
 @keyframes bounceIn {
     0% { transform: scale(0.8); opacity: 0.2; }
@@ -1037,9 +1037,9 @@ body.no-language-selected-bg {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--color-surface-medium); /* old: var(--medium-grey) */
+  border: 1px solid var(--medium-grey); /* old: var(--medium-grey) */
   border-radius: var(--border-radius-lg); /* old: 8px */
-  background: var(--color-background); /* old: #fff */
+  background: #fff; /* old: #fff */
   box-shadow: var(--shadow-sm); /* old: 0 2px 8px rgba(0,0,0,0.06) */
   font-size: 1.1rem;
   cursor: pointer;
@@ -1058,21 +1058,21 @@ body.no-language-selected-bg {
 }
 .match-image-word-exercise .word-item { /* Added from old CSS */
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--primary-color);
   text-align: center;
   word-break: break-word;
   padding: 0 var(--spacing-sm);
 }
 .match-image-word-exercise .match-item.selected {
-  border-color: var(--color-primary);
-  background: var(--color-primary);
-  color: var(--color-text-on-dark);
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--text-color-light);
   transform: scale(1.05);
 }
 .match-image-word-exercise .match-item.matched {
-  border-color: var(--color-success-border);
-  background: var(--color-success-bg);
-  color: var(--color-success-text);
+  border-color: var(--success-border);
+  background: var(--success-bg);
+  color: var(--success-text);
   cursor: default;
 }
 .match-image-word-exercise .match-item.disabled {
@@ -1135,26 +1135,25 @@ body.no-language-selected-bg {
     transform: translateY(-1px);
 }
 .article-option-btn.correct-selection {
-    background-color: var(--color-success-bg) !important;
-    color: var(--color-success-text) !important;
-    border-color: var(--color-success-border) !important;
+    background-color: var(--success-bg) !important;
+    color: var(--success-text) !important;
+    border-color: var(--success-border) !important;
     transform: scale(1.05);
 }
 .article-option-btn.incorrect-selection {
-    background-color: var(--color-danger-bg) !important;
-    color: var(--color-danger-text) !important;
-    border-color: var(--color-danger-border) !important;
+    background-color: var(--error-bg) !important;
+    color: var(--error-text) !important;
+    border-color: var(--error-border) !important;
     opacity: 0.7;
 }
 .article-option-btn:disabled:not(.correct-selection):not(.incorrect-selection) {
-    background-color: var(--color-surface); /* old: #f5f5f5 */
+    background-color: #f5f5f5; /* old: #f5f5f5 */
     opacity: 0.6;
     cursor: not-allowed;
 }
 
 /* Feedback Message Styling - Refined from old CSS, ensuring consistency with .exercise-feedback */
 /* .exercise-feedback .correct and .incorrect are already styled above.
-   The old CSS had slightly different styling for these classes when nested.
    The current .exercise-feedback.correct/incorrect should suffice. */
 
 /* Exercise Container Styling from old CSS - .exercise-container group covers this */
@@ -1164,10 +1163,10 @@ body.no-language-selected-bg {
 .verb-exercise, .fill-gap-exercise, .word-order-exercise {
     /* padding: var(--spacing-lg); -- from .exercise-container */
     /* margin: var(--spacing-lg) auto; -- from .exercise-container */
-    border: 1px solid var(--color-border); /* old: #e0e0e0 */
+    border: 1px solid #e0e0e0; /* old: #e0e0e0 */
     /* border-radius: var(--border-radius-lg); -- from .exercise-container */
     /* background-color: var(--color-background); -- from .exercise-container */
-    box-shadow: var(--shadow-sm); /* old: 0 3px 10px rgba(0,0,0,0.05), more subtle than .exercise-container's --shadow-md */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05); /* old: 0 3px 10px rgba(0,0,0,0.05), more subtle than .exercise-container's --shadow-md */
     max-width: 600px; /* More specific than .exercise-container's 650px if desired */
 }
 
@@ -1177,13 +1176,13 @@ body.no-language-selected-bg {
 .sentence-with-gap, /* New class from old CSS */
 .word-order-exercise h3, .fill-gap-exercise h3, .match-exercise h3 { /* Targeting specific h3s */
     font-size: 1.2em;
-    color: var(--color-text-primary); /* old: #333 */
+    color: #333; /* old: #333 */
     /* margin-bottom: var(--spacing-md); -- from .exercise-prompt */
     /* text-align: center; -- from .exercise-prompt */
 }
 .select-article-exercise .exercise-prompt strong { /* From old CSS */
     font-weight: 600;
-    color: var(--color-primary); /* old: #1976d2 */
+    color: #1976d2; /* old: #1976d2 */
 }
 
 /* Input field styling from old CSS - .exercise-input already adapted */
@@ -1204,7 +1203,7 @@ body.no-language-selected-bg {
     background-color: #cfe8fc;
     border-color: #79b7f7;
     font-weight: bold;
-    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    box-shadow: 0 0 5px rgba(10, 187, 181, 0.5);
 }
 .match-exercise .match-item.matched {
     opacity: 0.7;
@@ -1212,6 +1211,6 @@ body.no-language-selected-bg {
 }
 .match-exercise .match-col h4 {
     text-align: center;
-    color: var(--color-text-secondary); /* old: #555 */
+    color: var(--dark-grey); /* old: #555 */
     margin-bottom: var(--spacing-sm);
 }
