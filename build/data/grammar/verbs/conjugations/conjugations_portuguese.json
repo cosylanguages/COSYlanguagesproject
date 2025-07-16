@@ -439,6 +439,7 @@
     {
       "infinitive": "falar",
       "translation_en": "to speak",
+      "verb_group": "-ar",
       "tags": ["regular"],
       "tenses": {
         "presente": {
@@ -460,6 +461,34 @@
         "condicional presente": {
           "mood": "condicional",
           "forms": { "eu": "falaria", "tu": "falarias", "ele/ela/você": "falaria", "nós": "falaríamos", "vós": "falaríeis", "eles/elas/vocês": "falariam" }
+        }
+      }
+    },
+    {
+      "infinitive": "partir",
+      "translation_en": "to leave",
+      "verb_group": "-ir",
+      "tags": ["regular"],
+      "tenses": {
+        "presente": {
+          "mood": "indicativo",
+          "forms": { "eu": "parto", "tu": "partes", "ele/ela/você": "parte", "nós": "partimos", "vós": "partis", "eles/elas/vocês": "partem" }
+        },
+        "pretérito perfeito": {
+          "mood": "indicativo",
+          "forms": { "eu": "parti", "tu": "partiste", "ele/ela/você": "partiu", "nós": "partimos", "vós": "partistes", "eles/elas/vocês": "partiram" }
+        },
+        "pretérito imperfeito": {
+          "mood": "indicativo",
+          "forms": { "eu": "partia", "tu": "partias", "ele/ela/você": "partia", "nós": "partíamos", "vós": "partíeis", "eles/elas/vocês": "partiam" }
+        },
+        "futuro do presente": {
+          "mood": "indicativo",
+          "forms": { "eu": "partirei", "tu": "partirás", "ele/ela/você": "partirá", "nós": "partiremos", "vós": "partireis", "eles/elas/vocês": "partirão" }
+        },
+        "condicional presente": {
+          "mood": "condicional",
+          "forms": { "eu": "partiria", "tu": "partirias", "ele/ela/você": "partiria", "nós": "partiríamos", "vós": "partiríeis", "eles/elas/vocês": "partiriam" }
         }
       }
     }

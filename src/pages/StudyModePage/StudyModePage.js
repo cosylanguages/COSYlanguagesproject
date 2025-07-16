@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useI18n } from '../../i18n/I18nContext';
 import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
 import { useAuth } from '../../contexts/AuthContext';
@@ -24,7 +23,6 @@ export const getBlockElementId = (blockId, index) => `lesson-block-content-${blo
 const StudyModePage = () => {
   const { t, language, currentLangKey } = useI18n();
   const { authToken } = useAuth();
-  const navigate = useNavigate();
 
   const [selectedRole, setSelectedRole] = useState(() => localStorage.getItem('selectedRole') || null);
 
