@@ -9,9 +9,6 @@ import StudyModePage from './pages/StudyModePage/StudyModePage';
 // FreestyleModePage is no longer imported or used here
 import MyStudySetsPage from './pages/MyStudySetsPage/MyStudySetsPage'; // Import MyStudySetsPage
 import FreestyleModePage from './pages/FreestyleModePage/FreestyleModePage';
-import DictionaryPage from './pages/DictionaryPage/DictionaryPage';
-import IrregularVerbsPage from './pages/IrregularVerbsPage/IrregularVerbsPage';
-import ShowWordExercise from './components/Freestyle/exercises/vocabulary/ShowWordExercise';
 import PinModal from './components/Common/PinModal';
 
 const STUDY_MODE_PIN = "1234";
