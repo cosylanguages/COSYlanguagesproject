@@ -17,8 +17,8 @@ export async function getAvailableSyllabusDays(languageIdentifier) {
   const languageCode = ExerciseDataService.getLanguageFileKey(languageIdentifier);
   const availableDays = [];
   for (let i = 1; i <= MAX_PROBE_DAYS; i++) {
-    const fileName = `${languageCode}_day${i}_syllabus.json`;
-    const filePath = `/data/custom_syllabus/${fileName}`;
+    const fileName = `a${i-1}.js`;
+    const filePath = `/data/dictionary/${languageCode}/${fileName}`;
     try {
       const { data, error, errorType } = await ExerciseDataService.fetchJsonData(filePath);
       if (!error && data) {
@@ -49,8 +49,8 @@ export async function fetchSyllabusForDay(languageIdentifier, dayNumber) {
     return null;
   }
   const languageCode = ExerciseDataService.getLanguageFileKey(languageIdentifier);
-  const fileName = `${languageCode}_day${dayNumber}_syllabus.json`;
-  const filePath = `/data/custom_syllabus/${fileName}`;
+  const fileName = `a${dayNumber-1}.js`;
+  const filePath = `/data/dictionary/${languageCode}/${fileName}`;
   
   const { data, error } = await ExerciseDataService.fetchJsonData(filePath);
   
@@ -72,7 +72,8 @@ export async function fetchSyllabusByFileName(syllabusFileName) {
         console.error("SyllabusService: syllabusFileName is required for fetchSyllabusByFileName.");
         return null;
     }
-    const filePath = `/data/custom_syllabus/${syllabusFileName}`;
+    const languageCode = syllabusFileName.split('_')[0];
+    const filePath = `/data/dictionary/${languageCode}/${syllabusFileName}`;
     const { data, error } = await ExerciseDataService.fetchJsonData(filePath); // Corrected
 
     if (error) {
