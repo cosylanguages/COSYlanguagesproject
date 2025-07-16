@@ -33,9 +33,9 @@
 
 .radio-label {
   margin-right: var(--spacing-xs, 5px);
-  color: var(--color-text-primary, #222);
-  font-weight: 500;
-  font-size: 1.05em;
+  color: var(--text-color-dark, #333);
+  font-weight: bold;
+  font-size: var(--font-size-normal);
   display: flex;
   align-items: center;
   gap: var(--spacing-xs, 4px);
@@ -51,7 +51,19 @@
 }
 
 .radio-label:hover {
-  background-color: var(--color-surface-medium, #e9ecef);
+  background-color: var(--medium-grey);
+}
+
+.btn-primary {
+    color: var(--text-color-light);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    color: var(--text-color-light);
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
 }
 
 .day-select-dropdown-container {
@@ -60,24 +72,23 @@
 }
 
 .day-select-dropdown {
-  padding: var(--spacing-sm, 10px) var(--spacing-md, 12px);
-  border-radius: var(--border-radius-md, 6px);
-  border: 1.5px solid var(--color-primary, #007bff);
+  padding: 0.6em 1.2em;
+  border-radius: 0.3rem;
+  border: 1px solid var(--dark-grey);
   min-width: 140px; /* Slightly wider */
   margin-right: var(--spacing-sm, 10px);
-  font-size: 1em;
-  background: var(--color-surface-light, #f8faff); /* Light background for select */
-  color: var(--color-text-primary);
+  font-size: var(--font-size-small, 0.9rem);
+  background: var(--medium-grey);
+  color: var(--text-color-dark);
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .day-select-dropdown:hover {
-  border-color: var(--color-primary-dark, #0056b3);
-  box-shadow: 0 0 5px rgba(0,123,255,0.2);
+  border-color: var(--primary-hover-color);
 }
 .day-select-dropdown:focus {
-  outline: none;
-  border-color: var(--color-primary-dark, #0056b3);
-  box-shadow: 0 0 8px rgba(0,123,255,0.3);
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
 
