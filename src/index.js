@@ -17,8 +17,8 @@ if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
-      <HashRouter>
-        <I18nProvider>
+      <I18nProvider>
+        <HashRouter>
           <LatinizationProvider>
             <AuthProvider>
               <UserProfileProvider>
@@ -28,8 +28,8 @@ if (rootElement) {
               </UserProfileProvider>
             </AuthProvider>
           </LatinizationProvider>
-        </I18nProvider>
-      </HashRouter>
+        </HashRouter>
+      </I18nProvider>
     </React.StrictMode>
   );
 } else {
