@@ -1,216 +1,41 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
-import { pronounceText } from '../../../utils/speechUtils';
-import { getStudySets, addCardToSet } from '../../../utils/studySetService';
-import IrregularVerbsPractice from '../../Freestyle/IrregularVerbs/IrregularVerbsPractice'; // Import the practice component
-import './IrregularVerbsTool.css';
-import irregularVerbsEn from '../../../data/grammar/verbs/irregular/irregular_verbs_en.json';
-import irregularVerbsEs from '../../../data/grammar/verbs/irregular/irregular_verbs_es.json';
-import irregularVerbsDe from '../../../data/grammar/verbs/irregular/irregular_verbs_de.json';
-import irregularVerbsIt from '../../../data/grammar/verbs/irregular/irregular_verbs_it.json';
-import irregularVerbsPt from '../../../data/grammar/verbs/irregular/irregular_verbs_pt.json';
-import irregularVerbsRu from '../../../data/grammar/verbs/irregular/irregular_verbs_ru.json';
-import irregularVerbsEl from '../../../data/grammar/verbs/irregular/irregular_verbs_el.json';
-import irregularVerbsHy from '../../../data/grammar/verbs/irregular/irregular_verbs_hy.json';
-import irregularVerbsBr from '../../../data/grammar/verbs/irregular/irregular_verbs_br.json';
-import conjugationsFr from '../../../data/grammar/verbs/conjugations/conjugations_french.json';
+import useVerbs from '../../../hooks/useVerbs';
+import SearchableCardList from '../../Common/SearchableCardList';
+import IrregularVerbCard from './IrregularVerbCard';
 
-const IrregularVerbsTool = () => {
-    const { t, language: currentUILanguage } = useI18n();
-    const [verbs, setVerbs] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
-    const [searchTerm, setSearchTerm] = useState('');
-    const [isSearched, setIsSearched] = useState(false);
-    const [noDataForLanguage, setNoDataForLanguage] = useState(false);
-    const [isPracticeMode, setIsPracticeMode] = useState(false); // State to toggle practice mode
+const IrregularVerbsTool = ({ isOpen, onClose }) => {
+    const { currentLangKey } = useI18n();
+    const { verbs, loading, error } = useVerbs('all', currentLangKey);
 
-    const handleAddVerbToFlashcards = (verb) => {
-        const studySets = getStudySets();
-        if (studySets.length === 0) {
-            alert("Please create a study set first.");
-            return;
-        }
-        const firstSetId = studySets[0].id;
-        const cardData = {
-            term1: verb.base,
-            term2: `${verb.pastSimple}, ${verb.pastParticiple}`,
-            notes: verb.translation
-        };
-        addCardToSet(firstSetId, cardData);
-        alert(`Verb "${verb.base}" added to study set "${studySets[0].name}".`);
+    const searchFunction = (verb, searchTerm) => {
+        const lowerSearchTerm = searchTerm.toLowerCase();
+        return verb.verb.toLowerCase().includes(lowerSearchTerm) ||
+               verb.translation.toLowerCase().includes(lowerSearchTerm);
     };
 
-    useEffect(() => {
-        const loadVerbs = () => {
-            setIsLoading(true);
-            setError(null);
-            setVerbs([]);
-            setNoDataForLanguage(false);
+    const renderVerbCard = (verb) => (
+        <IrregularVerbCard verb={verb} />
+    );
 
-            if (currentUILanguage === 'COSYenglish') {
-                const allVerbs = irregularVerbsEn.reduce((acc, category) => {
-                    return acc.concat(category.verbs);
-                }, []);
-                setVerbs(allVerbs);
-            } else if (currentUILanguage === 'COSYbrezhoneg') {
-                const allVerbs = irregularVerbsBr.reduce((acc, category) => {
-                    return acc.concat(category.verbs);
-                }, []);
-                setVerbs(allVerbs);
-            } else if (currentUILanguage === 'COSYհայերեն') {
-                const allVerbs = irregularVerbsHy.reduce((acc, category) => {
-                    return acc.concat(category.verbs);
-                }, []);
-                setVerbs(allVerbs);
-            } else if (currentUILanguage === 'COSYελληνικά') {
-                const allVerbs = irregularVerbsEl.reduce((acc, category) => {
-                    return acc.concat(category.verbs);
-                }, []);
-                setVerbs(allVerbs);
-            } else if (currentUILanguage === 'COSYрусский') {
-                const allVerbs = irregularVerbsRu.reduce((acc, category) => {
-                    return acc.concat(category.verbs);
-                }, []);
-                setVerbs(allVerbs);
-            } else if (currentUILanguage === 'COSYportuguês') {
-                const allVerbs = irregularVerbsPt.reduce((acc, category) => {
-                    return acc.concat(category.verbs);
-                }, []);
-                setVerbs(allVerbs);
-            } else if (currentUILanguage === 'COSYitaliano') {
-                const allVerbs = irregularVerbsIt.reduce((acc, category) => {
-                    return acc.concat(category.verbs);
-                }, []);
-                setVerbs(allVerbs);
-            } else if (currentUILanguage === 'COSYdeutsch') {
-                const allVerbs = irregularVerbsDe.reduce((acc, category) => {
-                    return acc.concat(category.verbs);
-                }, []);
-                setVerbs(allVerbs);
-            } else if (currentUILanguage === 'COSYespañol') {
-                const allVerbs = irregularVerbsEs.reduce((acc, category) => {
-                    return acc.concat(category.verbs);
-                }, []);
-                setVerbs(allVerbs);
-            } else if (currentUILanguage === 'COSYfrançais') {
-                setVerbs(conjugationsFr.verbs || []);
-            } else {
-                setNoDataForLanguage(true);
-            }
-            setIsLoading(false);
-        };
-
-        if (currentUILanguage) {
-            loadVerbs();
-        }
-    }, [currentUILanguage, t]);
-
-    const groupedAndFilteredVerbs = useMemo(() => {
-        if (!isSearched) {
-            return {};
-        }
-        const lowerSearchTerm = searchTerm.toLowerCase();
-
-        const filtered = verbs.filter(verb =>
-            verb.base?.toLowerCase().includes(lowerSearchTerm) ||
-            verb.pastSimple?.toLowerCase().includes(lowerSearchTerm) ||
-            verb.pastParticiple?.toLowerCase().includes(lowerSearchTerm) ||
-            (verb.translation && typeof verb.translation === 'string' && verb.translation.toLowerCase().includes(lowerSearchTerm))
-        );
-
-        if (!searchTerm) {
-            const grouped = filtered.reduce((acc, verb) => {
-                const firstLetter = verb.base[0].toUpperCase();
-                if (!acc[firstLetter]) {
-                    acc[firstLetter] = [];
-                }
-                acc[firstLetter].push(verb);
-                return acc;
-            }, {});
-            return grouped;
-        }
-        return { 'Search Results': filtered };
-
-    }, [verbs, searchTerm, isSearched]);
-
-    // If in practice mode, render the IrregularVerbsPractice component
-    if (isPracticeMode) {
-        return <IrregularVerbsPractice />;
+    if (!isOpen) {
+        return null;
     }
 
-    if (isLoading) return <p>{t('loadingIrregularVerbs') || 'Loading irregular verbs...'}</p>;
-
-    if (noDataForLanguage) {
-        const titleText = currentUILanguage === 'COSYenglish'
-            ? t('irregularVerbsToolTitle', 'Irregular Verbs List')
-            : t('conjugationsToolTitle', 'Conjugations List');
-        return (
-            <div className="irregular-verbs-tool">
-                <h3>{titleText} ({currentUILanguage.replace('COSY','')})</h3>
-                <p>{t('irregularVerbsNotAvailableForLang', { lang: currentUILanguage.replace('COSY','') }) || `Irregular verbs data is not yet available for ${currentUILanguage.replace('COSY','')}.`}</p>
-            </div>
-        );
-    }
-
-    if (error) return <p className="error-message">{error}</p>;
-
-    const titleText = currentUILanguage === 'COSYenglish'
-        ? t('irregularVerbsToolTitle', 'Irregular Verbs List')
-        : t('conjugationsToolTitle', 'Conjugations List');
+    if (loading) return <p>Loading verbs...</p>;
+    if (error) return <p>Error loading verbs: {error.message}</p>;
 
     return (
-        <div className="irregular-verbs-tool">
-            <div className="tool-header">
-                <h3>{titleText} ({currentUILanguage.replace('COSY','')})</h3>
-                <button onClick={() => setIsPracticeMode(true)} className="btn-primary">
-                    {t('practiceButton', 'Practice')}
-                </button>
+        <div className="tool-panel-modal">
+            <div className="tool-panel-modal-content">
+                <button onClick={onClose} className="close-button">&times;</button>
+                <h3>Irregular Verbs</h3>
+                <SearchableCardList
+                    items={verbs}
+                    searchFunction={searchFunction}
+                    renderCard={renderVerbCard}
+                />
             </div>
-            <input
-                type="text"
-                className="search-irregular-verbs"
-                placeholder={t('searchVerbsPlaceholder') || 'Search verbs...'}
-                value={searchTerm}
-                onChange={(e) => {
-                    setSearchTerm(e.target.value);
-                    setIsSearched(true);
-                }}
-            />
-
-            {isSearched && Object.keys(groupedAndFilteredVerbs).length === 0 && !isLoading && (
-                <p>{t('noIrregularVerbsFound') || 'No irregular verbs found for this language or search term.'}</p>
-            )}
-
-            {isSearched && (
-                <div className="irregular-verbs-list">
-                    {Object.entries(groupedAndFilteredVerbs).map(([letter, verbs]) => (
-                        <details key={letter} open={searchTerm.length > 0}>
-                            <summary>{letter}</summary>
-                            <div className="verb-cards-container">
-                                {verbs.map((verb, index) => (
-                                    <div key={verb.id || verb.base || index} className="verb-card">
-                                        <div className="verb-card-header">
-                                            <h4>{verb.base}</h4>
-                                            <button className="btn-icon" onClick={() => handleAddVerbToFlashcards(verb)}>➕</button>
-                                        </div>
-                                        <div className="verb-card-body">
-                                            <p><strong>Past Simple:</strong> {verb.pastSimple}</p>
-                                            <p><strong>Past Participle:</strong> {verb.pastParticiple}</p>
-                                            <p><strong>Translation:</strong> {verb.translation}</p>
-                                        </div>
-                                        <div className="verb-card-footer">
-                                            <button onClick={() => pronounceText(verb.base, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>
-                                            <button onClick={() => pronounceText(verb.pastSimple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>
-                                            <button onClick={() => pronounceText(verb.pastParticiple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </details>
-                    ))}
-                </div>
-            )}
         </div>
     );
 };
