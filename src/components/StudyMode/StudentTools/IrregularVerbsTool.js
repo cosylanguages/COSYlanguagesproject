@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useI18n } from '../../../i18n/I18nContext';
 import useVerbs from '../../../hooks/useVerbs';
 import SearchableCardList from '../../Common/SearchableCardList';
 import IrregularVerbCard from './IrregularVerbCard';
