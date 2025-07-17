@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import useVerbs from '../../../hooks/useVerbs';
 import SearchableCardList from '../../Common/SearchableCardList';
