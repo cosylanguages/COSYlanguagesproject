@@ -12,7 +12,6 @@ import './components/Common/animations.css';
 
 
 const rootElement = document.getElementById('root');
-const isProd = process.env.NODE_ENV === 'production';
 
 if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
