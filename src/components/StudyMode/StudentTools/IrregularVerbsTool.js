@@ -21,6 +21,7 @@ const IrregularVerbsTool = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
+    const [isSearched, setIsSearched] = useState(false);
     const [noDataForLanguage, setNoDataForLanguage] = useState(false);
     const [isPracticeMode, setIsPracticeMode] = useState(false); // State to toggle practice mode
 
@@ -106,6 +107,9 @@ const IrregularVerbsTool = () => {
     }, [currentUILanguage, t]);
 
     const groupedAndFilteredVerbs = useMemo(() => {
+        if (!isSearched) {
+            return {};
+        }
         const lowerSearchTerm = searchTerm.toLowerCase();
 
         const filtered = verbs.filter(verb =>
@@ -116,7 +120,7 @@ const IrregularVerbsTool = () => {
         );
 
         if (!searchTerm) {
-            return filtered.reduce((acc, verb) => {
+            const grouped = filtered.reduce((acc, verb) => {
                 const firstLetter = verb.base[0].toUpperCase();
                 if (!acc[firstLetter]) {
                     acc[firstLetter] = [];
@@ -124,10 +128,11 @@ const IrregularVerbsTool = () => {
                 acc[firstLetter].push(verb);
                 return acc;
             }, {});
+            return grouped;
         }
         return { 'Search Results': filtered };
 
-    }, [verbs, searchTerm]);
+    }, [verbs, searchTerm, isSearched]);
 
     // If in practice mode, render the IrregularVerbsPractice component
     if (isPracticeMode) {
@@ -167,40 +172,45 @@ const IrregularVerbsTool = () => {
                 className="search-irregular-verbs"
                 placeholder={t('searchVerbsPlaceholder') || 'Search verbs...'}
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) => {
+                    setSearchTerm(e.target.value);
+                    setIsSearched(true);
+                }}
             />
 
-            {Object.keys(groupedAndFilteredVerbs).length === 0 && !isLoading && (
+            {isSearched && Object.keys(groupedAndFilteredVerbs).length === 0 && !isLoading && (
                 <p>{t('noIrregularVerbsFound') || 'No irregular verbs found for this language or search term.'}</p>
             )}
 
-            <div className="irregular-verbs-list">
-                {Object.entries(groupedAndFilteredVerbs).map(([letter, verbs]) => (
-                    <details key={letter} open={searchTerm.length > 0}>
-                        <summary>{letter}</summary>
-                        <div className="verb-cards-container">
-                            {verbs.map((verb, index) => (
-                                <div key={verb.id || verb.base || index} className="verb-card">
-                                    <div className="verb-card-header">
-                                        <h4>{verb.base}</h4>
-                                        <button className="btn-icon" onClick={() => handleAddVerbToFlashcards(verb)}>➕</button>
+            {isSearched && (
+                <div className="irregular-verbs-list">
+                    {Object.entries(groupedAndFilteredVerbs).map(([letter, verbs]) => (
+                        <details key={letter} open={searchTerm.length > 0}>
+                            <summary>{letter}</summary>
+                            <div className="verb-cards-container">
+                                {verbs.map((verb, index) => (
+                                    <div key={verb.id || verb.base || index} className="verb-card">
+                                        <div className="verb-card-header">
+                                            <h4>{verb.base}</h4>
+                                            <button className="btn-icon" onClick={() => handleAddVerbToFlashcards(verb)}>➕</button>
+                                        </div>
+                                        <div className="verb-card-body">
+                                            <p><strong>Past Simple:</strong> {verb.pastSimple}</p>
+                                            <p><strong>Past Participle:</strong> {verb.pastParticiple}</p>
+                                            <p><strong>Translation:</strong> {verb.translation}</p>
+                                        </div>
+                                        <div className="verb-card-footer">
+                                            <button onClick={() => pronounceText(verb.base, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>
+                                            <button onClick={() => pronounceText(verb.pastSimple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>
+                                            <button onClick={() => pronounceText(verb.pastParticiple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>
+                                        </div>
                                     </div>
-                                    <div className="verb-card-body">
-                                        <p><strong>Past Simple:</strong> {verb.pastSimple}</p>
-                                        <p><strong>Past Participle:</strong> {verb.pastParticiple}</p>
-                                        <p><strong>Translation:</strong> {verb.translation}</p>
-                                    </div>
-                                    <div className="verb-card-footer">
-                                        <button onClick={() => pronounceText(verb.base, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>
-                                        <button onClick={() => pronounceText(verb.pastSimple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>
-                                        <button onClick={() => pronounceText(verb.pastParticiple, currentUILanguage)} className="btn-icon pronounce-btn-inline">🔊</button>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </details>
-                ))}
-            </div>
+                                ))}
+                            </div>
+                        </details>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };
