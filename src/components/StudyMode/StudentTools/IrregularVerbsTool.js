@@ -1,12 +1,13 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { useI18n } from '../../../i18n/I18nContext';
 import useVerbs from '../../../hooks/useVerbs';
 import SearchableCardList from '../../Common/SearchableCardList';
 import IrregularVerbCard from './IrregularVerbCard';
 
 const IrregularVerbsTool = ({ isOpen, onClose }) => {
-    const { currentLangKey } = useI18n();
-    const { verbs, loading, error } = useVerbs('all', currentLangKey);
+    const { lang } = useParams();
+    const { verbs, loading, error } = useVerbs('all', lang);
 
     const searchFunction = (verb, searchTerm) => {
         const lowerSearchTerm = searchTerm.toLowerCase();

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils';
 import { getStudySets, addCardToSet } from '../../../utils/studySetService';
@@ -7,17 +8,18 @@ import SearchableCardList from '../../Common/SearchableCardList';
 import './DictionaryTool.css';
 
 const DictionaryTool = ({ isOpen, onClose }) => {
-    const { t, currentLangKey } = useI18n();
+    const { t } = useI18n();
+    const { lang } = useParams();
     const [allVocabulary, setAllVocabulary] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const loadVocabulary = async () => {
-            if (!currentLangKey || !isOpen) return;
+            if (!lang || !isOpen) return;
             setIsLoading(true);
             try {
-                const vocabularyData = await loadAllLevelsForLanguageAsFlatList(currentLangKey);
+                const vocabularyData = await loadAllLevelsForLanguageAsFlatList(lang);
                 setAllVocabulary(vocabularyData || []);
             } catch (err) {
                 setError(err.message || 'Failed to load vocabulary data.');
@@ -26,7 +28,7 @@ const DictionaryTool = ({ isOpen, onClose }) => {
             }
         };
         loadVocabulary();
-    }, [currentLangKey, isOpen]);
+    }, [lang, isOpen]);
 
     const handleAddWordToFlashcards = (word) => {
         const studySets = getStudySets();

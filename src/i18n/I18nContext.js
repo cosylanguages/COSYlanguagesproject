@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import translations from './translationsData';
 
 const I18nContext = createContext();
@@ -8,6 +9,8 @@ export function useI18n() {
 }
 
 export function I18nProvider({ children }) {
+    const navigate = useNavigate();
+    const location = useLocation();
     const [language, setLanguage] = useState(() => {
         const savedLanguage = localStorage.getItem('cosyLanguage');
         // Ensure savedLanguage is a valid key in translations, otherwise default to 'COSYenglish'
@@ -54,11 +57,14 @@ export function I18nProvider({ children }) {
     const changeLanguage = useCallback((langKey) => {
         if (translations && translations[langKey]) {
             setLanguage(langKey);
+            if (location.pathname.startsWith('/study/')) {
+                navigate(`/study/${translations[langKey].languageCode}`);
+            }
         } else {
             console.warn(`Attempted to change to invalid language key "${langKey}". Reverting to COSYenglish.`);
             setLanguage('COSYenglish'); // Fallback to a known good default
         }
-    }, []);
+    }, [location, navigate]);
 
     const t = useCallback((key, defaultValueOrOptions, optionsOnly) => {
         let defaultValue = typeof defaultValueOrOptions === 'string' ? defaultValueOrOptions : key;
