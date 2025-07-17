@@ -18,35 +18,19 @@ if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
-      {isProd ? (
-        <HashRouter>
-          <I18nProvider>
-            <LatinizationProvider>
-              <AuthProvider>
-                <UserProfileProvider>
-                    <PlanProvider>
-                      <AppRoutes /> 
-                    </PlanProvider>
-                </UserProfileProvider>
-              </AuthProvider>
-            </LatinizationProvider>
-          </I18nProvider>
-        </HashRouter>
-      ) : (
-        <HashRouter>
-          <I18nProvider>
-            <LatinizationProvider>
-              <AuthProvider>
-                <UserProfileProvider>
-                    <PlanProvider>
-                      <AppRoutes /> 
-                    </PlanProvider>
-                </UserProfileProvider>
-              </AuthProvider>
-            </LatinizationProvider>
-          </I18nProvider>
-        </HashRouter>
-      )}
+      <HashRouter>
+        <I18nProvider>
+          <LatinizationProvider>
+            <AuthProvider>
+              <UserProfileProvider>
+                <PlanProvider>
+                  <AppRoutes />
+                </PlanProvider>
+              </UserProfileProvider>
+            </AuthProvider>
+          </LatinizationProvider>
+        </I18nProvider>
+      </HashRouter>
     </React.StrictMode>
   );
 } else {
