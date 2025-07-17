@@ -1,0 +1,31 @@
+[
+  {
+    "category": "irregular",
+    "verbs": [
+      {
+        "base": "bezañ",
+        "pastSimple": "oa",
+        "pastParticiple": "bet",
+        "translation": "to be"
+      },
+      {
+        "base": "kaout",
+        "pastSimple": "en doa",
+        "pastParticiple": "bet",
+        "translation": "to have"
+      },
+      {
+        "base": "ober",
+        "pastSimple": "reas",
+        "pastParticiple": "graet",
+        "translation": "to do/make"
+      },
+      {
+        "base": "gallout",
+        "pastSimple": "galle",
+        "pastParticiple": "gallet",
+        "translation": "to be able to"
+      }
+    ]
+  }
+]
