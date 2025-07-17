@@ -55,8 +55,8 @@ const ToolsPanel = () => {
 
       {isNotesOpen && <NotesPanel isOpen={isNotesOpen} onClose={toggleNotes} />}
       {isIrregularVerbsOpen && <IrregularVerbsTool isOpen={isIrregularVerbsOpen} onClose={toggleIrregularVerbs} />}
-      {isTimerOpen && <TimerTool isOpen={isTimerOpen} onClose={toggleTimer} />} {/* Render TimerTool */}
-      {isDictionaryOpen && <DictionaryTool />} {/* Render DictionaryTool */}
+      {isTimerOpen && <TimerTool isOpen={isTimerOpen} onClose={toggleTimer} />}
+      {isDictionaryOpen && <DictionaryTool isOpen={isDictionaryOpen} onClose={toggleDictionary} />}
     </div>
   );
 };

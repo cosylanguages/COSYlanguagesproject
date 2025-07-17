@@ -1,0 +1,18 @@
+.searchable-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.searchable-card-list-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.searchable-card-list-results {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
