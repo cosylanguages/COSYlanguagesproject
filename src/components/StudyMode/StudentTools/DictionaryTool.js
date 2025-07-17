@@ -8,7 +8,7 @@ import SearchableCardList from '../../Common/SearchableCardList';
 import './DictionaryTool.css';
 
 const DictionaryTool = ({ isOpen, onClose }) => {
-    const { t } = useI18n();
+    const { t, currentLangKey } = useI18n();
     const { lang } = useParams();
     const [allVocabulary, setAllVocabulary] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
