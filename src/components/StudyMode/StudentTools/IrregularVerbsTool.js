@@ -11,6 +11,7 @@ import irregularVerbsIt from '../../../data/grammar/verbs/irregular/irregular_ve
 import irregularVerbsPt from '../../../data/grammar/verbs/irregular/irregular_verbs_pt.json';
 import irregularVerbsRu from '../../../data/grammar/verbs/irregular/irregular_verbs_ru.json';
 import irregularVerbsEl from '../../../data/grammar/verbs/irregular/irregular_verbs_el.json';
+import irregularVerbsHy from '../../../data/grammar/verbs/irregular/irregular_verbs_hy.json';
 import conjugationsFr from '../../../data/grammar/verbs/conjugations/conjugations_french.json';
 
 const IrregularVerbsTool = () => {
@@ -47,6 +48,11 @@ const IrregularVerbsTool = () => {
 
             if (currentUILanguage === 'COSYenglish') {
                 const allVerbs = irregularVerbsEn.reduce((acc, category) => {
+                    return acc.concat(category.verbs);
+                }, []);
+                setVerbs(allVerbs);
+            } else if (currentUILanguage === 'COSYհայերեն') {
+                const allVerbs = irregularVerbsHy.reduce((acc, category) => {
                     return acc.concat(category.verbs);
                 }, []);
                 setVerbs(allVerbs);
