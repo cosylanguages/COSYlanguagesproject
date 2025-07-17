@@ -15,6 +15,7 @@ const DictionaryTool = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
+    const [isSearched, setIsSearched] = useState(false);
     const [selectedLevel, setSelectedLevel] = useState(''); // Empty string means all levels
 
     const handleAddWordToFlashcards = (word) => {
@@ -62,7 +63,7 @@ const DictionaryTool = () => {
     }, [currentLangKey, t]); // Depend on currentLangKey from i18n context
 
     const filteredVocabulary = useMemo(() => {
-        if (!allVocabulary) return [];
+        if (!allVocabulary || !isSearched) return [];
         return allVocabulary.filter(item => {
             const itemLevel = typeof item.level === 'string' ? item.level.toLowerCase() : '';
             const matchesLevel = selectedLevel ? itemLevel === selectedLevel.toLowerCase() : true;
@@ -84,7 +85,7 @@ const DictionaryTool = () => {
             
             return matchesLevel && matchesSearch;
         });
-    }, [allVocabulary, searchTerm, selectedLevel]);
+    }, [allVocabulary, searchTerm, selectedLevel, isSearched]);
 
     if (isLoading) return <p>{t('dictionary.loading', 'Loading dictionary...')}</p>;
     if (error) return <p className="error-message">{t('dictionary.loadError', 'Error loading dictionary: ')}{error}</p>;
@@ -98,7 +99,10 @@ const DictionaryTool = () => {
                     className="search-dictionary"
                     placeholder={t('dictionary.searchPlaceholder', 'Search terms, definitions...')}
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => {
+                        setSearchTerm(e.target.value);
+                        setIsSearched(true);
+                    }}
                     aria-label={t('dictionary.searchAriaLabel', 'Search vocabulary')}
                 />
                 <select
@@ -114,32 +118,34 @@ const DictionaryTool = () => {
                 </select>
             </div>
 
-            {filteredVocabulary.length === 0 && !isLoading && (
+            {isSearched && filteredVocabulary.length === 0 && !isLoading && (
                 <p>{t('dictionary.noResults', 'No vocabulary items match your search criteria.')}</p>
             )}
 
-            <div className="vocabulary-list">
-                {filteredVocabulary.map((item, index) => (
-                    // Use item.id if available and unique, otherwise fallback.
-                    // The service currently doesn't guarantee unique IDs across themes/levels if not in source.
-                    <div key={item.id || `${item.term}-${index}`} className="vocabulary-item">
-                        <h4>
-                            {item.term || t('dictionary.unknownTerm', 'Unknown Term')}
-                            {item.level && ` (${item.level})`}
-                            {item.term && <button onClick={() => pronounceText(item.term, item.lang || currentLangKey)} className="btn-icon pronounce-btn-inline" title={t('dictionary.pronounceTerm', 'Pronounce term')}>🔊</button>}
-                        </h4>
-                        {item.pronunciation && <p className="vocab-pronunciation"><strong>{t('dictionary.pronunciation', 'Pronunciation:')}</strong> {item.pronunciation}</p>}
-                        {item.partOfSpeech && <p className="vocab-pos"><strong>{t('dictionary.partOfSpeech', 'Part of Speech:')}</strong> {item.partOfSpeech}</p>}
-                        {item.gender && <p className="vocab-gender"><strong>{t('dictionary.gender', 'Gender:')}</strong> {item.gender}</p>}
-                        {item.latinisation && <p className="vocab-latinisation"><strong>{t('dictionary.latinisation', 'Latinisation:')}</strong> {item.latinisation}</p>}
-                        {item.definition && <p className="vocab-definition"><strong>{t('dictionary.definition', 'Definition:')}</strong> {item.definition}</p>}
-                        {item.example && <p className="vocab-example"><strong>{t('dictionary.example', 'Example:')}</strong> <em>{item.example}</em></p>}
-                        {/* We might want to show example_translation if available */}
-                        {item.theme && <p className="vocab-theme"><small>{t('dictionary.theme', 'Theme:')} {item.theme}</small></p>}
-                        <button className="btn-icon" onClick={() => handleAddWordToFlashcards(item)}>➕</button>
-                    </div>
-                ))}
-            </div>
+            {isSearched && (
+                <div className="vocabulary-list">
+                    {filteredVocabulary.map((item, index) => (
+                        // Use item.id if available and unique, otherwise fallback.
+                        // The service currently doesn't guarantee unique IDs across themes/levels if not in source.
+                        <div key={item.id || `${item.term}-${index}`} className="vocabulary-item">
+                            <h4>
+                                {item.term || t('dictionary.unknownTerm', 'Unknown Term')}
+                                {item.level && ` (${item.level})`}
+                                {item.term && <button onClick={() => pronounceText(item.term, item.lang || currentLangKey)} className="btn-icon pronounce-btn-inline" title={t('dictionary.pronounceTerm', 'Pronounce term')}>🔊</button>}
+                            </h4>
+                            {item.pronunciation && <p className="vocab-pronunciation"><strong>{t('dictionary.pronunciation', 'Pronunciation:')}</strong> {item.pronunciation}</p>}
+                            {item.partOfSpeech && <p className="vocab-pos"><strong>{t('dictionary.partOfSpeech', 'Part of Speech:')}</strong> {item.partOfSpeech}</p>}
+                            {item.gender && <p className="vocab-gender"><strong>{t('dictionary.gender', 'Gender:')}</strong> {item.gender}</p>}
+                            {item.latinisation && <p className="vocab-latinisation"><strong>{t('dictionary.latinisation', 'Latinisation:')}</strong> {item.latinisation}</p>}
+                            {item.definition && <p className="vocab-definition"><strong>{t('dictionary.definition', 'Definition:')}</strong> {item.definition}</p>}
+                            {item.example && <p className="vocab-example"><strong>{t('dictionary.example', 'Example:')}</strong> <em>{item.example}</em></p>}
+                            {/* We might want to show example_translation if available */}
+                            {item.theme && <p className="vocab-theme"><small>{t('dictionary.theme', 'Theme:')} {item.theme}</small></p>}
+                            <button className="btn-icon" onClick={() => handleAddWordToFlashcards(item)}>➕</button>
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };
