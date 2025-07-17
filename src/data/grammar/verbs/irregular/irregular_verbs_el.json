@@ -1,0 +1,31 @@
+[
+  {
+    "category": "irregular",
+    "verbs": [
+      {
+        "base": "είμαι",
+        "pastSimple": "ήμουν",
+        "pastParticiple": "-",
+        "translation": "to be"
+      },
+      {
+        "base": "έχω",
+        "pastSimple": "είχα",
+        "pastParticiple": "-",
+        "translation": "to have"
+      },
+      {
+        "base": "κάνω",
+        "pastSimple": "έκανα",
+        "pastParticiple": "γίνει",
+        "translation": "to do/make"
+      },
+      {
+        "base": "μπορώ",
+        "pastSimple": "μπορούσα",
+        "pastParticiple": "-",
+        "translation": "to be able to"
+      }
+    ]
+  }
+]
