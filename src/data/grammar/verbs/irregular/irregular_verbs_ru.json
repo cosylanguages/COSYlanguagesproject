@@ -1,0 +1,31 @@
+[
+  {
+    "category": "irregular",
+    "verbs": [
+      {
+        "base": "быть",
+        "pastSimple": "был",
+        "pastParticiple": "бывший",
+        "translation": "to be"
+      },
+      {
+        "base": "дать",
+        "pastSimple": "дал",
+        "pastParticiple": "данный",
+        "translation": "to give"
+      },
+      {
+        "base": "есть",
+        "pastSimple": "ел",
+        "pastParticiple": "съеденный",
+        "translation": "to eat"
+      },
+      {
+        "base": "мочь",
+        "pastSimple": "мог",
+        "pastParticiple": "могший",
+        "translation": "to be able to"
+      }
+    ]
+  }
+]
