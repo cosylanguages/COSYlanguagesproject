@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils';
 import { getStudySets, addCardToSet } from '../../../utils/studySetService';
-import { loadAllLevelsForLanguageAsFlatList, CEFR_LEVELS as importedCefrLevels } from '../../../utils/vocabularyService';
+import { loadAllLevelsForLanguageAsFlatList } from '../../../utils/vocabularyService';
 import SearchableCardList from '../../Common/SearchableCardList';
 import './DictionaryTool.css';
-
-const CEFR_LEVELS_ORDER = importedCefrLevels || ['a0', 'a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
 
 const DictionaryTool = ({ isOpen, onClose }) => {
     const { t, currentLangKey } = useI18n();
