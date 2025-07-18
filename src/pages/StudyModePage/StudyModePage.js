@@ -53,16 +53,7 @@ const StudyModePage = () => {
   // --- Effects for Data Fetching ---
 
   // Effect to fetch days list based on role and current language
-  useEffect(() => {
-    // Reset states when role or language changes significantly
-    setDays([]);
-    setSelectedDayId(null);
-    setCurrentSyllabus(null);
-    setLessonSectionsForPanel([]);
-    setSelectedSectionId(null);
-    setCurrentExerciseBlocks([]);
-    setError(null);
-
+  const memoizedGetAvailableSyllabusDays = useCallback(() => {
     if (selectedRole === 'student' && language) {
       setIsLoading(true);
       getAvailableSyllabusDays(language)
@@ -74,7 +65,22 @@ const StudyModePage = () => {
           setError(t('studyModePage.errorFetchingDays', 'Failed to load study days.'));
         })
         .finally(() => setIsLoading(false));
-    } else if (selectedRole === 'teacher' && authToken) {
+    }
+  }, [language, selectedRole, t]);
+
+  useEffect(() => {
+    // Reset states when role or language changes significantly
+    setDays([]);
+    setSelectedDayId(null);
+    setCurrentSyllabus(null);
+    setLessonSectionsForPanel([]);
+    setSelectedSectionId(null);
+    setCurrentExerciseBlocks([]);
+    setError(null);
+
+    memoizedGetAvailableSyllabusDays();
+
+    if (selectedRole === 'teacher' && authToken) {
       setIsLoading(true);
       fetchTeacherDays(authToken) // Use renamed import
         .then(data => {
@@ -86,7 +92,7 @@ const StudyModePage = () => {
         })
         .finally(() => setIsLoading(false));
     }
-  }, [selectedRole, authToken, t]);
+  }, [selectedRole, language, authToken, t, memoizedGetAvailableSyllabusDays]);
 
 
   // Effect to load lesson sections / full syllabus content when a day is selected
