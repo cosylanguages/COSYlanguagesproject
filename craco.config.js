@@ -1,79 +1,93 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
+const languages = ['ba', 'br', 'de', 'el', 'en', 'es', 'fr', 'hy', 'it', 'pt', 'ru', 'tt'];
+
+function getLanguageEntries() {
+  return languages.reduce((acc, lang) => {
+    acc[`study-${lang}`] = `./src/pages/StudyModePage/languages/${lang}.js`;
+    return acc;
+  }, {});
+}
+
+function createHtmlWebpackPlugin(env, paths, options) {
+  return new HtmlWebpackPlugin({
+    inject: true,
+    template: options.template || paths.appHtml,
+    filename: options.filename,
+    chunks: options.chunks,
+    excludeChunks: options.excludeChunks,
+    publicPath: env === 'production' ? '' : '/',
+  });
+}
+
+function configureWebpack(webpackConfig, { env, paths }) {
+  const languageEntries = getLanguageEntries();
+
+  webpackConfig.entry = {
+    main: paths.appIndexJs,
+    sw: './src/sw.js',
+    study: './src/StudyRoutes.js',
+    studyIslands: './src/islands/studyIslandsEntry.js',
+    freestyle: './src/islands/freestyleIslandsEntry.js',
+    ...languageEntries,
+  };
+
+  webpackConfig.plugins = webpackConfig.plugins.filter(
+    (plugin) => plugin.constructor.name !== 'HtmlWebpackPlugin'
+  );
+
+  webpackConfig.plugins.push(
+    createHtmlWebpackPlugin(env, paths, {
+      filename: 'index.html',
+      chunks: ['main'],
+      excludeChunks: ['sw', 'study', 'freestyle', ...Object.keys(languageEntries)],
+    })
+  );
+
+  webpackConfig.plugins.push(
+    createHtmlWebpackPlugin(env, paths, {
+      template: './public/freestyle.html',
+      filename: 'freestyle.html',
+      chunks: ['freestyle'],
+      excludeChunks: ['sw', 'main', 'study', ...Object.keys(languageEntries)],
+    })
+  );
+
+  webpackConfig.plugins.push(
+    createHtmlWebpackPlugin(env, paths, {
+      template: './public/study.html',
+      filename: 'study.html',
+      chunks: ['study'],
+      excludeChunks: ['sw', 'main', 'studyIslands', ...Object.keys(languageEntries)],
+    })
+  );
+
+  webpackConfig.plugins.push(
+    createHtmlWebpackPlugin(env, paths, {
+      template: './public/study-islands.html',
+      filename: 'study-islands.html',
+      chunks: ['studyIslands'],
+      excludeChunks: ['sw', 'main', 'study', ...Object.keys(languageEntries)],
+    })
+  );
+
+  languages.forEach(lang => {
+    webpackConfig.plugins.push(
+      createHtmlWebpackPlugin(env, paths, {
+        template: './public/study.html',
+        filename: `study-${lang}.html`,
+        chunks: [`study-${lang}`],
+        excludeChunks: ['sw', 'main', 'study', ...Object.keys(languageEntries).filter(key => key !== `study-${lang}`)],
+      })
+    );
+  });
+
+  return webpackConfig;
+}
+
 module.exports = {
   webpack: {
-    configure: (webpackConfig, { env, paths }) => {
-      const languages = ['ba', 'br', 'de', 'el', 'en', 'es', 'fr', 'hy', 'it', 'pt', 'ru', 'tt'];
-      const languageEntries = languages.reduce((acc, lang) => {
-        acc[`study-${lang}`] = `./src/pages/StudyModePage/languages/${lang}.js`;
-        return acc;
-      }, {});
-
-      webpackConfig.entry = {
-        main: paths.appIndexJs,
-        sw: './src/sw.js', // Added service worker entry point
-        study: './src/StudyRoutes.js', // Added study mode entry point
-        studyIslands: './src/islands/studyIslandsEntry.js',
-        ...languageEntries,
-      };
-
-      // Filter out CRA's default HtmlWebpackPlugin instance(s)
-      webpackConfig.plugins = webpackConfig.plugins.filter(
-        (plugin) => plugin.constructor.name !== 'HtmlWebpackPlugin'
-      );
-
-      // Add our own HtmlWebpackPlugin for index.html
-      webpackConfig.plugins.push(
-        new HtmlWebpackPlugin({
-          inject: true,
-          template: paths.appHtml, // public/index.html
-          filename: 'index.html',
-          chunks: ['main'], // Only include the main bundle related chunks
-          excludeChunks: ['sw', 'study', ...Object.keys(languageEntries)], // Exclude the service worker and study mode
-          publicPath: env === 'production' ? '' : '/',
-        })
-      );
-
-      // Add our own HtmlWebpackPlugin for study.html
-      webpackConfig.plugins.push(
-        new HtmlWebpackPlugin({
-          inject: true,
-          template: './public/study.html', // public/study.html
-          filename: 'study.html',
-          chunks: ['study'], // Only include the study bundle related chunks
-          excludeChunks: ['sw', 'main', 'studyIslands', ...Object.keys(languageEntries)], // Exclude the service worker and main
-          publicPath: env === 'production' ? '' : '/',
-        })
-      );
-
-      // Add our own HtmlWebpackPlugin for study-islands.html
-      webpackConfig.plugins.push(
-        new HtmlWebpackPlugin({
-          inject: true,
-          template: './public/study-islands.html', // public/study-islands.html
-          filename: 'study-islands.html',
-          chunks: ['studyIslands'], // Only include the study islands bundle
-          excludeChunks: ['sw', 'main', 'study', ...Object.keys(languageEntries)], // Exclude other entry points
-          publicPath: env === 'production' ? '' : '/',
-        })
-      );
-
-      // Add our own HtmlWebpackPlugin for each language
-      languages.forEach(lang => {
-        webpackConfig.plugins.push(
-          new HtmlWebpackPlugin({
-            inject: true,
-            template: './public/study.html', // public/study.html
-            filename: `study-${lang}.html`,
-            chunks: [`study-${lang}`], // Only include the language bundle related chunks
-            excludeChunks: ['sw', 'main', 'study', ...Object.keys(languageEntries).filter(key => key !== `study-${lang}`)], // Exclude the service worker, main, and other languages
-            publicPath: env === 'production' ? '' : '/',
-          })
-        );
-      });
-
-      return webpackConfig;
-    },
+    configure: configureWebpack,
   },
 };

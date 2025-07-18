@@ -42,6 +42,16 @@ const Layout = () => {
           </ul>
         </nav>
         <div className="header-controls">
+            <Button
+                onClick={() => {
+                    // This is a placeholder for the actual download logic
+                    alert('Downloading the app...');
+                }}
+                className="download-button"
+                variant="primary"
+            >
+                <TransliterableText text={t('btnDownload') || 'Download App'} />
+            </Button>
           {isAuthenticated && currentUser && (
             <div className="user-info">
               <span><TransliterableText text={t('welcomeUser', { name: currentUser.username || currentUser.role || 'User' }) || `Welcome, ${currentUser.username || currentUser.role || 'User'}!`} /></span>

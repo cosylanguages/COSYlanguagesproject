@@ -47,7 +47,7 @@ function App() {
         <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Layout />}>
-                <Route index element={<Navigate to="/freestyle" replace />} />
+                <Route index element={<Navigate to="/freestyle.html" replace />} />
                 <Route path="freestyle" element={<FreestyleModePage />} />
                 <Route path="study" element={<Navigate to="/study-islands.html" replace />} />
                 <Route path="study/:lang" element={<StudyModePage />} />
