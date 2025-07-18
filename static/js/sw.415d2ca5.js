@@ -1,0 +1,2 @@
+(()=>{const e=["/","/index.html","/freestyle.html","/study.html","/study-islands.html","/static/js/bundle.js","/static/js/main.chunk.js","/static/js/0.chunk.js"];self.addEventListener("install",t=>{t.waitUntil(caches.open("cosy-languages-cache-v1").then(t=>(console.log("Opened cache"),t.addAll(e))))}),self.addEventListener("fetch",e=>{e.respondWith(caches.match(e.request).then(t=>t||fetch(e.request)))})})();
+//# sourceMappingURL=sw.415d2ca5.js.map
