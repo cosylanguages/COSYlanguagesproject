@@ -1,0 +1,2 @@
+(()=>{const e=["/","/index.html","/manifest.json","/favicon.ico","/logo192.png","/logo512.png"];self.addEventListener("install",n=>{n.waitUntil(caches.open("cosy-languages-cache-v1").then(n=>(console.log("Opened cache"),n.addAll(e))))}),self.addEventListener("fetch",e=>{e.respondWith(caches.match(e.request).then(n=>n||fetch(e.request)))})})();
+//# sourceMappingURL=sw.ff931169.js.map
