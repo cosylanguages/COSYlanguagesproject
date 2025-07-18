@@ -90,4 +90,7 @@ module.exports = {
   webpack: {
     configure: configureWebpack,
   },
+  devServer: {
+    historyApiFallback: true,
+  },
 };
