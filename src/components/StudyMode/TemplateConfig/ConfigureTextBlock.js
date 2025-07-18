@@ -1,108 +1,137 @@
 import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
-import './SimpleTextConfig.css'; // Import shared CSS
+import TransliterableText from '../../Common/TransliterableText';
+import Modal from '../../Common/Modal'; // Using the common Modal component
 
-const ConfigureTextBlock = ({ existingBlockData, onSave, onCancel, availableLanguages }) => {
-    const { t, language: currentUILanguage } = useI18n();
+// Basic styling can be added to a shared ConfigBlocks.css or TeacherDashboard.css
 
-    const [blockTitle, setBlockTitle] = useState(existingBlockData?.title || {});
-    const [textContent, setTextContent] = useState(existingBlockData?.content || {}); // { COSYenglish: "Text...", ... }
+const TextBlockConfig = ({ block, onSave, onClose }) => {
+  const { t, currentLangKey } = useI18n(); // Get current global language
 
-    useEffect(() => {
-        if (existingBlockData) {
-            setBlockTitle(existingBlockData.title || {});
-            setTextContent(ensureAllLangs(existingBlockData.content || {}, availableLanguages, ''));
-        } else {
-            // For new blocks, ensure initial content has multilingual structure
-            setTextContent(ensureAllLangs({}, availableLanguages, ''));
-        }
-    }, [existingBlockData, availableLanguages]);
-    
-    const ensureAllLangs = (textObj, langs, defaultValue = '') => {
-        const newTextObj = { ...textObj };
-        langs.forEach(lang => {
-            if (newTextObj[lang] === undefined || newTextObj[lang] === null) {
-                newTextObj[lang] = defaultValue;
-            }
-        });
-        return newTextObj;
+  // Initialize state from block.data or with defaults
+  const [title, setTitle] = useState(block.data.title || { default: '' });
+  const [content, setContent] = useState(block.data.content || { default: '' });
+  const [blockLang, setBlockLang] = useState(block.data.lang || '');
+
+  useEffect(() => {
+    // Update state if the block prop changes (e.g., selecting a different block to edit)
+    setTitle(block.data.title || { default: '' });
+    setContent(block.data.content || { default: '' });
+    setBlockLang(block.data.lang || '');
+  }, [block]);
+
+  const handleSave = () => {
+    const updatedBlockData = {
+      ...block.data,
+      title,
+      content,
+      lang: blockLang.trim() === '' ? null : blockLang.trim(), // Store null if empty
     };
+    onSave({ ...block, data: updatedBlockData });
+    onClose(); // Close modal after saving
+  };
 
-    const handleBlockTitleChange = (lang, value) => {
-        setBlockTitle(prev => ({ ...prev, [lang]: value }));
-    };
+  // Handle changes for multilingual fields (title, content)
+  const handleMultilingualChange = (fieldSetter, currentFieldState, lang, value) => {
+    fieldSetter({
+      ...currentFieldState,
+      [lang]: value,
+    });
+  };
 
-    const handleTextContentChange = (lang, value) => {
-        setTextContent(prev => ({ ...prev, [lang]: value }));
-    };
+  const currentGlobalLang = currentLangKey || 'default'; // Fallback to 'default'
 
-    const handleSaveConfiguration = () => {
-        const titleToSave = { ...blockTitle };
-        if (!titleToSave[currentUILanguage] && !titleToSave.COSYenglish) {
-            alert(t('alertTitleRequired') || `Please enter a title for the block.`);
-            return;
-        }
-        availableLanguages.forEach(lang => {
-            if (!titleToSave[lang]) {
-                titleToSave[lang] = titleToSave[currentUILanguage] || titleToSave.COSYenglish || 'Text Block';
-            }
-        });
-
-        const contentToSave = { ...textContent };
-        if (!Object.values(contentToSave).some(text => text.trim() !== '')) {
-            alert(t('alertTextContentRequired') || 'Please enter some text content.');
-            return;
-        }
-        availableLanguages.forEach(lang => {
-            if (!contentToSave[lang]) { // Ensure all language fields exist, even if empty
-                contentToSave[lang] = contentToSave[currentUILanguage]?.trim() || contentToSave.COSYenglish?.trim() || '';
-            }
-        });
-
-
-        onSave({
-            id: existingBlockData?.id || `txt_${Date.now()}`,
-            type: 'reading/text',
-            title: titleToSave,
-            content: contentToSave, 
-        });
-    };
-
-    return (
-        <div className="configure-text-block configure-simple-block"> {/* Added configure-simple-block for common styles */}
-            <h4>{t('configureTextBlockTitle') || 'Configure Text Block'}</h4>
-
+  // DEV_NOTE: Multilingual input is simplified to 'default' and current global language.
+  // A more advanced implementation might allow selecting/editing multiple specific languages.
+  return (
+    <Modal
+        isOpen={true} // Controlled by TeacherDashboard's editingBlock state
+        onClose={onClose}
+        title={t('configureBlockTitle', { blockName: block.typeName }) || `Configure ${block.typeName}`}
+    >
+        <div className="text-block-config-form block-config-form"> {/* Added block-config-form */}
+            {/* Title Inputs */}
             <div className="form-group">
-                <label htmlFor="block-title-txt">{t('blockTitleLabel') || 'Block Title'} ({currentUILanguage}):</label>
+                <label htmlFor={`title-default-${block.id}`} className="unified-label">
+                    <TransliterableText text={t('config.titleDefaultLabel', 'Title (Default)')} />:
+                </label>
                 <input
                     type="text"
-                    id="block-title-txt"
-                    value={blockTitle[currentUILanguage] || blockTitle.COSYenglish || ''}
-                    onChange={(e) => handleBlockTitleChange(currentUILanguage, e.target.value)}
-                    placeholder={t('enterBlockTitlePlaceholder') || 'E.g., Instructions'}
+                    id={`title-default-${block.id}`}
+                    value={title.default || ''}
+                    onChange={(e) => handleMultilingualChange(setTitle, title, 'default', e.target.value)}
+                    placeholder={t('config.titleDefaultPlaceholder', 'Enter default title')}
                 />
             </div>
-            
+            {currentGlobalLang !== 'default' && (
+                 <div className="form-group">
+                    <label htmlFor={`title-${currentGlobalLang}-${block.id}`} className="unified-label">
+                        <TransliterableText text={t('config.titleLangLabel', { lang: currentGlobalLang } , `Title (${currentGlobalLang})`)} />:
+                    </label>
+                    <input
+                        type="text"
+                        id={`title-${currentGlobalLang}-${block.id}`}
+                        value={title[currentGlobalLang] || ''}
+                        onChange={(e) => handleMultilingualChange(setTitle, title, currentGlobalLang, e.target.value)}
+                        placeholder={t('config.titleLangPlaceholder', { lang: currentGlobalLang }, `Enter title for ${currentGlobalLang}`)}
+                    />
+                </div>
+            )}
+
+            {/* Content Inputs */}
             <div className="form-group">
-                <label htmlFor={`text-content-${currentUILanguage}`}>
-                    {t('textContentLabel', { langName: currentUILanguage.replace('COSY','') }) || `Text Content (${currentUILanguage.replace('COSY','')})`}:
+                <label htmlFor={`content-default-${block.id}`} className="unified-label">
+                    <TransliterableText text={t('config.contentDefaultLabel', 'Content (Default)')} />:
                 </label>
                 <textarea
-                    id={`text-content-${currentUILanguage}`}
-                    value={textContent[currentUILanguage] || ''}
-                    onChange={(e) => handleTextContentChange(currentUILanguage, e.target.value)}
-                    placeholder={t('enterTextContentPlaceholder') || 'Enter your text here...'}
-                    rows="8"
+                    id={`content-default-${block.id}`}
+                    value={content.default || ''}
+                    onChange={(e) => handleMultilingualChange(setContent, content, 'default', e.target.value)}
+                    rows="5"
+                    placeholder={t('config.contentDefaultPlaceholder', 'Enter default content (markdown supported for line breaks)')}
                 />
             </div>
-            {/* Consider adding a way to edit other languages if needed, or assume currentUILanguage is primary edit */}
+            {currentGlobalLang !== 'default' && (
+                <div className="form-group">
+                    <label htmlFor={`content-${currentGlobalLang}-${block.id}`} className="unified-label">
+                        <TransliterableText text={t('config.contentLangLabel', { lang: currentGlobalLang }, `Content (${currentGlobalLang})`)} />:
+                    </label>
+                    <textarea
+                        id={`content-${currentGlobalLang}-${block.id}`}
+                        value={content[currentGlobalLang] || ''}
+                        onChange={(e) => handleMultilingualChange(setContent, content, currentGlobalLang, e.target.value)}
+                        rows="5"
+                        placeholder={t('config.contentLangPlaceholder', { lang: currentGlobalLang }, `Enter content for ${currentGlobalLang}`)}
+                    />
+                </div>
+            )}
 
-            <div className="form-actions">
-                <button onClick={handleSaveConfiguration} className="btn btn-primary">{t('saveConfigurationBtn') || 'Save Configuration'}</button>
-                <button onClick={onCancel} className="btn btn-secondary">{t('cancelBtn') || 'Cancel'}</button>
+            {/* Block Language Override */}
+            <div className="form-group">
+                <label htmlFor={`block-lang-${block.id}`} className="unified-label">
+                    <TransliterableText text={t('config.blockLangLabel', 'Language Override (e.g., COSYenglish)')} />:
+                </label>
+                <input
+                    type="text"
+                    id={`block-lang-${block.id}`}
+                    value={blockLang}
+                    onChange={(e) => setBlockLang(e.target.value)}
+                    placeholder={t('config.blockLangPlaceholder', 'Leave empty to use global language')}
+                />
+                <p className="input-hint"><TransliterableText text={t('config.blockLangHint', 'If set, this language code (e.g., COSYfrench, COSYgerman) will be used for this block, overriding the global language selection for its content.')} /></p>
+            </div>
+
+            <div className="modal-actions">
+                <button onClick={handleSave} className="btn btn-primary">
+                    <TransliterableText text={t('saveConfigBtn', 'Save Configuration')} />
+                </button>
+                <button onClick={onClose} className="btn btn-secondary">
+                    <TransliterableText text={t('cancelBtn', 'Cancel')} />
+                </button>
             </div>
         </div>
-    );
+    </Modal>
+  );
 };
 
-export default ConfigureTextBlock;
+export default TextBlockConfig;

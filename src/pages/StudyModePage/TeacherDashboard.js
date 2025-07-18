@@ -3,9 +3,9 @@ import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../../components/Common/TransliterableText';
 import TemplateTypeSelectionModal from '../../components/StudyMode/TemplateTypeSelectionModal';
 import { getDisplayNameForTemplatePath } from '../../config/templateSections';
-import TextBlockConfig from '../../components/StudyMode/ConfigBlocks/TextBlockConfig';
-import MCQMultipleBlockConfig from '../../components/StudyMode/ConfigBlocks/MCQMultipleBlockConfig';
-import WritingBlockConfig from '../../components/StudyMode/ConfigBlocks/WritingBlockConfig';
+import TextBlockConfig from '../../components/StudyMode/TemplateConfig/ConfigureTextBlock';
+import MCQMultipleBlockConfig from '../../components/StudyMode/TemplateConfig/ConfigureMCQMultipleBlock';
+import WritingBlockConfig from '../../components/StudyMode/TemplateConfig/ConfigureWritingBlock';
 import TemplateList from '../../components/StudyMode/TemplateList';
 import TemplateEditor from '../../components/StudyMode/TemplateEditor';
 
@@ -22,7 +22,7 @@ import { getLessonSectionDetails, updateLessonSection } from '../../api/lessonSe
 import { useAuth } from '../../contexts/AuthContext'; // To get the auth token
 
 import './TeacherDashboard.css'; 
-import '../../components/StudyMode/ConfigBlocks/ConfigBlocks.css';
+import '../../components/StudyMode/TemplateConfig/SimpleTextConfig.css';
 
 const TEACHER_LESSON_STORAGE_KEY = 'teacherSavedLesson_default'; // Fixed key for now
 
