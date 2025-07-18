@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 // import { usePlan } from './contexts/PlanContext'; // Commented out as PlanOverview is commented
 import { useAuth } from './contexts/AuthContext';
 import { useI18n } from './i18n/I18nContext';
@@ -23,8 +23,14 @@ const ProtectedRoute = ({ children }) => {
 
 
 function AppRoutes() {
-    const { isAuthenticated, loadingAuth } = useAuth();
-    const { t } = useI18n(); // For loading message translation
+    return (
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    );
+}
+
+function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -38,18 +44,6 @@ function AppRoutes() {
             window.removeEventListener('navigateTo', handleNavigate);
         };
     }, [navigate]);
-
-    // Define the catch-all element logic
-    let catchAllElement;
-    if (loadingAuth) {
-        catchAllElement = <div>{t('auth.loadingStatus', 'Loading authentication status...')}</div>;
-    } else if (isAuthenticated) {
-        // Authenticated users hitting an unknown SPA path go to the SPA root
-        catchAllElement = <Navigate to="/" replace />;
-    } else {
-        // Unauthenticated users hitting an unknown SPA path go to the login page
-        catchAllElement = <Navigate to="/login" replace />;
-    }
 
     return (
         <Routes>
@@ -77,9 +71,24 @@ function AppRoutes() {
                 </Route>
             </Route>
             {/* Catch-all route */}
-            <Route path="*" element={catchAllElement} />
+            <Route path="*" element={<CatchAll />} />
         </Routes>
     );
+}
+
+function CatchAll() {
+    const { isAuthenticated, loadingAuth } = useAuth();
+    const { t } = useI18n(); // For loading message translation
+
+    if (loadingAuth) {
+        return <div>{t('auth.loadingStatus', 'Loading authentication status...')}</div>;
+    } else if (isAuthenticated) {
+        // Authenticated users hitting an unknown SPA path go to the SPA root
+        return <Navigate to="/" replace />;
+    } else {
+        // Unauthenticated users hitting an unknown SPA path go to the login page
+        return <Navigate to="/login" replace />;
+    }
 }
 
 export default AppRoutes;
