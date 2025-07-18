@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const languages = ['ba', 'br', 'de', 'el', 'en', 'es', 'fr', 'hy', 'it', 'pt', 'ru', 'tt'];
 
@@ -42,6 +43,14 @@ function configureWebpack(webpackConfig, { env, paths }) {
       filename: 'index.html',
       chunks: ['main'],
       excludeChunks: ['sw', 'study', 'freestyle', ...Object.keys(languageEntries)],
+    })
+  );
+
+  webpackConfig.plugins.push(
+    new CopyPlugin({
+      patterns: [
+        { from: 'public/404.html', to: '404.html' },
+      ],
     })
   );
 
