@@ -13,7 +13,7 @@ module.exports = {
       webpackConfig.entry = {
         main: paths.appIndexJs,
         sw: './src/sw.js', // Added service worker entry point
-        study: './src/pages/StudyModePage/StudyModePage.js', // Added study mode entry point
+        study: './src/StudyRoutes.js', // Added study mode entry point
         ...languageEntries,
       };
 
