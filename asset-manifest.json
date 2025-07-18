@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.fe94baaa.css",
-    "main.js": "./static/js/main.17239cf8.js",
+    "main.js": "./static/js/main.af41de2f.js",
     "sw.js": "./static/js/sw.ff931169.js",
     "static/js/815.37c6be97.chunk.js": "./static/js/815.37c6be97.chunk.js",
     "static/js/197.b12028d9.chunk.js": "./static/js/197.b12028d9.chunk.js",
@@ -11,7 +11,7 @@
     "static/media/Flag_of_Tatarstan.png": "./static/media/Flag_of_Tatarstan.99455ff699f291d20b27.png",
     "index.html": "./index.html",
     "main.fe94baaa.css.map": "./static/css/main.fe94baaa.css.map",
-    "main.17239cf8.js.map": "./static/js/main.17239cf8.js.map",
+    "main.af41de2f.js.map": "./static/js/main.af41de2f.js.map",
     "sw.ff931169.js.map": "./static/js/sw.ff931169.js.map",
     "815.37c6be97.chunk.js.map": "./static/js/815.37c6be97.chunk.js.map",
     "197.b12028d9.chunk.js.map": "./static/js/197.b12028d9.chunk.js.map",
@@ -19,6 +19,6 @@
   },
   "entrypoints": [
     "static/css/main.fe94baaa.css",
-    "static/js/main.17239cf8.js"
+    "static/js/main.af41de2f.js"
   ]
 }
