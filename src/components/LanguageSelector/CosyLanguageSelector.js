@@ -4,19 +4,19 @@ import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
 import './CosyLanguageSelector.css';
 const logos = {
-  COSYarmenian: 'assets/icons/cosylanguages_logos/cosyarmenian.png',
-  COSYbashkir: 'assets/icons/cosylanguages_logos/cosybachkir.png',
-  COSYbreton: 'assets/icons/cosylanguages_logos/cosybreton.png',
-  COSYenglish: 'assets/icons/cosylanguages_logos/cosyenglish.png',
-  COSYfrench: 'assets/icons/cosylanguages_logos/cosyfrench.png',
-  COSYgeorgian: 'assets/icons/cosylanguages_logos/cosygeorgian.png',
-  COSYgerman: 'assets/icons/cosylanguages_logos/cosygerman.png',
-  COSYgreek: 'assets/icons/cosylanguages_logos/cosygreek.png',
-  COSYitalian: 'assets/icons/cosylanguages_logos/cosyitalian.png',
-  COSYportuguese: 'assets/icons/cosylanguages_logos/cosyportuguese.png',
-  COSYrussian: 'assets/icons/cosylanguages_logos/cosyrussian.png',
-  COSYspanish: 'assets/icons/cosylanguages_logos/cosyspanish.png',
-  COSYtatar: 'assets/icons/cosylanguages_logos/cosytatar.png',
+  COSYarmenian: '/assets/icons/cosylanguages_logos/cosyarmenian.png',
+  COSYbashkir: '/assets/icons/cosylanguages_logos/cosybachkir.png',
+  COSYbreton: '/assets/icons/cosylanguages_logos/cosybreton.png',
+  COSYenglish: '/assets/icons/cosylanguages_logos/cosyenglish.png',
+  COSYfrench: '/assets/icons/cosylanguages_logos/cosyfrench.png',
+  COSYgeorgian: '/assets/icons/cosylanguages_logos/cosygeorgian.png',
+  COSYgerman: '/assets/icons/cosylanguages_logos/cosygerman.png',
+  COSYgreek: '/assets/icons/cosylanguages_logos/cosygreek.png',
+  COSYitalian: '/assets/icons/cosylanguages_logos/cosyitalian.png',
+  COSYportuguese: '/assets/icons/cosylanguages_logos/cosyportuguese.png',
+  COSYrussian: '/assets/icons/cosylanguages_logos/cosyrussian.png',
+  COSYspanish: '/assets/icons/cosylanguages_logos/cosyspanish.png',
+  COSYtatar: '/assets/icons/cosylanguages_logos/cosytatar.png',
 };
 
 
