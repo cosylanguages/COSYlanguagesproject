@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 // import { usePlan } from './contexts/PlanContext'; // Commented out as PlanOverview is commented
 import { useAuth } from './contexts/AuthContext';
 import { useI18n } from './i18n/I18nContext';
@@ -24,9 +24,7 @@ const ProtectedRoute = ({ children }) => {
 
 function AppRoutes() {
     return (
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <App />
     );
 }
 
