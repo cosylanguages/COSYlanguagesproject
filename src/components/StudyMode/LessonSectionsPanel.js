@@ -1,28 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
 import './LessonSectionsPanel.css';
+import { fetchLessonSections } from '../../api/lessonSections';
+import { useAuth } from '../../contexts/AuthContext';
 
 const LessonSectionsPanel = ({
-  sectionsFromSyllabus = null, // For students: array of { title, content_blocks, ... }
-  apiLessonSections = null,   // For teachers: array of { id, title: { lang: 'val' }, ... }
+  selectedDayId,
   onSectionSelect,
-  selectedSectionId, // For student: section.title; For teacher: section.id
-  currentLangKey,    // To get teacher section titles in current language
+  selectedSectionId,
+  currentLangKey,
   isStudentMode = false,
 }) => {
   const { t } = useI18n();
+  const { authToken } = useAuth();
+  const [sections, setSections] = useState([]);
+
+  useEffect(() => {
+    if (selectedDayId && !isStudentMode) {
+      fetchLessonSections(authToken, selectedDayId)
+        .then(data => setSections(data || []))
+        .catch(err => console.error("Error fetching lesson sections:", err));
+    }
+  }, [selectedDayId, isStudentMode, authToken]);
 
   const getTeacherSectionTitle = (section) => {
-    // Teacher sections have multilingual titles
-    const langKeyToUse = currentLangKey || 'COSYenglish'; // Fallback language
+    const langKeyToUse = currentLangKey || 'COSYenglish';
     if (section.title) {
       return section.title[langKeyToUse] || section.title.COSYenglish || section.title.default || t('lessonSectionsPanel.untitledSection', 'Untitled Section');
     }
     return t('lessonSectionsPanel.untitledSection', 'Untitled Section');
   };
 
-  const sectionsToDisplay = isStudentMode ? sectionsFromSyllabus : apiLessonSections;
+  const sectionsToDisplay = sections;
 
   if (!sectionsToDisplay || sectionsToDisplay.length === 0) {
     return (
@@ -44,45 +54,22 @@ const LessonSectionsPanel = ({
       </h4>
       <ul className="sections-list">
         {sectionsToDisplay.map((section, index) => {
-          if (isStudentMode) {
-            // Student mode: section is { title, content_blocks, ... }
-            // selectedSectionId is section.title
-            const sectionTitle = section.title || t('lessonSectionsPanel.untitledSection', 'Untitled Section');
-            return (
-              <li
-                key={section.title || index} // Use title or index as key
-                className={`section-item ${sectionTitle === selectedSectionId ? 'active-section' : ''}`}
+          const sectionTitle = getTeacherSectionTitle(section);
+          return (
+            <li
+              key={section.id}
+              className={`section-item ${section.id === selectedSectionId ? 'active-section' : ''}`}
+            >
+              <button
+                onClick={() => onSectionSelect(section.id)}
+                className="section-link-button"
+                title={sectionTitle}
+                aria-pressed={section.id === selectedSectionId}
               >
-                <button
-                  onClick={() => onSectionSelect(sectionTitle)}
-                  className="section-link-button"
-                  title={sectionTitle}
-                  aria-pressed={sectionTitle === selectedSectionId}
-                >
-                  <TransliterableText text={sectionTitle} />
-                </button>
-              </li>
-            );
-          } else {
-            // Teacher mode: section is { id, title: { lang: 'val' }, ... }
-            // selectedSectionId is section.id
-            const sectionTitle = getTeacherSectionTitle(section);
-            return (
-              <li
-                key={section.id}
-                className={`section-item ${section.id === selectedSectionId ? 'active-section' : ''}`}
-              >
-                <button
-                  onClick={() => onSectionSelect(section.id)}
-                  className="section-link-button"
-                  title={sectionTitle}
-                  aria-pressed={section.id === selectedSectionId}
-                >
-                  <TransliterableText text={sectionTitle} />
-                </button>
-              </li>
-            );
-          }
+                <TransliterableText text={sectionTitle} />
+              </button>
+            </li>
+          );
         })}
       </ul>
     </div>

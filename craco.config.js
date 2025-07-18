@@ -14,6 +14,7 @@ module.exports = {
         main: paths.appIndexJs,
         sw: './src/sw.js', // Added service worker entry point
         study: './src/StudyRoutes.js', // Added study mode entry point
+        studyIslands: './src/islands/studyIslandsEntry.js',
         ...languageEntries,
       };
 
@@ -41,7 +42,19 @@ module.exports = {
           template: './public/study.html', // public/study.html
           filename: 'study.html',
           chunks: ['study'], // Only include the study bundle related chunks
-          excludeChunks: ['sw', 'main', ...Object.keys(languageEntries)], // Exclude the service worker and main
+          excludeChunks: ['sw', 'main', 'studyIslands', ...Object.keys(languageEntries)], // Exclude the service worker and main
+          publicPath: env === 'production' ? '' : '/',
+        })
+      );
+
+      // Add our own HtmlWebpackPlugin for study-islands.html
+      webpackConfig.plugins.push(
+        new HtmlWebpackPlugin({
+          inject: true,
+          template: './public/study-islands.html', // public/study-islands.html
+          filename: 'study-islands.html',
+          chunks: ['studyIslands'], // Only include the study islands bundle
+          excludeChunks: ['sw', 'main', 'study', ...Object.keys(languageEntries)], // Exclude other entry points
           publicPath: env === 'production' ? '' : '/',
         })
       );

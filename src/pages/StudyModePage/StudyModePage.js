@@ -223,6 +223,7 @@ const StudyModePage = () => {
         // For teacher, lessonSectionsForPanel also reset and refetched by its useEffect
         setLessonSectionsForPanel([]);
     }
+    window.dispatchEvent(new CustomEvent('dayChange', { detail: { selectedDayId: dayIdValue } }));
   };
 
   const handleSectionSelectSmP = (sectionIdentifier) => { // sectionIdentifier is title for student, ID for teacher
