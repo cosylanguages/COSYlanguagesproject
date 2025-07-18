@@ -22,6 +22,10 @@ export function I18nProvider({ children }) {
 
     const [currentTranslations, setCurrentTranslations] = useState({});
 
+    /**
+     * This effect runs when the language changes. It updates the local storage,
+     * the current translations, and the lang attribute of the html tag.
+     */
     useEffect(() => {
         // language state should always be a valid key (e.g. 'COSYenglish') due to initialization logic.
         if (translations[language]) {
@@ -54,6 +58,10 @@ export function I18nProvider({ children }) {
         }
     }, [language]);
 
+    /**
+     * Changes the language of the application.
+     * @param {string} langKey - The key of the language to change to.
+     */
     const changeLanguage = useCallback((langKey) => {
         if (translations && translations[langKey]) {
             setLanguage(langKey);
@@ -66,6 +74,13 @@ export function I18nProvider({ children }) {
         }
     }, [location, navigate]);
 
+    /**
+     * Translates a key to the current language.
+     * @param {string} key - The key to translate.
+     * @param {string|object} [defaultValueOrOptions] - The default value or an options object.
+     * @param {object} [optionsOnly] - The options object.
+     * @returns {string} The translated string.
+     */
     const t = useCallback((key, defaultValueOrOptions, optionsOnly) => {
         let defaultValue = typeof defaultValueOrOptions === 'string' ? defaultValueOrOptions : key;
         let options = typeof defaultValueOrOptions === 'object' && !Array.isArray(defaultValueOrOptions) ? defaultValueOrOptions : optionsOnly;
@@ -103,6 +118,12 @@ export function I18nProvider({ children }) {
         return translationString;
     }, [currentTranslations]); // Removed 'language' dependency
 
+    /**
+     * Gets the translations for a specific language.
+     * @param {string} langKey - The key of the language.
+     * @param {string} translationKey - The key of the translation.
+     * @returns {object} The translations for the specified language.
+     */
     const getTranslationsForLang = useCallback((langKey, translationKey) => {
         if (translations && translations[langKey] && translations[langKey][translationKey] !== undefined) {
             return translations[langKey][translationKey];

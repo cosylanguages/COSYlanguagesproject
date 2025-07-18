@@ -8,6 +8,10 @@ import '../../freestyle-shared.css';
 import './FreestyleModePage.css';
 
 const FreestyleModePage = () => {
+    /**
+     * This effect mounts the freestyle islands when the component mounts.
+     * The islands are mounted in different containers on the page.
+     */
     useEffect(() => {
         const mountFreestyleIslands = () => {
             if (typeof window !== 'undefined' && typeof document !== 'undefined' && (typeof process === 'undefined' || process.env.NODE_ENV !== 'test')) {
