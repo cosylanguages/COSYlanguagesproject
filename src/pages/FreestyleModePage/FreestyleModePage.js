@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import { I18nProvider } from '../../i18n/I18nContext';
 import { LatinizationProvider } from '../../contexts/LatinizationContext';
 import { LanguageIslandWrapper, DaySelectorIslandWrapper, PracticeNavIslandWrapper, ExerciseHostIslandWrapper, HelpPopupIslandWrapper } from '../../islands/freestyleIslandsEntry';
@@ -23,11 +24,13 @@ const FreestyleModePage = () => {
                 if (languageContainer) {
                     ReactDOM.createRoot(languageContainer).render(
                         <React.StrictMode>
-                            <I18nProvider>
-                                <LatinizationProvider>
-                                    <LanguageIslandWrapper />
-                                </LatinizationProvider>
-                            </I18nProvider>
+                            <BrowserRouter>
+                                <I18nProvider>
+                                    <LatinizationProvider>
+                                        <LanguageIslandWrapper />
+                                    </LatinizationProvider>
+                                </I18nProvider>
+                            </BrowserRouter>
                         </React.StrictMode>
                     );
                 }

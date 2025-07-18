@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // Contexts & Providers
 import { I18nProvider, useI18n } from '../i18n/I18nContext';
@@ -105,7 +105,7 @@ export const LanguageIslandApp = () => {
     </>
   );
 };
-export const LanguageIslandWrapper = () => <BrowserRouter><I18nProvider><LatinizationProvider><LanguageIslandApp /></LatinizationProvider></I18nProvider></BrowserRouter>;
+export const LanguageIslandWrapper = () => <I18nProvider><LatinizationProvider><LanguageIslandApp /></LatinizationProvider></I18nProvider>;
 
 // --- Day Selector Island ---
 export const DaySelectorIslandApp = ({ language, onConfirm }) => {
