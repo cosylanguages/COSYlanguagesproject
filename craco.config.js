@@ -22,7 +22,6 @@ module.exports = {
           filename: 'index.html',
           chunks: ['main'], // Only include the main bundle related chunks
           excludeChunks: ['sw'], // Exclude the service worker
-          publicPath: env === 'production' ? '/COSYlanguagesproject/' : '/',
         })
       );
 
