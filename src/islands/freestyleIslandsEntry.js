@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, useNavigate } from 'react-router-dom';
 
 // Contexts & Providers
 import { I18nProvider, useI18n } from '../i18n/I18nContext';
@@ -34,6 +35,7 @@ export const LanguageIslandApp = () => {
   const { language: i18nLanguage, changeLanguage, t } = useI18n();
   const [selectedLanguage, setSelectedLanguage] = useState(i18nLanguage);
   const [toast, setToast] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (i18nLanguage !== selectedLanguage) {
@@ -44,7 +46,7 @@ export const LanguageIslandApp = () => {
   const showToast = (message, duration = 2500) => { setToast(message); setTimeout(() => setToast(null), duration); };
 
   const navigateToStudyMode = () => {
-    window.dispatchEvent(new CustomEvent('navigateTo', { detail: '/study' }));
+    navigate('/study');
   };
 
   const handleLanguageChangeForIsland = (newLanguage) => {
@@ -103,7 +105,7 @@ export const LanguageIslandApp = () => {
     </>
   );
 };
-export const LanguageIslandWrapper = () => <I18nProvider><LatinizationProvider><LanguageIslandApp /></LatinizationProvider></I18nProvider>;
+export const LanguageIslandWrapper = () => <BrowserRouter><I18nProvider><LatinizationProvider><LanguageIslandApp /></LatinizationProvider></I18nProvider></BrowserRouter>;
 
 // --- Day Selector Island ---
 export const DaySelectorIslandApp = ({ language, onConfirm }) => {
