@@ -49,7 +49,7 @@ function App() {
             <Route path="/" element={<Layout />}>
                 <Route index element={<Navigate to="/freestyle" replace />} />
                 <Route path="freestyle" element={<FreestyleModePage />} />
-                <Route path="study" element={<Navigate to="/study/en" replace />} />
+                <Route path="study" element={<Navigate to="/study-islands.html" replace />} />
                 <Route path="study/:lang" element={<StudyModePage />} />
                 <Route
                   path="my-sets"
