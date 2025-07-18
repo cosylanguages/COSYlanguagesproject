@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { useNavigate } from 'react-router-dom';
+import { BrowserRouter, useNavigate } from 'react-router-dom';
 
 // Contexts & Providers
 import { I18nProvider, useI18n } from '../i18n/I18nContext';
@@ -31,6 +31,11 @@ let globalSelectedLanguage = null;
 let exerciseInstanceKey = 0; // For unique key for ExerciseHost
 
 // --- Language Island ---
+
+/**
+ * The Language Island component.
+ * This component allows the user to select a language.
+ */
 export const LanguageIslandApp = () => {
   const { language: i18nLanguage, changeLanguage, t } = useI18n();
   const [selectedLanguage, setSelectedLanguage] = useState(i18nLanguage);
@@ -105,9 +110,14 @@ export const LanguageIslandApp = () => {
     </>
   );
 };
-export const LanguageIslandWrapper = () => <I18nProvider><LatinizationProvider><LanguageIslandApp /></LatinizationProvider></I18nProvider>;
+export const LanguageIslandWrapper = () => <BrowserRouter><I18nProvider><LatinizationProvider><LanguageIslandApp /></LatinizationProvider></I18nProvider></BrowserRouter>;
 
 // --- Day Selector Island ---
+
+/**
+ * The Day Selector Island component.
+ * This component allows the user to select a day.
+ */
 export const DaySelectorIslandApp = ({ language, onConfirm }) => {
   const [currentDays, setCurrentDays] = useState([]);
 
@@ -119,6 +129,11 @@ export const DaySelectorIslandWrapper = ({ language, onConfirm }) => <I18nProvid
 
 
 // --- Practice Navigation Island ---
+
+/**
+ * The Practice Navigation Island component.
+ * This component allows the user to navigate through the practice categories and sub-practices.
+ */
 export const PracticeNavIslandApp = ({ language, days }) => {
   const { t } = useI18n();
   const [navPath, setNavPath] = useState(['main_practice_categories_stage']);
@@ -193,6 +208,11 @@ export const PracticeNavIslandApp = ({ language, days }) => {
 export const PracticeNavIslandWrapper = ({ language, days }) => <I18nProvider><LatinizationProvider><PracticeNavIslandApp language={language} days={days} /></LatinizationProvider></I18nProvider>;
 
 // --- Exercise Host Island ---
+
+/**
+ * The Exercise Host Island component.
+ * This component hosts the exercises.
+ */
 export const ExerciseHostIslandApp = ({ language, days, subPracticeType, exerciseKey }) => {
   // ExerciseHost uses useI18n internally.
   return (
@@ -208,10 +228,19 @@ export const ExerciseHostIslandWrapper = ({ language, days, subPracticeType, exe
 
 
 // --- Help Popup Island Wrapper (if needed, or mount directly) ---
+
+/**
+ * The Help Popup Island component.
+ * This component displays a help popup.
+ */
 // For consistency and providing contexts if they were needed (though HelpPopupIsland is simple)
 export const HelpPopupIslandWrapper = () => <I18nProvider><LatinizationProvider><HelpPopupIsland /></LatinizationProvider></I18nProvider>;
 
 // --- Main Mounting & Event Handling Logic ---
+
+/**
+ * Mounts the freestyle islands.
+ */
 function mountFreestyleIslands() {
   if (typeof window !== 'undefined' && typeof document !== 'undefined' && (typeof process === 'undefined' || process.env.NODE_ENV !== 'test')) {
     const languageContainer = document.getElementById('language-selector-island-container');
