@@ -17,7 +17,7 @@ if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
-      <BrowserRouter>
+      <BrowserRouter basename="/COSYlanguagesproject">
         <I18nProvider>
           <LatinizationProvider>
             <AuthProvider>
