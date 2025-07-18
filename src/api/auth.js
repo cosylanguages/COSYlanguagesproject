@@ -1,6 +1,6 @@
 // Defines API functions related to authentication (STATIC VERSION).
 
-const STATIC_TEACHER_PIN = "0000"; // A simple PIN for static mode
+const STATIC_TEACHER_PIN = "1234"; // A simple PIN for static mode
 
 /**
  * Logs in a teacher user with a PIN by checking against a static PIN.
