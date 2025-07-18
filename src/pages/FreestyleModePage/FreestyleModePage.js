@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import { I18nProvider } from '../../i18n/I18nContext';
 import { LatinizationProvider } from '../../contexts/LatinizationContext';
 import { LanguageIslandWrapper, DaySelectorIslandWrapper, PracticeNavIslandWrapper, ExerciseHostIslandWrapper, HelpPopupIslandWrapper } from '../../islands/freestyleIslandsEntry';
@@ -23,11 +24,13 @@ const FreestyleModePage = () => {
                 if (languageContainer) {
                     ReactDOM.createRoot(languageContainer).render(
                         <React.StrictMode>
-                            <I18nProvider>
-                                <LatinizationProvider>
-                                    <LanguageIslandWrapper />
-                                </LatinizationProvider>
-                            </I18nProvider>
+                            <BrowserRouter>
+                                <I18nProvider>
+                                    <LatinizationProvider>
+                                        <LanguageIslandWrapper />
+                                    </LatinizationProvider>
+                                </I18nProvider>
+                            </BrowserRouter>
                         </React.StrictMode>
                     );
                 }
@@ -35,11 +38,13 @@ const FreestyleModePage = () => {
                 if (helpPopupContainer) {
                     ReactDOM.createRoot(helpPopupContainer).render(
                         <React.StrictMode>
-                            <I18nProvider>
-                                <LatinizationProvider>
-                                    <HelpPopupIslandWrapper />
-                                </LatinizationProvider>
-                            </I18nProvider>
+                            <BrowserRouter>
+                                <I18nProvider>
+                                    <LatinizationProvider>
+                                        <HelpPopupIslandWrapper />
+                                    </LatinizationProvider>
+                                </I18nProvider>
+                            </BrowserRouter>
                         </React.StrictMode>
                     );
                 }
@@ -55,11 +60,13 @@ const FreestyleModePage = () => {
                         if (!practiceNavContainer._reactRoot) practiceNavContainer._reactRoot = ReactDOM.createRoot(practiceNavContainer);
                         practiceNavContainer._reactRoot.render(
                             <React.StrictMode>
-                                <I18nProvider>
-                                    <LatinizationProvider>
-                                        <PracticeNavIslandWrapper language={selectedLanguage} days={confirmedDays} />
-                                    </LatinizationProvider>
-                                </I18nProvider>
+                                <BrowserRouter>
+                                    <I18nProvider>
+                                        <LatinizationProvider>
+                                            <PracticeNavIslandWrapper language={selectedLanguage} days={confirmedDays} />
+                                        </LatinizationProvider>
+                                    </I18nProvider>
+                                </BrowserRouter>
                             </React.StrictMode>
                         );
                     } else {
@@ -79,11 +86,13 @@ const FreestyleModePage = () => {
                         if (!daySelectorContainer._reactRoot) daySelectorContainer._reactRoot = ReactDOM.createRoot(daySelectorContainer);
                         daySelectorContainer._reactRoot.render(
                             <React.StrictMode>
-                                <I18nProvider>
-                                    <LatinizationProvider>
-                                        <DaySelectorIslandWrapper language={selectedLanguage} onConfirm={(confirmedDays) => handleDayConfirm(confirmedDays, selectedLanguage)} />
-                                    </LatinizationProvider>
-                                </I18nProvider>
+                                <BrowserRouter>
+                                    <I18nProvider>
+                                        <LatinizationProvider>
+                                            <DaySelectorIslandWrapper language={selectedLanguage} onConfirm={(confirmedDays) => handleDayConfirm(confirmedDays, selectedLanguage)} />
+                                        </LatinizationProvider>
+                                    </I18nProvider>
+                                </BrowserRouter>
                             </React.StrictMode>
                         );
                     } else {
@@ -103,16 +112,18 @@ const FreestyleModePage = () => {
                         if (!exerciseHostContainer._reactRoot) exerciseHostContainer._reactRoot = ReactDOM.createRoot(exerciseHostContainer);
                         exerciseHostContainer._reactRoot.render(
                             <React.StrictMode>
-                                <I18nProvider>
-                                    <LatinizationProvider>
-                                        <ExerciseHostIslandWrapper
-                                            language={language}
-                                            days={days}
-                                            subPracticeType={exercise}
-                                            exerciseKey={exerciseKeyFromEvent}
-                                        />
-                                    </LatinizationProvider>
-                                </I18nProvider>
+                                <BrowserRouter>
+                                    <I18nProvider>
+                                        <LatinizationProvider>
+                                            <ExerciseHostIslandWrapper
+                                                language={language}
+                                                days={days}
+                                                subPracticeType={exercise}
+                                                exerciseKey={exerciseKeyFromEvent}
+                                            />
+                                        </LatinizationProvider>
+                                    </I18nProvider>
+                                </BrowserRouter>
                             </React.StrictMode>
                         );
                     }
