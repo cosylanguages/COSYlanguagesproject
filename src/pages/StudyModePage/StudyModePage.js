@@ -21,9 +21,12 @@ import './StudyModePage.css';
 export const getBlockElementId = (blockId, index) => `lesson-block-content-${blockId || `gen-${index}`}`;
 
 const StudyModePage = () => {
-  const { t, language, currentLangKey } = useI18n();
-  const { authToken } = useAuth();
+  // --- Hooks ---
+  const { t, language, currentLangKey } = useI18n(); // For translations and current language
+  const { authToken } = useAuth(); // For authentication token
 
+  // --- State ---
+  // Role of the user, either 'student' or 'teacher'
   const [selectedRole, setSelectedRole] = useState(() => localStorage.getItem('selectedRole') || null);
 
   // Data State
@@ -34,7 +37,8 @@ const StudyModePage = () => {
   // For teachers: selectedDayId = API day ID (string)
   const [selectedDayId, setSelectedDayId] = useState(null);
 
-  const [currentSyllabus, setCurrentSyllabus] = useState(null); // For students: loaded syllabus JSON
+  // For students: loaded syllabus JSON
+  const [currentSyllabus, setCurrentSyllabus] = useState(null);
 
   // For students: lessonSectionsForPanel = syllabusData.sections
   // For teachers: lessonSectionsForPanel = API lesson sections results
@@ -44,15 +48,19 @@ const StudyModePage = () => {
   // For teachers: selectedSectionId = API section ID (string)
   const [selectedSectionId, setSelectedSectionId] = useState(null);
 
+  // The exercise blocks for the selected section
   const [currentExerciseBlocks, setCurrentExerciseBlocks] = useState([]);
 
   // UI State
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false); // Whether the page is loading data
+  const [error, setError] = useState(null); // Any error that occurred while fetching data
 
   // --- Effects for Data Fetching ---
 
-  // Effect to fetch days list based on role and current language
+  /**
+   * Fetches the available syllabus days for the student role.
+   * This function is memoized to prevent unnecessary re-renders.
+   */
   const memoizedGetAvailableSyllabusDays = useCallback(() => {
     if (selectedRole === 'student' && language) {
       setIsLoading(true);
@@ -68,6 +76,10 @@ const StudyModePage = () => {
     }
   }, [language, selectedRole, t]);
 
+  /**
+   * Fetches the days list based on the selected role.
+   * This effect runs when the selected role, auth token, or translations change.
+   */
   useEffect(() => {
     // Reset states when role or language changes significantly
     setDays([]);
@@ -95,7 +107,10 @@ const StudyModePage = () => {
   }, [selectedRole, authToken, t]);
 
 
-  // Effect to load lesson sections / full syllabus content when a day is selected
+  /**
+   * Loads the lesson sections or the full syllabus content when a day is selected.
+   * This effect runs when the selected role, selected day, days list, auth token, or translations change.
+   */
   useEffect(() => {
     // Clear previous day's data if selectedDayId is cleared or role changes to one not needing this.
     if (!selectedDayId) {
@@ -158,7 +173,10 @@ const StudyModePage = () => {
     }
   }, [selectedRole, selectedDayId, days, authToken, t]); // `days` is needed to find fileName for student
 
-  // Effect to set exercise blocks when a section is selected
+  /**
+   * Sets the exercise blocks when a section is selected.
+   * This effect runs when the selected role, current syllabus, selected section, auth token, or translations change.
+   */
   useEffect(() => {
     // Clear blocks if no section is selected or if relevant data is missing
     if (!selectedSectionId) {
@@ -192,6 +210,11 @@ const StudyModePage = () => {
 
 
   // --- UI Handlers and Local Storage ---
+
+  /**
+   * Saves the selected role to local storage.
+   * This effect runs when the selected role changes.
+   */
   useEffect(() => {
     if (selectedRole) {
       localStorage.setItem('selectedRole', selectedRole);
@@ -200,6 +223,10 @@ const StudyModePage = () => {
     }
   }, [selectedRole]);
 
+  /**
+   * Handles the selection of a role.
+   * This function is memoized to prevent unnecessary re-renders.
+   */
   const handleRoleSelect = useCallback((role) => {
     setSelectedRole(prevRole => {
       const newRole = prevRole === role ? null : role;
@@ -216,6 +243,10 @@ const StudyModePage = () => {
     });
   }, []);
 
+  /**
+   * Handles the selection of a day.
+   * @param {string} dayIdValue - The ID of the selected day.
+   */
   const handleDaySelectSmP = (dayIdValue) => { // dayIdValue is dayNumber (string) for students, API ID for teachers
     setSelectedDayId(dayIdValue);
     // Reset downstream states as new day selection invalidates current section/blocks
@@ -232,6 +263,10 @@ const StudyModePage = () => {
     window.dispatchEvent(new CustomEvent('dayChange', { detail: { selectedDayId: dayIdValue } }));
   };
 
+  /**
+   * Handles the selection of a section.
+   * @param {string} sectionIdentifier - The identifier of the selected section.
+   */
   const handleSectionSelectSmP = (sectionIdentifier) => { // sectionIdentifier is title for student, ID for teacher
     setSelectedSectionId(sectionIdentifier);
     const mainContentPanel = document.getElementById('main-content-panel');
@@ -240,6 +275,10 @@ const StudyModePage = () => {
     }
   };
 
+  /**
+   * Renders the day selector based on the selected role.
+   * @returns {JSX.Element|null} The day selector component or null.
+   */
   const renderStudentDaySelector = () => {
     // Common label for day selection
     const daySelectLabel = <TransliterableText text={t('studyModePage.selectDayLabel', 'Select Day:')} />;
