@@ -104,7 +104,7 @@ const StudyModePage = () => {
         })
         .finally(() => setIsLoading(false));
     }
-  }, [selectedRole, authToken, t]);
+  }, [selectedRole, authToken, t, memoizedGetAvailableSyllabusDays]);
 
 
   /**
