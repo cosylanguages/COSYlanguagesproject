@@ -6,6 +6,7 @@ module.exports = {
     configure: (webpackConfig, { env, paths }) => {
       webpackConfig.entry = {
         main: paths.appIndexJs,
+        sw: './src/sw.js', // Added service worker entry point
       };
 
       // Filter out CRA's default HtmlWebpackPlugin instance(s)
@@ -20,6 +21,7 @@ module.exports = {
           template: paths.appHtml, // public/index.html
           filename: 'index.html',
           chunks: ['main'], // Only include the main bundle related chunks
+          excludeChunks: ['sw'], // Exclude the service worker
           publicPath: env === 'production' ? '/COSYlanguagesproject/' : '/',
         })
       );

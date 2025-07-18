@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
 import { PlanProvider } from './contexts/PlanContext';
 import { AuthProvider } from './contexts/AuthContext';
@@ -17,7 +17,7 @@ if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
-      <HashRouter>
+      <BrowserRouter>
         <I18nProvider>
           <LatinizationProvider>
             <AuthProvider>
@@ -29,9 +29,19 @@ if (rootElement) {
             </AuthProvider>
           </LatinizationProvider>
         </I18nProvider>
-      </HashRouter>
+      </BrowserRouter>
     </React.StrictMode>
   );
 } else {
   console.error("Failed to find the root element. Please ensure your HTML file has a <div id='root'></div>.");
+}
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').then(registration => {
+      console.log('SW registered: ', registration);
+    }).catch(registrationError => {
+      console.log('SW registration failed: ', registrationError);
+    });
+  });
 }
