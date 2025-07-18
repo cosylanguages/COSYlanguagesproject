@@ -13,22 +13,22 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!pin.trim()) {
-            alert('PIN cannot be empty.');
-            return;
-        }
-        const success = await login(pin);
-        if (success) {
-            navigate('/');
+        if (pin.trim() === '1234') {
+            const success = await login(pin);
+            if (success) {
+                navigate('/study-islands.html');
+            }
+        } else {
+            navigate('/freestyle');
         }
     };
 
     return (
         <div className="login-container">
             <form onSubmit={handleSubmit} className="login-form">
-                <h2><TransliterableText text="Teacher Login" /></h2>
+                <h2><TransliterableText text="Login" /></h2>
                 <div className="form-group">
-                    <Label htmlFor="pin"><TransliterableText text="PIN:" /></Label>
+                    <Label htmlFor="pin"><TransliterableText text="PIN (optional):" /></Label>
                     <input
                         type="password"
                         id="pin"
