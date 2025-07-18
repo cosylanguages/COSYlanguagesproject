@@ -125,7 +125,7 @@ export const DaySelectorIslandApp = ({ language, onConfirm }) => {
 
   return <DaySelectorFreestyle currentDays={currentDays} onDaysChange={handleDaysChangeInIsland} language={language} onConfirm={onConfirm} />;
 };
-export const DaySelectorIslandWrapper = ({ language, onConfirm }) => <I18nProvider><LatinizationProvider><DaySelectorIslandApp language={language} onConfirm={onConfirm} /></LatinizationProvider></I18nProvider>;
+export const DaySelectorIslandWrapper = ({ language, onConfirm }) => <BrowserRouter><I18nProvider><LatinizationProvider><DaySelectorIslandApp language={language} onConfirm={onConfirm} /></LatinizationProvider></I18nProvider></BrowserRouter>;
 
 
 // --- Practice Navigation Island ---
@@ -205,7 +205,7 @@ export const PracticeNavIslandApp = ({ language, days }) => {
     </div>
   );
 };
-export const PracticeNavIslandWrapper = ({ language, days }) => <I18nProvider><LatinizationProvider><PracticeNavIslandApp language={language} days={days} /></LatinizationProvider></I18nProvider>;
+export const PracticeNavIslandWrapper = ({ language, days }) => <BrowserRouter><I18nProvider><LatinizationProvider><PracticeNavIslandApp language={language} days={days} /></LatinizationProvider></I18nProvider></BrowserRouter>;
 
 // --- Exercise Host Island ---
 
@@ -224,7 +224,7 @@ export const ExerciseHostIslandApp = ({ language, days, subPracticeType, exercis
     />
   );
 };
-export const ExerciseHostIslandWrapper = ({ language, days, subPracticeType, exerciseKey }) => <I18nProvider><LatinizationProvider><ExerciseHostIslandApp language={language} days={days} subPracticeType={subPracticeType} exerciseKey={exerciseKey} /></LatinizationProvider></I18nProvider>;
+export const ExerciseHostIslandWrapper = ({ language, days, subPracticeType, exerciseKey }) => <BrowserRouter><I18nProvider><LatinizationProvider><ExerciseHostIslandApp language={language} days={days} subPracticeType={subPracticeType} exerciseKey={exerciseKey} /></LatinizationProvider></I18nProvider></BrowserRouter>;
 
 
 // --- Help Popup Island Wrapper (if needed, or mount directly) ---
@@ -234,7 +234,7 @@ export const ExerciseHostIslandWrapper = ({ language, days, subPracticeType, exe
  * This component displays a help popup.
  */
 // For consistency and providing contexts if they were needed (though HelpPopupIsland is simple)
-export const HelpPopupIslandWrapper = () => <I18nProvider><LatinizationProvider><HelpPopupIsland /></LatinizationProvider></I18nProvider>;
+export const HelpPopupIslandWrapper = () => <BrowserRouter><I18nProvider><LatinizationProvider><HelpPopupIsland /></LatinizationProvider></I18nProvider></BrowserRouter>;
 
 // --- Main Mounting & Event Handling Logic ---
 
