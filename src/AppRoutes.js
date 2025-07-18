@@ -96,7 +96,7 @@ function AppRoutes() {
             <Route path="/" element={<Layout />}>
                 <Route index element={<Navigate to="/freestyle" replace />} />
                 <Route path="freestyle" element={<FreestyleModePage />} />
-                <Route path="study" element={<Navigate to="/study/en" replace />} />
+                <Route path="study" element={<StudyModeProtectedRoute><StudyModePage /></StudyModeProtectedRoute>} />
                 <Route
                   path="study/:lang"
                   element={
