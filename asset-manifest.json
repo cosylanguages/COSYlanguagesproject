@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/COSYlanguagesproject/static/css/main.dd1627bc.css",
-    "main.js": "/COSYlanguagesproject/static/js/main.b999e003.js",
+    "main.js": "/COSYlanguagesproject/static/js/main.c3c1d68a.js",
     "sw.js": "/COSYlanguagesproject/static/js/sw.415d2ca5.js",
     "study.css": "/COSYlanguagesproject/static/css/study.de68996b.css",
     "study.js": "/COSYlanguagesproject/static/js/study.dc938e92.js",
-    "studyIslands.js": "/COSYlanguagesproject/static/js/studyIslands.168f7cec.js",
+    "studyIslands.js": "/COSYlanguagesproject/static/js/studyIslands.f577aa0a.js",
     "freestyle.css": "/COSYlanguagesproject/static/css/freestyle.2b6b0e9a.css",
     "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.2b1f9a41.js",
     "study-ba.js": "/COSYlanguagesproject/static/js/study-ba.31d6cfe0.js",
@@ -43,11 +43,11 @@
     "freestyle.html": "/COSYlanguagesproject/freestyle.html",
     "study-islands.html": "/COSYlanguagesproject/study-islands.html",
     "main.dd1627bc.css.map": "/COSYlanguagesproject/static/css/main.dd1627bc.css.map",
-    "main.b999e003.js.map": "/COSYlanguagesproject/static/js/main.b999e003.js.map",
+    "main.c3c1d68a.js.map": "/COSYlanguagesproject/static/js/main.c3c1d68a.js.map",
     "sw.415d2ca5.js.map": "/COSYlanguagesproject/static/js/sw.415d2ca5.js.map",
     "study.de68996b.css.map": "/COSYlanguagesproject/static/css/study.de68996b.css.map",
     "study.dc938e92.js.map": "/COSYlanguagesproject/static/js/study.dc938e92.js.map",
-    "studyIslands.168f7cec.js.map": "/COSYlanguagesproject/static/js/studyIslands.168f7cec.js.map",
+    "studyIslands.f577aa0a.js.map": "/COSYlanguagesproject/static/js/studyIslands.f577aa0a.js.map",
     "freestyle.2b6b0e9a.css.map": "/COSYlanguagesproject/static/css/freestyle.2b6b0e9a.css.map",
     "freestyle.2b1f9a41.js.map": "/COSYlanguagesproject/static/js/freestyle.2b1f9a41.js.map",
     "815.d3b409b4.chunk.js.map": "/COSYlanguagesproject/static/js/815.d3b409b4.chunk.js.map",
@@ -56,6 +56,6 @@
   },
   "entrypoints": [
     "static/css/main.dd1627bc.css",
-    "static/js/main.b999e003.js"
+    "static/js/main.c3c1d68a.js"
   ]
 }
