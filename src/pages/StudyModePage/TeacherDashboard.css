@@ -205,6 +205,17 @@
     box-shadow: var(--shadow-md, 0 2px 4px rgba(0,0,0,0.1));
 }
 
+.dashboard-tabs {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.dashboard-tabs .btn {
+    margin-right: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
 /* Adjust .teacher-dashboard-container if it's still the outer wrapper and not teacher-dashboard-main-content */
 /* If teacher-dashboard-container-grid is the new top-level, then .teacher-dashboard-container might be redundant or need repurposing */
 

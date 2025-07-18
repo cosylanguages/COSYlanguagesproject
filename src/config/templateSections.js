@@ -49,6 +49,7 @@ export const availableTemplateSectionTypes = {
         "Article": "reading/article", // No direct config UI
         "Essay": "writing/essay",     // No direct config UI
         "Text": "reading/text",       // No direct config UI
+        "Writing practice": "writing/prose",
         "Other things/activities which are related to this": "textwork/other-text-work"
     },
     "Other": {
@@ -106,7 +107,7 @@ export const getEmojiForTemplateType = (typePath) => {
     if (pathLower.includes('truefalse') || pathLower.includes('select') || pathLower.includes('mcq')) return '✅';
     if (pathLower.includes('order') || pathLower.includes('sort') || pathLower.includes('unscramble')) return '🔀';
     if (pathLower.includes('match') || pathLower.includes('matchpairs')) return '🔗';
-    if (pathLower.includes('text') || pathLower.includes('article') || pathLower.includes('essay')) return '📑';
+    if (pathLower.includes('text') || pathLower.includes('article') || pathLower.includes('essay') || pathLower.includes('prose')) return '📑';
     if (pathLower.includes('wordlist') || pathLower === 'vocabulary/words') return '📋';
     if (pathLower.includes('note') || pathLower === 'utility/note') return '🗒️';
     if (pathLower.includes('link') || pathLower === 'utility/link') return '🔗';
