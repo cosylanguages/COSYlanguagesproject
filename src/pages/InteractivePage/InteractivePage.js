@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AIConversation from '../../components/Interactive/AIConversation';
 import InteractiveStory from '../../components/Interactive/InteractiveStory';
+import SpeechRecognition from '../../components/Speech/SpeechRecognition';
 import './InteractivePage.css';
 
 const InteractivePage = () => {
+  const [spokenText, setSpokenText] = useState('');
+
+  const handleSpeech = (text) => {
+    setSpokenText(text);
+  };
+
   const stories = [
     {
       title: 'A Trip to Paris',
@@ -52,6 +59,8 @@ const InteractivePage = () => {
   return (
     <div className="interactive-page">
       <h1>Interactive Exercises</h1>
+      <SpeechRecognition onSpeech={handleSpeech} />
+      <p>You said: {spokenText}</p>
       <AIConversation />
       {stories.map((story, index) => (
         <InteractiveStory key={index} story={story} />
