@@ -1711,6 +1711,12 @@ const translations = {
     languageNameInEnglish: "Armenian",
     languageNameNative: "Հայերեն",
     greeting: "Hello (Armenian Placeholder)", // Placeholder
+  },
+  COSYgeorgian: { // Standardized: COSY + georgian (was COSYქართული)
+    cosyName: "COSYქართული",
+    languageNameInEnglish: "Georgian",
+    languageNameNative: "ქართული",
+    greeting: "Hello (Georgian Placeholder)", // Placeholder
     navHome: "Home",
     navFreestyle: "Freestyle",
     navStudyMode: "Study",
