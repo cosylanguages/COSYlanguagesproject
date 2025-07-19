@@ -24,7 +24,6 @@ const PracticeCategoryNav = ({
     reading: { translationKey: 'reading', defaultLabel: '📚 Reading', icon: '📚' },
     speaking: { translationKey: 'speaking', defaultLabel: '🗣️ Speaking', icon: '🗣️' },
     writing: { translationKey: 'writing', defaultLabel: '✍️ Writing', icon: '✍️' },
-    number_practice: { translationKey: 'number_practice', defaultLabel: '🔢 Number Practice', icon: '🔢' },
     // sentence_skills, listening, and practice_all_main_cat removed
     // Add other categories as needed
   };
