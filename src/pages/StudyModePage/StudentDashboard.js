@@ -3,6 +3,7 @@ import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../../components/Common/TransliterableText';
 import MistakeNotebook from '../../components/StudyMode/MistakeNotebook';
 import GrammarReview from '../../components/StudyMode/GrammarReview';
+import VirtualTutor from '../../components/StudyMode/VirtualTutor';
 
 // Import the centralized displayComponentMap
 import { displayComponentMap } from '../../components/StudyMode/common/displayComponentMap';
@@ -17,6 +18,7 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
   const { t } = useI18n();
   const [isMistakeNotebookVisible, setIsMistakeNotebookVisible] = useState(false);
   const [isGrammarReviewVisible, setIsGrammarReviewVisible] = useState(false);
+  const [isVirtualTutorVisible, setIsVirtualTutorVisible] = useState(false);
   
   const handleNavigateBlock = (direction, currentIndex) => {
     let targetIndex;
@@ -52,10 +54,12 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
         <h2><TransliterableText text={t('studyMode.lessonTitlePlaceholder', 'Current Lesson')} /></h2>
         <button onClick={() => setIsMistakeNotebookVisible(true)}>Mistake Notebook</button>
         <button onClick={() => setIsGrammarReviewVisible(true)}>Grammar Review</button>
+        <button onClick={() => setIsVirtualTutorVisible(true)}>Virtual Tutor</button>
       </div>
       
       {isMistakeNotebookVisible && <MistakeNotebook />}
       {isGrammarReviewVisible && <GrammarReview />}
+      {isVirtualTutorVisible && <VirtualTutor />}
 
       <div className="lesson-content-student-view">
         {lessonBlocks.map((block, index) => {

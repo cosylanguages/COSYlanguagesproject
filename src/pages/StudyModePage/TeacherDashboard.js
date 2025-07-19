@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'; // Added useCallback
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../../components/Common/TransliterableText';
+import VirtualTutorTeacherView from '../../components/StudyMode/VirtualTutorTeacherView';
 import TemplateTypeSelectionModal from '../../components/StudyMode/TemplateTypeSelectionModal';
 import { getDisplayNameForTemplatePath } from '../../config/templateSections';
 import TextBlockConfig from '../../components/StudyMode/TemplateConfig/ConfigureTextBlock';
@@ -38,6 +39,7 @@ const TeacherDashboard = () => {
   const [selectedDayId, setSelectedDayId] = useState(null);
   const [selectedSectionId, setSelectedSectionId] = useState(null);
   const [currentSectionDetails, setCurrentSectionDetails] = useState(null); // State for full section data
+  const [isVirtualTutorVisible, setIsVirtualTutorVisible] = useState(false);
 
   const displayFeedback = useCallback((messageKey, defaultText, isError = false) => {
     setFeedbackMessage({text: t(messageKey, defaultText), type: isError ? 'error' : 'success'});
@@ -287,6 +289,9 @@ const TeacherDashboard = () => {
             <button onClick={() => setActiveTab('templates')} className={`btn ${activeTab === 'templates' ? 'btn-primary' : 'btn-secondary'}`}>
               <TransliterableText text={t('teacherDashboard.tabs.templates', 'Templates')} />
             </button>
+            <button onClick={() => setIsVirtualTutorVisible(true)} className="btn btn-secondary">
+                <TransliterableText text={'Virtual Tutor'} />
+            </button>
           </div>
         </div>
         
@@ -368,6 +373,7 @@ const TeacherDashboard = () => {
             onClose={() => setIsTemplateEditorOpen(false)}
           />
         )}
+        {isVirtualTutorVisible && <VirtualTutorTeacherView />}
       </div>
     </div>
   );
