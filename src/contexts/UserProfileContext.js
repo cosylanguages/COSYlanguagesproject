@@ -18,11 +18,6 @@ export const UserProfileProvider = ({ children }) => {
   const [achievements, setAchievements] = useState([]);
   const [lastActiveDate, setLastActiveDate] = useState(null);
 
-  const ALL_ACHIEVEMENTS = {
-    firstLogin: { name: "Welcome!", description: "You logged in for the first time." },
-    firstStreak: { name: "On Fire!", description: "You started your first daily streak." },
-  };
-
   useEffect(() => {
     const loadedProfile = JSON.parse(localStorage.getItem(USER_PROFILE_STORAGE_KEY));
     if (loadedProfile) {
@@ -47,6 +42,20 @@ export const UserProfileProvider = ({ children }) => {
     setXp(prevXp => Math.max(0, prevXp - amount));
   }, []);
 
+  const checkAndAwardAchievement = useCallback((achievementKey) => {
+    const ALL_ACHIEVEMENTS = {
+        firstLogin: { name: "Welcome!", description: "You logged in for the first time." },
+        firstStreak: { name: "On Fire!", description: "You started your first daily streak." },
+    };
+
+    if (!achievements.find(a => a.key === achievementKey)) {
+      const achievement = ALL_ACHIEVEMENTS[achievementKey];
+      if (achievement) {
+        setAchievements(prev => [...prev, { key: achievementKey, ...achievement, date: new Date() }]);
+      }
+    }
+  }, [achievements]);
+
   const updateStreak = useCallback(() => {
     const today = new Date().toDateString();
     if (lastActiveDate !== today) {
@@ -60,16 +69,7 @@ export const UserProfileProvider = ({ children }) => {
       setLastActiveDate(today);
       checkAndAwardAchievement('firstStreak');
     }
-  }, [lastActiveDate]);
-
-  const checkAndAwardAchievement = useCallback((achievementKey) => {
-    if (!achievements.find(a => a.key === achievementKey)) {
-      const achievement = ALL_ACHIEVEMENTS[achievementKey];
-      if (achievement) {
-        setAchievements(prev => [...prev, { key: achievementKey, ...achievement, date: new Date() }]);
-      }
-    }
-  }, [achievements, ALL_ACHIEVEMENTS]);
+  }, [lastActiveDate, checkAndAwardAchievement]);
 
   const value = {
     xp,
