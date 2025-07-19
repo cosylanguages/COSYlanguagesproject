@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../../../i18n/I18nContext';
+import { adjustDifficulty } from '../../../../utils/adaptiveLearning';
 import './FillInTheBlanksExercise.css'; // To be created
 
 const FillInTheBlanksExercise = ({ exerciseData, onCorrect, onIncorrect, onAttempt }) => {
@@ -7,6 +8,7 @@ const FillInTheBlanksExercise = ({ exerciseData, onCorrect, onIncorrect, onAttem
   const [userAnswers, setUserAnswers] = useState([]);
   const [isCorrect, setIsCorrect] = useState(null); // null, true, false
   const [showAnswers, setShowAnswers] = useState(false);
+  const [difficulty, setDifficulty] = useState(1);
 
   useEffect(() => {
     if (exerciseData && exerciseData.answers) {
@@ -34,10 +36,12 @@ const FillInTheBlanksExercise = ({ exerciseData, onCorrect, onIncorrect, onAttem
     );
 
     setIsCorrect(correct);
-    if (correct && onCorrect) {
-      onCorrect();
-    } else if (!correct && onIncorrect) {
-      onIncorrect();
+    if (correct) {
+      setDifficulty(adjustDifficulty(difficulty, 1));
+      if (onCorrect) onCorrect();
+    } else {
+      setDifficulty(adjustDifficulty(difficulty, 0));
+      if (onIncorrect) onIncorrect();
     }
   };
 
