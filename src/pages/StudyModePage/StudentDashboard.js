@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../../components/Common/TransliterableText';
+import SmartReview from '../../components/StudyMode/SmartReview';
 
 // Import the centralized displayComponentMap
 import { displayComponentMap } from '../../components/StudyMode/common/displayComponentMap';
@@ -13,6 +14,7 @@ import './StudentDashboard.css';
 
 const StudentDashboard = ({ lessonBlocks = [] }) => {
   const { t } = useI18n();
+  const [isSmartReviewVisible, setIsSmartReviewVisible] = useState(false);
   
   const handleNavigateBlock = (direction, currentIndex) => {
     let targetIndex;
@@ -46,8 +48,11 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
       <div className="lesson-header">
         {/* TODO: Display actual lesson name from syllabus if available */}
         <h2><TransliterableText text={t('studyMode.lessonTitlePlaceholder', 'Current Lesson')} /></h2>
+        <button onClick={() => setIsSmartReviewVisible(true)}>Smart Review</button>
       </div>
       
+      {isSmartReviewVisible && <SmartReview userId="123" />}
+
       <div className="lesson-content-student-view">
         {lessonBlocks.map((block, index) => {
           // Syllabus uses 'block_type', displayComponentMap might use 'typePath' or will be updated.

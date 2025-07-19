@@ -52,50 +52,49 @@
     },
     {
         "id": 2,
-        "title": "Ordering Street Food in Tokyo",
-        "description": "Learn how to order takoyaki and other street food in Tokyo.",
+        "title": "At the Berlin Christmas Market",
+        "description": "Learn how to order Glühwein and other treats at a German Christmas market.",
         "content": {
             "vocabulary": [
-                { "term": "たこ焼き", "definition": "takoyaki" },
-                { "term": "お好み焼き", "definition": "okonomiyaki" },
-                { "term": "いくらですか", "definition": "how much is it?" }
+                { "term": "der Glühwein", "definition": "mulled wine" },
+                { "term": "die Bratwurst", "definition": "grilled sausage" },
+                { "term": "Was kostet das?", "definition": "How much does that cost?" }
             ],
             "phrases": [
-                "これをください。",
-                "おすすめですはなんですか"
+                "Ich hätte gern einen Glühwein, bitte.",
+                "Eine Bratwurst, bitte."
             ],
             "scenario": {
-                "title": "At the Food Stall",
+                "title": "Ordering at the Christmas Market",
                 "scenes": [
                     {
                         "character": "Vendor",
-                        "line": "いらっしゃいませ！",
+                        "line": "Guten Tag! Was darf's sein?",
                         "choices": [
-                            { "text": "たこ焼きをください。", "nextScene": 1 },
-                            { "text": "お好み焼きをください。", "nextScene": 2 }
+                            { "text": "Einen Glühwein, bitte.", "nextScene": 1 },
+                            { "text": "Eine Bratwurst, bitte.", "nextScene": 2 }
                         ]
                     },
                     {
                         "character": "Vendor",
-                        "line": "はい、たこ焼きですね。ソースはどうしますか？",
+                        "line": "Gerne. Mit Schuss?",
                         "choices": [
-                            { "text": "普通のでお願いします。", "nextScene": 3 },
-                            { "text": "辛口でお願いします。", "nextScene": 3 }
+                            { "text": "Ja, bitte.", "nextScene": 3 },
+                            { "text": "Nein, danke.", "nextScene": 3 }
                         ]
                     },
                     {
                         "character": "Vendor",
-                        "line": "はい、お好み焼きですね。マヨネーズはかけますか？",
+                        "line": "Hier, bitte schön. Sonst noch etwas?",
                         "choices": [
-                            { "text": "はい、お願いします。", "nextScene": 3 },
-                            { "text": "いいえ、結構です。", "nextScene": 3 }
+                            { "text": "Nein, danke. Das war's.", "nextScene": 3 }
                         ]
                     },
                     {
                         "character": "Vendor",
-                        "line": "はい、どうぞ。500円です。",
+                        "line": "Das macht dann 5 Euro, bitte.",
                         "choices": [
-                            { "text": "ありがとうございます！", "nextScene": 4 }
+                            { "text": "Danke, auf Wiedersehen!", "nextScene": 4 }
                         ]
                     }
                 ]
