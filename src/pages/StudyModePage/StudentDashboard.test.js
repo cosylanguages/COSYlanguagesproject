@@ -10,6 +10,13 @@ jest.mock('../../components/StudyMode/MistakeNotebook', () => {
     };
 });
 
+// Mock the GrammarReview component
+jest.mock('../../components/StudyMode/GrammarReview', () => {
+    return function DummyGrammarReview() {
+        return <div data-testid="grammar-review"></div>;
+    };
+});
+
 describe('StudentDashboard', () => {
     it('renders the Mistake Notebook button', () => {
         render(<StudentDashboard />);
@@ -21,5 +28,17 @@ describe('StudentDashboard', () => {
         const button = screen.getByText('Mistake Notebook');
         fireEvent.click(button);
         expect(screen.getByTestId('mistake-notebook')).toBeInTheDocument();
+    });
+
+    it('renders the Grammar Review button', () => {
+        render(<StudentDashboard />);
+        expect(screen.getByText('Grammar Review')).toBeInTheDocument();
+    });
+
+    it('shows the GrammarReview component when the button is clicked', () => {
+        render(<StudentDashboard />);
+        const button = screen.getByText('Grammar Review');
+        fireEvent.click(button);
+        expect(screen.getByTestId('grammar-review')).toBeInTheDocument();
     });
 });

@@ -6,6 +6,7 @@ import useLatinization from '../../../../hooks/useLatinization';
 import { shuffleArray } from '../../../../utils/arrayUtils';
 import { normalizeString } from '../../../../utils/stringUtils';
 import { logMistake } from '../../../../utils/mistakeLogger';
+import { getNextGrammarReviewInterval, getGrammarReviewSchedule, updateGrammarReviewSchedule } from '../../../../utils/srs';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
 import { useI18n } from '../../../../i18n/I18nContext';
@@ -108,9 +109,15 @@ const WordOrderExercise = ({ language, days, exerciseKey }) => {
     const correctAnswerSentence = exerciseData.correctSentence.replace(/[.?]$/, "").trim();
     // const itemId = `wordorder_${normalizeString(correctAnswerSentence)}`; // itemId not used currently for feedback
 
+    const schedule = getGrammarReviewSchedule();
+    const itemId = `wordorder_${normalizeString(correctAnswerSentence)}`;
+    const itemSchedule = schedule[itemId] || { interval: 1, factor: 2.5 };
+
     if (normalizeString(userAnswerSentence) === normalizeString(correctAnswerSentence)) {
       setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
       setIsCorrect(true);
+      const newInterval = getNextGrammarReviewInterval(itemSchedule.interval, itemSchedule.factor);
+      schedule[itemId] = { ...itemSchedule, interval: newInterval, nextReviewDate: new Date(Date.now() + newInterval * 24 * 60 * 60 * 1000) };
     } else {
       setFeedback({ message: t('feedback.incorrectWordOrder', `Incorrect order. The correct sentence is: "${getLatinizedText(exerciseData.correctSentence, language)}"`, {correctSentence: getLatinizedText(exerciseData.correctSentence, language)}), type: 'incorrect' });
       logMistake({
@@ -118,7 +125,9 @@ const WordOrderExercise = ({ language, days, exerciseKey }) => {
         userAnswer: userAnswerSentence,
         correctAnswer: correctAnswerSentence,
       });
+      schedule[itemId] = { ...itemSchedule, interval: 1 };
     }
+    updateGrammarReviewSchedule(schedule);
   };
 
   const showHint = () => {
