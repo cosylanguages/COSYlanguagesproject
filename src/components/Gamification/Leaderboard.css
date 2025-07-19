@@ -1,0 +1,44 @@
+.leaderboard {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .leaderboard h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .leaderboard ol {
+    list-style: none;
+    padding: 0;
+  }
+
+  .leaderboard li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .leaderboard li:last-child {
+    border-bottom: none;
+  }
+
+  .leaderboard-rank {
+    font-weight: bold;
+    margin-right: 15px;
+    color: #666;
+  }
+
+  .leaderboard-name {
+    flex-grow: 1;
+    color: #444;
+  }
+
+  .leaderboard-xp {
+    font-weight: bold;
+    color: #007bff;
+  }

@@ -9,6 +9,7 @@ import StudyModePage from './pages/StudyModePage/StudyModePage';
 // FreestyleModePage is no longer imported or used here
 import MyStudySetsPage from './pages/MyStudySetsPage/MyStudySetsPage'; // Import MyStudySetsPage
 import FreestyleModePage from './pages/FreestyleModePage/FreestyleModePage';
+import GamificationPage from './pages/GamificationPage/GamificationPage';
 
 // ProtectedRoute for general authentication (if needed for pages like MyStudySetsPage)
 const ProtectedRoute = ({ children }) => {
@@ -49,6 +50,7 @@ function App() {
             <Route path="/" element={<Layout />}>
                 <Route index element={<Navigate to="/freestyle.html" replace />} />
                 <Route path="freestyle" element={<FreestyleModePage />} />
+                <Route path="progress" element={<GamificationPage />} />
                 <Route path="study" element={<Navigate to="/study-islands.html" replace />} />
                 <Route path="study/:lang" element={<StudyModePage />} />
                 <Route
