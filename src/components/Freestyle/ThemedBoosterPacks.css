@@ -1,9 +1,0 @@
-.themed-booster-packs {
-    padding: 20px;
-}
-
-.booster-packs-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
