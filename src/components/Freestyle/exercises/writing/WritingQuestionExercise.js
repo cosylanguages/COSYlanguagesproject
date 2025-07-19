@@ -5,6 +5,7 @@ import useLatinization from '../../../../hooks/useLatinization';
 import { shuffleArray } from '../../../../utils/arrayUtils';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
+import WritingHelper from '../../../StudyMode/WritingHelper';
 import { useI18n } from '../../../../i18n/I18nContext';
 
 const WritingQuestionExercise = ({ language, days, exerciseKey }) => {
@@ -122,14 +123,7 @@ const WritingQuestionExercise = ({ language, days, exerciseKey }) => {
         </button>
       </div>
 
-      <textarea 
-        value={writtenAnswer}
-        onChange={handleAnswerChange}
-        rows="10"
-        spellCheck="true"
-        placeholder={t('placeholders.typeYourAnswerHere', 'Type your answer here...')}
-        style={{ width: '100%', padding: '10px', marginBottom: '15px', border: '1px solid #ccc', borderRadius: '4px', fontSize: '1em', boxSizing: 'border-box' }}
-      />
+      <WritingHelper onTextChange={setWrittenAnswer} />
       
       <FeedbackDisplay message={feedback.message} type={feedback.type} />
       
