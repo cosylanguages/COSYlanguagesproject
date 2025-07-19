@@ -50,7 +50,7 @@ export const allMenuItemsConfig = {
   'main_practice_categories_stage': {
     parent: 'day_confirm_action', // After days are confirmed
     // Component PracticeCategoryNav is active here.
-    children: ['vocabulary', 'grammar', 'reading', 'speaking', 'writing', 'number_practice']
+    children: ['vocabulary', 'grammar', 'reading', 'speaking', 'writing']
   },
 
   // Main Categories
@@ -89,11 +89,6 @@ export const allMenuItemsConfig = {
   'writing': {
     parent: 'main_practice_categories_stage',
     children: ['writing_question_exercise', 'writing_storytelling_exercise', 'writing_diary_exercise']
-  },
-
-  'number_practice': {
-    parent: 'main_practice_categories_stage',
-    children: ['number_practice_exercise']
   },
 
   // Vocabulary Sub-Practice Exercises (Leaf nodes) - To be defined based on new requirements
@@ -140,9 +135,6 @@ export const allMenuItemsConfig = {
   'writing_question_exercise': { parent: 'writing', isExercise: true },
   'writing_storytelling_exercise': { parent: 'writing', isExercise: true },
   'writing_diary_exercise': { parent: 'writing', isExercise: true },
-
-  // Number Practice Exercises (Leaf nodes)
-  'number_practice_exercise': { parent: 'number_practice', isExercise: true },
 };
 
 

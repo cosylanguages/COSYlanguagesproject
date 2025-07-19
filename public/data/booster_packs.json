@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "title": "Cafe Hopping in Paris",
+        "description": "Learn how to order coffee and pastries in a Parisian cafe.",
+        "content": {
+            "vocabulary": [
+                { "term": "un café", "definition": "a coffee" },
+                { "term": "un croissant", "definition": "a croissant" },
+                { "term": "l'addition, s'il vous plaît", "definition": "the bill, please" }
+            ],
+            "phrases": [
+                "Je voudrais un café, s'il vous plaît.",
+                "C'est combien ?"
+            ],
+            "scenario": {
+                "title": "Ordering at the Cafe",
+                "scenes": [
+                    {
+                        "character": "Waiter",
+                        "line": "Bonjour ! Qu'est-ce que vous voulez ?"
+                    },
+                    {
+                        "character": "You",
+                        "line": "..."
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": 2,
+        "title": "Ordering Street Food in Tokyo",
+        "description": "Learn how to order takoyaki and other street food in Tokyo.",
+        "content": {
+            "vocabulary": [
+                { "term": "たこ焼き", "definition": "takoyaki" },
+                { "term": "お好み焼き", "definition": "okonomiyaki" },
+                { "term": "いくらですか", "definition": "how much is it?" }
+            ],
+            "phrases": [
+                "これをください。",
+                "おすすめですはなんですか"
+            ],
+            "scenario": {
+                "title": "At the Food Stall",
+                "scenes": [
+                    {
+                        "character": "Vendor",
+                        "line": "いらっしゃいませ！"
+                    },
+                    {
+                        "character": "You",
+                        "line": "..."
+                    }
+                ]
+            }
+        }
+    }
+]
