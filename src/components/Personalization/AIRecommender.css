@@ -1,0 +1,23 @@
+.ai-recommender {
+    padding: 20px;
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+
+  .ai-recommender h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .ai-recommender ul {
+    list-style-type: '🤖';
+    padding-left: 20px;
+  }
+
+  .ai-recommender li {
+    margin-bottom: 10px;
+    color: #1e88e5;
+  }

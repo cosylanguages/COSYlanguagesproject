@@ -1,0 +1,64 @@
+.ai-conversation {
+    padding: 20px;
+    background-color: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+
+  .ai-conversation h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .message {
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 80%;
+  }
+
+  .user {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+
+  .ai {
+    background-color: #f1f0f0;
+    align-self: flex-start;
+  }
+
+  .input-area {
+    display: flex;
+  }
+
+  .input-area input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+
+  .input-area button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .input-area button:hover {
+    background-color: #0056b3;
+  }
