@@ -1,0 +1,46 @@
+.language-partner-finder {
+    padding: 20px;
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+
+  .language-partner-finder h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .language-partner-finder input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .language-partner-finder button {
+    background-color: #66bb6a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .language-partner-finder button:hover {
+    background-color: #4caf50;
+  }
+
+  .partners-list {
+    margin-top: 20px;
+  }
+
+  .partner {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }

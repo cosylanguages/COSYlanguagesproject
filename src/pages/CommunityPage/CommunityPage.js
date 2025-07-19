@@ -1,5 +1,6 @@
 import React from 'react';
 import Forum from '../../components/Community/Forum';
+import LanguagePartnerFinder from '../../components/Community/LanguagePartnerFinder';
 import './CommunityPage.css';
 
 const CommunityPage = () => {
@@ -7,6 +8,7 @@ const CommunityPage = () => {
     <div className="community-page">
       <h1>Community Hub</h1>
       <Forum />
+      <LanguagePartnerFinder />
     </div>
   );
 };
