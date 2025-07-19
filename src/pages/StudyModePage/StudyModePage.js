@@ -8,6 +8,7 @@ import { getAvailableSyllabusDays, fetchSyllabusByFileName } from '../../utils/s
 import RoleSelector from './RoleSelector';
 import StudentDashboard from './StudentDashboard';
 import TeacherDashboard from './TeacherDashboard';
+import StudyProgressDashboard from '../../components/StudyMode/StudyProgressDashboard';
 import LessonSectionsPanel from '../../components/StudyMode/LessonSectionsPanel';
 import ToolsPanel from '../../components/StudyMode/ToolsPanel';
 import TransliterableText from '../../components/Common/TransliterableText';
@@ -414,9 +415,12 @@ const StudyModePage = () => {
             </div>
             <div className="layout-center-panel" id="main-content-panel">
               {selectedRole === 'student' &&
-                <StudentDashboard
-                  lessonBlocks={currentExerciseBlocks}
-                />}
+                <>
+                  <StudyProgressDashboard progress={{ Vocabulary: 75, Grammar: 60, Listening: 85, Speaking: 50 }} />
+                  <StudentDashboard
+                    lessonBlocks={currentExerciseBlocks}
+                  />
+                </>}
               {selectedRole === 'teacher' &&
                 <TeacherDashboard
                   selectedDayId={selectedDayId}

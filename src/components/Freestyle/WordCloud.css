@@ -1,0 +1,33 @@
+.word-cloud {
+    padding: 20px;
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+
+  .word-cloud h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cloud span {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #e0f7fa;
+    border-radius: 5px;
+    color: #00796b;
+    transition: transform 0.2s;
+  }
+
+  .cloud span:hover {
+    transform: scale(1.1);
+  }

@@ -1,0 +1,19 @@
+.mastery-level-indicator {
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  .novice {
+    background-color: #f44336;
+  }
+
+  .intermediate {
+    background-color: #ff9800;
+  }
+
+  .mastered {
+    background-color: #4caf50;
+  }

@@ -4,6 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { I18nProvider } from '../../i18n/I18nContext';
 import { LatinizationProvider } from '../../contexts/LatinizationContext';
 import { LanguageIslandWrapper, DaySelectorIslandWrapper, PracticeNavIslandWrapper, ExerciseHostIslandWrapper, HelpPopupIslandWrapper } from '../../islands/freestyleIslandsEntry';
+import FreestyleProgress from '../../components/Freestyle/FreestyleProgress';
+import WordCloud from '../../components/Freestyle/WordCloud';
+import SessionSummary from '../../components/Freestyle/SessionSummary';
 import '../../freestyle-shared.css';
 import './FreestyleModePage.css';
 
@@ -138,9 +141,25 @@ const FreestyleModePage = () => {
         mountFreestyleIslands();
     }, []);
 
+    const words = [
+        { text: 'un', size: 1.5 },
+        { text: 'deux', size: 2 },
+        { text: 'trois', size: 1.2 },
+        { text: 'quatre', size: 2.5 },
+        { text: 'cinq', size: 1.8 },
+    ];
+
+    const summary = {
+        timeSpent: '20 minutes',
+        wordsLearned: 5,
+        xpGained: 50,
+    };
+
     return (
         <div className="freestyle-mode-container">
             <h1 className="freestyle-mode-header">Freestyle Mode</h1>
+
+            <FreestyleProgress />
 
             <div id="language-selector-island-container" className="island-placeholder">
                 {/* React Language Selector Island will be mounted here */}
@@ -160,6 +179,8 @@ const FreestyleModePage = () => {
             <div id="exercise-host-container" className="island-placeholder">
                 {/* React Exercise Host Island will be mounted here */}
             </div>
+            <WordCloud words={words} />
+            <SessionSummary summary={summary} />
             <div id="help-popup-island-container"></div> {/* Placeholder for Help Popup Island */}
         </div>
     );
