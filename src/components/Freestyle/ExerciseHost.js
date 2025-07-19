@@ -34,6 +34,7 @@ import WordOrderExercise from './exercises/grammar/WordOrderExercise';
 // Sentence Skills Components
 import SentenceUnscramblePracticeHost from './exercises/common/SentenceUnscramblePracticeHost';
 import FillInTheBlanksPracticeHost from './exercises/common/FillInTheBlanksPracticeHost'; // New Import
+import NumberPracticeExercise from './exercises/common/NumberPracticeExercise';
 
 // Reading Exercise Components
 import StoryReadingExercise from './exercises/reading/StoryReadingExercise';
@@ -96,6 +97,7 @@ const exerciseMap = {
   // Sentence Skills
   'sentence_unscramble_exercise': SentenceUnscramblePracticeHost,
   'fill_in_the_blanks_exercise': FillInTheBlanksPracticeHost, // New Entry
+  'number_practice_exercise': NumberPracticeExercise,
 
   // Reading
   'reading_story_exercise': StoryReadingExercise,
