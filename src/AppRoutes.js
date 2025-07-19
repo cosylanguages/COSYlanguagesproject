@@ -14,6 +14,7 @@ import PersonalizationPage from './pages/PersonalizationPage/PersonalizationPage
 import InteractivePage from './pages/InteractivePage/InteractivePage';
 import CommunityPage from './pages/CommunityPage/CommunityPage';
 import StudyToolsPage from './pages/StudyToolsPage/StudyToolsPage';
+import GrammarGuidebookPage from './pages/GrammarGuidebookPage/GrammarGuidebookPage';
 
 // ProtectedRoute for general authentication (if needed for pages like MyStudySetsPage)
 const ProtectedRoute = ({ children }) => {
@@ -59,6 +60,7 @@ function App() {
                 <Route path="interactive" element={<InteractivePage />} />
                 <Route path="community" element={<CommunityPage />} />
                 <Route path="study-tools" element={<StudyToolsPage />} />
+                <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
                 <Route path="study" element={<Navigate to="/study-islands.html" replace />} />
                 <Route path="study/:lang" element={<StudyModePage />} />
                 <Route
