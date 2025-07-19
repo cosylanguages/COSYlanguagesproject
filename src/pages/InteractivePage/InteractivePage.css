@@ -1,0 +1,11 @@
+.interactive-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .interactive-page h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+  }
