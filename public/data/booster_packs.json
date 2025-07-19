@@ -18,11 +18,33 @@
                 "scenes": [
                     {
                         "character": "Waiter",
-                        "line": "Bonjour ! Qu'est-ce que vous voulez ?"
+                        "line": "Bonjour ! Qu'est-ce que vous voulez ?",
+                        "choices": [
+                            { "text": "Je voudrais un café, s'il vous plaît.", "nextScene": 1 },
+                            { "text": "Un croissant, s'il vous plaît.", "nextScene": 2 }
+                        ]
                     },
                     {
-                        "character": "You",
-                        "line": "..."
+                        "character": "Waiter",
+                        "line": "Voilà un café. Autre chose ?",
+                        "choices": [
+                            { "text": "Non, merci. C'est tout.", "nextScene": 3 },
+                            { "text": "Oui, je voudrais aussi un croissant.", "nextScene": 2 }
+                        ]
+                    },
+                    {
+                        "character": "Waiter",
+                        "line": "Et un croissant. Voilà. Autre chose ?",
+                        "choices": [
+                            { "text": "Non, merci. L'addition, s'il vous plaît.", "nextScene": 3 }
+                        ]
+                    },
+                    {
+                        "character": "Waiter",
+                        "line": "Ça fait 4 euros.",
+                        "choices": [
+                            { "text": "Merci, au revoir !", "nextScene": 4 }
+                        ]
                     }
                 ]
             }
@@ -47,11 +69,34 @@
                 "scenes": [
                     {
                         "character": "Vendor",
-                        "line": "いらっしゃいませ！"
+                        "line": "いらっしゃいませ！",
+                        "choices": [
+                            { "text": "たこ焼きをください。", "nextScene": 1 },
+                            { "text": "お好み焼きをください。", "nextScene": 2 }
+                        ]
                     },
                     {
-                        "character": "You",
-                        "line": "..."
+                        "character": "Vendor",
+                        "line": "はい、たこ焼きですね。ソースはどうしますか？",
+                        "choices": [
+                            { "text": "普通のでお願いします。", "nextScene": 3 },
+                            { "text": "辛口でお願いします。", "nextScene": 3 }
+                        ]
+                    },
+                    {
+                        "character": "Vendor",
+                        "line": "はい、お好み焼きですね。マヨネーズはかけますか？",
+                        "choices": [
+                            { "text": "はい、お願いします。", "nextScene": 3 },
+                            { "text": "いいえ、結構です。", "nextScene": 3 }
+                        ]
+                    },
+                    {
+                        "character": "Vendor",
+                        "line": "はい、どうぞ。500円です。",
+                        "choices": [
+                            { "text": "ありがとうございます！", "nextScene": 4 }
+                        ]
                     }
                 ]
             }
