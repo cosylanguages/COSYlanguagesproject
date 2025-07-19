@@ -33,6 +33,9 @@ const Layout = () => {
               <NavLink to="/study" className={({ isActive }) => isActive ? "active-link" : ""}><TransliterableText text={t('navStudyMode') || 'Study'} /></NavLink>
             </li>
             <li>
+              <NavLink to="/progress" className={({ isActive }) => isActive ? "active-link" : ""}><TransliterableText text={t('navProgress') || 'Progress'} /></NavLink>
+            </li>
+            <li>
             </li>
             {isAuthenticated && ( // Only show "My Sets" if authenticated
               <li>

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../contexts/AuthContext'; // Adjusted path
+import { useUserProfile } from '../../contexts/UserProfileContext';
 import { useNavigate } from 'react-router-dom';
 import Button from '../Common/Button'; // Import Button
 import Label from '../Common/Label';   // Import Label
@@ -9,7 +10,13 @@ import './Login.css';
 const Login = () => {
     const [pin, setPin] = useState('');
     const { login, loadingAuth, authError } = useAuth();
+    const { updateStreak, checkAndAwardAchievement } = useUserProfile();
     const navigate = useNavigate();
+
+    useEffect(() => {
+        checkAndAwardAchievement('firstLogin');
+        updateStreak();
+    }, [checkAndAwardAchievement, updateStreak]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
