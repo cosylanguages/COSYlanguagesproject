@@ -5,6 +5,7 @@ import { processVerbData, generateGrammarExerciseSentence, setGrammarGeneratorTr
 import useLatinization from '../../../../hooks/useLatinization';
 import { shuffleArray } from '../../../../utils/arrayUtils';
 import { normalizeString } from '../../../../utils/stringUtils';
+import { logMistake } from '../../../../utils/mistakeLogger';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
 import { useI18n } from '../../../../i18n/I18nContext';
@@ -112,6 +113,11 @@ const WordOrderExercise = ({ language, days, exerciseKey }) => {
       setIsCorrect(true);
     } else {
       setFeedback({ message: t('feedback.incorrectWordOrder', `Incorrect order. The correct sentence is: "${getLatinizedText(exerciseData.correctSentence, language)}"`, {correctSentence: getLatinizedText(exerciseData.correctSentence, language)}), type: 'incorrect' });
+      logMistake({
+        exercise: 'Word Order',
+        userAnswer: userAnswerSentence,
+        correctAnswer: correctAnswerSentence,
+      });
     }
   };
 
