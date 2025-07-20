@@ -10,20 +10,6 @@ import SpeakingExercisesHost from './exercises/speaking/SpeakingExercisesHost'; 
 import WritingExercisesHost from './exercises/writing/WritingExercisesHost'; // Assuming a new host for writing
 
 
-// Placeholder component
-const PlaceholderExercise = ({ name, subPracticeType }) => {
-  const { t, language } = useI18n();
-  const exerciseName = name || subPracticeType;
-  const message1Text = t('exercises.placeholder.message1', `This is a placeholder for the <em>${exerciseName}</em> exercise.`, { name: exerciseName });
-  return (
-    <div style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '5px', backgroundColor: '#f9f9f9' }}>
-      <h3><TransliterableText text={t('exercises.placeholder.title', `${exerciseName} Exercise`, { name: exerciseName })} langOverride={language} /></h3>
-      <p dangerouslySetInnerHTML={{ __html: message1Text }} />
-      <p><TransliterableText text={t('exercises.placeholder.message2', 'Implementation is pending.')} langOverride={language} /></p>
-    </div>
-  );
-};
-
 const exerciseMap = {
   vocabulary: RandomWordPracticeHost,
   grammar: GrammarExercisesHost,
