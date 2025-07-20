@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { analyzePerformance } from '../../utils/performanceAnalyzer';
 import { getGrammarReviewSchedule } from '../../utils/srs';
 import MultipleChoiceQuestion from './MultipleChoiceQuestion';
-import Flashcard from './Flashcard';
+import Flashcard from '../Common/Flashcard';
 import './SmartReview.css';
 
 const SmartReview = ({ userId }) => {
