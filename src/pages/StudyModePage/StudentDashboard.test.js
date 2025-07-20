@@ -24,6 +24,13 @@ jest.mock('../../components/StudyMode/VirtualTutor', () => {
     };
 });
 
+// Mock the SmartReview component
+jest.mock('../../components/StudyMode/SmartReview', () => {
+    return function DummySmartReview() {
+        return <div data-testid="smart-review"></div>;
+    };
+});
+
 describe('StudentDashboard', () => {
     it('renders the Mistake Notebook button', () => {
         render(<StudentDashboard />);
@@ -59,5 +66,17 @@ describe('StudentDashboard', () => {
         const button = screen.getByText('Virtual Tutor');
         fireEvent.click(button);
         expect(screen.getByTestId('virtual-tutor')).toBeInTheDocument();
+    });
+
+    it('renders the Smart Review button', () => {
+        render(<StudentDashboard />);
+        expect(screen.getByText('Smart Review')).toBeInTheDocument();
+    });
+
+    it('shows the SmartReview component when the button is clicked', () => {
+        render(<StudentDashboard />);
+        const button = screen.getByText('Smart Review');
+        fireEvent.click(button);
+        expect(screen.getByTestId('smart-review')).toBeInTheDocument();
     });
 });
