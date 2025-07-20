@@ -1,0 +1,29 @@
+.grammar-guidebook {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  margin-top: 30px;
+}
+
+.grammar-guidebook h2 {
+  color: #4a4a4a;
+  margin-bottom: 30px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.grammar-guidebook h3 {
+  color: #5a5a5a;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.grammar-guidebook p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #6a6a6a;
+}

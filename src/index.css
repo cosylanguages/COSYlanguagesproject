@@ -5,10 +5,10 @@
   display: block; /* Ensure it takes up its own line if needed */
   font-size: var(--font-size-base, 1rem);
   font-weight: 600; /* Semi-bold for emphasis */
-  color: var(--color-text-secondary, #6c757d); /* Using secondary text color for labels */
-  margin-bottom: var(--spacing-sm, 0.5rem); /* Consistent space below the label */
+  color: #888; /* Softer color */
+  margin-bottom: var(--spacing-md, 0.8rem); /* Consistent space below the label */
   text-align: left; /* Default alignment, can be overridden where needed */
-  line-height: 1.4; /* Improved line-height for readability */
+  line-height: 1.5; /* Improved line-height for readability */
 }
 
 /* Basic Reset/Normalize */
