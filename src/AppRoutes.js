@@ -54,7 +54,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Layout />}>
                 <Route index element={<Navigate to="/freestyle" replace />} />
-                <Route path="freestyle" element={<FreestyleModePage />} />
+                <Route path="freestyle/*" element={<FreestyleModePage />} />
                 <Route path="progress" element={<GamificationPage />} />
                 <Route path="personalize" element={<PersonalizationPage />} />
                 <Route path="interactive" element={<InteractivePage />} />
