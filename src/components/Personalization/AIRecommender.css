@@ -1,23 +1,25 @@
 .ai-recommender {
-    padding: 20px;
-    background-color: #e3f2fd;
-    border: 1px solid #bbdefb;
-    border-radius: 8px;
-    margin-top: 20px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    margin-top: 30px;
   }
 
   .ai-recommender h3 {
     text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+    font-size: 1.8em;
   }
 
   .ai-recommender ul {
-    list-style-type: '🤖';
-    padding-left: 20px;
+    list-style-type: '✨';
+    padding-left: 30px;
   }
 
   .ai-recommender li {
-    margin-bottom: 10px;
-    color: #1e88e5;
+    margin-bottom: 15px;
+    color: #6a6a6a;
+    font-size: 1.1em;
   }

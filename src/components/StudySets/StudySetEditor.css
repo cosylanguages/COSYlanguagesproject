@@ -1,45 +1,46 @@
 .study-set-editor-container {
   max-width: 600px;
   margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 30px;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
 }
 
 .study-set-editor-container h2 {
   text-align: center;
-  color: #333;
-  margin-bottom: 25px;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+  font-size: 2em;
 }
 
 .study-set-form .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .study-set-form label {
   display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #555;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #6a6a6a;
 }
 
 .study-set-form input[type="text"],
 .study-set-form textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
   box-sizing: border-box; /* Important for width calculation */
   font-size: 1em;
 }
 
 .study-set-form input[type="text"]:focus,
 .study-set-form textarea:focus {
-  border-color: #007bff;
+  border-color: #a5d6a7;
   outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  box-shadow: 0 0 0 0.2rem rgba(165, 214, 167, 0.25);
 }
 
 .study-set-form textarea {
