@@ -7,10 +7,36 @@
     height: 400px;
 }
 
+.tutor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.personality-selector {
+    display: flex;
+    align-items: center;
+}
+
+.personality-selector label {
+    margin-right: 0.5rem;
+}
+
 .messages {
     flex-grow: 1;
     overflow-y: auto;
     margin-bottom: 1rem;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .message {
