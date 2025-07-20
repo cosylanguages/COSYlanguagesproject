@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import Modal from '../Common/Modal';
-import { getWritingFeedback } from '../../utils/ai/writingFeedback';
 import './WritingHelper.css';
 
 const WritingHelper = () => {
     const [text, setText] = useState('');
     const [feedback, setFeedback] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleTextChange = (e) => {
