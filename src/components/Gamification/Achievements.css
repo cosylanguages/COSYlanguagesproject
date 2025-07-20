@@ -1,15 +1,16 @@
 .achievements-container {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    margin-top: 30px;
   }
 
   .achievements-container h2 {
-    color: #333;
+    color: #5c4b51;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 1.8em;
   }
 
   .achievements-list {
@@ -18,27 +19,27 @@
   }
 
   .achievement-item {
-    background-color: #f9f9f9;
-    border-left: 5px solid #5cb85c;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 4px;
+    background-color: #fdfaf6;
+    border-left: 5px solid #82c4c3;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
   }
 
   .achievement-name {
     font-weight: bold;
-    color: #333;
-    font-size: 1.1em;
+    color: #5c4b51;
+    font-size: 1.2em;
   }
 
   .achievement-description {
-    color: #666;
-    margin-top: 5px;
+    color: #7d6c73;
+    margin-top: 8px;
   }
 
   .achievement-date {
-    font-size: 0.8em;
-    color: #999;
+    font-size: 0.9em;
+    color: #a0a0a0;
     text-align: right;
-    margin-top: 10px;
+    margin-top: 15px;
   }

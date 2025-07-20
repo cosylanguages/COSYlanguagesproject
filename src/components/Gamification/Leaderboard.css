@@ -1,14 +1,16 @@
 .leaderboard {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    margin-top: 30px;
   }
 
   .leaderboard h2 {
     text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+    color: #5c4b51;
+    margin-bottom: 30px;
+    font-size: 1.8em;
   }
 
   .leaderboard ol {
@@ -19,26 +21,34 @@
   .leaderboard li {
     display: flex;
     align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.3s ease;
   }
 
   .leaderboard li:last-child {
     border-bottom: none;
   }
 
+  .leaderboard li:hover {
+    background-color: #fdfaf6;
+  }
+
   .leaderboard-rank {
     font-weight: bold;
-    margin-right: 15px;
-    color: #666;
+    margin-right: 20px;
+    color: #a0a0a0;
+    font-size: 1.2em;
   }
 
   .leaderboard-name {
     flex-grow: 1;
-    color: #444;
+    color: #5c4b51;
+    font-weight: 500;
   }
 
   .leaderboard-xp {
     font-weight: bold;
-    color: #007bff;
+    color: #ff9800;
+    font-size: 1.1em;
   }
