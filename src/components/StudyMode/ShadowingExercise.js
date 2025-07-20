@@ -1,27 +1,22 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { getPronunciationFeedback } from '../../utils/ai/pronunciationFeedback';
 import './ShadowingExercise.css';
 
 const ShadowingExercise = ({ audioSrc, transcript }) => {
     const [feedback, setFeedback] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const {
-        transcript: userTranscript,
-        listening,
-        resetTranscript,
-        browserSupportsSpeechRecognition
-    } = useSpeechRecognition();
+    const [userTranscript, setUserTranscript] = useState('');
+    const [isListening, setIsListening] = useState(false);
 
     const audio = new Audio(audioSrc);
 
     const handleListen = () => {
-        if (listening) {
-            SpeechRecognition.stopListening();
+        if (isListening) {
+            window.annyang.abort();
         } else {
-            resetTranscript();
+            setUserTranscript('');
             setFeedback([]);
-            SpeechRecognition.startListening({ continuous: true });
+            window.annyang.start({ autoRestart: false, continuous: false });
             audio.play();
         }
     };
@@ -34,14 +29,27 @@ const ShadowingExercise = ({ audioSrc, transcript }) => {
     }, [userTranscript]);
 
     useEffect(() => {
-        if (!listening && userTranscript) {
-            getFeedback();
-        }
-    }, [listening, userTranscript, getFeedback]);
+        if (window.annyang) {
+            const commands = {
+                '*transcript': (transcript) => {
+                    setUserTranscript(transcript);
+                }
+            };
+            window.annyang.addCommands(commands);
 
-    if (!browserSupportsSpeechRecognition) {
-        return <span>Browser doesn't support speech recognition.</span>;
-    }
+            window.annyang.addCallback('start', () => {
+                setIsListening(true);
+            });
+
+            window.annyang.addCallback('end', () => {
+                setIsListening(false);
+            });
+
+            window.annyang.addCallback('result', () => {
+                getFeedback();
+            });
+        }
+    }, [getFeedback]);
 
     return (
         <div className="shadowing-exercise">
@@ -59,7 +67,7 @@ const ShadowingExercise = ({ audioSrc, transcript }) => {
             </p>
             <p><strong>Your Transcript:</strong> {userTranscript}</p>
             <button onClick={handleListen} disabled={isLoading}>
-                {listening ? 'Stop' : 'Start'}
+                {isListening ? 'Stop' : 'Start'}
             </button>
             {isLoading && <p>Getting feedback...</p>}
         </div>

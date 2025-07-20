@@ -7,11 +7,15 @@
             "vocabulary": [
                 { "term": "un café", "definition": "a coffee" },
                 { "term": "un croissant", "definition": "a croissant" },
-                { "term": "l'addition, s'il vous plaît", "definition": "the bill, please" }
+                { "term": "l'addition, s'il vous plaît", "definition": "the bill, please" },
+                { "term": "un thé", "definition": "a tea" },
+                { "term": "un jus d'orange", "definition": "an orange juice" }
             ],
             "phrases": [
                 "Je voudrais un café, s'il vous plaît.",
-                "C'est combien ?"
+                "C'est combien ?",
+                "Je voudrais un thé, s'il vous plaît.",
+                "Je voudrais un jus d'orange, s'il vous plaît."
             ],
             "scenario": {
                 "title": "Ordering at the Cafe",
@@ -58,11 +62,14 @@
             "vocabulary": [
                 { "term": "der Glühwein", "definition": "mulled wine" },
                 { "term": "die Bratwurst", "definition": "grilled sausage" },
-                { "term": "Was kostet das?", "definition": "How much does that cost?" }
+                { "term": "Was kostet das?", "definition": "How much does that cost?" },
+                { "term": "gebrannte Mandeln", "definition": "roasted almonds" },
+                { "term": "eine Tasse", "definition": "a cup" }
             ],
             "phrases": [
                 "Ich hätte gern einen Glühwein, bitte.",
-                "Eine Bratwurst, bitte."
+                "Eine Bratwurst, bitte.",
+                "Eine Tasse gebrannte Mandeln, bitte."
             ],
             "scenario": {
                 "title": "Ordering at the Christmas Market",
@@ -96,6 +103,41 @@
                         "choices": [
                             { "text": "Danke, auf Wiedersehen!", "nextScene": 4 }
                         ]
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": 3,
+        "title": "Italian Restaurant",
+        "description": "Learn how to order food in an Italian restaurant.",
+        "content": {
+            "vocabulary": [
+                { "term": "un tavolo per due", "definition": "a table for two" },
+                { "term": "il menu", "definition": "the menu" },
+                { "term": "io vorrei", "definition": "I would like" }
+            ],
+            "phrases": [
+                "Un tavolo per due, per favore.",
+                "Posso avere il menu, per favore?",
+                "Io vorrei la pasta."
+            ],
+            "scenario": {
+                "title": "Ordering at an Italian Restaurant",
+                "type": "fill-in-the-blanks",
+                "scenes": [
+                    {
+                        "text": "Cameriere: Buonasera! Avete prenotato?\nTu: Buonasera! No, non abbiamo prenotato. Avete un _______ per due, per favore?",
+                        "blank": "tavolo"
+                    },
+                    {
+                        "text": "Cameriere: Certo, prego. Ecco il ______.\nTu: Grazie. Posso avere il menu, per favore?",
+                        "blank": "menu"
+                    },
+                    {
+                        "text": "Cameriere: Certo. Cosa prendete da bere?\nTu: Io _______ un bicchiere di vino rosso.",
+                        "blank": "vorrei"
                     }
                 ]
             }
