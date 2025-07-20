@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Flashcard from '../../components/StudyTools/Flashcard';
+import Flashcard from '../../components/Common/Flashcard';
 import './StudyToolsPage.css';
 
 const StudyToolsPage = () => {
