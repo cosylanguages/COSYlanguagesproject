@@ -4,10 +4,13 @@ import Achievements from '../../components/Gamification/Achievements';
 import DailyStreak from '../../components/Gamification/DailyStreak';
 import ProgressChart from '../../components/Gamification/ProgressChart';
 import { useUserProfile } from '../../contexts/UserProfileContext';
+import { useI18n } from '../../i18n/I18nContext';
+import TransliterableText from '../../components/Common/TransliterableText';
 import './GamificationPage.css';
 
 const GamificationPage = () => {
   const { xp } = useUserProfile();
+  const { t } = useI18n();
 
   // Mock user data for the leaderboard
   const users = [
@@ -29,7 +32,7 @@ const GamificationPage = () => {
 
   return (
     <div className="gamification-page">
-      <h1>Your Progress</h1>
+      <h1><TransliterableText text={t('gamificationPage.title', 'Your Progress')} /></h1>
       <DailyStreak />
       <ProgressChart data={progressData} />
       <Leaderboard users={users} />

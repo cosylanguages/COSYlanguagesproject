@@ -1,18 +1,17 @@
 import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
+import { useStudy } from '../../contexts/StudyContext';
 import TransliterableText from '../../components/Common/TransliterableText';
-// import './RoleSelector.css'; // Optional: if specific styling is needed beyond StudyModePage.css
 
-const RoleSelector = ({ onSelectRole, currentRole }) => {
+const RoleSelector = () => {
   const { t } = useI18n();
+  const { selectedRole, setSelectedRole } = useStudy();
 
-  // Determine class for buttons based on currentRole
   const getButtonClass = (role) => {
-    let classes = "role-btn"; // Base class
-    if (role === currentRole) {
-      classes += " active-role-btn"; // Active class
+    let classes = "role-btn";
+    if (role === selectedRole) {
+      classes += " active-role-btn";
     }
-    // Add specific role class for individual styling if needed
     if (role === 'student') {
       classes += " student-role-btn";
     } else if (role === 'teacher') {
@@ -23,22 +22,18 @@ const RoleSelector = ({ onSelectRole, currentRole }) => {
 
   return (
     <div className="role-selector-container">
-      {/* Label is now part of StudyModePage.js structure, can be added here if preferred */}
-      {/* <label className="role-selector-label">
-        <TransliterableText text={t('studyMode.chooseYourRole', '👤 Choose Your Role:')} />
-      </label> */}
-      <div className="role-buttons-wrapper"> {/* Inspired by 'practice-types' from old HTML */}
-        <button 
-          id="student-role-btn" 
+      <div className="role-buttons-wrapper">
+        <button
+          id="student-role-btn"
           className={getButtonClass('student')}
-          onClick={() => onSelectRole('student')}
+          onClick={() => setSelectedRole('student')}
         >
           <TransliterableText text={t('studyMode.studentRole', '🧑‍🎓 Student')} />
         </button>
-        <button 
-          id="teacher-role-btn" 
+        <button
+          id="teacher-role-btn"
           className={getButtonClass('teacher')}
-          onClick={() => onSelectRole('teacher')}
+          onClick={() => setSelectedRole('teacher')}
         >
           <TransliterableText text={t('studyMode.teacherRole', '🧑‍🏫 Teacher')} />
         </button>

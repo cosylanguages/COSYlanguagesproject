@@ -1,9 +1,13 @@
 import React from 'react';
 import CustomLessonPlanner from '../../components/Personalization/CustomLessonPlanner';
 import AIRecommender from '../../components/Personalization/AIRecommender';
+import { useI18n } from '../../i18n/I18nContext';
+import TransliterableText from '../../components/Common/TransliterableText';
 import './PersonalizationPage.css';
 
 const PersonalizationPage = () => {
+  const { t } = useI18n();
+
   const handleSavePlan = (plan) => {
     console.log('Saved plan:', plan);
     // Here you would typically save the plan to the user's profile
@@ -16,7 +20,7 @@ const PersonalizationPage = () => {
 
   return (
     <div className="personalization-page">
-      <h1>Personalize Your Learning</h1>
+      <h1><TransliterableText text={t('personalizationPage.title', 'Personalize Your Learning')} /></h1>
       <CustomLessonPlanner onSavePlan={handleSavePlan} />
       <AIRecommender userPerformance={userPerformance} />
     </div>
