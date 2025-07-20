@@ -23,7 +23,7 @@ const Login = () => {
         if (pin.trim() === '1234') {
             const success = await login(pin);
             if (success) {
-                navigate('/study-islands.html');
+                navigate('/study');
             }
         } else {
             navigate('/freestyle');
