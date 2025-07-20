@@ -53,7 +53,7 @@ function App() {
         <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Layout />}>
-                <Route index element={<Navigate to="/freestyle.html" replace />} />
+                <Route index element={<Navigate to="/freestyle" replace />} />
                 <Route path="freestyle" element={<FreestyleModePage />} />
                 <Route path="progress" element={<GamificationPage />} />
                 <Route path="personalize" element={<PersonalizationPage />} />
@@ -61,7 +61,7 @@ function App() {
                 <Route path="community" element={<CommunityPage />} />
                 <Route path="study-tools" element={<StudyToolsPage />} />
                 <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
-                <Route path="study" element={<Navigate to="/study-islands.html" replace />} />
+                <Route path="study" element={<Navigate to="/study/en" replace />} />
                 <Route path="study/:lang" element={<StudyModePage />} />
                 <Route
                   path="my-sets"
