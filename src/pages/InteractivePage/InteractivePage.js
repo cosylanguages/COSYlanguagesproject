@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import AIConversation from '../../components/Interactive/AIConversation';
 import InteractiveStory from '../../components/Interactive/InteractiveStory';
 import SpeechRecognition from '../../components/Speech/SpeechRecognition';
+import { useI18n } from '../../i18n/I18nContext';
+import TransliterableText from '../../components/Common/TransliterableText';
 import './InteractivePage.css';
 
 const InteractivePage = () => {
+  const { t } = useI18n();
   const [spokenText, setSpokenText] = useState('');
 
   const handleSpeech = (text) => {
@@ -58,9 +61,9 @@ const InteractivePage = () => {
 
   return (
     <div className="interactive-page">
-      <h1>Interactive Exercises</h1>
+      <h1><TransliterableText text={t('interactivePage.title', 'Interactive Exercises')} /></h1>
       <SpeechRecognition onSpeech={handleSpeech} />
-      <p>You said: {spokenText}</p>
+      <p><TransliterableText text={t('interactivePage.youSaid', 'You said:')} /> {spokenText}</p>
       <AIConversation />
       {stories.map((story, index) => (
         <InteractiveStory key={index} story={story} />
