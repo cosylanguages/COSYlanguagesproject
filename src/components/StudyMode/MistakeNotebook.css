@@ -1,5 +1,7 @@
 .mistake-notebook {
-    padding: 20px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .mistake-notebook ul {
@@ -8,8 +10,14 @@
 }
 
 .mistake-notebook li {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+.mistake-notebook li:last-child {
+    border-bottom: none;
+}
+
+.mistake-notebook p {
+    margin: 0.5rem 0;
 }
