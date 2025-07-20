@@ -4,7 +4,7 @@ import './GrammarReview.css';
 
 const GrammarReview = () => {
     const [reviewItems, setReviewItems] = useState([]);
-    const [sentence, setSentence] = useState('She go to the store.');
+    const [sentence] = useState('She go to the store.');
     const [correction, setCorrection] = useState('');
     const [isCorrect, setIsCorrect] = useState(null);
 
