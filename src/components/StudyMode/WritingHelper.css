@@ -1,27 +1,36 @@
 .writing-helper {
-    padding: 20px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .writing-helper textarea {
     width: 100%;
-    height: 200px;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    min-height: 150px;
+    margin-bottom: 1rem;
 }
 
-.feedback-container {
-    margin-top: 20px;
+.feedback {
+    margin-top: 1rem;
 }
 
-.feedback-item {
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 10px;
+.feedback ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.feedback-item.info {
+.feedback li {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-suggestion {
     background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
+    color: #0c5460;
+}
+
+.feedback-grammar {
+    background-color: #f8d7da;
+    color: #721c24;
 }

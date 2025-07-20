@@ -1,19 +1,42 @@
 .virtual-tutor {
-    padding: 20px;
-}
-
-.scheduler {
-    margin-bottom: 20px;
-}
-
-.sessions-list ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sessions-list li {
-    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.message {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    max-width: 80%;
+}
+
+.message.user {
+    background-color: #e7f3fe;
+    color: #0c5460;
+    align-self: flex-end;
+}
+
+.message.tutor {
+    background-color: #f8d7da;
+    color: #721c24;
+    align-self: flex-start;
+}
+
+.input-area {
+    display: flex;
+}
+
+.input-area input {
+    flex-grow: 1;
+    margin-right: 1rem;
 }
