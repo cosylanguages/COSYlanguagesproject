@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import './ShadowingExercise.css';
 
 const ShadowingExercise = ({ audioSrc, transcript }) => {
-    const [isListening, setIsListening] = useState(false);
     const [feedback, setFeedback] = useState([]);
     const {
         transcript: userTranscript,
@@ -17,17 +16,15 @@ const ShadowingExercise = ({ audioSrc, transcript }) => {
     const handleListen = () => {
         if (listening) {
             SpeechRecognition.stopListening();
-            setIsListening(false);
         } else {
             resetTranscript();
             setFeedback([]);
             SpeechRecognition.startListening({ continuous: true });
-            setIsListening(true);
             audio.play();
         }
     };
 
-    const compareTranscripts = () => {
+    const compareTranscripts = useCallback(() => {
         const originalWords = transcript.split(' ');
         const userWords = userTranscript.split(' ');
         const newFeedback = [];
@@ -40,13 +37,13 @@ const ShadowingExercise = ({ audioSrc, transcript }) => {
             }
         });
         setFeedback(newFeedback);
-    };
+    }, [transcript, userTranscript]);
 
     useEffect(() => {
         if (!listening && userTranscript) {
             compareTranscripts();
         }
-    }, [listening, userTranscript]);
+    }, [listening, userTranscript, compareTranscripts]);
 
     if (!browserSupportsSpeechRecognition) {
         return <span>Browser doesn't support speech recognition.</span>;
