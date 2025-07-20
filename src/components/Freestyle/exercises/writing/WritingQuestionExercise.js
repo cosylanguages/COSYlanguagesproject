@@ -58,11 +58,6 @@ const WritingQuestionExercise = ({ language, days, exerciseKey }) => {
     }
   }, [fetchQuestionsForWriting, exerciseKey, language, days, t]);
 
-  const handleAnswerChange = (event) => {
-    setWrittenAnswer(event.target.value);
-    if (feedback.message) setFeedback({message: '', type: ''});
-  };
-
   const handleSubmitAnswer = () => {
     if (!writtenAnswer.trim()) {
       setFeedback({ message: t('feedback.pleaseWriteAnswer', 'Please write an answer before submitting.'), type: 'warning' });
@@ -72,7 +67,7 @@ const WritingQuestionExercise = ({ language, days, exerciseKey }) => {
     // The ExerciseControls 'Check' button (Submit) will not be automatically disabled by isAnswerCorrect
     // as we don't set isAnswerCorrect=true here. This is fine for a submit button.
   };
-  
+
   const currentQuestionText = questions[currentQuestionIndex] || "";
   const latinizedQuestion = getLatinizedText(currentQuestionText, language);
 
@@ -91,7 +86,7 @@ const WritingQuestionExercise = ({ language, days, exerciseKey }) => {
       setFeedback({ message: '', type: '' });
     }
   };
-  
+
   const showHint = () => {
      const questionForHint = questions[currentQuestionIndex] || "";
      setFeedback({ message: t('feedback.hintWritingQuestion', `Hint: Address all parts of the question. Structure your answer with an introduction, body, and conclusion if applicable. The question is: '${getLatinizedText(questionForHint, language)}'`, {question: getLatinizedText(questionForHint, language)}), type: 'hint'});
@@ -104,15 +99,15 @@ const WritingQuestionExercise = ({ language, days, exerciseKey }) => {
   return (
     <div style={{ padding: '20px', border: '1px solid #eee', borderRadius: '8px', maxWidth: '800px', margin: '0 auto' }}>
       <h3 style={{textAlign: 'center'}}>{t('titles.answerTheQuestionWriting', 'Answer the Question (Writing)')}</h3>
-      <div style={{ 
-          fontSize: '1.3em', margin: '20px 0', padding: '15px', 
-          minHeight: '60px', backgroundColor: '#f9f9f9', 
+      <div style={{
+          fontSize: '1.3em', margin: '20px 0', padding: '15px',
+          minHeight: '60px', backgroundColor: '#f9f9f9',
           borderLeft: '4px solid #007bff', borderRadius: '4px',
-          ...(isLatinized && currentQuestionText !== latinizedQuestion && {fontStyle: 'italic'}) 
+          ...(isLatinized && currentQuestionText !== latinizedQuestion && {fontStyle: 'italic'})
         }}>
         {latinizedQuestion}
       </div>
-      
+
       <div style={{ marginBottom: '20px', textAlign: 'center' }}>
         <button onClick={goToPrevQuestion} disabled={currentQuestionIndex === 0} style={{marginRight: '10px'}}>
           &lt; {t('buttons.previous', 'Previous')}
@@ -124,22 +119,22 @@ const WritingQuestionExercise = ({ language, days, exerciseKey }) => {
       </div>
 
       <WritingHelper onTextChange={setWrittenAnswer} />
-      
+
       <FeedbackDisplay message={feedback.message} type={feedback.type} />
-      
+
       <ExerciseControls
-        onCheckAnswer={handleSubmitAnswer} 
+        onCheckAnswer={handleSubmitAnswer}
         onShowHint={showHint}
         onRandomize={fetchQuestionsForWriting} // Randomize gets a new set of questions
         onNextExercise={fetchQuestionsForWriting} // Next Exercise also gets a new set of questions
         // isAnswerCorrect and isRevealed are not used to disable controls here, as "Submit" should remain active.
         config={{
-          showCheck: true, 
-          checkButtonText: t('buttons.submitAnswer', 'Submit Answer'), 
-          showReveal: false, 
+          showCheck: true,
+          checkButtonText: t('buttons.submitAnswer', 'Submit Answer'),
+          showReveal: false,
           showHint: true,
           showRandomize: true, // Allow fetching new questions
-          showNext: true, 
+          showNext: true,
         }}
       />
     </div>
