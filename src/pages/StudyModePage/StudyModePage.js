@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
-import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
 import { useAuth } from '../../contexts/AuthContext';
-import { fetchDays as fetchTeacherDays } from '../../api/days'; // Renamed for clarity
-import { fetchLessonSections as fetchTeacherLessonSections, getLessonSectionDetails as getTeacherLessonSectionDetails } from '../../api/lessonSections'; // For Teacher
-import { getAvailableSyllabusDays, fetchSyllabusByFileName } from '../../utils/syllabusService'; // For Student
+import { useStudy } from '../../contexts/StudyContext';
+import { fetchDays as fetchTeacherDays } from '../../api/days';
+import { fetchLessonSections as fetchTeacherLessonSections, getLessonSectionDetails as getTeacherLessonSectionDetails } from '../../api/lessonSections';
+import { getAvailableSyllabusDays, fetchSyllabusByFileName } from '../../utils/syllabusService';
 import RoleSelector from './RoleSelector';
 import StudentDashboard from './StudentDashboard';
 import TeacherDashboard from './TeacherDashboard';
@@ -14,54 +14,31 @@ import ToolsPanel from '../../components/StudyMode/ToolsPanel';
 import TransliterableText from '../../components/Common/TransliterableText';
 import ToggleLatinizationButton from '../../components/Common/ToggleLatinizationButton';
 import Button from '../../components/Common/Button';
+import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
 
 import './StudyModePage.css';
 
-// Helper function (can be moved to a utility file if used elsewhere)
-// Added index as a fallback for block IDs if not present in syllabus JSON
 export const getBlockElementId = (blockId, index) => `lesson-block-content-${blockId || `gen-${index}`}`;
 
 const StudyModePage = () => {
-  // --- Hooks ---
-  const { t, language, currentLangKey } = useI18n(); // For translations and current language
-  const { authToken } = useAuth(); // For authentication token
+  const { t, language, currentLangKey } = useI18n();
+  const { authToken } = useAuth();
+  const {
+    selectedRole,
+    setSelectedRole,
+    selectedDayId,
+    setSelectedDayId,
+    selectedSectionId,
+    setSelectedSectionId,
+  } = useStudy();
 
-  // --- State ---
-  // Role of the user, either 'student' or 'teacher'
-  const [selectedRole, setSelectedRole] = useState(() => localStorage.getItem('selectedRole') || null);
+  const [days, setDays] = React.useState([]);
+  const [currentSyllabus, setCurrentSyllabus] = React.useState(null);
+  const [lessonSectionsForPanel, setLessonSectionsForPanel] = React.useState([]);
+  const [currentExerciseBlocks, setCurrentExerciseBlocks] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [error, setError] = React.useState(null);
 
-  // Data State
-  // For students: days = { dayNumber, lessonName, fileName }[]
-  // For teachers: days = API days results { id, title }[]
-  const [days, setDays] = useState([]);
-  // For students: selectedDayId = dayNumber (string from select value)
-  // For teachers: selectedDayId = API day ID (string)
-  const [selectedDayId, setSelectedDayId] = useState(null);
-
-  // For students: loaded syllabus JSON
-  const [currentSyllabus, setCurrentSyllabus] = useState(null);
-
-  // For students: lessonSectionsForPanel = syllabusData.sections
-  // For teachers: lessonSectionsForPanel = API lesson sections results
-  const [lessonSectionsForPanel, setLessonSectionsForPanel] = useState([]);
-
-  // For students: selectedSectionId = section.title from syllabus (string)
-  // For teachers: selectedSectionId = API section ID (string)
-  const [selectedSectionId, setSelectedSectionId] = useState(null);
-
-  // The exercise blocks for the selected section
-  const [currentExerciseBlocks, setCurrentExerciseBlocks] = useState([]);
-
-  // UI State
-  const [isLoading, setIsLoading] = useState(false); // Whether the page is loading data
-  const [error, setError] = useState(null); // Any error that occurred while fetching data
-
-  // --- Effects for Data Fetching ---
-
-  /**
-   * Fetches the available syllabus days for the student role.
-   * This function is memoized to prevent unnecessary re-renders.
-   */
   const memoizedGetAvailableSyllabusDays = useCallback(() => {
     if (selectedRole === 'student' && language) {
       setIsLoading(true);
@@ -77,12 +54,7 @@ const StudyModePage = () => {
     }
   }, [language, selectedRole, t]);
 
-  /**
-   * Fetches the days list based on the selected role.
-   * This effect runs when the selected role, auth token, or translations change.
-   */
   useEffect(() => {
-    // Reset states when role or language changes significantly
     setDays([]);
     setSelectedDayId(null);
     setCurrentSyllabus(null);
@@ -95,7 +67,7 @@ const StudyModePage = () => {
 
     if (selectedRole === 'teacher' && authToken) {
       setIsLoading(true);
-      fetchTeacherDays(authToken) // Use renamed import
+      fetchTeacherDays(authToken)
         .then(data => {
           setDays(data || []);
         })
@@ -105,29 +77,21 @@ const StudyModePage = () => {
         })
         .finally(() => setIsLoading(false));
     }
-  }, [selectedRole, authToken, t, memoizedGetAvailableSyllabusDays]);
+  }, [selectedRole, authToken, t, memoizedGetAvailableSyllabusDays, setSelectedDayId, setSelectedSectionId]);
 
-
-  /**
-   * Loads the lesson sections or the full syllabus content when a day is selected.
-   * This effect runs when the selected role, selected day, days list, auth token, or translations change.
-   */
   useEffect(() => {
-    // Clear previous day's data if selectedDayId is cleared or role changes to one not needing this.
     if (!selectedDayId) {
       setCurrentSyllabus(null);
       setLessonSectionsForPanel([]);
-      setSelectedSectionId(null); // Also clear selected section
-      setCurrentExerciseBlocks([]); // And blocks
+      setSelectedSectionId(null);
+      setCurrentExerciseBlocks([]);
       return;
     }
 
     if (selectedRole === 'student') {
-      // Ensure selectedDayId (string from select) is compared as number to day.dayNumber
       const dayInfo = days.find(d => d.dayNumber === parseInt(selectedDayId));
       if (dayInfo && dayInfo.fileName) {
         setIsLoading(true);
-        // Clear previous day's specific data before fetching new
         setCurrentSyllabus(null);
         setLessonSectionsForPanel([]);
         setSelectedSectionId(null);
@@ -138,16 +102,14 @@ const StudyModePage = () => {
             if (syllabusData) {
               setCurrentSyllabus(syllabusData);
               setLessonSectionsForPanel(syllabusData.sections || []);
-              setError(null); // Clear previous errors
+              setError(null);
             } else {
-              // This case might indicate the file was empty or not valid JSON after all
               throw new Error(`Syllabus data for ${dayInfo.fileName} is null or not structured as expected.`);
             }
           })
           .catch(err => {
             console.error(`Error fetching or processing syllabus file ${dayInfo.fileName}:`, err);
             setError(t('studyModePage.errorFetchingSections', 'Failed to load lesson content for the selected day.'));
-            // Ensure states are reset on error
             setCurrentSyllabus(null);
             setLessonSectionsForPanel([]);
           })
@@ -155,15 +117,14 @@ const StudyModePage = () => {
       }
     } else if (selectedRole === 'teacher' && authToken && selectedDayId) {
       setIsLoading(true);
-      // Clear previous day's specific data before fetching new
       setLessonSectionsForPanel([]);
       setSelectedSectionId(null);
       setCurrentExerciseBlocks([]);
 
-      fetchTeacherLessonSections(authToken, selectedDayId) // Use renamed import for teacher data
+      fetchTeacherLessonSections(authToken, selectedDayId)
         .then(data => {
           setLessonSectionsForPanel(data || []);
-          setError(null); // Clear previous errors
+          setError(null);
         })
         .catch(err => {
           console.error(`Error fetching teacher sections for day ${selectedDayId}:`, err);
@@ -172,30 +133,23 @@ const StudyModePage = () => {
         })
         .finally(() => setIsLoading(false));
     }
-  }, [selectedRole, selectedDayId, days, authToken, t]); // `days` is needed to find fileName for student
+  }, [selectedRole, selectedDayId, days, authToken, t, setSelectedSectionId]);
 
-  /**
-   * Sets the exercise blocks when a section is selected.
-   * This effect runs when the selected role, current syllabus, selected section, auth token, or translations change.
-   */
   useEffect(() => {
-    // Clear blocks if no section is selected or if relevant data is missing
     if (!selectedSectionId) {
-        setCurrentExerciseBlocks([]);
-        return;
+      setCurrentExerciseBlocks([]);
+      return;
     }
 
     if (selectedRole === 'student' && currentSyllabus && currentSyllabus.sections) {
-      // For students, selectedSectionId is the title of the section
       const section = currentSyllabus.sections.find(s => s.title === selectedSectionId);
       setCurrentExerciseBlocks(section?.content_blocks || []);
     } else if (selectedRole === 'teacher' && authToken && selectedSectionId) {
-      // For teachers, selectedSectionId is the API ID of the section
       setIsLoading(true);
-      getTeacherLessonSectionDetails(authToken, selectedSectionId) // Use renamed import for teacher data
+      getTeacherLessonSectionDetails(authToken, selectedSectionId)
         .then(data => {
           setCurrentExerciseBlocks(data.exerciseBlocks || []);
-          setError(null); // Clear previous errors
+          setError(null);
         })
         .catch(err => {
           console.error(`Error fetching teacher section details for section ${selectedSectionId}:`, err);
@@ -204,35 +158,15 @@ const StudyModePage = () => {
         })
         .finally(() => setIsLoading(false));
     } else if (selectedRole === 'student') {
-        // This case handles if currentSyllabus is temporarily null or sections are missing
-        setCurrentExerciseBlocks([]);
+      setCurrentExerciseBlocks([]);
     }
   }, [selectedRole, currentSyllabus, selectedSectionId, authToken, t]);
 
-
-  // --- UI Handlers and Local Storage ---
-
-  /**
-   * Saves the selected role to local storage.
-   * This effect runs when the selected role changes.
-   */
-  useEffect(() => {
-    if (selectedRole) {
-      localStorage.setItem('selectedRole', selectedRole);
-    } else {
-      localStorage.removeItem('selectedRole');
-    }
-  }, [selectedRole]);
-
-  /**
-   * Handles the selection of a role.
-   * This function is memoized to prevent unnecessary re-renders.
-   */
   const handleRoleSelect = useCallback((role) => {
     setSelectedRole(prevRole => {
       const newRole = prevRole === role ? null : role;
-      if (prevRole !== newRole) { // Reset dependent states only if role actually changes
-        setDays([]); // Will be refetched by main data fetching useEffect
+      if (prevRole !== newRole) {
+        setDays([]);
         setSelectedDayId(null);
         setCurrentSyllabus(null);
         setLessonSectionsForPanel([]);
@@ -242,33 +176,22 @@ const StudyModePage = () => {
       }
       return newRole;
     });
-  }, []);
+  }, [setSelectedRole, setSelectedDayId, setSelectedSectionId]);
 
-  /**
-   * Handles the selection of a day.
-   * @param {string} dayIdValue - The ID of the selected day.
-   */
-  const handleDaySelectSmP = (dayIdValue) => { // dayIdValue is dayNumber (string) for students, API ID for teachers
+  const handleDaySelectSmP = (dayIdValue) => {
     setSelectedDayId(dayIdValue);
-    // Reset downstream states as new day selection invalidates current section/blocks
     setSelectedSectionId(null);
     setCurrentExerciseBlocks([]);
     if (selectedRole === 'student') {
-        // currentSyllabus and lessonSectionsForPanel will be reset and refetched by the useEffect dependent on selectedDayId
-        setCurrentSyllabus(null);
-        setLessonSectionsForPanel([]);
+      setCurrentSyllabus(null);
+      setLessonSectionsForPanel([]);
     } else {
-        // For teacher, lessonSectionsForPanel also reset and refetched by its useEffect
-        setLessonSectionsForPanel([]);
+      setLessonSectionsForPanel([]);
     }
     window.dispatchEvent(new CustomEvent('dayChange', { detail: { selectedDayId: dayIdValue } }));
   };
 
-  /**
-   * Handles the selection of a section.
-   * @param {string} sectionIdentifier - The identifier of the selected section.
-   */
-  const handleSectionSelectSmP = (sectionIdentifier) => { // sectionIdentifier is title for student, ID for teacher
+  const handleSectionSelectSmP = (sectionIdentifier) => {
     setSelectedSectionId(sectionIdentifier);
     const mainContentPanel = document.getElementById('main-content-panel');
     if (mainContentPanel) {
@@ -276,23 +199,17 @@ const StudyModePage = () => {
     }
   };
 
-  /**
-   * Renders the day selector based on the selected role.
-   * @returns {JSX.Element|null} The day selector component or null.
-   */
   const renderStudentDaySelector = () => {
-    // Common label for day selection
     const daySelectLabel = <TransliterableText text={t('studyModePage.selectDayLabel', 'Select Day:')} />;
 
     if (selectedRole === 'student') {
-      // `days` for students is { dayNumber, lessonName, fileName }[]
       if (days.length > 0) {
         return (
           <div className="study-menu-section">
             <label htmlFor="smp-student-day-select">{daySelectLabel}</label>
             <select
               id="smp-student-day-select"
-              value={selectedDayId || ""} // selectedDayId is dayNumber (string)
+              value={selectedDayId || ""}
               onChange={(e) => handleDaySelectSmP(e.target.value)}
               disabled={isLoading}
             >
@@ -305,18 +222,17 @@ const StudyModePage = () => {
             </select>
           </div>
         );
-      } else if (!isLoading && !error) { // Show message if no days and not loading/error
-          return <div className="study-menu-section"><p>{t('studyModePage.noSyllabusDays', 'No syllabus days found for this language.')}</p></div>;
+      } else if (!isLoading && !error) {
+        return <div className="study-menu-section"><p>{t('studyModePage.noSyllabusDays', 'No syllabus days found for this language.')}</p></div>;
       }
     } else if (selectedRole === 'teacher') {
-      // `days` for teachers is API day objects {id, title}
       if (days.length > 0) {
         return (
-           <div className="study-menu-section">
+          <div className="study-menu-section">
             <label htmlFor="smp-teacher-day-select">{daySelectLabel}</label>
             <select
               id="smp-teacher-day-select"
-              value={selectedDayId || ""} // selectedDayId is API day ID
+              value={selectedDayId || ""}
               onChange={(e) => handleDaySelectSmP(e.target.value)}
               disabled={isLoading}
             >
@@ -329,12 +245,10 @@ const StudyModePage = () => {
             </select>
           </div>
         );
-      } else if (!isLoading && !error) { // Show message if no days and not loading/error
-          return <div className="study-menu-section"><p>{t('studyModePage.noTeacherDays', 'No days configured by teacher yet.')}</p></div>;
+      } else if (!isLoading && !error) {
+        return <div className="study-menu-section"><p>{t('studyModePage.noTeacherDays', 'No days configured by teacher yet.')}</p></div>;
       }
     }
-    // If still loading initially, or error state, the main loading/error message will cover it.
-    // Or, if selectedRole is null, nothing is rendered here.
     return null;
   };
 
@@ -359,7 +273,7 @@ const StudyModePage = () => {
 
       <div className="study-menu-section">
         <label htmlFor="role-selector-buttons" id="study-choose-role-label">
-            <TransliterableText text={t('studyMode.chooseRoleLabel', '👤 Choose Your Role:')} />
+          <TransliterableText text={t('studyMode.chooseRoleLabel', '👤 Choose Your Role:')} />
         </label>
         <RoleSelector onSelectRole={handleRoleSelect} currentRole={selectedRole} />
       </div>
@@ -367,9 +281,8 @@ const StudyModePage = () => {
       {renderStudentDaySelector()}
 
       {error && <p className="error-message" role="alert">{error}</p>}
-      {/* More specific loading message handling: show only if role is selected & no days yet & not an error state */}
       {isLoading && selectedRole && (!days || days.length === 0) && !error && (
-          <p role="status"><TransliterableText text={t('loading', 'Loading...')} /></p>
+        <p role="status"><TransliterableText text={t('loading', 'Loading...')} /></p>
       )}
 
       <div className="study-content-area">
@@ -389,14 +302,14 @@ const StudyModePage = () => {
                   selectedSectionId={selectedSectionId}
                   isStudentMode={selectedRole === 'student'}
                 />
-              ) : selectedDayId && !isLoading && !error ? ( // Day selected, but no sections (or still loading them if isLoading was true)
+              ) : selectedDayId && !isLoading && !error ? (
                 <p>
                   {selectedRole === 'student'
                     ? t('studyModePage.noSectionsInSyllabus', 'No sections found in the syllabus for this day.')
                     : t('studyModePage.noSectionsForTeacherDay', 'No sections configured for this day yet.')
                   }
                 </p>
-              ) : ( // No day selected, but role is active and days are loaded (or were attempted to load)
+              ) : (
                 selectedRole && !isLoading && days && days.length > 0 && !error && (
                   <p>
                     {selectedRole === 'student'
@@ -406,11 +319,9 @@ const StudyModePage = () => {
                   </p>
                 )
               )}
-              {/* This covers the case where days list itself is empty after attempting to load and no day is selected */}
               {!isLoading && (!days || days.length === 0) && selectedRole && !error && !selectedDayId && (
-                 <p>
-                  {/* Message handled by renderStudentDaySelector or a general "no data" message if needed here */}
-                 </p>
+                <p>
+                </p>
               )}
             </div>
             <div className="layout-center-panel" id="main-content-panel">
