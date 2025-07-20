@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/COSYlanguagesproject/static/css/main.a5bf3626.css",
-    "main.js": "/COSYlanguagesproject/static/js/main.e8c620aa.js",
+    "main.css": "/COSYlanguagesproject/static/css/main.336a4400.css",
+    "main.js": "/COSYlanguagesproject/static/js/main.1d633b1b.js",
     "sw.js": "/COSYlanguagesproject/static/js/sw.415d2ca5.js",
-    "study.css": "/COSYlanguagesproject/static/css/study.0efaaf8d.css",
-    "study.js": "/COSYlanguagesproject/static/js/study.caec279c.js",
-    "studyIslands.js": "/COSYlanguagesproject/static/js/studyIslands.ddf031f1.js",
-    "freestyle.css": "/COSYlanguagesproject/static/css/freestyle.30dfdad6.css",
-    "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.15af1b29.js",
+    "study.css": "/COSYlanguagesproject/static/css/study.c03d6a02.css",
+    "study.js": "/COSYlanguagesproject/static/js/study.48f87618.js",
+    "studyIslands.js": "/COSYlanguagesproject/static/js/studyIslands.68dbc126.js",
+    "freestyle.css": "/COSYlanguagesproject/static/css/freestyle.281e8847.css",
+    "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.580b37aa.js",
     "study-ba.js": "/COSYlanguagesproject/static/js/study-ba.31d6cfe0.js",
     "study-br.js": "/COSYlanguagesproject/static/js/study-br.31d6cfe0.js",
     "study-de.js": "/COSYlanguagesproject/static/js/study-de.31d6cfe0.js",
@@ -20,9 +20,6 @@
     "study-pt.js": "/COSYlanguagesproject/static/js/study-pt.31d6cfe0.js",
     "study-ru.js": "/COSYlanguagesproject/static/js/study-ru.31d6cfe0.js",
     "study-tt.js": "/COSYlanguagesproject/static/js/study-tt.31d6cfe0.js",
-    "static/js/815.fdc6dde6.chunk.js": "/COSYlanguagesproject/static/js/815.fdc6dde6.chunk.js",
-    "static/js/197.f90b27c5.chunk.js": "/COSYlanguagesproject/static/js/197.f90b27c5.chunk.js",
-    "static/js/318.830bb1ba.chunk.js": "/COSYlanguagesproject/static/js/318.830bb1ba.chunk.js",
     "static/media/Flag_of_Brittany.png": "/COSYlanguagesproject/static/media/Flag_of_Brittany.84b981fe6c89698ceeab.png",
     "static/media/Flag_of_Bashkortostan.png": "/COSYlanguagesproject/static/media/Flag_of_Bashkortostan.1cd8a83298aaa54ba536.png",
     "static/media/Flag_of_Tatarstan.png": "/COSYlanguagesproject/static/media/Flag_of_Tatarstan.99455ff699f291d20b27.png",
@@ -43,20 +40,17 @@
     "404.html": "/COSYlanguagesproject/404.html",
     "freestyle.html": "/COSYlanguagesproject/freestyle.html",
     "study-islands.html": "/COSYlanguagesproject/study-islands.html",
-    "main.a5bf3626.css.map": "/COSYlanguagesproject/static/css/main.a5bf3626.css.map",
-    "main.e8c620aa.js.map": "/COSYlanguagesproject/static/js/main.e8c620aa.js.map",
+    "main.336a4400.css.map": "/COSYlanguagesproject/static/css/main.336a4400.css.map",
+    "main.1d633b1b.js.map": "/COSYlanguagesproject/static/js/main.1d633b1b.js.map",
     "sw.415d2ca5.js.map": "/COSYlanguagesproject/static/js/sw.415d2ca5.js.map",
-    "study.0efaaf8d.css.map": "/COSYlanguagesproject/static/css/study.0efaaf8d.css.map",
-    "study.caec279c.js.map": "/COSYlanguagesproject/static/js/study.caec279c.js.map",
-    "studyIslands.ddf031f1.js.map": "/COSYlanguagesproject/static/js/studyIslands.ddf031f1.js.map",
-    "freestyle.30dfdad6.css.map": "/COSYlanguagesproject/static/css/freestyle.30dfdad6.css.map",
-    "freestyle.15af1b29.js.map": "/COSYlanguagesproject/static/js/freestyle.15af1b29.js.map",
-    "815.fdc6dde6.chunk.js.map": "/COSYlanguagesproject/static/js/815.fdc6dde6.chunk.js.map",
-    "197.f90b27c5.chunk.js.map": "/COSYlanguagesproject/static/js/197.f90b27c5.chunk.js.map",
-    "318.830bb1ba.chunk.js.map": "/COSYlanguagesproject/static/js/318.830bb1ba.chunk.js.map"
+    "study.c03d6a02.css.map": "/COSYlanguagesproject/static/css/study.c03d6a02.css.map",
+    "study.48f87618.js.map": "/COSYlanguagesproject/static/js/study.48f87618.js.map",
+    "studyIslands.68dbc126.js.map": "/COSYlanguagesproject/static/js/studyIslands.68dbc126.js.map",
+    "freestyle.281e8847.css.map": "/COSYlanguagesproject/static/css/freestyle.281e8847.css.map",
+    "freestyle.580b37aa.js.map": "/COSYlanguagesproject/static/js/freestyle.580b37aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5bf3626.css",
-    "static/js/main.e8c620aa.js"
+    "static/css/main.336a4400.css",
+    "static/js/main.1d633b1b.js"
   ]
 }
