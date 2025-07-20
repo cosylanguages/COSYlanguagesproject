@@ -1,0 +1,30 @@
+.language-pet-container {
+  background-color: #e6f7ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.language-pet-container h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.pet-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.pet-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.pet-level {
+  color: #666;
+}
