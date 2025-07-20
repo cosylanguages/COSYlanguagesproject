@@ -1,0 +1,19 @@
+.virtual-tutor-teacher-view {
+    padding: 20px;
+}
+
+.availability-form {
+    margin-bottom: 20px;
+}
+
+.availability-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.availability-list li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}

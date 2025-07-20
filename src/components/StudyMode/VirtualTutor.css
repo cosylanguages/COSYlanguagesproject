@@ -1,0 +1,19 @@
+.virtual-tutor {
+    padding: 20px;
+}
+
+.scheduler {
+    margin-bottom: 20px;
+}
+
+.sessions-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sessions-list li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
