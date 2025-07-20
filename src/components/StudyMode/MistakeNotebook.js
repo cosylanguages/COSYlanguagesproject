@@ -16,9 +16,11 @@ const MistakeNotebook = () => {
                 <ul>
                     {mistakes.map((mistake, index) => (
                         <li key={index}>
-                            <p><strong>Exercise:</strong> {mistake.exercise}</p>
+                            <p><strong>Type:</strong> {mistake.type}</p>
+                            <p><strong>Question:</strong> {mistake.question}</p>
                             <p><strong>Your Answer:</strong> {mistake.userAnswer}</p>
                             <p><strong>Correct Answer:</strong> {mistake.correctAnswer}</p>
+                            <p><strong>Timestamp:</strong> {new Date(mistake.timestamp).toLocaleString()}</p>
                         </li>
                     ))}
                 </ul>
