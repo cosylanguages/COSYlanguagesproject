@@ -16,7 +16,7 @@ export const FreestyleProvider = ({ children }) => {
   useEffect(() => {
     const pathParts = location.pathname.split('/').filter(Boolean);
     if (pathParts[0] === 'freestyle' && pathParts.length > 1) {
-      const [_, lang, days, exercise] = pathParts;
+      const [lang, days, exercise] = pathParts.slice(1);
       if (lang) setSelectedLanguage(lang);
       if (days) setSelectedDays(days.split(','));
       if (exercise) setSelectedExercise({ exercise, key: `${lang}-${days}-${exercise}` });
