@@ -8,6 +8,7 @@ import { I18nProvider } from './i18n/I18nContext';
 import { LatinizationProvider } from './contexts/LatinizationContext';
 import { UserProfileProvider } from './contexts/UserProfileContext'; // Added UserProfileProvider
 import { FreestyleProvider } from './contexts/FreestyleContext';
+import { StudyProvider } from './contexts/StudyContext';
 import './index.css';
 import './components/Common/animations.css';
 
@@ -25,7 +26,9 @@ if (rootElement) {
               <UserProfileProvider>
                 <PlanProvider>
                   <FreestyleProvider>
-                    <AppRoutes />
+                    <StudyProvider>
+                      <AppRoutes />
+                    </StudyProvider>
                   </FreestyleProvider>
                 </PlanProvider>
               </UserProfileProvider>
