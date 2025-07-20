@@ -5,6 +5,12 @@ import MistakeNotebook from '../../components/StudyMode/MistakeNotebook';
 import GrammarReview from '../../components/StudyMode/GrammarReview';
 import VirtualTutor from '../../components/StudyMode/VirtualTutor';
 import SmartReview from '../../components/StudyMode/SmartReview';
+import TodaysFocus from '../../components/Personalization/TodaysFocus';
+import MyLearningGarden from '../../components/Gamification/MyLearningGarden';
+import CosyCorner from '../../components/Community/CosyCorner';
+import LanguagePet from '../../components/Gamification/LanguagePet';
+import SouvenirCollection from '../../components/Gamification/SouvenirCollection';
+import CosyStreaks from '../../components/Gamification/CosyStreaks';
 
 // Import the centralized displayComponentMap
 import { displayComponentMap } from '../../components/StudyMode/common/displayComponentMap';
@@ -51,6 +57,14 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
 
   return (
     <div className="student-dashboard-container">
+      <div className="cosy-dashboard">
+        <TodaysFocus />
+        <MyLearningGarden />
+        <CosyCorner />
+        <LanguagePet />
+        <SouvenirCollection />
+        <CosyStreaks />
+      </div>
       <div className="lesson-header">
         {/* TODO: Display actual lesson name from syllabus if available */}
         <h2><TransliterableText text={t('studyMode.lessonTitlePlaceholder', 'Current Lesson')} /></h2>

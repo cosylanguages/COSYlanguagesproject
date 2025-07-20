@@ -1,5 +1,12 @@
 /* StudentDashboard.css */
 
+.cosy-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
 .student-dashboard-container {
   padding: var(--spacing-sm, 0.5rem); /* Reduced padding as parent provides some */
   text-align: left; 
