@@ -5,7 +5,7 @@ import { useAuth } from './contexts/AuthContext';
 import { useI18n } from './i18n/I18nContext';
 import Layout from './components/Layout/Layout';
 import Login from './components/Auth/Login';
-import StudyModePage from './pages/StudyModePage/StudyModePage';
+import StudyRoutes from './StudyRoutes';
 // FreestyleModePage is no longer imported or used here
 import MyStudySetsPage from './pages/MyStudySetsPage/MyStudySetsPage'; // Import MyStudySetsPage
 import FreestyleModePage from './pages/FreestyleModePage/FreestyleModePage';
@@ -61,8 +61,7 @@ function App() {
                 <Route path="community" element={<CommunityPage />} />
                 <Route path="study-tools" element={<StudyToolsPage />} />
                 <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
-                <Route path="study" element={<Navigate to="/study/en" replace />} />
-                <Route path="study/:lang" element={<StudyModePage />} />
+                <Route path="study/*" element={<StudyRoutes />} />
                 <Route
                   path="my-sets"
                   element={
