@@ -1,37 +1,40 @@
 .interactive-story {
-    padding: 20px;
-    background-color: #fffde7;
-    border: 1px solid #fff9c4;
-    border-radius: 8px;
-    margin-top: 20px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    margin-top: 30px;
   }
 
   .interactive-story h3 {
     text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+    font-size: 1.8em;
   }
 
   .interactive-story p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #555;
+    font-size: 1.3em;
+    line-height: 1.7;
+    color: #6a6a6a;
+    text-align: center;
   }
 
   .choices {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
   }
 
   .choices button {
-    background-color: #ffca28;
-    color: #333;
-    padding: 10px 15px;
+    background-color: #ffd54f;
+    color: #fff;
+    padding: 12px 25px;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
 
   .choices button:hover {
