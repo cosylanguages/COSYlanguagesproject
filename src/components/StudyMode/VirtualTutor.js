@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './VirtualTutor.css';
 
 const VirtualTutor = () => {
@@ -7,7 +7,7 @@ const VirtualTutor = () => {
     const [bot, setBot] = useState(null);
     const [personality, setPersonality] = useState('cheerful');
 
-    const personalities = {
+    const personalities = useMemo(() => ({
         cheerful: {
             greeting: 'Hello! I am your cheerful tutor. How can I help you today?',
             avatar: '😊',
@@ -20,7 +20,7 @@ const VirtualTutor = () => {
             greeting: "Hey there! I'm your quirky tutor. Let's learn some stuff!",
             avatar: '🤪',
         },
-    };
+    }), []);
 
     useEffect(() => {
         const rive = new window.RiveScript();
@@ -29,7 +29,7 @@ const VirtualTutor = () => {
             setBot(rive);
             setMessages([{ text: personalities[personality].greeting, sender: 'tutor' }]);
         });
-    }, [personality]);
+    }, [personality, personalities]);
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
