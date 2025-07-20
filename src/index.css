@@ -149,17 +149,20 @@ h4 { font-size: var(--font-size-h4); }
 }
 
 .btn-primary {
-  color: var(--color-text-on-dark);
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: var(--text-color-light);
+  background-color: #0abbb5;
+  border-color: #0abbb5;
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
   color: var(--text-color-light);
-  background-color: var(--primary-hover-color);
-  border-color: var(--primary-hover-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #089a95;
+  border-color: #089a95;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary:active {
