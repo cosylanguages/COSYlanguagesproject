@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Modal from '../Common/Modal';
 import { getWritingFeedback } from '../../utils/ai/writingFeedback';
 import './WritingHelper.css';
 
@@ -6,16 +7,24 @@ const WritingHelper = () => {
     const [text, setText] = useState('');
     const [feedback, setFeedback] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleTextChange = (e) => {
         setText(e.target.value);
     };
 
-    const getFeedback = async () => {
-        setIsLoading(true);
-        const aiFeedback = await getWritingFeedback(text);
-        setFeedback(aiFeedback);
-        setIsLoading(false);
+    const getFeedback = () => {
+        const hardcodedFeedback = [
+            { type: 'grammar', message: "Consider using a stronger verb in the first sentence." },
+            { type: 'style', message: "The second paragraph could be more concise." },
+            { type: 'spelling', message: "Check the spelling of 'accommodate'." },
+        ];
+        setFeedback(hardcodedFeedback);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
     };
 
     return (
@@ -30,7 +39,7 @@ const WritingHelper = () => {
                 Get Feedback
             </button>
             {isLoading && <p>Getting feedback...</p>}
-            {feedback.length > 0 && (
+            <Modal isOpen={isModalOpen} onClose={closeModal}>
                 <div className="feedback">
                     <h3>Feedback:</h3>
                     <ul>
@@ -41,7 +50,7 @@ const WritingHelper = () => {
                         ))}
                     </ul>
                 </div>
-            )}
+            </Modal>
         </div>
     );
 };
