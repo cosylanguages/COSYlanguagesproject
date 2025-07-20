@@ -43,7 +43,7 @@ import InterestingFactExercise from './exercises/reading/InterestingFactExercise
 import SpeakingQuestionExercise from './exercises/speaking/SpeakingQuestionExercise';
 import MonologueExercise from './exercises/speaking/MonologueExercise';
 import RolePlayExercise from './exercises/speaking/RolePlayExercise';
-import ShadowingExercise from '../../StudyMode/ShadowingExercise';
+import ShadowingExercise from '../StudyMode/ShadowingExercise';
 
 // Writing Exercise Components
 import WritingQuestionExercise from './exercises/writing/WritingQuestionExercise';
