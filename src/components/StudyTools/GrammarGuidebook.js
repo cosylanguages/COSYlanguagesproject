@@ -1,4 +1,5 @@
 import React from 'react';
+import './GrammarGuidebook.css';
 
 const GrammarGuidebook = ({ guidebook }) => {
   if (!guidebook) {
