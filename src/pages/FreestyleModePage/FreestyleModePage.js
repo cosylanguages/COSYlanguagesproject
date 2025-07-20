@@ -6,7 +6,6 @@ import { LatinizationProvider } from '../../contexts/LatinizationContext';
 import { LanguageIslandWrapper, DaySelectorIslandWrapper, PracticeNavIslandWrapper, ExerciseHostIslandWrapper, HelpPopupIslandWrapper } from '../../islands/freestyleIslandsEntry';
 import FreestyleProgress from '../../components/Freestyle/FreestyleProgress';
 import BoosterPackOfTheWeek from '../../components/Freestyle/BoosterPackOfTheWeek';
-import ThemedBoosterPacks from '../../components/Freestyle/ThemedBoosterPacks';
 import WordCloud from '../../components/Freestyle/WordCloud';
 import SessionSummary from '../../components/Freestyle/SessionSummary';
 import '../../freestyle-shared.css';
@@ -162,7 +161,6 @@ const FreestyleModePage = () => {
             <h1 className="freestyle-mode-header">Freestyle Mode</h1>
 
             <BoosterPackOfTheWeek />
-            <ThemedBoosterPacks />
 
             <FreestyleProgress />
 
