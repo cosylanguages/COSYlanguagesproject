@@ -90,13 +90,46 @@ h4 { font-size: var(--font-size-h4); }
     --success-bg: #d4edda;
     --success-text: #155724;
     --success-border: #c3e6cb;
-    --error-bg: #f8d7da;
-    --error-text: #721c24;
-    --error-border: #f5c6cb;
+    --error-bg: #fbeae5;
+    --error-text: #c0392b;
+    --error-border: #e74c3c;
     --font-size-small: 0.85rem;
     --font-size-normal: 1rem;
     --font-size-large: 1.15rem;
     --spacing-unit: 10px;
+    --color-background: #fdfcfa;
+    --color-text-primary: #4a4a4a;
+    --color-text-secondary: #888;
+    --color-text-headings: #5a5a5a;
+    --color-primary: #0abbb5;
+    --color-primary-dark: #089a95;
+    --color-primary-light: #e6fffa;
+    --color-secondary: #6c757d;
+    --color-secondary-dark: #5a6268;
+    --color-danger: #dc3545;
+    --color-danger-text: #721c24;
+    --color-danger-bg: #f8d7da;
+    --color-danger-border: #f5c6cb;
+    --color-warning: #ffc107;
+    --color-info: #17a2b8;
+    --color-surface-light: #f8f9fa;
+    --color-surface-medium: #e9ecef;
+    --color-border: #dee2e6;
+    --color-border-light: #f0f0f0;
+    --color-link: #007bff;
+    --color-link-hover: #0056b3;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
+    --shadow-lg: 0 15px 35px rgba(0,0,0,0.2);
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2.5rem;
 }
 
 /* Entry Animations */
@@ -354,4 +387,15 @@ h4 { font-size: var(--font-size-h4); }
   font-style: italic;
   /* font-family: 'Arial', sans-serif; /* Example: Optional: use a different font for better readability of transliteration */
   /* color: #555; /* Example: Optional: slightly different color for latinized text */
+}
+
+.error-message {
+  color: #c0392b;
+  background-color: #fbeae5;
+  border: 1px solid #e74c3c;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1em;
 }
