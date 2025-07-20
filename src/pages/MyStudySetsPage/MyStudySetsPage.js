@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-// Outlet removed as it's unused
+import React, { useEffect } from 'react';
 import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import StudySetList from '../../components/StudySets/StudySetList';
 import StudySetEditor from '../../components/StudySets/StudySetEditor';
@@ -7,98 +6,84 @@ import FlashcardEditor from '../../components/StudySets/FlashcardEditor';
 import FlashcardPlayer from '../../components/StudyMode/StudentTools/FlashcardPlayer';
 import { getStudySetById } from '../../utils/studySetService';
 import { useI18n } from '../../i18n/I18nContext';
+import { useStudySet } from '../../contexts/StudySetContext';
 import './MyStudySetsPage.css';
 
 const MyStudySetsPage = () => {
   const { t } = useI18n();
   const navigate = useNavigate();
-  const location = useLocation(); // To determine current view based on path
-  const params = useParams();     // To get :setId if present
+  const location = useLocation();
+  const params = useParams();
+  const { selectedSetId, setSelectedSetId, currentView, setCurrentView } = useStudySet();
 
-  // Determine current view and selectedSetId from URL (or props if not using full nested routes yet)
-  // This logic will become simpler when full nested routing renders components directly.
-  // For now, we simulate view switching based on path, preparing for Outlet.
-
-  let currentView = 'list';
-  let viewSetId = params.setId || null; // If :setId is in the path
-
-  if (location.pathname.endsWith('/new')) {
-    currentView = 'editSet';
-    viewSetId = null; // Explicitly null for new
-  } else if (location.pathname.includes('/edit')) { // Covers /:setId/edit
-    currentView = 'editSet';
-  } else if (location.pathname.includes('/cards')) { // Covers /:setId/cards
-    currentView = 'editCards';
-  } else if (location.pathname.includes('/study')) { // Covers /:setId/study
-    currentView = 'studyPlayer';
-  }
-
-  const [selectedSetIdForPlayer, setSelectedSetIdForPlayer] = useState(null);
-  const [setForPlayer, setSetForPlayer] = useState(null);
-
-  // Effect to load data for player when viewSetId and currentView indicate studyPlayer
   useEffect(() => {
-    if (currentView === 'studyPlayer' && viewSetId) {
-      const setToPlay = getStudySetById(viewSetId);
-      if (setToPlay) {
-        setSetForPlayer(setToPlay);
-        setSelectedSetIdForPlayer(viewSetId);
-      } else {
-        alert(t('myStudySetsPage.errorSetNotFoundForPlayer', 'Could not find the set to study.'));
-        navigate('/my-sets'); // Go back to list if set not found
-      }
-    } else {
-      setSetForPlayer(null); // Clear if not in studyPlayer view
-      setSelectedSetIdForPlayer(null);
+    const pathParts = location.pathname.split('/').filter(Boolean);
+    const view = pathParts[pathParts.length - 1];
+    const setId = params.setId;
+
+    if (setId) {
+      setSelectedSetId(setId);
     }
-  }, [currentView, viewSetId, navigate, t]);
 
+    if (view === 'new') {
+      setCurrentView('editSet');
+    } else if (view === 'edit') {
+      setCurrentView('editSet');
+    } else if (view === 'cards') {
+      setCurrentView('editCards');
+    } else if (view === 'study') {
+      setCurrentView('studyPlayer');
+    } else {
+      setCurrentView('list');
+    }
+  }, [location, params.setId, setSelectedSetId, setCurrentView]);
 
-  // --- Navigation Handlers ---
-  const showListView = () => navigate('/my-sets');
   const handleCreateNewSet = () => navigate('/my-sets/new');
   const handleEditSetDetails = (setId) => navigate(`/my-sets/${setId}/edit`);
   const handleEditSetCards = (setId) => navigate(`/my-sets/${setId}/cards`);
   const handleLaunchStudyPlayer = (setId) => navigate(`/my-sets/${setId}/study`);
+  const showListView = () => navigate('/my-sets');
 
-  // --- Callbacks from Editors ---
   const onSetSaved = (savedSetId) => {
-    // After saving set details (new or edit), proceed to card editor for that set
     handleEditSetCards(savedSetId);
   };
   const onSetEditorCancelled = () => showListView();
-  const onCardEditorFinished = () => showListView(); // Or navigate to set details: handleEditSetDetails(viewSetId)
+  const onCardEditorFinished = () => showListView();
   const onPlayerExit = () => showListView();
-
 
   let content;
   if (currentView === 'editSet') {
     content = (
       <StudySetEditor
-        key={viewSetId || 'new-set-editor'}
-        setIdProp={viewSetId} // Use viewSetId derived from URL/path
+        key={selectedSetId || 'new-set-editor'}
+        setIdProp={selectedSetId}
         onSetSaved={onSetSaved}
         onCancel={onSetEditorCancelled}
       />
     );
-  } else if (currentView === 'editCards' && viewSetId) {
+  } else if (currentView === 'editCards' && selectedSetId) {
     content = (
       <FlashcardEditor
-        setId={viewSetId}
+        setId={selectedSetId}
         onFinished={onCardEditorFinished}
       />
     );
-  } else if (currentView === 'studyPlayer' && setForPlayer) {
-    content = (
-      <FlashcardPlayer
-        studySetId={selectedSetIdForPlayer}
-        initialSetData={setForPlayer}
-        onExitPlayer={onPlayerExit}
-        source="student"
-      />
-    );
-  }
-  else { // Default to 'list' view, or if path is just /my-sets
+  } else if (currentView === 'studyPlayer' && selectedSetId) {
+    const setForPlayer = getStudySetById(selectedSetId);
+    if (setForPlayer) {
+      content = (
+        <FlashcardPlayer
+          studySetId={selectedSetId}
+          initialSetData={setForPlayer}
+          onExitPlayer={onPlayerExit}
+          source="student"
+        />
+      );
+    } else {
+      alert(t('myStudySetsPage.errorSetNotFoundForPlayer', 'Could not find the set to study.'));
+      showListView();
+    }
+  } else {
     content = (
       <StudySetList
         onCreateNew={handleCreateNewSet}
@@ -112,13 +97,11 @@ const MyStudySetsPage = () => {
   return (
     <div className="my-study-sets-page">
       <h1>{t('myStudySetsPage.title', 'Manage Your Study Sets')}</h1>
-      {/* This button might be redundant if using browser back button with proper routing */}
       {currentView !== 'list' && (
         <button onClick={showListView} className="btn btn-secondary back-to-list-btn">
           {t('myStudySetsPage.backToList', '← Back to Set List')}
         </button>
       )}
-      {/* If fully using nested routes, <Outlet /> would go here instead of {content} */}
       {content}
     </div>
   );
