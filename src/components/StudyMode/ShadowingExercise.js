@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import { getPronunciationFeedback } from '../../utils/ai/pronunciationFeedback';
 import './ShadowingExercise.css';
 
 const ShadowingExercise = ({ audioSrc, transcript }) => {
     const [feedback, setFeedback] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
     const {
         transcript: userTranscript,
         listening,
@@ -24,26 +26,18 @@ const ShadowingExercise = ({ audioSrc, transcript }) => {
         }
     };
 
-    const compareTranscripts = useCallback(() => {
-        const originalWords = transcript.split(' ');
-        const userWords = userTranscript.split(' ');
-        const newFeedback = [];
-
-        originalWords.forEach((word, index) => {
-            if (userWords[index] === word) {
-                newFeedback.push({ word, isCorrect: true });
-            } else {
-                newFeedback.push({ word, isCorrect: false });
-            }
-        });
-        setFeedback(newFeedback);
-    }, [transcript, userTranscript]);
+    const getFeedback = useCallback(async () => {
+        setIsLoading(true);
+        const aiFeedback = await getPronunciationFeedback(userTranscript);
+        setFeedback(aiFeedback);
+        setIsLoading(false);
+    }, [userTranscript]);
 
     useEffect(() => {
         if (!listening && userTranscript) {
-            compareTranscripts();
+            getFeedback();
         }
-    }, [listening, userTranscript, compareTranscripts]);
+    }, [listening, userTranscript, getFeedback]);
 
     if (!browserSupportsSpeechRecognition) {
         return <span>Browser doesn't support speech recognition.</span>;
@@ -53,7 +47,10 @@ const ShadowingExercise = ({ audioSrc, transcript }) => {
         <div className="shadowing-exercise">
             <h2>Shadowing Exercise</h2>
             <p>
-                <strong>Original Transcript:</strong>
+                <strong>Original Transcript:</strong> {transcript}
+            </p>
+            <p>
+                <strong>Your Pronunciation:</strong>
                 {feedback.map((item, index) => (
                     <span key={index} className={item.isCorrect ? 'correct' : 'incorrect'}>
                         {item.word}{' '}
@@ -61,9 +58,10 @@ const ShadowingExercise = ({ audioSrc, transcript }) => {
                 ))}
             </p>
             <p><strong>Your Transcript:</strong> {userTranscript}</p>
-            <button onClick={handleListen}>
+            <button onClick={handleListen} disabled={isLoading}>
                 {listening ? 'Stop' : 'Start'}
             </button>
+            {isLoading && <p>Getting feedback...</p>}
         </div>
     );
 };

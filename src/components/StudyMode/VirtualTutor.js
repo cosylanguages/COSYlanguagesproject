@@ -2,42 +2,47 @@ import React, { useState } from 'react';
 import './VirtualTutor.css';
 
 const VirtualTutor = () => {
-    const [sessions, setSessions] = useState([]);
-    const [selectedDate, setSelectedDate] = useState(new Date());
-    const [selectedTime, setSelectedTime] = useState('');
+    const [messages, setMessages] = useState([
+        { text: 'Hello! I am your virtual tutor. How can I help you today?', sender: 'tutor' }
+    ]);
+    const [inputValue, setInputValue] = useState('');
 
-    const handleSchedule = () => {
-        if (selectedTime) {
-            setSessions([...sessions, { date: selectedDate, time: selectedTime }]);
-            setSelectedTime('');
-        }
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
+    const handleSendMessage = () => {
+        if (inputValue.trim() === '') return;
+
+        const newMessages = [...messages, { text: inputValue, sender: 'user' }];
+        setMessages(newMessages);
+        setInputValue('');
+
+        // Mock tutor response
+        setTimeout(() => {
+            const tutorResponse = { text: 'That is a great question! Let me explain...', sender: 'tutor' };
+            setMessages([...newMessages, tutorResponse]);
+        }, 1000);
     };
 
     return (
         <div className="virtual-tutor">
-            <h2>Virtual Tutor Sessions</h2>
-            <div className="scheduler">
-                <input
-                    type="date"
-                    value={selectedDate.toISOString().split('T')[0]}
-                    onChange={(e) => setSelectedDate(new Date(e.target.value))}
-                />
-                <input
-                    type="time"
-                    value={selectedTime}
-                    onChange={(e) => setSelectedTime(e.target.value)}
-                />
-                <button onClick={handleSchedule}>Schedule</button>
+            <h2>Virtual Tutor</h2>
+            <div className="messages">
+                {messages.map((message, index) => (
+                    <div key={index} className={`message ${message.sender}`}>
+                        {message.text}
+                    </div>
+                ))}
             </div>
-            <div className="sessions-list">
-                <h3>Upcoming Sessions</h3>
-                <ul>
-                    {sessions.map((session, index) => (
-                        <li key={index}>
-                            {session.date.toLocaleDateString()} at {session.time}
-                        </li>
-                    ))}
-                </ul>
+            <div className="input-area">
+                <input
+                    type="text"
+                    value={inputValue}
+                    onChange={handleInputChange}
+                    placeholder="Ask a question..."
+                />
+                <button onClick={handleSendMessage}>Send</button>
             </div>
         </div>
     );
