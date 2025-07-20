@@ -4,6 +4,7 @@ import TransliterableText from '../../components/Common/TransliterableText';
 import MistakeNotebook from '../../components/StudyMode/MistakeNotebook';
 import GrammarReview from '../../components/StudyMode/GrammarReview';
 import VirtualTutor from '../../components/StudyMode/VirtualTutor';
+import SmartReview from '../../components/StudyMode/SmartReview';
 
 // Import the centralized displayComponentMap
 import { displayComponentMap } from '../../components/StudyMode/common/displayComponentMap';
@@ -19,6 +20,7 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
   const [isMistakeNotebookVisible, setIsMistakeNotebookVisible] = useState(false);
   const [isGrammarReviewVisible, setIsGrammarReviewVisible] = useState(false);
   const [isVirtualTutorVisible, setIsVirtualTutorVisible] = useState(false);
+  const [isSmartReviewVisible, setIsSmartReviewVisible] = useState(false);
   
   const handleNavigateBlock = (direction, currentIndex) => {
     let targetIndex;
@@ -55,11 +57,13 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
         <button onClick={() => setIsMistakeNotebookVisible(true)}>Mistake Notebook</button>
         <button onClick={() => setIsGrammarReviewVisible(true)}>Grammar Review</button>
         <button onClick={() => setIsVirtualTutorVisible(true)}>Virtual Tutor</button>
+        <button onClick={() => setIsSmartReviewVisible(true)}>Smart Review</button>
       </div>
       
       {isMistakeNotebookVisible && <MistakeNotebook />}
       {isGrammarReviewVisible && <GrammarReview />}
       {isVirtualTutorVisible && <VirtualTutor />}
+      {isSmartReviewVisible && <SmartReview userId="123" />}
 
       <div className="lesson-content-student-view">
         {lessonBlocks.map((block, index) => {
