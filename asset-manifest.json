@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/COSYlanguagesproject/static/css/main.34dc87b9.css",
-    "main.js": "/COSYlanguagesproject/static/js/main.179302f4.js",
+    "main.css": "/COSYlanguagesproject/static/css/main.1f0d5ec9.css",
+    "main.js": "/COSYlanguagesproject/static/js/main.09065a06.js",
     "sw.js": "/COSYlanguagesproject/static/js/sw.415d2ca5.js",
-    "study.css": "/COSYlanguagesproject/static/css/study.de44b96c.css",
+    "study.css": "/COSYlanguagesproject/static/css/study.ea990c99.css",
     "study.js": "/COSYlanguagesproject/static/js/study.e8669b28.js",
     "studyIslands.js": "/COSYlanguagesproject/static/js/studyIslands.ddf031f1.js",
     "freestyle.css": "/COSYlanguagesproject/static/css/freestyle.65c63798.css",
-    "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.9d674693.js",
+    "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.308af52d.js",
     "study-ba.js": "/COSYlanguagesproject/static/js/study-ba.31d6cfe0.js",
     "study-br.js": "/COSYlanguagesproject/static/js/study-br.31d6cfe0.js",
     "study-de.js": "/COSYlanguagesproject/static/js/study-de.31d6cfe0.js",
@@ -43,20 +43,20 @@
     "404.html": "/COSYlanguagesproject/404.html",
     "freestyle.html": "/COSYlanguagesproject/freestyle.html",
     "study-islands.html": "/COSYlanguagesproject/study-islands.html",
-    "main.34dc87b9.css.map": "/COSYlanguagesproject/static/css/main.34dc87b9.css.map",
-    "main.179302f4.js.map": "/COSYlanguagesproject/static/js/main.179302f4.js.map",
+    "main.1f0d5ec9.css.map": "/COSYlanguagesproject/static/css/main.1f0d5ec9.css.map",
+    "main.09065a06.js.map": "/COSYlanguagesproject/static/js/main.09065a06.js.map",
     "sw.415d2ca5.js.map": "/COSYlanguagesproject/static/js/sw.415d2ca5.js.map",
-    "study.de44b96c.css.map": "/COSYlanguagesproject/static/css/study.de44b96c.css.map",
+    "study.ea990c99.css.map": "/COSYlanguagesproject/static/css/study.ea990c99.css.map",
     "study.e8669b28.js.map": "/COSYlanguagesproject/static/js/study.e8669b28.js.map",
     "studyIslands.ddf031f1.js.map": "/COSYlanguagesproject/static/js/studyIslands.ddf031f1.js.map",
     "freestyle.65c63798.css.map": "/COSYlanguagesproject/static/css/freestyle.65c63798.css.map",
-    "freestyle.9d674693.js.map": "/COSYlanguagesproject/static/js/freestyle.9d674693.js.map",
+    "freestyle.308af52d.js.map": "/COSYlanguagesproject/static/js/freestyle.308af52d.js.map",
     "815.fdc6dde6.chunk.js.map": "/COSYlanguagesproject/static/js/815.fdc6dde6.chunk.js.map",
     "197.f90b27c5.chunk.js.map": "/COSYlanguagesproject/static/js/197.f90b27c5.chunk.js.map",
     "318.830bb1ba.chunk.js.map": "/COSYlanguagesproject/static/js/318.830bb1ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34dc87b9.css",
-    "static/js/main.179302f4.js"
+    "static/css/main.1f0d5ec9.css",
+    "static/js/main.09065a06.js"
   ]
 }
