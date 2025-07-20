@@ -6,13 +6,14 @@
   min-height: 80vh; /* Adjusted to take most of the screen height */
   padding: 20px;
   box-sizing: border-box; /* Ensures padding doesn't add to width/height */
+  background: linear-gradient(to right, #ffefba, #ffffff);
 }
 
 .login-form {
-  padding: 30px; /* Increased padding */
-  border: 1px solid #ccc;
-  border-radius: 8px; /* Slightly more rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  padding: 40px; /* Increased padding */
+  border: none;
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Softer shadow */
   width: 100%;
   max-width: 400px; /* Max width for larger screens */
   background-color: #fff; /* Explicit background color */
@@ -32,11 +33,17 @@
 
 .form-group input[type="password"] {
   width: 100%;
-  padding: 12px; /* Increased padding */
-  border: 1px solid #ddd; /* Lighter border */
-  border-radius: 4px;
+  padding: 15px; /* Increased padding */
+  border: 1px solid #eee; /* Lighter border */
+  border-radius: 8px;
   box-sizing: border-box;
   font-size: 16px; /* Slightly larger font */
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="password"]:focus {
+  outline: none;
+  border-color: #0abbb5;
 }
 
 .login-button {

@@ -1,23 +1,26 @@
 .daily-streak {
     text-align: center;
-    padding: 20px;
-    background-color: #f0f8ff;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    padding: 30px;
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   }
 
   .daily-streak h3 {
-    color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: 500;
   }
 
   .streak-count {
-    font-size: 3em;
+    font-size: 4em;
     font-weight: bold;
-    color: #ff9800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
   }
 
   .daily-streak p {
-    color: #666;
     font-style: italic;
+    opacity: 0.9;
   }
