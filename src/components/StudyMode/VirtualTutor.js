@@ -1,28 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './VirtualTutor.css';
 
 const VirtualTutor = () => {
-    const [messages, setMessages] = useState([
-        { text: 'Hello! I am your virtual tutor. How can I help you today?', sender: 'tutor' }
-    ]);
+    const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState('');
+    const [bot, setBot] = useState(null);
+
+    useEffect(() => {
+        const rive = new window.RiveScript();
+        rive.loadFile('/data/tutor.rive').then(() => {
+            rive.sortReplies();
+            setBot(rive);
+            setMessages([{ text: 'Hello! I am your virtual tutor. How can I help you today?', sender: 'tutor' }]);
+        });
+    }, []);
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    const handleSendMessage = () => {
-        if (inputValue.trim() === '') return;
+    const handleSendMessage = async () => {
+        if (inputValue.trim() === '' || !bot) return;
 
         const newMessages = [...messages, { text: inputValue, sender: 'user' }];
         setMessages(newMessages);
         setInputValue('');
 
-        // Mock tutor response
-        setTimeout(() => {
-            const tutorResponse = { text: 'That is a great question! Let me explain...', sender: 'tutor' };
-            setMessages([...newMessages, tutorResponse]);
-        }, 1000);
+        const reply = await bot.reply('local-user', inputValue);
+        setMessages([...newMessages, { text: reply, sender: 'tutor' }]);
     };
 
     return (
@@ -41,6 +46,7 @@ const VirtualTutor = () => {
                     value={inputValue}
                     onChange={handleInputChange}
                     placeholder="Ask a question..."
+                    onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                 />
                 <button onClick={handleSendMessage}>Send</button>
             </div>

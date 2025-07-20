@@ -1,14 +1,20 @@
 export const getWritingFeedback = async (text) => {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            const feedback = [];
-            if (text.length < 10) {
-                feedback.push({ message: 'Try to write a longer text.', type: 'suggestion' });
-            }
-            if (!text.endsWith('.')) {
-                feedback.push({ message: 'Sentences should end with a period.', type: 'grammar' });
-            }
-            resolve(feedback);
-        }, 1000);
+    const response = await fetch('https://languagetool.org/api/v2/check', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `text=${encodeURIComponent(text)}&language=en-US`,
     });
+
+    if (!response.ok) {
+        throw new Error('Failed to get writing feedback from LanguageTool API');
+    }
+
+    const data = await response.json();
+
+    return data.matches.map(match => ({
+        message: match.message,
+        type: match.rule.issueType,
+    }));
 };
