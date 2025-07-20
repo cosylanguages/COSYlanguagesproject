@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { getNextReviewInterval } from '../../utils/srs';
 import './Flashcard.css';
 
-const Flashcard = ({ card, onReviewed }) => {
+const Flashcard = ({ card, onReviewed, onAnswered }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [interval, setInterval] = useState(card.interval || 1);
   const [factor, setFactor] = useState(card.factor || 2.5);
@@ -12,17 +12,21 @@ const Flashcard = ({ card, onReviewed }) => {
   };
 
   const handleReview = (isCorrect) => {
-    const newFactor = isCorrect ? factor + 0.1 : Math.max(1.3, factor - 0.2);
-    const newInterval = getNextReviewInterval(interval, newFactor);
+    if (onAnswered) {
+      onAnswered(isCorrect);
+    } else {
+      const newFactor = isCorrect ? factor + 0.1 : Math.max(1.3, factor - 0.2);
+      const newInterval = getNextReviewInterval(interval, newFactor);
 
-    setFactor(newFactor);
-    setInterval(newInterval);
+      setFactor(newFactor);
+      setInterval(newInterval);
 
-    onReviewed(card.id, {
-      interval: newInterval,
-      factor: newFactor,
-      nextReviewDate: new Date(Date.now() + newInterval * 24 * 60 * 60 * 1000),
-    });
+      onReviewed(card.id, {
+        interval: newInterval,
+        factor: newFactor,
+        nextReviewDate: new Date(Date.now() + newInterval * 24 * 60 * 60 * 1000),
+      });
+    }
   };
 
   return (
