@@ -1,7 +1,6 @@
 import React from 'react';
 import { useFreestyle } from '../../contexts/FreestyleContext';
-import { useI18n } from '../../i18n/I18nContext';
-import CosyLanguageSelector from '../../components/LanguageSelector/CosyLanguageSelector';
+import LanguageSelectorFreestyle from '../../components/Freestyle/LanguageSelectorFreestyle';
 import DaySelectorFreestyle from '../../components/Freestyle/DaySelectorFreestyle';
 import PracticeCategoryNav from '../../components/Freestyle/PracticeCategoryNav';
 import ExerciseHost from '../../components/Freestyle/ExerciseHost';
@@ -14,13 +13,7 @@ import '../../freestyle-shared.css';
 import './FreestyleModePage.css';
 
 const FreestyleModePage = () => {
-  const { selectedLanguage, selectedDays, selectedExercise, setSelectedLanguage } = useFreestyle();
-  const { language, changeLanguage } = useI18n();
-
-  const handleLanguageChange = (newLanguage) => {
-    changeLanguage(newLanguage);
-    setSelectedLanguage(newLanguage);
-  };
+  const { selectedLanguage, selectedDays, selectedExercise } = useFreestyle();
 
   const words = [
     { text: 'un', size: 1.5 },
@@ -44,10 +37,7 @@ const FreestyleModePage = () => {
       <FreestyleProgress />
 
       <div className="freestyle-controls-container">
-        <CosyLanguageSelector
-          selectedLanguage={language}
-          onLanguageChange={handleLanguageChange}
-        />
+        <LanguageSelectorFreestyle />
         {selectedLanguage && <DaySelectorFreestyle language={selectedLanguage} />}
         {selectedLanguage && selectedDays.length > 0 && (
           <PracticeCategoryNav language={selectedLanguage} days={selectedDays} />
