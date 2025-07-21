@@ -1,19 +1,9 @@
+@import '../../styles/shared.css';
+
 .freestyle-mode-container {
-    padding: 20px;
-    background-color: #f0f8ff;
+    composes: page-container;
 }
 
 .freestyle-mode-header {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.island-placeholder {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    border: none;
+    composes: page-header;
 }

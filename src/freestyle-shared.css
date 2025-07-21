@@ -302,13 +302,6 @@ body.freestyle-page-active { /* Scoping body style to when freestyle page is act
   color: #333; /* Overridden by global body styles */
 }
 
-.island-placeholder {
-  padding: 15px;
-  margin-bottom: 15px;
-  border: 1px dashed #ccc; /* Consider var(--color-border) */
-  border-radius: 4px; /* Consider var(--border-radius-md) */
-  background-color: #f9f9f9; /* Consider var(--color-surface) */
-}
 
 #language-selector-island-container.island-placeholder {
   /* margin-bottom: 20px; -- Covered by .selector-container or .island-placeholder */

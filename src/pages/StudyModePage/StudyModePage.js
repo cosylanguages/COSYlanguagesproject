@@ -14,14 +14,14 @@ import ToolsPanel from '../../components/StudyMode/ToolsPanel';
 import TransliterableText from '../../components/Common/TransliterableText';
 import ToggleLatinizationButton from '../../components/Common/ToggleLatinizationButton';
 import Button from '../../components/Common/Button';
-import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
+import CosyLanguageSelector from '../../components/LanguageSelector/CosyLanguageSelector';
 
 import './StudyModePage.css';
 
 export const getBlockElementId = (blockId, index) => `lesson-block-content-${blockId || `gen-${index}`}`;
 
 const StudyModePage = () => {
-  const { t, language, currentLangKey } = useI18n();
+  const { t, language, changeLanguage, currentLangKey } = useI18n();
   const { authToken } = useAuth();
   const {
     selectedRole,
@@ -262,7 +262,10 @@ const StudyModePage = () => {
         <label htmlFor="language-select" id="study-choose-language-label">
           <TransliterableText text={t('studyMode.chooseLanguageLabel', '🌎 Choose Your Language:')} />
         </label>
-        <LanguageSelector />
+        <CosyLanguageSelector
+          selectedLanguage={language}
+          onLanguageChange={changeLanguage}
+        />
         <ToggleLatinizationButton
           currentDisplayLanguage={currentLangKey || language}
         />

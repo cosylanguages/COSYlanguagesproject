@@ -1,30 +1,30 @@
+@import '../../styles/shared.css';
 /* StudyModePage.css */
 
 /* Container for the entire Study Mode page content */
 .study-mode-page-container {
+  composes: page-container;
   display: flex;
   flex-direction: column;
   align-items: center; /* Center content like h1 and menu sections */
-  padding: var(--spacing-xl, 30px); /* Increased padding */
   gap: var(--spacing-lg, 25px); /* Space between sections */
   width: 100%;
   box-sizing: border-box;
 }
 
 .study-mode-page-container h1 {
+  composes: page-header;
   color: var(--color-text-headings, #343a40);
-  text-align: center;
-  margin-bottom: var(--spacing-lg, 1.5rem); 
   font-size: var(--font-size-h1, 2.4rem);
 }
 
 /* Styling for sections containing label + control (e.g., Language, Role) */
 .study-menu-section {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
   gap: var(--spacing-md, 1rem); /* Consistent gap */
-  padding: var(--spacing-lg, 1.5rem); 
+  padding: var(--spacing-lg, 1.5rem);
   background-color: var(--color-surface);
   border-radius: var(--border-radius-xl, 12px); /* Use XL radius */
   box-shadow: var(--shadow-lg);
@@ -74,12 +74,12 @@
 
 .role-buttons-wrapper {
   display: flex;
-  gap: var(--spacing-md, 1rem); 
-  justify-content: center; 
-  flex-wrap: wrap; 
+  gap: var(--spacing-md, 1rem);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.role-btn { 
+.role-btn {
   padding: 0.8rem 1.5rem;
   font-size: 1.1rem;
   font-weight: 600; /* Bolder */
@@ -89,13 +89,13 @@
   color: var(--color-primary-dark, #0056b3);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  min-width: 140px; 
+  min-width: 140px;
   box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.07));
 }
 
 .role-btn:hover {
-  background-color: var(--color-primary-light, #d6eaff); 
-  color: var(--color-primary-darker, #00418a); 
+  background-color: var(--color-primary-light, #d6eaff);
+  color: var(--color-primary-darker, #00418a);
   border-color: var(--color-primary, #007bff);
   transform: translateY(-3px) scale(1.05) rotate(1deg); /* More dynamic */
   box-shadow: var(--shadow-lg, 0 5px 10px rgba(0,0,0,0.12)); /* Slightly enhanced shadow */
@@ -115,12 +115,12 @@
   /* max-width: 700px; /* This will be overridden by .dashboard-layout's max-width if active */
   min-height: 150px;
   padding: var(--spacing-lg, 1.5rem);
-  margin-top: var(--spacing-md, 1rem); 
+  margin-top: var(--spacing-md, 1rem);
   background-color: var(--color-background, #fff);
   border: 1px solid var(--color-border, #dee2e6);
   border-radius: var(--border-radius-xl, 12px); /* Use XL radius */
   box-shadow: var(--shadow-lg, 0 8px 16px rgba(0,0,0,0.1)); /* More prominent shadow */
-  text-align: center; 
+  text-align: center;
   animation: scaleIn 0.4s ease-out 0.3s forwards; /* Stagger after menu sections */
 }
 
@@ -150,7 +150,7 @@
 /* Three-column dashboard layout */
 .dashboard-layout {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   width: 100%;
   gap: var(--spacing-lg, 1.5rem); /* Increased gap */
   margin-top: 0; /* Remove top margin if .study-content-area provides it */
@@ -162,12 +162,12 @@
 .layout-left-panel,
 .layout-right-panel {
   flex-basis: 22%; /* Adjust as needed */
-  min-width: 200px; 
+  min-width: 200px;
   padding: var(--spacing-lg, 1.5rem);
   background-color: var(--color-surface-light, #f0f3f5); /* Lighter than menu sections */
   border-radius: var(--border-radius-lg, 8px);
   box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));
-  height: fit-content; 
+  height: fit-content;
   border: 1px solid var(--color-border-light, #e0e7ef);
   animation: fadeInUp 0.4s ease-out forwards; /* Base animation */
 }
@@ -178,7 +178,7 @@
 .layout-center-panel {
   flex-basis: 56%; /* Adjust as needed */
   padding: var(--spacing-lg, 1.5rem);
-  background-color: var(--color-background, #fff); 
+  background-color: var(--color-background, #fff);
   border-radius: var(--border-radius-lg, 8px);
   box-shadow: var(--shadow-md, 0 3px 6px rgba(0,0,0,0.07));
   border: 1px solid var(--color-border, #d8dfe5);
@@ -230,8 +230,8 @@
   .layout-left-panel,
   .layout-center-panel,
   .layout-right-panel {
-    flex-basis: 100%; 
-    min-width: auto; 
+    flex-basis: 100%;
+    min-width: auto;
   }
   .study-mode-page-container {
     padding: var(--spacing-md, 15px);
@@ -256,11 +256,11 @@
 
 @media (max-width: 480px) {
   .role-buttons-wrapper {
-    flex-direction: column; 
+    flex-direction: column;
     width: 100%;
   }
   .role-btn {
-    width: 100%; 
+    width: 100%;
   }
   .study-mode-page-container h1 {
     font-size: var(--font-size-h3, 1.5rem);
