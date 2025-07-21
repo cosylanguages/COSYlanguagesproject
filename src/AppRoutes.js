@@ -13,7 +13,6 @@ import FreestyleModePage from './pages/FreestyleModePage/FreestyleModePage';
 import GamificationPage from './pages/GamificationPage/GamificationPage';
 import PersonalizationPage from './pages/PersonalizationPage/PersonalizationPage';
 import InteractivePage from './pages/InteractivePage/InteractivePage';
-import CommunityPage from './pages/CommunityPage/CommunityPage';
 import StudyToolsPage from './pages/StudyToolsPage/StudyToolsPage';
 import GrammarGuidebookPage from './pages/GrammarGuidebookPage/GrammarGuidebookPage';
 
@@ -59,7 +58,6 @@ function App() {
                 <Route path="progress" element={<GamificationPage />} />
                 <Route path="personalize" element={<PersonalizationPage />} />
                 <Route path="interactive" element={<InteractivePage />} />
-                <Route path="community" element={<CommunityPage />} />
                 <Route path="study-tools" element={<StudyToolsPage />} />
                 <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
                 <Route path="study/*" element={<StudyModeGuard><StudyRoutes /></StudyModeGuard>} />
