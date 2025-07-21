@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import StudyModeBanner from '../../components/StudyMode/StudyModeBanner';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../../components/Common/TransliterableText';
 import VirtualTutorTeacherView from '../../components/StudyMode/VirtualTutorTeacherView';
@@ -262,7 +263,8 @@ const TeacherDashboard = () => {
   };
 
   return (
-    <div className="teacher-dashboard-container-grid"> 
+    <div className="teacher-dashboard-container-grid">
+      <StudyModeBanner />
       <div className="teacher-dashboard-sidebar">
         <DayManager 
           onDaySelect={handleDaySelect} 

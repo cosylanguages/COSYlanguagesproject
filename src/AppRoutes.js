@@ -6,6 +6,7 @@ import { useI18n } from './i18n/I18nContext';
 import Layout from './components/Layout/Layout';
 import Login from './components/Auth/Login';
 import StudyRoutes from './StudyRoutes';
+import StudyModeGuard from './components/StudyMode/StudyModeGuard';
 // FreestyleModePage is no longer imported or used here
 import MyStudySetsPage from './pages/MyStudySetsPage/MyStudySetsPage'; // Import MyStudySetsPage
 import FreestyleModePage from './pages/FreestyleModePage/FreestyleModePage';
@@ -61,7 +62,7 @@ function App() {
                 <Route path="community" element={<CommunityPage />} />
                 <Route path="study-tools" element={<StudyToolsPage />} />
                 <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
-                <Route path="study/*" element={<StudyRoutes />} />
+                <Route path="study/*" element={<StudyModeGuard><StudyRoutes /></StudyModeGuard>} />
                 <Route
                   path="my-sets"
                   element={
