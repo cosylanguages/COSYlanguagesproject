@@ -54,17 +54,17 @@ export function I18nProvider({ children }) {
     }, [language]);
 
     const changeLanguage = useCallback((langKey) => {
-        if (translations[langKey]) {
-            setLanguage(langKey);
-            const pathParts = location.pathname.split('/');
-            if (pathParts[1] === 'study' && pathParts.length > 2) {
-                navigate(`/study/${langKey}`);
+        const newLang = translations[langKey] ? langKey : 'en';
+        setLanguage(newLang);
+
+        const pathParts = location.pathname.split('/');
+        if (pathParts[1] === 'study' && pathParts.length > 2) {
+            // Only navigate if the language in the URL is different
+            if (pathParts[2] !== newLang) {
+                navigate(`/study/${newLang}`);
             }
-        } else {
-            console.warn(`Attempted to change to invalid language key "${langKey}". Reverting to English.`);
-            setLanguage('en');
         }
-    }, [location, navigate]);
+    }, [location.pathname, navigate]);
 
     const t = useCallback((key, defaultValueOrOptions, optionsOnly) => {
         let defaultValue = typeof defaultValueOrOptions === 'string' ? defaultValueOrOptions : key;
