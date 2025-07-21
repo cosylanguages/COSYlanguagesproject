@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/COSYlanguagesproject/static/css/main.336a4400.css",
-    "main.js": "/COSYlanguagesproject/static/js/main.1d633b1b.js",
+    "main.css": "/COSYlanguagesproject/static/css/main.0836062f.css",
+    "main.js": "/COSYlanguagesproject/static/js/main.d2768a9b.js",
     "sw.js": "/COSYlanguagesproject/static/js/sw.415d2ca5.js",
-    "study.css": "/COSYlanguagesproject/static/css/study.c03d6a02.css",
+    "study.css": "/COSYlanguagesproject/static/css/study.f965637a.css",
     "study.js": "/COSYlanguagesproject/static/js/study.48f87618.js",
-    "studyIslands.js": "/COSYlanguagesproject/static/js/studyIslands.68dbc126.js",
     "freestyle.css": "/COSYlanguagesproject/static/css/freestyle.281e8847.css",
     "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.580b37aa.js",
     "study-ba.js": "/COSYlanguagesproject/static/js/study-ba.31d6cfe0.js",
@@ -40,17 +39,16 @@
     "404.html": "/COSYlanguagesproject/404.html",
     "freestyle.html": "/COSYlanguagesproject/freestyle.html",
     "study-islands.html": "/COSYlanguagesproject/study-islands.html",
-    "main.336a4400.css.map": "/COSYlanguagesproject/static/css/main.336a4400.css.map",
-    "main.1d633b1b.js.map": "/COSYlanguagesproject/static/js/main.1d633b1b.js.map",
+    "main.0836062f.css.map": "/COSYlanguagesproject/static/css/main.0836062f.css.map",
+    "main.d2768a9b.js.map": "/COSYlanguagesproject/static/js/main.d2768a9b.js.map",
     "sw.415d2ca5.js.map": "/COSYlanguagesproject/static/js/sw.415d2ca5.js.map",
-    "study.c03d6a02.css.map": "/COSYlanguagesproject/static/css/study.c03d6a02.css.map",
+    "study.f965637a.css.map": "/COSYlanguagesproject/static/css/study.f965637a.css.map",
     "study.48f87618.js.map": "/COSYlanguagesproject/static/js/study.48f87618.js.map",
-    "studyIslands.68dbc126.js.map": "/COSYlanguagesproject/static/js/studyIslands.68dbc126.js.map",
     "freestyle.281e8847.css.map": "/COSYlanguagesproject/static/css/freestyle.281e8847.css.map",
     "freestyle.580b37aa.js.map": "/COSYlanguagesproject/static/js/freestyle.580b37aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.336a4400.css",
-    "static/js/main.1d633b1b.js"
+    "static/css/main.0836062f.css",
+    "static/js/main.d2768a9b.js"
   ]
 }

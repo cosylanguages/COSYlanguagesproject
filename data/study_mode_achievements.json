@@ -1,0 +1,26 @@
+[
+    {
+        "id": "study_grammar_1",
+        "name": "Grammar Guru",
+        "description": "Complete 10 grammar exercises in Study Mode.",
+        "mode": "study"
+    },
+    {
+        "id": "study_grammar_2",
+        "name": "Grammar Master",
+        "description": "Complete 50 grammar exercises in Study Mode.",
+        "mode": "study"
+    },
+    {
+        "id": "study_unscramble_1",
+        "name": "Sentence Sorcerer",
+        "description": "Unscramble 10 sentences in Study Mode.",
+        "mode": "study"
+    },
+    {
+        "id": "study_unscramble_2",
+        "name": "Sentence Sensei",
+        "description": "Unscramble 50 sentences in Study Mode.",
+        "mode": "study"
+    }
+]
