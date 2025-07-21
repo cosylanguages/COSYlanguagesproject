@@ -1,0 +1,38 @@
+{
+    "sentenceCorrection": [
+        {
+            "id": 1,
+            "sentence": "She go to the store.",
+            "correction": "She goes to the store.",
+            "explanation": "The verb 'go' should be in the third-person singular form 'goes' to agree with the subject 'She'."
+        },
+        {
+            "id": 2,
+            "sentence": "I has a cat.",
+            "correction": "I have a cat.",
+            "explanation": "The verb 'has' is the third-person singular form. For the subject 'I', the correct form is 'have'."
+        },
+        {
+            "id": 3,
+            "sentence": "They is happy.",
+            "correction": "They are happy.",
+            "explanation": "The verb 'is' is used for singular subjects. For the plural subject 'They', the correct form is 'are'."
+        }
+    ],
+    "fillInTheBlanks": [
+        {
+            "id": 1,
+            "sentence": "I ___ a student.",
+            "options": ["am", "is", "are"],
+            "answer": "am",
+            "explanation": "The correct form of the verb 'to be' for the subject 'I' is 'am'."
+        },
+        {
+            "id": 2,
+            "sentence": "She ___ a car.",
+            "options": ["have", "has"],
+            "answer": "has",
+            "explanation": "The correct form of the verb 'to have' for the subject 'She' is 'has'."
+        }
+    ]
+}

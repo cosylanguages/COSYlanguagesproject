@@ -1,8 +1,13 @@
 import React from 'react';
 import './Leaderboard.css';
 
-const Leaderboard = ({ users }) => {
-  const sortedUsers = users.sort((a, b) => b.xp - a.xp);
+const Leaderboard = ({ users, mode }) => {
+  const sortedUsers = users.sort((a, b) => {
+    if (mode === 'study') {
+      return b.studyScore - a.studyScore;
+    }
+    return b.xp - a.xp;
+  });
 
   return (
     <div className="leaderboard">
@@ -12,7 +17,9 @@ const Leaderboard = ({ users }) => {
           <li key={user.id}>
             <span className="leaderboard-rank">{index + 1}</span>
             <span className="leaderboard-name">{user.name}</span>
-            <span className="leaderboard-xp">{user.xp} XP</span>
+            <span className="leaderboard-xp">
+              {mode === 'study' ? `${user.studyScore} Study Score` : `${user.xp} XP`}
+            </span>
           </li>
         ))}
       </ol>

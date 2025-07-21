@@ -1,20 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useUserProfile } from '../../contexts/UserProfileContext';
 import './Achievements.css';
 
-const Achievements = () => {
+const Achievements = ({ mode }) => {
   const { achievements } = useUserProfile();
+  const [allAchievements, setAllAchievements] = useState([]);
+
+  useEffect(() => {
+    const fetchAchievements = async () => {
+        try {
+            const freestyleResponse = await fetch('/data/achievements.json');
+            const freestyleAchievements = await freestyleResponse.json();
+
+            const studyResponse = await fetch('/data/study_mode_achievements.json');
+            const studyAchievements = await studyResponse.json();
+
+            setAllAchievements([...freestyleAchievements, ...studyAchievements]);
+        } catch (error) {
+            console.error("Failed to load achievements:", error);
+        }
+    };
+
+    fetchAchievements();
+  }, []);
+
+  const unlockedAchievements = allAchievements.filter(ach => achievements.includes(ach.id));
+
+  const filteredAchievements = mode ? unlockedAchievements.filter(ach => ach.mode === mode) : unlockedAchievements;
 
   return (
     <div className="achievements-container">
       <h2>Achievements</h2>
-      {achievements.length > 0 ? (
+      {filteredAchievements.length > 0 ? (
         <ul className="achievements-list">
-          {achievements.map((ach, index) => (
-            <li key={index} className="achievement-item">
+          {filteredAchievements.map((ach, index) => (
+            <li key={index} className={`achievement-item ${ach.mode === 'study' ? 'study-achievement' : ''}`}>
               <div className="achievement-name">{ach.name}</div>
               <div className="achievement-description">{ach.description}</div>
-              <div className="achievement-date">{new Date(ach.date).toLocaleDateString()}</div>
+              {ach.mode === 'study' && <div className="achievement-mode">Study Mode</div>}
             </li>
           ))}
         </ul>
