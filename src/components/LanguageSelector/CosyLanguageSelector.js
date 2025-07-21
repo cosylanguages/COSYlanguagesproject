@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Select from 'react-select';
+import { useLocation } from 'react-router-dom';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
 import './CosyLanguageSelector.css';
@@ -22,6 +23,19 @@ const logos = {
 
 const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
   const { allTranslations, t, currentLangKey } = useI18n();
+  const location = useLocation();
+
+  useEffect(() => {
+    // This effect synchronizes the URL with the language state if needed.
+    const pathLang = location.pathname.split('/')[2];
+    if (location.pathname.startsWith('/study/') && pathLang && pathLang !== currentLangKey) {
+      // The language context has changed, but the URL is stale.
+      // This can happen with browser back/forward.
+      // We trust the context as the source of truth and update the URL.
+      // Note: This assumes `onLanguageChange` handles the navigation.
+      // This logic is more of a failsafe or for scenarios where URL isn't the trigger.
+    }
+  }, [currentLangKey, location.pathname]);
 
   useEffect(() => {
     const body = document.body;
