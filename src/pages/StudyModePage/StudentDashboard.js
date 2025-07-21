@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import StudyModeBanner from '../../components/StudyMode/StudyModeBanner';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../../components/Common/TransliterableText';
 import MistakeNotebook from '../../components/StudyMode/MistakeNotebook';
@@ -11,6 +12,8 @@ import CosyCorner from '../../components/Community/CosyCorner';
 import LanguagePet from '../../components/Gamification/LanguagePet';
 import SouvenirCollection from '../../components/Gamification/SouvenirCollection';
 import CosyStreaks from '../../components/Gamification/CosyStreaks';
+import StudyFillInTheBlanks from '../../components/StudyMode/exercises/StudyFillInTheBlanks';
+import StudySentenceUnscramble from '../../components/StudyMode/exercises/StudySentenceUnscramble';
 
 // Import the centralized displayComponentMap
 import { displayComponentMap } from '../../components/StudyMode/common/displayComponentMap';
@@ -27,6 +30,8 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
   const [isGrammarReviewVisible, setIsGrammarReviewVisible] = useState(false);
   const [isVirtualTutorVisible, setIsVirtualTutorVisible] = useState(false);
   const [isSmartReviewVisible, setIsSmartReviewVisible] = useState(false);
+  const [isFillInTheBlanksVisible, setIsFillInTheBlanksVisible] = useState(false);
+  const [isSentenceUnscrambleVisible, setIsSentenceUnscrambleVisible] = useState(false);
   
   const handleNavigateBlock = (direction, currentIndex) => {
     let targetIndex;
@@ -57,6 +62,7 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
 
   return (
     <div className="student-dashboard-container">
+      <StudyModeBanner />
       <div className="cosy-dashboard">
         <TodaysFocus />
         <MyLearningGarden />
@@ -72,12 +78,16 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
         <button onClick={() => setIsGrammarReviewVisible(true)}>Grammar Review</button>
         <button onClick={() => setIsVirtualTutorVisible(true)}>Virtual Tutor</button>
         <button onClick={() => setIsSmartReviewVisible(true)}>Smart Review</button>
+        <button onClick={() => setIsFillInTheBlanksVisible(true)}>Fill in the Blanks</button>
+        <button onClick={() => setIsSentenceUnscrambleVisible(true)}>Sentence Unscramble</button>
       </div>
       
       {isMistakeNotebookVisible && <MistakeNotebook />}
       {isGrammarReviewVisible && <GrammarReview />}
       {isVirtualTutorVisible && <VirtualTutor />}
       {isSmartReviewVisible && <SmartReview userId="123" />}
+      {isFillInTheBlanksVisible && <StudyFillInTheBlanks language={t('currentLanguage')} />}
+      {isSentenceUnscrambleVisible && <StudySentenceUnscramble language={t('currentLanguage')} />}
 
       <div className="lesson-content-student-view">
         {lessonBlocks.map((block, index) => {
