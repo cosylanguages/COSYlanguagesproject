@@ -29,7 +29,6 @@ function configureWebpack(webpackConfig, { env, paths }) {
     main: paths.appIndexJs,
     sw: './src/sw.js',
     study: './src/StudyRoutes.js',
-    studyIslands: './src/islands/studyIslandsEntry.js',
     freestyle: './src/islands/freestyleIslandsEntry.js',
     ...languageEntries,
   };
