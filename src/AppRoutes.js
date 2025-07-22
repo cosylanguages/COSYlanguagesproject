@@ -15,6 +15,7 @@ import PersonalizationPage from './pages/PersonalizationPage/PersonalizationPage
 import InteractivePage from './pages/InteractivePage/InteractivePage';
 import StudyToolsPage from './pages/StudyToolsPage/StudyToolsPage';
 import GrammarGuidebookPage from './pages/GrammarGuidebookPage/GrammarGuidebookPage';
+import LandingPage from './pages/LandingPage/LandingPage';
 
 // ProtectedRoute for general authentication (if needed for pages like MyStudySetsPage)
 const ProtectedRoute = ({ children }) => {
@@ -53,7 +54,7 @@ function App() {
         <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Layout />}>
-                <Route index element={<Navigate to="/freestyle" replace />} />
+                <Route index element={<LandingPage />} />
                 <Route path="freestyle/*" element={<FreestyleModePage />} />
                 <Route path="progress" element={<GamificationPage />} />
                 <Route path="personalize" element={<PersonalizationPage />} />
