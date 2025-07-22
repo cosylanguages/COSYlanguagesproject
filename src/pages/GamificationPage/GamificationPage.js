@@ -3,6 +3,7 @@ import Leaderboard from '../../components/Gamification/Leaderboard';
 import Achievements from '../../components/Gamification/Achievements';
 import DailyStreak from '../../components/Gamification/DailyStreak';
 import ProgressChart from '../../components/Gamification/ProgressChart';
+import CalendarView from '../../components/Gamification/CalendarView';
 import { useUserProfile } from '../../contexts/UserProfileContext';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../../components/Common/TransliterableText';
@@ -32,11 +33,20 @@ const GamificationPage = () => {
       .then(data => setProgressData(data));
   }, []);
 
+  const [calendarData, setCalendarData] = React.useState({});
+
+  React.useEffect(() => {
+    fetch('/data/calendarData.json')
+      .then(response => response.json())
+      .then(data => setCalendarData(data));
+  }, []);
+
   return (
     <div className="gamification-page">
       <h1><TransliterableText text={t('gamificationPage.title', 'Your Progress')} /></h1>
       <DailyStreak />
       <ProgressChart data={progressData} />
+      <CalendarView data={calendarData} />
       <Leaderboard users={users} mode={mode} />
       <Achievements mode={mode} />
     </div>
