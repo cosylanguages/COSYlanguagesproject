@@ -18,9 +18,7 @@ import GrammarGuidebookPage from './pages/GrammarGuidebookPage/GrammarGuidebookP
 import LandingPage from './pages/LandingPage/LandingPage';
 import ReviewPage from './pages/ReviewPage/ReviewPage';
 import LearnedWordsPage from './pages/LearnedWordsPage/LearnedWordsPage';
-import FlashcardPage from './pages/FlashcardPage/FlashcardPage';
 import ConversationPage from './pages/ConversationPage/ConversationPage';
-import DictionaryPage from './pages/DictionaryPage/DictionaryPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 
 // ProtectedRoute for general authentication (if needed for pages like MyStudySetsPage)
@@ -70,9 +68,7 @@ function App() {
                 <Route path="study/*" element={<StudyModeGuard><StudyRoutes /></StudyModeGuard>} />
                 <Route path="review" element={<ReviewPage />} />
                 <Route path="learned-words" element={<ProtectedRoute><LearnedWordsPage /></ProtectedRoute>} />
-                <Route path="flashcards" element={<FlashcardPage />} />
                 <Route path="conversation" element={<ConversationPage />} />
-                <Route path="dictionary" element={<DictionaryPage />} />
                 <Route path="profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
                 <Route
                   path="my-sets"
