@@ -11,14 +11,17 @@ function getLanguageEntries() {
   }, {});
 }
 
+const packageJson = require('./package.json');
+
 function createHtmlWebpackPlugin(env, paths, options) {
+  const publicPath = env === 'production' ? packageJson.homepage : '/';
   return new HtmlWebpackPlugin({
     inject: true,
     template: options.template || paths.appHtml,
     filename: options.filename,
     chunks: options.chunks,
     excludeChunks: options.excludeChunks,
-    publicPath: env === 'production' ? '' : '/',
+    publicPath: publicPath,
   });
 }
 
