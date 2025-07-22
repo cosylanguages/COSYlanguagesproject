@@ -41,11 +41,33 @@ const GamificationPage = () => {
       .then(data => setCalendarData(data));
   }, []);
 
+  const [reviewedWordsData, setReviewedWordsData] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('/data/reviewedWordsData.json')
+      .then(response => response.json())
+      .then(data => setReviewedWordsData(data));
+  }, []);
+
+  const reviewedWordsChartData = {
+    labels: reviewedWordsData.map(d => d.date),
+    datasets: [
+      {
+        label: 'Reviewed Words Over Time',
+        data: reviewedWordsData.map(d => d.words),
+        fill: false,
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgba(255, 99, 132, 0.2)',
+      },
+    ],
+  };
+
   return (
     <div className="gamification-page">
       <h1><TransliterableText text={t('gamificationPage.title', 'Your Progress')} /></h1>
       <DailyStreak />
       <ProgressChart data={progressData} />
+      <ProgressChart data={reviewedWordsChartData} />
       <CalendarView data={calendarData} />
       <Leaderboard users={users} mode={mode} />
       <Achievements mode={mode} />
