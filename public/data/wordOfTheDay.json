@@ -1,0 +1,27 @@
+[
+  {
+    "word": "Hello",
+    "translation": "Hola",
+    "example": "Hello, how are you?"
+  },
+  {
+    "word": "Goodbye",
+    "translation": "Adiós",
+    "example": "Goodbye, see you tomorrow."
+  },
+  {
+    "word": "Thank you",
+    "translation": "Gracias",
+    "example": "Thank you for your help."
+  },
+  {
+    "word": "Please",
+    "translation": "Por favor",
+    "example": "Please, can you help me?"
+  },
+  {
+    "word": "Sorry",
+    "translation": "Lo siento",
+    "example": "Sorry, I'm late."
+  }
+]
