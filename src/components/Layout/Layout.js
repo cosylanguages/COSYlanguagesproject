@@ -74,19 +74,19 @@ const Layout = () => {
         <div className="header-controls">
           <Button
             onClick={toggleDarkMode}
-            className="dark-mode-toggle"
-            variant="secondary"
+            variant="contained"
+            color="secondary"
           >
-            <TransliterableText text={isDarkMode ? 'Light Mode' : 'Dark Mode'} />
+            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
           </Button>
           <Button
             onClick={() => {
               alert('Downloading the app...');
             }}
-            className="download-button"
-            variant="primary"
+            variant="contained"
+            color="primary"
           >
-            <TransliterableText text={t('btnDownload') || 'Download App'} />
+            {t('btnDownload') || 'Download App'}
           </Button>
           {isAuthenticated && currentUser && (
             <div className="user-info">
@@ -96,10 +96,10 @@ const Layout = () => {
               <Button
                 onClick={handleLogout}
                 disabled={loadingAuth}
-                className="logout-button"
-                variant="danger"
+                variant="outlined"
+                color="secondary"
               >
-                <TransliterableText text={loadingAuth ? (t('loggingOut') || 'Logging out...') : (t('btnLogout') || 'Logout')} />
+                {loadingAuth ? (t('loggingOut') || 'Logging out...') : (t('btnLogout') || 'Logout')}
               </Button>
             </div>
           )}

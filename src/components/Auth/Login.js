@@ -48,11 +48,10 @@ const Login = () => {
                 {authError && <p className="error-message"><TransliterableText text={authError} /></p>}
                 <Button
                     type="submit"
-                    className="login-button"
                     disabled={loadingAuth}
-                    variant="primary" // Assuming login button should look like a primary action
+                    variant="contained"
                 >
-                    <TransliterableText text={loadingAuth ? 'Logging in...' : 'Login'} />
+                    {loadingAuth ? 'Logging in...' : 'Login'}
                 </Button>
             </form>
         </div>

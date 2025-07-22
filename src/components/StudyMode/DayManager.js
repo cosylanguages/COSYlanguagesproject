@@ -127,7 +127,7 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
                 <Button
                     type="submit"
                     disabled={isLoading || !newDayTitle.trim()}
-                    variant="primary"
+                    variant="contained"
                 >
                     {isLoading && newDayTitle ? (t('addingDay') || 'Adding...') : (t('addDayBtn') || 'Add Day')}
                 </Button>
@@ -158,29 +158,25 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
                             tabIndex={0}
                             role="button"
                             aria-pressed={selectedDayId === day.id}
-                            aria-label={t('selectDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish || `Day ID ${day.id}` }) || `Select day: ${day.title?.[currentUILanguage] || day.title?.COSYenglish || `Day ID ${day.id}`}`}
+                            aria-label={t('selectDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish || `Day ID ${day.id}` }) || `Select day: ${day.title?.[currentUILanguage] || day.title?.COSYenglish || `Day ID: ${day.id}`}`}
                         >
                             <span className="day-title">
                                 {day.title?.[currentUILanguage] || day.title?.COSYenglish || day.title || `Day ID: ${day.id}`}
                             </span>
                             <div className="day-actions">
                                 <Button
-                                    className="btn-rename" // Keep specific class for now
-                                    size="sm"
+                                    size="small"
                                     onClick={(e) => { e.stopPropagation(); handleRenameDay(day.id, day.title); }}
                                     title={t('renameDayTooltip') || "Rename day"}
-                                    ariaLabel={t('renameDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish }) || `Rename ${day.title?.[currentUILanguage] || day.title?.COSYenglish}`}
+                                    aria-label={t('renameDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish }) || `Rename ${day.title?.[currentUILanguage] || day.title?.COSYenglish}`}
                                     disabled={isLoading}
-                                    variant="light" // Using light as a default for icon-like buttons
                                 >✏️</Button>
                                 <Button
-                                    className="btn-delete" // Keep specific class for now
-                                    size="sm"
+                                    size="small"
                                     onClick={(e) => { e.stopPropagation(); handleDeleteDay(day.id, day.title); }}
                                     title={t('deleteDayTooltip') || "Delete day"}
-                                    ariaLabel={t('deleteDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish }) || `Delete ${day.title?.[currentUILanguage] || day.title?.COSYenglish}`}
+                                    aria-label={t('deleteDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish }) || `Delete ${day.title?.[currentUILanguage] || day.title?.COSYenglish}`}
                                     disabled={isLoading}
-                                    variant="light" // Using light as a default for icon-like buttons
                                 >🗑️</Button>
                             </div>
                         </li>
