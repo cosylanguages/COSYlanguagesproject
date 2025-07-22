@@ -1,0 +1,25 @@
+.learned-words-page {
+    padding: 20px;
+  }
+
+  .learned-words-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .learned-words-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .learned-word-item {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .learned-word-item h2 {
+    margin-bottom: 10px;
+  }

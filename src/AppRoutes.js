@@ -16,6 +16,8 @@ import InteractivePage from './pages/InteractivePage/InteractivePage';
 import StudyToolsPage from './pages/StudyToolsPage/StudyToolsPage';
 import GrammarGuidebookPage from './pages/GrammarGuidebookPage/GrammarGuidebookPage';
 import LandingPage from './pages/LandingPage/LandingPage';
+import ReviewPage from './pages/ReviewPage/ReviewPage';
+import LearnedWordsPage from './pages/LearnedWordsPage/LearnedWordsPage';
 
 // ProtectedRoute for general authentication (if needed for pages like MyStudySetsPage)
 const ProtectedRoute = ({ children }) => {
@@ -62,6 +64,8 @@ function App() {
                 <Route path="study-tools" element={<StudyToolsPage />} />
                 <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
                 <Route path="study/*" element={<StudyModeGuard><StudyRoutes /></StudyModeGuard>} />
+                <Route path="review" element={<ReviewPage />} />
+                <Route path="learned-words" element={<ProtectedRoute><LearnedWordsPage /></ProtectedRoute>} />
                 <Route
                   path="my-sets"
                   element={

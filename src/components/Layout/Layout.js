@@ -14,6 +14,8 @@ const navLinks = [
   { to: '/interactive', text: 'navInteractive', defaultText: 'Interactive' },
   { to: '/community', text: 'navCommunity', defaultText: 'Community' },
   { to: '/study-tools', text: 'navStudyTools', defaultText: 'Study Tools' },
+  { to: '/review', text: 'navReview', defaultText: 'Review' },
+  { to: '/learned-words', text: 'navLearnedWords', defaultText: 'Learned Words' },
 ];
 
 const Layout = () => {
