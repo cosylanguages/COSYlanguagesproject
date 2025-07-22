@@ -1,0 +1,38 @@
+.word-of-the-day-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .word-of-the-day-container h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .word-of-the-day-content h3 {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+
+  .word-of-the-day-content p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .word-of-the-day-content p em {
+    font-style: italic;
+    color: #888;
+  }
+
+  .word-of-the-day-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+  }
