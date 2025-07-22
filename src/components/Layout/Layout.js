@@ -8,6 +8,7 @@ import './Layout.css';
 
 const navLinks = [
   { to: '/freestyle', text: 'navFreestyle', defaultText: 'Freestyle' },
+  { to: 'navFlashcards', defaultText: 'Flashcards' },
   { to: '/study', text: 'navStudyMode', defaultText: 'Study' },
   { to: '/progress', text: 'navProgress', defaultText: 'Progress' },
   { to: '/personalize', text: 'navPersonalize', defaultText: 'Personalize' },
@@ -16,6 +17,8 @@ const navLinks = [
   { to: '/study-tools', text: 'navStudyTools', defaultText: 'Study Tools' },
   { to: '/review', text: 'navReview', defaultText: 'Review' },
   { to: '/learned-words', text: 'navLearnedWords', defaultText: 'Learned Words' },
+  { to: '/flashcards', text: 'navFlashcards', defaultText: 'Flashcards' },
+  { to: '/conversation', text: 'navConversation', defaultText: 'Conversation' },
 ];
 
 const Layout = () => {

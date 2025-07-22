@@ -18,6 +18,8 @@ import GrammarGuidebookPage from './pages/GrammarGuidebookPage/GrammarGuidebookP
 import LandingPage from './pages/LandingPage/LandingPage';
 import ReviewPage from './pages/ReviewPage/ReviewPage';
 import LearnedWordsPage from './pages/LearnedWordsPage/LearnedWordsPage';
+import FlashcardPage from './pages/FlashcardPage/FlashcardPage';
+import ConversationPage from './pages/ConversationPage/ConversationPage';
 
 // ProtectedRoute for general authentication (if needed for pages like MyStudySetsPage)
 const ProtectedRoute = ({ children }) => {
@@ -66,6 +68,8 @@ function App() {
                 <Route path="study/*" element={<StudyModeGuard><StudyRoutes /></StudyModeGuard>} />
                 <Route path="review" element={<ReviewPage />} />
                 <Route path="learned-words" element={<ProtectedRoute><LearnedWordsPage /></ProtectedRoute>} />
+                <Route path="flashcards" element={<FlashcardPage />} />
+                <Route path="conversation" element={<ConversationPage />} />
                 <Route
                   path="my-sets"
                   element={
