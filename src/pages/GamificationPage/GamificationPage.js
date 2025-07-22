@@ -24,14 +24,13 @@ const GamificationPage = () => {
     { id: 5, name: 'David', xp: 750, studyScore: 1200 },
   ];
 
-  // Mock progress data for the chart
-  const progressData = [
-    { date: '2023-01-01', xp: 100 },
-    { date: '2023-01-02', xp: 150 },
-    { date: '2023-01-03', xp: 220 },
-    { date: '2023-01-04', xp: 300 },
-    { date: '2023-01-05', xp: 450 },
-  ];
+  const [progressData, setProgressData] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('/data/progressData.json')
+      .then(response => response.json())
+      .then(data => setProgressData(data));
+  }, []);
 
   return (
     <div className="gamification-page">
