@@ -1,0 +1,6 @@
+[
+  { "questionText": "The sky is blue.", "isCorrect": true },
+  { "questionText": "The grass is purple.", "isCorrect": false },
+  { "questionText": "The sun is a star.", "isCorrect": true },
+  { "questionText": "The moon is made of cheese.", "isCorrect": false }
+]
