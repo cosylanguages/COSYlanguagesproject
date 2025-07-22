@@ -8,7 +8,8 @@ import VirtualTutor from '../../components/StudyMode/VirtualTutor';
 import SmartReview from '../../components/StudyMode/SmartReview';
 import TodaysFocus from '../../components/Personalization/TodaysFocus';
 import MyLearningGarden from '../../components/Gamification/MyLearningGarden';
-import CosyCorner from '../../components/Community/CosyCorner';
+// TODO: Restore CosyCorner once the component is available
+// import CosyCorner from '../../components/Community/CosyCorner';
 import LanguagePet from '../../components/Gamification/LanguagePet';
 import SouvenirCollection from '../../components/Gamification/SouvenirCollection';
 import CosyStreaks from '../../components/Gamification/CosyStreaks';
@@ -66,7 +67,7 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
       <div className="cosy-dashboard">
         <TodaysFocus />
         <MyLearningGarden />
-        <CosyCorner />
+        {/* <CosyCorner /> */}
         <LanguagePet />
         <SouvenirCollection />
         <CosyStreaks />
