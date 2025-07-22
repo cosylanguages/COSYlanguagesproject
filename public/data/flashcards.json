@@ -1,0 +1,7 @@
+[
+  { "front": "Apple", "back": "A fruit", "nextReview": "2025-01-01T00:00:00.000Z", "easeFactor": 2.5 },
+  { "front": "Book", "back": "A set of written pages", "nextReview": "2025-01-01T00:00:00.000Z", "easeFactor": 2.5 },
+  { "front": "Car", "back": "A vehicle", "nextReview": "2025-01-01T00:00:00.000Z", "easeFactor": 2.5 },
+  { "front": "Dog", "back": "A domesticated animal", "nextReview": "2025-01-01T00:00:00.000Z", "easeFactor": 2.5 },
+  { "front": "House", "back": "A building for habitation", "nextReview": "2025-01-01T00:00:00.000Z", "easeFactor": 2.5 }
+]
