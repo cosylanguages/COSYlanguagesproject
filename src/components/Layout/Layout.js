@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Outlet, Link, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { useI18n } from '../../i18n/I18nContext';
@@ -19,12 +19,26 @@ const navLinks = [
   { to: '/learned-words', text: 'navLearnedWords', defaultText: 'Learned Words' },
   { to: '/flashcards', text: 'navFlashcards', defaultText: 'Flashcards' },
   { to: '/conversation', text: 'navConversation', defaultText: 'Conversation' },
+  { to: '/dictionary', text: 'navDictionary', defaultText: 'Dictionary' },
 ];
 
 const Layout = () => {
   const { isAuthenticated, currentUser, logout, loadingAuth } = useAuth();
   const { t } = useI18n();
   const navigate = useNavigate();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
   const handleLogout = async () => {
     await logout();
@@ -59,24 +73,33 @@ const Layout = () => {
         </nav>
         <div className="header-controls">
           <Button
+            onClick={toggleDarkMode}
+            variant="contained"
+            color="secondary"
+          >
+            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+          </Button>
+          <Button
             onClick={() => {
               alert('Downloading the app...');
             }}
-            className="download-button"
-            variant="primary"
+            variant="contained"
+            color="primary"
           >
-            <TransliterableText text={t('btnDownload') || 'Download App'} />
+            {t('btnDownload') || 'Download App'}
           </Button>
           {isAuthenticated && currentUser && (
             <div className="user-info">
-              <span><TransliterableText text={t('welcomeUser', { name: currentUser.username || currentUser.role || 'User' }) || `Welcome, ${currentUser.username || currentUser.role || 'User'}!`} /></span>
+              <NavLink to="/profile" className="profile-link">
+                <TransliterableText text={t('welcomeUser', { name: currentUser.username || currentUser.role || 'User' }) || `Welcome, ${currentUser.username || currentUser.role || 'User'}!`} />
+              </NavLink>
               <Button
                 onClick={handleLogout}
                 disabled={loadingAuth}
-                className="logout-button"
-                variant="danger"
+                variant="outlined"
+                color="secondary"
               >
-                <TransliterableText text={loadingAuth ? (t('loggingOut') || 'Logging out...') : (t('btnLogout') || 'Logout')} />
+                {loadingAuth ? (t('loggingOut') || 'Logging out...') : (t('btnLogout') || 'Logout')}
               </Button>
             </div>
           )}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
-import TransliterableText from '../Common/TransliterableText';
 import Button from '../Common/Button'; // Import Button
 import './ExerciseControls.css';
 
@@ -15,7 +14,7 @@ const ExerciseControls = ({
   isRevealed = false,
   customButton = null
 }) => {
-  const { t, language: i18nLanguage } = useI18n();
+  const { t } = useI18n();
 
   const {
     showCheck = !!onCheckAnswer,
@@ -32,69 +31,64 @@ const ExerciseControls = ({
 
   const canInteract = !isAnswerCorrect && !isRevealed;
 
-  // Mapping exercise actions to button variants
-  // These variants (success, info, warning, secondary, primary) should correspond to styles in index.css
   const buttonVariantMap = {
-    hint: 'warning',    // Yellowish, like hints often are
-    randomize: 'secondary', // Neutral, like randomize often is
-    check: 'success',   // Green, for correct/check
-    reveal: 'info',     // Blue/teal, for revealing information
-    next: 'primary',    // Standard primary action
+    hint: 'warning',
+    randomize: 'secondary',
+    check: 'success',
+    reveal: 'info',
+    next: 'primary',
   };
-  // Retaining action-button for base styling not covered by btn/btn-variant if any
-  // And action-button-* for specific icons/text colors if variants don't cover them.
-  // Ideally, variants should cover most, and Button.css or ExerciseControls.css would handle the rest.
 
   return (
     <div className="exercise-action-buttons">
       {showHint && onShowHint && (
         <Button
-          className="action-button action-button-hint" // Keep for potential specific styles
           onClick={onShowHint}
           disabled={!canInteract}
-          variant={buttonVariantMap.hint}
+          variant="contained"
+          color={buttonVariantMap.hint}
         >
-          <TransliterableText text={hintButtonText} langOverride={i18nLanguage} />
+          {hintButtonText}
         </Button>
       )}
       {showRandomize && onRandomize && (
         <Button
-          className="action-button action-button-randomize"
           onClick={onRandomize}
           disabled={!canInteract && !showNext}
-          variant={buttonVariantMap.randomize}
+          variant="contained"
+          color={buttonVariantMap.randomize}
         >
-          <TransliterableText text={randomizeButtonText} langOverride={i18nLanguage} />
+          {randomizeButtonText}
         </Button>
       )}
       {showCheck && onCheckAnswer && (
         <Button
-          className="action-button action-button-check"
           onClick={onCheckAnswer}
           disabled={!canInteract}
-          variant={buttonVariantMap.check}
+          variant="contained"
+          color={buttonVariantMap.check}
         >
-          <TransliterableText text={checkButtonText} langOverride={i18nLanguage} />
+          {checkButtonText}
         </Button>
       )}
       {showReveal && onRevealAnswer && (
         <Button
-          className="action-button action-button-reveal"
           onClick={onRevealAnswer}
           disabled={!canInteract}
-          variant={buttonVariantMap.reveal}
+          variant="contained"
+          color={buttonVariantMap.reveal}
         >
-          <TransliterableText text={revealButtonText} langOverride={i18nLanguage} />
+          {revealButtonText}
         </Button>
       )}
       {customButton}
       {showNext && onNextExercise && (
         <Button
-          className="action-button action-button-next"
           onClick={onNextExercise}
-          variant={buttonVariantMap.next}
+          variant="contained"
+          color={buttonVariantMap.next}
         >
-          <TransliterableText text={nextButtonText} langOverride={i18nLanguage} />
+          {nextButtonText}
         </Button>
       )}
     </div>

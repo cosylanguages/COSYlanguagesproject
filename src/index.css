@@ -399,3 +399,15 @@ h4 { font-size: var(--font-size-h4); }
   text-align: center;
   font-size: 1em;
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --color-background: #121212;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #bbbbbb;
+  --color-text-headings: #ffffff;
+  --color-surface-light: #1e1e1e;
+  --color-surface-medium: #2e2e2e;
+  --color-border: #3e3e3e;
+  --color-border-light: #2e2e2e;
+}

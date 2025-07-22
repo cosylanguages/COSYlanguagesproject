@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AppRoutes from './AppRoutes';
 import { PlanProvider } from './contexts/PlanContext';
 import { AuthProvider } from './contexts/AuthContext';
@@ -13,6 +14,7 @@ import { StudySetProvider } from './contexts/StudySetContext';
 import './index.css';
 import './components/Common/animations.css';
 
+const theme = createTheme();
 
 const rootElement = document.getElementById('root');
 
@@ -29,7 +31,9 @@ if (rootElement) {
                   <FreestyleProvider>
                     <StudyProvider>
                       <StudySetProvider>
-                        <AppRoutes />
+                        <ThemeProvider theme={theme}>
+                          <AppRoutes />
+                        </ThemeProvider>
                       </StudySetProvider>
                     </StudyProvider>
                   </FreestyleProvider>
