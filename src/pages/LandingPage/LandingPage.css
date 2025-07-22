@@ -48,3 +48,11 @@
   .landing-button:hover {
     background-color: #0056b3;
   }
+
+  .landing-button.secondary {
+    background-color: #6c757d;
+  }
+
+  .landing-button.secondary:hover {
+    background-color: #5a6268;
+  }

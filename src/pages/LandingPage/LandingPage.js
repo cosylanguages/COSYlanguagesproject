@@ -9,8 +9,8 @@ function LandingPage() {
         <h1>Welcome to COSYlanguages</h1>
         <p>Your journey to language mastery starts here.</p>
         <div className="landing-buttons">
-          <Link to="/freestyle" className="landing-button">Start a Lesson</Link>
-          <Link to="/login" className="landing-button">Create an Account / Login</Link>
+          <Link to="/freestyle" className="landing-button">Freestyle Mode</Link>
+          <Link to="/study" className="landing-button secondary">Study Mode</Link>
         </div>
       </div>
     </div>
