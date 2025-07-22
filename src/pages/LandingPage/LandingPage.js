@@ -23,8 +23,9 @@ function LandingPage() {
         {wordOfTheDay && (
           <WordOfTheDay
             word={wordOfTheDay.word}
-            translation={wordOfTheDay.translation}
+            definition={wordOfTheDay.definition}
             example={wordOfTheDay.example}
+            image={wordOfTheDay.image}
           />
         )}
         <div className="landing-buttons">
