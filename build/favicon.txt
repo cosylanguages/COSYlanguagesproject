@@ -1,2 +1,0 @@
-// Fichier favicon pour COSYlanguages
-// Ceci est un favicon PNG pour le site web COSYlanguages.
