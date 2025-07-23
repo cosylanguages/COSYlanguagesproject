@@ -15,6 +15,7 @@ import PersonalizationPage from './pages/PersonalizationPage/PersonalizationPage
 import InteractivePage from './pages/InteractivePage/InteractivePage';
 import StudyToolsPage from './pages/StudyToolsPage/StudyToolsPage';
 import GrammarGuidebookPage from './pages/GrammarGuidebookPage/GrammarGuidebookPage';
+import DictionaryPage from './pages/DictionaryPage/DictionaryPage';
 import LandingPage from './pages/LandingPage/LandingPage';
 import ReviewPage from './pages/ReviewPage/ReviewPage';
 import LearnedWordsPage from './pages/LearnedWordsPage/LearnedWordsPage';
@@ -64,6 +65,7 @@ function App() {
                 <Route path="personalize" element={<PersonalizationPage />} />
                 <Route path="interactive" element={<InteractivePage />} />
                 <Route path="study-tools" element={<StudyToolsPage />} />
+                <Route path="dictionary" element={<DictionaryPage />} />
                 <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
                 <Route path="study/*" element={<StudyModeGuard><StudyRoutes /></StudyModeGuard>} />
                 <Route path="review" element={<ReviewPage />} />

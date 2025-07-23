@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import StudySetList from '../../components/StudySets/StudySetList';
 import StudySetEditor from '../../components/StudySets/StudySetEditor';
-import FlashcardEditor from '../../components/StudySets/FlashcardEditor';
 import FlashcardPlayer from '../../components/StudyMode/StudentTools/FlashcardPlayer';
 import { getStudySetById } from '../../utils/studySetService';
 import { useI18n } from '../../i18n/I18nContext';
@@ -29,8 +28,6 @@ const MyStudySetsPage = () => {
       setCurrentView('editSet');
     } else if (view === 'edit') {
       setCurrentView('editSet');
-    } else if (view === 'cards') {
-      setCurrentView('editCards');
     } else if (view === 'study') {
       setCurrentView('studyPlayer');
     } else {
@@ -40,15 +37,13 @@ const MyStudySetsPage = () => {
 
   const handleCreateNewSet = () => navigate('/my-sets/new');
   const handleEditSetDetails = (setId) => navigate(`/my-sets/${setId}/edit`);
-  const handleEditSetCards = (setId) => navigate(`/my-sets/${setId}/cards`);
   const handleLaunchStudyPlayer = (setId) => navigate(`/my-sets/${setId}/study`);
   const showListView = () => navigate('/my-sets');
 
   const onSetSaved = (savedSetId) => {
-    handleEditSetCards(savedSetId);
+    showListView();
   };
   const onSetEditorCancelled = () => showListView();
-  const onCardEditorFinished = () => showListView();
   const onPlayerExit = () => showListView();
 
   let content;
@@ -59,13 +54,6 @@ const MyStudySetsPage = () => {
         setIdProp={selectedSetId}
         onSetSaved={onSetSaved}
         onCancel={onSetEditorCancelled}
-      />
-    );
-  } else if (currentView === 'editCards' && selectedSetId) {
-    content = (
-      <FlashcardEditor
-        setId={selectedSetId}
-        onFinished={onCardEditorFinished}
       />
     );
   } else if (currentView === 'studyPlayer' && selectedSetId) {
@@ -88,7 +76,6 @@ const MyStudySetsPage = () => {
       <StudySetList
         onCreateNew={handleCreateNewSet}
         onEditSetDetails={handleEditSetDetails}
-        onEditSetCards={handleEditSetCards}
         onLaunchStudyPlayer={handleLaunchStudyPlayer}
       />
     );
