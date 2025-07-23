@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DictionaryTool from '../../components/StudyMode/StudentTools/DictionaryTool';
+import DictionaryTool from '../../../components/StudyMode/StudentTools/DictionaryTool';
 import './DictionaryPage.css';
 
 const DictionaryPage = () => {
