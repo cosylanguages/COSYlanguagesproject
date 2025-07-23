@@ -14,7 +14,7 @@ function getLanguageEntries() {
 const packageJson = require('./package.json');
 
 function createHtmlWebpackPlugin(env, paths, options) {
-  const publicPath = env === 'production' ? packageJson.homepage : '/';
+  const publicPath = env === 'production' ? '/' : '/';
   return new HtmlWebpackPlugin({
     inject: true,
     template: options.template || paths.appHtml,
