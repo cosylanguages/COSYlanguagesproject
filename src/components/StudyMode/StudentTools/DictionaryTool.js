@@ -5,6 +5,7 @@ import { pronounceText } from '../../../utils/speechUtils';
 import { getStudySets, addCardToSet } from '../../../utils/studySetService';
 import { loadAllLevelsForLanguageAsFlatList } from '../../../utils/vocabularyService';
 import SearchableCardList from '../../Common/SearchableCardList';
+import FlashcardPlayer from './FlashcardPlayer';
 import './DictionaryTool.css';
 
 const DictionaryTool = ({ isOpen, onClose }) => {
@@ -13,6 +14,7 @@ const DictionaryTool = ({ isOpen, onClose }) => {
     const [allVocabulary, setAllVocabulary] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [showFlashcardPlayer, setShowFlashcardPlayer] = useState(false);
 
     useEffect(() => {
         const loadVocabulary = async () => {
@@ -33,17 +35,21 @@ const DictionaryTool = ({ isOpen, onClose }) => {
     const handleAddWordToFlashcards = (word) => {
         const studySets = getStudySets();
         if (studySets.length === 0) {
-            alert("Please create a study set first.");
-            return;
+            // If there are no study sets, create a default one
+            const newSet = {
+                id: `set_${Date.now()}`,
+                name: "My Study Set",
+                items: [],
+            };
+            localStorage.setItem("cosyStudySets", JSON.stringify([newSet]));
         }
-        const firstSetId = studySets[0].id;
+        const firstSetId = getStudySets()[0].id;
         const cardData = {
             term1: word.term,
             term2: word.definition,
             notes: word.example
         };
         addCardToSet(firstSetId, cardData);
-        alert(`Word "${word.term}" added to study set "${studySets[0].name}".`);
     };
 
     const searchFunction = (item, searchTerm) => {
@@ -68,7 +74,9 @@ const DictionaryTool = ({ isOpen, onClose }) => {
             {item.definition && <p className="vocab-definition"><strong>{t('dictionary.definition', 'Definition:')}</strong> {item.definition}</p>}
             {item.example && <p className="vocab-example"><strong>{t('dictionary.example', 'Example:')}</strong> <em>{item.example}</em></p>}
             {item.theme && <p className="vocab-theme"><small>{t('dictionary.theme', 'Theme:')} {item.theme}</small></p>}
-            <button className="btn-icon" onClick={() => handleAddWordToFlashcards(item)}>➕</button>
+            <button className="btn btn-primary" onClick={() => handleAddWordToFlashcards(item)}>
+                {t('dictionary.add_to_flashcards', 'Add to Flashcards')}
+            </button>
         </div>
     );
 
@@ -79,11 +87,32 @@ const DictionaryTool = ({ isOpen, onClose }) => {
     if (isLoading) return <p>{t('dictionary.loading', 'Loading dictionary...')}</p>;
     if (error) return <p className="error-message">{t('dictionary.loadError', 'Error loading dictionary: ')}{error}</p>;
 
+    if (showFlashcardPlayer) {
+        const studySets = getStudySets();
+        const studySet = studySets.length > 0 ? studySets[0] : { items: [] };
+        return (
+            <div className="tool-panel-modal">
+                <div className="tool-panel-modal-content">
+                    <button onClick={() => setShowFlashcardPlayer(false)} className="close-button">&times;</button>
+                    <FlashcardPlayer
+                        studySetId={studySet.id}
+                        initialSetData={studySet}
+                        onExitPlayer={() => setShowFlashcardPlayer(false)}
+                        source="student"
+                    />
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="tool-panel-modal">
             <div className="tool-panel-modal-content">
                 <button onClick={onClose} className="close-button">&times;</button>
                 <h3>{t('dictionary.title', 'Vocabulary Dictionary')}</h3>
+                <button onClick={() => setShowFlashcardPlayer(true)} className="btn btn-primary">
+                    {t('dictionary.study_flashcards', 'Study Flashcards')}
+                </button>
                 <SearchableCardList
                     items={allVocabulary}
                     searchFunction={searchFunction}
