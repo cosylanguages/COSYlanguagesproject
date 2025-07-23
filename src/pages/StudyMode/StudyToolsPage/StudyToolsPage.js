@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Flashcard from '../../components/Common/Flashcard';
-import { useI18n } from '../../i18n/I18nContext';
-import TransliterableText from '../../components/Common/TransliterableText';
+import Flashcard from '../../../components/Common/Flashcard';
+import { useI18n } from '../../../i18n/I18nContext';
+import TransliterableText from '../../../components/Common/TransliterableText';
 import './StudyToolsPage.css';
 
 const StudyToolsPage = () => {

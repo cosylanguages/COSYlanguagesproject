@@ -6,7 +6,7 @@ import MistakeNotebook from '../../components/StudyMode/MistakeNotebook';
 import GrammarReview from '../../components/StudyMode/GrammarReview';
 import VirtualTutor from '../../components/StudyMode/VirtualTutor';
 import SmartReview from '../../components/StudyMode/SmartReview';
-import TodaysFocus from '../../components/Personalization/TodaysFocus';
+import TodaysFocus from '../StudyMode/PersonalizationPage/components/TodaysFocus';
 import MyLearningGarden from '../../components/Gamification/MyLearningGarden';
 // TODO: Restore CosyCorner once the component is available
 // import CosyCorner from '../../components/Community/CosyCorner';
