@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const languages = ['ba', 'br', 'de', 'el', 'en', 'es', 'fr', 'hy', 'it', 'pt', 'ru', 'tt'];
+const languages = ['tt', 'ka'];
 
 function getLanguageEntries() {
   return languages.reduce((acc, lang) => {

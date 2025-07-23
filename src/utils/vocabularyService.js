@@ -1,6 +1,6 @@
 // src/utils/vocabularyService.js
 
-import { dictionary } from '../../public/data/dictionary.js';
+import { dictionary } from '../data/dictionary.js';
 
 export const CEFR_LEVELS = ['a0', 'a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
 const vocabularyCache = new Map(); // Cache to store loaded vocabulary data: Map<"lang-level", themedVocabularyObject>
