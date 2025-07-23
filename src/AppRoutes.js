@@ -11,15 +11,15 @@ import StudyModeGuard from './components/StudyMode/StudyModeGuard';
 import MyStudySetsPage from './pages/MyStudySetsPage/MyStudySetsPage'; // Import MyStudySetsPage
 import FreestyleModePage from './pages/FreestyleModePage/FreestyleModePage';
 import GamificationPage from './pages/GamificationPage/GamificationPage';
-import PersonalizationPage from './pages/PersonalizationPage/PersonalizationPage';
-import InteractivePage from './pages/InteractivePage/InteractivePage';
-import StudyToolsPage from './pages/StudyToolsPage/StudyToolsPage';
+import PersonalizationPage from './pages/StudyMode/PersonalizationPage/PersonalizationPage';
+import InteractivePage from './pages/StudyMode/InteractivePage/InteractivePage';
+import StudyToolsPage from './pages/StudyMode/StudyToolsPage/StudyToolsPage';
 import GrammarGuidebookPage from './pages/GrammarGuidebookPage/GrammarGuidebookPage';
-import DictionaryPage from './pages/DictionaryPage/DictionaryPage';
+import DictionaryPage from './pages/StudyMode/DictionaryPage/DictionaryPage';
 import LandingPage from './pages/LandingPage/LandingPage';
-import ReviewPage from './pages/ReviewPage/ReviewPage';
-import LearnedWordsPage from './pages/LearnedWordsPage/LearnedWordsPage';
-import ConversationPage from './pages/ConversationPage/ConversationPage';
+import ReviewPage from './pages/StudyMode/ReviewPage/ReviewPage';
+import LearnedWordsPage from './pages/StudyMode/LearnedWordsPage/LearnedWordsPage';
+import ConversationPage from './pages/StudyMode/ConversationPage/ConversationPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 
 // ProtectedRoute for general authentication (if needed for pages like MyStudySetsPage)

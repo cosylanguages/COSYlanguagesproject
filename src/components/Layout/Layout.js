@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Outlet, Link, NavLink, useNavigate } from 'react-router-dom';
+import { Outlet, Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { useI18n } from '../../i18n/I18nContext';
 import Button from '../Common/Button';
@@ -11,14 +11,7 @@ const navLinks = [
   { to: '/flashcards', text: 'navFlashcards', defaultText: 'Flashcards' },
   { to: '/study', text: 'navStudyMode', defaultText: 'Study' },
   { to: '/progress', text: 'navProgress', defaultText: 'Progress' },
-  { to: '/personalize', text: 'navPersonalize', defaultText: 'Personalize' },
-  { to: '/interactive', text: 'navInteractive', defaultText: 'Interactive' },
   { to: '/community', text: 'navCommunity', defaultText: 'Community' },
-  { to: '/study-tools', text: 'navStudyTools', defaultText: 'Study Tools' },
-  { to: '/review', text: 'navReview', defaultText: 'Review' },
-  { to: '/learned-words', text: 'navLearnedWords', defaultText: 'Learned Words' },
-  { to: '/conversation', text: 'navConversation', defaultText: 'Conversation' },
-  { to: '/dictionary', text: 'navDictionary', defaultText: 'Dictionary' },
 ];
 
 const Layout = () => {
@@ -26,6 +19,23 @@ const Layout = () => {
   const { t } = useI18n();
   const navigate = useNavigate();
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const location = useLocation();
+
+  const isStudyMode = location.pathname.startsWith('/study');
+
+  const studyModeNavLinks = [
+    { to: '/study/dictionary', text: 'navDictionary', defaultText: 'Dictionary' },
+    { to: '/study/study-tools', text: 'navStudyTools', defaultText: 'Study Tools' },
+    { to: '/study/conversation', text: 'navConversation', defaultText: 'Conversation' },
+    { to: '/study/learned-words', text: 'navLearnedWords', defaultText: 'Learned Words' },
+    { to: '/study/review', text: 'navReview', defaultText: 'Review' },
+    { to: '/study/personalize', text: 'navPersonalize', defaultText: 'Personalize' },
+    { to: '/study/interactive', text: 'navInteractive', defaultText: 'Interactive' },
+  ];
+
+  const filteredNavLinks = isStudyMode
+    ? [...navLinks, ...studyModeNavLinks]
+    : navLinks;
 
   useEffect(() => {
     if (isDarkMode) {
@@ -54,7 +64,7 @@ const Layout = () => {
         </div>
         <nav className="app-nav">
           <ul>
-            {navLinks.map((link) => (
+            {filteredNavLinks.map((link) => (
               <li key={link.to}>
                 <NavLink to={link.to} className={({ isActive }) => isActive ? "active-link" : ""}>
                   <TransliterableText text={t(link.text) || link.defaultText} />
