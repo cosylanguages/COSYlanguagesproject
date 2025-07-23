@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
+import { BrowserRouter } from 'react-router-dom';
 import { LanguageIslandWrapper } from './freestyleIslandsEntry';
 import { useI18n } from '../i18n/I18nContext';
 
@@ -64,7 +65,7 @@ describe('LanguageIslandApp (via LanguageIslandWrapper)', () => {
   });
 
   test('renders correctly with initial language', () => {
-    render(<LanguageIslandWrapper />);
+    render(<BrowserRouter><I18nProvider><LanguageIslandWrapper /></I18nProvider></BrowserRouter>);
     expect(screen.getByText('🌎 Choose Your Language:')).toBeInTheDocument();
     expect(screen.getByTestId('language-selector')).toBeInTheDocument();
     expect(screen.getByTestId('language-selector')).toHaveValue('en');
@@ -73,7 +74,7 @@ describe('LanguageIslandApp (via LanguageIslandWrapper)', () => {
 
   test('handles language change, calls changeLanguage context function, and dispatches event', () => {
     const dispatchEventSpy = jest.spyOn(window, 'dispatchEvent');
-    render(<LanguageIslandWrapper />);
+    render(<BrowserRouter><I18nProvider><LanguageIslandWrapper /></I18nProvider></BrowserRouter>);
     const languageSelector = screen.getByTestId('language-selector');
     fireEvent.change(languageSelector, { target: { value: 'es' } });
 
@@ -88,7 +89,7 @@ describe('LanguageIslandApp (via LanguageIslandWrapper)', () => {
 
   test('does not dispatch event or call changeLanguage if language is the same', () => {
     const dispatchEventSpy = jest.spyOn(window, 'dispatchEvent');
-    render(<LanguageIslandWrapper />);
+    render(<BrowserRouter><I18nProvider><LanguageIslandWrapper /></I18nProvider></BrowserRouter>);
     const languageSelector = screen.getByTestId('language-selector');
     fireEvent.change(languageSelector, { target: { value: 'en' } });
 
@@ -116,7 +117,7 @@ describe('LanguageIslandApp (via LanguageIslandWrapper)', () => {
       getTranslationsForLang: jest.fn((lang, namespace) => ({})),
     }));
 
-    render(<LanguageIslandWrapper />);
+    render(<BrowserRouter><I18nProvider><LanguageIslandWrapper /></I18nProvider></BrowserRouter>);
     const languageSelector = screen.getByTestId('language-selector');
     fireEvent.change(languageSelector, { target: { value: 'fr' } });
 
@@ -183,7 +184,7 @@ describe('DaySelectorIslandApp (via DaySelectorIslandWrapper)', () => {
   });
 
   test('renders DaySelectorFreestyle with initial props', () => {
-    render(<DaySelectorIslandWrapper language="COSYenglish" />);
+    render(<BrowserRouter><I18nProvider><DaySelectorIslandWrapper language="COSYenglish" /></I18nProvider></BrowserRouter>);
 
     expect(screen.getByTestId('day-selector-freestyle-mock')).toBeInTheDocument();
     expect(mockDaySelectorFreestyleInner).toHaveBeenCalledTimes(1); // Use the inner tracker
@@ -200,7 +201,7 @@ describe('DaySelectorIslandApp (via DaySelectorIslandWrapper)', () => {
   });
 
   test('switches to single day input mode', () => {
-    render(<DaySelectorIslandWrapper language="COSYenglish" />);
+    render(<BrowserRouter><I18nProvider><DaySelectorIslandWrapper language="COSYenglish" /></I18nProvider></BrowserRouter>);
     fireEvent.click(screen.getByTestId('dsf-single-mode'));
 
     // mockDaySelectorFreestyleInner is called again on re-render
@@ -211,7 +212,7 @@ describe('DaySelectorIslandApp (via DaySelectorIslandWrapper)', () => {
   });
 
   test('switches to range day input mode', () => {
-    render(<DaySelectorIslandWrapper language="COSYenglish" />);
+    render(<BrowserRouter><I18nProvider><DaySelectorIslandWrapper language="COSYenglish" /></I18nProvider></BrowserRouter>);
     fireEvent.click(screen.getByTestId('dsf-range-mode'));
 
     expect(mockDaySelectorFreestyleInner).toHaveBeenCalledTimes(2); // Use the inner tracker
@@ -221,7 +222,7 @@ describe('DaySelectorIslandApp (via DaySelectorIslandWrapper)', () => {
   });
 
   test('updates currentDays on onDaysChange callback', () => {
-    render(<DaySelectorIslandWrapper language="COSYenglish" />);
+    render(<BrowserRouter><I18nProvider><DaySelectorIslandWrapper language="COSYenglish" /></I18nProvider></BrowserRouter>);
     // First, switch to a mode, e.g., single day, to ensure DaySelectorFreestyle is interactive
     fireEvent.click(screen.getByTestId('dsf-single-mode'));
 
@@ -236,7 +237,7 @@ describe('DaySelectorIslandApp (via DaySelectorIslandWrapper)', () => {
 
   test('dispatches dayIslandConfirm event on confirm action', () => {
     const dispatchEventSpy = jest.spyOn(window, 'dispatchEvent');
-    render(<DaySelectorIslandWrapper language="COSYenglish" />);
+    render(<BrowserRouter><I18nProvider><DaySelectorIslandWrapper language="COSYenglish" /></I18nProvider></BrowserRouter>);
 
     // Set some days first
     fireEvent.click(screen.getByTestId('dsf-single-mode')); // Switch to single mode

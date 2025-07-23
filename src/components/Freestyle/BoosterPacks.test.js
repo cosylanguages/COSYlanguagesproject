@@ -16,7 +16,7 @@ jest.mock('../../hooks/useAuthentication', () => ({
 
 describe('BoosterPacks', () => {
   it('renders booster packs', async () => {
-    render(<BoosterPacks />);
+    render(<I18nProvider><BoosterPacks /></I18nProvider>);
     const boosterPacks = await screen.findAllByText(/Booster Pack/);
     expect(boosterPacks).toHaveLength(1);
   });

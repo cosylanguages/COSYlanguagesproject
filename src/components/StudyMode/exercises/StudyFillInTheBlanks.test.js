@@ -11,7 +11,7 @@ describe('StudyFillInTheBlanks', () => {
             data: [{ id: 1, sentenceParts: ['Hello', null, '!'], answers: ['world'] }],
             error: null
         });
-        render(<StudyFillInTheBlanks language="en" />);
+        render(<I18nProvider><StudyFillInTheBlanks language="en" /></I18nProvider>);
         await waitFor(() => {
             expect(screen.getByText('Fill in the Blanks (Study Mode)')).toBeInTheDocument();
             expect(screen.getByText('Hello')).toBeInTheDocument();
@@ -23,7 +23,7 @@ describe('StudyFillInTheBlanks', () => {
             data: null,
             error: { message: 'Failed to load' }
         });
-        render(<StudyFillInTheBlanks language="en" />);
+        render(<I18nProvider><StudyFillInTheBlanks language="en" /></I18nProvider>);
         await waitFor(() => {
             expect(screen.getByText('Error: Failed to load')).toBeInTheDocument();
         });
@@ -34,7 +34,7 @@ describe('StudyFillInTheBlanks', () => {
             data: [],
             error: null
         });
-        render(<StudyFillInTheBlanks language="en" />);
+        render(<I18nProvider><StudyFillInTheBlanks language="en" /></I18nProvider>);
         await waitFor(() => {
             expect(screen.getByText('No fill in the blanks exercises found for this language.')).toBeInTheDocument();
         });
