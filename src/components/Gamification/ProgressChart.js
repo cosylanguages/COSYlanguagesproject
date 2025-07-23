@@ -21,7 +21,7 @@ ChartJS.register(
   Legend
 );
 
-const ProgressChart = ({ data }) => {
+const ProgressChart = ({ data = [] }) => {
   const chartData = {
     labels: data.map(d => d.date),
     datasets: [
