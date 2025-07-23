@@ -28,7 +28,7 @@ const mockNavigate = jest.fn();
 
 const renderEditor = (props) => {
   return render(
-    <I18nProvider i18n={{ t: mockT, language: 'COSYenglish', currentLangKey: 'COSYenglish' }}>
+    <I18nProvider>
       <StudySetEditor {...props} />
     </I18nProvider>
   );

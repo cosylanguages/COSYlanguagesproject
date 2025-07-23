@@ -11,7 +11,7 @@ describe('StudySentenceUnscramble', () => {
             data: [{ id: 1, correctSentence: 'Hello world!' }],
             error: null
         });
-        render(<StudySentenceUnscramble language="en" />);
+        render(<I18nProvider><StudySentenceUnscramble language="en" /></I18nProvider>);
         await waitFor(() => {
             expect(screen.getByText('Sentence Unscramble (Study Mode)')).toBeInTheDocument();
         });
@@ -22,7 +22,7 @@ describe('StudySentenceUnscramble', () => {
             data: null,
             error: { message: 'Failed to load' }
         });
-        render(<StudySentenceUnscramble language="en" />);
+        render(<I18nProvider><StudySentenceUnscramble language="en" /></I18nProvider>);
         await waitFor(() => {
             expect(screen.getByText('Error: Failed to load')).toBeInTheDocument();
         });
@@ -33,7 +33,7 @@ describe('StudySentenceUnscramble', () => {
             data: [],
             error: null
         });
-        render(<StudySentenceUnscramble language="en" />);
+        render(<I18nProvider><StudySentenceUnscramble language="en" /></I18nProvider>);
         await waitFor(() => {
             expect(screen.getByText('No sentence unscramble exercises found for this language.')).toBeInTheDocument();
         });

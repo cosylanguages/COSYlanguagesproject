@@ -5,9 +5,11 @@ import LandingPage from './LandingPage';
 
 test('renders landing page with welcome message and buttons', () => {
   render(
+    <I18nProvider>
     <Router>
       <LandingPage />
     </Router>
+    </I18nProvider>
   );
 
   expect(screen.getByText(/Welcome to COSYlanguages/i)).toBeInTheDocument();

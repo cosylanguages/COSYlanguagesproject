@@ -36,7 +36,7 @@ describe('ConjugationPracticeExercise', () => {
 
   const renderComponent = (props) => {
     return render(
-      <I18nProvider i18n={{ t: mockT, language: 'COSYfrench' }}>
+      <I18nProvider>
         <LatinizationProvider>
           <PlanProvider> {/* Assuming PlanProvider might be needed by underlying hooks or future states */}
             <ConjugationPracticeExercise language="COSYfrench" exerciseKey="1" {...props} />

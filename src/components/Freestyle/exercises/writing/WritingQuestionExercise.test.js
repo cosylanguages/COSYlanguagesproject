@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import WritingQuestionExercise from './WritingQuestionExercise';
+import { LatinizationProvider } from '../../../../contexts/LatinizationContext';
 
 // Mock the WritingHelper component
 jest.mock('../../../StudyMode/WritingHelper', () => {
@@ -12,7 +13,13 @@ jest.mock('../../../StudyMode/WritingHelper', () => {
 
 describe('WritingQuestionExercise', () => {
     it('renders the WritingHelper component', () => {
-        render(<WritingQuestionExercise language="en" days={['1']} />);
+        render(
+            <I18nProvider>
+            <LatinizationProvider>
+                <WritingQuestionExercise language="en" days={['1']} />
+            </LatinizationProvider>
+            </I18nProvider>
+        );
         expect(screen.getByTestId('writing-helper')).toBeInTheDocument();
     });
 });

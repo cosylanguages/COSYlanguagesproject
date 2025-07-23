@@ -28,7 +28,7 @@ const renderComponent = (props, sets = mockStudySets) => {
   studySetService.deleteStudySet.mockReturnValue(true);
 
   return render(
-    <I18nProvider i18n={{ t: mockT, language: 'COSYenglish', currentLangKey: 'COSYenglish' }}>
+    <I18nProvider>
       <StudySetList {...props} />
     </I18nProvider>
   );
