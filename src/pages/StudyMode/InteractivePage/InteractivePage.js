@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import AIConversation from '../../components/Interactive/AIConversation';
-import InteractiveStory from '../../components/Interactive/InteractiveStory';
-import SpeechRecognition from '../../components/Speech/SpeechRecognition';
-import { useI18n } from '../../i18n/I18nContext';
-import TransliterableText from '../../components/Common/TransliterableText';
+import AIConversation from './components/AIConversation';
+import InteractiveStory from './components/InteractiveStory';
+import SpeechRecognition from '../../../components/Speech/SpeechRecognition';
+import { useI18n } from '../../../i18n/I18nContext';
+import TransliterableText from '../../../components/Common/TransliterableText';
 import './InteractivePage.css';
 
 const InteractivePage = () => {

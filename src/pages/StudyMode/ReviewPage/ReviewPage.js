@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ReviewPage.css';
-import MatchingPairsGame from '../../components/Review/MatchingPairsGame';
-import TrueOrFalseGame from '../../components/Review/TrueOrFalseGame';
+import MatchingPairsGame from './components/MatchingPairsGame';
+import TrueOrFalseGame from './components/TrueOrFalseGame';
 
 function ReviewPage() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
