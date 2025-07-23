@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import GrammarGuidebook from '../../components/StudyTools/GrammarGuidebook';
+import GrammarGuidebook from './components/GrammarGuidebook';
 import './GrammarGuidebookPage.css';
 
 const guidebooks = [

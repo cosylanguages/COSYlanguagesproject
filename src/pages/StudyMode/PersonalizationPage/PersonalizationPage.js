@@ -1,8 +1,8 @@
 import React from 'react';
-import CustomLessonPlanner from '../../components/Personalization/CustomLessonPlanner';
-import AIRecommender from '../../components/Personalization/AIRecommender';
-import { useI18n } from '../../i18n/I18nContext';
-import TransliterableText from '../../components/Common/TransliterableText';
+import CustomLessonPlanner from './components/CustomLessonPlanner';
+import AIRecommender from './components/AIRecommender';
+import { useI18n } from '../../../i18n/I18nContext';
+import TransliterableText from '../../../components/Common/TransliterableText';
 import './PersonalizationPage.css';
 
 const PersonalizationPage = () => {
