@@ -36,7 +36,7 @@ const mockSingleExercise = [{ id: 'single1', sentenceParts: ["Only ", null, " on
 
 const renderHost = (props) => {
   return render(
-    <I18nProvider i18n={{ t: mockT, language: 'COSYenglish', currentLangKey: 'COSYenglish' }}>
+    <I18nProvider>
       <LatinizationProvider>
         <FillInTheBlanksPracticeHost language="COSYenglish" exerciseKey="1" {...props} />
       </LatinizationProvider>

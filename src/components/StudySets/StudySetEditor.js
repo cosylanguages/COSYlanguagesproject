@@ -6,7 +6,7 @@ import './StudySetEditor.css';
 
 // Added props: setIdProp (for explicit ID passing), onSetSaved, onCancel
 const StudySetEditor = ({ setIdProp, onSetSaved, onCancel }) => {
-  const { t, currentLangKey } = useI18n();
+  const { t, language: currentLangKey } = useI18n();
   // const { setId: paramSetId } = useParams(); // Commented out
   // const navigate = useNavigate(); // Commented out
 

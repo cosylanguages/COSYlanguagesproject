@@ -10,13 +10,13 @@ jest.mock('./PinEntry', () => ({ onPinVerified }) => (
 
 describe('StudyModeGuard', () => {
     it('renders PinEntry when pin is not verified', () => {
-        render(<StudyModeGuard><div>Protected Content</div></StudyModeGuard>);
+        render(<I18nProvider><StudyModeGuard><div>Protected Content</div></StudyModeGuard></I18nProvider>);
         expect(screen.getByText('Verify Pin')).toBeInTheDocument();
         expect(screen.queryByText('Protected Content')).not.toBeInTheDocument();
     });
 
     it('renders children when pin is verified', () => {
-        render(<StudyModeGuard><div>Protected Content</div></StudyModeGuard>);
+        render(<I18nProvider><StudyModeGuard><div>Protected Content</div></StudyModeGuard></I18nProvider>);
         fireEvent.click(screen.getByText('Verify Pin'));
         expect(screen.getByText('Protected Content')).toBeInTheDocument();
         expect(screen.queryByText('Verify Pin')).not.toBeInTheDocument();

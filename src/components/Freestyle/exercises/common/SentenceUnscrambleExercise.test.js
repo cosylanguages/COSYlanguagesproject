@@ -34,7 +34,7 @@ const mockExerciseDataNoScramble = {
 
 const renderExercise = (props) => {
   return render(
-    <I18nProvider i18n={{ t: mockT, language: 'COSYenglish' }}>
+    <I18nProvider>
       <LatinizationProvider>
         <SentenceUnscrambleExercise {...props} />
       </LatinizationProvider>
