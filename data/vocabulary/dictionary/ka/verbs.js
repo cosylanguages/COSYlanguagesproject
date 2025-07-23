@@ -1,2 +1,0 @@
-// Georgian Verbs
-const verbs = [];
