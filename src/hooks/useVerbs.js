@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * A custom hook that fetches and filters verb data.
+ * @param {string} levels - A comma-separated string of verb levels to filter by.
+ * @param {string} lang - The language of the verbs to fetch.
+ * @returns {{verbs: Array, loading: boolean, error: object|null}} An object containing the filtered verbs, a loading state, and an error object.
+ */
 const useVerbs = (levels, lang) => {
     const [verbs, setVerbs] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -23,7 +29,6 @@ const useVerbs = (levels, lang) => {
                 });
                 console.log('All verbs:', allVerbs);
 
-                // Filter verbs based on levels if provided
                 let filteredVerbs = allVerbs;
                 if (levels) {
                     const levelSet = new Set(levels.split(','));

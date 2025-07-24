@@ -1,18 +1,15 @@
-// API functions for managing Study Sets
-
-const BASE_URL = 'http://localhost:3001/api'; // Consistent with other API files
+const BASE_URL = 'http://localhost:3001/api';
 
 /**
  * Fetches all study sets for the authenticated user.
- * Typically returns a summary (e.g., without full item lists).
- * @param {string} token - The authentication token.
- * @param {string} [languageCode] - Optional language code to filter sets by.
- * @returns {Promise<Array>} A promise that resolves to an array of study set summary objects.
+ * @param {string} token - The user's authentication token.
+ * @param {string} [languageCode] - An optional language code to filter the study sets by.
+ * @returns {Promise<Array>} A promise that resolves to an array of study set objects.
  */
 export async function fetchStudySets(token, languageCode = null) {
     let url = `${BASE_URL}/studysets`;
     if (languageCode) {
-        url += `?languageCode=${languageCode}`; // Assuming backend supports this query param
+        url += `?languageCode=${languageCode}`;
     }
 
     const res = await fetch(url, {
@@ -29,10 +26,10 @@ export async function fetchStudySets(token, languageCode = null) {
 }
 
 /**
- * Fetches a single study set by its ID, including all its items.
- * @param {string} token - The authentication token.
+ * Fetches a single study set by its ID.
+ * @param {string} token - The user's authentication token.
  * @param {string} setId - The ID of the study set to fetch.
- * @returns {Promise<object>} A promise that resolves to the detailed study set object (with items).
+ * @returns {Promise<object>} A promise that resolves to the study set object.
  */
 export async function fetchStudySetById(token, setId) {
     const res = await fetch(`${BASE_URL}/studysets/${setId}`, {
@@ -51,8 +48,8 @@ export async function fetchStudySetById(token, setId) {
 
 /**
  * Adds a new study set.
- * @param {string} token - The authentication token.
- * @param {object} setData - Data for the new set (e.g., { name, languageCode, items: [] }).
+ * @param {string} token - The user's authentication token.
+ * @param {object} setData - The data for the new study set.
  * @returns {Promise<object>} A promise that resolves to the newly created study set object.
  */
 export async function addStudySet(token, setData) {
@@ -72,11 +69,10 @@ export async function addStudySet(token, setData) {
 }
 
 /**
- * Updates an existing study set.
- * This is crucial for saving SRS progress if items are part of the setData.
- * @param {string} token - The authentication token.
+ * Updates a study set.
+ * @param {string} token - The user's authentication token.
  * @param {string} setId - The ID of the study set to update.
- * @param {object} setData - The updated data for the study set (can include updated items array).
+ * @param {object} setData - The updated data for the study set.
  * @returns {Promise<object>} A promise that resolves to the updated study set object.
  */
 export async function updateStudySet(token, setId, setData) {
@@ -97,9 +93,9 @@ export async function updateStudySet(token, setId, setData) {
 
 /**
  * Deletes a study set.
- * @param {string} token - The authentication token.
+ * @param {string} token - The user's authentication token.
  * @param {string} setId - The ID of the study set to delete.
- * @returns {Promise<void>} A promise that resolves when the set is deleted.
+ * @returns {Promise<void>} A promise that resolves when the study set is deleted.
  */
 export async function deleteStudySet(token, setId) {
     const res = await fetch(`${BASE_URL}/studysets/${setId}`, {
@@ -108,11 +104,11 @@ export async function deleteStudySet(token, setId) {
             'Authorization': `Bearer ${token}`,
         },
     });
-    if (!res.ok && res.status !== 204) { 
+    if (!res.ok && res.status !== 204) {
         const errorData = await res.json().catch(() => ({ message: `Failed to delete study set ${setId}` }));
         throw new Error(errorData.message || `Failed to delete study set ${setId}. Status: ${res.status}`);
     }
     if (res.status !== 204) {
-        return await res.json().catch(()=> null); 
+        return await res.json().catch(()=> null);
     }
 }

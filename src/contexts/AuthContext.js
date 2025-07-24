@@ -1,12 +1,26 @@
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
-import { loginTeacher as apiLoginTeacher, logoutUser as apiLogoutUser } from '../api/auth'; // Corrected path
+import { loginTeacher as apiLoginTeacher, logoutUser as apiLogoutUser } from '../api/auth';
 
+/**
+ * The authentication context.
+ */
 export const AuthContext = createContext();
 
+/**
+ * A custom hook for accessing the authentication context.
+ * @returns {object} The authentication context.
+ */
 export function useAuth() {
     return useContext(AuthContext);
 }
 
+/**
+ * A provider for the authentication context.
+ * It manages the authentication state and provides functions for logging in and out.
+ * @param {object} props - The component's props.
+ * @param {object} props.children - The child components.
+ * @returns {JSX.Element} The AuthProvider component.
+ */
 export function AuthProvider({ children }) {
     const [authToken, setAuthToken] = useState(sessionStorage.getItem('authToken'));
     const [currentUser, setCurrentUser] = useState(() => {
@@ -15,14 +29,14 @@ export function AuthProvider({ children }) {
             return item ? JSON.parse(item) : null;
         } catch (error) {
             console.error("Error parsing currentUser from sessionStorage:", error);
-            sessionStorage.removeItem('currentUser'); // Clear corrupted item
+            sessionStorage.removeItem('currentUser');
             return null;
         }
     });
     const [authError, setAuthError] = useState(null);
     const [loadingAuth, setLoadingAuth] = useState(false);
 
-    // Effect to update sessionStorage when authToken or currentUser changes
+    // Effect to update session storage when the auth token or current user changes.
     useEffect(() => {
         if (authToken) {
             sessionStorage.setItem('authToken', authToken);
@@ -39,13 +53,18 @@ export function AuthProvider({ children }) {
         }
     }, [currentUser]);
 
+    /**
+     * Logs in a user.
+     * @param {string} pin - The user's PIN.
+     * @returns {Promise<boolean>} A promise that resolves to true if the login is successful, and false otherwise.
+     */
     const login = useCallback(async (pin) => {
         setLoadingAuth(true);
         setAuthError(null);
         try {
             const data = await apiLoginTeacher(pin);
             setAuthToken(data.token);
-            setCurrentUser({ id: data.userId, role: data.role, username: data.username }); // Assuming username might come from API
+            setCurrentUser({ id: data.userId, role: data.role, username: data.username });
             return true;
         } catch (err) {
             console.error("Error during login:", err);
@@ -58,6 +77,9 @@ export function AuthProvider({ children }) {
         }
     }, []);
 
+    /**
+     * Logs out a user.
+     */
     const logout = useCallback(async () => {
         setLoadingAuth(true);
         setAuthError(null);
@@ -65,22 +87,16 @@ export function AuthProvider({ children }) {
             try {
                 await apiLogoutUser(authToken);
             } catch (err) {
-                // Log error but proceed with client-side logout anyway
                 console.error("Error during API logout:", err);
                 setAuthError(err.message || 'Failed to logout from server, logged out locally.');
             }
         }
         setAuthToken(null);
         setCurrentUser(null);
-        sessionStorage.removeItem('authToken'); // Ensure removal
+        sessionStorage.removeItem('authToken');
         sessionStorage.removeItem('currentUser');
         setLoadingAuth(false);
-        // Optionally, redirect to login or home page via useNavigate if used here
     }, [authToken]);
-
-    // Check token validity on initial load (optional, depends on backend token check endpoint)
-    // For now, we rely on sessionStorage and assume token is valid if present.
-    // A more robust solution would verify the token with the backend here.
 
     const value = {
         authToken,

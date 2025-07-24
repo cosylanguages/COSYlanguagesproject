@@ -1,10 +1,8 @@
-// API functions for managing Days
-
-const BASE_URL = 'http://localhost:3001/api'; // Consistent with other API files
+const BASE_URL = 'http://localhost:3001/api';
 
 /**
  * Fetches all days for the authenticated user.
- * @param {string} token - The authentication token.
+ * @param {string} token - The user's authentication token.
  * @returns {Promise<Array>} A promise that resolves to an array of day objects.
  */
 export async function fetchDays(token) {
@@ -22,9 +20,9 @@ export async function fetchDays(token) {
 }
 
 /**
- * Adds a new day for the authenticated user.
- * @param {string} token - The authentication token.
- * @param {object} dayData - The data for the new day (e.g., { title: { COSYenglish: "New Day" } }).
+ * Adds a new day.
+ * @param {string} token - The user's authentication token.
+ * @param {object} dayData - The data for the new day.
  * @returns {Promise<object>} A promise that resolves to the newly created day object.
  */
 export async function addDay(token, dayData) {
@@ -44,8 +42,8 @@ export async function addDay(token, dayData) {
 }
 
 /**
- * Updates an existing day for the authenticated user.
- * @param {string} token - The authentication token.
+ * Updates a day.
+ * @param {string} token - The user's authentication token.
  * @param {string} dayId - The ID of the day to update.
  * @param {object} dayData - The updated data for the day.
  * @returns {Promise<object>} A promise that resolves to the updated day object.
@@ -67,8 +65,8 @@ export async function updateDay(token, dayId, dayData) {
 }
 
 /**
- * Deletes a day for the authenticated user.
- * @param {string} token - The authentication token.
+ * Deletes a day.
+ * @param {string} token - The user's authentication token.
  * @param {string} dayId - The ID of the day to delete.
  * @returns {Promise<void>} A promise that resolves when the day is deleted.
  */
@@ -80,17 +78,13 @@ export async function deleteDay(token, dayId) {
         },
     });
     if (!res.ok) {
-        // DELETE might return 204 (No Content) on success, which is !res.ok if not handled.
-        // However, the backend sends 404 if not found, and other errors for actual issues.
-        // If res.status is 204, it's a success.
         if (res.status === 204) {
-            return; // Successful deletion
+            return;
         }
         const errorData = await res.json().catch(() => ({ message: 'Failed to delete day' }));
         throw new Error(errorData.message || `Failed to delete day. Status: ${res.status}`);
     }
-    // For 204 No Content, res.json() would error, so we don't call it if res.ok or res.status === 204
     if (res.status !== 204) {
-        return await res.json().catch(()=> null); // Catch if body is empty on other success codes
+        return await res.json().catch(()=> null);
     }
 }

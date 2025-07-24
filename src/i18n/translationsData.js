@@ -1,3 +1,4 @@
+// This file contains the translation data for the application.
 const translations = {
   en: {
     languageCode: "en",
