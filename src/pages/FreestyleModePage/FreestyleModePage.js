@@ -14,29 +14,37 @@ import './FreestyleModePage.css';
 
 const FreestyleModePage = () => {
   const { selectedLanguage, selectedDays, selectedExercise } = useFreestyle();
+  const [boosterPacks, setBoosterPacks] = useState([]);
+  const [selectedPack, setSelectedPack] = useState(null);
   const [words, setWords] = useState([]);
-
-  useEffect(() => {
-    if (selectedLanguage) {
-      fetch(`/api/words?language=${selectedLanguage}`)
-        .then(response => response.json())
-        .then(data => setWords(data));
-    }
-  }, [selectedLanguage]);
-
   const [summary, setSummary] = useState(null);
 
   useEffect(() => {
-    fetch('/api/summary')
+    fetch('/data/booster_packs.json')
       .then(response => response.json())
-      .then(data => setSummary(data));
+      .then(data => {
+        setBoosterPacks(data);
+      });
   }, []);
+
+  useEffect(() => {
+    if (selectedPack) {
+      const allWords = selectedPack.content.vocabulary.map(v => v.term);
+      setWords(allWords);
+      // For now, we'll just use the pack description as the summary
+      setSummary({ description: selectedPack.description });
+    }
+  }, [selectedPack]);
+
+  const handlePackSelect = (pack) => {
+    setSelectedPack(pack);
+  };
 
   return (
     <div className="freestyle-mode-container">
       <h1 className="freestyle-mode-header">Freestyle Mode</h1>
 
-      <BoosterPacks />
+      <BoosterPacks boosterPacks={boosterPacks} onSelect={handlePackSelect} />
       <FreestyleProgress />
 
       <div className="freestyle-controls-container">
@@ -55,7 +63,7 @@ const FreestyleModePage = () => {
         />
       )}
 
-      <WordCloud words={words} />
+      {selectedPack && <WordCloud words={words} />}
       {summary && <SessionSummary summary={summary} />}
       <HelpPopupIsland />
     </div>
