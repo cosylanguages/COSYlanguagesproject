@@ -1,13 +1,12 @@
-// src/utils/syllabusService.js
-import * as ExerciseDataService from './exerciseDataService'; // Import all as a namespace
+// Import the exercise data service.
+import * as ExerciseDataService from './exerciseDataService';
 
-const MAX_PROBE_DAYS = 30; // Max number of days to check for syllabus files
+const MAX_PROBE_DAYS = 30;
 
 /**
  * Probes for available syllabus days for a given language.
- * It checks for the existence of syllabus files like en_day1_syllabus.json.
- * @param {string} languageCode - The language code (e.g., 'en', 'fr').
- * @returns {Promise<Array<{ dayNumber: number, lessonName: string, fileName: string }>>} An array of available days.
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
+ * @returns {Promise<Array<{ dayNumber: number, lessonName: string, fileName: string }>>} A promise that resolves to an array of available days.
  */
 export async function getAvailableSyllabusDays(languageIdentifier) {
   if (!languageIdentifier) {
@@ -28,7 +27,6 @@ export async function getAvailableSyllabusDays(languageIdentifier) {
           fileName: fileName
         });
       } else if (error && errorType !== 'fileNotFound' && errorType !== 'jsonError') {
-        // console.error(`Error probing syllabus file ${filePath}:`, error);
       }
     } catch (e) {
       console.error(`Unexpected error while probing ${filePath}:`, e);
@@ -39,9 +37,9 @@ export async function getAvailableSyllabusDays(languageIdentifier) {
 
 /**
  * Fetches the full syllabus content for a specific day and language.
- * @param {string} languageCode - The language code (e.g., 'en', 'fr').
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
  * @param {number|string} dayNumber - The day number to fetch.
- * @returns {Promise<object|null>} The syllabus data object, or null if not found or error.
+ * @returns {Promise<object|null>} A promise that resolves to the syllabus data, or null if it is not found.
  */
 export async function fetchSyllabusForDay(languageIdentifier, dayNumber) {
   if (!languageIdentifier || dayNumber === undefined || dayNumber === null) {
@@ -63,9 +61,8 @@ export async function fetchSyllabusForDay(languageIdentifier, dayNumber) {
 
 /**
  * Fetches the syllabus content using a direct filename.
- * Useful if the filename is already known (e.g., from getAvailableSyllabusDays).
- * @param {string} syllabusFileName - The exact name of the syllabus file (e.g., 'en_day1_syllabus.json').
- * @returns {Promise<object|null>} The syllabus data object, or null if not found or error.
+ * @param {string} syllabusFileName - The name of the syllabus file.
+ * @returns {Promise<object|null>} A promise that resolves to the syllabus data, or null if it is not found.
  */
 export async function fetchSyllabusByFileName(syllabusFileName) {
     if (!syllabusFileName) {
@@ -74,7 +71,7 @@ export async function fetchSyllabusByFileName(syllabusFileName) {
     }
     const languageCode = syllabusFileName.split('_')[0];
     const filePath = `/data/dictionary/${languageCode}/${syllabusFileName}`;
-    const { data, error } = await ExerciseDataService.fetchJsonData(filePath); // Corrected
+    const { data, error } = await ExerciseDataService.fetchJsonData(filePath);
 
     if (error) {
         console.error(`Error fetching syllabus ${filePath}:`, error);
