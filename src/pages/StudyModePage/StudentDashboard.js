@@ -1,3 +1,4 @@
+// Import necessary libraries, hooks, and components.
 import React, { useState } from 'react';
 import StudyModeBanner from '../../components/StudyMode/StudyModeBanner';
 import { useI18n } from '../../i18n/I18nContext';
@@ -8,7 +9,7 @@ import VirtualTutor from '../../components/StudyMode/VirtualTutor';
 import SmartReview from '../../components/StudyMode/SmartReview';
 import TodaysFocus from '../StudyMode/PersonalizationPage/components/TodaysFocus';
 import MyLearningGarden from '../../components/Gamification/MyLearningGarden';
-// TODO: Restore CosyCorner once the component is available
+// The CosyCorner component is not yet implemented.
 // import CosyCorner from '../../components/Community/CosyCorner';
 import LanguagePet from '../../components/Gamification/LanguagePet';
 import SouvenirCollection from '../../components/Gamification/SouvenirCollection';
@@ -19,15 +20,16 @@ import QuizTaker from '../../components/StudyMode/QuizTaker';
 import QuizResults from '../../components/StudyMode/QuizResults';
 import FlashcardPlayer from '../../components/StudyMode/FlashcardPlayer';
 
-// Import the centralized displayComponentMap
+// Import the centralized map of display components.
 import { displayComponentMap } from '../../components/StudyMode/common/displayComponentMap';
 
-// Import the helper function for consistent ID generation
-// getBlockElementId is now defined in StudyModePage and expects (blockId, index)
+// Import the helper function for generating consistent element IDs.
 import { getBlockElementId } from './StudyModePage'; 
 
+// Import the CSS for this component.
 import './StudentDashboard.css'; 
 
+// Mock data for quizzes.
 const mockQuizzes = [
     {
         id: 1,
@@ -47,6 +49,7 @@ const mockQuizzes = [
     },
 ];
 
+// Mock data for flashcard decks.
 const mockDecks = [
     {
         id: 1,
@@ -59,18 +62,33 @@ const mockDecks = [
     },
 ];
 
+/**
+ * The student's dashboard in Study Mode.
+ * This component displays the lesson content, including various types of exercise blocks,
+ * and provides access to study tools and gamification features.
+ * @param {object} props - The component's props.
+ * @param {Array} [props.lessonBlocks=[]] - An array of lesson content blocks to display.
+ * @returns {JSX.Element} The StudentDashboard component.
+ */
 const StudentDashboard = ({ lessonBlocks = [] }) => {
   const { t } = useI18n();
+  // State for controlling the visibility of different study tools.
   const [isMistakeNotebookVisible, setIsMistakeNotebookVisible] = useState(false);
   const [isGrammarReviewVisible, setIsGrammarReviewVisible] = useState(false);
   const [isVirtualTutorVisible, setIsVirtualTutorVisible] = useState(false);
   const [isSmartReviewVisible, setIsSmartReviewVisible] = useState(false);
   const [isFillInTheBlanksVisible, setIsFillInTheBlanksVisible] = useState(false);
   const [isSentenceUnscrambleVisible, setIsSentenceUnscrambleVisible] = useState(false);
+  // State for managing quizzes and flashcards.
   const [selectedQuiz, setSelectedQuiz] = useState(null);
   const [quizAnswers, setQuizAnswers] = useState(null);
   const [selectedDeck, setSelectedDeck] = useState(null);
   
+  /**
+   * Handles navigation between lesson blocks.
+   * @param {string} direction - The direction to navigate ('previous' or 'next').
+   * @param {number} currentIndex - The index of the current block.
+   */
   const handleNavigateBlock = (direction, currentIndex) => {
     let targetIndex;
     if (direction === 'previous') {
@@ -80,31 +98,37 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
     }
 
     if (targetIndex >= 0 && targetIndex < lessonBlocks.length) {
-      // Syllabus blocks might not have an 'id'. Use index for reliable ID generation.
       const targetBlock = lessonBlocks[targetIndex];
-      // Assuming block.title or block.block_type could serve as a pseudo-id if available, else use index.
       const elementId = getBlockElementId(targetBlock.id || targetBlock.title || targetBlock.block_type, targetIndex);
       const element = document.getElementById(elementId);
       element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
+  /**
+   * Handles the submission of a quiz.
+   * @param {object} answers - The user's answers to the quiz.
+   */
   const handleQuizSubmit = (answers) => {
       setQuizAnswers(answers);
   }
 
+  // If quiz answers are available, show the results.
   if (quizAnswers) {
       return <QuizResults quiz={selectedQuiz} answers={quizAnswers} />;
   }
 
+  // If a quiz is selected, show the quiz taker.
   if (selectedQuiz) {
       return <QuizTaker quiz={selectedQuiz} onSubmit={handleQuizSubmit} />;
   }
 
+  // If a flashcard deck is selected, show the flashcard player.
   if(selectedDeck) {
       return <FlashcardPlayer deck={selectedDeck} />;
   }
 
+  // If there are no lesson blocks, display a message.
   if (!lessonBlocks || lessonBlocks.length === 0) {
     return (
       <div className="student-dashboard-container">
@@ -114,9 +138,11 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
     );
   }
 
+  // Render the main student dashboard.
   return (
     <div className="student-dashboard-container">
       <StudyModeBanner />
+      {/* Gamification and personalization components. */}
       <div className="cosy-dashboard">
         <TodaysFocus />
         <MyLearningGarden />
@@ -125,8 +151,8 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
         <SouvenirCollection />
         <CosyStreaks />
       </div>
+      {/* The header for the current lesson, with buttons for study tools. */}
       <div className="lesson-header">
-        {/* TODO: Display actual lesson name from syllabus if available */}
         <h2><TransliterableText text={t('studyMode.lessonTitlePlaceholder', 'Current Lesson')} /></h2>
         <button onClick={() => setIsMistakeNotebookVisible(true)}>Mistake Notebook</button>
         <button onClick={() => setIsGrammarReviewVisible(true)}>Grammar Review</button>
@@ -136,6 +162,7 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
         <button onClick={() => setIsSentenceUnscrambleVisible(true)}>Sentence Unscramble</button>
       </div>
       
+      {/* Render the study tools if they are visible. */}
       {isMistakeNotebookVisible && <MistakeNotebook />}
       {isGrammarReviewVisible && <GrammarReview />}
       {isVirtualTutorVisible && <VirtualTutor />}
@@ -143,6 +170,7 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
       {isFillInTheBlanksVisible && <StudyFillInTheBlanks language={t('currentLanguage')} />}
       {isSentenceUnscrambleVisible && <StudySentenceUnscramble language={t('currentLanguage')} />}
 
+      {/* A section for quizzes. */}
       <div className="quizzes-section">
           <h3>Quizzes</h3>
           <ul>
@@ -154,6 +182,7 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
           </ul>
       </div>
 
+      {/* A section for flashcard decks. */}
       <div className="flashcards-section">
           <h3>My Flashcards</h3>
           <ul>
@@ -165,24 +194,20 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
           </ul>
       </div>
 
+      {/* The main content of the lesson, with dynamically rendered exercise blocks. */}
       <div className="lesson-content-student-view">
         {lessonBlocks.map((block, index) => {
-          // Syllabus uses 'block_type', displayComponentMap might use 'typePath' or will be updated.
-          // For now, assume displayComponentMap will be keyed by 'block_type'.
           const componentKey = block.block_type;
           const DisplayComponent = displayComponentMap[componentKey];
-
-          // Use index for key as block.id might not exist or be unique in syllabus JSON.
-          // block.title or block.block_type can be part of a more unique id if needed.
           const blockDomId = getBlockElementId(block.id || block.title || block.block_type, index);
 
           if (DisplayComponent) {
             return (
-              // Using index as key is acceptable if list items don't have stable IDs and are not reordered.
               <div key={index} id={blockDomId} className="student-lesson-block">
                 <DisplayComponent 
-                  blockData={block} // Pass the whole block from syllabus as blockData
+                  blockData={block}
                 />
+                {/* Navigation buttons for moving between blocks. */}
                 <div className="block-navigation-actions">
                   <button 
                     onClick={() => handleNavigateBlock('previous', index)} 
@@ -211,7 +236,7 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
             );
           }
           return (
-            // Fallback for unknown block types
+            // A fallback for unknown block types.
             <div key={index} id={blockDomId} className="student-lesson-block-fallback">
               <p>
                 <TransliterableText

@@ -1,18 +1,31 @@
+// Import necessary libraries, hooks, and components.
 import React, { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useI18n } from '../../i18n/I18nContext';
 import { fetchDays, addDay, updateDay, deleteDay } from '../../api/days';
-import Button from '../Common/Button'; // Import Button
+import Button from '../Common/Button';
 import './DayManager.css';
 
+/**
+ * A component for managing study days in the teacher's dashboard.
+ * It allows teachers to add, rename, delete, and select study days.
+ * @param {object} props - The component's props.
+ * @param {function} props.onDaySelect - A callback function to handle the selection of a day.
+ * @param {string} props.selectedDayId - The ID of the currently selected day.
+ * @returns {JSX.Element} The DayManager component.
+ */
 const DayManager = ({ onDaySelect, selectedDayId }) => {
     const { authToken } = useAuth();
     const { t, language: currentUILanguage, allTranslations } = useI18n();
+    // State for managing the list of days, loading status, errors, and the new day title.
     const [days, setDays] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [newDayTitle, setNewDayTitle] = useState('');
 
+    /**
+     * Loads the list of study days from the API.
+     */
     const loadDays = useCallback(async () => {
         if (!authToken) return;
         setIsLoading(true);
@@ -28,18 +41,25 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
         }
     }, [authToken, t]);
 
+    // Load the days when the component mounts or the authToken changes.
     useEffect(() => {
         loadDays();
     }, [loadDays]);
 
+    /**
+     * Handles the addition of a new day.
+     * @param {React.FormEvent} e - The form submission event.
+     */
     const handleAddDay = async (e) => {
         e.preventDefault();
         if (!newDayTitle.trim() || !authToken) return;
 
+        // Create a title object with the new title in the current UI language and English.
         const titleData = {
             [currentUILanguage]: newDayTitle.trim(),
             'COSYenglish': newDayTitle.trim()
         };
+        // Add the new title for all other languages.
         Object.keys(allTranslations || {}).forEach(langKey => {
             if (!titleData[langKey]) {
                 titleData[langKey] = newDayTitle.trim();
@@ -58,6 +78,11 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
         }
     };
 
+    /**
+     * Handles the renaming of a day.
+     * @param {string} dayId - The ID of the day to rename.
+     * @param {object} currentTitleObj - The current title object of the day.
+     */
     const handleRenameDay = async (dayId, currentTitleObj) => {
         if (!authToken) return;
         const currentTitleInUILang = currentTitleObj?.[currentUILanguage] || currentTitleObj?.COSYenglish || '';
@@ -87,6 +112,11 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
         }
     };
 
+    /**
+     * Handles the deletion of a day.
+     * @param {string} dayId - The ID of the day to delete.
+     * @param {object} dayTitleObj - The title object of the day to delete.
+     */
     const handleDeleteDay = async (dayId, dayTitleObj) => {
         if (!authToken) return;
         const dayTitleForConfirm = dayTitleObj?.[currentUILanguage] || dayTitleObj?.COSYenglish || `Day ID ${dayId}`;
@@ -106,15 +136,18 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
         }
     };
 
+    // If the user is not authenticated, display a message.
     if (!authToken) {
         return <p>{t('notAuthenticated') || 'Not authenticated.'}</p>;
     }
 
+    // Render the main DayManager component.
     return (
         <div className="day-manager">
             <h3>{t('manageStudyDays') || 'Manage Study Days'}</h3>
             {error && <p className="error-message">{error}</p>}
 
+            {/* A form for adding a new day. */}
             <form onSubmit={handleAddDay} className="add-day-form">
                 <input
                     type="text"
@@ -133,12 +166,13 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
                 </Button>
             </form>
 
+            {/* Display loading or no days messages. */}
             {isLoading && days.length === 0 && <p>{t('loadingDays') || 'Loading days...'}</p>}
-
             {!isLoading && days.length === 0 && !error && (
                 <p>{t('noDaysCreatedYet') || 'No study days created yet. Add one above!'}</p>
             )}
 
+            {/* The list of study days. */}
             {days.length > 0 && (
                 <ul className="day-list">
                     {days.map(day => (
@@ -146,12 +180,12 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
                             key={day.id}
                             className={`day-list-item ${selectedDayId === day.id ? 'selected' : ''}`}
                             onClick={(e) => {
-                                if (e.target.closest('.day-actions button, .day-actions Button')) return; // Adjusted selector
+                                if (e.target.closest('.day-actions button, .day-actions Button')) return;
                                 onDaySelect(day.id);
                             }}
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter' || e.key === ' ') {
-                                    if (e.target.closest('.day-actions button, .day-actions Button')) return; // Adjusted selector
+                                    if (e.target.closest('.day-actions button, .day-actions Button')) return;
                                     onDaySelect(day.id);
                                 }
                             }}
@@ -163,6 +197,7 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
                             <span className="day-title">
                                 {day.title?.[currentUILanguage] || day.title?.COSYenglish || day.title || `Day ID: ${day.id}`}
                             </span>
+                            {/* Action buttons for renaming and deleting a day. */}
                             <div className="day-actions">
                                 <Button
                                     size="small"

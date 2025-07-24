@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react'; // Added useCallback
+// Import necessary libraries, hooks, and components.
+import React, { useState, useEffect, useCallback } from 'react';
 import StudyModeBanner from '../../components/StudyMode/StudyModeBanner';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../../components/Common/TransliterableText';
@@ -10,78 +11,101 @@ import MCQMultipleBlockConfig from '../../components/StudyMode/TemplateConfig/Co
 import WritingBlockConfig from '../../components/StudyMode/TemplateConfig/ConfigureWritingBlock';
 import TemplateList from '../../components/StudyMode/TemplateList';
 import TemplateEditor from '../../components/StudyMode/TemplateEditor';
-
-// Import the centralized displayComponentMap
 import { displayComponentMap } from '../../components/StudyMode/common/displayComponentMap';
-
-// Import the helper function for consistent ID generation
-import { getBlockElementId } from './StudyModePage'; // Assuming it's exported from there
-
-// Import DayManager and LessonSectionManager
+import { getBlockElementId } from './StudyModePage';
 import DayManager from '../../components/StudyMode/DayManager';
 import LessonSectionManager from '../../components/StudyMode/LessonSectionManager';
-import { getLessonSectionDetails, updateLessonSection } from '../../api/lessonSections'; // Import APIs
-import { useAuth } from '../../contexts/AuthContext'; // To get the auth token
+import { getLessonSectionDetails, updateLessonSection } from '../../api/lessonSections';
+import { useAuth } from '../../contexts/AuthContext';
 
+// Import the CSS for this component.
 import './TeacherDashboard.css'; 
 import '../../components/StudyMode/TemplateConfig/SimpleTextConfig.css';
 
-const TEACHER_LESSON_STORAGE_KEY = 'teacherSavedLesson_default'; // Fixed key for now
+// A fixed key for storing the teacher's lesson in local storage.
+const TEACHER_LESSON_STORAGE_KEY = 'teacherSavedLesson_default';
 
+/**
+ * The teacher's dashboard in Study Mode.
+ * This component provides an interface for teachers to create, edit, and manage lesson content.
+ * It includes a lesson editor, template management, and tools for organizing days and lesson sections.
+ * @returns {JSX.Element} The TeacherDashboard component.
+ */
 const TeacherDashboard = () => {
   const { t } = useI18n();
-  const { authToken } = useAuth(); // Get authToken
+  const { authToken } = useAuth();
+  // State for managing lesson blocks, modals, tabs, and other UI elements.
   const [lessonBlocks, setLessonBlocks] = useState([]);
   const [isTemplateModalOpen, setIsTemplateModalOpen] = useState(false);
   const [isTemplateEditorOpen, setIsTemplateEditorOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('lessons');
   const [editingBlock, setEditingBlock] = useState(null);
-  const [feedbackMessage, setFeedbackMessage] = useState(''); // For save/load feedback
+  const [feedbackMessage, setFeedbackMessage] = useState('');
   const [selectedDayId, setSelectedDayId] = useState(null);
   const [selectedSectionId, setSelectedSectionId] = useState(null);
-  const [currentSectionDetails, setCurrentSectionDetails] = useState(null); // State for full section data
+  const [currentSectionDetails, setCurrentSectionDetails] = useState(null);
   const [isVirtualTutorVisible, setIsVirtualTutorVisible] = useState(false);
 
+  /**
+   * Displays a feedback message to the user.
+   * @param {string} messageKey - The key for the translated message.
+   * @param {string} defaultText - The default text to display if the translation is not found.
+   * @param {boolean} [isError=false] - Whether the message is an error message.
+   */
   const displayFeedback = useCallback((messageKey, defaultText, isError = false) => {
     setFeedbackMessage({text: t(messageKey, defaultText), type: isError ? 'error' : 'success'});
-    setTimeout(() => setFeedbackMessage(''), 3000); // Clear feedback after 3 seconds
-  }, [t]); // t is from useI18n, considered stable
+    setTimeout(() => setFeedbackMessage(''), 3000);
+  }, [t]);
 
+  // Effect to fetch lesson content when a section is selected.
   useEffect(() => {
     if (selectedSectionId && authToken) {
       const fetchSectionContent = async () => {
         try {
           displayFeedback('teacherDashboard.loadingSectionContent', 'Loading section content...', false);
           const sectionDetailsFull = await getLessonSectionDetails(authToken, selectedSectionId);
-          setCurrentSectionDetails(sectionDetailsFull); // Store full details
+          setCurrentSectionDetails(sectionDetailsFull);
           setLessonBlocks(sectionDetailsFull.exerciseBlocks || []);
-          // setFeedbackMessage(''); // Clearing feedback message here might be too soon if displayFeedback has a timeout
         } catch (error) {
           console.error("Error fetching section details:", error);
           displayFeedback('teacherDashboard.errorLoadingSectionContent', `Error loading section: ${error.message}`, true);
-          setLessonBlocks([]); // Clear blocks on error
+          setLessonBlocks([]);
         }
       };
       fetchSectionContent();
     } else {
-      setLessonBlocks([]); // Clear blocks if no section is selected or no token
-       setCurrentSectionDetails(null); // Clear details too
+      setLessonBlocks([]);
+       setCurrentSectionDetails(null);
     }
-  }, [selectedSectionId, authToken, displayFeedback]); // Added displayFeedback
+  }, [selectedSectionId, authToken, displayFeedback]);
 
+  /**
+   * Handles the selection of a day.
+   * @param {string} dayId - The ID of the selected day.
+   */
   const handleDaySelect = (dayId) => {
     setSelectedDayId(dayId);
-    setSelectedSectionId(null); // Reset section when day changes
-    setCurrentSectionDetails(null); // Clear details
+    setSelectedSectionId(null);
+    setCurrentSectionDetails(null);
   };
 
+  /**
+   * Handles the selection of a lesson section.
+   * @param {string} sectionId - The ID of the selected section.
+   */
   const handleSectionSelect = (sectionId) => {
     setSelectedSectionId(sectionId);
   };
 
+  // Functions to open and close the template selection modal.
   const openTemplateModal = () => setIsTemplateModalOpen(true);
   const closeTemplateModal = () => setIsTemplateModalOpen(false);
 
+  /**
+   * Handles the selection of a template type from the modal.
+   * @param {string} typePath - The path of the selected template type.
+   * @param {string} typeName - The name of the selected template type.
+   */
   const handleSelectTemplateType = (typePath, typeName) => {
     const newBlock = {
       id: `block-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
@@ -102,18 +126,31 @@ const TeacherDashboard = () => {
     closeTemplateModal();
   };
 
+  /**
+   * Removes a lesson block from the lesson.
+   * @param {string} blockId - The ID of the block to remove.
+   */
   const handleRemoveBlock = (blockId) => {
     setLessonBlocks(prevBlocks => prevBlocks.filter(block => block.id !== blockId));
   };
 
+  /**
+   * Opens the configuration editor for a lesson block.
+   * @param {object} block - The block to configure.
+   */
   const handleOpenConfiguration = (block) => {
     setEditingBlock(block); 
   };
 
+  // Closes the configuration editor.
   const handleCloseConfiguration = () => {
     setEditingBlock(null);
   };
 
+  /**
+   * Saves the configuration of a lesson block.
+   * @param {object} updatedBlock - The updated block data.
+   */
   const handleSaveBlockConfiguration = (updatedBlock) => {
     setLessonBlocks(prevBlocks => 
       prevBlocks.map(block => 
@@ -123,6 +160,11 @@ const TeacherDashboard = () => {
     handleCloseConfiguration(); 
   };
 
+  /**
+   * Moves a lesson block up or down in the lesson.
+   * @param {string} blockId - The ID of the block to move.
+   * @param {string} direction - The direction to move the block ('up' or 'down').
+   */
   const handleMoveBlock = (blockId, direction) => {
     setLessonBlocks(prevBlocks => {
       const blocks = [...prevBlocks];
@@ -138,6 +180,9 @@ const TeacherDashboard = () => {
     });
   };
 
+  /**
+   * Saves the current lesson to the API or local storage.
+   */
   const handleSaveLesson = async () => {
     if (!selectedSectionId || !authToken || !currentSectionDetails) {
       displayFeedback('teacherDashboard.cannotSaveSection', 'No section selected or not authenticated. Cannot save.', true);
@@ -165,7 +210,11 @@ const TeacherDashboard = () => {
     }
   };
 
-  const handleLoadLesson = useCallback((showFeedback = true) => { // Wrapped in useCallback
+  /**
+   * Loads a lesson from local storage.
+   * @param {boolean} [showFeedback=true] - Whether to show feedback messages.
+   */
+  const handleLoadLesson = useCallback((showFeedback = true) => {
     try {
       const savedLessonJson = localStorage.getItem(TEACHER_LESSON_STORAGE_KEY);
       if (savedLessonJson) {
@@ -186,13 +235,11 @@ const TeacherDashboard = () => {
       if (showFeedback) displayFeedback('teacherDashboard.lessonLoadedError', 'Error loading lesson.', true);
       setLessonBlocks([]); 
     }
-  }, [displayFeedback]); // Added displayFeedback as a dependency
+  }, [displayFeedback]);
 
-  // Example: useEffect for initial load (if ever re-enabled)
-  // useEffect(() => {
-  //   handleLoadLesson(false); 
-  // }, [handleLoadLesson]); // Now depends on the memoized handleLoadLesson
-
+  /**
+   * Clears the saved lesson from local storage.
+   */
   const handleClearSavedLesson = () => {
     try {
       localStorage.removeItem(TEACHER_LESSON_STORAGE_KEY);
@@ -203,6 +250,13 @@ const TeacherDashboard = () => {
     }
   };
   
+  /**
+   * Renders a single lesson block item.
+   * @param {object} block - The block to render.
+   * @param {number} index - The index of the block.
+   * @param {number} totalBlocks - The total number of blocks.
+   * @returns {JSX.Element} The rendered block item.
+   */
   const renderBlockItem = (block, index, totalBlocks) => {
     const DisplayComponent = displayComponentMap[block.typePath];
     return (
@@ -238,6 +292,10 @@ const TeacherDashboard = () => {
     );
   };
 
+  /**
+   * Renders the configuration editor for the currently editing block.
+   * @returns {JSX.Element|null} The rendered configuration editor, or null if no block is being edited.
+   */
   const renderBlockConfiguration = () => {
     if (!editingBlock) return null;
     const textBlockTypePaths = ['reading/text', 'utility/note']; 
@@ -262,9 +320,11 @@ const TeacherDashboard = () => {
     );
   };
 
+  // Render the main teacher dashboard.
   return (
     <div className="teacher-dashboard-container-grid">
       <StudyModeBanner />
+      {/* The sidebar for managing days and lesson sections. */}
       <div className="teacher-dashboard-sidebar">
         <DayManager 
           onDaySelect={handleDaySelect} 
@@ -279,6 +339,7 @@ const TeacherDashboard = () => {
         )}
       </div>
 
+      {/* The main content area with tabs for lessons and templates. */}
       <div className="teacher-dashboard-main-content">
         <div className="dashboard-header">
           <h2>
@@ -297,12 +358,14 @@ const TeacherDashboard = () => {
           </div>
         </div>
         
+        {/* Display feedback messages. */}
         {feedbackMessage && 
           <div className={`feedback-message ${feedbackMessage.type === 'error' ? 'feedback-error' : 'feedback-success'}`}>
             {feedbackMessage.text}
           </div>
         }
         
+        {/* The lesson editor tab. */}
         {activeTab === 'lessons' && (
           <>
             <div className="dashboard-main-actions">
@@ -336,17 +399,20 @@ const TeacherDashboard = () => {
               </button>
             </div>
 
+            {/* Display a message if no section is selected. */}
             {!selectedSectionId && (
                 <p className="no-blocks-message">
                     <TransliterableText text={t('teacherDashboard.selectDayAndSectionMessage', 'Please select a Day and a Lesson Section to view or edit content.')} />
                 </p>
             )}
 
+            {/* Display a message if the section is empty. */}
             {selectedSectionId && lessonBlocks.length === 0 && !feedbackMessage && (
               <p className="no-blocks-message">
                 <TransliterableText text={t('teacherDashboard.noBlocksInSectionMessage', 'This section is empty. Click "Add Content Block" to start building!')} />
               </p>
             )}
+            {/* Display the list of lesson blocks. */}
             {selectedSectionId && lessonBlocks.length > 0 && (
                 <div className="lesson-blocks-list">
                   {lessonBlocks.map((block, index) => renderBlockItem(block, index, lessonBlocks.length))}
@@ -355,10 +421,12 @@ const TeacherDashboard = () => {
           </>
         )}
 
+        {/* The templates tab. */}
         {activeTab === 'templates' && (
           <TemplateList openTemplateEditor={() => setIsTemplateEditorOpen(true)} />
         )}
 
+        {/* The template selection modal. */}
         {isTemplateModalOpen && (
           <TemplateTypeSelectionModal
             isOpen={isTemplateModalOpen}
@@ -367,8 +435,10 @@ const TeacherDashboard = () => {
           />
         )}
 
+        {/* The block configuration editor. */}
         {editingBlock && renderBlockConfiguration()}
 
+        {/* The template editor. */}
         {isTemplateEditorOpen && (
           <TemplateEditor
             onSave={() => {}}
