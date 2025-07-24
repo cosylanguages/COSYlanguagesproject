@@ -2,12 +2,26 @@ import React, { createContext, useContext, useState, useCallback, useEffect } fr
 import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import translations from './translationsData';
 
+/**
+ * The i18n context.
+ */
 const I18nContext = createContext();
 
+/**
+ * A custom hook for accessing the i18n context.
+ * @returns {object} The i18n context.
+ */
 export function useI18n() {
     return useContext(I18nContext);
 }
 
+/**
+ * A provider for the i18n context.
+ * It manages the i18n state and provides functions for changing the language and translating text.
+ * @param {object} props - The component's props.
+ * @param {object} props.children - The child components.
+ * @returns {JSX.Element} The I18nProvider component.
+ */
 export function I18nProvider({ children }) {
     const navigate = useNavigate();
     const location = useLocation();
@@ -23,6 +37,7 @@ export function I18nProvider({ children }) {
 
     const [currentTranslations, setCurrentTranslations] = useState({});
 
+    // Effect to set the language from the URL.
     useEffect(() => {
         const langFromUrl = params.lang || location.pathname.split('/')[1];
         if (langFromUrl && translations[langFromUrl]) {
@@ -30,6 +45,7 @@ export function I18nProvider({ children }) {
         }
     }, [params.lang, location.pathname]);
 
+    // Effect to update the translations and the document's lang attribute when the language changes.
     useEffect(() => {
         if (translations[language]) {
             localStorage.setItem('cosyLanguage', language);
@@ -53,19 +69,29 @@ export function I18nProvider({ children }) {
         }
     }, [language]);
 
+    /**
+     * Changes the current language.
+     * @param {string} langKey - The key for the new language.
+     */
     const changeLanguage = useCallback((langKey) => {
         const newLang = translations[langKey] ? langKey : 'en';
         setLanguage(newLang);
 
         const pathParts = location.pathname.split('/');
         if (pathParts[1] === 'study' && pathParts.length > 2) {
-            // Only navigate if the language in the URL is different
             if (pathParts[2] !== newLang) {
                 navigate(`/study/${newLang}`);
             }
         }
     }, [location.pathname, navigate]);
 
+    /**
+     * Translates a given key.
+     * @param {string} key - The key to translate.
+     * @param {string|object} [defaultValueOrOptions] - The default value or an object of options.
+     * @param {object} [optionsOnly] - An object of options.
+     * @returns {string} The translated string.
+     */
     const t = useCallback((key, defaultValueOrOptions, optionsOnly) => {
         let defaultValue = typeof defaultValueOrOptions === 'string' ? defaultValueOrOptions : key;
         let options = typeof defaultValueOrOptions === 'object' && !Array.isArray(defaultValueOrOptions) ? defaultValueOrOptions : optionsOnly;
@@ -101,6 +127,12 @@ export function I18nProvider({ children }) {
         return translationString;
     }, [currentTranslations]);
 
+    /**
+     * Gets the translations for a given language and key.
+     * @param {string} langKey - The language key.
+     * @param {string} translationKey - The translation key.
+     * @returns {object} The translations for the given language and key.
+     */
     const getTranslationsForLang = useCallback((langKey, translationKey) => {
         if (translations && translations[langKey] && translations[langKey][translationKey] !== undefined) {
             return translations[langKey][translationKey];

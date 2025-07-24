@@ -1,18 +1,25 @@
 import React, { createContext, useState, useContext, useCallback, useEffect } from 'react';
 
-// This list should be the single source of truth for which languages can be latinized.
-// It should align with languages having transliteration rules in transliteration.js
-// and ideally use keys consistent with translationsData.js for easier management.
+/**
+ * An array of language IDs that can be latinized.
+ */
 export const LATINIZABLE_LANGUAGE_IDS = [
-    'COSYgreek',    // Greek
-    'COSYrussian',  // Russian
-    'COSYarmenian', // Armenian
-    'COSYtatar',    // Tatar
-    'COSYbachkir'   // Bashkir
+    'COSYgreek',
+    'COSYrussian',
+    'COSYarmenian',
+    'COSYtatar',
+    'COSYbachkir'
 ];
 
+/**
+ * The latinization context.
+ */
 const LatinizationContext = createContext();
 
+/**
+ * A custom hook for accessing the latinization context.
+ * @returns {object} The latinization context.
+ */
 export const useLatinizationContext = () => {
   const context = useContext(LatinizationContext);
   if (!context) {
@@ -21,18 +28,27 @@ export const useLatinizationContext = () => {
   return context;
 };
 
+/**
+ * A provider for the latinization context.
+ * It manages the latinization state and provides a function for toggling it.
+ * @param {object} props - The component's props.
+ * @param {object} props.children - The child components.
+ * @returns {JSX.Element} The LatinizationProvider component.
+ */
 export const LatinizationProvider = ({ children }) => {
   const [isLatinized, setIsLatinized] = useState(() => {
-    // Initialize state from localStorage if available
     const storedState = localStorage.getItem('latinizeStateReact');
     return storedState ? JSON.parse(storedState) : false;
   });
 
+  // Effect to persist the latinization state to local storage.
   useEffect(() => {
-    // Persist state to localStorage whenever it changes
     localStorage.setItem('latinizeStateReact', JSON.stringify(isLatinized));
   }, [isLatinized]);
 
+  /**
+   * Toggles the latinization state.
+   */
   const toggleLatinization = useCallback(() => {
     setIsLatinized(prev => !prev);
   }, []);
@@ -40,7 +56,7 @@ export const LatinizationProvider = ({ children }) => {
   const value = {
     isLatinized,
     toggleLatinization,
-    latinizableLanguageIds: LATINIZABLE_LANGUAGE_IDS, // Provide the list through context
+    latinizableLanguageIds: LATINIZABLE_LANGUAGE_IDS,
   };
 
   return (
