@@ -4,23 +4,20 @@ import InteractiveScenario from './InteractiveScenario';
 import './BoosterPackOfTheWeek.css';
 import UserBoosterPackCreator from './UserBoosterPackCreator';
 
-const BoosterPacks = () => {
-    const [boosterPacks, setBoosterPacks] = useState([]);
+const BoosterPacks = ({ boosterPacks, onSelect }) => {
     const [userBoosterPacks, setUserBoosterPacks] = useState([]);
     const [selectedPack, setSelectedPack] = useState(null);
 
     useEffect(() => {
-        fetch('/data/booster_packs.json')
-            .then(response => response.json())
-            .then(data => {
-                setBoosterPacks(data);
-            });
         const storedUserPacks = JSON.parse(localStorage.getItem('userBoosterPacks')) || [];
         setUserBoosterPacks(storedUserPacks);
     }, []);
 
     const handlePackClick = (pack) => {
         setSelectedPack(pack);
+        if (onSelect) {
+            onSelect(pack);
+        }
     };
 
     const handleCloseScenario = () => {
