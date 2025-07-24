@@ -1,8 +1,8 @@
 const LOCAL_STORAGE_KEY = 'COSY_STUDY_SETS';
 
 /**
- * Retrieves all study sets from Local Storage.
- * @returns {Array} An array of study sets, or an empty array if none exist.
+ * Retrieves all study sets from local storage.
+ * @returns {Array} An array of study sets.
  */
 export const getStudySets = () => {
   try {
@@ -10,12 +10,12 @@ export const getStudySets = () => {
     return setsJson ? JSON.parse(setsJson) : [];
   } catch (error) {
     console.error("Error parsing study sets from Local Storage:", error);
-    return []; // Return empty array on error to prevent app crashes
+    return [];
   }
 };
 
 /**
- * Saves all study sets to Local Storage.
+ * Saves all study sets to local storage.
  * @param {Array} sets - The array of study sets to save.
  */
 const _saveAllSets = (sets) => {
@@ -23,14 +23,13 @@ const _saveAllSets = (sets) => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(sets));
   } catch (error) {
     console.error("Error saving study sets to Local Storage:", error);
-    // Consider how to handle this error in the UI if critical
   }
 };
 
 /**
- * Retrieves a specific study set by its ID.
+ * Retrieves a study set by its ID.
  * @param {string} id - The ID of the study set to retrieve.
- * @returns {Object|null} The study set object if found, otherwise null.
+ * @returns {object|null} The study set, or null if it is not found.
  */
 export const getStudySetById = (id) => {
   const sets = getStudySets();
@@ -38,25 +37,21 @@ export const getStudySetById = (id) => {
 };
 
 /**
- * Creates a new study set or updates an existing one.
- * If studySetData has an ID and it exists, it updates. Otherwise, it creates.
- * For creation, it generates an ID and timestamps.
- * For update, it updates the updatedAt timestamp.
- * @param {Object} studySetData - The study set data. Must include at least 'name'.
- *                                If 'id' is present and matches an existing set, it's an update.
- * @returns {Object} The created or updated study set.
+ * Saves a study set.
+ * If the study set has an ID, it will be updated. Otherwise, it will be created.
+ * @param {object} studySetData - The study set data to save.
+ * @returns {object|null} The saved study set, or null if the data is invalid.
  */
 export const saveStudySet = (studySetData) => {
   if (!studySetData || !studySetData.name) {
     console.error("Study set data must include a name.");
-    // Or throw an error: throw new Error("Study set data must include a name.");
     return null;
   }
 
   const sets = getStudySets();
   const now = new Date().toISOString();
 
-  if (studySetData.id) { // Potential update
+  if (studySetData.id) {
     const existingSetIndex = sets.findIndex(set => set.id === studySetData.id);
     if (existingSetIndex !== -1) {
       sets[existingSetIndex] = {
@@ -67,26 +62,22 @@ export const saveStudySet = (studySetData) => {
       _saveAllSets(sets);
       return sets[existingSetIndex];
     }
-    // If ID provided but not found, treat as new set but log warning or error
     console.warn(`saveStudySet: ID ${studySetData.id} provided but no existing set found. Creating as new.`);
   }
 
-  // Create new set
   const newSet = {
     id: studySetData.id || `set-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
     name: studySetData.name,
     description: studySetData.description || '',
-    languageCode: studySetData.languageCode || 'unknown', // Default or ensure this is provided
+    languageCode: studySetData.languageCode || 'unknown',
     createdAt: now,
     updatedAt: now,
-    items: studySetData.items || [], // Ensure items array exists
-    ...studySetData, // Allows passing other initial fields like languageCode directly
+    items: studySetData.items || [],
+    ...studySetData,
   };
 
-  // If studySetData already had an ID but wasn't found (previous warning),
-  // ensure the createdAt is not overwritten by spread if it was a "new" set with a given ID.
   if (studySetData.id && !sets.find(s => s.id === studySetData.id)) {
-      newSet.createdAt = now; // Ensure createdAt is fresh for this "new" entry
+      newSet.createdAt = now;
   }
 
 
@@ -98,7 +89,7 @@ export const saveStudySet = (studySetData) => {
 /**
  * Deletes a study set by its ID.
  * @param {string} id - The ID of the study set to delete.
- * @returns {boolean} True if deletion was successful, false otherwise.
+ * @returns {boolean} Whether the study set was deleted successfully.
  */
 export const deleteStudySet = (id) => {
   let sets = getStudySets();
@@ -111,13 +102,11 @@ export const deleteStudySet = (id) => {
   return false;
 };
 
-// --- Card Management Functions ---
-
 /**
- * Adds a card to a specific study set.
- * @param {string} setId - The ID of the study set.
- * @param {Object} cardData - The data for the new card (must include term1, term2).
- * @returns {Object|null} The updated study set if successful, null otherwise.
+ * Adds a card to a study set.
+ * @param {string} setId - The ID of the study set to add the card to.
+ * @param {object} cardData - The data for the card to add.
+ * @returns {object|null} The updated study set, or null if the set is not found or the card data is invalid.
  */
 export const addCardToSet = (setId, cardData) => {
   if (!cardData || !cardData.term1 || !cardData.term2) {
@@ -141,7 +130,7 @@ export const addCardToSet = (setId, cardData) => {
     audioURI: cardData.audioURI || '',
     exampleSentence: cardData.exampleSentence || '',
     notes: cardData.notes || '',
-    srsData: cardData.srsData || { // Default SRS data
+    srsData: cardData.srsData || {
         nextReviewDate: now,
         intervalDays: 1,
         easeFactor: 2.5,
@@ -150,9 +139,8 @@ export const addCardToSet = (setId, cardData) => {
     },
     createdAt: now,
     updatedAt: now,
-    ...cardData, // Allows passing other initial fields directly
+    ...cardData,
   };
-  // Ensure srsData is fully populated if partially provided or not at all
   newCard.srsData = {
     nextReviewDate: newCard.srsData?.nextReviewDate || now,
     intervalDays: newCard.srsData?.intervalDays || 1,
@@ -169,11 +157,11 @@ export const addCardToSet = (setId, cardData) => {
 };
 
 /**
- * Updates an existing card within a specific study set.
+ * Updates a card in a study set.
  * @param {string} setId - The ID of the study set.
  * @param {string} cardId - The ID of the card to update.
- * @param {Object} updatedCardData - An object containing the card fields to update.
- * @returns {Object|null} The updated study set if successful, null otherwise.
+ * @param {object} updatedCardData - The updated card data.
+ * @returns {object|null} The updated study set, or null if the set or card is not found.
  */
 export const updateCardInSet = (setId, cardId, updatedCardData) => {
   const sets = getStudySets();
@@ -194,15 +182,14 @@ export const updateCardInSet = (setId, cardId, updatedCardData) => {
   const now = new Date().toISOString();
   const existingCard = sets[setIndex].items[cardIndex];
 
-  // Carefully merge srsData
   const newSrsData = updatedCardData.srsData
     ? { ...existingCard.srsData, ...updatedCardData.srsData }
     : existingCard.srsData;
 
   sets[setIndex].items[cardIndex] = {
     ...existingCard,
-    ...updatedCardData, // Apply other updates
-    srsData: newSrsData, // Ensure srsData is correctly merged/preserved
+    ...updatedCardData,
+    srsData: newSrsData,
     updatedAt: now,
   };
 
@@ -212,10 +199,10 @@ export const updateCardInSet = (setId, cardId, updatedCardData) => {
 };
 
 /**
- * Deletes a card from a specific study set.
+ * Deletes a card from a study set.
  * @param {string} setId - The ID of the study set.
  * @param {string} cardId - The ID of the card to delete.
- * @returns {Object|null} The updated study set if successful, null otherwise.
+ * @returns {object|null} The updated study set, or null if the set or card is not found.
  */
 export const deleteCardFromSet = (setId, cardId) => {
   const sets = getStudySets();
@@ -236,5 +223,5 @@ export const deleteCardFromSet = (setId, cardId) => {
   }
 
   console.warn(`Card with ID ${cardId} not found in set ${setId} for deletion.`);
-  return null; // Card not found, or no change made
+  return null;
 };

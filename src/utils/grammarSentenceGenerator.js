@@ -1,8 +1,8 @@
+// Import utility functions.
 import { capitalizeWord, escapeRegExp } from './stringUtils';
-import { loadVocabularyData } from './exerciseDataService'; // For fetching vocabulary for objects
+import { loadVocabularyData } from './exerciseDataService';
 
-// This will hold translations, to be populated ideally by I18nContext or similar
-// For now, using a simple placeholder. In a real app, this should be managed by an i18n solution.
+// A placeholder for the current translations.
 let currentTranslations = {
     COSYenglish: {
         defaultAdjective: "happy",
@@ -20,26 +20,39 @@ let currentTranslations = {
         conjunction_and: "and",
         commonNames: ["Alex", "Maria", "Sam", "Lee", "Jordan", "Taylor", "Chris", "Pat"],
         genericObjectFallback: "something",
-        pluralPronounsList: ['we', 'they', 'you'], // Simplified for example
+        pluralPronounsList: ['we', 'they', 'you'],
         sentenceEndingAdjective: "happy.",
         sentenceEndingAdverb: "well.",
         errorFallbackWord: "error",
     }
 };
 
-// Function to update translations if needed (e.g., from context)
+/**
+ * Sets the translations for the grammar sentence generator.
+ * @param {object} translations - The translations to use.
+ */
 export function setGrammarGeneratorTranslations(translations) {
     currentTranslations = translations;
 }
 
 const COMMON_NAMES_EN = ["Alex", "Maria", "Sam", "Lee", "Jordan", "Taylor", "Chris", "Pat"];
 
+/**
+ * Gets a random element from an array.
+ * @param {Array} arr - The array to get a random element from.
+ * @returns {any|null} A random element from the array, or null if the array is empty.
+ */
 function getRandomElement(arr) {
     if (!arr || arr.length === 0) return null;
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
-// Adapted from old grammar.js - specific to English for now
+/**
+ * Adds an indefinite article to a noun string.
+ * @param {string} nounStr - The noun string to add an article to.
+ * @param {string} language - The language of the noun.
+ * @returns {string} The noun string with an indefinite article.
+ */
 function addIndefiniteArticle(nounStr, language) {
     const t = currentTranslations[language] || currentTranslations.COSYenglish || {};
     if (language !== 'COSYenglish' || typeof nounStr !== 'string' || nounStr.trim() === '') {
@@ -65,6 +78,14 @@ function addIndefiniteArticle(nounStr, language) {
     else { return `a ${trimmedNoun}`; }
 }
 
+/**
+ * Selects a subject for a grammar exercise sentence.
+ * @param {string} language - The language of the sentence.
+ * @param {Array} verbData - The verb data for the language.
+ * @param {Array} vocabularyList - The vocabulary list for the language.
+ * @param {boolean} [allowCompound=true] - Whether to allow compound subjects.
+ * @returns {Promise<object>} A promise that resolves to an object containing the subject details.
+ */
 async function selectSubject(language, verbData, vocabularyList, allowCompound = true) {
     const t = currentTranslations[language] || currentTranslations.COSYenglish || {};
     const typeRoll = Math.random();
@@ -129,6 +150,13 @@ async function selectSubject(language, verbData, vocabularyList, allowCompound =
     return subject;
 }
 
+/**
+ * Selects an object for a grammar exercise sentence.
+ * @param {string} language - The language of the sentence.
+ * @param {Array} vocabularyList - The vocabulary list for the language.
+ * @param {string} [subjectText=""] - The text of the subject.
+ * @returns {Promise<string>} A promise that resolves to the selected object.
+ */
 async function selectObject(language, vocabularyList, subjectText = "") {
     const t = currentTranslations[language] || currentTranslations.COSYenglish || {};
     const potentialObjects = vocabularyList.filter(v => typeof v === 'string' && v.length > 1 && v.toLowerCase() !== subjectText.toLowerCase());
@@ -142,12 +170,10 @@ async function selectObject(language, vocabularyList, subjectText = "") {
 
 
 /**
- * Processes raw verb data items to derive necessary fields like pronoun, form, verb,
- * full_sentence, and sentence_template. This mirrors the processing logic from the
- * old `loadVerbGrammar` function in `grammar.js`.
- * @param {Array<Object>} rawVerbItems - Array of verb items as loaded from JSON.
+ * Processes raw verb data items to derive necessary fields like pronoun, form, verb, full_sentence, and sentence_template.
+ * @param {Array<object>} rawVerbItems - An array of verb items as loaded from a JSON file.
  * @param {string} language - The current COSYlanguage code.
- * @returns {Array<Object>} Processed verb items.
+ * @returns {Array<object>} The processed verb items.
  */
 export function processVerbData(rawVerbItems, language) {
     const t = currentTranslations[language] || currentTranslations.COSYenglish || {};
@@ -163,39 +189,38 @@ export function processVerbData(rawVerbItems, language) {
         let sAnswer = rawItem.answer;
         if (Array.isArray(sAnswer)) sAnswer = sAnswer.join('/');
         sAnswer = (sAnswer === null || sAnswer === undefined) ? "" : String(sAnswer);
-        
-        item.promptType = 'pronoun_verb_expects_form'; // Default
+
+        item.promptType = 'pronoun_verb_expects_form';
 
         if (sPrompt && sAnswer) {
             const commonPronouns = ['i', 'you', 'he', 'she', 'it', 'we', 'they', 'je', 'tu', 'il', 'elle', 'on', 'nous', 'vous', 'ils', 'elles', 'ich', 'du', 'er', 'sie', 'es', 'wir', 'ihr', 'io', 'tu', 'lui', 'lei', 'noi', 'voi', 'loro', 'yo', 'tú', 'él', 'ella', 'usted', 'nosotros', 'nosotras', 'vosotros', 'vosotras', 'ellos', 'ellas', 'ustedes', 'eu', 'tu', 'ele', 'ela', 'você', 'nós', 'vós', 'eles', 'elas', 'vocês', 'я', 'ты', 'он', 'она', 'оно', 'мы', 'вы', 'они', 'minä', 'sinä', 'hän'];
-            let langSpecificLength = 3; // Default pronoun max length for check
+            let langSpecificLength = 3;
             if (language === 'COSYfrançais' || language === 'COSYitaliano') langSpecificLength = 2;
-            
+
             const isPromptPronounLike = commonPronouns.includes(sPrompt.toLowerCase()) || sPrompt.length <= langSpecificLength;
 
             if (isPromptPronounLike) {
                 item.pronoun = sPrompt;
-                item.form = sAnswer; // This is the conjugated verb form
+                item.form = sAnswer;
                 item.promptType = 'pronoun_expects_form';
             } else {
                 const isAnswerPronounLike = commonPronouns.includes(sAnswer.toLowerCase()) || sAnswer.length <= langSpecificLength || sAnswer.includes('/');
                 if (isAnswerPronounLike) {
-                    item.form = sPrompt; // This is the conjugated verb form
+                    item.form = sPrompt;
                     item.pronoun = sAnswer;
                     item.promptType = 'form_expects_pronoun';
-                } else { 
-                    // Default assumption if neither looks like a pronoun
-                    item.pronoun = sPrompt; // Assume prompt is pronoun-like
-                    item.form = sAnswer;   // Assume answer is verb form
+                } else {
+                    item.pronoun = sPrompt;
+                    item.form = sAnswer;
                 }
             }
-        } else { // If prompt or answer is missing, try to assign directly
+        } else {
             item.pronoun = sPrompt;
             item.form = sAnswer;
         }
 
-        if (!item.verb) { // Infer verb if not present
-            let baseWordForVerbInference = item.form; // Usually the conjugated form helps infer infinitive
+        if (!item.verb) {
+            let baseWordForVerbInference = item.form;
             if (baseWordForVerbInference) {
                 const toBeForms = ['am', 'is', 'are', 'was', 'were', 'est', 'sont', 'être', 'es', 'son', 'ser', 'είμαι', 'είσαι', 'είναι', 'быть', 'был', 'была', 'было', 'были'];
                 const toHaveForms = ['have', 'has', 'had', 'a', 'ont', 'avoir', 'tiene', 'tienen', 'tener', 'tem', 'têm', 'ter', 'έχω', 'έχει', 'иметь', 'имел', 'имела'];
@@ -205,7 +230,7 @@ export function processVerbData(rawVerbItems, language) {
 
                 if (toBeForms.includes(baseWordForVerbInference.toLowerCase())) item.verb = verbToBe;
                 else if (toHaveForms.includes(baseWordForVerbInference.toLowerCase())) item.verb = verbToHave;
-                else { // Basic inference for other verbs (language-specific rules would be better)
+                else {
                     let potentialInfinitive = baseWordForVerbInference.toLowerCase();
                     if (language === 'COSYenglish') {
                         if (potentialInfinitive.endsWith('s') && !['is', 'was', 'has', 'does', 'goes'].includes(potentialInfinitive) && !potentialInfinitive.endsWith('ss')) {
@@ -220,13 +245,11 @@ export function processVerbData(rawVerbItems, language) {
                 }
             }
         }
-        
-        // Ensure crucial fields are present
+
         if (!item.pronoun || !item.verb || !item.form) {
-            // console.warn("Skipping verb item due to missing core fields:", rawItem);
-            return; // Skips this iteration of forEach
+            return;
         }
-        
+
         if (!item.full_sentence) {
             let objectPart = t.defaultAdjective || "happy";
             if (item.verb && (item.verb.toLowerCase() === (t.verbToHave || 'to have').toLowerCase())) objectPart = t.defaultNounWithArticle || (language === 'COSYenglish' ? "a cat" : (t.defaultNoun || "cat"));
@@ -238,41 +261,44 @@ export function processVerbData(rawVerbItems, language) {
              const formEscaped = escapeRegExp(item.form);
              const formRegex = new RegExp(`\\b${formEscaped}\\b`, 'i');
              item.sentence_template = item.full_sentence.replace(formRegex, "___");
-             if (!item.sentence_template.includes("___")) { // Fallback if regex replace failed
+             if (!item.sentence_template.includes("___")) {
                 let parts = item.full_sentence.split(' ');
                 let formIndex = parts.findIndex(p => p.toLowerCase() === item.form.toLowerCase());
                 if (formIndex !== -1) {
                     parts[formIndex] = "___";
                     item.sentence_template = parts.join(' ');
-                } else { 
-                    // More robust fallback: place blank after pronoun if form not found
-                    item.sentence_template = `${item.pronoun} ___ .`; 
+                } else {
+                    item.sentence_template = `${item.pronoun} ___ .`;
                 }
              }
         }
-        // Use a consistent key for uniqueness check
         const stringifiedItemKey = JSON.stringify({pronoun: item.pronoun, verb: item.verb, form: item.form, promptType: item.promptType});
         if (!seenItems.has(stringifiedItemKey)) {
             seenItems.add(stringifiedItemKey);
-            processedVerbData.push(item); 
+            processedVerbData.push(item);
         }
     });
     return processedVerbData;
 }
 
-
+/**
+ * Generates a grammar exercise sentence.
+ * @param {string} language - The language of the sentence.
+ * @param {string|string[]} days - The selected day or array of days.
+ * @param {Array} allProcessedVerbData - The processed verb data for the language.
+ * @param {Array} dailyVocab - The daily vocabulary for the language.
+ * @returns {Promise<object|null>} A promise that resolves to an object containing the generated sentence, or null if a sentence could not be generated.
+ */
 export async function generateGrammarExerciseSentence(language, days, allProcessedVerbData, dailyVocab) {
     const t = currentTranslations[language] || currentTranslations.COSYenglish || {};
     if (!allProcessedVerbData || allProcessedVerbData.length === 0) {
         console.error("generateGrammarExerciseSentence: No processed verb data provided for language " + language);
         return null;
     }
-    
+
     let currentDailyVocab = dailyVocab;
     if (!currentDailyVocab || currentDailyVocab.length === 0) {
-        // console.warn(`generateGrammarExerciseSentence: No daily vocabulary for ${language}. Fetching fallback.`);
-        // In a real scenario, TypeVerbExercise would fetch this. For the util, we assume it's passed or use very basic fallbacks.
-        const {data: vocabWords } = await loadVocabularyData(language, days); // Fetch if not provided
+        const {data: vocabWords } = await loadVocabularyData(language, days);
         currentDailyVocab = vocabWords.length > 0 ? vocabWords : [t.genericNoun1 || "book", t.genericNoun2 || "pen", t.genericAdjective1 || "interesting"];
     }
 
@@ -315,8 +341,8 @@ export async function generateGrammarExerciseSentence(language, days, allProcess
         }
         attempts++;
     }
-    
-    if (!verbInfo) { // Fallback: pick any verb and adjust subject
+
+    if (!verbInfo) {
         const anyVerbFromPool = getRandomElement(allProcessedVerbData);
         if (anyVerbFromPool) {
             verbInfo = { base: anyVerbFromPool.verb, conjugated: anyVerbFromPool.form, isBeOrHave: anyVerbFromPool.verb.toLowerCase() === (t.verbToBe || 'to be').toLowerCase() || anyVerbFromPool.verb.toLowerCase() === (t.verbToHave || 'to have').toLowerCase(), fullItem: anyVerbFromPool };
@@ -344,49 +370,47 @@ export async function generateGrammarExerciseSentence(language, days, allProcess
             O_final = addIndefiniteArticle(objectText, language);
         }
     }
-    
+
     const V_conj = verbInfo.conjugated;
     const V_base_inf = verbInfo.base.startsWith(t.infinitiveMarker || (language === 'COSYenglish' ? 'to ' : '')) ? verbInfo.base.substring((t.infinitiveMarker || (language === 'COSYenglish' ? 'to ' : '')).length) : verbInfo.base;
     let aux = "";
 
-    if (language === 'COSYenglish') { // Language-specific auxiliary logic
+    if (language === 'COSYenglish') {
         if (selectedPattern.type === "SVNegO") {
-            if (!verbInfo.isBeOrHave) { // "do not" / "does not"
+            if (!verbInfo.isBeOrHave) {
                 aux = subjectDetails.isPlural || ['i', 'you'].includes(subjectDetails.representativePronoun.toLowerCase()) ? "do" : "does";
-            } // For "be/have", negation is direct: "is not", "has not"
+            }
         } else if (selectedPattern.type === "Q_AuxSVO") {
             aux = subjectDetails.isPlural || ['i', 'you'].includes(subjectDetails.representativePronoun.toLowerCase()) ? "Do" : "Does";
         }
     }
-    // Simplified sentence construction based on pattern
-    // This part needs careful porting of the logic from grammar.js's generateSentenceForExercise
     switch (selectedPattern.type) {
         case "SVO":
             sentenceComponents = [S_final, V_conj, O_final];
             break;
         case "SVNegO":
-            if (language === 'COSYenglish' && aux) { // e.g. "They do not like cats"
+            if (language === 'COSYenglish' && aux) {
                 sentenceComponents = [S_final, aux, (t.negationParticle || "not"), V_base_inf, O_final];
-            } else if (verbInfo.isBeOrHave) { // e.g. "He is not happy"
+            } else if (verbInfo.isBeOrHave) {
                  sentenceComponents = [S_final, V_conj, (t.negationParticle || "not"), O_final];
-            } else { // Non-english or verbs that don't use "do" aux for negation
-                sentenceComponents = [S_final, V_conj, (t.negationParticle || "not"), O_final]; // Fallback or other languages
+            } else {
+                sentenceComponents = [S_final, V_conj, (t.negationParticle || "not"), O_final];
             }
             break;
-        case "Q_AuxSVO": // e.g. "Do they like cats?"
+        case "Q_AuxSVO":
             if (language === 'COSYenglish' && aux) {
                 sentenceComponents = [aux, S_final, V_base_inf, O_final];
-            } else { // Fallback for non-english or if aux logic is different
-                sentenceComponents = [V_conj, S_final, O_final]; 
+            } else {
+                sentenceComponents = [V_conj, S_final, O_final];
             }
             break;
-        case "Q_BeSVO": // e.g. "Is he happy?"
+        case "Q_BeSVO":
             sentenceComponents = [V_conj, S_final, O_final];
             break;
         default: return null;
     }
 
-    let finalCasedComponents = sentenceComponents.filter(c => c).map((word, index) => { // filter out null/empty aux
+    let finalCasedComponents = sentenceComponents.filter(c => c).map((word, index) => {
         if (typeof word !== 'string') return word;
         const namesForLang = (t.commonNames && t.commonNames.length > 0) ? t.commonNames : (language === 'COSYenglish' ? COMMON_NAMES_EN : []);
         if (namesForLang.includes(word)) return word;
@@ -396,34 +420,32 @@ export async function generateGrammarExerciseSentence(language, days, allProcess
 
     const finalPunctuation = selectedPattern.isQuestion ? "?" : ".";
     let correctSentence = finalCasedComponents.join(" ") + finalPunctuation;
-    
-    // Determine what to blank out
+
     let wordToBlankOriginal = '';
     let indexOfBlankInCased = -1;
     const blankTypeRoll = Math.random();
 
-    if (blankTypeRoll < 0.5 && V_conj) { // Blank the main verb (conjugated or base)
+    if (blankTypeRoll < 0.5 && V_conj) {
         wordToBlankOriginal = (selectedPattern.type === "SVNegO" && language === 'COSYenglish' && aux) || (selectedPattern.type === "Q_AuxSVO" && language === 'COSYenglish' && aux) ? V_base_inf : V_conj;
-    } else if (blankTypeRoll < 0.75 && subjectDetails.type !== "pronoun" && S_final) { // Blank subject if not pronoun
+    } else if (blankTypeRoll < 0.75 && subjectDetails.type !== "pronoun" && S_final) {
         wordToBlankOriginal = S_final;
-    } else if (O_final) { // Blank object
+    } else if (O_final) {
         wordToBlankOriginal = O_final;
-    } else if (V_conj) { // Fallback to verb if object was blanked but missing
+    } else if (V_conj) {
         wordToBlankOriginal = (selectedPattern.type === "SVNegO" && language === 'COSYenglish' && aux) || (selectedPattern.type === "Q_AuxSVO" && language === 'COSYenglish' && aux) ? V_base_inf : V_conj;
-    } else { // Ultimate fallback
+    } else {
         wordToBlankOriginal = finalCasedComponents.length > 1 ? finalCasedComponents[1] : finalCasedComponents[0];
     }
-    
-    // Find the cased version of the word to blank
+
     let tempSentenceForTemplate = [...finalCasedComponents];
     const casedWordToBlank = finalCasedComponents.find(w => w.toLowerCase() === wordToBlankOriginal.toLowerCase());
-    
+
     if(casedWordToBlank){
         indexOfBlankInCased = finalCasedComponents.indexOf(casedWordToBlank);
         tempSentenceForTemplate[indexOfBlankInCased] = "___";
-    } else if (finalCasedComponents.length > 0) { // Fallback if exact cased match not found
+    } else if (finalCasedComponents.length > 0) {
         indexOfBlankInCased = finalCasedComponents.length > 1 ? 1 : 0;
-        wordToBlankOriginal = finalCasedComponents[indexOfBlankInCased]; // update original to what's actually blanked
+        wordToBlankOriginal = finalCasedComponents[indexOfBlankInCased];
         tempSentenceForTemplate[indexOfBlankInCased] = "___";
     } else {
         return { questionPrompt: "___" + finalPunctuation, answer: t.errorFallbackWord || "error", correctSentence: t.errorFallbackWord + finalPunctuation };
@@ -433,12 +455,7 @@ export async function generateGrammarExerciseSentence(language, days, allProcess
 
     return {
         questionPrompt: sentenceTemplate.trim(),
-        answer: wordToBlankOriginal.trim(), // This should be the non-cased, original form intended for the blank
+        answer: wordToBlankOriginal.trim(),
         correctSentence: correctSentence.trim(),
-        // For debugging or more complex hints:
-        // rawSubject: subjectDetails,
-        // rawVerb: verbInfo,
-        // rawObject: objectText,
-        // sentenceComponents: finalCasedComponents,
     };
 }
