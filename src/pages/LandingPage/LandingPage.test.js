@@ -2,18 +2,19 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import LandingPage from './LandingPage';
+import { I18nProvider } from '../../i18n/I18nContext';
 
-test('renders landing page with welcome message and buttons', () => {
+test('renders landing page with logo and mode buttons', () => {
   render(
     <I18nProvider>
-    <Router>
-      <LandingPage />
-    </Router>
+      <Router>
+        <LandingPage />
+      </Router>
     </I18nProvider>
   );
 
-  expect(screen.getByText(/Welcome to COSYlanguages/i)).toBeInTheDocument();
-  expect(screen.getByText(/Your journey to language mastery starts here./i)).toBeInTheDocument();
-  expect(screen.getByRole('link', { name: /Start a Lesson/i })).toBeInTheDocument();
-  expect(screen.getByRole('link', { name: /Create an Account \/ Login/i })).toBeInTheDocument();
+  expect(screen.getByAltText(/Cosy Languages Logo/i)).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /Freestyle/i })).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /Study Mode/i })).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /Community/i })).toBeInTheDocument();
 });
