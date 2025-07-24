@@ -21,6 +21,7 @@ import ReviewPage from './pages/StudyMode/ReviewPage/ReviewPage';
 import LearnedWordsPage from './pages/StudyMode/LearnedWordsPage/LearnedWordsPage';
 import ConversationPage from './pages/StudyMode/ConversationPage/ConversationPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
+import CommunityPage from './pages/CommunityPage/CommunityPage';
 
 // ProtectedRoute for general authentication (if needed for pages like MyStudySetsPage)
 const ProtectedRoute = ({ children }) => {
@@ -72,6 +73,7 @@ function App() {
                 <Route path="learned-words" element={<ProtectedRoute><LearnedWordsPage /></ProtectedRoute>} />
                 <Route path="conversation" element={<ConversationPage />} />
                 <Route path="profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
+                <Route path="community" element={<CommunityPage />} />
                 <Route
                   path="my-sets"
                   element={
