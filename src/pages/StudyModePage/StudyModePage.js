@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useAuth } from '../../contexts/AuthContext';
 import { useStudy } from '../../contexts/StudyContext';
@@ -15,6 +15,7 @@ import TransliterableText from '../../components/Common/TransliterableText';
 import ToggleLatinizationButton from '../../components/Common/ToggleLatinizationButton';
 import Button from '../../components/Common/Button';
 import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
+import PinEntry from '../../components/StudyMode/PinEntry';
 
 import './StudyModePage.css';
 
@@ -32,12 +33,17 @@ const StudyModePage = () => {
     setSelectedSectionId,
   } = useStudy();
 
+  const [pinVerified, setPinVerified] = useState(false);
   const [days, setDays] = React.useState([]);
   const [currentSyllabus, setCurrentSyllabus] = React.useState(null);
   const [lessonSectionsForPanel, setLessonSectionsForPanel] = React.useState([]);
   const [currentExerciseBlocks, setCurrentExerciseBlocks] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
   const [error, setError] = React.useState(null);
+
+  const handlePinVerified = () => {
+    setPinVerified(true);
+  };
 
   const memoizedGetAvailableSyllabusDays = useCallback(() => {
     if (selectedRole === 'student' && language) {
@@ -251,6 +257,10 @@ const StudyModePage = () => {
     }
     return null;
   };
+
+  if (!pinVerified) {
+    return <PinEntry onPinVerified={handlePinVerified} />;
+  }
 
   return (
     <div className="study-mode-page-container">
