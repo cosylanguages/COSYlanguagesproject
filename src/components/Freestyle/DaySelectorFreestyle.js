@@ -1,10 +1,18 @@
+// Import necessary libraries and components.
 import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useFreestyle } from '../../contexts/FreestyleContext';
 import './DaySelectorFreestyle.css';
 
+/**
+ * A component that allows the user to select a single day or a range of days for freestyle practice.
+ * @param {object} props - The component's props.
+ * @param {string} props.language - The currently selected language.
+ * @returns {JSX.Element} The DaySelectorFreestyle component.
+ */
 const DaySelectorFreestyle = ({ language }) => {
   const { setSelectedDays } = useFreestyle();
+  // State for the selected day(s), thematic name, and selection mode.
   const [internalSingleDay, setInternalSingleDay] = useState('');
   const [internalDayFrom, setInternalDayFrom] = useState('');
   const [internalDayTo, setInternalDayTo] = useState('');
@@ -15,9 +23,11 @@ const DaySelectorFreestyle = ({ language }) => {
   const MAX_DAYS = 30;
   const daysOptions = Array.from({ length: MAX_DAYS }, (_, i) => i + 1);
 
+  // Determine which input section to show based on the selection mode.
   const showSingleDayInputSection = selectionMode === 'single';
   const showDayRangeInputSection = selectionMode === 'range';
 
+  // Effect to get the thematic name for the selected day.
   useEffect(() => {
     if (showSingleDayInputSection && internalSingleDay && language) {
       const langTranslations = getTranslationsForLang(language, 'dayNames');
@@ -27,6 +37,9 @@ const DaySelectorFreestyle = ({ language }) => {
     }
   }, [internalSingleDay, language, showSingleDayInputSection, getTranslationsForLang]);
 
+  /**
+   * Handles the confirmation of the selected days.
+   */
   const handleConfirmDays = () => {
     let daysToConfirm = [];
     if (showSingleDayInputSection && internalSingleDay) {
@@ -46,6 +59,10 @@ const DaySelectorFreestyle = ({ language }) => {
     }
   };
 
+  /**
+   * Checks if the confirm button should be disabled.
+   * @returns {boolean} Whether the confirm button should be disabled.
+   */
   const isConfirmButtonDisabled = () => {
     if (showSingleDayInputSection) {
       return !internalSingleDay;
@@ -59,6 +76,7 @@ const DaySelectorFreestyle = ({ language }) => {
     return true;
   };
 
+  // Render the day selector component.
   return (
     <div className="day-selector-card">
       <div className="day-selector-title">
@@ -66,6 +84,7 @@ const DaySelectorFreestyle = ({ language }) => {
         {t('titles.chooseYourDay', 'Choose Your Day(s)')}
       </div>
 
+      {/* Radio buttons for selecting the mode (single day or day range). */}
       <div className="mode-choice-buttons">
         <label>
           <input
@@ -89,6 +108,7 @@ const DaySelectorFreestyle = ({ language }) => {
         </label>
       </div>
 
+      {/* The input section for selecting a single day. */}
       {showSingleDayInputSection && (
         <div className="day-select-dropdown-container">
           <select
@@ -113,6 +133,7 @@ const DaySelectorFreestyle = ({ language }) => {
         </div>
       )}
 
+      {/* The input section for selecting a day range. */}
       {showDayRangeInputSection && (
         <div className="day-range-container">
           <div className="day-range-group">
@@ -136,6 +157,7 @@ const DaySelectorFreestyle = ({ language }) => {
         </div>
       )}
 
+      {/* The confirm button. */}
       <div style={{ marginTop: '15px', textAlign: 'center' }}>
         <button
           onClick={handleConfirmDays}

@@ -1,11 +1,19 @@
+// Import necessary libraries and components.
 import React, { useState, useEffect } from 'react';
 import { useUserProfile } from '../../contexts/UserProfileContext';
 import './Achievements.css';
 
+/**
+ * A component that displays the user's achievements.
+ * @param {object} props - The component's props.
+ * @param {string} props.mode - The mode to filter achievements by (e.g., 'freestyle' or 'study').
+ * @returns {JSX.Element} The Achievements component.
+ */
 const Achievements = ({ mode }) => {
   const { achievements } = useUserProfile();
   const [allAchievements, setAllAchievements] = useState([]);
 
+  // Fetch all possible achievements from the JSON files when the component mounts.
   useEffect(() => {
     const fetchAchievements = async () => {
         try {
@@ -24,10 +32,13 @@ const Achievements = ({ mode }) => {
     fetchAchievements();
   }, []);
 
+  // Filter the achievements to show only the ones the user has unlocked.
   const unlockedAchievements = allAchievements.filter(ach => achievements.includes(ach.id));
 
+  // Further filter the achievements by the selected mode, if any.
   const filteredAchievements = mode ? unlockedAchievements.filter(ach => ach.mode === mode) : unlockedAchievements;
 
+  // Render the achievements component.
   return (
     <div className="achievements-container">
       <h2>Achievements</h2>

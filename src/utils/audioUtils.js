@@ -6,15 +6,15 @@ export function playSound(soundName) {
   const validSounds = ['click', 'success', 'error', 'select'];
   if (!validSounds.includes(soundName)) {
     console.warn(`Attempted to play an unknown sound: "${soundName}". Expected one of: ${validSounds.join(', ')}.`);
-    return; 
+    return;
   }
 
-  // Paths in public folder are relative to the root
+  // The paths in the public folder are relative to the root.
   const audioPath = `/assets/sounds/${soundName}.mp3`;
   const audio = new Audio(audioPath);
-  
+
   audio.play().catch(error => {
-    // Log error but don't let it break the app if sound fails (e.g., user hasn't interacted yet)
+    // Log an error if the sound fails to play, but don't let it break the app.
     console.error(`Error playing sound "${soundName}" from path "${audioPath}":`, error);
   });
 }

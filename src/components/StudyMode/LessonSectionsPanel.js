@@ -1,3 +1,4 @@
+// Import necessary libraries, hooks, and components.
 import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
@@ -5,6 +6,17 @@ import './LessonSectionsPanel.css';
 import { fetchLessonSections } from '../../api/lessonSections';
 import { useAuth } from '../../contexts/AuthContext';
 
+/**
+ * A panel that displays a list of lesson sections for a given day.
+ * It is used in both the student and teacher dashboards.
+ * @param {object} props - The component's props.
+ * @param {string} props.selectedDayId - The ID of the currently selected day.
+ * @param {function} props.onSectionSelect - A callback function to handle the selection of a section.
+ * @param {string} props.selectedSectionId - The ID of the currently selected section.
+ * @param {string} props.currentLangKey - The current language key.
+ * @param {boolean} [props.isStudentMode=false] - Whether the panel is in student mode.
+ * @returns {JSX.Element} The LessonSectionsPanel component.
+ */
 const LessonSectionsPanel = ({
   selectedDayId,
   onSectionSelect,
@@ -16,6 +28,7 @@ const LessonSectionsPanel = ({
   const { authToken } = useAuth();
   const [sections, setSections] = useState([]);
 
+  // Fetch the lesson sections from the API when in teacher mode.
   useEffect(() => {
     if (selectedDayId && !isStudentMode) {
       fetchLessonSections(authToken, selectedDayId)
@@ -24,6 +37,11 @@ const LessonSectionsPanel = ({
     }
   }, [selectedDayId, isStudentMode, authToken]);
 
+  /**
+   * Gets the title of a section in the appropriate language.
+   * @param {object} section - The section object.
+   * @returns {string} The title of the section.
+   */
   const getTeacherSectionTitle = (section) => {
     const langKeyToUse = currentLangKey || 'COSYenglish';
     if (section.title) {
@@ -34,6 +52,7 @@ const LessonSectionsPanel = ({
 
   const sectionsToDisplay = sections;
 
+  // If there are no sections to display, show a message.
   if (!sectionsToDisplay || sectionsToDisplay.length === 0) {
     return (
       <div className="lesson-sections-panel">
@@ -47,6 +66,7 @@ const LessonSectionsPanel = ({
     );
   }
 
+  // Render the list of lesson sections.
   return (
     <div className="lesson-sections-panel">
       <h4>

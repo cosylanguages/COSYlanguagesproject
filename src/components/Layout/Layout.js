@@ -1,3 +1,4 @@
+// Import necessary libraries and components.
 import React, { useState, useEffect } from 'react';
 import { Outlet, Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
@@ -6,6 +7,7 @@ import Button from '../Common/Button';
 import TransliterableText from '../Common/TransliterableText';
 import './Layout.css';
 
+// An array of navigation links.
 const navLinks = [
   { to: '/freestyle', text: 'navFreestyle', defaultText: 'Freestyle' },
   { to: '/flashcards', text: 'navFlashcards', defaultText: 'Flashcards' },
@@ -14,6 +16,11 @@ const navLinks = [
   { to: '/community', text: 'navCommunity', defaultText: 'Community' },
 ];
 
+/**
+ * The main layout component for the application.
+ * It includes the header, navigation, main content area, and footer.
+ * @returns {JSX.Element} The Layout component.
+ */
 const Layout = () => {
   const { isAuthenticated, currentUser, logout, loadingAuth } = useAuth();
   const { t } = useI18n();
@@ -21,8 +28,10 @@ const Layout = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const location = useLocation();
 
+  // Check if the user is in "study mode".
   const isStudyMode = location.pathname.startsWith('/study');
 
+  // An array of navigation links for "study mode".
   const studyModeNavLinks = [
     { to: '/study/dictionary', text: 'navDictionary', defaultText: 'Dictionary' },
     { to: '/study/study-tools', text: 'navStudyTools', defaultText: 'Study Tools' },
@@ -33,10 +42,12 @@ const Layout = () => {
     { to: '/study/interactive', text: 'navInteractive', defaultText: 'Interactive' },
   ];
 
+  // Combine the navigation links based on the current mode.
   const filteredNavLinks = isStudyMode
     ? [...navLinks, ...studyModeNavLinks]
     : navLinks;
 
+  // Effect to toggle dark mode.
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add('dark-mode');
@@ -45,15 +56,22 @@ const Layout = () => {
     }
   }, [isDarkMode]);
 
+  /**
+   * Toggles dark mode.
+   */
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
 
+  /**
+   * Handles the logout process.
+   */
   const handleLogout = async () => {
     await logout();
     navigate('/login');
   };
 
+  // Render the layout component.
   return (
     <div className="app-layout">
       <header className="app-header">

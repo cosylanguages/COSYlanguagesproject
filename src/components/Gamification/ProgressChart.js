@@ -1,3 +1,4 @@
+// Import necessary libraries and components.
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import {
@@ -11,6 +12,7 @@ import {
   Legend,
 } from 'chart.js';
 
+// Register the necessary components with ChartJS.
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -21,7 +23,14 @@ ChartJS.register(
   Legend
 );
 
+/**
+ * A component that displays a line chart of the user's progress over time.
+ * @param {object} props - The component's props.
+ * @param {Array} [props.data=[]] - An array of data points for the chart.
+ * @returns {JSX.Element} The ProgressChart component.
+ */
 const ProgressChart = ({ data = [] }) => {
+  // The data for the chart.
   const chartData = {
     labels: data.map(d => d.date),
     datasets: [
@@ -35,6 +44,7 @@ const ProgressChart = ({ data = [] }) => {
     ],
   };
 
+  // The options for the chart.
   const options = {
     responsive: true,
     plugins: {
@@ -48,6 +58,7 @@ const ProgressChart = ({ data = [] }) => {
     },
   };
 
+  // Render the chart.
   return <Line data={chartData} options={options} />;
 };
 

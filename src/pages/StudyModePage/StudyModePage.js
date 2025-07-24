@@ -1,3 +1,4 @@
+// Import necessary libraries, hooks, and components.
 import React, { useEffect, useCallback, useState } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useAuth } from '../../contexts/AuthContext';
@@ -17,11 +18,26 @@ import Button from '../../components/Common/Button';
 import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
 import PinEntry from '../../components/StudyMode/PinEntry';
 
+// Import the CSS for this page.
 import './StudyModePage.css';
 
+/**
+ * Generates a unique ID for a lesson block element.
+ * @param {string} blockId - The ID of the block.
+ * @param {number} index - The index of the block.
+ * @returns {string} The unique element ID.
+ */
 export const getBlockElementId = (blockId, index) => `lesson-block-content-${blockId || `gen-${index}`}`;
 
+/**
+ * The main page for the "Study Mode".
+ * This component handles the logic for both students and teachers, allowing them to select roles,
+ * languages, days, and lesson sections. It fetches and displays the relevant data based on
+ * the user's selections.
+ * @returns {JSX.Element} The StudyModePage component.
+ */
 const StudyModePage = () => {
+  // Hooks for internationalization, authentication, and study context.
   const { t, language, currentLangKey } = useI18n();
   const { authToken } = useAuth();
   const {
@@ -33,6 +49,7 @@ const StudyModePage = () => {
     setSelectedSectionId,
   } = useStudy();
 
+  // State for PIN verification, days, syllabus, lesson sections, exercise blocks, loading status, and errors.
   const [pinVerified, setPinVerified] = useState(false);
   const [days, setDays] = React.useState([]);
   const [currentSyllabus, setCurrentSyllabus] = React.useState(null);
@@ -41,10 +58,12 @@ const StudyModePage = () => {
   const [isLoading, setIsLoading] = React.useState(false);
   const [error, setError] = React.useState(null);
 
+  // Callback to handle PIN verification.
   const handlePinVerified = () => {
     setPinVerified(true);
   };
 
+  // Memoized callback to fetch available syllabus days for students.
   const memoizedGetAvailableSyllabusDays = useCallback(() => {
     if (selectedRole === 'student' && language) {
       setIsLoading(true);
@@ -60,7 +79,9 @@ const StudyModePage = () => {
     }
   }, [language, selectedRole, t]);
 
+  // Effect to fetch days when the role or language changes.
   useEffect(() => {
+    // Reset state when the role or language changes.
     setDays([]);
     setSelectedDayId(null);
     setCurrentSyllabus(null);
@@ -69,6 +90,7 @@ const StudyModePage = () => {
     setCurrentExerciseBlocks([]);
     setError(null);
 
+    // Fetch student or teacher days based on the selected role.
     memoizedGetAvailableSyllabusDays();
 
     if (selectedRole === 'teacher' && authToken) {
@@ -85,6 +107,7 @@ const StudyModePage = () => {
     }
   }, [selectedRole, authToken, t, memoizedGetAvailableSyllabusDays, setSelectedDayId, setSelectedSectionId]);
 
+  // Effect to fetch lesson sections when the selected day changes.
   useEffect(() => {
     if (!selectedDayId) {
       setCurrentSyllabus(null);
@@ -94,6 +117,7 @@ const StudyModePage = () => {
       return;
     }
 
+    // Fetch student or teacher lesson sections based on the selected role and day.
     if (selectedRole === 'student') {
       const dayInfo = days.find(d => d.dayNumber === parseInt(selectedDayId));
       if (dayInfo && dayInfo.fileName) {
@@ -141,12 +165,14 @@ const StudyModePage = () => {
     }
   }, [selectedRole, selectedDayId, days, authToken, t, setSelectedSectionId]);
 
+  // Effect to fetch exercise blocks when the selected section changes.
   useEffect(() => {
     if (!selectedSectionId) {
       setCurrentExerciseBlocks([]);
       return;
     }
 
+    // Fetch student or teacher exercise blocks based on the selected role and section.
     if (selectedRole === 'student' && currentSyllabus && currentSyllabus.sections) {
       const section = currentSyllabus.sections.find(s => s.title === selectedSectionId);
       setCurrentExerciseBlocks(section?.content_blocks || []);
@@ -168,10 +194,12 @@ const StudyModePage = () => {
     }
   }, [selectedRole, currentSyllabus, selectedSectionId, authToken, t]);
 
+  // Callback to handle role selection.
   const handleRoleSelect = useCallback((role) => {
     setSelectedRole(prevRole => {
       const newRole = prevRole === role ? null : role;
       if (prevRole !== newRole) {
+        // Reset state when the role changes.
         setDays([]);
         setSelectedDayId(null);
         setCurrentSyllabus(null);
@@ -184,6 +212,7 @@ const StudyModePage = () => {
     });
   }, [setSelectedRole, setSelectedDayId, setSelectedSectionId]);
 
+  // Callback to handle day selection.
   const handleDaySelectSmP = (dayIdValue) => {
     setSelectedDayId(dayIdValue);
     setSelectedSectionId(null);
@@ -197,6 +226,7 @@ const StudyModePage = () => {
     window.dispatchEvent(new CustomEvent('dayChange', { detail: { selectedDayId: dayIdValue } }));
   };
 
+  // Callback to handle section selection.
   const handleSectionSelectSmP = (sectionIdentifier) => {
     setSelectedSectionId(sectionIdentifier);
     const mainContentPanel = document.getElementById('main-content-panel');
@@ -205,6 +235,7 @@ const StudyModePage = () => {
     }
   };
 
+  // Renders the day selector based on the selected role.
   const renderStudentDaySelector = () => {
     const daySelectLabel = <TransliterableText text={t('studyModePage.selectDayLabel', 'Select Day:')} />;
 
@@ -258,16 +289,19 @@ const StudyModePage = () => {
     return null;
   };
 
+  // If the PIN has not been verified, show the PIN entry component.
   if (!pinVerified) {
     return <PinEntry onPinVerified={handlePinVerified} />;
   }
 
+  // Render the main study mode page.
   return (
     <div className="study-mode-page-container">
       <h1>
         <TransliterableText text={t('studyMode.mainHeading', 'COSYlanguages - Study Mode 🎓')} />
       </h1>
 
+      {/* Language selection and other controls. */}
       <div className="study-menu-section">
         <label htmlFor="language-select" id="study-choose-language-label">
           <TransliterableText text={t('studyMode.chooseLanguageLabel', '🌎 Choose Your Language:')} />
@@ -281,6 +315,7 @@ const StudyModePage = () => {
         </Button>
       </div>
 
+      {/* Role selection. */}
       <div className="study-menu-section">
         <label htmlFor="role-selector-buttons" id="study-choose-role-label">
           <TransliterableText text={t('studyMode.chooseRoleLabel', '👤 Choose Your Role:')} />
@@ -288,13 +323,16 @@ const StudyModePage = () => {
         <RoleSelector onSelectRole={handleRoleSelect} currentRole={selectedRole} />
       </div>
 
+      {/* Day selector. */}
       {renderStudentDaySelector()}
 
+      {/* Error and loading messages. */}
       {error && <p className="error-message" role="alert">{error}</p>}
       {isLoading && selectedRole && (!days || days.length === 0) && !error && (
         <p role="status"><TransliterableText text={t('loading', 'Loading...')} /></p>
       )}
 
+      {/* The main content area with a three-panel layout. */}
       <div className="study-content-area">
         {!selectedRole ? (
           <p id="study-welcome-message">
@@ -302,6 +340,7 @@ const StudyModePage = () => {
           </p>
         ) : (
           <div className="dashboard-layout">
+            {/* Left panel for lesson sections. */}
             <div className="layout-left-panel">
               {selectedDayId && lessonSectionsForPanel.length > 0 ? (
                 <LessonSectionsPanel
@@ -334,6 +373,7 @@ const StudyModePage = () => {
                 </p>
               )}
             </div>
+            {/* Center panel for the main dashboard (student or teacher). */}
             <div className="layout-center-panel" id="main-content-panel">
               {selectedRole === 'student' &&
                 <>
@@ -349,6 +389,7 @@ const StudyModePage = () => {
                 />
               }
             </div>
+            {/* Right panel for tools. */}
             <div className="layout-right-panel">
               <ToolsPanel />
             </div>
