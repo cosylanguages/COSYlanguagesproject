@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent } from '../../../../testUtils';
 import { MemoryRouter } from 'react-router-dom';
 import IrregularVerbLevelSelector from './IrregularVerbLevelSelector';
 

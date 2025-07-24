@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from '../../testUtils';
 import SpeechRecognition from './SpeechRecognition';
 import annyang from 'annyang';
 
@@ -14,7 +14,7 @@ jest.mock('annyang', () => ({
 
 describe('SpeechRecognition', () => {
   it('toggles listening state on button click', () => {
-    const { getByText } = render(<I18nProvider><SpeechRecognition onSpeech={() => {}} /></I18nProvider>);
+    const { getByText } = render(<SpeechRecognition onSpeech={() => {}} />);
     const button = getByText('Start Listening');
 
     fireEvent.click(button);

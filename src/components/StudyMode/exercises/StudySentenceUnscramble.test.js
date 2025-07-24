@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '../../../../testUtils';
 import StudySentenceUnscramble from './StudySentenceUnscramble';
 import { loadSentenceUnscrambleData } from '../../../utils/exerciseDataService';
 
@@ -11,7 +11,7 @@ describe('StudySentenceUnscramble', () => {
             data: [{ id: 1, correctSentence: 'Hello world!' }],
             error: null
         });
-        render(<I18nProvider><StudySentenceUnscramble language="en" /></I18nProvider>);
+        render(<StudySentenceUnscramble language="en" />);
         await waitFor(() => {
             expect(screen.getByText('Sentence Unscramble (Study Mode)')).toBeInTheDocument();
         });
@@ -22,7 +22,7 @@ describe('StudySentenceUnscramble', () => {
             data: null,
             error: { message: 'Failed to load' }
         });
-        render(<I18nProvider><StudySentenceUnscramble language="en" /></I18nProvider>);
+        render(<StudySentenceUnscramble language="en" />);
         await waitFor(() => {
             expect(screen.getByText('Error: Failed to load')).toBeInTheDocument();
         });
@@ -33,7 +33,7 @@ describe('StudySentenceUnscramble', () => {
             data: [],
             error: null
         });
-        render(<I18nProvider><StudySentenceUnscramble language="en" /></I18nProvider>);
+        render(<StudySentenceUnscramble language="en" />);
         await waitFor(() => {
             expect(screen.getByText('No sentence unscramble exercises found for this language.')).toBeInTheDocument();
         });
