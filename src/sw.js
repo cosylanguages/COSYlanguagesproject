@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-globals */
+
 const CACHE_NAME = 'cosy-languages-cache-v2';
 const urlsToCache = [
   '/',

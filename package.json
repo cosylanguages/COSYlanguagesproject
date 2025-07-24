@@ -28,6 +28,18 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "src/sw.js"
+        ],
+        "rules": {
+          "no-restricted-globals": [
+            "off"
+          ]
+        }
+      }
     ]
   },
   "browserslist": {
