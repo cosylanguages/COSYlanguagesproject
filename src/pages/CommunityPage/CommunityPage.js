@@ -1,14 +1,14 @@
 import React from 'react';
+import Feed from '../../components/Community/Feed';
 import './CommunityPage.css';
 
 // This is the main component for the Community page.
-// It will be expanded to include features similar to Instagram, YouTube Shorts, etc.
+// It displays a feed of posts from the community.
 function CommunityPage() {
   return (
     <div className="community-container">
-      <h1>Community Page</h1>
-      <p>Welcome to the Cosy Languages Community!</p>
-      <p>This section is under construction.</p>
+      <h1 className="community-header">Community</h1>
+      <Feed />
     </div>
   );
 }

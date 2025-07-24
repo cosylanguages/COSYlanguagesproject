@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useFreestyle } from '../../contexts/FreestyleContext';
 import LanguageSelectorFreestyle from '../../components/Freestyle/LanguageSelectorFreestyle';
 import DaySelectorFreestyle from '../../components/Freestyle/DaySelectorFreestyle';
@@ -14,20 +14,23 @@ import './FreestyleModePage.css';
 
 const FreestyleModePage = () => {
   const { selectedLanguage, selectedDays, selectedExercise } = useFreestyle();
+  const [words, setWords] = useState([]);
 
-  const words = [
-    { text: 'un', size: 1.5 },
-    { text: 'deux', size: 2 },
-    { text: 'trois', size: 1.2 },
-    { text: 'quatre', size: 2.5 },
-    { text: 'cinq', size: 1.8 },
-  ];
+  useEffect(() => {
+    if (selectedLanguage) {
+      fetch(`/api/words?language=${selectedLanguage}`)
+        .then(response => response.json())
+        .then(data => setWords(data));
+    }
+  }, [selectedLanguage]);
 
-  const summary = {
-    timeSpent: '20 minutes',
-    wordsLearned: 5,
-    xpGained: 50,
-  };
+  const [summary, setSummary] = useState(null);
+
+  useEffect(() => {
+    fetch('/api/summary')
+      .then(response => response.json())
+      .then(data => setSummary(data));
+  }, []);
 
   return (
     <div className="freestyle-mode-container">
@@ -53,7 +56,7 @@ const FreestyleModePage = () => {
       )}
 
       <WordCloud words={words} />
-      <SessionSummary summary={summary} />
+      {summary && <SessionSummary summary={summary} />}
       <HelpPopupIsland />
     </div>
   );
