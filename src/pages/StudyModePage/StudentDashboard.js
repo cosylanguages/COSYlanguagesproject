@@ -15,6 +15,9 @@ import SouvenirCollection from '../../components/Gamification/SouvenirCollection
 import CosyStreaks from '../../components/Gamification/CosyStreaks';
 import StudyFillInTheBlanks from '../../components/StudyMode/exercises/StudyFillInTheBlanks';
 import StudySentenceUnscramble from '../../components/StudyMode/exercises/StudySentenceUnscramble';
+import QuizTaker from '../../components/StudyMode/QuizTaker';
+import QuizResults from '../../components/StudyMode/QuizResults';
+import FlashcardPlayer from '../../components/StudyMode/FlashcardPlayer';
 
 // Import the centralized displayComponentMap
 import { displayComponentMap } from '../../components/StudyMode/common/displayComponentMap';
@@ -25,6 +28,37 @@ import { getBlockElementId } from './StudyModePage';
 
 import './StudentDashboard.css'; 
 
+const mockQuizzes = [
+    {
+        id: 1,
+        title: 'French Vocabulary Quiz',
+        questions: [
+            {
+                text: 'What is the French word for "hello"?',
+                options: ['Bonjour', 'Au revoir', 'Merci', 'Oui'],
+                correctOption: 0,
+            },
+            {
+                text: 'What is the French word for "goodbye"?',
+                options: ['Bonjour', 'Au revoir', 'Merci', 'Oui'],
+                correctOption: 1,
+            },
+        ],
+    },
+];
+
+const mockDecks = [
+    {
+        id: 1,
+        title: 'French Vocabulary',
+        cards: [
+            { front: 'Hello', back: 'Bonjour' },
+            { front: 'Goodbye', back: 'Au revoir' },
+            { front: 'Thank you', back: 'Merci' },
+        ],
+    },
+];
+
 const StudentDashboard = ({ lessonBlocks = [] }) => {
   const { t } = useI18n();
   const [isMistakeNotebookVisible, setIsMistakeNotebookVisible] = useState(false);
@@ -33,6 +67,9 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
   const [isSmartReviewVisible, setIsSmartReviewVisible] = useState(false);
   const [isFillInTheBlanksVisible, setIsFillInTheBlanksVisible] = useState(false);
   const [isSentenceUnscrambleVisible, setIsSentenceUnscrambleVisible] = useState(false);
+  const [selectedQuiz, setSelectedQuiz] = useState(null);
+  const [quizAnswers, setQuizAnswers] = useState(null);
+  const [selectedDeck, setSelectedDeck] = useState(null);
   
   const handleNavigateBlock = (direction, currentIndex) => {
     let targetIndex;
@@ -51,6 +88,22 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
       element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  const handleQuizSubmit = (answers) => {
+      setQuizAnswers(answers);
+  }
+
+  if (quizAnswers) {
+      return <QuizResults quiz={selectedQuiz} answers={quizAnswers} />;
+  }
+
+  if (selectedQuiz) {
+      return <QuizTaker quiz={selectedQuiz} onSubmit={handleQuizSubmit} />;
+  }
+
+  if(selectedDeck) {
+      return <FlashcardPlayer deck={selectedDeck} />;
+  }
 
   if (!lessonBlocks || lessonBlocks.length === 0) {
     return (
@@ -89,6 +142,28 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
       {isSmartReviewVisible && <SmartReview userId="123" />}
       {isFillInTheBlanksVisible && <StudyFillInTheBlanks language={t('currentLanguage')} />}
       {isSentenceUnscrambleVisible && <StudySentenceUnscramble language={t('currentLanguage')} />}
+
+      <div className="quizzes-section">
+          <h3>Quizzes</h3>
+          <ul>
+              {mockQuizzes.map(quiz => (
+                  <li key={quiz.id}>
+                      <button onClick={() => setSelectedQuiz(quiz)}>{quiz.title}</button>
+                  </li>
+              ))}
+          </ul>
+      </div>
+
+      <div className="flashcards-section">
+          <h3>My Flashcards</h3>
+          <ul>
+              {mockDecks.map(deck => (
+                  <li key={deck.id}>
+                      <button onClick={() => setSelectedDeck(deck)}>{deck.title}</button>
+                  </li>
+              ))}
+          </ul>
+      </div>
 
       <div className="lesson-content-student-view">
         {lessonBlocks.map((block, index) => {
