@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.6f497ce5.css",
-    "main.js": "/static/js/main.c58b2113.js",
+    "main.js": "/static/js/main.fad1314d.js",
     "sw.js": "/static/js/sw.d72eb008.js",
     "study.css": "/static/css/study.475ff06f.css",
     "study.js": "/static/js/study.85336120.js",
     "freestyle.css": "/static/css/freestyle.1dad8ecd.css",
-    "freestyle.js": "/static/js/freestyle.74ddc9a4.js",
+    "freestyle.js": "/static/js/freestyle.ffd6c9d9.js",
     "study-tt.js": "/static/js/study-tt.31d6cfe0.js",
     "study-ka.js": "/static/js/study-ka.950e1d5b.js",
     "static/media/Flag_of_Brittany.png": "/static/media/Flag_of_Brittany.84b981fe6c89698ceeab.png",
@@ -20,16 +20,16 @@
     "freestyle.html": "/freestyle.html",
     "study-islands.html": "/study-islands.html",
     "main.6f497ce5.css.map": "/static/css/main.6f497ce5.css.map",
-    "main.c58b2113.js.map": "/static/js/main.c58b2113.js.map",
+    "main.fad1314d.js.map": "/static/js/main.fad1314d.js.map",
     "sw.d72eb008.js.map": "/static/js/sw.d72eb008.js.map",
     "study.475ff06f.css.map": "/static/css/study.475ff06f.css.map",
     "study.85336120.js.map": "/static/js/study.85336120.js.map",
     "freestyle.1dad8ecd.css.map": "/static/css/freestyle.1dad8ecd.css.map",
-    "freestyle.74ddc9a4.js.map": "/static/js/freestyle.74ddc9a4.js.map",
+    "freestyle.ffd6c9d9.js.map": "/static/js/freestyle.ffd6c9d9.js.map",
     "study-ka.950e1d5b.js.map": "/static/js/study-ka.950e1d5b.js.map"
   },
   "entrypoints": [
     "static/css/main.6f497ce5.css",
-    "static/js/main.c58b2113.js"
+    "static/js/main.fad1314d.js"
   ]
 }
