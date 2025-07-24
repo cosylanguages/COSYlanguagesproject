@@ -1,6 +1,11 @@
+// Import necessary libraries and components.
 import React from 'react';
 import './SouvenirCollection.css';
 
+/**
+ * A component that displays the user's collection of souvenirs.
+ * @returns {JSX.Element} The SouvenirCollection component.
+ */
 const SouvenirCollection = () => {
   // TODO: Unlock souvenirs by completing lessons or challenges.
   const souvenirs = [
@@ -9,6 +14,7 @@ const SouvenirCollection = () => {
     { id: 3, name: 'Kremlin', country: 'Russia' },
   ];
 
+  // Render the souvenir collection component.
   return (
     <div className="souvenir-collection-container">
       <h3>My Souvenir Collection</h3>

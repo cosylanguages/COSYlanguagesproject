@@ -1,9 +1,12 @@
+// Import necessary libraries and components.
 import React, { useEffect } from 'react';
 import Select from 'react-select';
 import { useLocation } from 'react-router-dom';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
 import './CosyLanguageSelector.css';
+
+// A map of language keys to their corresponding logo images.
 const logos = {
   COSYarmenian: '/assets/icons/cosylanguages_logos/cosyarmenian.png',
   COSYbashkir: '/assets/icons/cosylanguages_logos/cosybachkir.png',
@@ -20,23 +23,27 @@ const logos = {
   COSYtatar: '/assets/icons/cosylanguages_logos/cosytatar.png',
 };
 
-
+/**
+ * A customized language selector component.
+ * It uses react-select to provide a searchable dropdown with language logos.
+ * @param {object} props - The component's props.
+ * @param {string} props.selectedLanguage - The currently selected language.
+ * @param {function} props.onLanguageChange - A callback function to handle language changes.
+ * @returns {JSX.Element} The CosyLanguageSelector component.
+ */
 const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
   const { allTranslations, t, currentLangKey } = useI18n();
   const location = useLocation();
 
+  // Effect to synchronize the URL with the language state.
   useEffect(() => {
-    // This effect synchronizes the URL with the language state if needed.
     const pathLang = location.pathname.split('/')[2];
     if (location.pathname.startsWith('/study/') && pathLang && pathLang !== currentLangKey) {
-      // The language context has changed, but the URL is stale.
-      // This can happen with browser back/forward.
-      // We trust the context as the source of truth and update the URL.
-      // Note: This assumes `onLanguageChange` handles the navigation.
-      // This logic is more of a failsafe or for scenarios where URL isn't the trigger.
+      // This is a failsafe for scenarios where the URL isn't the trigger for a language change.
     }
   }, [currentLangKey, location.pathname]);
 
+  // Effect to update the body class based on the selected language.
   useEffect(() => {
     const body = document.body;
     const currentLanguageKeys = Object.keys(allTranslations || {});
@@ -62,6 +69,7 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
     }
   }, [currentLangKey, allTranslations]);
 
+  // Get the list of available languages from the translations data.
   const availableLanguages = Object.keys(allTranslations)
     .map((langKey) => {
       if (langKey === 'null' || !allTranslations[langKey]) return null;
@@ -88,10 +96,19 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
     .filter(Boolean)
     .sort((a, b) => a.label.localeCompare(b.label));
 
+  /**
+   * Handles the change of the selected language.
+   * @param {object} selectedOption - The selected option from the dropdown.
+   */
   const handleChange = (selectedOption) => {
     onLanguageChange(selectedOption ? selectedOption.value : null);
   };
 
+  /**
+   * Formats the label for each option in the dropdown.
+   * @param {object} option - The option to format.
+   * @returns {JSX.Element} The formatted option label.
+   */
   const formatOptionLabel = ({ logo, label }) => (
     <div className="cosy-language-option">
       <img src={logo} alt={`${label} logo`} className="language-logo" />
@@ -99,10 +116,12 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
     </div>
   );
 
+  // Find the selected language option.
   const selectedValue = availableLanguages.find(
     (option) => option.value === selectedLanguage
   );
 
+  // Render the language selector.
   return (
     <div className="language-selector-container">
       <label htmlFor="language-select" className="language-select-label">

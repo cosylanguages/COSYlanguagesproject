@@ -1,5 +1,6 @@
 /**
  * Shuffles an array in place and returns a new shuffled array.
+ * This is a pure function that does not modify the original array.
  * @param {Array} array - The array to shuffle.
  * @returns {Array} A new array with the elements randomly shuffled.
  */
@@ -25,7 +26,7 @@ export function getWeightedRandomItem(itemsWithWeights) {
 
   const totalWeight = itemsWithWeights.reduce((sum, entry) => sum + (entry.weight || 0), 0);
   if (totalWeight <= 0) {
-    // If total weight is 0 (e.g., all weights are 0 or negative), fall back to uniform random selection.
+    // If the total weight is 0 or less, fall back to a uniform random selection.
     const originalItems = itemsWithWeights.map(iw => iw.item);
     return originalItems.length > 0 ? originalItems[Math.floor(Math.random() * originalItems.length)] : null;
   }
@@ -37,8 +38,8 @@ export function getWeightedRandomItem(itemsWithWeights) {
     }
     randomValue -= (itemsWithWeights[i].weight || 0);
   }
-  
-  // Fallback in case of rounding errors or unexpected scenarios, though theoretically should be covered.
+
+  // Fallback in case of rounding errors or other unexpected scenarios.
   const originalItems = itemsWithWeights.map(iw => iw.item);
   return originalItems.length > 0 ? originalItems[Math.floor(Math.random() * originalItems.length)] : null;
 }

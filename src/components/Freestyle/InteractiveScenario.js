@@ -1,13 +1,27 @@
+// Import necessary libraries and components.
 import React, { useState } from 'react';
 import './InteractiveScenario.css';
 
+/**
+ * A component that implements an interactive scenario.
+ * The scenario can be a "choose your own adventure" style scenario or a "fill in the blanks" exercise.
+ * @param {object} props - The component's props.
+ * @param {object} props.scenario - The scenario data.
+ * @param {function} props.onClose - A callback function to handle the closing of the scenario.
+ * @returns {JSX.Element} The InteractiveScenario component.
+ */
 const InteractiveScenario = ({ scenario, onClose }) => {
+    // State for the current scene index, input value, and whether the answer is correct.
     const [currentSceneIndex, setCurrentSceneIndex] = useState(0);
     const [inputValue, setInputValue] = useState('');
     const [isCorrect, setIsCorrect] = useState(null);
 
     const currentScene = scenario.scenes[currentSceneIndex];
 
+    /**
+     * Handles the selection of a choice in a "choose your own adventure" scenario.
+     * @param {number} nextSceneIndex - The index of the next scene.
+     */
     const handleChoice = (nextSceneIndex) => {
         if (nextSceneIndex < scenario.scenes.length) {
             setCurrentSceneIndex(nextSceneIndex);
@@ -16,10 +30,17 @@ const InteractiveScenario = ({ scenario, onClose }) => {
         }
     };
 
+    /**
+     * Handles the change of the input value in a "fill in the blanks" exercise.
+     * @param {React.ChangeEvent<HTMLInputElement>} e - The input change event.
+     */
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
+    /**
+     * Checks the answer in a "fill in the blanks" exercise.
+     */
     const checkAnswer = () => {
         if (inputValue.toLowerCase() === currentScene.blank.toLowerCase()) {
             setIsCorrect(true);
@@ -37,6 +58,7 @@ const InteractiveScenario = ({ scenario, onClose }) => {
         }
     };
 
+    // If the scenario is a "fill in the blanks" exercise, render the fill in the blanks view.
     if (scenario.type === 'fill-in-the-blanks') {
         return (
             <div className="interactive-scenario-modal">
@@ -55,6 +77,7 @@ const InteractiveScenario = ({ scenario, onClose }) => {
         );
     }
 
+    // Otherwise, render the "choose your own adventure" view.
     return (
         <div className="interactive-scenario-modal">
             <div className="interactive-scenario-content">

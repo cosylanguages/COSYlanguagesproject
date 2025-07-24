@@ -1,15 +1,10 @@
-// frontend/src/utils/exerciseDataService.js
-
 /**
- * Generic function to fetch JSON data from a given file path.
- * Assumes paths are relative to the public folder or served from the root.
+ * A generic function to fetch JSON data from a given file path.
  * @param {string} filePath - The path to the JSON file.
- * @returns {Promise<{data: any, error: string|null, errorType: string|null}>}
+ * @returns {Promise<{data: any, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the data, or an error if the data could not be loaded.
  */
 async function fetchJsonData(filePath) {
   try {
-    // Prepend PUBLIC_URL to ensure correct pathing, especially in production builds or subfolder deployments.
-    // filePath is expected to start with a leading slash like '/data/...'
     const fullPath = `${process.env.PUBLIC_URL || ''}${filePath}`;
     const response = await fetch(fullPath);
     if (response.ok) {
@@ -34,7 +29,7 @@ async function fetchJsonData(filePath) {
   }
 }
 
-// Corrected langFileMap to align with keys from translationsData.js / I18nContext
+// A map that associates COSYlanguage identifiers with their corresponding file keys.
 const langFileMap = {
   'COSYenglish': 'en',
   'COSYfrench': 'fr',
@@ -50,18 +45,23 @@ const langFileMap = {
   'COSYbachkir': 'ba'
 };
 
+/**
+ * Gets the language file key for a given language identifier.
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
+ * @returns {string} The language file key.
+ */
 export function getLanguageFileKey(languageIdentifier) {
-  return langFileMap[languageIdentifier] || 'english'; // Default to English
+  return langFileMap[languageIdentifier] || 'english';
 }
 
 /**
- * Processes fetched data based on selected day(s).
- * @param {object} allData - The entire data object fetched from JSON.
+ * Filters the fetched data based on the selected day(s).
+ * @param {object} allData - The entire data object fetched from the JSON file.
  * @param {string|string[]} days - The selected day or array of days.
- * @returns {Array|Object} - The filtered data for the selected day(s).
+ * @returns {Array|Object} The filtered data for the selected day(s).
  */
 function filterDataByDays(allData, days) {
-  if (!allData) return Array.isArray(days) ? [] : {}; // Return empty array for multiple days, object for single/opposites
+  if (!allData) return Array.isArray(days) ? [] : {};
 
   let dayData;
   if (Array.isArray(days)) {
@@ -69,41 +69,57 @@ function filterDataByDays(allData, days) {
     days.forEach(d => {
       if (allData[d]) dayData = dayData.concat(allData[d]);
     });
-  } else { // Single day or data structure not an array (like opposites)
-    if (typeof days === 'string' || typeof days === 'number') { // Ensure 'days' is a valid key
+  } else {
+    if (typeof days === 'string' || typeof days === 'number') {
         dayData = allData[days] || (typeof allData === 'object' && !Array.isArray(allData) ? {} : []);
-    } else { // If days is not a string/number (e.g. undefined, null), return all data or empty if not applicable
-        dayData = allData; // This might be the case for data not structured by day, like images.json root
+    } else {
+        dayData = allData;
     }
   }
   return dayData;
 }
 
-
+/**
+ * Loads the vocabulary data for a given language and day(s).
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
+ * @param {string|string[]} days - The selected day or array of days.
+ * @returns {Promise<{data: Array, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the vocabulary data, or an error if the data could not be loaded.
+ */
 export async function loadVocabularyData(languageIdentifier, days) {
   const langKey = getLanguageFileKey(languageIdentifier);
   const filePath = `/data/vocabulary/words/${langKey}.json`;
   const { data, error, errorType } = await fetchJsonData(filePath);
-  if (error) return { data: [], error, errorType }; // Ensure consistent error structure
+  if (error) return { data: [], error, errorType };
   return { data: filterDataByDays(data, days), error: null, errorType: null };
 }
 
+/**
+ * Loads the image data for a given language and day(s).
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
+ * @param {string|string[]} days - The selected day or array of days.
+ * @returns {Promise<{data: Array, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the image data, or an error if the data could not be loaded.
+ */
 export async function loadImageData(languageIdentifier, days) {
-  const filePath = `/data/vocabulary/images/images.json`; // Single file for all image metadata
+  const filePath = `/data/vocabulary/images/images.json`;
   const { data: allImageData, error, errorType } = await fetchJsonData(filePath);
 
   if (error) return { data: [], error, errorType };
 
   const imageDataForDays = filterDataByDays(allImageData, days);
 
-  // Filter images that have a translation for the current language
   const filteredImages = Array.isArray(imageDataForDays)
     ? imageDataForDays.filter(img => img.translations && img.translations[languageIdentifier])
-    : []; // If not an array (e.g. error or unexpected structure), return empty
+    : [];
 
   return { data: filteredImages, error: null, errorType: null };
 }
 
+/**
+ * Loads the opposites data for a given language and day(s).
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
+ * @param {string|string[]} days - The selected day or array of days.
+ * @returns {Promise<{data: object, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the opposites data, or an error if the data could not be loaded.
+ */
 export async function loadOppositesData(languageIdentifier, days) {
   const langKey = getLanguageFileKey(languageIdentifier);
   const filePath = `/data/vocabulary/opposites/${langKey}.json`;
@@ -117,6 +133,12 @@ export async function loadOppositesData(languageIdentifier, days) {
   return { data: dayData, error: null, errorType: null };
 }
 
+/**
+ * Loads the gender grammar data for a given language and day(s).
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
+ * @param {string|string[]} days - The selected day or array of days.
+ * @returns {Promise<{data: Array, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the gender grammar data, or an error if the data could not be loaded.
+ */
 export async function loadGenderGrammarData(languageIdentifier, days) {
   const langKey = getLanguageFileKey(languageIdentifier);
   const filePath = `/data/grammar/gender/grammar_gender_${langKey}.json`;
@@ -125,6 +147,12 @@ export async function loadGenderGrammarData(languageIdentifier, days) {
   return { data: filterDataByDays(data, days), error: null, errorType: null };
 }
 
+/**
+ * Loads the possessives data for a given language and day(s).
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
+ * @param {string|string[]} days - The selected day or array of days.
+ * @returns {Promise<{data: object, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the possessives data, or an error if the data could not be loaded.
+ */
 export async function loadPossessivesData(languageIdentifier, days) {
   const langKey = getLanguageFileKey(languageIdentifier);
   const filenameLangKey = langKey === 'french' ? 'francais' : langKey;
@@ -134,6 +162,12 @@ export async function loadPossessivesData(languageIdentifier, days) {
   return { data: filterDataByDays(data, days), error: null, errorType: null };
 }
 
+/**
+ * Loads the verb grammar data for a given language and day(s).
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
+ * @param {string|string[]} days - The selected day or array of days.
+ * @returns {Promise<{data: Array, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the verb grammar data, or an error if the data could not be loaded.
+ */
 export async function loadVerbGrammarData(languageIdentifier, days) {
   const langKey = getLanguageFileKey(languageIdentifier);
   const filePath = `/data/grammar/verbs/grammar_verbs_${langKey}.json`;
@@ -142,6 +176,12 @@ export async function loadVerbGrammarData(languageIdentifier, days) {
   return { data: filterDataByDays(data, days), error: null, errorType: null };
 }
 
+/**
+ * Loads the reading data for a given language and day(s).
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
+ * @param {string|string[]} days - The selected day or array of days.
+ * @returns {Promise<{data: Array, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the reading data, or an error if the data could not be loaded.
+ */
 export async function loadReadingData(languageIdentifier, days) {
   const langKey = getLanguageFileKey(languageIdentifier);
   const filePath = `/data/reading/reading_${langKey}.json`;
@@ -150,6 +190,12 @@ export async function loadReadingData(languageIdentifier, days) {
   return { data: filterDataByDays(data, days), error: null, errorType: null };
 }
 
+/**
+ * Loads the speaking prompts data for a given language and day(s).
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
+ * @param {string|string[]} days - The selected day or array of days.
+ * @returns {Promise<{data: Array, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the speaking prompts data, or an error if the data could not be loaded.
+ */
 export async function loadSpeakingPromptsData(languageIdentifier, days) {
   const langKey = getLanguageFileKey(languageIdentifier);
   const filePath = `/data/speaking/question/question_${langKey}.json`;
@@ -158,6 +204,12 @@ export async function loadSpeakingPromptsData(languageIdentifier, days) {
   return { data: filterDataByDays(data, days), error: null, errorType: null };
 }
 
+/**
+ * Loads the writing prompts data for a given language and day(s).
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
+ * @param {string|string[]} days - The selected day or array of days.
+ * @returns {Promise<{data: object, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the writing prompts data, or an error if the data could not be loaded.
+ */
 export async function loadWritingPromptsData(languageIdentifier, days) {
   const langKey = getLanguageFileKey(languageIdentifier);
   const filePath = `/data/writing/story_prompts_${langKey}.json`;
@@ -180,6 +232,11 @@ export async function loadWritingPromptsData(languageIdentifier, days) {
   };
 }
 
+/**
+ * Loads the sentence unscramble data for a given language.
+ * @param {string} languageIdentifier - The language identifier (e.g., 'COSYfrench').
+ * @returns {Promise<{data: Array, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the sentence unscramble data, or an error if the data could not be loaded.
+ */
 export async function loadSentenceUnscrambleData(languageIdentifier) {
   const filePath = `/data/exercises/sentenceUnscramble.json`;
   const { data: allLanguageData, error, errorType } = await fetchJsonData(filePath);
@@ -195,11 +252,9 @@ export async function loadSentenceUnscrambleData(languageIdentifier) {
 }
 
 /**
- * Loads Fill in the Blanks exercise data for a given language.
- * Data is expected to be an object where keys are language codes (e.g., "COSYfrench")
- * and values are arrays of exercise items for that language.
+ * Loads the fill in the blanks data for a given language.
  * @param {string} languageIdentifier - The language identifier (e.g., "COSYfrench").
- * @returns {Promise<{data: Array, error: string|null, errorType: string|null}>}
+ * @returns {Promise<{data: Array, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the fill in the blanks data, or an error if the data could not be loaded.
  */
 export async function loadFillInTheBlanksData(languageIdentifier) {
   const filePath = `/data/exercises/fillInTheBlanks.json`;

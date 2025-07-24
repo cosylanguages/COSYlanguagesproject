@@ -1,18 +1,23 @@
+// Import necessary libraries and components.
 import React, { useState, useEffect } from 'react';
-// import { useParams, useNavigate } from 'react-router-dom'; // Commented out for now to simplify testing
 import { getStudySetById, saveStudySet } from '../../utils/studySetService';
 import { useI18n } from '../../i18n/I18nContext';
 import './StudySetEditor.css';
 
-// Added props: setIdProp (for explicit ID passing), onSetSaved, onCancel
+/**
+ * A component for creating and editing study sets.
+ * @param {object} props - The component's props.
+ * @param {string} props.setIdProp - The ID of the study set to edit.
+ * @param {function} props.onSetSaved - A callback function to handle the saving of a study set.
+ * @param {function} props.onCancel - A callback function to handle the cancellation of the editing process.
+ * @returns {JSX.Element} The StudySetEditor component.
+ */
 const StudySetEditor = ({ setIdProp, onSetSaved, onCancel }) => {
   const { t, language: currentLangKey } = useI18n();
-  // const { setId: paramSetId } = useParams(); // Commented out
-  // const navigate = useNavigate(); // Commented out
-
-  const actualSetId = setIdProp; // Prioritize prop for ID
+  const actualSetId = setIdProp;
   const isEditMode = Boolean(actualSetId);
 
+  // State for the form fields, loading status, and errors.
   const [setName, setSetName] = useState('');
   const [description, setDescription] = useState('');
   const [languageCode, setLanguageCode] = useState(currentLangKey || 'COSYenglish');
@@ -20,6 +25,7 @@ const StudySetEditor = ({ setIdProp, onSetSaved, onCancel }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  // Effect to load the study set data when in edit mode.
   useEffect(() => {
     if (isEditMode && actualSetId) {
       setIsLoading(true);
@@ -40,16 +46,20 @@ const StudySetEditor = ({ setIdProp, onSetSaved, onCancel }) => {
         setIsLoading(false);
       }
     } else {
-      // Reset for create mode
+      // Reset the form for create mode.
       setSetName('');
       setDescription('');
       setLanguageCode(currentLangKey || 'COSYenglish');
       setOriginalSetData(null);
-      setIsLoading(false); // Ensure loading is false for create mode
-      setError(null);      // Ensure error is clear for create mode
+      setIsLoading(false);
+      setError(null);
     }
   }, [actualSetId, isEditMode, t, currentLangKey]);
 
+  /**
+   * Handles the submission of the form.
+   * @param {React.FormEvent} e - The form submission event.
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!setName.trim()) {
@@ -72,9 +82,8 @@ const StudySetEditor = ({ setIdProp, onSetSaved, onCancel }) => {
       const savedSet = saveStudySet(studySetDataToSave);
       if (savedSet) {
         if (onSetSaved) {
-          onSetSaved(savedSet.id); // Pass back the ID of saved/created set
+          onSetSaved(savedSet.id);
         } else {
-          // Fallback alert if no callback provided
           alert(t('studySetEditor.saveSuccess', `Study set "${savedSet.name}" saved successfully!`));
         }
       } else {
@@ -88,30 +97,32 @@ const StudySetEditor = ({ setIdProp, onSetSaved, onCancel }) => {
     }
   };
 
+  /**
+   * Handles the cancellation of the editing process.
+   */
   const handleCancel = () => {
     if (onCancel) {
       onCancel();
     } else {
-      // Fallback alert if no callback provided
       alert(t('studySetEditor.cancelled', 'Operation cancelled.'));
       console.log("Cancelled editing/creating study set.");
     }
   };
 
-  if (isLoading && isEditMode) { // Only show loading if in edit mode and actively fetching
+  // If the component is loading, display a loading message.
+  if (isLoading && isEditMode) {
     return <p>{t('loading', 'Loading set details...')}</p>;
   }
+  // If there is an error, display an error message.
   if (error) {
     return <p className="error-message">{error}</p>;
   }
-  // If in edit mode, but originalSetData is null (and not loading), it means set wasn't found.
+  // If the study set is not found, display an error message.
   if (isEditMode && !originalSetData && !isLoading) {
-    // Error should have been set by useEffect, so this might not be strictly needed if error displays.
-    // However, if setError was missed, this is a fallback.
     return <p className="error-message">{t('studySetEditor.errorNotFound', 'Study set not found.')}</p>;
   }
 
-
+  // Render the study set editor form.
   return (
     <div className="study-set-editor-container">
       <h2>{isEditMode ? t('studySetEditor.titleEdit', 'Edit Study Set') : t('studySetEditor.titleCreate', 'Create New Study Set')}</h2>
@@ -141,7 +152,6 @@ const StudySetEditor = ({ setIdProp, onSetSaved, onCancel }) => {
         </div>
         <div className="form-group">
           <label htmlFor="languageCode">{t('studySetEditor.languageCodeLabel', 'Language Code:')}</label>
-          {/* TODO: Replace with a dropdown of supported languages from I18nContext or a config */}
           <input
             type="text"
             id="languageCode"
@@ -151,12 +161,10 @@ const StudySetEditor = ({ setIdProp, onSetSaved, onCancel }) => {
             list="language-codes-datalist"
             disabled={isLoading}
           />
-          {/* Example datalist - ideally this would be populated from i18n keys */}
           <datalist id="language-codes-datalist">
             <option value="COSYenglish" />
             <option value="COSYfrench" />
             <option value="COSYespañol" />
-            {/* Add other known COSY language codes */}
           </datalist>
         </div>
         <div className="form-actions">
