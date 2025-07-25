@@ -200,7 +200,7 @@
         "Practice pronunciation with audio resources and try to mimic native speakers.",
         "Create simple flashcards for new words with a picture or a simple sentence.",
         "Try to form simple sentences about your day in French.",
-        "Review "Grammaire Essentielle A1" and "Vocabulaire Essentiel A1" lessons and exercises regularly."
+        "Review \"Grammaire Essentielle A1\" and \"Vocabulaire Essentiel A1\" lessons and exercises regularly."
       ],
       "example_conversation_starters": [
         "Bonjour ! Comment tu t'appelles ? / Comment vous appelez-vous ?",
@@ -329,7 +329,7 @@
         "Practice speaking with a partner or tutor, focusing on describing past and future events, and simple interactions.",
         "Watch short French videos or cartoons with French subtitles if available, or English subtitles to begin.",
         "Try to write short paragraphs about your day or weekend in French.",
-        "Review "Grammaire Essentielle A2" and "Vocabulaire Essentiel A2" lessons and exercises regularly.",
+        "Review \"Grammaire Essentielle A2\" and \"Vocabulaire Essentiel A2\" lessons and exercises regularly.",
         "Practice with DELF A2 sample exam papers."
       ],
       "example_conversation_starters": [
@@ -447,12 +447,12 @@
         "Discussing current events in France (simple topics)."
       ],
       "learning_strategies_suggestions": [
-        "Start reading simple authentic articles (e.g., news for learners like "20 minutes", blogs on familiar topics).",
+        "Start reading simple authentic articles (e.g., news for learners like \"20 minutes\", blogs on familiar topics).",
         "Watch French TV shows or movies with French subtitles, trying to guess unknown words from context.",
         "Engage in conversations with native speakers, focusing on expressing and justifying opinions, and recounting experiences.",
         "Keep a journal in French to practice narration, description, and expressing feelings.",
         "Practice summarizing texts or audio clips.",
-        "Review "Grammaire Essentielle B1" and "Vocabulaire Essentiel B1" lessons and exercises regularly.",
+        "Review \"Grammaire Essentielle B1\" and \"Vocabulaire Essentiel B1\" lessons and exercises regularly.",
         "Work through DELF B1 preparation materials and mock exams."
       ],
       "example_conversation_starters": [
@@ -570,7 +570,7 @@
         "Actively participate in debates and discussions in French on a variety of topics, focusing on structuring arguments and using precise language.",
         "Focus on understanding and using nuances in meaning, idiomatic expressions, and appropriate register for different situations.",
         "Practice writing different types of texts (argumentative essays, reports, formal letters, critiques) and get feedback.",
-        "Review "Grammaire Essentielle B2" lessons and exercises, focusing on complex structures and nuances.",
+        "Review \"Grammaire Essentielle B2\" lessons and exercises, focusing on complex structures and nuances.",
         "Prepare for DELF B2 by working with specific exam preparation books and mock exams, paying attention to time constraints and task requirements."
       ],
       "example_conversation_starters": [
@@ -818,5 +818,3 @@
     }
   ]
 }
-
-[end of french_roadmap.json]

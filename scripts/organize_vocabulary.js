@@ -6,7 +6,7 @@ const dictionaryDir = path.join(dataDir, 'dictionary');
 const oppositesDir = path.join(dataDir, 'opposites');
 const wordsDir = path.join(dataDir, 'words');
 
-const languages = fs.readdirSync(dictionaryDir).filter(f => fs.statSync(path.join(dictionaryDir, f)).isDirectory());
+const languages = require('../language_config');
 
 languages.forEach(lang => {
     const langDictionaryDir = path.join(dictionaryDir, lang);

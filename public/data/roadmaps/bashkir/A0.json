@@ -1,0 +1,169 @@
+{
+  "level_code": "A0",
+  "level_name": "Тәүге Аҙымдар (First Steps)",
+  "approximate_vocabulary_size": "approx. 300-500 words",
+  "learning_outcomes": [
+    "Recognize and reproduce the basic sounds of the Bashkir alphabet (Cyrillic).",
+    "Understand and use familiar everyday expressions and very basic phrases (e.g., greetings, introductions).",
+    "Introduce him/herself and others simply (e.g., Минең исемем... - My name is...).",
+    "Ask and answer simple questions about personal details (name, origin - basic).",
+    "Interact in a very simple way if the other person speaks slowly, clearly, and is prepared to help.",
+    "Recognize familiar names, words, and very simple sentences in Bashkir."
+  ],
+  "language_focus_topics": [
+    "The Bashkir Alphabet (Cyrillic script, focusing on specific Bashkir letters: Әә, Өө, Үү, Ғғ, Ҡҡ, Ңң, Ҙҙ, Ҫҫ, Һһ).",
+    "Basic pronunciation: Key vowel sounds (including front/back harmony basics), specific consonant sounds (e.g., ҙ, ҫ, һ, ғ, ҡ).",
+    "Nouns: Concept of nouns, no grammatical gender. Basic plural formation (e.g., -лар/‑ләр, -тар/-тәр, -дар/-дәр, -ҙар/-ҙәр). Nominative case (subject).",
+    "Pronouns: Personal pronouns in nominative singular (мин, һин, ул). Possessive suffixes (1st person singular: -м, -ым/-ем, -ом/-өм, e.g., китабым - my book).",
+    "Verbs: Basic concept of verbs. Simple present tense forms of common verbs (e.g., 'булырға' - to be, often implied in present; 'йәшәргә' - to live, 'әйтерге' - to say).",
+    "Sentence Structure: Basic Subject-Object-Verb (SOV) tendency. Simple affirmative and negative statements (e.g., Мин студент. Мин студент түгел).",
+    "Negation: Basic negative particle 'түгел' (not - for nouns/adjectives), 'юҡ' (there isn't/no).",
+    "Simple Questions: Intonation. Basic question particle (-мы/-ме, -мындыр/-мендер). Question words (Кем? Нимә? Ҡайҙа? Ҡасан?).",
+    "Day 1 Grammar - 'It is' (Был): Был нимә? (What is it?), Был ...мы? (Is it ...?), Был ...мы әллә ...мы? (Is it ... or ...?), Был ... . (It is ...), Был ... түгел. (It is not ...), Был ... түгел, ә ... . (It is not ... but it is...)."
+  ],
+  "vocabulary_topics": [
+    "Day 1: Basic Words and Phrases: Һаумыһығыҙ/Сәләм (hello), Һау булығыҙ (goodbye), Эйе (yes), Юҡ (no), Рәхмәт (thank you), Зинһар (you're welcome/please), Яҡшы/Ярай (alright/ok), Бер (one), Сәй (tea), Кофе (coffee), Һыу (water), Һут (juice), Һыра (beer), Шарап (wine), Ҡулаҡса (cash), Карта (card).",
+    "Greetings: Һаумы(һығыҙ), Сәләм, Хәйерле иртә/көн/кис, Һау бул(ығыҙ).",
+    "Introductions & Personal Information: Исемең(еҙ) кем? Минең исемем... Таныш булайыҡ. Мин ...нан/нән килдем. Милләт (basic).",
+    "Courtesy: Рәхмәт, Зинһар, Ғәфү итегеҙ.",
+    "Basic responses: Эйе, Юҡ.",
+    "Numbers: 0-10 (ноль-ун).",
+    "Colors: ҡыҙыл, зәңгәр, йәшел, һары, ҡара, аҡ (basic).",
+    "Family: әсәй, атай, ағай, апай, ҡусты, һеңле (basic).",
+    "Common Objects: китап, ҡәләм, өҫтәл, ултырғыс, телефон, өй, машина.",
+    "Basic Food & Drink: икмәк, һыу, һөт, сәй, алма, шәкәр.",
+    "Classroom language: Ҡабатлағыҙ, зинһар. Мин аңламайым."
+  ],
+  "speaking_dialogues": [
+    {
+      "title": "Day 1: Cafe Dialogue",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "line": "Һаумыһығыҙ (Hawmıhığıð)"
+        },
+        {
+          "speaker": "B",
+          "line": "Һаумыһығыҙ, кофемы әллә сәйме? (Hawmıhığıð, kofemı ällä säyme?)"
+        },
+        {
+          "speaker": "A",
+          "line": "Бер кофе, зинһар. (Ber kofe, zinhar.)"
+        },
+        {
+          "speaker": "B",
+          "line": "Бер сәйме? (Ber säyme?)"
+        },
+        {
+          "speaker": "A",
+          "line": "Юҡ, бер кофе, зинһар. (Yuq, ber kofe, zinhar.)"
+        },
+        {
+          "speaker": "B",
+          "line": "Бер кофемы? (Ber kofemı?)"
+        },
+        {
+          "speaker": "A",
+          "line": "Эйе, зинһар. (Eye, zinhar.)"
+        },
+        {
+          "speaker": "B",
+          "line": "Ярай. (Yaray.)"
+        },
+        {
+          "speaker": "A",
+          "line": "Рәхмәт! (Räxmät!)"
+        },
+        {
+          "speaker": "B",
+          "line": "Зинһар. (Zinhar.)"
+        },
+        {
+          "speaker": "B",
+          "line": "Ҡулаҡсамы әллә картамы? (Qulaqsamı ällä kartamı?)"
+        },
+        {
+          "speaker": "A",
+          "line": "Ҡулаҡса, зинһар. (Qulaqsa, zinhar.)"
+        },
+        {
+          "speaker": "B",
+          "line": "Ҡулаҡсамы? (Qulaqsamı?)"
+        },
+        {
+          "speaker": "A",
+          "line": "Эйе, зинһар. (Eye, zinhar.)"
+        },
+        {
+          "speaker": "B",
+          "line": "Ярай. (Yaray.)"
+        },
+        {
+          "speaker": "A",
+          "line": "Рәхмәт. (Räxmät.)"
+        },
+        {
+          "speaker": "B",
+          "line": "Зинһар. (Zinhar.)"
+        },
+        {
+          "speaker": "A",
+          "line": "Һау булығыҙ. (Haw bulığıð.)"
+        },
+        {
+          "speaker": "B",
+          "line": "Һау булығыҙ. (Haw bulığıð.)"
+        }
+      ]
+    }
+  ],
+  "pronunciation_focus_topics": [
+    "Mastering sounds of the Bashkir Cyrillic alphabet, especially unique letters (Ә, Ө, Ү, Ғ, Ҡ, Ң, Ҙ, Ҫ, Һ).",
+    "Vowel harmony (front/back and labial harmony) - basic concept and examples.",
+    "Pronunciation of specific Bashkir consonants like /θ/ (ҫ), /ð/ (ҙ), /q/ (ҡ), /ʁ/ (ғ), /h/ (һ).",
+    "Word stress (usually final, but with exceptions - basic awareness).",
+    "Basic intonation for statements and simple questions."
+  ],
+  "listening_comprehension_skills": [
+    "Recognize familiar Bashkir words and very basic phrases when spoken slowly and clearly.",
+    "Understand simple greetings and introductions.",
+    "Follow very simple instructions (e.g., 'Ҡара!' - Look!)."
+  ],
+  "reading_comprehension_skills": [
+    "Read and identify all letters of the Bashkir Cyrillic alphabet.",
+    "Read and understand familiar names, words, and very simple sentences.",
+    "Understand numbers 0-10 written as words."
+  ],
+  "spoken_interaction_skills": [
+    "Greet and respond to greetings.",
+    "Introduce oneself and ask for someone's name.",
+    "Ask and answer simple questions about personal information (name, where from - basic).",
+    "Use basic courtesy phrases."
+  ],
+  "spoken_production_skills": [
+    "Say the letters of the Bashkir alphabet.",
+    "Pronounce basic Bashkir vocabulary with comprehensible pronunciation.",
+    "Produce simple isolated phrases and sentences (e.g., 'Мин Айгөл.').",
+    "State name and origin simply."
+  ],
+  "written_interaction_skills": [
+    "Recognize own name and familiar words when written in Bashkir."
+  ],
+  "written_production_skills": [
+    "Write all letters of the Bashkir Cyrillic alphabet.",
+    "Write one's name and other simple familiar words in Bashkir.",
+    "Copy familiar words and short sentences."
+  ],
+  "cultural_competence_topics": [
+    "Common greeting customs among Bashkirs.",
+    "Basic awareness of respectful address (e.g., addressing elders).",
+    "Importance of hospitality in Bashkir culture (basic concept).",
+    "Key cultural symbols of Bashkortostan (e.g., kurai musical instrument, flag colors - awareness)."
+  ],
+  "learning_strategies_suggestions": [
+    "Practice writing Cyrillic letters daily, focusing on unique Bashkir letters.",
+    "Use flashcards with pictures and Bashkir words.",
+    "Listen to Bashkir children's songs or simple audio resources.",
+    "Pay close attention to vowel harmony and specific consonant sounds from the beginning."
+  ]
+}
