@@ -354,7 +354,7 @@
           "forms": { "io": "posso", "tu": "puoi", "lui/lei/Lei": "può", "noi": "possiamo", "voi": "potete", "loro": "possono" }
         },
         "passato prossimo": {
-          "mood": "indicativo", "auxiliary_verb": "avere", "past_participle": "potuto", 
+          "mood": "indicativo", "auxiliary_verb": "avere", "past_participle": "potuto",
           "notes": "Auxiliary can also be 'essere' if the main verb it modifies takes 'essere', e.g. 'non sono potuto andare'. 'Avere' is common.",
           "forms": { "io": "ho potuto", "tu": "hai potuto", "lui/lei/Lei": "ha potuto", "noi": "abbiamo potuto", "voi": "avete potuto", "loro": "hanno potuto" }
         },

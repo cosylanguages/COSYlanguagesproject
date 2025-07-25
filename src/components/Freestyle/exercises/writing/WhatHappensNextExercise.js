@@ -13,7 +13,7 @@ const WhatHappensNextExercise = ({ language, days, onNext }) => {
   const [feedback, setFeedback] = useState({ message: '', type: '' });
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  
+
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
 
@@ -49,7 +49,7 @@ const WhatHappensNextExercise = ({ language, days, onNext }) => {
         setError(t('errors.selectLangDay', "Please select a language and day(s)."));
     }
   }, [fetchNewPrompt, language, days, t]); // Added t to dependency array
-  
+
   const handleSubmit = () => {
     if (text.trim().length < 10) {
       setFeedback({ message: t('feedback.pleaseWriteMore', 'Please write a bit more for your story.'), type: 'warning' });
@@ -57,7 +57,7 @@ const WhatHappensNextExercise = ({ language, days, onNext }) => {
       setFeedback({ message: t('feedback.continuationSubmitted', 'Great! Continuation submitted.'), type: 'success' });
     }
   };
-  
+
   const handleNextRequest = () => {
       fetchNewPrompt(); // Fetches a new prompt for this specific exercise type
       if(onNext) onNext(); // Informs parent if it wants to switch story type

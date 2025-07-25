@@ -49,7 +49,7 @@ const WhatHappenedBeforeExercise = ({ language, days, onNext }) => {
         setError(t('errors.selectLangDay', "Please select a language and day(s)."));
     }
   }, [fetchNewPrompt, language, days, t]); // Added t to dependency array
-  
+
   const handleSubmit = () => {
     if (text.trim().length < 10) {
       setFeedback({ message: t('feedback.pleaseWriteMore', 'Please write a bit more for your story.'), type: 'warning' });
@@ -57,12 +57,12 @@ const WhatHappenedBeforeExercise = ({ language, days, onNext }) => {
       setFeedback({ message: t('feedback.prequelSubmitted', 'Great! Prequel submitted.'), type: 'success' });
     }
   };
-  
+
   const handleNextRequest = () => {
       fetchNewPrompt();
       if(onNext) onNext();
   }
-  
+
   const showHint = () => {
       setFeedback({ message: t('feedback.hintWhatHappenedBefore', "Hint: Consider the events or character motivations that could lead to this situation."), type: 'hint' });
   }

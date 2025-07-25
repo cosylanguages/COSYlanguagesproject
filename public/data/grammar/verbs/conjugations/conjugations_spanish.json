@@ -385,7 +385,7 @@
           "forms": { "yo": "voy", "tú": "vas", "él/ella/Ud.": "va", "nosotros": "vamos", "vosotros": "vais", "ellos/ellas/Uds.": "van" }
         },
         "pretérito perfecto compuesto": {
-          "mood": "indicativo", "auxiliary_verb": "haber", "past_participle": "ido", 
+          "mood": "indicativo", "auxiliary_verb": "haber", "past_participle": "ido",
           "notes": "While 'haber ido' is grammatically correct, 'ser' is used as auxiliary for movement in perfecto e.g. 'he sido ido' is not used; rather 'fui' (indefinido) or 'he ido' (perfecto using haber is actually standard). Revising this: 'haber' is indeed the standard auxiliary for 'ir'.",
           "forms": { "yo": "he ido", "tú": "has ido", "él/ella/Ud.": "ha ido", "nosotros": "hemos ido", "vosotros": "habéis ido", "ellos/ellas/Uds.": "han ido" }
         },
