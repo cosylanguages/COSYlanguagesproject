@@ -1,50 +1,56 @@
+const GITHUB_API_BASE_URL = 'https://api.github.com';
+const REPO_OWNER = 'cosylanguages';
+const REPO_NAME = 'COSYlanguagesproject';
+
 /**
- * Fetches a language roadmap.
- * @param {string} languageCode - The code of the language to fetch the roadmap for.
+ * Fetches a language roadmap from the GitHub repository.
+ * @param {string} roadmapFileName - The name of the roadmap file to fetch.
  * @returns {Promise<object>} A promise that resolves to the roadmap data.
  */
-export async function fetchRoadmap(languageCode) {
-  if (!languageCode) {
-    throw new Error("Language code must be provided.");
+export async function fetchRoadmapFromGitHub(roadmapFileName) {
+  if (!roadmapFileName) {
+    throw new Error("Roadmap file name must be provided.");
   }
 
-  const url = `/data/roadmaps/${languageCode}/roadmap.json`;
-  console.log(`Fetching roadmap from: ${url}`);
+  const filePath = roadmapFileName;
+  const url = `${GITHUB_API_BASE_URL}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${filePath}`;
+
+  console.log(`Fetching roadmap from GitHub: ${url}`);
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      headers: {
+        'Accept': 'application/vnd.github.object',
+      }
+    });
+
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      const errorData = await response.json().catch(() => ({ message: response.statusText }));
+      throw new Error(`GitHub API error: ${response.status} - ${errorData.message || 'Failed to fetch roadmap content.'} (URL: ${url})`);
     }
-    return await response.json();
-  } catch (error) {
-    console.error(`Error fetching roadmap for "${languageCode}":`, error);
-    throw error;
-  }
-}
 
-/**
- * Fetches a specific level from a language roadmap.
- * @param {string} languageCode - The code of the language.
- * @param {string} levelCode - The code of the level to fetch.
- * @returns {Promise<object>} A promise that resolves to the level data.
- */
-export async function fetchLevel(languageCode, levelCode) {
-  if (!languageCode || !levelCode) {
-    throw new Error("Language code and level code must be provided.");
-  }
+    const data = await response.json();
 
-  const url = `/data/roadmaps/${languageCode}/${levelCode}.json`;
-  console.log(`Fetching level from: ${url}`);
-
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    if (data.encoding !== 'base64') {
+      throw new Error(`Unexpected content encoding from GitHub API: ${data.encoding}`);
     }
-    return await response.json();
+    if (!data.content) {
+        throw new Error('No content found in GitHub API response for the file.');
+    }
+
+    let decodedContent;
+    if (typeof window !== 'undefined' && typeof window.atob === 'function') {
+      decodedContent = window.atob(data.content);
+    } else if (typeof Buffer !== 'undefined') {
+      decodedContent = Buffer.from(data.content, 'base64').toString('utf-8');
+    } else {
+      throw new Error('Unable to decode base64 content: No atob or Buffer available.');
+    }
+
+    return JSON.parse(decodedContent);
+
   } catch (error) {
-    console.error(`Error fetching level "${levelCode}" for language "${languageCode}":`, error);
+    console.error(`Error fetching roadmap "${roadmapFileName}" from GitHub:`, error);
     throw error;
   }
 }

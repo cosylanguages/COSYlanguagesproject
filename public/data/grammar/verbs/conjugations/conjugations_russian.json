@@ -1,0 +1,317 @@
+{
+  "language_code": "ru",
+  "language_name": "Russian",
+  "verbs": [
+    {
+      "concept_en": "to be",
+      "main_verb_ روسский": "быть",
+      "imperfective": {
+        "infinitive": "быть",
+        "tags": ["irregular", "auxiliary"],
+        "tenses": {
+          "present": {
+            "mood": "indicativo",
+            "notes": "Present tense of 'быть' (есть) is usually omitted. Archaic forms: я есмь, ты еси, он/она/оно есть, мы есмы, вы есте, они суть. Habitual/existential 'бываю' exists but is different.",
+            "forms": { "он/она/оно": "есть (often omitted)" }
+          },
+          "past": {
+            "mood": "indicativo",
+            "forms": { "он": "был", "она": "была", "оно": "было", "они": "были" }
+          },
+          "future_compound": {
+            "mood": "indicativo",
+            "auxiliary_verb": "быть (future forms)",
+            "forms": { "я": "буду", "ты": "будешь", "он/она/оно": "будет", "мы": "будем", "вы": "будете", "они": "будут" }
+          }
+        }
+      },
+      "notes": "Conditional: past tense + 'бы' (e.g., я был бы)."
+    },
+    {
+      "concept_en": "to have (possess)",
+      "main_verb_ روسский": "иметь / у [X] есть",
+      "imperfective": {
+        "infinitive": "иметь",
+        "tags": ["formal"],
+        "notes": "More commonly expressed with 'у [genitive person] есть [nominative thing]'.",
+        "tenses": {
+          "present": {
+            "mood": "indicativo",
+            "forms": { "я": "имею", "ты": "имеешь", "он/она/оно": "имеет", "мы": "имеем", "вы": "имеете", "они": "имеют" }
+          },
+          "past": {
+            "mood": "indicativo",
+            "forms": { "он": "имел", "она": "имела", "оно": "имело", "они": "имели" }
+          },
+          "future_compound": {
+            "mood": "indicativo", "auxiliary_verb": "быть",
+            "forms": { "я": "буду иметь", "ты": "будешь иметь", "он/она/оно": "будет иметь", "мы": "будем иметь", "вы": "будете иметь", "они": "будут иметь" }
+          }
+        }
+      }
+    },
+    {
+      "concept_en": "to like",
+      "main_verb_ روسский": "нравиться / понравиться",
+      "notes": "Dative construction: '[Dative person] нравится [Nominative thing/person]'. Forms shown for 3rd person singular thing liked.",
+      "imperfective": {
+        "infinitive": "нравиться", "tags": ["reflexive-style ending"],
+        "tenses": {
+          "present": { "mood": "indicativo", "forms": { "(он/она/оно)": "нравится", "(они)": "нравятся" } },
+          "past": { "mood": "indicativo", "forms": { "он": "нравился", "она": "нравилась", "оно": "нравилось", "они": "нравились" } },
+          "future_compound": { "mood": "indicativo", "auxiliary_verb": "быть", "forms": { "(он/она/оно)": "будет нравиться" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "понравиться", "tags": ["reflexive-style ending"],
+        "tenses": {
+          "past": { "mood": "indicativo", "forms": { "он": "понравился", "она": "понравилась", "оно": "понравилось", "они": "понравились" } },
+          "future_simple": { "mood": "indicativo", "forms": { "(он/она/оно)": "понравится", "(они)": "понравятся" } }
+        }
+      }
+    },
+    {
+      "concept_en": "to think",
+      "main_verb_ روسский": "думать / подумать",
+      "imperfective": {
+        "infinitive": "думать",
+        "tenses": {
+          "present": { "forms": { "я": "думаю", "ты": "думаешь", "он/она/оно": "думает", "мы": "думаем", "вы": "думаете", "они": "думают" } },
+          "past": { "forms": { "он": "думал", "она": "думала", "оно": "думало", "они": "думали" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду думать", "ты": "будешь думать", "он/она/оно": "будет думать", "мы": "будем думать", "вы": "будете думать", "они": "будут думать" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "подумать",
+        "tenses": {
+          "past": { "forms": { "он": "подумал", "она": "подумала", "оно": "подумало", "они": "подумали" } },
+          "future_simple": { "forms": { "я": "подумаю", "ты": "подумаешь", "он/она/оно": "подумает", "мы": "подумаем", "вы": "подумаете", "они": "подумают" } }
+        }
+      }
+    },
+    {
+      "concept_en": "to know (facts/skills)",
+      "main_verb_ روسский": "знать / узнать",
+      "imperfective": {
+        "infinitive": "знать",
+        "tenses": {
+          "present": { "forms": { "я": "знаю", "ты": "знаешь", "он/она/оно": "знает", "мы": "знаем", "вы": "знаете", "они": "знают" } },
+          "past": { "forms": { "он": "знал", "она": "знала", "оно": "знало", "они": "знали" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду знать" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "узнать", "translation_en_aspect": "to find out, to learn",
+        "tenses": {
+          "past": { "forms": { "он": "узнал", "она": "узнала", "оно": "узнало", "они": "узнали" } },
+          "future_simple": { "forms": { "я": "узнаю", "ты": "узнаешь", "он/она/оно": "узнает", "мы": "узнаем", "вы": "узнаете", "они": "узнают" } }
+        }
+      }
+    },
+     {
+      "concept_en": "to want",
+      "main_verb_ روسский": "хотеть / захотеть",
+      "imperfective": {
+        "infinitive": "хотеть", "tags": ["irregular", "mixed-conjugation"],
+        "tenses": {
+          "present": { "forms": { "я": "хочу", "ты": "хочешь", "он/она/оно": "хочет", "мы": "хотим", "вы": "хотите", "они": "хотят" } },
+          "past": { "forms": { "он": "хотел", "она": "хотела", "оно": "хотело", "они": "хотели" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду хотеть" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "захотеть",
+        "tenses": {
+          "past": { "forms": { "он": "захотел", "она": "захотела", "оно": "захотело", "они": "захотели" } },
+          "future_simple": { "forms": { "я": "захочу", "ты": "захочешь", "он/она/оно": "захочет", "мы": "захотим", "вы": "захотите", "они": "захотят" } }
+        }
+      },
+      "notes": "'Would like': хотел(а/о/и) бы"
+    },
+    {
+      "concept_en": "to work",
+      "main_verb_ روسский": "работать / поработать",
+      "imperfective": {
+        "infinitive": "работать",
+        "tenses": {
+          "present": { "forms": { "я": "работаю", "ты": "работаешь", "он/она/оно": "работает", "мы": "работаем", "вы": "работаете", "они": "работают" } },
+          "past": { "forms": { "он": "работал", "она": "работала", "оно": "работало", "они": "работали" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду работать" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "поработать", "translation_en_aspect": "to work (for a bit)",
+        "tenses": {
+          "past": { "forms": { "он": "поработал", "она": "поработала", "оно": "поработало", "они": "поработали" } },
+          "future_simple": { "forms": { "я": "поработаю", "ты": "поработаешь", "он/она/оно": "поработает", "мы": "поработаем", "вы": "поработаете", "они": "поработают" } }
+        }
+      }
+    },
+    {
+      "concept_en": "to study (a subject)",
+      "main_verb_ روسский": "изучать / изучить",
+      "imperfective": {
+        "infinitive": "изучать",
+        "tenses": {
+          "present": { "forms": { "я": "изучаю", "ты": "изучаешь", "он/она/оно": "изучает", "мы": "изучаем", "вы": "изучаете", "они": "изучают" } },
+          "past": { "forms": { "он": "изучал", "она": "изучала", "оно": "изучало", "они": "изучали" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду изучать" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "изучить",
+        "tenses": {
+          "past": { "forms": { "он": "изучил", "она": "изучила", "оно": "изучило", "они": "изучили" } },
+          "future_simple": { "forms": { "я": "изучу", "ты": "изучишь", "он/она/оно": "изучит", "мы": "изучим", "вы": "изучите", "они": "изучат" } }
+        }
+      }
+    },
+    {
+      "concept_en": "to study (be a student at a place/learn a skill)",
+      "main_verb_ روسский": "учиться / научиться",
+      "imperfective": {
+        "infinitive": "учиться", "tags": ["reflexive-style ending"],
+        "tenses": {
+          "present": { "forms": { "я": "учусь", "ты": "учишься", "он/она/оно": "учится", "мы": "учимся", "вы": "учитесь", "они": "учатся" } },
+          "past": { "forms": { "он": "учился", "она": "училась", "оно": "училось", "они": "учились" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду учиться" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "научиться", "translation_en_aspect": "to learn (a skill), master", "tags": ["reflexive-style ending"],
+        "tenses": {
+          "past": { "forms": { "он": "научился", "она": "научилась", "оно": "научилось", "они": "научились" } },
+          "future_simple": { "forms": { "я": "научусь", "ты": "научишься", "он/она/оно": "научится", "мы": "научимся", "вы": "научитесь", "они": "научатся" } }
+        }
+      }
+    },
+    {
+      "concept_en": "to go (on foot, unidirectional)",
+      "main_verb_ روسский": "идти / пойти",
+      "imperfective": {
+        "infinitive": "идти", "tags": ["irregular", "verb_of_motion"],
+        "tenses": {
+          "present": { "forms": { "я": "иду", "ты": "идёшь", "он/она/оно": "идёт", "мы": "идём", "вы": "идёте", "они": "идут" } },
+          "past": { "forms": { "он": "шёл", "она": "шла", "оно": "шло", "они": "шли" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду идти" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "пойти", "tags": ["irregular", "verb_of_motion"],
+        "tenses": {
+          "past": { "forms": { "он": "пошёл", "она": "пошла", "оно": "пошло", "они": "пошли" } },
+          "future_simple": { "forms": { "я": "пойду", "ты": "пойдёшь", "он/она/оно": "пойдёт", "мы": "пойдём", "вы": "пойдёте", "они": "пойдут" } }
+        }
+      }
+    },
+    {
+      "concept_en": "to go (on foot, multidirectional/habitual)",
+      "main_verb_ روسский": "ходить",
+      "imperfective": {
+        "infinitive": "ходить", "tags": ["verb_of_motion"],
+        "tenses": {
+          "present": { "forms": { "я": "хожу", "ты": "ходишь", "он/она/оно": "ходит", "мы": "ходим", "вы": "ходите", "они": "ходят" } },
+          "past": { "forms": { "он": "ходил", "она": "ходила", "оно": "ходило", "они": "ходили" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду ходить" } }
+        }
+      }
+    },
+    {
+      "concept_en": "to be able to (can)",
+      "main_verb_ روسский": "мочь / смочь",
+      "imperfective": {
+        "infinitive": "мочь", "tags": ["irregular"],
+        "tenses": {
+          "present": { "forms": { "я": "могу", "ты": "можешь", "он/она/оно": "может", "мы": "можем", "вы": "можете", "они": "могут" } },
+          "past": { "forms": { "он": "мог", "она": "могла", "оно": "могло", "они": "могли" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду мочь" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "смочь",
+        "tenses": {
+          "past": { "forms": { "он": "смог", "она": "смогла", "оно": "смогло", "они": "смогли" } },
+          "future_simple": { "forms": { "я": "смогу", "ты": "сможешь", "он/она/оно": "сможет", "мы": "сможем", "вы": "сможете", "они": "смогут" } }
+        }
+      }
+    },
+    {
+      "concept_en": "to eat",
+      "main_verb_ روسский": "есть / съесть",
+      "imperfective": {
+        "infinitive": "есть", "tags": ["irregular"],
+        "tenses": {
+          "present": { "forms": { "я": "ем", "ты": "ешь", "он/она/оно": "ест", "мы": "едим", "вы": "едите", "они": "едят" } },
+          "past": { "forms": { "он": "ел", "она": "ела", "оно": "ело", "они": "ели" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду есть" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "съесть",
+        "tenses": {
+          "past": { "forms": { "он": "съел", "она": "съела", "оно": "съело", "они": "съели" } },
+          "future_simple": { "forms": { "я": "съем", "ты": "съешь", "он/она/оно": "съест", "мы": "съедим", "вы": "съедите", "они": "съедят" } }
+        }
+      }
+    },
+    {
+      "concept_en": "to drink",
+      "main_verb_ روسский": "пить / выпить",
+      "imperfective": {
+        "infinitive": "пить",
+        "tenses": {
+          "present": { "forms": { "я": "пью", "ты": "пьёшь", "он/она/оно": "пьёт", "мы": "пьём", "вы": "пьёте", "они": "пьют" } },
+          "past": { "forms": { "он": "пил", "она": "пила", "оно": "пило", "они": "пили" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду пить" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "выпить",
+        "tenses": {
+          "past": { "forms": { "он": "выпил", "она": "выпила", "оно": "выпило", "они": "выпили" } },
+          "future_simple": { "forms": { "я": "выпью", "ты": "выпьешь", "он/она/оно": "выпьет", "мы": "выпьем", "вы": "выпьете", "они": "выпьют" } }
+        }
+      }
+    },
+    {
+      "concept_en": "to speak/talk",
+      "main_verb_ روسский": "говорить / сказать",
+      "verb_group": "second",
+      "imperfective": {
+        "infinitive": "говорить",
+        "tenses": {
+          "present": { "forms": { "я": "говорю", "ты": "говоришь", "он/она/оно": "говорит", "мы": "говорим", "вы": "говорите", "они": "говорят" } },
+          "past": { "forms": { "он": "говорил", "она": "говорила", "оно": "говорило", "они": "говорили" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду говорить" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "сказать", "translation_en_aspect": "to say, to tell",
+        "tenses": {
+          "past": { "forms": { "он": "сказал", "она": "сказала", "оно": "сказало", "они": "сказали" } },
+          "future_simple": { "forms": { "я": "скажу", "ты": "скажешь", "он/она/оно": "скажет", "мы": "скажем", "вы": "скажете", "они": "скажут" } }
+        }
+      }
+    },
+    {
+      "concept_en": "to read",
+      "main_verb_ روسский": "читать / прочитать",
+      "verb_group": "first",
+      "imperfective": {
+        "infinitive": "читать",
+        "tenses": {
+          "present": { "forms": { "я": "читаю", "ты": "читаешь", "он/она/оно": "читает", "мы": "читаем", "вы": "читаете", "они": "читают" } },
+          "past": { "forms": { "он": "читал", "она": "читала", "оно": "читало", "они": "читали" } },
+          "future_compound": { "auxiliary_verb": "быть", "forms": { "я": "буду читать" } }
+        }
+      },
+      "perfective": {
+        "infinitive": "прочитать",
+        "tenses": {
+          "past": { "forms": { "он": "прочитал", "она": "прочитала", "оно": "прочитало", "они": "прочитали" } },
+          "future_simple": { "forms": { "я": "прочитаю", "ты": "прочитаешь", "он/она/оно": "прочитает", "мы": "прочитаем", "вы": "прочитаете", "они": "прочитают" } }
+        }
+      }
+    }
+  ]
+}
