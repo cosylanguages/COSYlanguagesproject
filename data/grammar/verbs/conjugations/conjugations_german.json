@@ -229,7 +229,7 @@
           "forms": { "ich": "will", "du": "willst", "er/sie/es": "will", "wir": "wollen", "ihr": "wollt", "sie/Sie": "wollen" }
         },
         "perfekt": {
-          "mood": "indicativ", "auxiliary_verb": "haben", "past_participle": "gewollt", 
+          "mood": "indicativ", "auxiliary_verb": "haben", "past_participle": "gewollt",
           "notes": "Often uses double infinitive in Perfekt if main verb present: 'ich habe gehen wollen'",
           "forms": { "ich": "habe gewollt", "du": "hast gewollt", "er/sie/es": "hat gewollt", "wir": "haben gewollt", "ihr": "habt gewollt", "sie/Sie": "haben gewollt" }
         },

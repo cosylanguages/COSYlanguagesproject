@@ -1,0 +1,150 @@
+{
+  "level_code": "A0",
+  "level_name": "Primeros Pasos (First Steps)",
+  "approximate_vocabulary_size": "approx. 300-500 words",
+  "learning_outcomes": [
+    "Recognize and reproduce basic sounds of the Spanish alphabet.",
+    "Understand and use familiar everyday expressions and very basic phrases.",
+    "Introduce him/herself and others simply."
+  ],
+  "sections": [
+    {
+      "title": "🔍Día 1 (Day 1)",
+      "content_placeholder": "Contenido a añadir para el resumen del Día 1."
+    },
+    {
+      "title": "🎭Diálogo (Dialogue)",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "line": "Hola."
+        },
+        {
+          "speaker": "B",
+          "line": "Hola, ¿café o té?"
+        },
+        {
+          "speaker": "A",
+          "line": "Un café, por favor."
+        },
+        {
+          "speaker": "B",
+          "line": "¿Un té?"
+        },
+        {
+          "speaker": "A",
+          "line": "No, un café, por favor."
+        },
+        {
+          "speaker": "B",
+          "line": "¿Un café?"
+        },
+        {
+          "speaker": "A",
+          "line": "Sí, por favor."
+        },
+        {
+          "speaker": "B",
+          "line": "Vale."
+        },
+        {
+          "speaker": "A",
+          "line": "¡Gracias!"
+        },
+        {
+          "speaker": "B",
+          "line": "De nada."
+        },
+        {
+          "speaker": "B",
+          "line": "¿Efectivo o tarjeta?"
+        },
+        {
+          "speaker": "A",
+          "line": "Efectivo, por favor."
+        },
+        {
+          "speaker": "B",
+          "line": "¿Efectivo?"
+        },
+        {
+          "speaker": "A",
+          "line": "Sí, por favor."
+        },
+        {
+          "speaker": "B",
+          "line": "Vale."
+        },
+        {
+          "speaker": "A",
+          "line": "Gracias."
+        },
+        {
+          "speaker": "B",
+          "line": "De nada."
+        },
+        {
+          "speaker": "A",
+          "line": "Adiós."
+        },
+        {
+          "speaker": "B",
+          "line": "Adiós."
+        }
+      ]
+    },
+    {
+      "title": "🎬Práctica: Diálogo (Practice: Dialogue)",
+      "content_placeholder": "Ejercicios prácticos para el diálogo a añadir."
+    },
+    {
+      "title": "⚙️¿Qué es esto? (What is it?)",
+      "grammar_points": [
+        "¿Qué es esto?",
+        "¿Es esto ...?",
+        "¿Es esto ... o ...?",
+        "Esto es ... . / Es ... .",
+        "Esto no es ... . / No es ... .",
+        "Esto no es ..., sino que es ... ."
+      ],
+      "example_vocabulary": [
+        "libro (m), mesa (f), bolígrafo (m), taza (f), coche (m)"
+      ]
+    },
+    {
+      "title": "⚙️El Género (The Gender)",
+      "content_placeholder": "Contenido relacionado con el género gramatical a añadir."
+    },
+    {
+      "title": "🎬Práctica: Es (Practice: It is)",
+      "content_placeholder": "Ejercicios prácticos para estructuras con 'es' a añadir."
+    },
+    {
+      "title": "🎒Fin. (The end.)",
+      "content_placeholder": "Resumen o comentarios finales para el Día 1 a añadir."
+    }
+  ],
+  "language_focus_topics": [
+    "The Spanish Alphabet and pronunciation (including letters like ñ, ll, rr, and vowel sounds).",
+    "Nouns: Introduction to grammatical gender (masculine/feminine - el/la). Definite and indefinite articles (el, la, los, las, un, una, unos, unas).",
+    "Verbs: Present tense of 'ser' (to be - permanent characteristics) and 'estar' (to be - temporary states, location).",
+    "Basic Sentence Structure: Subject-Verb-Object. Adjective placement (usually after the noun).",
+    "Day 1 Grammar - 'Ser/Estar' (Esto es/Está): ¿Qué es esto?, ¿Es esto ...?, ¿Es esto ... o ...?, Esto es ..., Esto no es ..., Esto no es ..., sino que es ..."
+  ],
+  "vocabulary_topics": [
+    "Día 1: Palabras Básicas y Frases (Day 1: Basic Words and Phrases): Hola/Buenos días (hello), Adiós/Hasta luego (goodbye), Sí (yes), No (no), Gracias (thank you), De nada (you're welcome), Por favor (please), Vale/Está bien/OK (alright/ok), Uno (one), Té (m) (tea), Café (m) (coffee), Agua (f) (water), Zumo/Jugo (m) (juice), Cerveza (f) (beer), Vino (m) (wine), Efectivo (m) (cash), Tarjeta (f) (card).",
+    "Greetings: Hola, Adiós, Buenos días, Buenas tardes, Buenas noches.",
+    "Personal Information: ¿Cómo te llamas? Me llamo...",
+    "Numbers: 0-10 (cero-diez).",
+    "Colors: rojo, azul, verde, amarillo, negro, blanco."
+  ],
+  "pronunciation_focus_topics": [],
+  "listening_comprehension_skills": [],
+  "reading_comprehension_skills": [],
+  "spoken_interaction_skills": [],
+  "spoken_production_skills": [],
+  "written_interaction_skills": [],
+  "written_production_skills": [],
+  "cultural_competence_topics": [],
+  "learning_strategies_suggestions": []
+}

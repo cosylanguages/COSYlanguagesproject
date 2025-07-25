@@ -25,7 +25,7 @@
           "forms": { "εγώ": "θα είμαι", "εσύ": "θα είσαι", "αυτός/αυτή/αυτό": "θα είναι", "εμείς": "θα είμαστε", "εσείς": "θα είστε", "αυτοί/αυτές/αυτά": "θα είναι" }
         },
         "παρακείμενος": {
-          "mood": "οριστική", "auxiliary_verb": "έχω", "past_participle_invariable": "υπάρξει", 
+          "mood": "οριστική", "auxiliary_verb": "έχω", "past_participle_invariable": "υπάρξει",
           "notes": "'έχω υπάρξει' (to have existed) is rare for 'to be'. Usually context implies state.",
           "forms": { "εγώ": "έχω υπάρξει" }
         },
@@ -57,7 +57,7 @@
           "forms": { "εγώ": "θα έχω", "εσύ": "θα έχεις", "αυτός/αυτή/αυτό": "θα έχει", "εμείς": "θα έχουμε", "εσείς": "θα έχετε", "αυτοί/αυτές/αυτά": "θα έχουν" }
         },
         "παρακείμενος": {
-          "mood": "οριστική", "auxiliary_verb": "έχω", "past_participle_invariable": "έχει", 
+          "mood": "οριστική", "auxiliary_verb": "έχω", "past_participle_invariable": "έχει",
           "notes": "The form is 'έχω + απαρέμφατο αορίστου', which for έχω is 'έχει'. So 'έχω έχει' is not used. Perfect is formed by context or other verbs.",
           "forms": { "εγώ": "έχω έχει (not standard)" }
         },

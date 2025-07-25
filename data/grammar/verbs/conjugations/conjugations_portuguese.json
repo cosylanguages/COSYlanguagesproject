@@ -23,7 +23,7 @@
           "mood": "indicativo",
           "forms": { "eu": "serei", "tu": "serás", "ele/ela/você": "será", "nós": "seremos", "vós": "sereis", "eles/elas/vocês": "serão" }
         },
-        "condicional presente": { 
+        "condicional presente": {
           "mood": "condicional",
           "forms": { "eu": "seria", "tu": "serias", "ele/ela/você": "seria", "nós": "seríamos", "vós": "seríeis", "eles/elas/vocês": "seriam" }
         }
@@ -337,7 +337,7 @@
           "mood": "indicativo",
           "forms": { "eu": "vou", "tu": "vais", "ele/ela/você": "vai", "nós": "vamos", "vós": "ides", "eles/elas/vocês": "vão" }
         },
-        "pretérito perfeito": { 
+        "pretérito perfeito": {
           "mood": "indicativo",
           "forms": { "eu": "fui", "tu": "foste", "ele/ela/você": "foi", "nós": "fomos", "vós": "fostes", "eles/elas/vocês": "foram" }
         },
