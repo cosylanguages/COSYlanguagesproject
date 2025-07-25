@@ -1,0 +1,23 @@
+{
+  "1": [
+    "Hallo", "Auf Wiedersehen", "Ja", "Nein", "Danke", "Bitte", "Okay", "Der Tag", "Entschuldigung", "Das Wasser", "Der Saft", "Das Bier", "Der Wein", "Der Kaffee", "Der Tee", "Die Karte", "Bargeld"
+  ],
+  "2": [
+    "Der Junge", "Das Mädchen", "Der Lehrer", "Die Lehrerin", "Der Student", "Die Studentin", "Die Frau", "Der Mann", "Das Ding", "Das Individuum", "Das Getränk", "Freut mich, Sie kennenzulernen"
+  ],
+  "3": [
+    "Die Mutter", "Der Vater", "Der Sohn", "Die Tochter", "Die Schwester", "Der Bruder", "Der Ehemann", "Die Ehefrau", "Der Freund", "Die Freundin", "Die Familie"
+  ],
+  "4": [
+    "Null", "Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben", "Acht", "Neun", "Der Elternteil", "Das Kind", "Die Zahl"
+  ],
+  "5": [
+    "Gut", "Schlecht", "Groß", "Klein", "Einfach", "Schwierig", "Interessant", "Langweilig", "Kalt", "Heiß", "Teuer", "Billig"
+  ],
+  "6": [
+    "der Rotwein Rotwein", "der Weißwein", "der Grüntee", "der Schwarztee", "der Eistee", "der Eiskaffee", "der Orangensaft", "der Apfelsaft", "der Film", "die Serie", "die Musik", "das Buch"
+  ],
+  "10": [
+    "Der Montag", "Der Dienstag", "Der Mittwoch", "Der Donnerstag", "Der Freitag", "Der Samstag", "Der Sonntag"
+  ]
+}

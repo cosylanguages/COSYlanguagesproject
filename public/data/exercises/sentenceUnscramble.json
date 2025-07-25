@@ -1,0 +1,58 @@
+{
+  "COSYfrench": [
+    {
+      "id": "fr_su_1",
+      "type": "sentence-unscramble",
+      "languageCode": "COSYfrench",
+      "correctSentence": "J'aime apprendre le français.",
+      "scrambledWords": ["apprendre", "le", "J'aime", "français."],
+      "translation": "I like to learn French.",
+      "hint": "Starts with 'J'aime'."
+    },
+    {
+      "id": "fr_su_2",
+      "type": "sentence-unscramble",
+      "languageCode": "COSYfrench",
+      "correctSentence": "Le chat est sous la table.",
+      "scrambledWords": ["table.", "sous", "Le", "la", "chat", "est"],
+      "translation": "The cat is under the table."
+    }
+  ],
+  "COSYespañol": [
+    {
+      "id": "es_su_1",
+      "type": "sentence-unscramble",
+      "languageCode": "COSYespañol",
+      "correctSentence": "Me gusta aprender español.",
+      "scrambledWords": ["aprender", "gusta", "Me", "español."],
+      "translation": "I like to learn Spanish."
+    },
+    {
+      "id": "es_su_2",
+      "type": "sentence-unscramble",
+      "languageCode": "COSYespañol",
+      "correctSentence": "El perro corre rápidamente.",
+      "scrambledWords": ["rápidamente.", "corre", "perro", "El"],
+      "translation": "The dog runs quickly."
+    }
+  ],
+  "COSYenglish": [
+    {
+      "id": "en_su_1",
+      "type": "sentence-unscramble",
+      "languageCode": "COSYenglish",
+      "correctSentence": "The quick brown fox jumps over the lazy dog.",
+      "scrambledWords": ["dog.", "brown", "over", "quick", "The", "lazy", "jumps", "the", "fox"],
+      "translation": "A classic pangram.",
+      "hint": "Think about speed and color."
+    },
+    {
+      "id": "en_su_2",
+      "type": "sentence-unscramble",
+      "languageCode": "COSYenglish",
+      "correctSentence": "Learning new languages is fun.",
+      "scrambledWords": ["fun.", "is", "languages", "new", "Learning"],
+      "translation": "It really is!"
+    }
+  ]
+}

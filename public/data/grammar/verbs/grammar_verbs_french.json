@@ -1,0 +1,37 @@
+{
+  "1": [
+    { "pattern": "Qu'est-ce que c'est ?", "example": "Qu'est-ce que c'est ? - C'est un livre." },
+    { "pattern": "Est-ce que c'est ... ?", "example": "Est-ce que c'est un chat ? - Oui, c'est ça. / Non, ce n'est pas ça." },
+    { "pattern": "Est-ce que c'est ... ou ... ?", "example": "Est-ce que c'est du thé ou du café ? - C'est du thé." },
+    { "pattern": "C'est ...", "example": "C'est un stylo." },
+    { "pattern": "Ce n'est pas ...", "example": "Ce n'est pas un chien." },
+    { "pattern": "Ce n'est pas ... mais c'est ...", "example": "Ce n'est pas du jus, mais c'est de l'eau." }
+  ],
+  "2": [
+    { "prompt": "je", "answer": "suis" },
+    { "prompt": "tu", "answer": "es" },
+    { "prompt": "il", "answer": "est" },
+    { "prompt": "elle", "answer": "est" },
+    { "prompt": "suis", "answer": "je" },
+    { "prompt": "es", "answer": "tu" },
+    { "prompt": "est", "answer": ["il", "elle"] }
+  ],
+  "3": [
+    { "prompt": "j'", "answer": "ai" },
+    { "prompt": "tu", "answer": "as" },
+    { "prompt": "il", "answer": "a" },
+    { "prompt": "elle", "answer": "a" },
+    { "prompt": "ai", "answer": "je" },
+    { "prompt": "as", "answer": "tu" },
+    { "prompt": "a", "answer": ["il", "elle"] }
+  ],
+  "6": [
+    { "prompt": "j'", "answer": "aime" },
+    { "prompt": "tu", "answer": "aimes" },
+    { "prompt": "il", "answer": "aime" },
+    { "prompt": "elle", "answer": "aime" },
+    { "prompt": "aime", "answer": "je" },
+    { "prompt": "aimes", "answer": "tu" },
+    { "prompt": "aime", "answer": ["il", "elle"] }
+  ]
+}

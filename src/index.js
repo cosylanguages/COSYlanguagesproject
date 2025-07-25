@@ -9,6 +9,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 // AppRoutes is the main component that defines all the application routes.
 import AppRoutes from './AppRoutes';
 // Context providers are used to manage global state.
+// PlanProvider manages the user's study plan.
+import { PlanProvider } from './contexts/PlanContext';
 // AuthProvider manages user authentication.
 import { AuthProvider } from './contexts/AuthContext';
 // I18nProvider manages internationalization and translations.
@@ -50,20 +52,23 @@ if (rootElement) {
             <AuthProvider>
               {/* UserProfileProvider manages user profile data. */}
               <UserProfileProvider>
-                {/* FreestyleProvider manages the state for the "freestyle" learning mode. */}
-                <FreestyleProvider>
-                  {/* StudyProvider manages the state for the "study" learning mode. */}
-                  <StudyProvider>
-                    {/* StudySetProvider manages user-created study sets. */}
-                    <StudySetProvider>
-                      {/* ThemeProvider applies the Material-UI theme to the application. */}
-                      <ThemeProvider theme={theme}>
-                        {/* AppRoutes contains all the application's routes. */}
-                        <AppRoutes />
-                      </ThemeProvider>
-                    </StudySetProvider>
-                  </StudyProvider>
-                </FreestyleProvider>
+                {/* PlanProvider manages the user's study plan. */}
+                <PlanProvider>
+                  {/* FreestyleProvider manages the state for the "freestyle" learning mode. */}
+                  <FreestyleProvider>
+                    {/* StudyProvider manages the state for the "study" learning mode. */}
+                    <StudyProvider>
+                      {/* StudySetProvider manages user-created study sets. */}
+                      <StudySetProvider>
+                        {/* ThemeProvider applies the Material-UI theme to the application. */}
+                        <ThemeProvider theme={theme}>
+                          {/* AppRoutes contains all the application's routes. */}
+                          <AppRoutes />
+                        </ThemeProvider>
+                      </StudySetProvider>
+                    </StudyProvider>
+                  </FreestyleProvider>
+                </PlanProvider>
               </UserProfileProvider>
             </AuthProvider>
           </LatinizationProvider>
