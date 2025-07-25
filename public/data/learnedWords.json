@@ -1,7 +1,0 @@
-[
-  { "id": 1, "word": "Apple", "definition": "A fruit" },
-  { "id": 2, "word": "Book", "definition": "A set of written pages" },
-  { "id": 3, "word": "Car", "definition": "A vehicle" },
-  { "id": 4, "word": "Dog", "definition": "A domesticated animal" },
-  { "id": 5, "word": "House", "definition": "A building for habitation" }
-]

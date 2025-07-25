@@ -2,11 +2,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const languages = ['tt', 'ka'];
+const languages = require('./language_config');
+const fs = require('fs');
 
 function getLanguageEntries() {
   return languages.reduce((acc, lang) => {
-    acc[`study-${lang}`] = `./src/pages/StudyModePage/languages/${lang}.js`;
+    const entryPath = `./src/pages/StudyModePage/languages/${lang}.js`;
+    if (fs.existsSync(path.join(__dirname, 'src', 'pages', 'StudyModePage', 'languages', `${lang}.js`))) {
+      acc[`study-${lang}`] = entryPath;
+    }
     return acc;
   }, {});
 }
