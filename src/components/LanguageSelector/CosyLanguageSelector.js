@@ -23,6 +23,13 @@ const logos = {
   COSYtatar: '/assets/icons/cosylanguages_logos/cosytatar.png',
 };
 
+// Map des drapeaux pour chaque langue (ajouter selon les fichiers disponibles)
+const flags = {
+  COSYbashkir: '/assets/flags/Flag_of_Bashkortostan.png',
+  COSYbreton: '/assets/flags/Flag_of_Brittany.png',
+  COSYtatar: '/assets/flags/Flag_of_Tatarstan.png',
+};
+
 /**
  * A customized language selector component.
  * It uses react-select to provide a searchable dropdown with language logos.
@@ -109,9 +116,12 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
    * @param {object} option - The option to format.
    * @returns {JSX.Element} The formatted option label.
    */
-  const formatOptionLabel = ({ logo, label }) => (
-    <div className="cosy-language-option">
+  const formatOptionLabel = ({ logo, label, value }) => (
+    <div className="cosy-language-option" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
       <img src={logo} alt={`${label} logo`} className="language-logo" />
+      {flags[value] && (
+        <img src={flags[value]} alt={`${label} flag`} className="language-flag" style={{ width: '28px', height: '28px', borderRadius: '4px', boxShadow: '0 1px 4px rgba(0,0,0,0.07)' }} />
+      )}
       <TransliterableText text={label} />
     </div>
   );
