@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/COSYlanguagesproject/static/css/main.c4f6fa63.css",
-    "main.js": "/COSYlanguagesproject/static/js/main.24c470d3.js",
+    "main.css": "/COSYlanguagesproject/static/css/main.ba0d6306.css",
+    "main.js": "/COSYlanguagesproject/static/js/main.49e21745.js",
     "sw.js": "/COSYlanguagesproject/static/js/sw.d72eb008.js",
     "study.css": "/COSYlanguagesproject/static/css/study.c01d2285.css",
     "study.js": "/COSYlanguagesproject/static/js/study.85336120.js",
@@ -30,8 +30,8 @@
     "404.html": "/COSYlanguagesproject/404.html",
     "freestyle.html": "/COSYlanguagesproject/freestyle.html",
     "study-islands.html": "/COSYlanguagesproject/study-islands.html",
-    "main.c4f6fa63.css.map": "/COSYlanguagesproject/static/css/main.c4f6fa63.css.map",
-    "main.24c470d3.js.map": "/COSYlanguagesproject/static/js/main.24c470d3.js.map",
+    "main.ba0d6306.css.map": "/COSYlanguagesproject/static/css/main.ba0d6306.css.map",
+    "main.49e21745.js.map": "/COSYlanguagesproject/static/js/main.49e21745.js.map",
     "sw.d72eb008.js.map": "/COSYlanguagesproject/static/js/sw.d72eb008.js.map",
     "study.c01d2285.css.map": "/COSYlanguagesproject/static/css/study.c01d2285.css.map",
     "study.85336120.js.map": "/COSYlanguagesproject/static/js/study.85336120.js.map",
@@ -40,7 +40,7 @@
     "study-ka.950e1d5b.js.map": "/COSYlanguagesproject/static/js/study-ka.950e1d5b.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4f6fa63.css",
-    "static/js/main.24c470d3.js"
+    "static/css/main.ba0d6306.css",
+    "static/js/main.49e21745.js"
   ]
 }
