@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/COSYlanguagesproject/static/css/main.c4f6fa63.css",
-    "main.js": "/COSYlanguagesproject/static/js/main.e7dcf7f2.js",
+    "main.js": "/COSYlanguagesproject/static/js/main.24c470d3.js",
     "sw.js": "/COSYlanguagesproject/static/js/sw.d72eb008.js",
     "study.css": "/COSYlanguagesproject/static/css/study.c01d2285.css",
     "study.js": "/COSYlanguagesproject/static/js/study.85336120.js",
     "freestyle.css": "/COSYlanguagesproject/static/css/freestyle.58772434.css",
-    "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.335e465c.js",
+    "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.b8416f24.js",
     "study-ka.js": "/COSYlanguagesproject/static/js/study-ka.950e1d5b.js",
     "study-tt.js": "/COSYlanguagesproject/static/js/study-tt.31d6cfe0.js",
     "static/media/Flag_of_Brittany.png": "/COSYlanguagesproject/static/media/Flag_of_Brittany.84b981fe6c89698ceeab.png",
@@ -31,16 +31,16 @@
     "freestyle.html": "/COSYlanguagesproject/freestyle.html",
     "study-islands.html": "/COSYlanguagesproject/study-islands.html",
     "main.c4f6fa63.css.map": "/COSYlanguagesproject/static/css/main.c4f6fa63.css.map",
-    "main.e7dcf7f2.js.map": "/COSYlanguagesproject/static/js/main.e7dcf7f2.js.map",
+    "main.24c470d3.js.map": "/COSYlanguagesproject/static/js/main.24c470d3.js.map",
     "sw.d72eb008.js.map": "/COSYlanguagesproject/static/js/sw.d72eb008.js.map",
     "study.c01d2285.css.map": "/COSYlanguagesproject/static/css/study.c01d2285.css.map",
     "study.85336120.js.map": "/COSYlanguagesproject/static/js/study.85336120.js.map",
     "freestyle.58772434.css.map": "/COSYlanguagesproject/static/css/freestyle.58772434.css.map",
-    "freestyle.335e465c.js.map": "/COSYlanguagesproject/static/js/freestyle.335e465c.js.map",
+    "freestyle.b8416f24.js.map": "/COSYlanguagesproject/static/js/freestyle.b8416f24.js.map",
     "study-ka.950e1d5b.js.map": "/COSYlanguagesproject/static/js/study-ka.950e1d5b.js.map"
   },
   "entrypoints": [
     "static/css/main.c4f6fa63.css",
-    "static/js/main.e7dcf7f2.js"
+    "static/js/main.24c470d3.js"
   ]
 }
