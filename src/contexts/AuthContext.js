@@ -1,26 +1,12 @@
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
-import { loginTeacher as apiLoginTeacher, logoutUser as apiLogoutUser } from '../api/auth';
+import { login as apiLogin, logout as apiLogout, signup as apiSignup } from '../api/auth';
 
-/**
- * The authentication context.
- */
 export const AuthContext = createContext();
 
-/**
- * A custom hook for accessing the authentication context.
- * @returns {object} The authentication context.
- */
 export function useAuth() {
     return useContext(AuthContext);
 }
 
-/**
- * A provider for the authentication context.
- * It manages the authentication state and provides functions for logging in and out.
- * @param {object} props - The component's props.
- * @param {object} props.children - The child components.
- * @returns {JSX.Element} The AuthProvider component.
- */
 export function AuthProvider({ children }) {
     const [authToken, setAuthToken] = useState(sessionStorage.getItem('authToken'));
     const [currentUser, setCurrentUser] = useState(() => {
@@ -36,7 +22,6 @@ export function AuthProvider({ children }) {
     const [authError, setAuthError] = useState(null);
     const [loadingAuth, setLoadingAuth] = useState(false);
 
-    // Effect to update session storage when the auth token or current user changes.
     useEffect(() => {
         if (authToken) {
             sessionStorage.setItem('authToken', authToken);
@@ -53,22 +38,17 @@ export function AuthProvider({ children }) {
         }
     }, [currentUser]);
 
-    /**
-     * Logs in a user.
-     * @param {string} pin - The user's PIN.
-     * @returns {Promise<boolean>} A promise that resolves to true if the login is successful, and false otherwise.
-     */
-    const login = useCallback(async (pin) => {
+    const login = useCallback(async (username, password) => {
         setLoadingAuth(true);
         setAuthError(null);
         try {
-            const data = await apiLoginTeacher(pin);
+            const data = await apiLogin(username, password);
             setAuthToken(data.token);
-            setCurrentUser({ id: data.userId, role: data.role, username: data.username });
+            setCurrentUser({ id: data.userId, username: data.username });
             return true;
         } catch (err) {
             console.error("Error during login:", err);
-            setAuthError(err.message || 'Failed to login');
+            setAuthError(err.response.data.message || 'Failed to login');
             setAuthToken(null);
             setCurrentUser(null);
             return false;
@@ -77,18 +57,15 @@ export function AuthProvider({ children }) {
         }
     }, []);
 
-    /**
-     * Logs out a user.
-     */
     const logout = useCallback(async () => {
         setLoadingAuth(true);
         setAuthError(null);
         if (authToken) {
             try {
-                await apiLogoutUser(authToken);
+                await apiLogout();
             } catch (err) {
                 console.error("Error during API logout:", err);
-                setAuthError(err.message || 'Failed to logout from server, logged out locally.');
+                setAuthError(err.response.data.message || 'Failed to logout from server, logged out locally.');
             }
         }
         setAuthToken(null);
@@ -98,6 +75,25 @@ export function AuthProvider({ children }) {
         setLoadingAuth(false);
     }, [authToken]);
 
+    const signup = useCallback(async (username, password) => {
+        setLoadingAuth(true);
+        setAuthError(null);
+        try {
+            const data = await apiSignup(username, password);
+            setAuthToken(data.token);
+            setCurrentUser({ id: data.userId, username: data.username });
+            return true;
+        } catch (err) {
+            console.error("Error during signup:", err);
+            setAuthError(err.response.data.message || 'Failed to signup');
+            setAuthToken(null);
+            setCurrentUser(null);
+            return false;
+        } finally {
+            setLoadingAuth(false);
+        }
+    }, []);
+
     const value = {
         authToken,
         currentUser,
@@ -106,6 +102,7 @@ export function AuthProvider({ children }) {
         loadingAuth,
         login,
         logout,
+        signup,
     };
 
     return (

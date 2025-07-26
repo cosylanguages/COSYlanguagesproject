@@ -1,33 +1,31 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useState, useContext, useEffect, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from './AuthContext';
+import {
+  getFreestyleProgress as apiGetFreestyleProgress,
+  updateFreestyleProgress as apiUpdateFreestyleProgress,
+  getBoosterPacks as apiGetBoosterPacks,
+  createBoosterPack as apiCreateBoosterPack,
+  deleteBoosterPack as apiDeleteBoosterPack,
+} from '../api/freestyle';
 
-/**
- * The freestyle context.
- */
 const FreestyleContext = createContext();
 
-/**
- * A custom hook for accessing the freestyle context.
- * @returns {object} The freestyle context.
- */
 export const useFreestyle = () => useContext(FreestyleContext);
 
-/**
- * A provider for the freestyle context.
- * It manages the state for the freestyle mode, including the selected language, days, and exercise.
- * @param {object} props - The component's props.
- * @param {object} props.children - The child components.
- * @returns {JSX.Element} The FreestyleProvider component.
- */
 export const FreestyleProvider = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { authToken, currentUser } = useAuth();
 
   const [selectedLanguage, setSelectedLanguage] = useState(null);
   const [selectedDays, setSelectedDays] = useState([]);
   const [selectedExercise, setSelectedExercise] = useState(null);
+  const [progress, setProgress] = useState({});
+  const [boosterPacks, setBoosterPacks] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  // Effect to synchronize the state with the URL.
   useEffect(() => {
     const pathParts = location.pathname.split('/').filter(Boolean);
     if (pathParts[0] === 'freestyle' && pathParts.length > 1) {
@@ -38,12 +36,6 @@ export const FreestyleProvider = ({ children }) => {
     }
   }, [location]);
 
-  /**
-   * Updates the URL based on the selected language, days, and exercise.
-   * @param {string} lang - The selected language.
-   * @param {Array} days - The selected days.
-   * @param {object} exercise - The selected exercise.
-   */
   const updateUrl = (lang, days, exercise) => {
     let path = '/freestyle';
     if (lang) {
@@ -58,10 +50,6 @@ export const FreestyleProvider = ({ children }) => {
     navigate(path);
   };
 
-  /**
-   * Sets the selected language.
-   * @param {string} lang - The selected language.
-   */
   const setLanguage = (lang) => {
     setSelectedLanguage(lang);
     setSelectedDays([]);
@@ -69,24 +57,91 @@ export const FreestyleProvider = ({ children }) => {
     updateUrl(lang);
   };
 
-  /**
-   * Sets the selected days.
-   * @param {Array} days - The selected days.
-   */
   const setDays = (days) => {
     setSelectedDays(days);
     setSelectedExercise(null);
     updateUrl(selectedLanguage, days);
   };
 
-  /**
-   * Sets the selected exercise.
-   * @param {object} exercise - The selected exercise.
-   */
   const setExercise = (exercise) => {
     setSelectedExercise(exercise);
     updateUrl(selectedLanguage, selectedDays, exercise);
   };
+
+  const getFreestyleProgress = useCallback(async () => {
+    if (!authToken || !currentUser) return;
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await apiGetFreestyleProgress(authToken, currentUser.id);
+      setProgress(data.progress);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }, [authToken, currentUser]);
+
+  const updateFreestyleProgress = useCallback(async (newProgress) => {
+    if (!authToken || !currentUser) return;
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await apiUpdateFreestyleProgress(authToken, currentUser.id, newProgress);
+      setProgress(data.progress);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }, [authToken, currentUser]);
+
+  const getBoosterPacks = useCallback(async () => {
+    if (!authToken) return;
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await apiGetBoosterPacks(authToken);
+      setBoosterPacks(data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }, [authToken]);
+
+  const createBoosterPack = useCallback(async (packData) => {
+    if (!authToken) return;
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await apiCreateBoosterPack(authToken, packData);
+      setBoosterPacks((prev) => [...prev, data]);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }, [authToken]);
+
+  const deleteBoosterPack = useCallback(async (packId) => {
+    if (!authToken) return;
+    setLoading(true);
+    setError(null);
+    try {
+      await apiDeleteBoosterPack(authToken, packId);
+      setBoosterPacks((prev) => prev.filter((p) => p.id !== packId));
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }, [authToken]);
+
+  useEffect(() => {
+    getFreestyleProgress();
+    getBoosterPacks();
+  }, [getFreestyleProgress, getBoosterPacks]);
 
   const value = {
     selectedLanguage,
@@ -95,6 +150,13 @@ export const FreestyleProvider = ({ children }) => {
     setSelectedDays: setDays,
     selectedExercise,
     setSelectedExercise: setExercise,
+    progress,
+    updateFreestyleProgress,
+    boosterPacks,
+    createBoosterPack,
+    deleteBoosterPack,
+    loading,
+    error,
   };
 
   return (

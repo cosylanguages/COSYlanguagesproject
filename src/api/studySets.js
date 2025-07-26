@@ -1,114 +1,34 @@
-const BASE_URL = 'http://localhost:3001/api';
+import axios from 'axios';
 
-/**
- * Fetches all study sets for the authenticated user.
- * @param {string} token - The user's authentication token.
- * @param {string} [languageCode] - An optional language code to filter the study sets by.
- * @returns {Promise<Array>} A promise that resolves to an array of study set objects.
- */
-export async function fetchStudySets(token, languageCode = null) {
-    let url = `${BASE_URL}/studysets`;
-    if (languageCode) {
-        url += `?languageCode=${languageCode}`;
-    }
+const API_URL = 'http://localhost:3001/study-sets';
 
-    const res = await fetch(url, {
-        headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
-        },
-    });
-    if (!res.ok) {
-        const errorData = await res.json().catch(() => ({ message: 'Failed to fetch study sets' }));
-        throw new Error(errorData.message || `Failed to fetch study sets. Status: ${res.status}`);
-    }
-    return await res.json();
-}
+const getAuthHeaders = (token) => ({
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+});
 
-/**
- * Fetches a single study set by its ID.
- * @param {string} token - The user's authentication token.
- * @param {string} setId - The ID of the study set to fetch.
- * @returns {Promise<object>} A promise that resolves to the study set object.
- */
-export async function fetchStudySetById(token, setId) {
-    const res = await fetch(`${BASE_URL}/studysets/${setId}`, {
-        headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
-        },
-    });
-    if (!res.ok) {
-        const errorData = await res.json().catch(() => ({ message: `Failed to fetch study set ${setId}` }));
-        throw new Error(errorData.message || `Failed to fetch study set ${setId}. Status: ${res.status}`);
-    }
-    return await res.json();
-}
+export const fetchStudySets = async (token) => {
+  const response = await axios.get(API_URL, getAuthHeaders(token));
+  return response.data;
+};
 
+export const fetchStudySetById = async (token, setId) => {
+  const response = await axios.get(`${API_URL}/${setId}`, getAuthHeaders(token));
+  return response.data;
+};
 
-/**
- * Adds a new study set.
- * @param {string} token - The user's authentication token.
- * @param {object} setData - The data for the new study set.
- * @returns {Promise<object>} A promise that resolves to the newly created study set object.
- */
-export async function addStudySet(token, setData) {
-    const res = await fetch(`${BASE_URL}/studysets`, {
-        method: 'POST',
-        headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(setData),
-    });
-    if (!res.ok) {
-        const errorData = await res.json().catch(() => ({ message: 'Failed to add study set' }));
-        throw new Error(errorData.message || `Failed to add study set. Status: ${res.status}`);
-    }
-    return await res.json();
-}
+export const addStudySet = async (token, setData) => {
+  const response = await axios.post(API_URL, setData, getAuthHeaders(token));
+  return response.data;
+};
 
-/**
- * Updates a study set.
- * @param {string} token - The user's authentication token.
- * @param {string} setId - The ID of the study set to update.
- * @param {object} setData - The updated data for the study set.
- * @returns {Promise<object>} A promise that resolves to the updated study set object.
- */
-export async function updateStudySet(token, setId, setData) {
-    const res = await fetch(`${BASE_URL}/studysets/${setId}`, {
-        method: 'PUT',
-        headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(setData),
-    });
-    if (!res.ok) {
-        const errorData = await res.json().catch(() => ({ message: `Failed to update study set ${setId}` }));
-        throw new Error(errorData.message || `Failed to update study set ${setId}. Status: ${res.status}`);
-    }
-    return await res.json();
-}
+export const updateStudySet = async (token, setId, setData) => {
+  const response = await axios.put(`${API_URL}/${setId}`, setData, getAuthHeaders(token));
+  return response.data;
+};
 
-/**
- * Deletes a study set.
- * @param {string} token - The user's authentication token.
- * @param {string} setId - The ID of the study set to delete.
- * @returns {Promise<void>} A promise that resolves when the study set is deleted.
- */
-export async function deleteStudySet(token, setId) {
-    const res = await fetch(`${BASE_URL}/studysets/${setId}`, {
-        method: 'DELETE',
-        headers: {
-            'Authorization': `Bearer ${token}`,
-        },
-    });
-    if (!res.ok && res.status !== 204) {
-        const errorData = await res.json().catch(() => ({ message: `Failed to delete study set ${setId}` }));
-        throw new Error(errorData.message || `Failed to delete study set ${setId}. Status: ${res.status}`);
-    }
-    if (res.status !== 204) {
-        return await res.json().catch(()=> null);
-    }
-}
+export const deleteStudySet = async (token, setId) => {
+  const response = await axios.delete(`${API_URL}/${setId}`, getAuthHeaders(token));
+  return response.data;
+};

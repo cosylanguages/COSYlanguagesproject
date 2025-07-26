@@ -2,32 +2,33 @@ import React, { useState } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useAuth } from '../../contexts/AuthContext';
 import TransliterableText from '../Common/TransliterableText';
-import NotesPanel from './StudentTools/NotesPanel'; // Corrected path
-import IrregularVerbsTool from './StudentTools/IrregularVerbsTool'; // Corrected path
-import TimerTool from './StudentTools/TimerTool'; // Import TimerTool
-import DictionaryTool from './StudentTools/DictionaryTool'; // Import DictionaryTool
+import NotesTool from './StudentTools/NotesTool';
+import IrregularVerbsTool from './StudentTools/IrregularVerbsTool';
+import TimerTool from './StudentTools/TimerTool';
+import DictionaryTool from './StudentTools/DictionaryTool';
+import FlashcardsTool from './StudentTools/FlashcardsTool';
 import QuizCreator from './QuizCreator';
 import Whiteboard from './Whiteboard';
 import FlashcardCreator from './FlashcardCreator';
 import Modal from '../Common/Modal';
 
-// Basic styling can be added to StudyModePage.css or a dedicated file
-
 const ToolsPanel = () => {
-  const { t, language: currentUILanguage } = useI18n(); // Get currentUILanguage
+  const { t, language: currentUILanguage } = useI18n();
   const { selectedRole } = useAuth();
   const [isNotesOpen, setIsNotesOpen] = useState(false);
   const [isIrregularVerbsOpen, setIsIrregularVerbsOpen] = useState(false);
-  const [isTimerOpen, setIsTimerOpen] = useState(false); // State for TimerTool
-  const [isDictionaryOpen, setIsDictionaryOpen] = useState(false); // State for DictionaryTool
+  const [isTimerOpen, setIsTimerOpen] = useState(false);
+  const [isDictionaryOpen, setIsDictionaryOpen] = useState(false);
+  const [isFlashcardsOpen, setIsFlashcardsOpen] = useState(false);
   const [isQuizCreatorOpen, setIsQuizCreatorOpen] = useState(false);
   const [isWhiteboardOpen, setIsWhiteboardOpen] = useState(false);
   const [isFlashcardCreatorOpen, setIsFlashcardCreatorOpen] = useState(false);
 
   const toggleNotes = () => setIsNotesOpen(!isNotesOpen);
   const toggleIrregularVerbs = () => setIsIrregularVerbsOpen(!isIrregularVerbsOpen);
-  const toggleTimer = () => setIsTimerOpen(!isTimerOpen); // Handler for TimerTool
-  const toggleDictionary = () => setIsDictionaryOpen(!isDictionaryOpen); // Handler for DictionaryTool
+  const toggleTimer = () => setIsTimerOpen(!isTimerOpen);
+  const toggleDictionary = () => setIsDictionaryOpen(!isDictionaryOpen);
+  const toggleFlashcards = () => setIsFlashcardsOpen(!isFlashcardsOpen);
   const toggleQuizCreator = () => setIsQuizCreatorOpen(!isQuizCreatorOpen);
   const toggleWhiteboard = () => setIsWhiteboardOpen(!isWhiteboardOpen);
   const toggleFlashcardCreator = () => setIsFlashcardCreatorOpen(!isFlashcardCreatorOpen);
@@ -53,13 +54,18 @@ const ToolsPanel = () => {
           </button>
         </li>
         <li>
-          <button onClick={toggleTimer} className="btn-link"> {/* Button for TimerTool */}
+          <button onClick={toggleTimer} className="btn-link">
             <TransliterableText text={t('studyMode.toolTimer', '⏱️ Timer')} />
           </button>
         </li>
         <li>
           <button onClick={toggleDictionary} className="btn-link">
             <TransliterableText text={t('studyMode.toolDictionary', '📖 Dictionary')} />
+          </button>
+        </li>
+        <li>
+          <button onClick={toggleFlashcards} className="btn-link">
+            <TransliterableText text={t('studyMode.toolFlashcards', '🃏 Flashcards')} />
           </button>
         </li>
         <li>
@@ -79,13 +85,25 @@ const ToolsPanel = () => {
             </button>
           </li>
         )}
-        {/* Add more tools as needed */}
       </ul>
 
-      {isNotesOpen && <NotesPanel isOpen={isNotesOpen} onClose={toggleNotes} />}
+      {isNotesOpen && (
+        <Modal isOpen={isNotesOpen} onClose={toggleNotes}>
+          <NotesTool />
+        </Modal>
+      )}
       {isIrregularVerbsOpen && <IrregularVerbsTool isOpen={isIrregularVerbsOpen} onClose={toggleIrregularVerbs} />}
       {isTimerOpen && <TimerTool isOpen={isTimerOpen} onClose={toggleTimer} />}
-      {isDictionaryOpen && <DictionaryTool isOpen={isDictionaryOpen} onClose={toggleDictionary} />}
+      {isDictionaryOpen && (
+        <Modal isOpen={isDictionaryOpen} onClose={toggleDictionary}>
+          <DictionaryTool />
+        </Modal>
+      )}
+      {isFlashcardsOpen && (
+        <Modal isOpen={isFlashcardsOpen} onClose={toggleFlashcards}>
+          <FlashcardsTool />
+        </Modal>
+      )}
       {isQuizCreatorOpen && (
         <Modal isOpen={isQuizCreatorOpen} onClose={toggleQuizCreator}>
           <QuizCreator />
