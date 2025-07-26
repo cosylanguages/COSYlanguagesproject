@@ -119,6 +119,7 @@
   .landing-button:hover {
     background: linear-gradient(90deg, #00c6ff 60%, #007bff 100%);
     transform: scale(1.08);
+}
 /* Animation et style pour le logo */
 .logo {
     width: 120px;
