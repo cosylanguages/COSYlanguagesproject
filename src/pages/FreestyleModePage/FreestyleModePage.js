@@ -55,14 +55,63 @@ const FreestyleModePage = () => {
     setSelectedPack(pack);
   };
 
+  // Logos et drapeaux comme dans CosyLanguageSelector
+  const logos = {
+    COSYarmenian: '/assets/icons/cosylanguages_logos/cosyarmenian.png',
+    COSYbashkir: '/assets/icons/cosylanguages_logos/cosybachkir.png',
+    COSYbreton: '/assets/icons/cosylanguages_logos/cosybreton.png',
+    COSYenglish: '/assets/icons/cosylanguages_logos/cosyenglish.png',
+    COSYfrench: '/assets/icons/cosylanguages_logos/cosyfrench.png',
+    COSYgeorgian: '/assets/icons/cosylanguages_logos/cosygeorgian.png',
+    COSYgerman: '/assets/icons/cosylanguages_logos/cosygerman.png',
+    COSYgreek: '/assets/icons/cosylanguages_logos/cosygreek.png',
+    COSYitalian: '/assets/icons/cosylanguages_logos/cosyitalian.png',
+    COSYportuguese: '/assets/icons/cosylanguages_logos/cosyportuguese.png',
+    COSYrussian: '/assets/icons/cosylanguages_logos/cosyrussian.png',
+    COSYspanish: '/assets/icons/cosylanguages_logos/cosyspanish.png',
+    COSYtatar: '/assets/icons/cosylanguages_logos/cosytatar.png',
+  };
+  const flags = {
+    COSYbashkir: '/assets/flags/Flag_of_Bashkortostan.png',
+    COSYbreton: '/assets/flags/Flag_of_Brittany.png',
+    COSYtatar: '/assets/flags/Flag_of_Tatarstan.png',
+  };
+  // Pour le nom natif, on peut utiliser une traduction ou une constante si disponible
+  const languageNames = {
+    COSYarmenian: 'Հայերեն',
+    COSYbashkir: 'Башҡорт',
+    COSYbreton: 'Brezhoneg',
+    COSYenglish: 'English',
+    COSYfrench: 'Français',
+    COSYgeorgian: 'ქართული',
+    COSYgerman: 'Deutsch',
+    COSYgreek: 'Ελληνικά',
+    COSYitalian: 'Italiano',
+    COSYportuguese: 'Português',
+    COSYrussian: 'Русский',
+    COSYspanish: 'Español',
+    COSYtatar: 'Татар',
+  };
   return (
     <div className="freestyle-mode-container">
       <h1 className="freestyle-mode-header">Freestyle Mode</h1>
-
+      {/* Affichage du logo et du drapeau de la langue sélectionnée */}
+      {selectedLanguage && (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: '16px 0' }}>
+          {logos[selectedLanguage] && (
+            <img src={logos[selectedLanguage]} alt="Logo" style={{ width: '48px', height: '48px', borderRadius: '8px', boxShadow: '0 1px 6px rgba(0,0,0,0.10)' }} />
+          )}
+          {flags[selectedLanguage] && (
+            <img src={flags[selectedLanguage]} alt="Drapeau" style={{ width: '48px', height: '48px', borderRadius: '8px', boxShadow: '0 1px 6px rgba(0,0,0,0.10)' }} />
+          )}
+          <span style={{ fontWeight: 'bold', fontSize: '1.2em' }}>
+            {languageNames[selectedLanguage] || selectedLanguage}
+          </span>
+        </div>
+      )}
       {/* Display the booster packs and the user's progress. */}
       <BoosterPacks boosterPacks={boosterPacks} onSelect={handlePackSelect} />
       <FreestyleProgress />
-
       {/* Container for the main freestyle mode controls. */}
       <div className="freestyle-controls-container">
         <LanguageSelectorFreestyle />
@@ -73,7 +122,6 @@ const FreestyleModePage = () => {
           <PracticeCategoryNav language={selectedLanguage} days={selectedDays} />
         )}
       </div>
-
       {/* If an exercise is selected, render the exercise host. */}
       {selectedExercise && (
         <ExerciseHost
@@ -82,7 +130,6 @@ const FreestyleModePage = () => {
           subPracticeType={selectedExercise.exercise}
         />
       )}
-
       {/* If a pack is selected, show the word cloud. */}
       {selectedPack && <WordCloud words={words} />}
       {/* If there is a summary, show the session summary. */}

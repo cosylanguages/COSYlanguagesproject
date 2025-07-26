@@ -324,6 +324,20 @@ const TeacherDashboard = () => {
   return (
     <div className="teacher-dashboard-container-grid">
       <StudyModeBanner />
+      {/* Affichage du logo et du drapeau de la langue sélectionnée */}
+      {currentLangKey && (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: '16px 0' }}>
+          {logos[currentLangKey] && (
+            <img src={logos[currentLangKey]} alt={t('languageSelector.logoAlt', 'Logo')} style={{ width: '48px', height: '48px', borderRadius: '8px', boxShadow: '0 1px 6px rgba(0,0,0,0.10)' }} />
+          )}
+          {flags[currentLangKey] && (
+            <img src={flags[currentLangKey]} alt={t('languageSelector.flagAlt', 'Drapeau')} style={{ width: '48px', height: '48px', borderRadius: '8px', boxShadow: '0 1px 6px rgba(0,0,0,0.10)' }} />
+          )}
+          <span style={{ fontWeight: 'bold', fontSize: '1.2em' }}>
+            {allTranslations[currentLangKey]?.cosyName || currentLangKey}
+          </span>
+        </div>
+      )}
       {/* The sidebar for managing days and lesson sections. */}
       <div className="teacher-dashboard-sidebar">
         <DayManager 
