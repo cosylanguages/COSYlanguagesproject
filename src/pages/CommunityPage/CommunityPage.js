@@ -1,16 +1,8 @@
 import React from 'react';
-import Feed from '../../components/Community/Feed';
-import './CommunityPage.css';
+import Community from '../../pages/Community';
 
-// This is the main component for the Community page.
-// It displays a feed of posts from the community.
-function CommunityPage() {
-  return (
-    <div className="community-container">
-      <h1 className="community-header">Community</h1>
-      <Feed />
-    </div>
-  );
-}
+const CommunityPage = () => {
+  return <Community />;
+};
 
 export default CommunityPage;
