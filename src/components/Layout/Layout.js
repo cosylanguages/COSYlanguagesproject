@@ -14,6 +14,7 @@ const navLinks = [
   { to: '/study', text: 'navStudyMode', defaultText: 'Study' },
   { to: '/progress', text: 'navProgress', defaultText: 'Progress' },
   { to: '/community', text: 'navCommunity', defaultText: 'Community' },
+  { to: '/pricing', text: 'navPricing', defaultText: 'Pricing' },
 ];
 
 /**
