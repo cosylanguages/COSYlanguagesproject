@@ -32,9 +32,30 @@ const TEACHER_LESSON_STORAGE_KEY = 'teacherSavedLesson_default';
  * @returns {JSX.Element} The TeacherDashboard component.
  */
 const TeacherDashboard = () => {
-  const { t } = useI18n();
+  const { t, i18n } = useI18n();
   const { authToken } = useAuth();
   // State for managing lesson blocks, modals, tabs, and other UI elements.
+  const { currentLangKey, allTranslations } = i18n || { currentLangKey: null, allTranslations: {} };
+  const logos = {
+    COSYarmenian: '/assets/icons/cosylanguages_logos/cosyarmenian.png',
+    COSYbashkir: '/assets/icons/cosylanguages_logos/cosybachkir.png',
+    COSYbreton: '/assets/icons/cosylanguages_logos/cosybreton.png',
+    COSYenglish: '/assets/icons/cosylanguages_logos/cosyenglish.png',
+    COSYfrench: '/assets/icons/cosylanguages_logos/cosyfrench.png',
+    COSYgeorgian: '/assets/icons/cosylanguages_logos/cosygeorgian.png',
+    COSYgerman: '/assets/icons/cosylanguages_logos/cosygerman.png',
+    COSYgreek: '/assets/icons/cosylanguages_logos/cosygreek.png',
+    COSYitalian: '/assets/icons/cosylanguages_logos/cosyitalian.png',
+    COSYportuguese: '/assets/icons/cosylanguages_logos/cosyportuguese.png',
+    COSYrussian: '/assets/icons/cosylanguages_logos/cosyrussian.png',
+    COSYspanish: '/assets/icons/cosylanguages_logos/cosyspanish.png',
+    COSYtatar: '/assets/icons/cosylanguages_logos/cosytatar.png',
+  };
+  const flags = {
+    COSYbashkir: '/assets/flags/Flag_of_Bashkortostan.png',
+    COSYbreton: '/assets/flags/Flag_of_Brittany.png',
+    COSYtatar: '/assets/flags/Flag_of_Tatarstan.png',
+  };
   const [lessonBlocks, setLessonBlocks] = useState([]);
   const [isTemplateModalOpen, setIsTemplateModalOpen] = useState(false);
   const [isTemplateEditorOpen, setIsTemplateEditorOpen] = useState(false);
