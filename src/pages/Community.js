@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLingui } from '@lingui/react/macro';
 import Feed from '../components/Feed';
 import CreatePost from '../components/CreatePost';
 import EventCalendar from '../components/EventCalendar';
@@ -11,7 +12,8 @@ const Community = () => {
   const isAdmin = true; // À adapter selon le rôle utilisateur
 
   // Logos et drapeaux comme dans CosyLanguageSelector
-  const { currentLangKey, allTranslations } = typeof useI18n === 'function' ? useI18n() : { currentLangKey: null, allTranslations: {} };
+  const { i18n } = useLingui();
+  const { currentLangKey, allTranslations } = i18n || { currentLangKey: null, allTranslations: {} };
   const logos = {
     COSYarmenian: '/assets/icons/cosylanguages_logos/cosyarmenian.png',
     COSYbashkir: '/assets/icons/cosylanguages_logos/cosybachkir.png',
