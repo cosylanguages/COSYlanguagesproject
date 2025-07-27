@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './PricingPage.css';
 
 const PricingPage = () => {
@@ -9,7 +9,7 @@ const PricingPage = () => {
     const [totalEUR, setTotalEUR] = useState(0);
     const [originalTotalEUR, setOriginalTotalEUR] = useState(0);
 
-    const priceData = {
+    const priceData = useMemo(() => ({
         english: {
             standard: {15: 5, 30: 10, 50: 20, 80: 30, 110: 40},
             start: {15: 38, 30: 76, 50: 152, 80: 228, 110: 304},
@@ -28,7 +28,7 @@ const PricingPage = () => {
             progress: {15: 144, 30: 216, 50: 360, 80: 504, 110: 648},
             maestro: {15: 272, 30: 408, 50: 680, 80: 952, 110: 1224}
         }
-    };
+    }), []);
 
     const packageDiscounts = {
         standard: 0,
@@ -58,7 +58,7 @@ const PricingPage = () => {
         };
 
         calculatePrice();
-    }, [language, pkg, duration, quantity]);
+    }, [language, pkg, duration, quantity, priceData]);
 
     const discount = packageDiscounts[pkg];
 
