@@ -1,5 +1,5 @@
 // Import necessary libraries and components.
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 // Import the Link component from react-router-dom for navigation.
 import { Link } from 'react-router-dom';
 // Import the CSS for this component.
@@ -14,6 +14,7 @@ import Calculator from '../../components/Calculator/Calculator';
  * @returns {JSX.Element} The LandingPage component.
  */
 function LandingPage() {
+  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   // Ref pour la zone d'accueil (pour positionner les confettis)
   const landingContentRef = useRef(null);
 
@@ -42,10 +43,6 @@ function LandingPage() {
         <p>Apprenez, jouez et progressez chaque jour dans une ambiance fun et motivante.</p>
         {/* Logo animé */}
         <img src="/COSYlanguagesproject/cosylanguages.png" alt="Cosy Languages Logo" className="logo animated-logo" />
-        {/* Bouton Quiz du jour avec effet confettis */}
-        <div style={{ margin: '30px 0' }}>
-          <Link to="/study-tools?quiz=day" className="quiz-button" onClick={launchConfetti}>Quiz du jour 🎲</Link>
-        </div>
         {/* Boutons principaux */}
         <div className="landing-buttons">
           <Link to="/freestyle" className="landing-button">Freestyle</Link>
@@ -58,8 +55,13 @@ function LandingPage() {
           <h2 style={{marginTop: '40px', fontSize: '1.5em', color: '#007bff'}}>Langues disponibles</h2>
           <LanguageSelector />
         </div>
-        <div className="calculator-container">
-          <Calculator />
+        <div className={`calculator-wrapper ${isCalculatorOpen ? 'open' : ''}`}>
+          <button onClick={() => setIsCalculatorOpen(!isCalculatorOpen)} className="calculator-toggle">
+            🧮
+          </button>
+          <div className="calculator-container">
+            <Calculator />
+          </div>
         </div>
       </div>
     </div>

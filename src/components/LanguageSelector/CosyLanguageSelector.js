@@ -8,26 +8,26 @@ import './CosyLanguageSelector.css';
 
 // A map of language keys to their corresponding logo images.
 const logos = {
-  COSYarmenian: '/assets/icons/cosylanguages_logos/cosyarmenian.png',
-  COSYbashkir: '/assets/icons/cosylanguages_logos/cosybachkir.png',
-  COSYbreton: '/assets/icons/cosylanguages_logos/cosybreton.png',
-  COSYenglish: '/assets/icons/cosylanguages_logos/cosyenglish.png',
-  COSYfrench: '/assets/icons/cosylanguages_logos/cosyfrench.png',
-  COSYgeorgian: '/assets/icons/cosylanguages_logos/cosygeorgian.png',
-  COSYgerman: '/assets/icons/cosylanguages_logos/cosygerman.png',
-  COSYgreek: '/assets/icons/cosylanguages_logos/cosygreek.png',
-  COSYitalian: '/assets/icons/cosylanguages_logos/cosyitalian.png',
-  COSYportuguese: '/assets/icons/cosylanguages_logos/cosyportuguese.png',
-  COSYrussian: '/assets/icons/cosylanguages_logos/cosyrussian.png',
-  COSYspanish: '/assets/icons/cosylanguages_logos/cosyspanish.png',
-  COSYtatar: '/assets/icons/cosylanguages_logos/cosytatar.png',
+  COSYarmenian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyarmenian.png',
+  COSYbashkir: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosybachkir.png',
+  COSYbreton: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosybreton.png',
+  COSYenglish: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyenglish.png',
+  COSYfrench: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyfrench.png',
+  COSYgeorgian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygeorgian.png',
+  COSYgerman: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygerman.png',
+  COSYgreek: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygreek.png',
+  COSYitalian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyitalian.png',
+  COSYportuguese: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyportuguese.png',
+  COSYrussian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyrussian.png',
+  COSYspanish: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyspanish.png',
+  COSYtatar: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosytatar.png',
 };
 
 // Map des drapeaux pour chaque langue (ajouter selon les fichiers disponibles)
 const flags = {
-  COSYbashkir: '/assets/flags/Flag_of_Bashkortostan.png',
-  COSYbreton: '/assets/flags/Flag_of_Brittany.png',
-  COSYtatar: '/assets/flags/Flag_of_Tatarstan.png',
+  COSYbashkir: '/COSYlanguagesproject/assets/flags/Flag_of_Bashkortostan.png',
+  COSYbreton: '/COSYlanguagesproject/assets/flags/Flag_of_Brittany.png',
+  COSYtatar: '/COSYlanguagesproject/assets/flags/Flag_of_Tatarstan.png',
 };
 
 /**
