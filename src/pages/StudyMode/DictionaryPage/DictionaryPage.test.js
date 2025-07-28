@@ -1,24 +1,25 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter }_from_'react-router-dom';
 import DictionaryPage from './DictionaryPage';
-import { I18nProvider } from '../../../i18n/I18nContext';
+import { I18nProvider, useI18n } from '../../../i18n/I18nContext';
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useParams: () => ({
-    lang: 'en',
-  }),
+jest.mock('../../../i18n/I18nContext', () => ({
+    ...jest.requireActual('../../../i18n/I18nContext'),
+    useI18n: () => ({
+        t: (key, options) => options?.defaultValue || key,
+        language: 'en',
+    }),
 }));
 
 test('renders dictionary page', () => {
-  render(
-    <I18nProvider>
-      <MemoryRouter>
-        <DictionaryPage />
-      </MemoryRouter>
-    </I18nProvider>
-  );
-  const linkElement = screen.getByText(/Dictionary/i);
-  expect(linkElement).toBeInTheDocument();
+    render(
+        <MemoryRouter initialEntries={['/en/dictionary']}>
+            <I18nProvider>
+                <DictionaryPage />
+            </I18nProvider>
+        </MemoryRouter>
+    );
+    const linkElement = screen.getByText(/Dictionary/i);
+    expect(linkElement).toBeInTheDocument();
 });
