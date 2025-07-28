@@ -8,26 +8,36 @@ import './CosyLanguageSelector.css';
 
 // A map of language keys to their corresponding logo images.
 const logos = {
-  COSYarmenian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyarmenian.png',
-  COSYbashkir: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosybachkir.png',
-  COSYbreton: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosybreton.png',
-  COSYenglish: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyenglish.png',
-  COSYfrench: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyfrench.png',
-  COSYgeorgian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygeorgian.png',
-  COSYgerman: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygerman.png',
-  COSYgreek: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygreek.png',
-  COSYitalian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyitalian.png',
-  COSYportuguese: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyportuguese.png',
-  COSYrussian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyrussian.png',
-  COSYspanish: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyspanish.png',
-  COSYtatar: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosytatar.png',
+  armenian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyarmenian.png',
+  bashkir: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosybachkir.png',
+  breton: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosybreton.png',
+  english: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyenglish.png',
+  french: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyfrench.png',
+  georgian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygeorgian.png',
+  german: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygerman.png',
+  greek: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygreek.png',
+  italian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyitalian.png',
+  portuguese: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyportuguese.png',
+  russian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyrussian.png',
+  spanish: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyspanish.png',
+  tatar: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosytatar.png',
 };
 
 // Map des drapeaux pour chaque langue (ajouter selon les fichiers disponibles)
 const flags = {
-  COSYbashkir: '/COSYlanguagesproject/assets/flags/Flag_of_Bashkortostan.png',
-  COSYbreton: '/COSYlanguagesproject/assets/flags/Flag_of_Brittany.png',
-  COSYtatar: '/COSYlanguagesproject/assets/flags/Flag_of_Tatarstan.png',
+  bashkir: '/COSYlanguagesproject/assets/flags/Flag_of_Bashkortostan.png',
+  breton: '/COSYlanguagesproject/assets/flags/Flag_of_Brittany.png',
+  tatar: '/COSYlanguagesproject/assets/flags/Flag_of_Tatarstan.png',
+  armenian: '/COSYlanguagesproject/assets/flags/Flag_of_Armenia.png',
+  georgian: '/COSYlanguagesproject/assets/flags/Flag_of_Georgia.png',
+  greek: '/COSYlanguagesproject/assets/flags/Flag_of_Greece.png',
+  italian: '/COSYlanguagesproject/assets/flags/Flag_of_Italy.png',
+  russian: '/COSYlanguagesproject/assets/flags/Flag_of_Russia.png',
+  spanish: '/COSYlanguagesproject/assets/flags/Flag_of_Spain.png',
+  french: '/COSYlanguagesproject/assets/flags/Flag_of_France.png',
+  german: '/COSYlanguagesproject/assets/flags/Flag_of_Germany.png',
+  portuguese: '/COSYlanguagesproject/assets/flags/Flag_of_Portugal.png',
+  english: '/COSYlanguagesproject/assets/flags/Flag_of_the_United_Kingdom.png',
 };
 
 /**
@@ -53,28 +63,14 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
   // Effect to update the body class based on the selected language.
   useEffect(() => {
     const body = document.body;
-    const currentLanguageKeys = Object.keys(allTranslations || {});
-    const classesToRemove = Array.from(body.classList).filter(cls =>
-        cls.endsWith('-bg') ||
-        cls === 'lang-bg' ||
-        cls === 'lang-bg-fallback' ||
-        currentLanguageKeys.some(key => cls.startsWith(key + '-bg')) ||
-        cls.startsWith('COSY') ||
-        cls.startsWith('ТАКОЙ') ||
-        cls.startsWith('ΚΟΖΥ') ||
-        cls.startsWith('ԾՈՍՅ') ||
-        cls === 'no-language-selected-bg'
-    );
-    classesToRemove.forEach(cls => body.classList.remove(cls));
-
-    if (currentLangKey && currentLangKey !== "null") {
-        const langClassName = `${currentLangKey}-bg`;
-        body.classList.add(langClassName);
-        body.classList.add('lang-bg');
+    if (currentLangKey && flags[currentLangKey]) {
+      body.style.backgroundImage = `url(${flags[currentLangKey]})`;
+      body.style.backgroundSize = 'cover';
+      body.style.backgroundPosition = 'center';
     } else {
-        body.classList.add('no-language-selected-bg');
+      body.style.backgroundImage = 'none';
     }
-  }, [currentLangKey, allTranslations]);
+  }, [currentLangKey]);
 
   // Get the list of available languages from the translations data.
   const availableLanguages = Object.keys(allTranslations)
@@ -120,7 +116,7 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
     <div className="cosy-language-option" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
       <img src={logo} alt={`${label} logo`} className="language-logo" />
       {flags[value] && (
-        <img src={flags[value]} alt={`${label} flag`} className="language-flag" style={{ width: '28px', height: '28px', borderRadius: '4px', boxShadow: '0 1px 4px rgba(0,0,0,0.07)' }} />
+        <img src={flags[value]} alt={`${label} flag`} className="language-flag" />
       )}
       <TransliterableText text={label} />
     </div>
