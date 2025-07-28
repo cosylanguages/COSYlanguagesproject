@@ -24,7 +24,6 @@ import LearnedWordsPage from './pages/StudyMode/LearnedWordsPage/LearnedWordsPag
 import ConversationPage from './pages/StudyMode/ConversationPage/ConversationPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import CommunityPage from './pages/CommunityPage/CommunityPage';
-import PricingPage from './pages/PricingPage/PricingPage';
 
 /**
  * A protected route component that checks for user authentication.
@@ -108,8 +107,6 @@ function App() {
                 <Route path="profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
                 {/* The community page. */}
                 <Route path="community" element={<CommunityPage />} />
-                {/* The pricing page. */}
-                <Route path="pricing" element={<PricingPage />} />
                 {/* The "my study sets" page, which is a protected route. */}
                 <Route
                   path="my-sets"
