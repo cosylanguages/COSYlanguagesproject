@@ -18,23 +18,6 @@ function LandingPage() {
   // Ref pour la zone d'accueil (pour positionner les confettis)
   const landingContentRef = useRef(null);
 
-  // Fonction pour générer des confettis
-  const launchConfetti = (e) => {
-    const colors = ['#ff9800', '#ffc107', '#007bff', '#00c6ff', '#ff4081', '#4caf50'];
-    const parent = landingContentRef.current;
-    if (!parent) return;
-    for (let i = 0; i < 18; i++) {
-      const confetti = document.createElement('div');
-      confetti.className = 'confetti';
-      confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
-      confetti.style.left = (e.clientX - parent.getBoundingClientRect().left + (Math.random() * 60 - 30)) + 'px';
-      confetti.style.top = (e.clientY - parent.getBoundingClientRect().top + (Math.random() * 20 - 10)) + 'px';
-      confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-      parent.appendChild(confetti);
-      setTimeout(() => confetti.remove(), 1200);
-    }
-  };
-
   return (
     <div className="landing-container">
       <div className="landing-content" ref={landingContentRef}>
