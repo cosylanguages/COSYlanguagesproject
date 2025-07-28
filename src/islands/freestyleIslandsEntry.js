@@ -1,5 +1,5 @@
 // Import necessary libraries and components.
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, useNavigate } from 'react-router-dom';
 import { I18nProvider, useI18n } from '../i18n/I18nContext';
