@@ -1,15 +1,22 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import { I18nProvider } from '../../i18n/I18nContext';
+
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useParams: () => ({
+    lang: 'en',
+  }),
+}));
 
 test('renders landing page with logo and mode buttons', () => {
   render(
     <I18nProvider>
-      <Router>
+      <MemoryRouter>
         <LandingPage />
-      </Router>
+      </MemoryRouter>
     </I18nProvider>
   );
 

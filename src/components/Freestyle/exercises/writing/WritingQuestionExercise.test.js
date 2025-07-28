@@ -1,7 +1,8 @@
 import React from 'react';
-import { render, screen } from '../../../../testUtils';
-import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import WritingQuestionExercise from './WritingQuestionExercise';
+import { I18nProvider } from '../../../../i18n/I18nContext';
 
 jest.mock('../../../StudyMode/WritingHelper', () => {
     return function DummyWritingHelper({ onTextChange }) {
@@ -9,9 +10,22 @@ jest.mock('../../../StudyMode/WritingHelper', () => {
     };
 });
 
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useParams: () => ({
+        lang: 'en',
+    }),
+}));
+
 describe('WritingQuestionExercise', () => {
     it('renders the WritingHelper component', () => {
-        render(<WritingQuestionExercise language="en" days={['1']} />);
-        expect(screen.getByTestId('writing-helper')).toBeInTheDocument();
+        render(
+            <I18nProvider>
+                <MemoryRouter>
+                    <WritingQuestionExercise language="en" days={['1']} />
+                </MemoryRouter>
+            </I18nProvider>
+        );
+        expect(screen.getByRole('textbox')).toBeInTheDocument();
     });
 });

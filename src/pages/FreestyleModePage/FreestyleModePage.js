@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 // Import the useFreestyle hook to access the freestyle mode context.
 import { useFreestyle } from '../../contexts/FreestyleContext';
 // Import the components that make up the freestyle mode page.
-import LanguageSelectorFreestyle from '../../components/Freestyle/LanguageSelectorFreestyle';
 import DaySelectorFreestyle from '../../components/Freestyle/DaySelectorFreestyle';
 import PracticeCategoryNav from '../../components/Freestyle/PracticeCategoryNav';
 import ExerciseHost from '../../components/Freestyle/ExerciseHost';
@@ -114,7 +113,6 @@ const FreestyleModePage = () => {
       <FreestyleProgress />
       {/* Container for the main freestyle mode controls. */}
       <div className="freestyle-controls-container">
-        <LanguageSelectorFreestyle />
         {/* Only show the day selector if a language is selected. */}
         {selectedLanguage && <DaySelectorFreestyle language={selectedLanguage} />}
         {/* Only show the practice category navigation if a language and days are selected. */}
