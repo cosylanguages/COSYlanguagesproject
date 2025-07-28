@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import './LandingPage.css';
 import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
 import Calculator from '../../components/Calculator/Calculator';
+import { useI18n } from '../../i18n/I18nContext';
 
 /**
  * The main landing page for the application.
@@ -17,27 +18,27 @@ function LandingPage() {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   // Ref pour la zone d'accueil (pour positionner les confettis)
   const landingContentRef = useRef(null);
+  const { t } = useI18n();
+
 
   return (
     <div className="landing-container">
       <div className="landing-content" ref={landingContentRef}>
-        <h1>Bienvenue sur Cosy Languages !</h1>
-        <div className="encouragement-message">Chaque jour est une nouvelle aventure linguistique ! 🚀</div>
-        <p>Apprenez, jouez et progressez chaque jour dans une ambiance fun et motivante.</p>
-        {/* Logo animé */}
-        <img src="/COSYlanguagesproject/cosylanguages.png" alt="Cosy Languages Logo" className="logo animated-logo" />
-        {/* Boutons principaux */}
-        <div className="landing-buttons">
-          <Link to="/freestyle" className="landing-button">Freestyle</Link>
-          <Link to="/study" className="landing-button">Study Mode</Link>
-          <Link to="/community" className="landing-button">Community</Link>
-        </div>
+        <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosylanguages.png" alt="Cosy Languages Logo" className="logo animated-logo" />
 
         {/* Section Langues disponibles */}
         <div className="languages-section">
-          <h2 style={{marginTop: '40px', fontSize: '1.5em', color: '#007bff'}}>Langues disponibles</h2>
           <LanguageSelector />
         </div>
+
+        {/* Boutons principaux */}
+        <div className="landing-buttons">
+          <Link to="/freestyle" className="landing-button">{t('Freestyle')}</Link>
+          <Link to="/study" className="landing-button">{t('Study Mode')}</Link>
+          <Link to="/community" className="landing-button">{t('Community')}</Link>
+        </div>
+
+
         <div className={`calculator-wrapper ${isCalculatorOpen ? 'open' : ''}`}>
           <button onClick={() => setIsCalculatorOpen(!isCalculatorOpen)} className="calculator-toggle">
             🧮
