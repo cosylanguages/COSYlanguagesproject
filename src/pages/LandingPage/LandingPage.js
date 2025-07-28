@@ -4,6 +4,8 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 // Import the CSS for this component.
 import './LandingPage.css';
+import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
+import Calculator from '../../components/Calculator/Calculator';
 
 /**
  * The main landing page for the application.
@@ -54,76 +56,10 @@ function LandingPage() {
         {/* Section Langues disponibles */}
         <div className="languages-section">
           <h2 style={{marginTop: '40px', fontSize: '1.5em', color: '#007bff'}}>Langues disponibles</h2>
-          <div className="languages-logos">
-            {/* English */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyenglish.png" alt="English Logo" className="language-logo" />
-              <span>English</span>
-            </div>
-            {/* Italiano */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyitalian.png" alt="Italian Logo" className="language-logo" />
-              <span>Italiano</span>
-            </div>
-            {/* Русский */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyrussian.png" alt="Russian Logo" className="language-logo" />
-              <span>Русский</span>
-            </div>
-            {/* Français */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyfrench.png" alt="French Logo" className="language-logo" />
-              <span>Français</span>
-            </div>
-            {/* Español */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyspanish.png" alt="Spanish Logo" className="language-logo" />
-              <span>Español</span>
-            </div>
-            {/* Deutsch */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygerman.png" alt="German Logo" className="language-logo" />
-              <span>Deutsch</span>
-            </div>
-            {/* Português */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyportuguese.png" alt="Portuguese Logo" className="language-logo" />
-              <span>Português</span>
-            </div>
-            {/* Հայերեն (Arménien) */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyarmenian.png" alt="Armenian Logo" className="language-logo" />
-              <span>Հայերեն</span>
-            </div>
-            {/* Ελληνικά (Grec) */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygreek.png" alt="Greek Logo" className="language-logo" />
-              <span>Ελληνικά</span>
-            </div>
-            {/* ქართული (Géorgien) */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygeorgian.png" alt="Georgian Logo" className="language-logo" />
-              <span>ქართული</span>
-            </div>
-            {/* Breton */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosybreton.png" alt="Breton Logo" className="language-logo" />
-              <img src="/COSYlanguagesproject/assets/flags/Flag_of_Brittany.png" alt="Breton Flag" className="language-flag" />
-              <span>Breton</span>
-            </div>
-            {/* Bashkir */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosybachkir.png" alt="Bashkir Logo" className="language-logo" />
-              <img src="/COSYlanguagesproject/assets/flags/Flag_of_Bashkortostan.png" alt="Bashkir Flag" className="language-flag" />
-              <span>Башҡортса</span>
-            </div>
-            {/* Tatar */}
-            <div className="language-item">
-              <img src="/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosytatar.png" alt="Tatar Logo" className="language-logo" />
-              <img src="/COSYlanguagesproject/assets/flags/Flag_of_Tatarstan.png" alt="Tatar Flag" className="language-flag" />
-              <span>Татарча</span>
-            </div>
-          </div>
+          <LanguageSelector />
+        </div>
+        <div className="calculator-container">
+          <Calculator />
         </div>
       </div>
     </div>
