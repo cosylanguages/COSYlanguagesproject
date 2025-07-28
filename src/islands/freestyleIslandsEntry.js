@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, useNavigate } from 'react-router-dom';
 import { I18nProvider, useI18n } from '../i18n/I18nContext';
 import { LatinizationProvider } from '../contexts/LatinizationContext';
-import LanguageSelectorFreestyle from '../components/Freestyle/LanguageSelectorFreestyle';
+import LanguageSelector from '../components/LanguageSelector/LanguageSelector';
 import ToggleLatinizationButton from '../components/Common/ToggleLatinizationButton';
 import DaySelectorFreestyle from '../components/Freestyle/DaySelectorFreestyle';
 import PracticeCategoryNav from '../components/Freestyle/PracticeCategoryNav';
@@ -27,40 +27,11 @@ let exerciseInstanceKey = 0;
  * This component allows the user to select a language.
  */
 export const LanguageIslandApp = () => {
-  const { language: i18nLanguage, changeLanguage, t } = useI18n();
-  const [selectedLanguage, setSelectedLanguage] = useState(i18nLanguage);
-  const [toast, setToast] = useState(null);
+  const { t } = useI18n();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (i18nLanguage !== selectedLanguage) {
-      setSelectedLanguage(i18nLanguage);
-    }
-  }, [i18nLanguage, selectedLanguage]);
-
-  const showToast = (message, duration = 2500) => { setToast(message); setTimeout(() => setToast(null), duration); };
 
   const navigateToStudyMode = () => {
     navigate('/study');
-  };
-
-  const handleLanguageChangeForIsland = (newLanguage) => {
-    if (!newLanguage || selectedLanguage === newLanguage) {
-      if (newLanguage === null || newLanguage === undefined) {
-        console.warn('[LanguageIslandApp] Attempted to set language to null/undefined. Ignoring.');
-        return;
-      }
-      if (selectedLanguage === newLanguage) return;
-    }
-
-    setSelectedLanguage(newLanguage);
-    changeLanguage(newLanguage);
-
-    globalSelectedLanguage = newLanguage;
-
-    const languageName = t(`language.${newLanguage}`, String(newLanguage).replace('COSY', ''));
-    showToast(t('freestyle.languageChangedToast', `Language changed: ${languageName}`, { languageName }));
-    window.dispatchEvent(new CustomEvent('languageIslandChange', { detail: { selectedLanguage: newLanguage } }));
   };
 
   return (
@@ -69,13 +40,12 @@ export const LanguageIslandApp = () => {
         <label htmlFor="freestyle-language-select" data-transliterable id="study-choose-language-label">
           {t('chooseLanguageLabel', '🌎 Choose Your Language:')}
         </label>
-        <LanguageSelectorFreestyle selectedLanguage={selectedLanguage} onLanguageChange={handleLanguageChangeForIsland} />
-        <ToggleLatinizationButton currentDisplayLanguage={selectedLanguage} />
+        <LanguageSelector />
+        <ToggleLatinizationButton />
         <button onClick={navigateToStudyMode} className="study-mode-switch-btn">
           {t('switchToStudyMode', 'Study Mode')}
         </button>
       </div>
-      {toast && <div className="cosy-toast">{toast}</div>}
     </>
   );
 };
