@@ -15,6 +15,8 @@ export const useStudySet = () => useContext(StudySetContext);
 export const StudySetProvider = ({ children }) => {
   const [studySets, setStudySets] = useState([]);
   const [selectedSet, setSelectedSet] = useState(null);
+  const [selectedSetId, setSelectedSetId] = useState(null);
+  const [currentView, setCurrentView] = useState('list');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const { authToken } = useAuth();
@@ -96,6 +98,8 @@ export const StudySetProvider = ({ children }) => {
   const value = {
     studySets,
     selectedSet,
+    selectedSetId,
+    currentView,
     loading,
     error,
     fetchStudySets,
@@ -103,6 +107,8 @@ export const StudySetProvider = ({ children }) => {
     addStudySet,
     updateStudySet,
     deleteStudySet,
+    setSelectedSetId,
+    setCurrentView,
   };
 
   return (
