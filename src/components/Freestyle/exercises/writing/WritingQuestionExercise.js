@@ -1,24 +1,26 @@
-import React from 'react';
-import WritingExercise from './WritingExercise';
+import React, { useState, useEffect } from 'react';
 import { loadSpeakingPromptsData } from '../../../../utils/exerciseDataService';
 import { useI18n } from '../../../../i18n/I18nContext';
 
 const WritingQuestionExercise = ({ language, days, onNext, exerciseKey }) => {
   const { t } = useI18n();
+  const [prompt, setPrompt] = useState('');
+
+  useEffect(() => {
+    const fetchPrompt = async () => {
+      const prompts = await loadSpeakingPromptsData(language, days);
+      setPrompt(prompts[0].text);
+    };
+    fetchPrompt();
+  }, [language, days]);
 
   return (
-    <WritingExercise
-      language={language}
-      days={days}
-      onNext={onNext}
-      exerciseKey={exerciseKey}
-      exerciseType="questions"
-      title={t('titles.answerTheQuestionWriting', 'Answer the Question (Writing)')}
-      promptLoader={loadSpeakingPromptsData}
-      hint={t('feedback.hintWritingQuestion', "Hint: Address all parts of the question. Structure your answer with an introduction, body, and conclusion if applicable.")}
-      placeholder={t('placeholders.typeYourAnswerHere', 'Type your answer here...')}
-      submitFeedback={t('feedback.answerSubmittedWriting', 'Answer submitted. Remember to check for grammar and clarity.')}
-    />
+    <div>
+      <h3>{t('titles.answerTheQuestionWriting', 'Answer the Question (Writing)')}</h3>
+      <p>{prompt}</p>
+      <textarea placeholder={t('placeholders.typeYourAnswerHere', 'Type your answer here...')}></textarea>
+      <button onClick={onNext}>{t('common.submit', 'Submit')}</button>
+    </div>
   );
 };
 
