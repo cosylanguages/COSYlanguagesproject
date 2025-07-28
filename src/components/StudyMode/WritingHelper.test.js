@@ -13,8 +13,7 @@ describe('WritingHelper', () => {
         render(<WritingHelper />);
         fireEvent.change(screen.getByPlaceholderText('Write something...'), { target: { value: 'Test input' } });
         fireEvent.click(screen.getByText('Get Feedback'));
-        await waitFor(() => {
-            expect(screen.getByText('Test feedback')).toBeInTheDocument();
-        });
+        const feedbackElement = await screen.findByText(/Test feedback/i);
+        expect(feedbackElement).toBeInTheDocument();
     });
 });
