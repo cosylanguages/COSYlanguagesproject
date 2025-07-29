@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Calculator.css';
 import { useI18n } from '../../i18n/I18nContext';
 import {
@@ -36,7 +36,7 @@ const Calculator = () => {
         };
 
         calculatePrice();
-    }, [language, pkg, duration, quantity, priceData]);
+    }, [language, pkg, duration, quantity]);
 
     const discount = packageDiscounts[pkg];
 
