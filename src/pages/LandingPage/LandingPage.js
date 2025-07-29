@@ -32,11 +32,7 @@ function LandingPage() {
         </div>
 
         {/* Boutons principaux */}
-        <div className="landing-buttons">
-          <Link to="/freestyle" className="landing-button">{t('Freestyle')}</Link>
-          <Link to="/study" className="landing-button">{t('Study Mode')}</Link>
-          <Link to="/community" className="landing-button">{t('Community')}</Link>
-        </div>
+
 
 
         <div className={`calculator-wrapper ${isCalculatorOpen ? 'open' : ''}`}>
