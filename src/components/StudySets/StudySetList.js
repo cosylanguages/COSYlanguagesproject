@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { getStudySets, deleteStudySet } from '../../utils/studySetService';
 import { useI18n } from '../../i18n/I18nContext';
-import './StudySetManager.css';
+import './StudySetList.css';
 
 /**
  * A component that displays a list of study sets.
@@ -14,7 +14,7 @@ import './StudySetManager.css';
  * @param {function} props.onLaunchStudyPlayer - A callback function to handle the launching of the study player.
  * @returns {JSX.Element} The StudySetList component.
  */
-const StudySetManager = ({ onCreateNew, onEditSetDetails, onEditSetCards, onLaunchStudyPlayer }) => {
+const StudySetList = ({ onCreateNew, onEditSetDetails, onEditSetCards, onLaunchStudyPlayer }) => {
   const { t } = useI18n();
   // State for the list of study sets, loading status, and errors.
   const [studySets, setStudySets] = useState([]);
@@ -153,4 +153,4 @@ const StudySetManager = ({ onCreateNew, onEditSetDetails, onEditSetCards, onLaun
   );
 };
 
-export default StudySetManager;
+export default StudySetList;

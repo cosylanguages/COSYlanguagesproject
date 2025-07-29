@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import StudySetManager from './StudySetManager';
+import StudySetList from './StudySetList';
 import { I18nProvider } from '../../i18n/I18nContext';
 import * as studySetService from '../../utils/studySetService';
 
@@ -29,12 +29,12 @@ const renderComponent = (props, sets = mockStudySets) => {
 
   return render(
     <I18nProvider>
-      <StudySetManager {...props} />
+      <StudySetList {...props} />
     </I18nProvider>
   );
 };
 
-describe('StudySetManager', () => {
+describe('StudySetList', () => {
   let onCreateNewMock, onEditSetDetailsMock, onLaunchStudyPlayerMock;
 
   beforeEach(() => {
