@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/COSYlanguagesproject/static/css/main.4b3747f2.css",
-    "main.js": "/COSYlanguagesproject/static/js/main.2cb6050f.js",
+    "main.css": "/COSYlanguagesproject/static/css/main.082d72dd.css",
+    "main.js": "/COSYlanguagesproject/static/js/main.dcc0e904.js",
     "sw.js": "/COSYlanguagesproject/static/js/sw.d72eb008.js",
     "study.css": "/COSYlanguagesproject/static/css/study.c1479fc4.css",
-    "study.js": "/COSYlanguagesproject/static/js/study.8dc827ad.js",
-    "freestyle.css": "/COSYlanguagesproject/static/css/freestyle.748e4f3e.css",
-    "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.9b4a41f2.js",
+    "study.js": "/COSYlanguagesproject/static/js/study.f8087246.js",
+    "freestyle.css": "/COSYlanguagesproject/static/css/freestyle.f82e547b.css",
+    "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.230a2a46.js",
     "study-ka.js": "/COSYlanguagesproject/static/js/study-ka.950e1d5b.js",
     "study-tt.js": "/COSYlanguagesproject/static/js/study-tt.31d6cfe0.js",
     "reactPlayerHls.js": "/COSYlanguagesproject/static/js/reactPlayerHls.97bbbfbf.chunk.js",
@@ -14,7 +14,7 @@
     "reactPlayerMux.js": "/COSYlanguagesproject/static/js/reactPlayerMux.2fad1f18.chunk.js",
     "reactPlayerYouTube.js": "/COSYlanguagesproject/static/js/reactPlayerYouTube.363733ba.chunk.js",
     "reactPlayerVimeo.js": "/COSYlanguagesproject/static/js/reactPlayerVimeo.fa730dd7.chunk.js",
-    "reactPlayerWistia.js": "/COSYlanguagesproject/static/js/reactPlayerWistia.d38596a4.chunk.js",
+    "reactPlayerWistia.js": "/COSYlanguagesproject/static/js/reactPlayerWistia.c29358e0.chunk.js",
     "reactPlayerSpotify.js": "/COSYlanguagesproject/static/js/reactPlayerSpotify.5f8e7a60.chunk.js",
     "reactPlayerTwitch.js": "/COSYlanguagesproject/static/js/reactPlayerTwitch.eb954608.chunk.js",
     "reactPlayerTiktok.js": "/COSYlanguagesproject/static/js/reactPlayerTiktok.95905179.chunk.js",
@@ -42,20 +42,20 @@
     "404.html": "/COSYlanguagesproject/404.html",
     "freestyle.html": "/COSYlanguagesproject/freestyle.html",
     "study-islands.html": "/COSYlanguagesproject/study-islands.html",
-    "main.4b3747f2.css.map": "/COSYlanguagesproject/static/css/main.4b3747f2.css.map",
-    "main.2cb6050f.js.map": "/COSYlanguagesproject/static/js/main.2cb6050f.js.map",
+    "main.082d72dd.css.map": "/COSYlanguagesproject/static/css/main.082d72dd.css.map",
+    "main.dcc0e904.js.map": "/COSYlanguagesproject/static/js/main.dcc0e904.js.map",
     "sw.d72eb008.js.map": "/COSYlanguagesproject/static/js/sw.d72eb008.js.map",
     "study.c1479fc4.css.map": "/COSYlanguagesproject/static/css/study.c1479fc4.css.map",
-    "study.8dc827ad.js.map": "/COSYlanguagesproject/static/js/study.8dc827ad.js.map",
-    "freestyle.748e4f3e.css.map": "/COSYlanguagesproject/static/css/freestyle.748e4f3e.css.map",
-    "freestyle.9b4a41f2.js.map": "/COSYlanguagesproject/static/js/freestyle.9b4a41f2.js.map",
+    "study.f8087246.js.map": "/COSYlanguagesproject/static/js/study.f8087246.js.map",
+    "freestyle.f82e547b.css.map": "/COSYlanguagesproject/static/css/freestyle.f82e547b.css.map",
+    "freestyle.230a2a46.js.map": "/COSYlanguagesproject/static/js/freestyle.230a2a46.js.map",
     "study-ka.950e1d5b.js.map": "/COSYlanguagesproject/static/js/study-ka.950e1d5b.js.map",
     "reactPlayerHls.97bbbfbf.chunk.js.map": "/COSYlanguagesproject/static/js/reactPlayerHls.97bbbfbf.chunk.js.map",
     "reactPlayerDash.57aa6166.chunk.js.map": "/COSYlanguagesproject/static/js/reactPlayerDash.57aa6166.chunk.js.map",
     "reactPlayerMux.2fad1f18.chunk.js.map": "/COSYlanguagesproject/static/js/reactPlayerMux.2fad1f18.chunk.js.map",
     "reactPlayerYouTube.363733ba.chunk.js.map": "/COSYlanguagesproject/static/js/reactPlayerYouTube.363733ba.chunk.js.map",
     "reactPlayerVimeo.fa730dd7.chunk.js.map": "/COSYlanguagesproject/static/js/reactPlayerVimeo.fa730dd7.chunk.js.map",
-    "reactPlayerWistia.d38596a4.chunk.js.map": "/COSYlanguagesproject/static/js/reactPlayerWistia.d38596a4.chunk.js.map",
+    "reactPlayerWistia.c29358e0.chunk.js.map": "/COSYlanguagesproject/static/js/reactPlayerWistia.c29358e0.chunk.js.map",
     "reactPlayerSpotify.5f8e7a60.chunk.js.map": "/COSYlanguagesproject/static/js/reactPlayerSpotify.5f8e7a60.chunk.js.map",
     "reactPlayerTwitch.eb954608.chunk.js.map": "/COSYlanguagesproject/static/js/reactPlayerTwitch.eb954608.chunk.js.map",
     "reactPlayerTiktok.95905179.chunk.js.map": "/COSYlanguagesproject/static/js/reactPlayerTiktok.95905179.chunk.js.map",
@@ -64,7 +64,7 @@
     "933.d0d81100.chunk.js.map": "/COSYlanguagesproject/static/js/933.d0d81100.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b3747f2.css",
-    "static/js/main.2cb6050f.js"
+    "static/css/main.082d72dd.css",
+    "static/js/main.dcc0e904.js"
   ]
 }
