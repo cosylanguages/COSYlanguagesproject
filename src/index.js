@@ -27,6 +27,7 @@ import { StudyProvider } from './contexts/StudyContext';
 import { StudySetProvider } from './contexts/StudySetContext';
 // Import global CSS files.
 import './index.css';
+import './styles/global.css';
 import './components/Common/animations.css';
 
 // Create a default Material-UI theme.

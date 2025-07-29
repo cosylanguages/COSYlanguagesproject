@@ -1,34 +1,26 @@
-import axios from 'axios';
+import apiClient from './apiClient';
 
-const API_URL = 'http://localhost:3001';
-
-const getAuthHeaders = (token) => ({
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-});
-
-export const getFreestyleProgress = async (token, userId) => {
-  const response = await axios.get(`${API_URL}/freestyle-progress/${userId}`, getAuthHeaders(token));
+export const getFreestyleProgress = async (userId) => {
+  const response = await apiClient.get(`/freestyle-progress/${userId}`);
   return response.data;
 };
 
-export const updateFreestyleProgress = async (token, userId, progress) => {
-  const response = await axios.put(`${API_URL}/freestyle-progress/${userId}`, { progress }, getAuthHeaders(token));
+export const updateFreestyleProgress = async (userId, progress) => {
+  const response = await apiClient.put(`/freestyle-progress/${userId}`, { progress });
   return response.data;
 };
 
-export const getBoosterPacks = async (token) => {
-  const response = await axios.get(`${API_URL}/booster-packs`, getAuthHeaders(token));
+export const getBoosterPacks = async () => {
+  const response = await apiClient.get('/booster-packs');
   return response.data;
 };
 
-export const createBoosterPack = async (token, packData) => {
-  const response = await axios.post(`${API_URL}/booster-packs`, packData, getAuthHeaders(token));
+export const createBoosterPack = async (packData) => {
+  const response = await apiClient.post('/booster-packs', packData);
   return response.data;
 };
 
-export const deleteBoosterPack = async (token, packId) => {
-  const response = await axios.delete(`${API_URL}/booster-packs/${packId}`, getAuthHeaders(token));
+export const deleteBoosterPack = async (packId) => {
+  const response = await apiClient.delete(`/booster-packs/${packId}`);
   return response.data;
 };

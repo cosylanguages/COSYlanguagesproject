@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
 import './LessonSectionsPanel.css';
-import { fetchLessonSections } from '../../api/lessonSections';
+import { fetchLessonSections } from '../../api/api';
 import { useAuth } from '../../contexts/AuthContext';
 
 /**

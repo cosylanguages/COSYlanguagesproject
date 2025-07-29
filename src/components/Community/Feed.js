@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Post from './Post';
 import { useAuth } from '../../contexts/AuthContext';
-import { getPosts as apiGetPosts, createPost as apiCreatePost } from '../../api/community';
+import { getPosts as apiGetPosts, createPost as apiCreatePost } from '../../api/api';
 
 function Feed() {
   const [posts, setPosts] = useState([]);

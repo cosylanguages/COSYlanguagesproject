@@ -54,7 +54,7 @@ export function PlanProvider({ children }) {
         setError(null);
         try {
             const fileKey = getRoadmapFileKey(languageIdentifier);
-            const roadmapFileName = `${fileKey}_roadmap.json`;
+            const roadmapFileName = `${fileKey}.json`;
 
             console.log(`PlanContext: Fetching roadmap for ${languageIdentifier} (file: ${roadmapFileName})`);
             const roadmapData = await fetchRoadmapFromGitHub(roadmapFileName);

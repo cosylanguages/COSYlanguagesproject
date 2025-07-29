@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useI18n } from '../../i18n/I18nContext';
-import { fetchDays, addDay, updateDay, deleteDay } from '../../api/days';
+import { fetchDays, addDay, updateDay, deleteDay } from '../../api/api';
 import Button from '../Common/Button';
 import './DayManager.css';
 

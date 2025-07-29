@@ -31,22 +31,13 @@ const ExerciseControls = ({
 
   const canInteract = !isAnswerCorrect && !isRevealed;
 
-  const buttonVariantMap = {
-    hint: 'warning',
-    randomize: 'secondary',
-    check: 'success',
-    reveal: 'info',
-    next: 'primary',
-  };
-
   return (
     <div className="exercise-action-buttons">
       {showHint && onShowHint && (
         <Button
           onClick={onShowHint}
           disabled={!canInteract}
-          variant="contained"
-          color={buttonVariantMap.hint}
+          className="btn-warning"
         >
           {hintButtonText}
         </Button>
@@ -55,8 +46,7 @@ const ExerciseControls = ({
         <Button
           onClick={onRandomize}
           disabled={!canInteract && !showNext}
-          variant="contained"
-          color={buttonVariantMap.randomize}
+          className="btn-secondary"
         >
           {randomizeButtonText}
         </Button>
@@ -65,8 +55,7 @@ const ExerciseControls = ({
         <Button
           onClick={onCheckAnswer}
           disabled={!canInteract}
-          variant="contained"
-          color={buttonVariantMap.check}
+          className="btn-success"
         >
           {checkButtonText}
         </Button>
@@ -75,8 +64,7 @@ const ExerciseControls = ({
         <Button
           onClick={onRevealAnswer}
           disabled={!canInteract}
-          variant="contained"
-          color={buttonVariantMap.reveal}
+          className="btn-info"
         >
           {revealButtonText}
         </Button>
@@ -85,8 +73,7 @@ const ExerciseControls = ({
       {showNext && onNextExercise && (
         <Button
           onClick={onNextExercise}
-          variant="contained"
-          color={buttonVariantMap.next}
+          className="btn-primary"
         >
           {nextButtonText}
         </Button>

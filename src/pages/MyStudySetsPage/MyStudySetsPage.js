@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useLocation, useParams } from 'react-router-dom';
-import StudySetList from '../../components/StudySets/StudySetList';
+import StudySetManager from '../../components/StudySets/StudySetManager';
 import StudySetEditor from '../../components/StudySets/StudySetEditor';
 import FlashcardPlayer from '../../components/StudyMode/StudentTools/FlashcardPlayer';
 import { getStudySetById } from '../../utils/studySetService';
@@ -73,7 +73,7 @@ const MyStudySetsPage = () => {
     }
   } else {
     content = (
-      <StudySetList
+      <StudySetManager
         onCreateNew={handleCreateNewSet}
         onEditSetDetails={handleEditSetDetails}
         onLaunchStudyPlayer={handleLaunchStudyPlayer}

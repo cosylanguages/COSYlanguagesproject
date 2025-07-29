@@ -1,10 +1,10 @@
 import React from 'react';
 import { useLingui } from '@lingui/react/macro';
-import Feed from '../components/Feed';
-import CreatePost from '../components/CreatePost';
-import EventCalendar from '../components/EventCalendar';
-import EventForm from '../components/EventForm';
-import SpeakingClub from '../components/SpeakingClub';
+import Feed from '../components/Community/Feed';
+import CreatePost from '../components/Community/CreatePost';
+import EventCalendar from '../components/Community/EventCalendar';
+import EventForm from '../components/Community/EventForm';
+import SpeakingClub from '../components/Community/SpeakingClub';
 
 const Community = () => {
   const userId = "demo_user_id"; // À remplacer par l'ID réel de l'utilisateur connecté
@@ -52,7 +52,7 @@ const Community = () => {
       )}
       <h2>Communauté</h2>
       <CreatePost userId={userId} />
-      <Feed userId={userId} />
+      <Feed />
       <EventCalendar />
       {isAdmin && <EventForm />}
       {eventId && <SpeakingClub eventId={eventId} />}

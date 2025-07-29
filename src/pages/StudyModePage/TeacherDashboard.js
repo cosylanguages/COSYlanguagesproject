@@ -15,7 +15,7 @@ import { displayComponentMap } from '../../components/StudyMode/common/displayCo
 import { getBlockElementId } from './StudyModePage';
 import DayManager from '../../components/StudyMode/DayManager';
 import LessonSectionManager from '../../components/StudyMode/LessonSectionManager';
-import { getLessonSectionDetails, updateLessonSection } from '../../api/lessonSections';
+import { getLessonSectionDetails, updateLessonSection } from '../../api/api';
 import { useAuth } from '../../contexts/AuthContext';
 
 // Import the CSS for this component.

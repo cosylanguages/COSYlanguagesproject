@@ -1,0 +1,674 @@
+{
+  "language_name": "Bashkir",
+  "levels": [
+    {
+      "level_code": "A0",
+      "level_name": "Тәүге Аҙымдар (First Steps)",
+      "approximate_vocabulary_size": "approx. 300-500 words",
+      "learning_outcomes": [
+        "Recognize and reproduce the basic sounds of the Bashkir alphabet (Cyrillic).",
+        "Understand and use familiar everyday expressions and very basic phrases (e.g., greetings, introductions).",
+        "Introduce him/herself and others simply (e.g., Минең исемем... - My name is...).",
+        "Ask and answer simple questions about personal details (name, origin - basic).",
+        "Interact in a very simple way if the other person speaks slowly, clearly, and is prepared to help.",
+        "Recognize familiar names, words, and very simple sentences in Bashkir."
+      ],
+      "language_focus_topics": [
+        "The Bashkir Alphabet (Cyrillic script, focusing on specific Bashkir letters: Әә, Өө, Үү, Ғғ, Ҡҡ, Ңң, Ҙҙ, Ҫҫ, Һһ).",
+        "Basic pronunciation: Key vowel sounds (including front/back harmony basics), specific consonant sounds (e.g., ҙ, ҫ, һ, ғ, ҡ).",
+        "Nouns: Concept of nouns, no grammatical gender. Basic plural formation (e.g., -лар/‑ләр, -тар/-тәр, -дар/-дәр, -ҙар/-ҙәр). Nominative case (subject).",
+        "Pronouns: Personal pronouns in nominative singular (мин, һин, ул). Possessive suffixes (1st person singular: -м, -ым/-ем, -ом/-өм, e.g., китабым - my book).",
+        "Verbs: Basic concept of verbs. Simple present tense forms of common verbs (e.g., 'булырға' - to be, often implied in present; 'йәшәргә' - to live, 'әйтерге' - to say).",
+        "Sentence Structure: Basic Subject-Object-Verb (SOV) tendency. Simple affirmative and negative statements (e.g., Мин студент. Мин студент түгел).",
+        "Negation: Basic negative particle 'түгел' (not - for nouns/adjectives), 'юҡ' (there isn't/no).",
+        "Simple Questions: Intonation. Basic question particle (-мы/-ме, -мындыр/-мендер). Question words (Кем? Нимә? Ҡайҙа? Ҡасан?).",
+        "Day 1 Grammar - 'It is' (Был): Был нимә? (What is it?), Был ...мы? (Is it ...?), Был ...мы әллә ...мы? (Is it ... or ...?), Был ... . (It is ...), Был ... түгел. (It is not ...), Был ... түгел, ә ... . (It is not ... but it is...)."
+      ],
+      "vocabulary_topics": [
+        "Day 1: Basic Words and Phrases: Һаумыһығыҙ/Сәләм (hello), Һау булығыҙ (goodbye), Эйе (yes), Юҡ (no), Рәхмәт (thank you), Зинһар (you're welcome/please), Яҡшы/Ярай (alright/ok), Бер (one), Сәй (tea), Кофе (coffee), Һыу (water), Һут (juice), Һыра (beer), Шарап (wine), Ҡулаҡса (cash), Карта (card).",
+        "Greetings: Һаумы(һығыҙ), Сәләм, Хәйерле иртә/көн/кис, Һау бул(ығыҙ).",
+        "Introductions & Personal Information: Исемең(еҙ) кем? Минең исемем... Таныш булайыҡ. Мин ...нан/нән килдем. Милләт (basic).",
+        "Courtesy: Рәхмәт, Зинһар, Ғәфү итегеҙ.",
+        "Basic responses: Эйе, Юҡ.",
+        "Numbers: 0-10 (ноль-ун).",
+        "Colors: ҡыҙыл, зәңгәр, йәшел, һары, ҡара, аҡ (basic).",
+        "Family: әсәй, атай, ағай, апай, ҡусты, һеңле (basic).",
+        "Common Objects: китап, ҡәләм, өҫтәл, ултырғыс, телефон, өй, машина.",
+        "Basic Food & Drink: икмәк, һыу, һөт, сәй, алма, шәкәр.",
+        "Classroom language: Ҡабатлағыҙ, зинһар. Мин аңламайым."
+      ],
+      "speaking_dialogues": [
+        {
+          "title": "Day 1: Cafe Dialogue",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "line": "Һаумыһығыҙ (Hawmıhığıð)"
+            },
+            {
+              "speaker": "B",
+              "line": "Һаумыһығыҙ, кофемы әллә сәйме? (Hawmıhığıð, kofemı ällä säyme?)"
+            },
+            {
+              "speaker": "A",
+              "line": "Бер кофе, зинһар. (Ber kofe, zinhar.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Бер сәйме? (Ber säyme?)"
+            },
+            {
+              "speaker": "A",
+              "line": "Юҡ, бер кофе, зинһар. (Yuq, ber kofe, zinhar.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Бер кофемы? (Ber kofemı?)"
+            },
+            {
+              "speaker": "A",
+              "line": "Эйе, зинһар. (Eye, zinhar.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Ярай. (Yaray.)"
+            },
+            {
+              "speaker": "A",
+              "line": "Рәхмәт! (Räxmät!)"
+            },
+            {
+              "speaker": "B",
+              "line": "Зинһар. (Zinhar.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Ҡулаҡсамы әллә картамы? (Qulaqsamı ällä kartamı?)"
+            },
+            {
+              "speaker": "A",
+              "line": "Ҡулаҡса, зинһар. (Qulaqsa, zinhar.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Ҡулаҡсамы? (Qulaqsamı?)"
+            },
+            {
+              "speaker": "A",
+              "line": "Эйе, зинһар. (Eye, zinhar.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Ярай. (Yaray.)"
+            },
+            {
+              "speaker": "A",
+              "line": "Рәхмәт. (Räxmät.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Зинһар. (Zinhar.)"
+            },
+            {
+              "speaker": "A",
+              "line": "Һау булығыҙ. (Haw bulığıð.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Һау булығыҙ. (Haw bulığıð.)"
+            }
+          ]
+        }
+      ],
+      "pronunciation_focus_topics": [
+        "Mastering sounds of the Bashkir Cyrillic alphabet, especially unique letters (Ә, Ө, Ү, Ғ, Ҡ, Ң, Ҙ, Ҫ, Һ).",
+        "Vowel harmony (front/back and labial harmony) - basic concept and examples.",
+        "Pronunciation of specific Bashkir consonants like /θ/ (ҫ), /ð/ (ҙ), /q/ (ҡ), /ʁ/ (ғ), /h/ (һ).",
+        "Word stress (usually final, but with exceptions - basic awareness).",
+        "Basic intonation for statements and simple questions."
+      ],
+      "listening_comprehension_skills": [
+        "Recognize familiar Bashkir words and very basic phrases when spoken slowly and clearly.",
+        "Understand simple greetings and introductions.",
+        "Follow very simple instructions (e.g., 'Ҡара!' - Look!)."
+      ],
+      "reading_comprehension_skills": [
+        "Read and identify all letters of the Bashkir Cyrillic alphabet.",
+        "Read and understand familiar names, words, and very simple sentences.",
+        "Understand numbers 0-10 written as words."
+      ],
+      "spoken_interaction_skills": [
+        "Greet and respond to greetings.",
+        "Introduce oneself and ask for someone's name.",
+        "Ask and answer simple questions about personal information (name, where from - basic).",
+        "Use basic courtesy phrases."
+      ],
+      "spoken_production_skills": [
+        "Say the letters of the Bashkir alphabet.",
+        "Pronounce basic Bashkir vocabulary with comprehensible pronunciation.",
+        "Produce simple isolated phrases and sentences (e.g., 'Мин Айгөл.').",
+        "State name and origin simply."
+      ],
+      "written_interaction_skills": [
+        "Recognize own name and familiar words when written in Bashkir."
+      ],
+      "written_production_skills": [
+        "Write all letters of the Bashkir Cyrillic alphabet.",
+        "Write one's name and other simple familiar words in Bashkir.",
+        "Copy familiar words and short sentences."
+      ],
+      "cultural_competence_topics": [
+        "Common greeting customs among Bashkirs.",
+        "Basic awareness of respectful address (e.g., addressing elders).",
+        "Importance of hospitality in Bashkir culture (basic concept).",
+        "Key cultural symbols of Bashkortostan (e.g., kurai musical instrument, flag colors - awareness)."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice writing Cyrillic letters daily, focusing on unique Bashkir letters.",
+        "Use flashcards with pictures and Bashkir words.",
+        "Listen to Bashkir children's songs or simple audio resources.",
+        "Pay close attention to vowel harmony and specific consonant sounds from the beginning."
+      ]
+    },
+    {
+      "level_code": "A1",
+      "level_name": "Йәш Тикшереүсе (Young Researcher)",
+      "approximate_vocabulary_size": "approx. 500-700 words",
+      "learning_outcomes": [
+        "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.",
+        "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
+        "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
+      ],
+      "language_focus_topics": [
+        "Review A0: Alphabet, basic pronunciation, nominative case, basic verbs.",
+        "Nouns: Cases - Accusative (-ды/-де, -ты/-те, -ҙы/-ҙе, -ны/-не), Genitive (-дың/-дең, -тың/-тең, -ҙың/-ҙең, -ның/-нең), Dative (-ға/-гә, -ҡа/-кә), Locative (-да/-дә, -та/-тә), Ablative (-дан/-дән, -тан/-тән, -ҙан/-ҙән, -нан/-нән). Singular forms.",
+        "Pronouns: Personal pronouns in basic cases. Possessive suffixes (all persons singular and plural).",
+        "Verbs: Present tense (-а/-ә, -й). Past tense (definite past: -ны/-не + person endings; or -ған/-гән + person endings for narrative/experiential past). Basic future tense (-ыр/-ер, -ар/-әр + person endings; or -асаҡ/-әсәк).",
+        "Adjectives: Basic use, typically do not change for case/number when attributive, precede nouns.",
+        "Postpositions: Common postpositions (менән - with, өсөн - for, тураһында - about, кеүек - like).",
+        "Numbers: 0-100. Basic ordinal numbers (беренсе, икенсе...).",
+        "Sentence structure: SOV. Questions with interrogative words and particles. Affirmative and negative sentences.",
+        "Vowel Harmony: Consistent application in suffixes (front/back and labial)."
+      ],
+      "vocabulary_topics": [
+        "Review A0 vocabulary.",
+        "Personal information: Family members (extended), age, profession (common ones).",
+        "Daily routine: Common daily activities, telling time.",
+        "Food & Drink: Common food items, drinks, ordering in a café (сәй, ҡымыҙ, ит).",
+        "Shopping: Types of shops (магазин), common items, prices, asking 'how much?' (нисә һум тора?).",
+        "Places in town: урам, майҙан, баҡса, почта, банк, дарыухана, ҡунаҡхана.",
+        "Transport: автобус, трамвай, машина, поезд. Buying tickets (билет).",
+        "Time: Days of the week, months, seasons.",
+        "Weather: Basic weather expressions (йылы, һыуыҡ, ямғыр яуа, ҡар яуа, ҡояшлы).",
+        "Hobbies & interests (basic: уҡырға, телевизор ҡарарға, музыка тыңларға).",
+        "Clothing: Common items (күлдәк, салбар, итәк, куртка)."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A0 sounds, vowel harmony (front/back, labial).",
+        "Pronunciation of case endings and possessive suffixes, maintaining vowel harmony.",
+        "Word stress (often final, but with important exceptions, e.g., with negative suffix -ма/-мә).",
+        "Intonation of different sentence types (statements, questions, requests).",
+        "Practicing specific Bashkir consonant sounds (ҙ, ҫ, ҡ, ғ, һ) in various word positions."
+      ],
+      "listening_comprehension_skills": [
+        "Understand frequently used words and phrases related to personal details, family, shopping, local area, when spoken slowly and clearly.",
+        "Grasp the main point in short, clear, simple messages and announcements.",
+        "Understand simple questions and instructions related to everyday situations."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short, simple texts on familiar matters (e.g., simple menus, public signs, short personal messages).",
+        "Find specific, predictable information in everyday material.",
+        "Understand short, simple personal notes or postcards."
+      ],
+      "spoken_interaction_skills": [
+        "Interact in simple, routine situations (e.g., basic shopping, ordering food, asking for simple directions).",
+        "Ask and answer questions about familiar topics (daily life, family, hobbies).",
+        "Make and respond to simple suggestions or invitations.",
+        "Ask for and give basic information (e.g., 'Был нимә?' - What is this?)."
+      ],
+      "spoken_production_skills": [
+        "Describe his/her family, living conditions, daily routine in simple terms.",
+        "Talk about past events using basic past tense forms.",
+        "Talk about simple future plans.",
+        "Express likes and dislikes (Миңә оҡшай / Мин яратам...)."
+      ],
+      "written_interaction_skills": [
+        "Write a simple reply to a personal message or invitation (e.g., a short SMS or email)."
+      ],
+      "written_production_skills": [
+        "Write short, simple notes and messages (e.g., a shopping list, a simple postcard with greetings).",
+        "Describe a familiar place or person in a few simple sentences.",
+        "Fill in simple forms with personal details."
+      ],
+      "cultural_competence_topics": [
+        "Forms of address (respectful forms for elders and strangers).",
+        "Bashkir customs related to hospitality (e.g., offering tea).",
+        "Awareness of key Bashkir holidays or festivals (e.g., Sabantuy, Qorban Bayramı - basic recognition).",
+        "Bashkir cuisine: common dishes (e.g., بیشбармаҡ, ҡыҫтыбый, ҡорот - recognition).",
+        "Importance of nature in Bashkir culture."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice applying vowel harmony rules to all suffixes consistently.",
+        "Use language learning apps focusing on Bashkir vocabulary and basic grammar, if available.",
+        "Listen to Bashkir music and try to identify familiar words and phrases.",
+        "Try to form simple sentences about everyday objects and actions, applying case endings and verb conjugations."
+      ]
+    },
+    {
+      "level_code": "A2",
+      "level_name": "Белдекле Эҙәрмән (Knowledgeable Seeker)",
+      "approximate_vocabulary_size": "approx. 1000-1500 words",
+      "learning_outcomes": [
+        "Can understand sentences and frequently used expressions related to areas of most immediate relevance (e.g. very basic personal and family information, shopping, local geography, employment).",
+        "Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.",
+        "Can describe in simple terms aspects of his/her background, immediate environment and matters in areas of immediate need."
+      ],
+      "language_focus_topics": [
+        "Review A1: Noun cases (all 6, singular/plural), possessive suffixes, verb tenses (present, past, future).",
+        "Verbs: Imperfective/Perfective aspects - more explicit introduction and usage with common verbs.",
+        "Verbs: Conditional mood (-һа/-һә). Modal verbs/constructions (кәрәк - necessary, мөмкин - possible, тейеш - must).",
+        "Adjectives: Comparative (-рaҡ/-рәк) and superlative (иң) forms.",
+        "Pronouns: Declension of personal, demonstrative, and interrogative pronouns in all basic cases.",
+        "Postpositions: Wider range of postpositions and their governance of noun cases.",
+        "Conjunctions: More conjunctions for connecting clauses (сөнки - because, әгәр - if, ләкин - but, шуға күрә - therefore, һәм - and).",
+        "Numerals: Ordinal numbers and their use. Basic constructions with cardinal numbers and nouns.",
+        "Adverbs of manner, place, time, and degree."
+      ],
+      "vocabulary_topics": [
+        "Review A1 vocabulary.",
+        "Describing people: Appearance, character, family relationships, friends.",
+        "Housing: Describing one's home in detail, furniture, common household items, simple repairs or problems.",
+        "Food & Drink: More variety, discussing meals, preferences, ingredients, simple cooking instructions.",
+        "Shopping: Clothing items, sizes, colors, discussing preferences, making returns or exchanges (simple).",
+        "Travel & Transport: Planning journeys, modes of transport, buying tickets, asking for/understanding travel information at stations/airports.",
+        "Health & Body: Common illnesses, symptoms, visiting a doctor or pharmacy, parts of the body, basic health advice.",
+        "Work & Study: Describing one's job or studies, daily tasks, colleagues or classmates, future aspirations (simple).",
+        "Leisure & Hobbies: Discussing interests in more detail, inviting others, arranging activities, expressing opinions on films, books, music.",
+        "Nature & Weather: Describing landscapes, animals, plants, weather conditions and forecasts in more detail.",
+        "Feelings & Emotions: Expressing a wider range of feelings (joy, sadness, surprise, anger, worry).",
+        "Public Services: Using the post office, bank, making appointments by phone (simple)."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A1: Bashkir sounds, vowel harmony, stress.",
+        "Intonation in more complex sentences (e.g., conditional clauses, sentences with multiple clauses).",
+        "Pronunciation of consonant clusters that might be challenging.",
+        "Maintaining consistent vowel harmony and stress in longer utterances.",
+        "Rhythm and flow of spoken Bashkir."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear, standard speech on familiar everyday topics.",
+        "Follow short, simple narratives or descriptions on familiar subjects.",
+        "Identify specific information in public announcements or short news segments if the topic is familiar and speech is clear."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short, simple personal letters, emails, or blog posts on familiar topics.",
+        "Find specific, predictable information in everyday materials like brochures, event programs, and simple instructions.",
+        "Understand the gist of short, simplified newspaper articles or website texts on familiar subjects."
+      ],
+      "spoken_interaction_skills": [
+        "Engage in conversations on familiar topics, exchanging information, simple opinions, and feelings.",
+        "Handle common everyday situations (e.g., making inquiries, asking for help, dealing with simple problems in shops or services).",
+        "Make and respond to invitations, suggestions, apologies, and thanks with more confidence.",
+        "Discuss past events and future plans with others, providing some explanations."
+      ],
+      "spoken_production_skills": [
+        "Give simple, connected descriptions of people, places, events, or personal experiences.",
+        "Narrate a simple story or recount events in sequence using appropriate past tenses and basic aspectual distinctions.",
+        "Talk about future plans and intentions using different future constructions with more detail.",
+        "Express opinions, likes/dislikes, and preferences with reasons and simple justifications."
+      ],
+      "written_interaction_skills": [
+        "Write simple personal emails or messages to exchange information, make arrangements, invite, thank, or apologize, providing necessary details."
+      ],
+      "written_production_skills": [
+        "Write short, connected texts on familiar topics (e.g., describing a memorable event, a favorite hobby, a friend).",
+        "Write a simple personal letter giving news or describing experiences in a few paragraphs.",
+        "Write short instructions or a simple report on a familiar task or event."
+      ],
+      "cultural_competence_topics": [
+        "Bashkir family values and traditions (e.g., respect for elders, importance of children).",
+        "Significance of traditional Bashkir crafts, music (e.g., kurai), and epic poems (kubairs - basic awareness).",
+        "Understanding of Bashkir national identity, symbols (flag, emblem), and relationship with nature.",
+        "Basic knowledge of the geography and history of Bashkortostan.",
+        "Etiquette for attending cultural events or visiting historical sites."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice distinguishing and using imperfective and perfective verb aspects in simple contexts.",
+        "Read adapted Bashkir texts or simple original materials for young readers, focusing on comprehension.",
+        "Watch Bashkir cartoons, children's programs, or vlogs with subtitles if available, noting new vocabulary and expressions.",
+        "Try to write longer paragraphs or short narratives in Bashkir, focusing on connecting ideas.",
+        "Find opportunities for conversation with native speakers or language partners to practice fluency."
+      ]
+    },
+    {
+      "level_code": "B1",
+      "level_name": "Хыялый Сәйәхәтсе (Imaginative Voyager)",
+      "approximate_vocabulary_size": "approx. 2000-2500 words",
+      "learning_outcomes": [
+        "Can understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc.",
+        "Can deal with most situations likely to arise whilst travelling in an area where the language is spoken.",
+        "Can produce simple connected text on topics, which are familiar, or of personal interest.",
+        "Can describe experiences and events, dreams, hopes & ambitions and briefly give reasons and explanations for opinions and plans."
+      ],
+      "language_focus_topics": [
+        "Review of A2 grammar: Noun cases, verb aspects and tenses, conditional mood.",
+        "Verbs: Participles (хәл ҡылым, сифат ҡылым) - present, past, future; their adjectival and adverbial uses.",
+        "Verbs: Voice - passive voice (-л-), causative voice (-дыр-/-тер- etc.), reflexive voice (-н-), reciprocal voice (-ш-).",
+        "Complex sentences: Subordinate clauses of time (ҡасан, -ғас/-гәс), place (ҡайҙа), reason (сөнки, -ғанға/-гәнгә), purpose (-рға/-ергә тип), condition (әгәр, -һа/-һә).",
+        "Reported speech (indirect statements and questions - basic forms).",
+        "Degrees of comparison for adjectives and adverbs (more forms and constructions).",
+        "Modal expressions of necessity, possibility, permission, advice.",
+        "Word order variations for emphasis and stylistic purposes in more complex sentences."
+      ],
+      "vocabulary_topics": [
+        "Work and career: Job roles, responsibilities, skills, work environment, career development, simple business communication.",
+        "Education: Educational system, subjects, exams, university life, basic research topics.",
+        "Travel and tourism: Planning detailed itineraries, cultural tourism, independent travel, dealing with common travel problems, describing cultural differences.",
+        "Media and news: Understanding main points of news reports, articles on current events, expressing opinions on news.",
+        "Culture and arts: Discussing films, books, music, theatre in more detail; genres, artists, personal impressions, simple reviews.",
+        "Health and lifestyle: Discussing health issues, treatments, healthy living, sports, fitness in detail, understanding medical advice.",
+        "Social issues: Discussing environmental problems, social trends, community life, volunteering (with appropriate vocabulary).",
+        "Personal relationships: Friendship, family dynamics, expressing emotions and feelings with more complexity and nuance.",
+        "Technology and communication: Discussing pros and cons of technology, internet usage, digital literacy, social media trends.",
+        "Abstract concepts: happiness, success, tradition, change (basic understanding and vocabulary)."
+      ],
+      "pronunciation_focus_topics": [
+        "Review of A2 pronunciation: vowel harmony, stress, intonation.",
+        "Intonation in complex sentences, conveying nuances like doubt, certainty, surprise, and polite requests.",
+        "Fluency and rhythm in connected speech, reducing hesitation and improving natural flow.",
+        "Pronunciation of less frequent sound combinations and loanwords, adapting them to Bashkir phonology.",
+        "Awareness of different speech styles (formal vs. informal) and their phonetic characteristics."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear standard speech on familiar matters regularly encountered in daily life, work, or school.",
+        "Understand the main points of radio or TV programs on current affairs or topics of personal interest when the delivery is relatively clear.",
+        "Follow a lecture or talk on a familiar topic if the structure is clear and language straightforward."
+      ],
+      "reading_comprehension_skills": [
+        "Understand texts written primarily in high-frequency everyday or job-related language.",
+        "Understand the description of events, feelings, and wishes in personal correspondence and online posts.",
+        "Read straightforward factual texts, articles, and interviews on topics of personal or professional interest with good comprehension."
+      ],
+      "spoken_interaction_skills": [
+        "Enter unprepared into conversations on familiar topics or topics of personal interest with some confidence.",
+        "Deal with most common situations likely to arise while travelling in a Bashkir-speaking region (e.g., transport, accommodation, shopping, emergencies).",
+        "Express and sustain personal opinions, providing explanations, arguments, and comments.",
+        "Participate in discussions on familiar topics, making points clearly, and responding to others' views."
+      ],
+      "spoken_production_skills": [
+        "Produce connected discourse on topics which are familiar or of personal interest, linking ideas coherently.",
+        "Narrate a story, describe an experience, or relate the plot of a book/film, detailing reactions and impressions with some elaboration.",
+        "Describe dreams, hopes, and ambitions, giving reasons and explanations.",
+        "Explain plans and arrangements, justifying choices and decisions simply."
+      ],
+      "written_interaction_skills": [
+        "Write personal letters or emails giving and asking for news, describing experiences, feelings, and events in reasonable detail.",
+        "Respond to formal/informal written communications, providing required information or expressing views clearly."
+      ],
+      "written_production_skills": [
+        "Write clear, connected texts on a range of familiar subjects or topics of personal interest (e.g., an account of a significant experience, a description of a cultural event).",
+        "Write descriptions of real or imaginary events and experiences with some detail and structure.",
+        "Write a short formal letter or email for practical purposes (e.g., inquiry, request for information, simple application).",
+        "Express personal viewpoints and arguments on familiar topics in a structured way (e.g., a blog entry, a short essay with introduction, body, and conclusion)."
+      ],
+      "cultural_competence_topics": [
+        "Understanding nuances in formal vs. informal communication in various Bashkir contexts.",
+        "Knowledge of significant Bashkir historical figures (e.g., Salawat Yulayev), writers, poets (e.g., Mustai Karim).",
+        "Bashkir traditions in music (kurai, uzlyau), dance, and epic poetry (kubairs).",
+        "Social etiquette in more formal settings (e.g., official events, public celebrations).",
+        "Understanding the role of language, nature, and oral traditions in Bashkir identity.",
+        "Awareness of contemporary Bashkortostan, its cultural life, and current events."
+      ],
+      "learning_strategies_suggestions": [
+        "Read authentic Bashkir materials like newspapers, magazines, and contemporary short stories.",
+        "Practice using different verb voices and non-finite forms (participles, gerunds) to vary sentence structure.",
+        "Watch Bashkir films, documentaries, and TV programs, trying to follow without subtitles or with Bashkir subtitles.",
+        "Engage in more complex discussions, focusing on expressing and defending opinions with justification.",
+        "Write longer, structured texts like essays or detailed personal accounts, and seek feedback on coherence and style."
+      ]
+    },
+    {
+      "level_code": "B2",
+      "level_name": "Оҫта һүҙ оҫтаһы (Skilled Word Master)",
+      "approximate_vocabulary_size": "approx. 3500-4500 words",
+      "learning_outcomes": [
+        "Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in his/her field of specialisation.",
+        "Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
+        "Can produce clear, detailed text on a wide range of subjects and explain a viewpoint on a topical issue giving the advantages and disadvantages of various options."
+      ],
+      "language_focus_topics": [
+        "Comprehensive review of verb aspects, tenses, moods, and voices, with focus on nuanced usage.",
+        "Advanced use of participles and gerunds, including complex participial and gerund phrases, for sophisticated sentence construction.",
+        "Complex sentence syntax: mastery of various types of subordinate clauses and their connectors, including concessive, result, comparative, and conditional clauses with different degrees of reality.",
+        "Nuances of case usage, including idiomatic expressions and less common functions of each case.",
+        "Reported speech: reporting complex statements, questions, commands, and exclamations with appropriate tense shifts, conjunctions, and modal particles.",
+        "Modal verbs and expressions: expressing a wide range of modality (certainty, probability, obligation, permission, advice, regret) with precision.",
+        "Figurative language: understanding and using common metaphors, similes, and some idiomatic expressions.",
+        "Stylistic variations in word order and sentence structure for emphasis, focus, and register appropriateness.",
+        "Discourse markers for structuring complex arguments, ensuring cohesion and coherence in longer written texts and spoken discourse."
+      ],
+      "vocabulary_topics": [
+        "Abstract concepts: In-depth discussion of societal issues, politics, economics, environment, education, culture, arts, science, technology, with more specialized and nuanced terminology.",
+        "Expressing nuanced opinions, arguments, justifications, counter-arguments, hypotheses, and speculations.",
+        "Vocabulary for formal discussions, debates, presentations, and academic writing.",
+        "A broader range of idioms, proverbs, and set expressions common in contemporary Bashkir media, literature, and formal speech.",
+        "Understanding and using different registers of Bashkir (formal, neutral, informal, colloquial, elements of professional or academic jargon) appropriately.",
+        "Word formation: productive prefixes, suffixes, and compounding strategies for expanding vocabulary actively and understanding new terms.",
+        "Synonyms, antonyms, and paronyms for precise expression, stylistic variation, and register sensitivity.",
+        "Collocations: a wide range of common and less common collocations, including those specific to certain fields.",
+        "Vocabulary related to one's field of specialization or academic interest, including technical terms and concepts."
+      ],
+      "pronunciation_focus_topics": [
+        "Fine-tuning intonation to express complex attitudes, emotions, and pragmatic nuances (e.g., irony, sarcasm, enthusiasm, doubt, assertiveness).",
+        "Mastery of connected speech phenomena (assimilation, elision, linking) for natural, fluent, and rapid delivery.",
+        "Recognition and understanding of various regional Bashkir dialects and sociolects, and their key phonetic features.",
+        "Maintaining clear articulation, appropriate prosody, and natural rhythm in extended speech, formal presentations, and debates."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech and lectures in Bashkir and follow even complex lines of argument, provided the topic is reasonably familiar or related to one's field.",
+        "Understand most TV news, current affairs programs, documentaries, and interviews in Bashkir.",
+        "Understand the majority of Bashkir films and plays in standard dialect, including those with idiomatic language, cultural references, or some dialectal features."
+      ],
+      "reading_comprehension_skills": [
+        "Read articles and reports concerned with contemporary problems in which Bashkir writers adopt particular stances or viewpoints, identifying attitude and tone.",
+        "Understand contemporary Bashkir literary prose, drama, and some poetry, appreciating stylistic features.",
+        "Understand specialized articles or texts related to one's field of interest or study with good comprehension of details and arguments."
+      ],
+      "spoken_interaction_skills": [
+        "Interact with fluency and spontaneity, making regular interaction with native Bashkir speakers comfortable and engaging for both parties.",
+        "Take an active and constructive part in discussions on a wide range of familiar and some unfamiliar or abstract topics, accounting for and sustaining viewpoints effectively.",
+        "Handle linguistic aspects of negotiation, problem-solving, expressing complaints or compliments persuasively, and managing disagreements constructively."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed descriptions and arguments on a wide range of subjects, structuring information logically.",
+        "Explain a viewpoint on a topical issue, outlining advantages and disadvantages of various options, and supporting arguments with relevant evidence and examples.",
+        "Develop an argument systematically, structuring information logically, highlighting significant points, and using appropriate linking devices."
+      ],
+      "written_interaction_skills": [
+        "Write clear, detailed, and well-structured letters or emails on complex subjects, conveying information, ideas, or opinions effectively and adapting style and register appropriately to the recipient and purpose.",
+        "Respond to complex inquiries, arguments, or proposals in writing, addressing all points comprehensively and persuasively."
+      ],
+      "written_production_skills": [
+        "Write clear, detailed texts (essays, reports, articles, formal letters) on a wide range of subjects relevant to personal, academic, or professional interests.",
+        "Summarize information from different spoken and written sources, evaluating and synthesizing arguments coherently.",
+        "Write reviews of films, books, or cultural events, expressing well-justified opinions and critical evaluations.",
+        "Develop a reasoned argument in an essay or report, presenting different viewpoints, analyzing them, and drawing logical, well-supported conclusions."
+      ],
+      "cultural_competence_topics": [
+        "Deeper understanding of Bashkir society, history, values, contemporary issues, and their interconnections.",
+        "Ability to understand, appreciate, and discuss cultural references, humor, irony, and allusions in Bashkir media, literature, and conversation.",
+        "Nuances of social and professional etiquette in various Bashkir contexts, including formal and informal gatherings.",
+        "Understanding diverse perspectives within Bashkir society, regional differences, and current cultural trends and debates.",
+        "Knowledge of significant Bashkir historical events, cultural movements, and their impact on national identity and contemporary life."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage regularly with a variety of authentic Bashkir media (news, analytical articles and programs, podcasts, films, contemporary literature, academic texts).",
+        "Participate actively in discussions, debates, or presentations in Bashkir, focusing on fluency, accuracy, complex argumentation, and appropriate register.",
+        "Write analytical essays, reports, or summaries of complex texts in Bashkir, focusing on structure, cohesion, critical analysis, and appropriate style.",
+        "Seek detailed feedback on writing and speaking from native speakers or advanced instructors, focusing on idiomaticity and stylistic appropriateness.",
+        "Explore Bashkir online resources, academic publications, and cultural forums to engage with contemporary language and intellectual discourse."
+      ]
+    },
+    {
+      "level_code": "C1",
+      "level_name": "Ғалим Дәрәжәһе (Scholar's Degree)",
+      "approximate_vocabulary_size": "approx. 7000-8000 words",
+      "learning_outcomes": [
+        "Can understand a wide range of demanding, longer texts, and recognise implicit meaning.",
+        "Can express him/herself fluently and spontaneously without much obvious searching for expressions.",
+        "Can use language flexibly and effectively for social, academic and professional purposes.",
+        "Can produce clear, well-structured, detailed text on complex subjects, showing controlled use of organisational patterns, connectors and cohesive devices."
+      ],
+      "language_focus_topics": [
+        "Mastery of the Bashkir grammatical system, including all verb aspects, tenses, moods (including rare or complex subjunctive/conditional forms), voices, and intricate case constructions.",
+        "Sophisticated use of participles, gerunds, and their respective phrases for concise, nuanced, and stylistically varied expression in formal and literary contexts.",
+        "Advanced use and understanding of impersonal and passive constructions, and their stylistic implications across different genres.",
+        "Mastery of complex sentence syntax, including all types of subordinate clauses, non-finite constructions, and their interplay for logical and rhetorical effect.",
+        "Stylistic use of word order, inversion, ellipsis, and other rhetorical figures for emphasis, nuance, and artistic effect.",
+        "Understanding and occasional use of archaic, literary, or dialectal grammatical forms for specific stylistic purposes or characterization.",
+        "Deep understanding of the interaction between morphology, syntax, and semantics in Bashkir.",
+        "Advanced use of a wide range of discourse markers and cohesive devices for structuring sophisticated arguments, narratives, and academic texts."
+      ],
+      "vocabulary_topics": [
+        "Extensive vocabulary covering abstract, specialized, technical, and culturally specific topics across a wide range of academic, professional, and literary domains.",
+        "Nuanced understanding and precise use of synonyms, antonyms, hyponyms, hypernyms, and related lexical items to convey fine shades of meaning, stylistic effects, and register appropriateness.",
+        "Rich repertoire of idiomatic expressions, proverbs, aphorisms, colloquialisms, and cultural allusions, with a deep understanding of their appropriate context, register, connotations, and historical origins.",
+        "Vocabulary for advanced academic and professional purposes, including specialized terminology for research, critical analysis, policy-making, and high-level communication.",
+        "Advanced word formation: understanding etymology, roots (including Turkic, Arabic, Persian, Russian influences), and complex affixation to deduce meaning, expand vocabulary actively, and appreciate linguistic creativity.",
+        "Ability to use language creatively, including sophisticated wordplay, and to understand subtle humor, satire, and irony.",
+        "Differentiating and appropriately using various stylistic layers of vocabulary (neutral, formal, informal, literary, technical, historical, poetic)."
+      ],
+      "pronunciation_focus_topics": [
+        "Near-native pronunciation, intonation, rhythm, and stress across all speech styles and registers, with high accuracy and naturalness.",
+        "Using prosody effectively, subtly, and often artfully to convey complex meanings, attitudes, irony, emotions, and pragmatic functions.",
+        "Understanding and adapting to a wide range of regional Bashkir accents and sociolects, recognizing fine phonetic distinctions and their social implications.",
+        "Maintaining clarity, precision, and natural flow in rapid, complex, or formal speech, including public speaking, academic presentations, and artistic performances."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech in Bashkir even when it is not clearly structured, contains dialectal features, or when relationships are only implied and not explicitly signaled.",
+        "Understand a wide range of television programs, films, plays, public speeches, academic lectures, and complex discussions in Bashkir without too much effort.",
+        "Understand complex technical or academic discussions, even on unfamiliar or highly specialized topics, recognizing speaker's stance and nuances.",
+        "Recognize, understand, and appreciate a wide range of idiomatic expressions, colloquialisms, cultural references, and stylistic variations in spoken Bashkir."
+      ],
+      "reading_comprehension_skills": [
+        "Understand long and complex factual, academic, and literary texts in Bashkir, appreciating distinctions of style, register, authorial intent, and literary or rhetorical technique.",
+        "Understand specialized articles, academic papers, official documents, legal texts, and longer technical instructions, even outside one's own field of expertise.",
+        "Recognize and interpret implicit meaning, writer's stance, irony, satire, persuasive techniques, and rhetorical strategies in diverse and challenging text types, including classical and modern literature."
+      ],
+      "spoken_interaction_skills": [
+        "Express him/herself fluently, spontaneously, accurately, and appropriately, using complex language, varied structures, and nuanced vocabulary without obvious searching for expressions.",
+        "Use language flexibly, effectively, and often creatively for all social, academic, and professional purposes, adapting register, style, and tone to any situation and audience with ease and precision.",
+        "Formulate ideas and opinions with precision and depth, structure arguments logically and persuasively, and relate contributions skilfully, constructively, and often insightfully to those of other speakers in discussions, debates, and formal meetings.",
+        "Mediate, negotiate, persuade, and lead discussions effectively and diplomatically in complex or sensitive situations, demonstrating strong intercultural competence."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed, well-structured, engaging, and often persuasive or inspiring descriptions or arguments on complex subjects, integrating sub-themes, developing particular points coherently and persuasively, and rounding off with an appropriate, impactful, and memorable conclusion.",
+        "Give clear, well-structured, compelling, and engaging presentations or speeches on complex subjects, expanding and supporting ideas with sophisticated reasoning, relevant evidence, nuanced analysis, and appropriate rhetorical devices.",
+        "Adapt style, register, and delivery to any audience and communicative purpose with sophistication, effectiveness, and often charisma."
+      ],
+      "written_interaction_skills": [
+        "Write clear, well-structured, stylistically sophisticated, and contextually appropriate letters, emails, reports, proposals, or other documents on complex subjects, adapting style, tone, and register to the intended reader and purpose with precision, cultural appropriateness, and persuasive skill.",
+        "Respond effectively, persuasively, diplomatically, and comprehensively to complex written communications, addressing all nuances and achieving desired strategic outcomes."
+      ],
+      "written_production_skills": [
+        "Write clear, well-structured, detailed, engaging, and stylistically refined texts on complex subjects in various genres (essays, research papers, articles, critiques, official reports, literary analyses), demonstrating mastery of appropriate academic, professional, or literary conventions.",
+        "Write insightful summaries, analyses, critical reviews, or syntheses of professional, academic, or literary works, demonstrating advanced critical thinking, analytical skills, and original perspectives.",
+        "Show controlled and sophisticated use of organisational patterns, connectors, and cohesive devices to produce coherent, elegant, impactful, and potentially publishable text at a high level.",
+        "Employ a wide range of stylistic and rhetorical devices appropriate to the text type and communicative goal, demonstrating a mature command of register, style, and linguistic creativity."
+      ],
+      "cultural_competence_topics": [
+        "In-depth, critical, and comparative understanding of contemporary Bashkir society, including complex social, political, economic, and ethical issues, their historical roots, and global interconnections.",
+        "Critical appreciation, analysis, and interpretation of Bashkir literature (classical and modern), folklore, music, arts, philosophy, and intellectual traditions, understanding their context and significance.",
+        "Ability to interpret, discuss, critique, and potentially create cultural subtext, humor, irony, allusions, and socio-cultural references with profound insight and cultural fluency.",
+        "Understanding of diverse cultural perspectives, regional variations, linguistic diversity (dialects), and social dynamics within Bashkortostan, other Bashkir communities, and the broader Turkic and Russian cultural spheres."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage with a wide variety of highly authentic, complex, and challenging Bashkir texts and media from diverse fields, including academic research, classical and contemporary literature, and specialized professional publications.",
+        "Practice writing different genres of complex texts, focusing on stylistic mastery, persuasive argumentation, rhetorical effectiveness, and potential for original contribution.",
+        "Participate actively and confidently in high-level academic, professional, or public discussions, presentations, and debates in Bashkir, aiming for precision, eloquence, and leadership.",
+        "Focus on advanced stylistic aspects of the Bashkir language, including register, tone, rhetorical devices, nuanced vocabulary, complex syntax, and comparative linguistics (e.g., with other Turkic languages or Russian).",
+        "Conduct independent research, undertake significant projects, or engage in creative work requiring advanced analytical, communicative, and critical use of the Bashkir language."
+      ]
+    },
+    {
+      "level_code": "C2",
+      "level_name": "Тел Даһийы (Language Genius)",
+      "approximate_vocabulary_size": "approx. 15000+ words",
+      "learning_outcomes": [
+        "Can understand with ease virtually everything heard or read.",
+        "Can summarise information from different spoken and written sources, reconstructing arguments and accounts in a coherent presentation.",
+        "Can express him/herself spontaneously, very fluently and precisely, differentiating finer shades of meaning even in more complex situations."
+      ],
+      "language_focus_topics": [
+        "Complete and intuitive mastery of all Bashkir grammatical structures, including rare, complex, archaic, literary, and dialectal forms, and their stylistic, pragmatic, and historical implications.",
+        "Sophisticated, flexible, creative, and often innovative use of syntax for optimal stylistic effect, emphasis, nuance, and rhetorical impact across all genres and communicative contexts.",
+        "Full command of all moods and their subtle applications in expressing complex hypothetical reasoning, subjective stance, politeness, emotional coloring, and persuasive intent.",
+        "Nuanced understanding and masterful application of aspectual distinctions, the interplay of tense, aspect, and mood, and their role in complex discourse and narrative structure.",
+        "Advanced, flexible, and often innovative use of nominalization, participial constructions (including absolute constructions), and infinitive/gerund clauses for sophisticated, concise, elegant, and impactful expression.",
+        "Complete and intuitive control over a vast range of discourse markers, conjunctions, and cohesive devices to create highly articulate, fluent, logically structured, stylistically varied, and rhetorically powerful texts and speech of any genre and complexity.",
+        "Understanding, appreciation, critical analysis, and creative or scholarly use of a wide array of rhetorical figures and stylistic devices common in Bashkir literature, formal discourse, journalism, oratory, folklore, and everyday wit.",
+        "Ability to analyze, deconstruct, explain, critique, and manipulate the most complex grammatical structures encountered in any authentic Bashkir text or discourse with expert precision, linguistic insight, and often pedagogical skill."
+      ],
+      "vocabulary_topics": [
+        "Extensive, profound, dynamic, and often specialized vocabulary that equals or surpasses that of an educated native Bashkir speaker, including very low-frequency words, cutting-edge terminology across diverse academic and professional fields, neologisms, and historical/archaic lexis relevant to cultural heritage.",
+        "Full command of idiomatic language: idioms, proverbs, aphorisms, colloquialisms, cultural sayings, and fixed expressions, with a deep understanding of their origins, evolution, connotations, regional variations, and appropriate, nuanced, and often creative usage in any context.",
+        "Ability to understand, use, and differentiate the finest shades of meaning, connotations, and register for virtually any lexical item, including formal, literary, specialized, historical, archaic, dialectal, and newly coined vocabulary.",
+        "Mastery of word formation processes, including understanding of Turkic, Arabic, Persian, and Russian influences, and the principles of Bashkir morphology, to interpret, analyze, and creatively use complex words and coin new terms where appropriate and effective.",
+        "Vocabulary for discussing any abstract, philosophical, scientific, literary, artistic, and highly specialized topic with precision, depth, eloquence, originality, authority, and often interdisciplinary insight.",
+        "Appreciation and deep understanding of etymology, semantic evolution, sociolinguistic variation, and lexicographical principles of the Bashkir language.",
+        "Recognition, understanding, critical assessment, and appropriate use or interpretation of a wide range of regionalisms, dialectal features, and sociolects within the Bashkir-speaking world, potentially contributing to their study or preservation."
+      ],
+      "pronunciation_focus_topics": [
+        "Indistinguishable-from-native or exceptionally high-level native-like pronunciation, intonation, stress, and rhythm across all registers and styles of Bashkir, with effortless control, naturalness, and often expressive artistry.",
+        "Ability to subtly, effectively, creatively, and authentically vary prosody to convey complex attitudes, emotions, irony, humor, sarcasm, and other pragmatic meanings with native-like precision, naturalness, and often performative skill.",
+        "Effortless and natural handling of all aspects of connected speech, even at very rapid native speed, in challenging acoustic conditions, or with overlapping, highly colloquial, or dialectal speech.",
+        "Ability to understand, analyze, and, if desired, accurately reproduce, playfully imitate, or teach various regional Bashkir accents and sociolectal variations with high fidelity, cultural awareness, and linguistic insight."
+      ],
+      "listening_comprehension_skills": [
+        "Understand any kind of spoken Bashkir, whether live or broadcast, even when delivered at fast native speed, with significant background noise, multiple speakers, strong dialectal variations, highly specialized content, or on unfamiliar, abstract, or highly complex topics.",
+        "Follow and critically evaluate complex interactions between multiple speakers in any setting, identifying subtle cues, implicit meanings, speaker intentions, interpersonal dynamics, cultural undertones, rhetorical strategies, and logical fallacies.",
+        "Appreciate and analyze stylistic nuances, register shifts, irony, humor, sarcasm, and implicit meaning in any spoken discourse, including culturally specific references, wordplay, advanced rhetoric, and artistic performances."
+      ],
+      "reading_comprehension_skills": [
+        "Understand, critically interpret, and analyze all forms of written Bashkir, including highly abstract, structurally or linguistically complex texts such as legal codes, philosophical treatises, advanced scientific articles, historical documents, and literary works from various periods and genres (including classical, modern, contemporary, and experimental).",
+        "Appreciate and analyze fine distinctions of style, tone, authorial intent, narrative technique, literary or rhetorical devices, and intertextuality across all genres and historical periods.",
+        "Read and understand texts from different historical periods and diverse cultural contexts within the Bashkir-speaking world, including texts with significant linguistic, stylistic, conceptual, or paleographic challenges."
+      ],
+      "spoken_interaction_skills": [
+        "Take part effortlessly, fluently, engagingly, persuasively, articulately, and often leadingly or inspiringly in any conversation, discussion, or debate, using idiomatic expressions, colloquialisms, and cultural references naturally, appropriately, creatively, humorously, or with rhetorical skill.",
+        "Express him/herself with precision, eloquence, charisma, originality, and often profound insight, differentiating the finest shades of meaning, and reformulating ideas to overcome any communication difficulty smoothly, imperceptibly, effectively, and often by enhancing the discourse or leading it in new directions.",
+        "Argue a complex case, negotiate, persuade, mediate, and lead discussions effectively, diplomatically, strategically, and often inspirationally in any formal or informal setting, adapting strategies dynamically and with exceptional cultural astuteness and intellectual agility.",
+        "Adapt language, style, and communicative strategies appropriately, dynamically, creatively, and masterfully to any audience, context, and purpose with complete flexibility, sophistication, impact, and often artistic flair."
+      ],
+      "spoken_production_skills": [
+        "Present a clear, smoothly-flowing, well-structured, engaging, persuasive, and often memorable, inspiring, or transformative description, argument, or narrative in an appropriate and compelling style on any complex subject, demonstrating exceptional depth of thought, originality, and intellectual command.",
+        "Develop points cohesively, logically, and persuasively, with masterful use of organizational patterns, a wide range of sophisticated cohesive devices, and impactful rhetorical strategies tailored to the audience and achieving specific communicative goals.",
+        "Deliver presentations, lectures, or speeches with clarity, precision, eloquence, charisma, and engaging style, adapting to audience feedback, managing questions adeptly, inspiring action or thought, demonstrating subject matter expertise, and potentially contributing new knowledge or perspectives.",
+        "Use rhetorical devices effectively, creatively, strategically, and with significant impact, demonstrating exceptional oratorical skill and linguistic artistry."
+      ],
+      "written_interaction_skills": [
+        "Write any type of correspondence or document with complete command of style, tone, register, persuasive techniques, rhetorical strategies, and cultural nuances appropriate to the recipient, purpose, and context, achieving specific communicative and strategic goals with precision, impact, and often elegance or authority.",
+        "Engage in complex written discussions, collaborations, or negotiations, conveying nuanced ideas effectively, persuasively, diplomatically, strategically, and with intellectual rigor, potentially shaping outcomes or policy."
+      ],
+      "written_production_skills": [
+        "Write clear, smoothly-flowing, complex, sophisticated, and potentially publishable or canonical texts (academic research, literary works, critical analyses, policy papers, journalistic investigations, philosophical treatises) in an appropriate and effective style, demonstrating originality, critical insight, intellectual depth, stylistic mastery, and potentially lasting value.",
+        "Select and use a vast range of linguistic resources to express ideas precisely, persuasively, artistically, or humorously, with stylistic versatility, creativity, elegance, and often profound impact.",
+        "Demonstrate mastery of organizational patterns, paragraphing, and cohesive devices to ensure clarity, coherence, logical flow, and aesthetic impact at the highest professional, academic, or literary level, potentially setting new standards.",
+        "Write insightful summaries, critiques, or syntheses of complex information from multiple sources, adding original perspectives, critical analysis, demonstrating intellectual leadership, contributing to knowledge, or offering creative reinterpretation."
+      ],
+      "cultural_competence_topics": [
+        "Profound, nuanced, critical, comparative, and often scholarly or creative understanding of the diversity of Bashkir and Turkic cultures, societies, histories, arts, literatures, philosophical traditions, and intellectual movements, including their evolution, global impact, contemporary manifestations, and future possibilities.",
+        "Ability to function with complete ease, cultural sensitivity, adaptability, leadership, and often as a cultural authority, innovator, or bridge in any Bashkir-speaking environment or context, navigating complex social and intercultural dynamics with exceptional astuteness, empathy, and influence.",
+        "Capacity to act as a cultural interpreter, mediator, critic, scholar, or artist, explaining subtle and complex cultural nuances effectively and insightfully to diverse audiences, fostering deep cross-cultural understanding, contributing to cultural discourse, or creating new cultural forms.",
+        "Deep and critical understanding of contemporary socio-political issues, cultural debates, intellectual currents, and historical narratives in Bashkortostan, Russia, and the wider Turkic and Islamic worlds, with the ability to engage critically, contribute meaningfully, offer original perspectives, influence discourse, and potentially shape policy or cultural production."
+      ],
+      "learning_strategies_suggestions": [
+        "Maintain and expand language proficiency through continuous, high-level intellectual, professional, or creative engagement with diverse and complex authentic Bashkir materials, interactions, and original production, often at a pioneering level.",
+        "Engage in original scholarly research, critical analysis, literary creation, translation, or policy development involving sophisticated Bashkir language and cultural understanding.",
+        "Contribute to Bashkir-language publications, academic conferences, professional organizations, or cultural institutions at a leadership, expert, or creative innovator level, potentially shaping the future of the language or its study.",
+        "Reflect critically on and refine personal language use for optimal effectiveness, stylistic innovation, persuasive power, and artistic expression, possibly through teaching at advanced levels, mentoring, public intellectual engagement, or artistic practice.",
+        "Explore highly specialized, interdisciplinary, or emerging areas of interest in great depth in Bashkir, contributing original research, analysis, creative work, or policy that advances knowledge, cultural expression, or societal well-being."
+      ]
+    }
+  ]
+}
