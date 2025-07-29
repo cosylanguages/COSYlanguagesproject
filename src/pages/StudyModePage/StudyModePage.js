@@ -16,6 +16,7 @@ import TransliterableText from '../../components/Common/TransliterableText';
 import ToggleLatinizationButton from '../../components/Common/ToggleLatinizationButton';
 import Button from '../../components/Common/Button';
 import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
+import LanguageHeader from '../../components/Common/LanguageHeader';
 import PinEntry from '../../components/StudyMode/PinEntry';
 
 // Import the CSS for this page.
@@ -300,6 +301,8 @@ const StudyModePage = () => {
       <h1>
         <TransliterableText text={t('studyMode.mainHeading', 'COSYlanguages - Study Mode 🎓')} />
       </h1>
+
+      {currentLangKey && <LanguageHeader selectedLanguage={currentLangKey} />}
 
       {/* Language selection and other controls. */}
       <div className="study-menu-section">
