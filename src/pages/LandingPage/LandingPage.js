@@ -1,7 +1,5 @@
 // Import necessary libraries and components.
 import React, { useState, useRef } from 'react';
-// Import the Link component from react-router-dom for navigation.
-import { Link } from 'react-router-dom';
 // Import the CSS for this component.
 import './LandingPage.css';
 import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
@@ -18,7 +16,6 @@ function LandingPage() {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   // Ref pour la zone d'accueil (pour positionner les confettis)
   const landingContentRef = useRef(null);
-  const { t } = useI18n();
 
 
   return (
