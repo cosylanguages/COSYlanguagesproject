@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactPlayer from 'react-player';
-import { getSubtitles } from '@suejon/youtube-subtitles';
+import { get_subtitles_for_video } from '@suejon/youtube-subtitles';
 import './SpeakingClub.css';
 
 const SpeakingClub = ({ eventId }) => {
@@ -20,7 +20,7 @@ const SpeakingClub = ({ eventId }) => {
           setEvent(response.data);
           if (response.data.videoUrl) {
             const videoId = new URL(response.data.videoUrl).searchParams.get('v');
-            getSubtitles({ videoId, lang: 'en' }).then(setSubtitles);
+            get_subtitles_for_video({ videoId, lang: 'en' }).then(setSubtitles);
           }
         })
         .catch(error => {
