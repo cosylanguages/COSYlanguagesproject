@@ -1,6 +1,14 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import './Calculator.css';
 import { useI18n } from '../../i18n/I18nContext';
+import {
+  priceData,
+  packageDiscounts,
+  exchangeRates,
+  packageNames,
+  languageNames,
+  durationNames,
+} from '../../data/calculatorData';
 
 const Calculator = () => {
     const [pkg, setPkg] = useState('standard');
@@ -9,40 +17,8 @@ const Calculator = () => {
     const [totalEUR, setTotalEUR] = useState(0);
     const [originalTotalEUR, setOriginalTotalEUR] = useState(0);
 
-    const priceData = useMemo(() => ({
-        english: {
-            standard: {15: 5, 30: 10, 50: 20, 80: 30, 110: 40},
-            start: {15: 38, 30: 76, 50: 152, 80: 228, 110: 304},
-            progress: {15: 72, 30: 144, 50: 288, 80: 432, 110: 576},
-            maestro: {15: 136, 30: 272, 50: 544, 80: 816, 110: 1088}
-        },
-        french: {
-            standard: {15: 10, 30: 15, 50: 25, 80: 35, 110: 45},
-            start: {15: 76, 30: 116, 50: 180, 80: 266, 110: 242},
-            progress: {15: 144, 30: 126, 50: 360, 80: 504, 110: 468},
-            maestro: {15: 272, 30: 680, 50: 650, 80: 532, 110: 124}
-        },
-        italian: {
-            standard: {15: 10, 30: 15, 50: 25, 80: 35, 110: 45},
-            start: {15: 76, 30: 114, 50: 190, 80: 266, 110: 342},
-            progress: {15: 144, 30: 216, 50: 360, 80: 504, 110: 648},
-            maestro: {15: 272, 30: 408, 50: 680, 80: 952, 110: 1224}
-        }
-    }), []);
     const { currentLangKey: languageInitial } = useI18n();
     const language = priceData.hasOwnProperty(languageInitial) ? languageInitial : 'english';
-
-    const packageDiscounts = {
-        standard: 0,
-        start: 5,
-        progress: 10,
-        maestro: 15
-    };
-
-    const exchangeRates = {
-        usd: 1.08,
-        rub: 100.50
-    };
 
     useEffect(() => {
         const calculatePrice = () => {
@@ -63,27 +39,6 @@ const Calculator = () => {
     }, [language, pkg, duration, quantity, priceData]);
 
     const discount = packageDiscounts[pkg];
-
-    const packageNames = {
-        standard: "Standard",
-        start: "Start",
-        progress: "Progress",
-        maestro: "Maestro"
-    };
-
-    const languageNames = {
-        english: "English",
-        french: "French",
-        italian: "Italian"
-    };
-
-    const durationNames = {
-        15: "15 min Conversation",
-        30: "30 min Conversation",
-        50: "50 min Basic",
-        80: "80 min Basic/Exams",
-        110: "110 min Exams"
-    };
 
     const lessonsInPackage = pkg === 'standard' ? 1 :
                              pkg === 'start' ? 8 :
