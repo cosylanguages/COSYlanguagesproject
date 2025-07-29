@@ -131,18 +131,7 @@ function App() {
  * @returns {JSX.Element} The CatchAll component.
  */
 function CatchAll() {
-    const { isAuthenticated, loadingAuth } = useAuth();
-    const { t } = useI18n(); // For loading message translation
-
-    if (loadingAuth) {
-        return <div>{t('auth.loadingStatus', 'Loading authentication status...')}</div>;
-    } else if (isAuthenticated) {
-        // Authenticated users hitting an unknown SPA path go to the SPA root
-        return <Navigate to="/" replace />;
-    } else {
-        // Unauthenticated users hitting an unknown SPA path go to the login page
-        return <Navigate to="/login" replace />;
-    }
+    return <Navigate to="/" replace />;
 }
 
 export default AppRoutes;

@@ -1,20 +1,26 @@
 // Import necessary libraries and components.
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Outlet, Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { useI18n } from '../../i18n/I18nContext';
 import Button from '../Common/Button';
 import TransliterableText from '../Common/TransliterableText';
+import { useDarkMode } from '../../hooks/useDarkMode';
 import './Layout.css';
 
 // An array of navigation links.
 const navLinks = [
   { to: '/freestyle', text: 'navFreestyle', defaultText: 'Freestyle' },
-  { to: '/flashcards', text: 'navFlashcards', defaultText: 'Flashcards' },
   { to: '/study', text: 'navStudyMode', defaultText: 'Study' },
   { to: '/progress', text: 'navProgress', defaultText: 'Progress' },
   { to: '/community', text: 'navCommunity', defaultText: 'Community' },
-  { to: '/pricing', text: 'navPricing', defaultText: 'Pricing' },
+  { to: '/study/dictionary', text: 'navDictionary', defaultText: 'Dictionary', studyMode: true },
+  { to: '/study/study-tools', text: 'navStudyTools', defaultText: 'Study Tools', studyMode: true },
+  { to: '/study/conversation', text: 'navConversation', defaultText: 'Conversation', studyMode: true },
+  { to: '/study/learned-words', text: 'navLearnedWords', defaultText: 'Learned Words', studyMode: true },
+  { to: '/study/review', text: 'navReview', defaultText: 'Review', studyMode: true },
+  { to: '/study/personalize', text: 'navPersonalize', defaultText: 'Personalize', studyMode: true },
+  { to: '/study/interactive', text: 'navInteractive', defaultText: 'Interactive', studyMode: true },
 ];
 
 /**
@@ -26,43 +32,14 @@ const Layout = () => {
   const { isAuthenticated, currentUser, logout, loadingAuth } = useAuth();
   const { t } = useI18n();
   const navigate = useNavigate();
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
   const location = useLocation();
 
   // Check if the user is in "study mode".
   const isStudyMode = location.pathname.startsWith('/study');
 
-  // An array of navigation links for "study mode".
-  const studyModeNavLinks = [
-    { to: '/study/dictionary', text: 'navDictionary', defaultText: 'Dictionary' },
-    { to: '/study/study-tools', text: 'navStudyTools', defaultText: 'Study Tools' },
-    { to: '/study/conversation', text: 'navConversation', defaultText: 'Conversation' },
-    { to: '/study/learned-words', text: 'navLearnedWords', defaultText: 'Learned Words' },
-    { to: '/study/review', text: 'navReview', defaultText: 'Review' },
-    { to: '/study/personalize', text: 'navPersonalize', defaultText: 'Personalize' },
-    { to: '/study/interactive', text: 'navInteractive', defaultText: 'Interactive' },
-  ];
-
   // Combine the navigation links based on the current mode.
-  const filteredNavLinks = isStudyMode
-    ? [...navLinks, ...studyModeNavLinks]
-    : navLinks;
-
-  // Effect to toggle dark mode.
-  useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
-  }, [isDarkMode]);
-
-  /**
-   * Toggles dark mode.
-   */
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  const filteredNavLinks = navLinks.filter(link => !link.studyMode || isStudyMode);
 
   /**
    * Handles the logout process.
