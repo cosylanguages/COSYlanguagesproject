@@ -22,6 +22,8 @@ router.route('/update/:id').post((req, res) => {
     .then(event => {
       if (!event) return res.status(404).json('Event not found');
       event.title = req.body.title;
+      event.videoUrl = req.body.videoUrl;
+      event.videoTitle = req.body.videoTitle;
       event.start = req.body.start;
       event.end = req.body.end;
       event.description = req.body.description;

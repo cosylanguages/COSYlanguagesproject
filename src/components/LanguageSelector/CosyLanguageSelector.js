@@ -1,7 +1,7 @@
 // Import necessary libraries and components.
-import React, { useEffect } from 'react';
+import React, 'react';
 import Select from 'react-select';
-import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react--router-dom';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
 import './CosyLanguageSelector.css';
@@ -49,28 +49,8 @@ const flags = {
  * @returns {JSX.Element} The CosyLanguageSelector component.
  */
 const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
-  const { allTranslations, t, currentLangKey } = useI18n();
-  const location = useLocation();
-
-  // Effect to synchronize the URL with the language state.
-  useEffect(() => {
-    const pathLang = location.pathname.split('/')[2];
-    if (location.pathname.startsWith('/study/') && pathLang && pathLang !== currentLangKey) {
-      // This is a failsafe for scenarios where the URL isn't the trigger for a language change.
-    }
-  }, [currentLangKey, location.pathname]);
-
-  // Effect to update the body class based on the selected language.
-  useEffect(() => {
-    const body = document.body;
-    if (currentLangKey && flags[currentLangKey]) {
-      body.style.backgroundImage = `url(${flags[currentLangKey]})`;
-      body.style.backgroundSize = 'cover';
-      body.style.backgroundPosition = 'center';
-    } else {
-      body.style.backgroundImage = 'none';
-    }
-  }, [currentLangKey]);
+  const { allTranslations, t } = useI18n();
+  const navigate = useNavigate();
 
   // Get the list of available languages from the translations data.
   const availableLanguages = Object.keys(allTranslations)
@@ -99,12 +79,38 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
     .filter(Boolean)
     .sort((a, b) => a.label.localeCompare(b.label));
 
+  const pageOptions = [
+    { value: 'freestyle', label: t('Freestyle') },
+    { value: 'study', label: t('Study Mode') },
+    { value: 'community', label: t('Community') },
+  ];
+
+  const groupedOptions = [
+    {
+      label: t('Languages'),
+      options: availableLanguages,
+    },
+    {
+      label: t('Pages'),
+      options: pageOptions,
+    },
+  ];
+
   /**
    * Handles the change of the selected language.
    * @param {object} selectedOption - The selected option from the dropdown.
    */
   const handleChange = (selectedOption) => {
-    onLanguageChange(selectedOption ? selectedOption.value : null);
+    if (selectedOption) {
+      if (availableLanguages.find(lang => lang.value === selectedOption.value)) {
+        onLanguageChange(selectedOption.value);
+        navigate(`/study/${selectedOption.value}`);
+      } else {
+        navigate(`/${selectedOption.value}`);
+      }
+    } else {
+      onLanguageChange(null);
+    }
   };
 
   /**
@@ -114,7 +120,7 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
    */
   const formatOptionLabel = ({ logo, label, value }) => (
     <div className="cosy-language-option" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <img src={logo} alt={`${label} logo`} className="language-logo" />
+      {logo && <img src={logo} alt={`${label} logo`} className="language-logo" />}
       {flags[value] && (
         <img src={flags[value]} alt={`${label} flag`} className="language-flag" />
       )}
@@ -137,7 +143,7 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
         id="language-select"
         value={selectedValue}
         onChange={handleChange}
-        options={availableLanguages}
+        options={groupedOptions}
         formatOptionLabel={formatOptionLabel}
         className="cosy-language-select"
         classNamePrefix="cosy-language-select"
