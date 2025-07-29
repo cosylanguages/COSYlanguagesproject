@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, useNavigate } from 'react-router-dom';
 import { I18nProvider, useI18n } from '../i18n/I18nContext';
 import { LatinizationProvider } from '../contexts/LatinizationContext';
-import LanguageSelector from '../components/LanguageSelector/LanguageSelector';
+import CosyLanguageSelector from '../components/LanguageSelector/CosyLanguageSelector';
 import ToggleLatinizationButton from '../components/Common/ToggleLatinizationButton';
 import DaySelectorFreestyle from '../components/Freestyle/DaySelectorFreestyle';
 import PracticeCategoryNav from '../components/Freestyle/PracticeCategoryNav';
@@ -13,7 +13,6 @@ import ExerciseHost from '../components/Freestyle/ExerciseHost';
 import HelpPopupIsland from '../components/Freestyle/HelpPopupIsland';
 import { allMenuItemsConfig as fullMenuConfig } from '../utils/menuNavigationLogic';
 import '../index.css';
-import '../components/LanguageSelector/LanguageSelector.css';
 import '../components/Freestyle/DaySelectorFreestyle.css';
 import '../components/Freestyle/PracticeCategoryNav.css';
 import '../freestyle-shared.css';
@@ -40,7 +39,7 @@ export const LanguageIslandApp = () => {
         <label htmlFor="freestyle-language-select" data-transliterable id="study-choose-language-label">
           {t('chooseLanguageLabel', '🌎 Choose Your Language:')}
         </label>
-        <LanguageSelector />
+        <CosyLanguageSelector />
         <ToggleLatinizationButton />
         <button onClick={navigateToStudyMode} className="study-mode-switch-btn">
           {t('switchToStudyMode', 'Study Mode')}

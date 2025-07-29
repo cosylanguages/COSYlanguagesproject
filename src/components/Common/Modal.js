@@ -46,7 +46,6 @@ const Modal = ({ isOpen, onClose, title, children }) => {
                         onClick={onClose}
                         className="modal-close-button"
                         aria-label="Close modal" // Use aria-label for accessibility
-                        variant="default"
                     >
                         &times;
                     </Button>

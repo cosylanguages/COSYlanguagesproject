@@ -3,8 +3,8 @@ import React, { useEffect, useCallback, useState } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useAuth } from '../../contexts/AuthContext';
 import { useStudy } from '../../contexts/StudyContext';
-import { fetchDays as fetchTeacherDays } from '../../api/days';
-import { fetchLessonSections as fetchTeacherLessonSections, getLessonSectionDetails as getTeacherLessonSectionDetails } from '../../api/lessonSections';
+import { fetchDays as fetchTeacherDays } from '../../api/api';
+import { fetchLessonSections as fetchTeacherLessonSections, getLessonSectionDetails as getTeacherLessonSectionDetails } from '../../api/api';
 import { getAvailableSyllabusDays, fetchSyllabusByFileName } from '../../utils/syllabusService';
 import RoleSelector from './RoleSelector';
 import StudentDashboard from './StudentDashboard';
@@ -15,7 +15,7 @@ import ToolsPanel from '../../components/StudyMode/ToolsPanel';
 import TransliterableText from '../../components/Common/TransliterableText';
 import ToggleLatinizationButton from '../../components/Common/ToggleLatinizationButton';
 import Button from '../../components/Common/Button';
-import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
+import CosyLanguageSelector from '../../components/LanguageSelector/CosyLanguageSelector';
 import PinEntry from '../../components/StudyMode/PinEntry';
 
 // Import the CSS for this page.
@@ -306,7 +306,7 @@ const StudyModePage = () => {
         <label htmlFor="language-select" id="study-choose-language-label">
           <TransliterableText text={t('studyMode.chooseLanguageLabel', '🌎 Choose Your Language:')} />
         </label>
-        <LanguageSelector />
+        <CosyLanguageSelector />
         <ToggleLatinizationButton
           currentDisplayLanguage={currentLangKey || language}
         />

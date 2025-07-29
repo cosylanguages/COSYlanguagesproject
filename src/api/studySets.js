@@ -1,34 +1,26 @@
-import axios from 'axios';
+import apiClient from './apiClient';
 
-const API_URL = 'http://localhost:3001/study-sets';
-
-const getAuthHeaders = (token) => ({
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-});
-
-export const fetchStudySets = async (token) => {
-  const response = await axios.get(API_URL, getAuthHeaders(token));
+export const fetchStudySets = async () => {
+  const response = await apiClient.get('/study-sets');
   return response.data;
 };
 
-export const fetchStudySetById = async (token, setId) => {
-  const response = await axios.get(`${API_URL}/${setId}`, getAuthHeaders(token));
+export const fetchStudySetById = async (setId) => {
+  const response = await apiClient.get(`/study-sets/${setId}`);
   return response.data;
 };
 
-export const addStudySet = async (token, setData) => {
-  const response = await axios.post(API_URL, setData, getAuthHeaders(token));
+export const addStudySet = async (setData) => {
+  const response = await apiClient.post('/study-sets', setData);
   return response.data;
 };
 
-export const updateStudySet = async (token, setId, setData) => {
-  const response = await axios.put(`${API_URL}/${setId}`, setData, getAuthHeaders(token));
+export const updateStudySet = async (setId, setData) => {
+  const response = await apiClient.put(`/study-sets/${setId}`, setData);
   return response.data;
 };
 
-export const deleteStudySet = async (token, setId) => {
-  const response = await axios.delete(`${API_URL}/${setId}`, getAuthHeaders(token));
+export const deleteStudySet = async (setId) => {
+  const response = await apiClient.delete(`/study-sets/${setId}`);
   return response.data;
 };
