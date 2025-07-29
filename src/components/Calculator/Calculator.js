@@ -3,7 +3,8 @@ import './Calculator.css';
 import { useI18n } from '../../i18n/I18nContext';
 
 const Calculator = () => {
-    const { currentLangKey: language } = useI18n();
+    const { currentLangKey: languageInitial } = useI18n();
+    const language = priceData.hasOwnProperty(languageInitial) ? languageInitial : 'english';
     const [pkg, setPkg] = useState('standard');
     const [duration, setDuration] = useState('15');
     const [quantity, setQuantity] = useState(1);
