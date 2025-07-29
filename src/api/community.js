@@ -1,29 +1,21 @@
-import axios from 'axios';
+import apiClient from './apiClient';
 
-const API_URL = 'http://localhost:3001';
-
-const getAuthHeaders = (token) => ({
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-});
-
-export const getPosts = async (token) => {
-  const response = await axios.get(`${API_URL}/posts`, getAuthHeaders(token));
+export const getPosts = async () => {
+  const response = await apiClient.get('/posts');
   return response.data;
 };
 
-export const createPost = async (token, postData) => {
-  const response = await axios.post(`${API_URL}/posts`, postData, getAuthHeaders(token));
+export const createPost = async (postData) => {
+  const response = await apiClient.post('/posts', postData);
   return response.data;
 };
 
-export const likePost = async (token, postId) => {
-  const response = await axios.post(`${API_URL}/posts/${postId}/like`, null, getAuthHeaders(token));
+export const likePost = async (postId) => {
+  const response = await apiClient.post(`/posts/${postId}/like`);
   return response.data;
 };
 
-export const commentOnPost = async (token, postId, commentData) => {
-  const response = await axios.post(`${API_URL}/posts/${postId}/comment`, commentData, getAuthHeaders(token));
+export const commentOnPost = async (postId, commentData) => {
+  const response = await apiClient.post(`/posts/${postId}/comment`, commentData);
   return response.data;
 };

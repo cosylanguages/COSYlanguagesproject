@@ -7,7 +7,7 @@ import {
     addLessonSection,
     updateLessonSection,
     deleteLessonSection
-} from '../../api/lessonSections';
+} from '../../api/api';
 import './LessonSectionManager.css';
 
 /**

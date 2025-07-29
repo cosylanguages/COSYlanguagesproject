@@ -8,8 +8,8 @@ import MuiButton from '@mui/material/Button';
  * @param {object} props - The props to pass to the Material-UI Button component.
  * @returns {JSX.Element} The Button component.
  */
-const Button = (props) => {
-  return <MuiButton {...props} />;
+const Button = ({ className, ...props }) => {
+  return <MuiButton className={`btn ${className}`} {...props} />;
 };
 
 export default Button;

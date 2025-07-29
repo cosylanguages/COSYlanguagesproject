@@ -1,0 +1,676 @@
+{
+  "language_name": "Armenian (Eastern)",
+  "levels": [
+    {
+      "level_code": "A0",
+      "level_name": "Առաջին Քայլեր (First Steps)",
+      "approximate_vocabulary_size": "approx. 300-500 words",
+      "learning_outcomes": [
+        "Recognize and reproduce the sounds of the Armenian alphabet.",
+        "Understand and use familiar everyday expressions and very basic phrases (e.g., greetings, introductions).",
+        "Introduce him/herself and others simply (e.g., Ես... եմ - I am...).",
+        "Ask and answer simple questions about personal details (name, nationality).",
+        "Interact in a very simple way if the other person speaks slowly, clearly, and is prepared to help.",
+        "Recognize familiar names, words, and very simple sentences in Armenian script."
+      ],
+      "language_focus_topics": [
+        "The Armenian Alphabet (Հայոց այբուբեն): All 39 letters (including 'և'), their names, and sounds. Writing and reading practice.",
+        "Basic pronunciation rules: Voiced, voiceless, and aspirated consonants (basic distinctions). Vowel sounds.",
+        "Nouns: Concept of nouns. No grammatical gender. Nominative case singular (e.g., տուն - house, գիրք - book).",
+        "Pronouns: Personal pronouns in nominative singular (ես - I, դու - you (s.), նա - he/she/it).",
+        "Verbs: Present tense of 'եմ' (to be - auxiliary): եմ, ես, է. Simple sentence structure (e.g., Ես ուսանող եմ - I am a student).",
+        "Verbs: Present tense of a few common verbs in 1st/2nd/3rd person singular (e.g., ունեմ - I have, ուզում եմ - I want, խոսում եմ - I speak).",
+        "Basic Sentence Structure: Subject-Object-Verb (SOV) tendency. Simple statements.",
+        "Negation: 'չ-' prefix with verbs (e.g., չեմ ուզում - I don't want). 'չկա' (there isn't).",
+        "Simple Questions: Intonation. Basic question words (Ո՞վ - who, Ի՞նչ - what, Որտե՞ղ - where).",
+        "Day 1 Grammar - 'It is': Սա ի՞նչ է։ (What is it?), Սա ... է՞։ (Is it ...?), Սա ... է՞, թե՞ ...։ (Is it ... or ...?), Սա ... է։ (It is ...), Սա ... չէ։ (It is not ...), Սա ... չէ, այլ ... է։ (It is not ... but it is...)."
+      ],
+      "vocabulary_topics": [
+        "Day 1: Basic Words and Phrases: Բարև (hello), Ցտեսություն (goodbye), Այո (yes), Ոչ (no), Շնորհակալություն (thank you), Խնդրեմ (you're welcome/please), Լավ (alright/ok), Մեկ (one), Թեյ (tea), Սուրճ (coffee), Ջուր (water), Հյութ (juice), Գարեջուր (beer), Գինի (wine), Կանխիկ (cash), Քարտ (card).",
+        "Greetings: Բարև (Ձեզ), Ողջույն, Ցտեսություն, Առայժմ, Բարի լույս/օր/երեկո.",
+        "Introductions & Personal Information: Անունդ ինչպե՞ս է: Անունս... է: Շատ ուրախ եմ: Որտեղի՞ց ես: Ես...-ից եմ: Ազգություն (basic).",
+        "Courtesy: Շնորհակալություն, Խնդրեմ, Ներեցեք /Կներեք.",
+        "Basic responses: Այո, Ոչ.",
+        "Numbers: 0-10 (զրո-տասը).",
+        "Colors: կարմիր, կապույտ, կանաչ, դեղին, սև, սպիտակ (basic).",
+        "Family: մայր(իկ), հայր(իկ), քույր, եղբայր (basic).",
+        "Common Objects: գիրք, գրիչ, սեղան, աթոռ, տուն, մեքենա, հեռախոս.",
+        "Basic Food & Drink: հաց, ջուր, կաթ, սուրճ, թեյ, պանիր, խնձոր.",
+        "Classroom language: Կրկնեք, խնդրեմ: Չեմ հասկանում:"
+      ],
+      "speaking_dialogues": [
+        {
+          "title": "Day 1: Cafe Dialogue",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "line": "Բարև (Barev)"
+            },
+            {
+              "speaker": "B",
+              "line": "Բարև, սո՞ւրճ, թե՞ թեյ։ (Barev, surch, te tey?)"
+            },
+            {
+              "speaker": "A",
+              "line": "Մեկ սուրճ, խնդրեմ։ (Mek surch, khndrem.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Մեկ թե՞յ։ (Mek tey?)"
+            },
+            {
+              "speaker": "A",
+              "line": "Ոչ, մեկ սուրճ, խնդրեմ։ (Voch, mek surch, khndrem.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Մեկ սո՞ւրճ։ (Mek surch?)"
+            },
+            {
+              "speaker": "A",
+              "line": "Այո, խնդրեմ։ (Ayo, khndrem.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Լավ։ (Lav.)"
+            },
+            {
+              "speaker": "A",
+              "line": "Շնորհակալություն։ (Shnorhakalutyun!)"
+            },
+            {
+              "speaker": "B",
+              "line": "Խնդրեմ։ (Khndrem.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Կանխի՞կ, թե՞ քարտով։ (Kankhik, te kartov?)"
+            },
+            {
+              "speaker": "A",
+              "line": "Կանխիկ, խնդրեմ։ (Kankhik, khndrem.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Կանխի՞կ։ (Kankhik?)"
+            },
+            {
+              "speaker": "A",
+              "line": "Այո, խնդրեմ։ (Ayo, khndrem.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Լավ։ (Lav.)"
+            },
+            {
+              "speaker": "A",
+              "line": "Շնորհակալություն։ (Shnorhakalutyun.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Խնդրեմ։ (Khndrem.)"
+            },
+            {
+              "speaker": "A",
+              "line": "Ցտեսություն։ (Tstesutyun.)"
+            },
+            {
+              "speaker": "B",
+              "line": "Ցտեսություն։ (Tstesutyun.)"
+            }
+          ]
+        }
+      ],
+      "pronunciation_focus_topics": [
+        "Mastering the sounds of all Armenian letters, including unique sounds not found in English.",
+        "Distinction between aspirated (թ, փ, ք, չ, ց), voiceless (տ, պ, կ, ճ, ծ), and voiced (դ, բ, գ, ջ, ձ) stops and affricates.",
+        "Pronunciation of vowels (ա, է, ե, ը, ի, о, ու, և).",
+        "Rolled 'ռ' vs. flapped 'ր'.",
+        "Word stress (generally on the last syllable, but with exceptions).",
+        "Basic intonation for statements and simple questions."
+      ],
+      "listening_comprehension_skills": [
+        "Recognize familiar Armenian words and very basic phrases when spoken slowly and clearly.",
+        "Understand simple greetings, introductions, and farewells.",
+        "Follow very simple, clearly articulated instructions."
+      ],
+      "reading_comprehension_skills": [
+        "Read and identify all letters of the Armenian alphabet (print and basic handwritten).",
+        "Read and understand familiar names, words, and very simple sentences.",
+        "Recognize numbers 0-10 written as words."
+      ],
+      "spoken_interaction_skills": [
+        "Greet and respond to greetings.",
+        "Introduce oneself and ask for someone's name.",
+        "Ask and answer simple questions about personal information (name, origin).",
+        "Use basic courtesy phrases."
+      ],
+      "spoken_production_skills": [
+        "Say the letters of the Armenian alphabet.",
+        "Pronounce basic Armenian vocabulary comprehensibly, paying attention to distinct sounds.",
+        "Produce simple isolated phrases and sentences (e.g., 'Սա իմ գիրքն է' - This is my book).",
+        "State name and nationality simply."
+      ],
+      "written_interaction_skills": [
+        "Recognize own name and a few familiar words when written."
+      ],
+      "written_production_skills": [
+        "Write all letters of the Armenian alphabet (uppercase and lowercase).",
+        "Write one's name and other simple familiar words in Armenian.",
+        "Copy familiar words and short sentences."
+      ],
+      "cultural_competence_topics": [
+        "Common greeting customs in Armenia.",
+        "Basic awareness of formal (Դուք - You pl./formal) vs. informal (դու - you s./informal) address.",
+        "Importance of hospitality in Armenian culture.",
+        "Key Armenian symbols (e.g., Mount Ararat, Armenian cross/khachkar - basic awareness)."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice writing Armenian letters daily.",
+        "Use flashcards with Armenian script, pictures, and transliteration (initially).",
+        "Listen to Armenian children's songs or simple audio designed for learners.",
+        "Focus on mastering the unique consonant sounds (aspirated, ejective-like voiceless)."
+      ]
+    },
+    {
+      "level_code": "A1",
+      "level_name": "Փոքրիկ Հետախույզ (Little Explorer)",
+      "approximate_vocabulary_size": "approx. 500-700 words",
+      "learning_outcomes": [
+        "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.",
+        "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
+        "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
+      ],
+      "language_focus_topics": [
+        "Review A0: Alphabet, basic pronunciation, nominative case, 'to be' verb.",
+        "Nouns: Cases - Nominative, Genitive (-ի, -ու, -վա, -ոջ), Dative (same as Genitive), Accusative (often same as Nominative for inanimates, Genitive/Dative for animates - basic patterns). Ablative (-ից). Instrumental (-ով). Locative (-ում). Singular forms of common declension types.",
+        "Nouns: Plural formation (-եր, -ներ) and basic plural case endings.",
+        "Adjectives: Basic agreement with nouns (often invariable or simple endings like -ի for genitive). Position (usually before the noun).",
+        "Pronouns: Personal pronouns in basic cases (Genitive: իմ, քո, նրա). Possessive pronouns (as adjectives).",
+        "Verbs: Present tense conjugation of common verbs (e.g., -ում եմ, -ում ես, -ում է type and -ամ, -աս, -ա type).",
+        "Verbs: Past tense (Imperfect: -ում էի; Aorist/Simple Past: -եցի, -ացա for common verbs - basic introduction).",
+        "Verbs: Future tense ( պիտի + present subjunctive form or -ելու եմ construction).",
+        "Postpositions: Common postpositions (հետ - with, համար - for, մասին - about, մեջ - in).",
+        "Adverbs of time, place, manner.",
+        "Numbers: 0-100. Basic ordinal numbers (առաջին, երկրորդ...)."
+      ],
+      "vocabulary_topics": [
+        "Review A0 vocabulary.",
+        "Personal information: Family members (extended: պապիկ, տատիկ), age, profession.",
+        "Daily routine: Describing typical daily activities.",
+        "Food & Drink: Common food items, drinks, meals (նախաճաշ, ճաշ, ընթրիք), ordering in a café/restaurant.",
+        "Shopping: Types of shops (խանութ), common items, prices, quantities.",
+        "Places in town: փողոց, հրապարակ, այգի, թանգարան, եկեղեցի, դպրոց, համալսարան.",
+        "Transport: автобус, տրոլեյբուս, մետրո, տաքսի. Buying tickets.",
+        "Time: Telling the time, days of the week, months, seasons, dates.",
+        "Weather: Describing weather conditions (տաք է, ցուրտ է, անձրև է գալիս, ձյուն է գալիս).",
+        "Hobbies & interests (կարդալ, նկարել, երգել, սպորտով զբաղվել).",
+        "Clothing: Common items."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A0 sounds, especially the three-way distinction of stops/affricates.",
+        "Pronunciation of noun case endings and verb conjugations.",
+        "Word stress and sentence intonation for questions and statements.",
+        "Linking sounds in connected speech (basic).",
+        "Distinguishing sounds that might be confused by learners."
+      ],
+      "listening_comprehension_skills": [
+        "Understand frequently used words and phrases related to personal details, family, shopping, local area, when spoken slowly and clearly.",
+        "Grasp the main point in short, clear, simple messages and announcements.",
+        "Understand simple questions and instructions related to everyday situations."
+      ],
+      "spoken_interaction_skills": [
+        "Interact in simple, routine situations (e.g., basic shopping, ordering food, asking for simple directions).",
+        "Ask and answer questions about familiar topics (daily life, hobbies, family, preferences).",
+        "Make and respond to simple suggestions or invitations.",
+        "Ask for and give basic information about time, quantity, and price."
+      ],
+      "spoken_production_skills": [
+        "Describe his/her family, other people, living conditions, and daily routine in simple terms.",
+        "Talk about likes and dislikes.",
+        "Describe simple past events using basic past tense forms.",
+        "Express simple future plans."
+      ],
+      "written_interaction_skills": [
+        "Write a simple reply to a personal message or invitation."
+      ],
+      "written_production_skills": [
+        "Write short, simple notes, messages, or postcards.",
+        "Describe a familiar place, person, or daily routine in a few simple, connected sentences.",
+        "Fill in simple forms with personal details."
+      ],
+      "cultural_competence_topics": [
+        "Forms of address: distinguishing between 'դու' and 'Դուք'.",
+        "Basic Armenian customs related to meals and hospitality.",
+        "Awareness of major Armenian holidays (e.g., Easter/Զատիկ, New Year/Ամանոր, Vardavar - basic).",
+        "Armenian cuisine: common dishes (e.g., լավաշ, տոլմա, խորոված - recognition).",
+        "Importance of family and respect for elders."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice noun declensions for common nouns.",
+        "Use language learning apps with Armenian dialogues and vocabulary builders.",
+        "Listen to Armenian music and try to follow simple lyrics.",
+        "Try to form simple sentences about your daily life using different cases and tenses."
+      ]
+    },
+    {
+      "level_code": "A2",
+      "level_name": "Հետաքրքրասեր Ուսանող (Curious Student)",
+      "approximate_vocabulary_size": "approx. 1000-1500 words",
+      "learning_outcomes": [
+        "Can understand sentences and frequently used expressions related to areas of most immediate relevance (e.g. very basic personal and family information, shopping, local geography, employment).",
+        "Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.",
+        "Can describe in simple terms aspects of his/her background, immediate environment and matters in areas of immediate need."
+      ],
+      "language_focus_topics": [
+        "Review A1: Noun cases (all, singular/plural), verb conjugations (present, basic past/future).",
+        "Verbs: More irregular verbs. Perfect tenses (e.g., Present Perfect: -ել եմ; Past Perfect: -ել էի). Subjunctive mood (basic forms and uses, e.g., with որպեսզի - in order to, եթե - if).",
+        "Adjectives: Comparative (-ագույն for some superlatives) and superlative forms. Agreement in more complex sentences.",
+        "Pronouns: Reflexive (ինքս,ինքդ,ինքը) and demonstrative pronouns (այս, այդ, այն) with their declensions.",
+        "Adverbs: Formation of adverbs from adjectives. Adverbs of degree (շատ, քիչ).",
+        "Conjunctions: More coordinating and subordinating conjunctions (թեև - although, որովհետև - because).",
+        "Participles: Basic introduction to adjectival use of participles (e.g., կարդացած գիրք - read book).",
+        "Numerals: Ordinal numbers and their agreement. Basic fractions."
+      ],
+      "vocabulary_topics": [
+        "Review A1 vocabulary.",
+        "Describing people: Character, emotions, relationships.",
+        "Housing: Renting an apartment, common household issues.",
+        "Food & Drink: Discussing recipes, national cuisines, dietary preferences.",
+        "Shopping: Complaining, asking for specific products, understanding sales.",
+        "Travel & Transport: Planning trips in detail, booking accommodation, dealing with travel problems.",
+        "Health & Body: Explaining health problems to a doctor, understanding simple medical advice.",
+        "Work & Study: Describing responsibilities, projects, academic interests.",
+        "Leisure & Hobbies: Discussing preferences in detail, sharing experiences.",
+        "Nature & Environment: Basic environmental issues, weather patterns.",
+        "Feelings & Emotions: Expressing a wider range of feelings with more nuance.",
+        "Current events: Understanding simple news headlines or summaries."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A1/A0: Consonant distinctions, vowel harmony (if applicable to specific dialect focus), stress.",
+        "Intonation in longer and more complex sentences, expressing different attitudes (surprise, doubt).",
+        "Connected speech: assimilation and elision in faster speech.",
+        "Pronunciation of loanwords adapted into Armenian.",
+        "Rhythm and flow in short narratives or descriptions."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear standard speech on familiar topics.",
+        "Follow short narratives or simple conversations between native speakers if the topic is familiar.",
+        "Identify key information in short radio/TV news segments or announcements."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short personal letters, emails, and blog posts on a variety of familiar topics.",
+        "Find specific information in everyday materials such as simple official documents, articles, or user guides.",
+        "Understand the main ideas of simplified newspaper articles or stories."
+      ],
+      "spoken_interaction_skills": [
+        "Engage in conversations on familiar topics, exchanging information, opinions, and personal feelings.",
+        "Handle most routine situations encountered in daily life or while travelling.",
+        "Make and respond to suggestions, invitations, apologies, and express thanks with more elaboration.",
+        "Discuss past experiences and future plans, providing details and reasons."
+      ],
+      "spoken_production_skills": [
+        "Give clear, connected descriptions of people, places, events, or personal experiences.",
+        "Narrate a story or recount events in a logical sequence, using appropriate tenses and linking words.",
+        "Talk about future plans, intentions, and possibilities.",
+        "Express opinions and preferences, providing simple justifications and examples."
+      ],
+      "written_interaction_skills": [
+        "Write personal emails or messages to exchange detailed information, make plans, or express feelings.",
+        "Participate in simple online discussions on familiar topics."
+      ],
+      "written_production_skills": [
+        "Write connected texts on familiar topics (e.g., describing a trip, a cultural event, a personal opinion).",
+        "Write a personal letter giving detailed news or describing experiences.",
+        "Write short reports or summaries of factual information on familiar subjects."
+      ],
+      "cultural_competence_topics": [
+        "Armenian family life and social structures.",
+        "Important historical events and figures in Armenian history (basic overview).",
+        "Traditional Armenian music, dance, and arts (basic awareness).",
+        "Etiquette for social occasions and celebrations.",
+        "Understanding the significance of the Armenian Diaspora.",
+        "Regional differences within Armenia (basic).",
+        "Common Armenian proverbs or expressions (simple ones)."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice using different verb tenses and moods in context.",
+        "Read short authentic Armenian texts (e.g., news for young people, blogs).",
+        "Watch Armenian TV shows or films with subtitles, focusing on comprehension of dialogues.",
+        "Try to write short essays or stories in Armenian.",
+        "Engage in conversations with native speakers, trying to use more complex sentences."
+      ]
+    },
+    {
+      "level_code": "B1",
+      "level_name": "Հմուտ Ճանապարհորդ (Skillful Traveler)",
+      "approximate_vocabulary_size": "approx. 2000-2500 words",
+      "learning_outcomes": [
+        "Can understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc.",
+        "Can deal with most situations likely to arise whilst travelling in an area where the language is spoken.",
+        "Can produce simple connected text on topics, which are familiar, or of personal interest.",
+        "Can describe experiences and events, dreams, hopes & ambitions and briefly give reasons and explanations for opinions and plans."
+      ],
+      "language_focus_topics": [
+        "Review of A2 grammar: Cases, verb tenses (including perfects), basic subjunctive, participles.",
+        "Verbs: Conditional mood (կ + subjunctive forms). More complex uses of subjunctive mood (wishes, regrets, hypothetical situations).",
+        "Verbs: Passive voice constructions.",
+        "Verbs: Verbal nouns (-ել, -ալ endings) and their uses.",
+        "Complex sentences: Subordinate clauses of concession (թեև, չնայած), result (այնպես որ), manner (ինչպես).",
+        "Reported speech: Reporting statements, questions, and commands with more complex tense shifts.",
+        "Relative clauses with various relative pronouns and adverbs.",
+        "Impersonal constructions (e.g., կարելի է - it is possible, պետք է - it is necessary).",
+        "Word order flexibility and stylistic choices."
+      ],
+      "vocabulary_topics": [
+        "Work and career: Discussing job satisfaction, challenges, career changes, professional skills.",
+        "Education: Discussing academic fields, research, educational goals, lifelong learning.",
+        "Travel and tourism: Describing travel experiences in detail, cultural immersion, independent travel planning, problem-solving.",
+        "Media and news: Analyzing news, discussing different viewpoints, understanding media bias (simple).",
+        "Culture and arts: Discussing specific works, artists, genres; expressing critical opinions; Armenian cultural heritage.",
+        "Health and lifestyle: Discussing public health, mental health, alternative medicine, healthy lifestyle choices.",
+        "Social and environmental issues: Discussing current problems, causes and effects, potential solutions, civic engagement.",
+        "Personal relationships: Describing complex relationships, emotions, conflicts, and support systems.",
+        "Technology and communication: Impact of technology on society, digital citizenship, information sources.",
+        "Abstract topics: justice, equality, tradition vs. modernity, cultural identity."
+      ],
+      "pronunciation_focus_topics": [
+        "Review of A2 pronunciation: intonation for complex sentences, connected speech.",
+        "Nuances of Armenian intonation to express sarcasm, enthusiasm, politeness.",
+        "Rhythm and fluency in extended discourse.",
+        "Pronunciation of formal vs. informal speech patterns.",
+        "Understanding basic features of major dialects (e.g., Yerevan vs. Gyumri - if focusing on Eastern Armenian)."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear standard speech on familiar and some unfamiliar topics.",
+        "Understand the main points of radio or TV programs on current affairs or topics of personal/professional interest.",
+        "Follow a lecture or presentation on a familiar topic if clearly structured."
+      ],
+      "reading_comprehension_skills": [
+        "Understand texts dealing with everyday or job-related language, and descriptions of events, feelings, and wishes.",
+        "Understand straightforward factual texts and articles on topics of interest.",
+        "Grasp the main ideas and some details in newspaper articles or non-specialized magazine articles."
+      ],
+      "spoken_interaction_skills": [
+        "Enter unprepared into conversations on a range of familiar topics.",
+        "Deal with most situations likely to arise while travelling or living in an Armenian-speaking environment.",
+        "Express and sustain opinions, providing explanations, arguments, and comments.",
+        "Participate actively in discussions, clarifying points and responding to differing views."
+      ],
+      "spoken_production_skills": [
+        "Produce connected discourse on a variety of topics, linking ideas coherently.",
+        "Narrate stories, describe experiences, or relate plots of books/films with reasonable detail.",
+        "Describe dreams, hopes, ambitions, and hypothetical situations, providing reasons and explanations.",
+        "Present arguments and opinions on familiar topics in a clear, structured manner."
+      ],
+      "written_interaction_skills": [
+        "Write personal letters or emails describing experiences, feelings, events, and opinions in detail.",
+        "Respond to formal/informal written communications, providing detailed information or expressing well-reasoned views."
+      ],
+      "written_production_skills": [
+        "Write clear, connected texts on a range of familiar subjects or topics of interest.",
+        "Write descriptions of events, experiences, or personal reflections with good structure.",
+        "Write a formal letter or email for practical purposes (e.g., letter of application, formal complaint).",
+        "Express personal viewpoints and arguments on various topics in a structured text, providing supporting details."
+      ],
+      "cultural_competence_topics": [
+        "Understanding social etiquette in various Armenian settings (formal, informal, urban, rural).",
+        "Knowledge of key periods and figures in Armenian history and their significance.",
+        "Appreciation of Armenian literature, music, and visual arts (key examples and genres).",
+        "Understanding the values and beliefs that shape Armenian society.",
+        "Awareness of the diversity within the Armenian diaspora and its connections to Armenia.",
+        "Contemporary social and cultural trends in Armenia."
+      ],
+      "learning_strategies_suggestions": [
+        "Read authentic Armenian materials regularly (news, articles, blogs, short stories).",
+        "Practice using conditional and subjunctive moods in varied contexts.",
+        "Watch Armenian films, TV series, and documentaries, focusing on understanding different speech styles.",
+        "Engage in discussions on more abstract or complex topics.",
+        "Write longer, well-structured texts (essays, reports) and get feedback."
+      ]
+    },
+    {
+      "level_code": "B2",
+      "level_name": "Իմաստուն Զրուցակից (Wise Interlocutor)",
+      "approximate_vocabulary_size": "approx. 3500-4500 words",
+      "learning_outcomes": [
+        "Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in his/her field of specialisation.",
+        "Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
+        "Can produce clear, detailed text on a wide range of subjects and explain a viewpoint on a topical issue giving the advantages and disadvantages of various options."
+      ],
+      "language_focus_topics": [
+        "Comprehensive review of verb aspects, tenses, moods (indicative, subjunctive, conditional), and voices.",
+        "Advanced use of participles (դերբայ) and participial constructions in formal and written Armenian.",
+        "Complex sentence syntax: mastery of various types of subordinate clauses and their connectors, including concessive, result, and comparative clauses.",
+        "Nuances of case usage and postpositional phrases.",
+        "Reported speech: reporting complex statements, questions, commands, and suggestions with accuracy.",
+        "Modal verbs and expressions: expressing fine shades of meaning regarding certainty, probability, obligation, etc.",
+        "Figurative language: understanding and using common metaphors and idiomatic expressions.",
+        "Stylistic variations in word order and sentence structure for emphasis and register.",
+        "Discourse markers for structuring arguments and ensuring cohesion in longer texts."
+      ],
+      "vocabulary_topics": [
+        "Abstract concepts: In-depth discussion of societal issues, politics, economics, environment, education, culture, arts, science, technology.",
+        "Expressing nuanced opinions, arguments, justifications, and counter-arguments.",
+        "Vocabulary for formal discussions, debates, and presentations.",
+        "Idioms, set expressions, and proverbs common in contemporary Armenian.",
+        "Understanding and using different registers (formal, neutral, informal, colloquial).",
+        "Word formation: prefixes, suffixes, compounding for vocabulary expansion.",
+        "Synonyms and antonyms for precision and stylistic variation.",
+        "Collocations: advanced verb-noun, adjective-noun combinations.",
+        "Vocabulary related to one's field of specialization."
+      ],
+      "pronunciation_focus_topics": [
+        "Fine-tuning intonation for expressing complex attitudes, emotions, and pragmatic functions.",
+        "Mastery of connected speech phenomena for natural flow.",
+        "Recognition of main regional Armenian accents (Eastern vs. Western general features, and some internal variations).",
+        "Maintaining clarity in extended speech and presentations."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech and lectures in Armenian and follow complex lines of argument if the topic is reasonably familiar.",
+        "Understand most TV news, current affairs programs, and documentaries.",
+        "Understand the majority of Armenian films and plays in standard dialects."
+      ],
+      "reading_comprehension_skills": [
+        "Read articles and reports concerned with contemporary problems in which writers adopt particular stances or viewpoints.",
+        "Understand contemporary Armenian literary prose and drama.",
+        "Understand specialized articles outside one's immediate field with some dictionary use."
+      ],
+      "spoken_interaction_skills": [
+        "Interact with fluency and spontaneity, making regular interaction with native speakers possible without undue strain.",
+        "Take an active part in discussions in familiar and some unfamiliar contexts, accounting for and sustaining viewpoints.",
+        "Handle linguistic aspects of negotiation, making a case, and managing disagreement."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed descriptions on a wide range of subjects related to one's field of interest or general topics.",
+        "Explain a viewpoint on a topical issue, giving the advantages and disadvantages of various options, supporting arguments with evidence.",
+        "Develop an argument systematically, highlighting significant points and relevant details."
+      ],
+      "written_interaction_skills": [
+        "Write clear, detailed letters or emails on complex subjects, conveying information, ideas, or opinions effectively.",
+        "Respond to complex inquiries or arguments in writing, adapting style as needed."
+      ],
+      "written_production_skills": [
+        "Write clear, detailed texts (essays, reports, articles) on a wide range of subjects.",
+        "Summarize information from different sources and present arguments coherently.",
+        "Write reviews of films, books, or events, expressing justified opinions.",
+        "Develop a reasoned argument in an essay or report, presenting different viewpoints and concluding."
+      ],
+      "cultural_competence_topics": [
+        "Deeper understanding of Armenian society, history, and contemporary issues.",
+        "Ability to understand and appreciate cultural references, humor, and irony in Armenian media and literature.",
+        "Nuances of social and professional etiquette in various Armenian contexts.",
+        "Understanding different perspectives within Armenian society and the diaspora.",
+        "Knowledge of key figures and events in Armenian history, literature, and arts, and their impact."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage regularly with authentic Armenian media (news, analytical programs, films, literature).",
+        "Participate in debates or discussions in Armenian.",
+        "Write analytical essays or reports on complex topics.",
+        "Seek feedback from native speakers on advanced grammar and style.",
+        "Explore Armenian internet forums and social media to understand contemporary language use."
+      ]
+    },
+    {
+      "level_code": "C1",
+      "level_name": "Իմաստուն Խոսնակ (Wise Speaker)",
+      "approximate_vocabulary_size": "approx. 7000-8000 words",
+      "learning_outcomes": [
+        "Can understand a wide range of demanding, longer texts, and recognise implicit meaning.",
+        "Can express him/herself fluently and spontaneously without much obvious searching for expressions.",
+        "Can use language flexibly and effectively for social, academic and professional purposes.",
+        "Can produce clear, well-structured, detailed text on complex subjects, showing controlled use of organisational patterns, connectors and cohesive devices."
+      ],
+      "language_focus_topics": [
+        "Mastery of the Armenian grammatical system, including all verb aspects, tenses, moods, voices, and complex case constructions, with attention to stylistic variations.",
+        "Sophisticated use of participles, gerunds, and their respective phrases for concise and stylistically varied expression in formal, academic, and literary contexts.",
+        "Advanced use and understanding of impersonal and passive constructions, and their stylistic implications across different genres.",
+        "Mastery of complex sentence syntax, including all types of subordinate clauses, non-finite constructions, and their interplay for logical coherence and rhetorical effect.",
+        "Stylistic use of word order, inversion, ellipsis, and other rhetorical figures for emphasis, nuance, and artistic effect.",
+        "Understanding and occasional use of archaic or literary grammatical forms for specific stylistic purposes or characterization.",
+        "Deep understanding of the interaction between morphology, syntax, semantics, and pragmatics in Armenian.",
+        "Advanced use of a wide range of discourse markers and cohesive devices for structuring sophisticated arguments, narratives, academic texts, and formal speeches with clarity and elegance."
+      ],
+      "vocabulary_topics": [
+        "Extensive vocabulary covering abstract, specialized, technical, and culturally specific topics across a wide range of academic, professional, and literary domains.",
+        "Nuanced understanding and precise use of synonyms, antonyms, hyponyms, hypernyms, and related lexical items to convey fine shades of meaning, stylistic effects, and register appropriateness.",
+        "Rich repertoire of idiomatic expressions, proverbs, aphorisms, colloquialisms, and cultural allusions, with a deep understanding of their appropriate context, register, connotations, and historical origins.",
+        "Vocabulary for advanced academic and professional purposes, including specialized terminology for research, critical analysis, policy-making, and high-level communication.",
+        "Advanced word formation: understanding etymology, roots (including influences from other languages like Persian, Russian, Greek), and complex affixation to deduce meaning, expand vocabulary actively, and appreciate linguistic creativity.",
+        "Ability to use language creatively, including sophisticated wordplay, and to understand subtle humor, satire, and irony.",
+        "Differentiating and appropriately using various stylistic layers of vocabulary (neutral, formal, informal, literary, technical, historical, poetic)."
+      ],
+      "pronunciation_focus_topics": [
+        "Near-native pronunciation, intonation, rhythm, and stress across various speech styles and registers, with high accuracy and naturalness.",
+        "Using prosody effectively and subtly to convey complex meanings, attitudes, irony, emotions, and pragmatic functions.",
+        "Understanding and adapting to a wider range of regional Armenian accents (Eastern, Western, and sub-dialects) and sociolects, recognizing fine phonetic distinctions.",
+        "Maintaining clarity, precision, and natural flow in rapid, complex, or formal speech, including public speaking and academic presentations."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech in Armenian even when it is not clearly structured, contains dialectal features, or when relationships are only implied.",
+        "Understand a wide range of television programs, films, plays, public speeches, and academic lectures without too much effort.",
+        "Understand complex technical or academic discussions, even on unfamiliar topics, recognizing speaker's stance and nuances.",
+        "Recognize and understand a wide range of idiomatic expressions, colloquialisms, and cultural references."
+      ],
+      "reading_comprehension_skills": [
+        "Understand long and complex factual and literary texts in Armenian, appreciating distinctions of style, register, authorial intent, and literary technique.",
+        "Understand specialized articles, academic papers, official documents, and longer technical instructions, even outside one's own field.",
+        "Recognize implicit meaning, writer's stance, irony, persuasive techniques, and rhetorical strategies in diverse text types."
+      ],
+      "spoken_interaction_skills": [
+        "Express him/herself fluently, spontaneously, and accurately, using complex language appropriately without much obvious searching for expressions.",
+        "Use language flexibly and effectively for social, academic, and professional purposes, adapting register and style to the situation and audience with ease.",
+        "Formulate ideas and opinions with precision, structure arguments logically, and relate contributions skilfully to those of other speakers in discussions and debates.",
+        "Mediate and negotiate effectively in complex situations."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed, and well-structured descriptions or arguments on complex subjects, integrating sub-themes, developing particular points coherently, and rounding off with an appropriate conclusion.",
+        "Give clear, well-structured, and engaging presentations or speeches on complex subjects, expanding and supporting ideas with subsidiary points, reasons, relevant examples, and appropriate rhetorical devices.",
+        "Adapt style, register, and delivery to the audience and communicative purpose with sophistication."
+      ],
+      "written_interaction_skills": [
+        "Write clear, well-structured, and stylistically appropriate letters, emails, or reports on complex subjects, adapting style, tone, and register to the intended reader and purpose with sophistication.",
+        "Respond effectively, persuasively, and diplomatically to complex written communications."
+      ],
+      "written_production_skills": [
+        "Write clear, well-structured, detailed, and engaging texts on complex subjects in various genres (essays, reports, articles, critiques, research papers), demonstrating command of appropriate academic, professional, or literary conventions.",
+        "Write insightful summaries, analyses, and critical reviews of professional or literary works, demonstrating advanced critical thinking.",
+        "Show controlled and sophisticated use of organisational patterns, connectors, and cohesive devices to produce coherent, elegant, and impactful text.",
+        "Employ a wide range of stylistic devices appropriate to the text type and communicative goal."
+      ],
+      "cultural_competence_topics": [
+        "In-depth and critical understanding of contemporary Armenian society, including complex social, political, economic, and ethical issues, and their historical context.",
+        "Critical appreciation and analysis of Armenian literature (classical and modern), cinema, arts, music, philosophy, and intellectual traditions.",
+        "Ability to interpret, discuss, and critique cultural subtext, humor, irony, allusions, and socio-cultural references with insight.",
+        "Understanding of diverse cultural perspectives, regional variations, and social dynamics within Armenia and the Armenian diaspora."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage with a wide variety of authentic, complex Armenian texts and media from diverse fields.",
+        "Practice writing different genres of complex texts, focusing on stylistic refinement and argumentation.",
+        "Participate actively in academic or professional discussions and presentations in Armenian.",
+        "Focus on advanced stylistic aspects of language, including register, tone, and rhetorical devices.",
+        "Conduct research or undertake projects requiring advanced use of the Armenian language."
+      ]
+    },
+    {
+      "level_code": "C2",
+      "level_name": "Լեզվի Իմաստուն (Sage of Language)",
+      "approximate_vocabulary_size": "approx. 15000+ words",
+      "learning_outcomes": [
+        "Can understand with ease virtually everything heard or read.",
+        "Can summarise information from different spoken and written sources, reconstructing arguments and accounts in a coherent presentation.",
+        "Can express him/herself spontaneously, very fluently and precisely, differentiating finer shades of meaning even in more complex situations."
+      ],
+      "language_focus_topics": [
+        "Complete mastery of all Armenian grammatical structures, including rare, complex, archaic, literary, and dialectal forms, and their stylistic and pragmatic implications.",
+        "Sophisticated, flexible, and creative use of syntax for optimal stylistic effect, emphasis, nuance, and rhetorical impact across all genres.",
+        "Full command of all moods and their subtle applications in expressing complex hypothetical reasoning, subjective stance, politeness, and emotional coloring.",
+        "Nuanced understanding and masterful application of aspectual distinctions and the interplay of tense, aspect, and mood in complex discourse.",
+        "Advanced and flexible use of nominalization, participial constructions, and infinitive/gerund clauses for sophisticated, concise, and elegant expression.",
+        "Complete and intuitive control over a vast range of discourse markers, conjunctions, and cohesive devices to create highly articulate texts and speech of any genre.",
+        "Understanding, appreciation, critical analysis, and creative use of a wide array of rhetorical figures and stylistic devices common in Armenian literature and formal discourse.",
+        "Ability to analyze, deconstruct, and explain complex grammatical structures encountered in any authentic Armenian text with expert precision."
+      ],
+      "vocabulary_topics": [
+        "Extensive, profound, and dynamic vocabulary approaching that of an educated native Armenian speaker, including low-frequency words, specialized terminology across diverse fields, and neologisms.",
+        "Full command of idiomatic language: idioms, proverbs, colloquialisms, cultural sayings, and fixed expressions, with a deep understanding of their origins, evolution, connotations, and appropriate nuanced usage.",
+        "Ability to understand, use, and differentiate the finest shades of meaning, connotations, and register for virtually any lexical item, including formal, literary, specialized, historical, and archaic vocabulary.",
+        "Mastery of word formation processes, including understanding of historical linguistic influences, to interpret and creatively use complex words.",
+        "Vocabulary for discussing any abstract, philosophical, scientific, literary, artistic, and highly specialized topic with precision, depth, and eloquence.",
+        "Appreciation and understanding of etymology and semantic evolution of Armenian words.",
+        "Recognition, understanding, and appropriate use or interpretation of a wide range of regionalisms and sociolects within the Armenian-speaking world."
+      ],
+      "pronunciation_focus_topics": [
+        "Native-like or indistinguishable-from-native pronunciation, intonation, stress, and rhythm across all registers and styles of Armenian.",
+        "Ability to subtly, effectively, and creatively vary prosody to convey complex attitudes, emotions, irony, humor, and other pragmatic meanings with native-like precision.",
+        "Effortless and natural handling of all aspects of connected speech, even at rapid native speed or with dialectal variations.",
+        "Ability to understand, analyze, and accurately reproduce or imitate various regional Armenian accents and sociolectal variations."
+      ],
+      "listening_comprehension_skills": [
+        "Understand any kind of spoken Armenian, whether live or broadcast, even when delivered at fast native speed, with background noise, multiple speakers, or on unfamiliar/abstract topics.",
+        "Follow complex interactions between multiple speakers in any setting, identifying subtle cues, implicit meanings, and speaker intentions.",
+        "Appreciate stylistic nuances, register shifts, irony, humor, and implicit meaning in any spoken discourse."
+      ],
+      "reading_comprehension_skills": [
+        "Understand and critically interpret all forms of written Armenian, including abstract, structurally or linguistically complex texts from various periods and genres.",
+        "Appreciate fine distinctions of style, tone, authorial intent, and literary or rhetorical devices.",
+        "Read and understand texts from different historical periods and diverse cultural contexts within the Armenian-speaking world."
+      ],
+      "spoken_interaction_skills": [
+        "Take part effortlessly, fluently, and engagingly in any conversation or discussion, using idiomatic expressions and cultural references naturally and appropriately.",
+        "Express him/herself with precision, eloquence, and charisma, differentiating the finest shades of meaning, and reformulating ideas smoothly and effectively.",
+        "Argue a complex case, negotiate, persuade, and mediate effectively in any formal or informal setting, adapting strategies dynamically.",
+        "Adapt language and style appropriately and dynamically to any audience, context, and purpose with complete flexibility."
+      ],
+      "spoken_production_skills": [
+        "Present a clear, smoothly-flowing, well-structured, and engaging description, argument, or narrative in an appropriate and compelling style on any complex subject.",
+        "Develop points cohesively, logically, and persuasively, with masterful use of organizational patterns and sophisticated cohesive devices.",
+        "Deliver presentations, lectures, or speeches with clarity, precision, eloquence, and engaging style, adapting to audience feedback and managing questions adeptly.",
+        "Use rhetorical devices effectively and creatively."
+      ],
+      "written_interaction_skills": [
+        "Write any type of correspondence or document with complete command of style, tone, register, and persuasive techniques appropriate to the recipient and purpose.",
+        "Engage in complex written discussions or collaborations, conveying nuanced ideas effectively and persuasively."
+      ],
+      "written_production_skills": [
+        "Write clear, smoothly-flowing, complex, and sophisticated texts (essays, research papers, reports, articles, reviews, creative writing) in an appropriate and effective style, demonstrating originality and critical insight.",
+        "Select and use a vast range of linguistic resources to express ideas precisely, persuasively, or artistically, with stylistic finesse.",
+        "Demonstrate mastery of organizational patterns, paragraphing, and cohesive devices to ensure clarity, coherence, and impact at a professional or academic level.",
+        "Write insightful summaries, critiques, or syntheses of complex information from multiple sources, adding original perspectives and critical analysis."
+      ],
+      "cultural_competence_topics": [
+        "Profound, nuanced, and critical understanding of the diversity of Armenian culture, society, history, arts, literature, and intellectual traditions, including their evolution and global impact.",
+        "Ability to function with complete ease and cultural sensitivity in any Armenian-speaking environment.",
+        "Capacity to act as a cultural interpreter or mediator, explaining subtle and complex cultural nuances effectively.",
+        "Deep and critical understanding of contemporary socio-political issues, cultural debates, and intellectual currents in Armenia and the diaspora."
+      ],
+      "learning_strategies_suggestions": [
+        "Maintain and expand language proficiency through continuous, high-level intellectual and creative engagement with diverse and complex authentic Armenian materials and interactions.",
+        "Engage in original scholarly research, critical analysis, or creative production in Armenian.",
+        "Contribute to Armenian-language publications, academic conferences, or professional activities at an expert level.",
+        "Reflect critically on and refine personal language use for optimal effectiveness, stylistic appropriateness, and creative expression.",
+        "Explore highly specialized areas of interest in great depth in Armenian, potentially contributing original research or creative work."
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import { useAuth } from '../../../contexts/AuthContext';
-import { fetchStudySets } from '../../../api/studySets'; // Assuming this API function exists or will be created
+import { fetchStudySets } from '../../../api/api'; // Assuming this API function exists or will be created
 import './StudySetList.css'; // To be created
 
 const STUDENT_PERSONAL_SETS_STORAGE_KEY = 'cosyStudySets_student_personal_cards';
@@ -41,10 +41,10 @@ const StudySetList = ({ onSelectSetToStudy, onSelectSetToReviewAll }) => {
                 if (studentStoredData) {
                     const personalCards = JSON.parse(studentStoredData);
                     if (personalCards.length > 0) {
-                        setStudentSets([{ 
-                            id: 'student_personal_cards', 
-                            name: t('myPersonalFlashcardsSetTitle') || 'My Personal Flashcards', 
-                            items: personalCards, 
+                        setStudentSets([{
+                            id: 'student_personal_cards',
+                            name: t('myPersonalFlashcardsSetTitle') || 'My Personal Flashcards',
+                            items: personalCards,
                             itemCount: personalCards.length,
                             languageCode: currentUILanguage, // Assume personal sets are for current UI lang
                             source: 'student'
@@ -76,14 +76,14 @@ const StudySetList = ({ onSelectSetToStudy, onSelectSetToReviewAll }) => {
 
     const filteredAndSortedSets = useMemo(() => {
         let combinedSets = [...teacherSets, ...studentSets];
-        
+
         if (searchTerm) {
             const lowerSearchTerm = searchTerm.toLowerCase();
-            combinedSets = combinedSets.filter(set => 
+            combinedSets = combinedSets.filter(set =>
                 (set.name && set.name.toLowerCase().includes(lowerSearchTerm)) ||
                 (set.id && set.id.toLowerCase().includes(lowerSearchTerm)) ||
                 (set.description && set.description.toLowerCase().includes(lowerSearchTerm)) ||
-                (set.items && set.items.some(item => 
+                (set.items && set.items.some(item =>
                     (item.term1 && item.term1.toLowerCase().includes(lowerSearchTerm)) ||
                     (item.term2 && item.term2.toLowerCase().includes(lowerSearchTerm))
                 ))
@@ -125,8 +125,8 @@ const StudySetList = ({ onSelectSetToStudy, onSelectSetToReviewAll }) => {
         <div className="study-set-list-container">
             <h3>{t('availableStudySetsTitle') || 'Available Study Sets'}</h3>
             <div className="study-set-controls">
-                <input 
-                    type="text" 
+                <input
+                    type="text"
                     placeholder={t('searchStudySetsPlaceholder') || 'Search sets...'}
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
@@ -155,15 +155,15 @@ const StudySetList = ({ onSelectSetToStudy, onSelectSetToReviewAll }) => {
                                 {set.source === 'student' && <span className="set-source-badge student">{t('mySetBadge') || 'My Set'}</span>}
                             </div>
                             <div className="set-actions">
-                                <button 
-                                    onClick={() => onSelectSetToStudy(set)} 
+                                <button
+                                    onClick={() => onSelectSetToStudy(set)}
                                     className="btn btn-primary btn-sm"
                                     disabled={(set.itemCount !== undefined ? set.itemCount : (set.items?.length || 0)) === 0}
                                 >
                                     {t('studySetBtn') || 'Study'}
                                 </button>
-                                <button 
-                                    onClick={() => onSelectSetToReviewAll(set)} 
+                                <button
+                                    onClick={() => onSelectSetToReviewAll(set)}
                                     className="btn btn-secondary btn-sm"
                                     disabled={(set.itemCount !== undefined ? set.itemCount : (set.items?.length || 0)) === 0}
                                 >

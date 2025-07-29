@@ -7,7 +7,7 @@ import {
   getBoosterPacks as apiGetBoosterPacks,
   createBoosterPack as apiCreateBoosterPack,
   deleteBoosterPack as apiDeleteBoosterPack,
-} from '../api/freestyle';
+} from '../api/api';
 
 const FreestyleContext = createContext();
 

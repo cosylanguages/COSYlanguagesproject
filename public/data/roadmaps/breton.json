@@ -1,0 +1,716 @@
+{
+  "language_name": "Breton",
+  "levels": [
+    {
+      "level_code": "A0",
+      "level_name": "Kammedoù Kentañ (First Steps)",
+      "approximate_vocabulary_size": "approx. 300-500 words",
+      "learning_outcomes": [
+        "Recognize and reproduce basic sounds of the Breton alphabet.",
+        "Understand and use familiar everyday expressions and very basic phrases (e.g., greetings, introductions).",
+        "Introduce him/herself and others simply (e.g., Me eo... - I am...).",
+        "Ask and answer simple questions about personal details (name, origin).",
+        "Interact in a very simple way if the other person speaks slowly, clearly, and is prepared to help.",
+        "Recognize familiar names, words, and very simple sentences in Breton."
+      ],
+      "sections": [
+        {
+          "title": "🔍Deiz 1 (Day 1)",
+          "content_placeholder": "Endalc'had da zont (Content to come)"
+        },
+        {
+          "title": "🎭Diviz (Dialogue)",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "line": "Demat"
+            },
+            {
+              "speaker": "B",
+              "line": "Demat, kafe pe te?"
+            },
+            {
+              "speaker": "A",
+              "line": "Ur c'hafe, mar plij."
+            },
+            {
+              "speaker": "B",
+              "line": "Un te?"
+            },
+            {
+              "speaker": "A",
+              "line": "Nann, ur c'hafe, mar plij."
+            },
+            {
+              "speaker": "B",
+              "line": "Ur c'hafe?"
+            },
+            {
+              "speaker": "A",
+              "line": "Ya, mar plij."
+            },
+            {
+              "speaker": "B",
+              "line": "Mat eo."
+            },
+            {
+              "speaker": "A",
+              "line": "Trugarez!"
+            },
+            {
+              "speaker": "B",
+              "line": "Mann ebet."
+            },
+            {
+              "speaker": "B",
+              "line": "Arc'hant dizolo pe kartenn?"
+            },
+            {
+              "speaker": "A",
+              "line": "Arc'hant dizolo, mar plij."
+            },
+            {
+              "speaker": "B",
+              "line": "Arc'hant dizolo?"
+            },
+            {
+              "speaker": "A",
+              "line": "Ya, mar plij."
+            },
+            {
+              "speaker": "B",
+              "line": "Mat eo."
+            },
+            {
+              "speaker": "A",
+              "line": "Trugarez."
+            },
+            {
+              "speaker": "B",
+              "line": "Mann ebet."
+            },
+            {
+              "speaker": "A",
+              "line": "Kenavo."
+            },
+            {
+              "speaker": "B",
+              "line": "Kenavo."
+            }
+          ]
+        },
+        {
+          "title": "🎬Pleustriñ: Diviz (Practice: Dialogue)",
+          "content_placeholder": "Endalc'had da zont (Content to come)"
+        },
+        {
+          "title": "⚙️Petra eo? (What is it?)",
+          "grammar_points": [
+            "Petra eo an dra-mañ? (What is this thing?)",
+            "Hag ... eo? (Is it ...?)",
+            "Hag ... eo pe ...? (Is it ... or ...?)",
+            "... eo. (It is ...)",
+            "N'eo ket ... . (It is not ...)",
+            "N'eo ket ..., met ... eo. (It is not ..., but it is ...)"
+          ],
+          "example_vocabulary": [
+            "ti (house), levr (book), kador (chair), taol (table)"
+          ]
+        },
+        {
+          "title": "⚙️Ar Reizh (The Gender)",
+          "content_placeholder": "Endalc'had da zont (Content to come)"
+        },
+        {
+          "title": "🎬Pleustriñ: Hemañ/Houmañ eo (Practice: It is)",
+          "content_placeholder": "Endalc'had da zont (Content to come)"
+        },
+        {
+          "title": "🎒An Dibenn. (The end.)",
+          "content_placeholder": "Endalc'had da zont (Content to come)"
+        }
+      ],
+      "language_focus_topics": [
+        "The Breton Alphabet (Lizherenneg) and pronunciation of letters (including ch, c'h, gn,ilh).",
+        "Basic pronunciation rules: Vowel sounds (including nasal vowels likeañ, eñ, iñ, oñ, uñ). Consonant sounds.",
+        "Introduction to Consonant Mutations: Basic concept of soft mutation (kemmadurioù meddal) with very common words (e.g., after 'da' - your).",
+        "Nouns: Introduction to grammatical gender (masculine/feminine). Singular nouns.",
+        "Articles: Definite articles (an, al, ar). Indefinite articles (un, ul, ur).",
+        "Pronouns: Personal pronouns (me, te, eñ, hi, ni, c'hwi, int/i).",
+        "Verbs: Present tense of 'bezañ' (to be) - basic forms (on, out, eo/zo, omp, oc'h, int).",
+        "Verbs: Present tense of 'endevout/kaout' (to have) - basic forms (am eus, az peus, en deus/he deus).",
+        "Basic Sentence Structure: Verb-Subject-Object (VSO) tendency for simple sentences. Simple affirmative and negative statements.",
+        "Negation: 'ne ... ket' structure around the verb (e.g., Ne glevan ket - I don't hear).",
+        "Simple Questions: Intonation. Basic question words (Piv? Petra? Pelec'h? Pegoulz?).",
+        "Day 1 Grammar - 'Petra eo?' (What is it?): Petra eo an dra-mañ?, Hag ... eo?, Hag ... eo pe ...?, ... eo., N'eo ket ... ., N'eo ket ..., met ... eo."
+      ],
+      "vocabulary_topics": [
+        "Deiz 1: Gerioù Diazez (Day 1: Basic Words): Demat/Salud (hello), Kenavo (goodbye), Ya (yes), Nann (no), Trugarez (thank you), Mann ebet (you're welcome), Mar plij (please), Mat eo (alright/ok), Unan (one), Te (tea), Kafe (coffee), Dour (water), Chug (juice), Bier (beer), Gwin (wine), Arc'hant dizolo (cash), Kartenn (card).",
+        "Greetings: Demat, Kenavo, Salud, Mont a ra? Mat an traoù?, Trist eo an amzer.",
+        "Introductions & Personal Information: Pe anv out? ... eo ma anv. Plijet bras. Eus pelec'h out? Eus ... on.",
+        "Courtesy: Trugarez, Mar plij, Digarezit.",
+        "Basic responses: Ya, Nann / N'eo ket.",
+        "Numbers: 0-10 (zero-dek).",
+        "Colors: ruz, glas, gwer, melen, du, gwenn (basic).",
+        "Family: mamm, tad, breur, c'hoar (basic).",
+        "Common Objects: levr, taol, kador, ti, karr, pellgomz.",
+        "Basic Food & Drink: bara, dour, laezh, kafe, te, kig, pesked.",
+        "Classroom language: Adlavarit, mar plij. Ne gomprenan ket."
+      ],
+      "pronunciation_focus_topics": [
+        "Mastering sounds of the Breton alphabet, including digraphs (ch, c'h, gn) and trigraph (ilh).",
+        "Nasal vowels (an, añ, ein, eñ, eun, euñ, in, iñ, on, oñ, oun, uñ).",
+        "Distinction between 'c'h' /χ/ and 'h' /h/ or /Ø/.",
+        "The 'zh' sound (often /z/, but /h/ in some dialects).",
+        "Word stress (generally penultimate, but can vary, especially with suffixes or in Vannetais dialect).",
+        "Basic intonation for statements and simple questions."
+      ],
+      "listening_comprehension_skills": [
+        "Recognize familiar Breton words and very basic phrases when spoken slowly and clearly.",
+        "Understand simple greetings, introductions, and farewells.",
+        "Follow very simple, clearly articulated instructions."
+      ],
+      "reading_comprehension_skills": [
+        "Read and identify all letters of the Breton alphabet.",
+        "Read and understand familiar names, words, and very simple sentences.",
+        "Recognize numbers 0-10 written as words."
+      ],
+      "spoken_interaction_skills": [
+        "Greet and respond to greetings.",
+        "Introduce oneself and ask for someone's name.",
+        "Ask and answer simple questions about personal information.",
+        "Use basic courtesy phrases."
+      ],
+      "spoken_production_skills": [
+        "Say the letters of the Breton alphabet.",
+        "Pronounce basic Breton vocabulary comprehensibly.",
+        "Produce simple isolated phrases (e.g., 'Me eo Yann.', 'Setu ul levr.').",
+        "State name and origin simply."
+      ],
+      "written_interaction_skills": [
+        "Recognize own name and familiar words when written."
+      ],
+      "written_production_skills": [
+        "Write all letters of the Breton alphabet.",
+        "Write one's name and other simple familiar words.",
+        "Copy familiar words and short sentences."
+      ],
+      "cultural_competence_topics": [
+        "Common greeting customs in Brittany.",
+        "Basic awareness of Brittany (Breizh) as a distinct cultural and linguistic region in France.",
+        "Importance of the Breton language for cultural identity.",
+        "Key Breton symbols (e.g., Gwenn-ha-du flag, triskell - basic awareness)."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice writing Breton letters and digraphs.",
+        "Use flashcards for new vocabulary, noting gender of nouns.",
+        "Listen to Breton children's songs or simple audio.",
+        "Become aware of initial consonant mutations from the start, even with simple examples."
+      ]
+    },
+    {
+      "level_code": "A1",
+      "level_name": "Paotr/Plac'h an Hentoù (Road Boy/Girl)",
+      "approximate_vocabulary_size": "approx. 500-700 words",
+      "learning_outcomes": [
+        "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.",
+        "Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.",
+        "Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help."
+      ],
+      "language_focus_topics": [
+        "Review A0: Alphabet, basic pronunciation, bezañ/endevout (present), articles, basic mutations.",
+        "Nouns: Plural formation (common suffixes: -où, -ed, -ien; internal vowel changes - basic). Gender agreement with articles.",
+        "Adjectives: Basic agreement (often invariable or simple feminine forms). Position (usually after the noun).",
+        "Verbs: Present tense of common regular verbs (e.g., kanañ - to sing, lenn - to read, skrivañ - to write). Verbal noun as infinitive.",
+        "Verbs: Past tense (Amzer dremenet strizh - e.g., -as, -is endings or with 'ober' + verbal noun). Future tense (Amzer da zont - e.g., -o, -i endings or with 'mont da' + verbal noun).",
+        "Consonant Mutations: More practice with soft mutation (after 'da', 'e', common prepositions). Introduction to spirant mutation (kemmadur c'hwezh) after 'va', 'he', 'o'.",
+        "Pronouns: Possessive determiners (ma, da, e, he, hon, ho, o + mutations).",
+        "Prepositions: Common simple prepositions (e.g., e, e-barzh - in; war - on; da - to; gant - with; eus - from; dre - through). Inflected prepositions (1st/2nd person singular of common ones like 'din' - to me, 'ganin' - with me).",
+        "Numbers: 0-20. Basic ordinal numbers (kentañ, eil...).",
+        "Sentence Structure: Simple VSO and SVO patterns. Using particles like 'a', 'e', 'o' with verbs."
+      ],
+      "vocabulary_topics": [
+        "Review A0 vocabulary.",
+        "Personal information: Family members (extended), age, professions.",
+        "Daily routine: Describing typical daily activities with times.",
+        "Food & Drink: Common food items, drinks, meals (merenn, koan), ordering in a restaurant.",
+        "Shopping: Types of shops (stal), common items, prices, quantities.",
+        "Places in town: straed, plasenn, liorzh, sinema, mirdi, iliz, ti-kêr, post, bank.",
+        "Transport: karr-boutin/bus, tren, metro, taxi, karr-nij, marc'h-houarn. Buying tickets.",
+        "Time: Telling the time, days of the week, months, seasons, dates.",
+        "Weather: Describing weather conditions (tomm eo, yen eo, glav a ra, erc'h a ra).",
+        "Hobbies & interests (lenn, sellet ouzh ar skinwel, selaou sonerezh).",
+        "Clothing: Common items."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A0 sounds, nasal vowels, stress.",
+        "Pronunciation of mutated consonants (soft and spirant).",
+        "Distinction between voiced/unvoiced consonants in different positions.",
+        "Vowel length (short vs. long vowels - basic awareness).",
+        "Intonation of questions with interrogative words."
+      ],
+      "listening_comprehension_skills": [
+        "Understand frequently used words and phrases related to personal details, family, shopping, local area, when spoken slowly and clearly.",
+        "Grasp the main point in short, clear, simple messages and announcements.",
+        "Understand simple questions and instructions related to everyday situations."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short, simple texts on familiar matters (e.g., simple menus, public signs, short personal messages).",
+        "Find specific, predictable information in everyday material.",
+        "Understand short, simple personal notes or postcards."
+      ],
+      "spoken_interaction_skills": [
+        "Interact in simple, routine situations.",
+        "Ask and answer questions about familiar topics.",
+        "Make and respond to simple suggestions or invitations.",
+        "Ask for and give basic information about time, quantity, and price."
+      ],
+      "spoken_production_skills": [
+        "Describe his/her family, living conditions, and daily routine in simple terms.",
+        "Talk about likes and dislikes.",
+        "Describe simple past events using basic past tense forms.",
+        "Express simple future plans."
+      ],
+      "written_interaction_skills": [
+        "Write a simple reply to a personal message or invitation."
+      ],
+      "written_production_skills": [
+        "Write short, simple notes, messages, or postcards.",
+        "Describe a familiar place or person in a few simple, connected sentences.",
+        "Fill in simple forms with personal details."
+      ],
+      "cultural_competence_topics": [
+        "Forms of address: using 'te' vs. 'c'hwi'.",
+        "Basic Breton customs related to local festivals (festoù-noz - basic idea).",
+        "Awareness of traditional Breton music and dance.",
+        "Common symbols of Brittany (e.g., ermine).",
+        "The concept of 'bro' (country/region in Brittany)."
+      ],
+      "learning_strategies_suggestions": [
+        "Practice identifying and applying basic consonant mutations.",
+        "Use language learning apps or websites specifically for Breton, if available.",
+        "Listen to Breton folk music or simple stories.",
+        "Try to form simple sentences incorporating prepositions and possessives."
+      ]
+    },
+    {
+      "level_code": "A2",
+      "level_name": "Desker/ez Kalan (Skillful Apprentice)",
+      "approximate_vocabulary_size": "approx. 1000-1500 words",
+      "learning_outcomes": [
+        "Can understand sentences and frequently used expressions related to areas of most immediate relevance (e.g. very basic personal and family information, shopping, local geography, employment).",
+        "Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.",
+        "Can describe in simple terms aspects of his/her background, immediate environment and matters in areas of immediate need."
+      ],
+      "language_focus_topics": [
+        "Review A1: Plurals, basic tenses (present, past, future), common mutations (soft, spirant), possessives, simple prepositions.",
+        "Verbs: Imperfect tense (Amzer dremenet amstrizh - e.g., -e,-es,-e,-emp,-ec'h,-ent). Conditional mood (Amzer divizout - e.g., -fe,-fes,-fe,-femp,-fec'h,-fent).",
+        "Verbs: Common irregular verbs (mont - to go, dont - to come, ober - to do, gallout - can, gouzout - know) in present, past, future, conditional.",
+        "Consonant Mutations: Hard mutation (kemmadur kalet) after 'ho', 'az'. Mixed mutation (kemmadur mesket). Reinforce all four mutations in context.",
+        "Pronouns: Inflected prepositions (full paradigm for common ones like 'gant', 'da', 'evit'). Object pronouns (direct/indirect - often expressed with inflected prepositions or word order).",
+        "Adjectives: Comparative (-oc'h) and superlative (-añ) forms. Agreement and position.",
+        "Adverbs: Formation from adjectives (e.g., with 'mod' or 'doare'). Adverbs of time, place, manner, frequency.",
+        "Numbers: Up to 1000. Using numbers with nouns (mutations may apply).",
+        "Relative clauses (simple, with 'a', 'hag a')."
+      ],
+      "vocabulary_topics": [
+        "Review A1 vocabulary.",
+        "Describing people: Personality, character, feelings, relationships.",
+        "Housing: Describing one's home, neighborhood, advantages/disadvantages.",
+        "Food & Drink: Discussing meals, recipes, local specialties, food shopping.",
+        "Shopping: Clothes, other goods, comparing items, asking for advice, making complaints.",
+        "Travel & Transport: Planning trips, means of transport, accommodation, asking for detailed information, describing past trips.",
+        "Health & Body: Common health problems, visiting a doctor, giving simple advice.",
+        "Work & Study: Describing job/studies, tasks, responsibilities, future plans.",
+        "Leisure & Hobbies: Discussing interests in detail, arranging activities, opinions on cultural events.",
+        "Nature & Environment: Describing landscapes, local flora/fauna, simple environmental concerns.",
+        "Feelings & Emotions: Expressing a wider range of emotions and opinions.",
+        "Daily life and routines: More complex sequences, discussing habits."
+      ],
+      "pronunciation_focus_topics": [
+        "Review A1: All sounds, mutations, stress, intonation.",
+        "Intonation in conditional and more complex sentences.",
+        "Connected speech: assimilation, elision, and linking sounds for smoother speech.",
+        "Pronunciation of longer words with multiple suffixes.",
+        "Recognizing key features of major dialect groups (KLT vs. Vannetais - basic differences in pronunciation)."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear standard speech on familiar topics.",
+        "Follow short narratives or simple conversations between native speakers if the topic is familiar and speech is relatively clear.",
+        "Identify specific information in public announcements or short news items on familiar subjects."
+      ],
+      "reading_comprehension_skills": [
+        "Understand short personal letters, emails, or simple articles on familiar topics.",
+        "Find specific information in everyday materials like brochures, event schedules, or simple official notices.",
+        "Understand the main ideas of simplified newspaper articles or website texts."
+      ],
+      "spoken_interaction_skills": [
+        "Engage in conversations on familiar topics, exchanging information, opinions, and personal feelings.",
+        "Handle most routine situations encountered in daily life or while travelling in Brittany.",
+        "Make and respond to suggestions, invitations, apologies, and express thanks with more elaboration.",
+        "Discuss past experiences and future plans, providing details and reasons."
+      ],
+      "spoken_production_skills": [
+        "Give simple, connected descriptions of people, places, events, or personal experiences.",
+        "Narrate a simple story or recount events in sequence, using appropriate tenses and linking words.",
+        "Talk about future plans, intentions, and possibilities with more detail.",
+        "Express opinions and preferences, providing simple justifications and examples."
+      ],
+      "written_interaction_skills": [
+        "Write simple personal emails or messages to exchange information, make arrangements, or express feelings, providing some details."
+      ],
+      "written_production_skills": [
+        "Write short, connected texts on familiar topics (e.g., describing a local event, a personal interest).",
+        "Write a simple personal letter giving news or describing experiences in a few paragraphs.",
+        "Write short instructions or a simple report on a familiar activity."
+      ],
+      "cultural_competence_topics": [
+        "Breton traditions and folklore (e.g., Ankou, korrigans - basic awareness).",
+        "Significance of the Breton language revival movement.",
+        "Introduction to well-known Breton writers or musicians (e.g., Alan Stivell - basic).",
+        "Traditional Breton costumes and symbols.",
+        "Geography of Brittany: main towns and regions (broioù).",
+        "The role of Fest-noz in Breton culture."
+      ],
+      "learning_strategies_suggestions": [
+        "Systematically practice all four consonant mutations with different triggers.",
+        "Read simple Breton folk tales or modern short stories for learners.",
+        "Listen to Breton radio online or podcasts for learners.",
+        "Try to write short descriptive paragraphs or dialogues.",
+        "If possible, interact with Breton speakers or join a conversation group."
+      ]
+    },
+    {
+      "level_code": "B1",
+      "level_name": "Beajour Ampart (Proficient Traveler)",
+      "approximate_vocabulary_size": "approx. 2000-2500 words",
+      "learning_outcomes": [
+        "Can understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc.",
+        "Can deal with most situations likely to arise whilst travelling in an area where the language is spoken.",
+        "Can produce simple connected text on topics, which are familiar, or of personal interest.",
+        "Can describe experiences and events, dreams, hopes & ambitions and briefly give reasons and explanations for opinions and plans."
+      ],
+      "language_focus_topics": [
+        "Review of A2 grammar: Tenses (present, past, future, conditional, imperfect), mutations, inflected prepositions, comparatives/superlatives.",
+        "Verbs: Pluperfect tense (Amzer-dremenet peurdremenet - e.g., 'bet e oa'). Compound tenses with auxiliaries 'bezañ' and 'endevout/kaout'.",
+        "Verbs: Subjunctive mood (Doare-sujañt) - present and imperfect forms and uses (e.g., after 'evit ma', 'a-raok ma').",
+        "Verbal Noun: Expanded uses (e.g., as subject/object, after prepositions).",
+        "Passive voice constructions.",
+        "Reported speech (indirect statements, questions, commands - basic).",
+        "Relative clauses with 'a', 'hag a', 'e', 'en deus', 'he deus', etc., introducing subject and object clauses.",
+        "More complex prepositions and prepositional phrases.",
+        "Conjunctions for expressing cause, consequence, concession, purpose.",
+        "Word order flexibility and topicalization."
+      ],
+      "vocabulary_topics": [
+        "Work and career: Job roles, responsibilities, work environment, applying for jobs, interviews, workplace communication.",
+        "Education: School system, subjects, university studies, exams, academic life.",
+        "Travel and tourism: Planning detailed trips, cultural tourism, describing experiences, dealing with problems.",
+        "Media and news: Understanding main points of news articles, TV/radio news on current events, discussing opinions.",
+        "Culture and arts: Discussing films, books, music, theatre; genres, artists, personal impressions, Breton specific arts (e.g., Kan ha diskan).",
+        "Health and lifestyle: Discussing health issues, treatments, healthy living, sports, fitness.",
+        "Social and environmental issues: Discussing local and global problems, causes and effects, potential solutions.",
+        "Personal relationships: Describing friendships, family dynamics, expressing complex emotions.",
+        "Technology and communication: Internet, social media, new technologies.",
+        "Abstract topics: Society, politics (basic), traditions, identity."
+      ],
+      "pronunciation_focus_topics": [
+        "Review of A2 pronunciation: intonation, rhythm, connected speech, dialectal awareness.",
+        "Intonation in complex sentences, expressing nuances like irony or doubt.",
+        "Fluency and natural rhythm in longer discourse.",
+        "Pronunciation of loanwords and their adaptation into Breton.",
+        "Understanding and producing speech in more formal vs. informal registers."
+      ],
+      "listening_comprehension_skills": [
+        "Understand the main points of clear standard speech on familiar matters encountered in daily life, work, or school.",
+        "Understand the main points of radio or TV programs on current affairs or topics of personal interest if delivery is clear.",
+        "Follow a lecture or talk on a familiar topic if clearly structured."
+      ],
+      "reading_comprehension_skills": [
+        "Understand texts written primarily in high-frequency everyday or job-related language.",
+        "Understand the description of events, feelings, and wishes in personal correspondence.",
+        "Read straightforward factual texts and articles on topics of interest."
+      ],
+      "spoken_interaction_skills": [
+        "Enter unprepared into conversations on familiar topics.",
+        "Deal with most situations likely to arise while travelling or living in Brittany.",
+        "Express and sustain personal opinions, providing explanations and arguments.",
+        "Participate actively in discussions, clarifying points and responding to others' views."
+      ],
+      "spoken_production_skills": [
+        "Produce connected discourse on a variety of topics, linking ideas coherently.",
+        "Narrate stories, describe experiences, or relate plots of books/films with reasonable detail.",
+        "Describe dreams, hopes, ambitions, and hypothetical situations.",
+        "Present arguments and opinions on familiar topics in a clear, structured manner."
+      ],
+      "written_interaction_skills": [
+        "Write personal letters or emails describing experiences, feelings, events, and opinions in detail.",
+        "Respond to formal/informal written communications, providing detailed information or expressing well-reasoned views."
+      ],
+      "written_production_skills": [
+        "Write clear, connected texts on a range of familiar subjects or topics of interest.",
+        "Write descriptions of real or imaginary events and experiences with good structure.",
+        "Write a short formal letter or email for practical purposes.",
+        "Express personal viewpoints and arguments on various topics in a structured text."
+      ],
+      "cultural_competence_topics": [
+        "Understanding different levels of formality in Breton communication.",
+        "Knowledge of significant Breton historical periods and figures.",
+        "Appreciation of traditional and contemporary Breton literature, music, and arts.",
+        "Understanding the values and beliefs that shape Breton society.",
+        "The role of the Breton language in education and public life.",
+        "Contemporary cultural and political movements in Brittany."
+      ],
+      "learning_strategies_suggestions": [
+        "Read authentic Breton materials regularly (articles, short novels, online content).",
+        "Practice using the subjunctive mood and compound tenses.",
+        "Watch Breton-language television (e.g., France 3 Breizh, Brezhoweb) or films.",
+        "Engage in discussions on more abstract or complex topics.",
+        "Write longer, well-structured texts and seek feedback on style and grammar."
+      ]
+    },
+    {
+      "level_code": "B2",
+      "level_name": "Kaozeer/ez Amplegad (Articulate Speaker)",
+      "approximate_vocabulary_size": "approx. 3500-4500 words",
+      "learning_outcomes": [
+        "Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in his/her field of specialisation.",
+        "Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
+        "Can produce clear, detailed text on a wide range of subjects and explain a viewpoint on a topical issue giving the advantages and disadvantages of various options."
+      ],
+      "language_focus_topics": [
+        "Comprehensive review of verb tenses, moods (indicative, conditional, subjunctive, imperative), aspects, and voices.",
+        "Advanced use of verbal nouns and participles in complex constructions.",
+        "Complex sentence syntax: various types of subordinate clauses (relative, concessive, causal, temporal, purpose, result), and their connectors.",
+        "Nuances of consonant mutations and their exceptions or dialectal variations.",
+        "Reported speech: reporting complex statements, questions, commands, and suggestions accurately.",
+        "Modal verbs and expressions: expressing fine shades of meaning regarding certainty, probability, obligation, permission.",
+        "Figurative language: understanding and using common metaphors, similes, and idiomatic expressions.",
+        "Stylistic variations in word order and sentence structure for emphasis and register.",
+        "Discourse markers for structuring arguments and ensuring cohesion in longer texts."
+      ],
+      "vocabulary_topics": [
+        "Abstract concepts: In-depth discussion of societal issues, politics, economics, environment, education, culture, arts, science, technology.",
+        "Expressing nuanced opinions, arguments, justifications, and counter-arguments.",
+        "Vocabulary for formal discussions, debates, and presentations.",
+        "Idioms, set expressions, and proverbs common in contemporary Breton.",
+        "Understanding and using different registers (formal, neutral, informal, colloquial).",
+        "Word formation: understanding prefixes, suffixes, and compounding to expand vocabulary.",
+        "Synonyms and antonyms for precise expression and stylistic variation.",
+        "Collocations: advanced verb-noun, adjective-noun combinations.",
+        "Vocabulary related to Breton history, literature, and specific cultural domains."
+      ],
+      "pronunciation_focus_topics": [
+        "Fine-tuning intonation for expressing complex attitudes, emotions, and pragmatic functions.",
+        "Mastery of connected speech phenomena for natural flow.",
+        "Recognition and understanding of main Breton dialects (KLT, Vannetais) and their key phonetic differences.",
+        "Maintaining clarity and good pronunciation in extended speech and presentations."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech and lectures in Breton and follow complex lines of argument if the topic is reasonably familiar.",
+        "Understand most TV news, current affairs programs, and documentaries in Breton.",
+        "Understand the majority of Breton films and plays in standard dialects."
+      ],
+      "reading_comprehension_skills": [
+        "Read articles and reports concerned with contemporary problems in which writers adopt particular stances or viewpoints.",
+        "Understand contemporary Breton literary prose and drama.",
+        "Understand specialized articles outside one's immediate field with some dictionary use."
+      ],
+      "spoken_interaction_skills": [
+        "Interact with fluency and spontaneity, making regular interaction with native speakers possible without undue strain.",
+        "Take an active part in discussions in familiar and some unfamiliar contexts, accounting for and sustaining viewpoints.",
+        "Handle linguistic aspects of negotiation, making a case, and managing disagreement."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed descriptions on a wide range of subjects related to one's field of interest or general topics.",
+        "Explain a viewpoint on a topical issue, giving the advantages and disadvantages of various options, supporting arguments with evidence.",
+        "Develop an argument systematically, highlighting significant points and relevant details."
+      ],
+      "written_interaction_skills": [
+        "Write clear, detailed letters or emails on complex subjects, conveying information, ideas, or opinions effectively.",
+        "Respond to complex inquiries or arguments in writing, adapting style as needed."
+      ],
+      "written_production_skills": [
+        "Write clear, detailed texts (essays, reports, articles) on a wide range of subjects.",
+        "Summarize information from different sources and present arguments coherently.",
+        "Write reviews of films, books, or events, expressing justified opinions.",
+        "Develop a reasoned argument in an essay or report, presenting different viewpoints and concluding."
+      ],
+      "cultural_competence_topics": [
+        "Deeper understanding of Breton society, history, and contemporary issues.",
+        "Ability to understand and appreciate cultural references, humor, and irony in Breton media and literature.",
+        "Nuances of social and professional etiquette in various Breton contexts.",
+        "Understanding different perspectives within Breton society and current cultural trends.",
+        "Knowledge of key figures and events in Breton history, literature, and arts, and their impact."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage regularly with authentic Breton media (news, analytical programs, films, literature).",
+        "Participate in debates or discussions in Breton.",
+        "Write analytical essays or reports on complex topics.",
+        "Seek feedback from native speakers on advanced grammar and style.",
+        "Explore Breton internet forums and social media to understand contemporary language use."
+      ]
+    },
+    {
+      "level_code": "C1",
+      "level_name": "Skrivagner/ez Barrek (Accomplished Writer/Speaker)",
+      "approximate_vocabulary_size": "approx. 7000-8000 words",
+      "learning_outcomes": [
+        "Can understand a wide range of demanding, longer texts, and recognise implicit meaning.",
+        "Can express him/herself fluently and spontaneously without much obvious searching for expressions.",
+        "Can use language flexibly and effectively for social, academic and professional purposes.",
+        "Can produce clear, well-structured, detailed text on complex subjects, showing controlled use of organisational patterns, connectors and cohesive devices."
+      ],
+      "language_focus_topics": [
+        "Mastery of the Breton grammatical system, including all verb aspects, tenses, moods, voices, and complex syntactic structures (e.g., cleft sentences, topicalization).",
+        "Sophisticated use of verbal nouns, participles, and other non-finite forms for concise and stylistically varied expression.",
+        "Advanced understanding and application of the mutation system, including irregular mutations and dialectal variations.",
+        "Mastery of complex sentence syntax, including all types of subordinate clauses and their connectors, for logical and rhetorical effect.",
+        "Stylistic use of word order, inversion, and ellipsis for emphasis and artistic effect.",
+        "Understanding and occasional use of older or literary grammatical forms.",
+        "Deep understanding of the interaction between morphology, syntax, and pragmatics in Breton.",
+        "Advanced use of discourse markers for structuring sophisticated arguments and narratives."
+      ],
+      "vocabulary_topics": [
+        "Extensive vocabulary covering abstract, specialized, technical, and culturally specific topics.",
+        "Nuanced understanding and precise use of synonyms, antonyms, and related lexical items.",
+        "Rich repertoire of idiomatic expressions, proverbs, colloquialisms, and cultural allusions.",
+        "Vocabulary for advanced academic and professional purposes.",
+        "Advanced word formation: understanding etymology, roots, and complex affixation.",
+        "Ability to use language creatively and understand subtle humor.",
+        "Differentiating and appropriately using various stylistic layers of vocabulary."
+      ],
+      "pronunciation_focus_topics": [
+        "Near-native pronunciation, intonation, rhythm, and stress across various speech styles.",
+        "Using prosody effectively to convey subtle meanings, attitudes, and emotions.",
+        "Understanding and adapting to a wider range of regional Breton accents and sociolects.",
+        "Maintaining clarity and precision in rapid or complex speech, including public speaking."
+      ],
+      "listening_comprehension_skills": [
+        "Understand extended speech in Breton even when it is not clearly structured or contains dialectal features.",
+        "Understand a wide range of television programs, films, plays, and public speeches without too much effort.",
+        "Understand complex technical or academic discussions, even on unfamiliar topics.",
+        "Recognize and understand a wide range of idiomatic expressions and cultural references."
+      ],
+      "reading_comprehension_skills": [
+        "Understand long and complex factual and literary texts in Breton, appreciating distinctions of style and authorial intent.",
+        "Understand specialized articles, academic papers, and official documents.",
+        "Recognize implicit meaning, writer's stance, irony, and persuasive techniques in various text types."
+      ],
+      "spoken_interaction_skills": [
+        "Express him/herself fluently, spontaneously, and accurately, using complex language appropriately.",
+        "Use language flexibly and effectively for social, academic, and professional purposes, adapting register and style.",
+        "Formulate ideas and opinions with precision, structure arguments logically, and relate contributions skilfully in discussions.",
+        "Mediate and negotiate effectively in complex situations."
+      ],
+      "spoken_production_skills": [
+        "Present clear, detailed, and well-structured descriptions or arguments on complex subjects.",
+        "Give clear, well-structured, and engaging presentations or speeches on complex subjects.",
+        "Adapt style, register, and delivery to the audience and communicative purpose with sophistication."
+      ],
+      "written_interaction_skills": [
+        "Write clear, well-structured, and stylistically appropriate letters, emails, or reports on complex subjects.",
+        "Respond effectively and persuasively to complex written communications."
+      ],
+      "written_production_skills": [
+        "Write clear, well-structured, detailed, and engaging texts on complex subjects in various genres.",
+        "Write insightful summaries, analyses, and critical reviews of professional or literary works.",
+        "Show controlled and sophisticated use of organisational patterns and cohesive devices.",
+        "Employ a wide range of stylistic and rhetorical devices."
+      ],
+      "cultural_competence_topics": [
+        "In-depth and critical understanding of contemporary Breton society, culture, and identity.",
+        "Critical appreciation and analysis of Breton literature, music, arts, and traditions.",
+        "Ability to interpret and discuss cultural subtext, humor, irony, and allusions.",
+        "Understanding of diverse cultural perspectives and sociolinguistic issues within Brittany."
+      ],
+      "learning_strategies_suggestions": [
+        "Engage with a wide variety of authentic, complex Breton texts and media.",
+        "Practice writing different genres of complex texts, focusing on stylistic refinement.",
+        "Participate actively in academic or professional discussions and presentations in Breton.",
+        "Focus on advanced stylistic aspects of language, including register, tone, and rhetorical devices.",
+        "Conduct research or undertake projects requiring advanced use of the Breton language."
+      ]
+    },
+    {
+      "level_code": "C2",
+      "level_name": "Pennfolenner/ez ar Yezh (Language Virtuoso)",
+      "approximate_vocabulary_size": "approx. 15000+ words",
+      "learning_outcomes": [
+        "Can understand with ease virtually everything heard or read.",
+        "Can summarise information from different spoken and written sources, reconstructing arguments and accounts in a coherent presentation.",
+        "Can express him/herself spontaneously, very fluently and precisely, differentiating finer shades of meaning even in more complex situations."
+      ],
+      "language_focus_topics": [
+        "Complete mastery of all Breton grammatical structures, including rare, complex, literary, and dialectal forms, and their stylistic implications.",
+        "Sophisticated and creative use of syntax for optimal stylistic effect and rhetorical impact.",
+        "Full command of all moods and their subtle applications.",
+        "Nuanced understanding and masterful application of aspectual distinctions and verbal nuances.",
+        "Advanced and flexible use of all non-finite forms for sophisticated and concise expression.",
+        "Complete and intuitive control over discourse markers and cohesive devices.",
+        "Understanding, appreciation, and creative use of a wide array of rhetorical figures and stylistic devices.",
+        "Ability to analyze, deconstruct, and explain complex grammatical structures with expert precision."
+      ],
+      "vocabulary_topics": [
+        "Extensive, profound, and dynamic vocabulary approaching that of an educated native Breton speaker, including low-frequency words and specialized terminology.",
+        "Full command of idiomatic language, proverbs, colloquialisms, and cultural sayings.",
+        "Ability to understand and use the finest shades of meaning, connotations, and register for virtually any lexical item.",
+        "Mastery of word formation processes, including understanding of historical Celtic and French influences.",
+        "Vocabulary for discussing any abstract, philosophical, scientific, literary, or artistic topic with precision and depth.",
+        "Appreciation and understanding of etymology and semantic evolution of Breton words.",
+        "Recognition and understanding of a wide range of regionalisms and sociolects."
+      ],
+      "pronunciation_focus_topics": [
+        "Native-like or indistinguishable-from-native pronunciation, intonation, stress, and rhythm across all registers and styles.",
+        "Ability to subtly and effectively vary prosody to convey complex attitudes, emotions, irony, and humor.",
+        "Effortless and natural handling of all aspects of connected speech, even at rapid native speed or with dialectal variations.",
+        "Ability to understand, analyze, and accurately reproduce or imitate various Breton accents and sociolects."
+      ],
+      "listening_comprehension_skills": [
+        "Understand any kind of spoken Breton, whether live or broadcast, even when delivered at fast native speed or with strong dialectal features.",
+        "Follow complex interactions between multiple speakers in any setting, identifying subtle cues and implicit meanings.",
+        "Appreciate stylistic nuances, register shifts, irony, humor, and implicit meaning in any spoken discourse."
+      ],
+      "reading_comprehension_skills": [
+        "Understand and critically interpret all forms of written Breton, including abstract, structurally or linguistically complex texts from various periods and genres.",
+        "Appreciate fine distinctions of style, tone, authorial intent, and literary or rhetorical devices.",
+        "Read and understand texts from different historical periods and diverse cultural contexts within Brittany."
+      ],
+      "spoken_interaction_skills": [
+        "Take part effortlessly, fluently, and engagingly in any conversation or discussion, using idiomatic expressions and cultural references naturally and appropriately.",
+        "Express him/herself with precision, eloquence, and charisma, differentiating the finest shades of meaning, and reformulating ideas smoothly and effectively.",
+        "Argue a complex case, negotiate, persuade, and mediate effectively in any formal or informal setting.",
+        "Adapt language and style appropriately and dynamically to any audience, context, and purpose with complete flexibility."
+      ],
+      "spoken_production_skills": [
+        "Present a clear, smoothly-flowing, well-structured, and engaging description, argument, or narrative in an appropriate and compelling style on any complex subject.",
+        "Develop points cohesively, logically, and persuasively, with masterful use of organizational patterns and sophisticated cohesive devices.",
+        "Deliver presentations, lectures, or speeches with clarity, precision, eloquence, and engaging style.",
+        "Use rhetorical devices effectively and creatively."
+      ],
+      "written_interaction_skills": [
+        "Write any type of correspondence or document with complete command of style, tone, register, and persuasive techniques.",
+        "Engage in complex written discussions or collaborations, conveying nuanced ideas effectively and persuasively."
+      ],
+      "written_production_skills": [
+        "Write clear, smoothly-flowing, complex, and sophisticated texts in an appropriate and effective style, demonstrating originality and critical insight.",
+        "Select and use a vast range of linguistic resources to express ideas precisely, persuasively, or artistically.",
+        "Demonstrate mastery of organizational patterns, paragraphing, and cohesive devices to ensure clarity and impact at a professional or academic level.",
+        "Write insightful summaries, critiques, or syntheses of complex information, adding original perspectives."
+      ],
+      "cultural_competence_topics": [
+        "Profound, nuanced, and critical understanding of Breton culture, society, history, arts, literature, and traditions.",
+        "Ability to function with complete ease and cultural sensitivity in any Breton-speaking environment.",
+        "Capacity to act as a cultural interpreter or mediator, explaining subtle and complex cultural nuances.",
+        "Deep and critical understanding of contemporary socio-political issues, cultural debates, and intellectual currents related to Brittany and the Breton language."
+      ],
+      "learning_strategies_suggestions": [
+        "Maintain and expand language proficiency through continuous, high-level intellectual and creative engagement with diverse and complex authentic Breton materials.",
+        "Engage in original scholarly research, critical analysis, or creative production in Breton.",
+        "Contribute to Breton-language publications, academic conferences, or cultural initiatives.",
+        "Reflect critically on and refine personal language use for optimal effectiveness and stylistic expression.",
+        "Explore highly specialized areas of interest in great depth in Breton, potentially contributing original work or preserving linguistic heritage."
+      ]
+    }
+  ]
+}
