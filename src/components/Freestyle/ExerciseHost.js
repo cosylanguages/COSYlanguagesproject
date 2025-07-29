@@ -1,22 +1,16 @@
 // Import necessary libraries and components.
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
-
-// Import the host components for different exercise types.
-import RandomWordPracticeHost from './exercises/vocabulary/RandomWordPracticeHost';
-import GrammarExercisesHost from './exercises/grammar/GrammarExercisesHost';
-import ReadingExercisesHost from './exercises/reading/ReadingExercisesHost';
-import SpeakingExercisesHost from './exercises/speaking/SpeakingExercisesHost';
-import WritingExercisesHost from './exercises/writing/WritingExercisesHost';
+import Loading from '../Common/Loading';
 
 // A map that associates sub-practice types with their corresponding host components.
 const exerciseMap = {
-  vocabulary: RandomWordPracticeHost,
-  grammar: GrammarExercisesHost,
-  reading: ReadingExercisesHost,
-  speaking: SpeakingExercisesHost,
-  writing: WritingExercisesHost,
+  vocabulary: lazy(() => import('./exercises/vocabulary/RandomWordPracticeHost')),
+  grammar: lazy(() => import('./exercises/grammar/GrammarExercisesHost')),
+  reading: lazy(() => import('./exercises/reading/ReadingExercisesHost')),
+  speaking: lazy(() => import('./exercises/speaking/SpeakingExercisesHost')),
+  writing: lazy(() => import('./exercises/writing/WritingExercisesHost')),
 };
 
 /**
@@ -37,7 +31,7 @@ const ExerciseHost = ({ subPracticeType, language, days }) => {
   }
 
   // Get the exercise component from the map.
-  let ExerciseComponent = exerciseMap[subPracticeType];
+  const ExerciseComponent = exerciseMap[subPracticeType];
 
   // If the exercise component is not found, display an error message.
   if (!ExerciseComponent) {
@@ -53,7 +47,11 @@ const ExerciseHost = ({ subPracticeType, language, days }) => {
   }
 
   // Render the exercise component with the appropriate props.
-  return <ExerciseComponent language={language} days={days} />;
+  return (
+    <Suspense fallback={<Loading />}>
+      <ExerciseComponent language={language} days={days} />
+    </Suspense>
+  );
 };
 
 export default ExerciseHost;

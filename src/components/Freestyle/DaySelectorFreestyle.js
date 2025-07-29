@@ -1,7 +1,7 @@
 // Import necessary libraries and components.
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
-import { useFreestyle } from '../../contexts/FreestyleContext';
+import { useDaySelection } from '../../hooks/useDaySelection';
 import './DaySelectorFreestyle.css';
 
 /**
@@ -11,70 +11,25 @@ import './DaySelectorFreestyle.css';
  * @returns {JSX.Element} The DaySelectorFreestyle component.
  */
 const DaySelectorFreestyle = ({ language }) => {
-  const { setSelectedDays } = useFreestyle();
-  // State for the selected day(s), thematic name, and selection mode.
-  const [internalSingleDay, setInternalSingleDay] = useState('');
-  const [internalDayFrom, setInternalDayFrom] = useState('');
-  const [internalDayTo, setInternalDayTo] = useState('');
-  const [thematicName, setThematicName] = useState('');
-  const [selectionMode, setSelectionMode] = useState('single'); // 'single' or 'range'
+  const {
+    internalSingleDay,
+    setInternalSingleDay,
+    internalDayFrom,
+    setInternalDayFrom,
+    internalDayTo,
+    setInternalDayTo,
+    thematicName,
+    selectionMode,
+    setSelectionMode,
+    handleConfirmDays,
+    isConfirmButtonDisabled,
+    showSingleDayInputSection,
+    showDayRangeInputSection,
+  } = useDaySelection(language);
 
-  const { t, getTranslationsForLang } = useI18n();
+  const { t } = useI18n();
   const MAX_DAYS = 30;
   const daysOptions = Array.from({ length: MAX_DAYS }, (_, i) => i + 1);
-
-  // Determine which input section to show based on the selection mode.
-  const showSingleDayInputSection = selectionMode === 'single';
-  const showDayRangeInputSection = selectionMode === 'range';
-
-  // Effect to get the thematic name for the selected day.
-  useEffect(() => {
-    if (showSingleDayInputSection && internalSingleDay && language) {
-      const langTranslations = getTranslationsForLang(language, 'dayNames');
-      setThematicName(langTranslations[internalSingleDay] || '');
-    } else {
-      setThematicName('');
-    }
-  }, [internalSingleDay, language, showSingleDayInputSection, getTranslationsForLang]);
-
-  /**
-   * Handles the confirmation of the selected days.
-   */
-  const handleConfirmDays = () => {
-    let daysToConfirm = [];
-    if (showSingleDayInputSection && internalSingleDay) {
-      daysToConfirm = [parseInt(internalSingleDay, 10)];
-    } else if (showDayRangeInputSection && internalDayFrom && internalDayTo) {
-      const from = parseInt(internalDayFrom, 10);
-      const to = parseInt(internalDayTo, 10);
-      if (from <= to) {
-        daysToConfirm = Array.from({ length: to - from + 1 }, (_, i) => from + i);
-      }
-    }
-
-    if (daysToConfirm.length > 0) {
-      setSelectedDays(daysToConfirm);
-    } else {
-      console.warn("DaySelectorFreestyle: Attempted to confirm with no valid days selected.");
-    }
-  };
-
-  /**
-   * Checks if the confirm button should be disabled.
-   * @returns {boolean} Whether the confirm button should be disabled.
-   */
-  const isConfirmButtonDisabled = () => {
-    if (showSingleDayInputSection) {
-      return !internalSingleDay;
-    }
-    if (showDayRangeInputSection) {
-      if (!internalDayFrom || !internalDayTo) return true;
-      const from = parseInt(internalDayFrom, 10);
-      const to = parseInt(internalDayTo, 10);
-      return from > to;
-    }
-    return true;
-  };
 
   // Render the day selector component.
   return (
