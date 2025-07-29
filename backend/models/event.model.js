@@ -7,6 +7,12 @@ const eventSchema = new Schema({
     type: String,
     required: true,
   },
+  videoUrl: {
+    type: String,
+  },
+  videoTitle: {
+    type: String,
+  },
   start: {
     type: Date,
     required: true,

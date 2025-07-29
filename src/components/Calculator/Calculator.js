@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import './Calculator.css';
+import { useI18n } from '../../i18n/I18nContext';
 
 const Calculator = () => {
-    const [language, setLanguage] = useState('english');
+    const { currentLangKey: language } = useI18n();
     const [pkg, setPkg] = useState('standard');
     const [duration, setDuration] = useState('15');
     const [quantity, setQuantity] = useState(1);
@@ -93,14 +94,6 @@ const Calculator = () => {
         <div className="calculator-section">
             <h2><i className="fas fa-calculator"></i>CALCULATOR</h2>
 
-            <div className="form-group">
-                <label>Language</label>
-                <select id="language" value={language} onChange={e => setLanguage(e.target.value)}>
-                    <option value="english">English</option>
-                    <option value="french">French</option>
-                    <option value="italian">Italian</option>
-                </select>
-            </div>
 
             <div className="form-group">
                 <label>Package</label>
