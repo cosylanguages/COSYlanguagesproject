@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 // Import the CSS for this component.
 import './LandingPage.css';
-import CosyLanguageSelector from '../../components/LanguageSelector/CosyLanguageSelector';
+import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
 import Calculator from '../../components/Calculator/Calculator';
 
 /**
@@ -24,7 +24,7 @@ function LandingPage() {
 
         {/* Section Langues disponibles */}
         <div className="languages-section">
-          <CosyLanguageSelector />
+          <LanguageSelector />
         </div>
 
         {/* Boutons principaux */}

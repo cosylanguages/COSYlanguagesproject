@@ -15,7 +15,7 @@ import ToolsPanel from '../../components/StudyMode/ToolsPanel';
 import TransliterableText from '../../components/Common/TransliterableText';
 import ToggleLatinizationButton from '../../components/Common/ToggleLatinizationButton';
 import Button from '../../components/Common/Button';
-import CosyLanguageSelector from '../../components/LanguageSelector/CosyLanguageSelector';
+import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
 import PinEntry from '../../components/StudyMode/PinEntry';
 
 // Import the CSS for this page.
@@ -306,7 +306,7 @@ const StudyModePage = () => {
         <label htmlFor="language-select" id="study-choose-language-label">
           <TransliterableText text={t('studyMode.chooseLanguageLabel', '🌎 Choose Your Language:')} />
         </label>
-        <CosyLanguageSelector />
+        <LanguageSelector />
         <ToggleLatinizationButton
           currentDisplayLanguage={currentLangKey || language}
         />

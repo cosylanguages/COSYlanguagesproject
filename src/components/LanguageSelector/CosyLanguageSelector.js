@@ -48,8 +48,8 @@ const flags = {
  * @param {function} props.onLanguageChange - A callback function to handle language changes.
  * @returns {JSX.Element} The CosyLanguageSelector component.
  */
-const CosyLanguageSelector = () => {
-  const { allTranslations, t, language: selectedLanguage, changeLanguage: onLanguageChange } = useI18n();
+const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
+  const { allTranslations, t } = useI18n();
   const navigate = useNavigate();
 
   // Get the list of available languages from the translations data.
