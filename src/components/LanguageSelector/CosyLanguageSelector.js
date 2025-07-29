@@ -1,7 +1,7 @@
 // Import necessary libraries and components.
-import React, 'react';
+import React from 'react';
 import Select from 'react-select';
-import { useNavigate } from 'react--router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
 import './CosyLanguageSelector.css';
