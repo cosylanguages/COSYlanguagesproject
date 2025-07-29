@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkapp=self.webpackChunkapp||[]).push([[413],{3413:(s,e,a)=>{a.r(e),a.d(e,{default:()=>n});a(5043);var r=a(579);const n=s=>{let{language:e,days:a}=s;return(0,r.jsxs)("div",{children:[(0,r.jsx)("h2",{children:"Grammar Exercises"}),(0,r.jsxs)("p",{children:["Language: ",e]}),(0,r.jsxs)("p",{children:["Days: ",a.join(", ")]})]})}}}]);
+//# sourceMappingURL=413.29225f84.chunk.js.map
