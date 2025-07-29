@@ -1,28 +1,34 @@
 // Import necessary libraries and components.
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import BoosterPack from './BoosterPack';
 import InteractiveScenario from './InteractiveScenario';
 import './BoosterPackOfTheWeek.css';
 import UserBoosterPackCreator from './UserBoosterPackCreator';
+import { useBoosterPacks } from '../../hooks/useBoosterPacks';
+
+const BoosterPackList = ({ title, packs, onPackClick }) => (
+    <div className="booster-packs-section">
+        <h2>{title}</h2>
+        <div className="booster-packs-container">
+            {packs.map(pack => (
+                <div key={pack.id} onClick={() => onPackClick(pack)}>
+                    <BoosterPack pack={pack} />
+                </div>
+            ))}
+        </div>
+    </div>
+);
 
 /**
  * A component that displays a list of booster packs.
  * It also includes a user booster pack creator and handles the selection of a pack.
  * @param {object} props - The component's props.
- * @param {Array} props.boosterPacks - An array of booster packs to display.
  * @param {function} props.onSelect - A callback function to handle the selection of a pack.
  * @returns {JSX.Element} The BoosterPacks component.
  */
-const BoosterPacks = ({ boosterPacks, onSelect }) => {
-    // State for user-created booster packs and the currently selected pack.
-    const [userBoosterPacks, setUserBoosterPacks] = useState([]);
+const BoosterPacks = ({ onSelect }) => {
+    const { boosterPacks, userBoosterPacks } = useBoosterPacks();
     const [selectedPack, setSelectedPack] = useState(null);
-
-    // Load user-created booster packs from local storage when the component mounts.
-    useEffect(() => {
-        const storedUserPacks = JSON.parse(localStorage.getItem('userBoosterPacks')) || [];
-        setUserBoosterPacks(storedUserPacks);
-    }, []);
 
     /**
      * Handles the click of a booster pack.
@@ -46,23 +52,8 @@ const BoosterPacks = ({ boosterPacks, onSelect }) => {
     return (
         <div className="booster-packs">
             <UserBoosterPackCreator />
-            <h2>Booster Packs</h2>
-            <div className="booster-packs-container">
-                {boosterPacks.map(pack => (
-                    <div key={pack.id} onClick={() => handlePackClick(pack)}>
-                        <BoosterPack pack={pack} />
-                    </div>
-                ))}
-            </div>
-
-            <h2>Your Booster Packs</h2>
-            <div className="booster-packs-container">
-                {userBoosterPacks.map(pack => (
-                    <div key={pack.id} onClick={() => handlePackClick(pack)}>
-                        <BoosterPack pack={pack} />
-                    </div>
-                ))}
-            </div>
+            <BoosterPackList title="Booster Packs" packs={boosterPacks} onPackClick={handlePackClick} />
+            <BoosterPackList title="Your Booster Packs" packs={userBoosterPacks} onPackClick={handlePackClick} />
 
             {/* If a pack with a scenario is selected, render the interactive scenario. */}
             {selectedPack && selectedPack.content.scenario && (
