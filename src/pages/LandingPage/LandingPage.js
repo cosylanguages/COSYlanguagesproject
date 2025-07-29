@@ -4,7 +4,6 @@ import React, { useState, useRef } from 'react';
 import './LandingPage.css';
 import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
 import Calculator from '../../components/Calculator/Calculator';
-import { useI18n } from '../../i18n/I18nContext';
 
 /**
  * The main landing page for the application.
