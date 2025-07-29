@@ -3,8 +3,6 @@ import './Calculator.css';
 import { useI18n } from '../../i18n/I18nContext';
 
 const Calculator = () => {
-    const { currentLangKey: languageInitial } = useI18n();
-    const language = priceData.hasOwnProperty(languageInitial) ? languageInitial : 'english';
     const [pkg, setPkg] = useState('standard');
     const [duration, setDuration] = useState('15');
     const [quantity, setQuantity] = useState(1);
@@ -31,6 +29,8 @@ const Calculator = () => {
             maestro: {15: 272, 30: 408, 50: 680, 80: 952, 110: 1224}
         }
     }), []);
+    const { currentLangKey: languageInitial } = useI18n();
+    const language = priceData.hasOwnProperty(languageInitial) ? languageInitial : 'english';
 
     const packageDiscounts = {
         standard: 0,
