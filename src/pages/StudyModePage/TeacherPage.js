@@ -1,5 +1,5 @@
 // src/pages/StudyModePage/TeacherPage.js
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import TeacherDashboard from './TeacherDashboard';
 import LessonSectionsPanel from '../../components/StudyMode/LessonSectionsPanel';
 import ToolsPanel from '../../components/StudyMode/ToolsPanel';
@@ -11,6 +11,14 @@ const TeacherPage = ({
   currentLangKey,
   selectedSectionId,
 }) => {
+  const mainContentRef = useRef(null);
+
+  useEffect(() => {
+    if (mainContentRef.current) {
+      mainContentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [selectedSectionId]);
+
   return (
     <div className="dashboard-layout">
       <div className="layout-left-panel">
@@ -25,7 +33,7 @@ const TeacherPage = ({
           />
         )}
       </div>
-      <div className="layout-center-panel" id="main-content-panel">
+      <div className="layout-center-panel" ref={mainContentRef}>
         <TeacherDashboard
           selectedDayId={selectedDayId}
           key={selectedDayId}

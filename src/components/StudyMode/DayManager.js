@@ -4,6 +4,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { useI18n } from '../../i18n/I18nContext';
 import { fetchDays, addDay, updateDay, deleteDay } from '../../api/api';
 import Button from '../Common/Button';
+import Modal from '../Common/Modal';
 import './DayManager.css';
 
 /**
@@ -22,6 +23,10 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [newDayTitle, setNewDayTitle] = useState('');
+    const [editingDayId, setEditingDayId] = useState(null);
+    const [editingTitle, setEditingTitle] = useState('');
+    const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
+    const [dayToDelete, setDayToDelete] = useState(null);
 
     /**
      * Loads the list of study days from the API.
@@ -83,56 +88,73 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
      * @param {string} dayId - The ID of the day to rename.
      * @param {object} currentTitleObj - The current title object of the day.
      */
-    const handleRenameDay = async (dayId, currentTitleObj) => {
-        if (!authToken) return;
-        const currentTitleInUILang = currentTitleObj?.[currentUILanguage] || currentTitleObj?.COSYenglish || '';
-        const newTitlePrompt = prompt(t('enterNewTitleForDay', { currentTitle: currentTitleInUILang }) || `Enter new title for "${currentTitleInUILang}":`, currentTitleInUILang);
+    const handleStartRename = (day) => {
+        setEditingDayId(day.id);
+        setEditingTitle(day.title?.[currentUILanguage] || day.title?.COSYenglish || '');
+    };
 
-        if (newTitlePrompt && newTitlePrompt.trim() !== "") {
-            const updatedTitle = { ...currentTitleObj };
-            updatedTitle[currentUILanguage] = newTitlePrompt.trim();
-            if (currentUILanguage === 'COSYenglish' || !updatedTitle.COSYenglish || updatedTitle.COSYenglish === currentTitleInUILang) {
-                updatedTitle.COSYenglish = newTitlePrompt.trim();
-            }
-             Object.keys(allTranslations || {}).forEach(langKey => {
-                if (!updatedTitle[langKey] || updatedTitle[langKey] === currentTitleInUILang) {
-                     updatedTitle[langKey] = newTitlePrompt.trim();
-                }
-            });
+    const handleCancelRename = () => {
+        setEditingDayId(null);
+        setEditingTitle('');
+    };
 
-            setIsLoading(true);
-            try {
-                await updateDay(authToken, dayId, { title: updatedTitle });
-                loadDays();
-            } catch (err) {
-                setError(err.message || t('errorRenamingDay') || 'Failed to rename day.');
-            } finally {
-                setIsLoading(false);
+    const handleSaveRename = async (dayId, currentTitleObj) => {
+        if (!authToken || !editingTitle.trim()) {
+            handleCancelRename();
+            return;
+        }
+
+        const updatedTitle = { ...currentTitleObj };
+        const oldTitle = currentTitleObj?.[currentUILanguage] || currentTitleObj?.COSYenglish || '';
+        updatedTitle[currentUILanguage] = editingTitle.trim();
+
+        // Update other languages that had the same old title
+        Object.keys(allTranslations || {}).forEach(langKey => {
+            if (!updatedTitle[langKey] || updatedTitle[langKey] === oldTitle) {
+                 updatedTitle[langKey] = editingTitle.trim();
             }
+        });
+        if (currentUILanguage === 'COSYenglish' || !updatedTitle.COSYenglish || updatedTitle.COSYenglish === oldTitle) {
+            updatedTitle.COSYenglish = editingTitle.trim();
+        }
+
+        setIsLoading(true);
+        try {
+            await updateDay(authToken, dayId, { title: updatedTitle });
+            loadDays();
+        } catch (err) {
+            setError(err.message || t('errorRenamingDay') || 'Failed to rename day.');
+        } finally {
+            setIsLoading(false);
+            handleCancelRename();
         }
     };
 
-    /**
-     * Handles the deletion of a day.
-     * @param {string} dayId - The ID of the day to delete.
-     * @param {object} dayTitleObj - The title object of the day to delete.
-     */
-    const handleDeleteDay = async (dayId, dayTitleObj) => {
-        if (!authToken) return;
-        const dayTitleForConfirm = dayTitleObj?.[currentUILanguage] || dayTitleObj?.COSYenglish || `Day ID ${dayId}`;
-        if (window.confirm(t('confirmDeleteDay', { dayTitle: dayTitleForConfirm }) || `Are you sure you want to delete "${dayTitleForConfirm}"? This will also delete all its lesson sections and content.`)) {
-            setIsLoading(true);
-            try {
-                await deleteDay(authToken, dayId);
-                if (selectedDayId === dayId) {
-                    onDaySelect(null);
-                }
-                loadDays();
-            } catch (err) {
-                setError(err.message || t('errorDeletingDay') || 'Failed to delete day.');
-            } finally {
-                setIsLoading(false);
+    const handleOpenDeleteConfirm = (day) => {
+        setDayToDelete(day);
+        setIsConfirmModalOpen(true);
+    };
+
+    const handleCloseDeleteConfirm = () => {
+        setIsConfirmModalOpen(false);
+        setDayToDelete(null);
+    };
+
+    const handleConfirmDelete = async () => {
+        if (!authToken || !dayToDelete) return;
+
+        setIsLoading(true);
+        try {
+            await deleteDay(authToken, dayToDelete.id);
+            if (selectedDayId === dayToDelete.id) {
+                onDaySelect(null);
             }
+            loadDays();
+        } catch (err) {
+            setError(err.message || t('errorDeletingDay') || 'Failed to delete day.');
+        } finally {
+            setIsLoading(false);
+            handleCloseDeleteConfirm();
         }
     };
 
@@ -194,29 +216,63 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
                             aria-pressed={selectedDayId === day.id}
                             aria-label={t('selectDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish || `Day ID ${day.id}` }) || `Select day: ${day.title?.[currentUILanguage] || day.title?.COSYenglish || `Day ID: ${day.id}`}`}
                         >
-                            <span className="day-title">
-                                {day.title?.[currentUILanguage] || day.title?.COSYenglish || day.title || `Day ID: ${day.id}`}
-                            </span>
-                            {/* Action buttons for renaming and deleting a day. */}
-                            <div className="day-actions">
-                                <Button
-                                    size="small"
-                                    onClick={(e) => { e.stopPropagation(); handleRenameDay(day.id, day.title); }}
-                                    title={t('renameDayTooltip') || "Rename day"}
-                                    aria-label={t('renameDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish }) || `Rename ${day.title?.[currentUILanguage] || day.title?.COSYenglish}`}
-                                    disabled={isLoading}
-                                >✏️</Button>
-                                <Button
-                                    size="small"
-                                    onClick={(e) => { e.stopPropagation(); handleDeleteDay(day.id, day.title); }}
-                                    title={t('deleteDayTooltip') || "Delete day"}
-                                    aria-label={t('deleteDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish }) || `Delete ${day.title?.[currentUILanguage] || day.title?.COSYenglish}`}
-                                    disabled={isLoading}
-                                >🗑️</Button>
-                            </div>
+                            {editingDayId === day.id ? (
+                                <div className="inline-edit-form" onClick={e => e.stopPropagation()}>
+                                    <input
+                                        type="text"
+                                        value={editingTitle}
+                                        onChange={(e) => setEditingTitle(e.target.value)}
+                                        autoFocus
+                                        onKeyDown={(e) => {
+                                            if (e.key === 'Enter') handleSaveRename(day.id, day.title);
+                                            if (e.key === 'Escape') handleCancelRename();
+                                        }}
+                                    />
+                                    <Button size="small" variant="success" onClick={() => handleSaveRename(day.id, day.title)}>✓</Button>
+                                    <Button size="small" variant="danger" onClick={handleCancelRename}>×</Button>
+                                </div>
+                            ) : (
+                                <>
+                                    <span className="day-title">
+                                        {day.title?.[currentUILanguage] || day.title?.COSYenglish || day.title || `Day ID: ${day.id}`}
+                                    </span>
+                                    <div className="day-actions">
+                                        <Button
+                                            size="small"
+                                            onClick={(e) => { e.stopPropagation(); handleStartRename(day); }}
+                                            title={t('renameDayTooltip') || "Rename day"}
+                                            aria-label={t('renameDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish }) || `Rename ${day.title?.[currentUILanguage] || day.title?.COSYenglish}`}
+                                            disabled={isLoading}
+                                        >✏️</Button>
+                                        <Button
+                                            size="small"
+                                            onClick={(e) => { e.stopPropagation(); handleOpenDeleteConfirm(day); }}
+                                            title={t('deleteDayTooltip') || "Delete day"}
+                                            aria-label={t('deleteDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish }) || `Delete ${day.title?.[currentUILanguage] || day.title?.COSYenglish}`}
+                                            disabled={isLoading}
+                                        >🗑️</Button>
+                                    </div>
+                                </>
+                            )}
                         </li>
                     ))}
                 </ul>
+            )}
+            {isConfirmModalOpen && (
+                <Modal isOpen={isConfirmModalOpen} onClose={handleCloseDeleteConfirm}>
+                    <h3>{t('confirmDeleteTitle', 'Confirm Deletion')}</h3>
+                    <p>
+                        {t('confirmDeleteDay', { dayTitle: dayToDelete?.title?.[currentUILanguage] || dayToDelete?.title?.COSYenglish || '' })}
+                    </p>
+                    <div className="modal-actions">
+                        <Button onClick={handleCloseDeleteConfirm} variant="secondary">
+                            {t('cancelBtn', 'Cancel')}
+                        </Button>
+                        <Button onClick={handleConfirmDelete} variant="danger" disabled={isLoading}>
+                            {isLoading ? t('deletingBtn', 'Deleting...') : t('deleteBtn', 'Delete')}
+                        </Button>
+                    </div>
+                </Modal>
             )}
         </div>
     );

@@ -23,9 +23,6 @@ import LessonEditor from '../../components/StudyMode/LessonEditor';
 import './TeacherDashboard.css'; 
 import '../../components/StudyMode/TemplateConfig/SimpleTextConfig.css';
 
-// A fixed key for storing the teacher's lesson in local storage.
-const TEACHER_LESSON_STORAGE_KEY = 'teacherSavedLesson_default';
-
 /**
  * The teacher's dashboard in Study Mode.
  * This component provides an interface for teachers to create, edit, and manage lesson content.
@@ -206,69 +203,78 @@ const TeacherDashboard = () => {
    * Saves the current lesson to the API or local storage.
    */
   const handleSaveLesson = async () => {
-    if (!selectedSectionId || !authToken || !currentSectionDetails) {
-      displayFeedback('teacherDashboard.cannotSaveSection', 'No section selected or not authenticated. Cannot save.', true);
-      if (!selectedSectionId && lessonBlocks.length > 0) {
-        try {
-          localStorage.setItem(TEACHER_LESSON_STORAGE_KEY, JSON.stringify(lessonBlocks));
-          displayFeedback('teacherDashboard.lessonSavedToLocalSuccess', 'Lesson saved to Local Storage (no section selected).');
-        } catch (e) {
-          console.error("Error saving lesson to localStorage:", e);
-          displayFeedback('teacherDashboard.lessonSavedToLocalError', 'Error saving lesson to Local Storage.', true);
-        }
-      }
-      return;
+    if (!selectedSectionId) {
+        displayFeedback('teacherDashboard.cannotSaveNoSection', 'Please select a lesson section before saving.', true);
+        return;
+    }
+    if (!authToken) {
+        displayFeedback('teacherDashboard.cannotSaveNoAuth', 'Authentication error. Please log in again.', true);
+        return;
     }
 
     try {
+      // We can use local storage as a backup before API call, using a dynamic key
+      const storageKey = `teacherSavedLesson_${selectedSectionId}`;
+      localStorage.setItem(storageKey, JSON.stringify(lessonBlocks));
+
       await updateLessonSection(authToken, selectedSectionId, {
         title: currentSectionDetails.title, 
         exerciseBlocks: lessonBlocks,
       });
-      displayFeedback('teacherDashboard.sectionSavedSuccess', 'Section content saved successfully to API!');
+      displayFeedback('teacherDashboard.sectionSavedSuccess', 'Section content saved successfully!');
+      // Optional: remove from local storage after successful API save
+      // localStorage.removeItem(storageKey);
     } catch (error) {
       console.error("Error saving section to API:", error);
-      displayFeedback('teacherDashboard.sectionSavedErrorAPI', `Error saving section: ${error.message}`, true);
+      displayFeedback('teacherDashboard.sectionSavedErrorAPI', `Error saving section: ${error.message}. Your work is saved locally.`, true);
     }
   };
 
   /**
-   * Loads a lesson from local storage.
+   * Loads a lesson from local storage for the currently selected section.
    * @param {boolean} [showFeedback=true] - Whether to show feedback messages.
    */
   const handleLoadLesson = useCallback((showFeedback = true) => {
+    if (!selectedSectionId) {
+        if (showFeedback) displayFeedback('teacherDashboard.cannotLoadNoSection', 'Please select a section to load a saved draft.', true);
+        return;
+    }
+    const storageKey = `teacherSavedLesson_${selectedSectionId}`;
     try {
-      const savedLessonJson = localStorage.getItem(TEACHER_LESSON_STORAGE_KEY);
+      const savedLessonJson = localStorage.getItem(storageKey);
       if (savedLessonJson) {
         const loadedBlocks = JSON.parse(savedLessonJson);
         if (Array.isArray(loadedBlocks)) {
           setLessonBlocks(loadedBlocks);
-          if (showFeedback) displayFeedback('teacherDashboard.lessonLoadedSuccess', 'Lesson loaded successfully!');
+          if (showFeedback) displayFeedback('teacherDashboard.lessonLoadedSuccess', 'Locally saved draft loaded successfully!');
         } else {
           console.error("Loaded lesson data is not an array:", loadedBlocks);
-          if (showFeedback) displayFeedback('teacherDashboard.lessonLoadedErrorCorrupt', 'Could not load lesson: data is corrupt.', true);
-          setLessonBlocks([]); 
+          if (showFeedback) displayFeedback('teacherDashboard.lessonLoadedErrorCorrupt', 'Could not load draft: data is corrupt.', true);
         }
       } else {
-        if (showFeedback) displayFeedback('teacherDashboard.lessonNotFound', 'No saved lesson found.', true);
+        if (showFeedback) displayFeedback('teacherDashboard.lessonNotFound', 'No locally saved draft found for this section.', true);
       }
     } catch (error) {
       console.error("Error loading lesson from localStorage:", error);
-      if (showFeedback) displayFeedback('teacherDashboard.lessonLoadedError', 'Error loading lesson.', true);
-      setLessonBlocks([]); 
+      if (showFeedback) displayFeedback('teacherDashboard.lessonLoadedError', 'Error loading draft.', true);
     }
-  }, [displayFeedback]);
+  }, [selectedSectionId, displayFeedback]);
 
   /**
-   * Clears the saved lesson from local storage.
+   * Clears the saved lesson from local storage for the currently selected section.
    */
   const handleClearSavedLesson = () => {
+    if (!selectedSectionId) {
+        displayFeedback('teacherDashboard.cannotClearNoSection', 'Please select a section to clear its draft.', true);
+        return;
+    }
+    const storageKey = `teacherSavedLesson_${selectedSectionId}`;
     try {
-      localStorage.removeItem(TEACHER_LESSON_STORAGE_KEY);
-      displayFeedback('teacherDashboard.clearedSuccess', 'Saved lesson cleared from local storage.');
+      localStorage.removeItem(storageKey);
+      displayFeedback('teacherDashboard.clearedSuccess', 'Locally saved draft for this section has been cleared.');
     } catch (error) {
       console.error("Error clearing saved lesson from localStorage:", error);
-      displayFeedback('teacherDashboard.clearedError', 'Error clearing saved lesson.', true);
+      displayFeedback('teacherDashboard.clearedError', 'Error clearing saved draft.', true);
     }
   };
   
