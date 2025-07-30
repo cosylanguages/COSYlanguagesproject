@@ -8,31 +8,59 @@ jest.mock('react-router-dom', () => ({
     useNavigate: jest.fn(),
 }));
 
+jest.mock('../../contexts/AuthContext', () => ({
+    useAuth: jest.fn(() => ({
+        login: jest.fn(() => Promise.resolve(true)),
+        signup: jest.fn(() => Promise.resolve(true)),
+        loadingAuth: false,
+        authError: null,
+    })),
+}));
+
 describe('Login', () => {
-  it('renders login form', () => {
+  it('renders login form by default', () => {
     render(<Login />);
     expect(screen.getByLabelText(/username/i)).toBeInTheDocument();
-    expect(screen.getByText(/login/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/password/i)).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Login' })).toBeInTheDocument();
+    expect(screen.getByText('Need an account? Sign Up')).toBeInTheDocument();
   });
 
-  it('redirects to freestyle mode with no PIN', async () => {
-    const navigate = jest.fn();
-    useNavigate.mockReturnValue(navigate);
-    const { getByText } = render(<Login />);
-    fireEvent.click(getByText(/login/i));
+  it('switches to sign up form', () => {
+    render(<Login />);
+    fireEvent.click(screen.getByText('Need an account? Sign Up'));
+    expect(screen.getByRole('button', { name: 'Sign Up' })).toBeInTheDocument();
+    expect(screen.getByText('Already have an account? Login')).toBeInTheDocument();
+  });
+
+  it('calls login function on submit', async () => {
+    const login = jest.fn(() => Promise.resolve(true));
+    const { useAuth } = require('../../contexts/AuthContext');
+    useAuth.mockReturnValueOnce({ login, signup: jest.fn(), loadingAuth: false, authError: null });
+
+    render(<Login />);
+    fireEvent.change(screen.getByLabelText(/username/i), { target: { value: 'testuser' } });
+    fireEvent.change(screen.getByLabelText(/password/i), { target: { value: 'password' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Login' }));
+
     await waitFor(() => {
-      expect(navigate).toHaveBeenCalledWith('/freestyle');
+      expect(login).toHaveBeenCalledWith('testuser', 'password');
     });
   });
 
-  it('redirects to study mode with correct PIN', async () => {
-    const navigate = jest.fn();
-    useNavigate.mockReturnValue(navigate);
-    const { getByLabelText, getByText } = render(<Login />);
-    fireEvent.change(getByLabelText(/pin/i), { target: { value: '1234' } });
-    fireEvent.click(getByText(/login/i));
+  it('calls signup function on submit', async () => {
+    const signup = jest.fn(() => Promise.resolve(true));
+    const { useAuth } = require('../../contexts/AuthContext');
+    useAuth.mockReturnValueOnce({ login: jest.fn(), signup, loadingAuth: false, authError: null });
+
+    render(<Login />);
+    fireEvent.click(screen.getByText('Need an account? Sign Up'));
+    fireEvent.change(screen.getByLabelText(/username/i), { target: { value: 'newuser' } });
+    fireEvent.change(screen.getByLabelText(/password/i), { target: { value: 'newpassword' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Sign Up' }));
+
     await waitFor(() => {
-      expect(navigate).toHaveBeenCalledWith('/study-islands.html');
+      expect(signup).toHaveBeenCalledWith('newuser', 'newpassword');
     });
   });
 });
