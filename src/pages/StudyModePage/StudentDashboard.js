@@ -44,9 +44,9 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
   const [isFillInTheBlanksVisible, setIsFillInTheBlanksVisible] = useState(false);
   const [isSentenceUnscrambleVisible, setIsSentenceUnscrambleVisible] = useState(false);
   // State for managing quizzes and flashcards.
-  const [selectedQuiz, setSelectedQuiz] = useState(null);
+  const [selectedQuiz, ] = useState(null);
   const [quizAnswers, setQuizAnswers] = useState(null);
-  const [selectedDeck, setSelectedDeck] = useState(null);
+  const [selectedDeck, ] = useState(null);
   
   /**
    * Handles navigation between lesson blocks.
