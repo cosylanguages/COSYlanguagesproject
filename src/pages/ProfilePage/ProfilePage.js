@@ -6,11 +6,15 @@ import Settings from './Settings';
 import Social from './Social';
 import GamificationDashboard from '../../components/Gamification/GamificationDashboard';
 import { updateUserProfile } from '../../api/api';
+import Tabs from '../../components/Common/Tabs';
+import { useI18n } from '../../i18n/I18nContext';
+import toast from 'react-hot-toast';
 import './ProfilePage.css';
 
 function ProfilePage() {
-  const { currentUser, authToken } = useAuth();
+  const { currentUser, authToken, refreshCurrentUser } = useAuth();
   const [isEditMode, setIsEditMode] = useState(false);
+  const { t } = useI18n();
 
   const handleEdit = () => {
     setIsEditMode(!isEditMode);
@@ -20,12 +24,11 @@ function ProfilePage() {
     if (!currentUser) return;
     try {
       await updateUserProfile(authToken, currentUser.id, newUserInfo);
-      alert('Profile updated successfully!');
-      // Optionally, you might need to refresh the currentUser in the context
-      // after a successful update, but for now, we'll just show a message.
+      refreshCurrentUser(newUserInfo);
+      toast.success('Profile updated successfully!');
     } catch (error) {
       console.error('Failed to update profile:', error);
-      alert('Failed to update profile. Please try again.');
+      toast.error('Failed to update profile. Please try again.');
     } finally {
       setIsEditMode(false);
     }
@@ -36,9 +39,17 @@ function ProfilePage() {
       <ProfileHeader onEdit={handleEdit} />
       <div className="profile-content">
         <div className="profile-main">
-          <UserInformation user={currentUser} isEditMode={isEditMode} onSave={handleSave} />
-          <Settings />
-          <Social />
+          <Tabs>
+            <div label={t('profile.tabs.userInformation', 'User Information')}>
+              <UserInformation user={currentUser} isEditMode={isEditMode} onSave={handleSave} />
+            </div>
+            <div label={t('profile.tabs.settings', 'Settings')}>
+              <Settings />
+            </div>
+            <div label={t('profile.tabs.social', 'Social')}>
+              <Social />
+            </div>
+          </Tabs>
         </div>
         <div className="profile-sidebar">
           <GamificationDashboard />

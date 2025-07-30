@@ -1,25 +1,30 @@
 // src/pages/ProfilePage/Social.js
 import React from 'react';
+import { useAuth } from '../../contexts/AuthContext';
+import { useI18n } from '../../i18n/I18nContext';
 import './Social.css';
 
 const Social = () => {
+  const { currentUser } = useAuth();
+  const { t } = useI18n();
+
   return (
     <div className="social">
-      <h3>Social</h3>
+      <h3>{t('profile.social.title', 'Social')}</h3>
       <div className="social-row">
-        <h4>Friends</h4>
+        <h4>{t('profile.social.friends', 'Friends')}</h4>
         <ul>
-          <li>Friend 1</li>
-          <li>Friend 2</li>
-          <li>Friend 3</li>
+          {currentUser?.friends?.map((friend, index) => (
+            <li key={index}>{friend}</li>
+          ))}
         </ul>
       </div>
       <div className="social-row">
-        <h4>Recent Activity</h4>
+        <h4>{t('profile.social.recentActivity', 'Recent Activity')}</h4>
         <ul>
-          <li>Posted in the community forum</li>
-          <li>Completed a lesson</li>
-          <li>Made a new friend</li>
+          {currentUser?.recentActivity?.map((activity, index) => (
+            <li key={index}>{activity}</li>
+          ))}
         </ul>
       </div>
     </div>
