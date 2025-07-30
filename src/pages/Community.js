@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import CommunityHeader from '../components/Community/CommunityHeader';
 import Tabs from '../components/Common/Tabs';
-import Feed from '../components/Feed';
+import Feed from '../components/Community/Feed';
 import EventCalendar from '../components/EventCalendar';
 import Groups from '../components/Community/Groups';
 import Users from '../components/Community/Users';
@@ -17,7 +17,8 @@ const Community = () => {
   const [isCreateEventModalOpen, setIsCreateEventModalOpen] = useState(false);
 
   const handleSearch = (query) => {
-    // Handle search logic here
+    // TODO: Implement search logic. This should probably filter the content
+    // of the currently active tab (Feed, Events, Groups, or Users).
     console.log('Searching for:', query);
   };
 
@@ -40,7 +41,7 @@ const Community = () => {
         <div className="community-main">
           <Tabs>
             <div label="Feed">
-              <Feed userId={currentUser?.id} />
+              <Feed />
             </div>
             <div label="Events">
               <EventCalendar />
