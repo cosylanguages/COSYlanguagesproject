@@ -1,8 +1,7 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '../../testUtils';
 import '@testing-library/jest-dom';
 import StudySetList from './StudySetList';
-import { I18nProvider } from '../../i18n/I18nContext';
 import * as studySetService from '../../utils/studySetService';
 
 jest.mock('../../utils/studySetService');
@@ -27,11 +26,7 @@ const renderComponent = (props, sets = mockStudySets) => {
   studySetService.getStudySets.mockReturnValue(sets);
   studySetService.deleteStudySet.mockReturnValue(true);
 
-  return render(
-    <I18nProvider>
-      <StudySetList {...props} />
-    </I18nProvider>
-  );
+  return render(<StudySetList {...props} />);
 };
 
 describe('StudySetList', () => {
