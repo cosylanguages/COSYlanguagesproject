@@ -1,8 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { render, screen } from '../../testUtils';
 import LandingPage from './LandingPage';
-import { I18nProvider } from '../../i18n/I18nContext';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -12,13 +10,7 @@ jest.mock('react-router-dom', () => ({
 }));
 
 test('renders landing page with logo and mode buttons', () => {
-  render(
-    <I18nProvider>
-      <MemoryRouter>
-        <LandingPage />
-      </MemoryRouter>
-    </I18nProvider>
-  );
+  render(<LandingPage />);
 
   expect(screen.getByAltText(/Cosy Languages Logo/i)).toBeInTheDocument();
   expect(screen.getByRole('link', { name: /Freestyle/i })).toBeInTheDocument();
