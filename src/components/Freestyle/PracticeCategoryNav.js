@@ -34,7 +34,7 @@ const PracticeCategoryNav = ({ language, days }) => {
           <button
             key={categoryKey}
             onClick={() => handleCategorySelect(categoryKey)}
-            className="practice-category-btn"
+            className={`practice-category-btn ${selectedExercise?.exercise === categoryKey ? 'active' : ''}`}
           >
             {t(categoryDisplayInfo[categoryKey].translationKey, categoryDisplayInfo[categoryKey].defaultLabel)}
           </button>

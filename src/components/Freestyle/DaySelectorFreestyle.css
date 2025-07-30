@@ -119,3 +119,8 @@
   background-color: var(--color-surface-light, #e6f2ff); /* Very light blue background */
   border-radius: var(--border-radius-sm, 4px);
 }
+
+.day-select-dropdown option.selected {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+}
