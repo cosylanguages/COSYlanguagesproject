@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useI18n } from '../i18n/I18nContext';
 import { useAuth } from '../contexts/AuthContext';
 import CommunityHeader from '../components/Community/CommunityHeader';
 import Tabs from '../components/Common/Tabs';
@@ -12,6 +13,7 @@ import CreatePost from '../components/CreatePost';
 import EventForm from '../components/EventForm';
 
 const Community = () => {
+  const { t } = useI18n();
   const { currentUser } = useAuth();
   const [isCreatePostModalOpen, setIsCreatePostModalOpen] = useState(false);
   const [isCreateEventModalOpen, setIsCreateEventModalOpen] = useState(false);
@@ -40,16 +42,16 @@ const Community = () => {
       <div className="community-content">
         <div className="community-main">
           <Tabs>
-            <div label="Feed">
+            <div label={t('community.tabs.feed', 'Feed')}>
               <Feed />
             </div>
-            <div label="Events">
+            <div label={t('community.tabs.events', 'Events')}>
               <EventCalendar />
             </div>
-            <div label="Groups">
+            <div label={t('community.tabs.groups', 'Groups')}>
               <Groups />
             </div>
-            <div label="Users">
+            <div label={t('community.tabs.users', 'Users')}>
               <Users />
             </div>
           </Tabs>

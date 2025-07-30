@@ -1,16 +1,14 @@
 // src/components/Community/Groups.js
 import React from 'react';
+import { useI18n } from '../../i18n/I18nContext';
 import './Groups.css';
 
 const Groups = () => {
+  const { t } = useI18n();
   return (
-    <div className="groups">
-      <h3>Groups</h3>
-      <ul>
-        <li>Group 1</li>
-        <li>Group 2</li>
-        <li>Group 3</li>
-      </ul>
+    <div className="groups placeholder-container">
+      <h3>{t('community.groups.title', 'Groups')}</h3>
+      <p>{t('community.groups.comingSoon', 'The Groups feature is coming soon!')}</p>
     </div>
   );
 };

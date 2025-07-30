@@ -16,3 +16,14 @@
   width: 300px;
   flex-shrink: 0;
 }
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .community-content {
+    flex-direction: column;
+  }
+
+  .community-sidebar {
+    width: 100%;
+  }
+}
