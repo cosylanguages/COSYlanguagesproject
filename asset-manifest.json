@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/COSYlanguagesproject/static/css/main.d59875fd.css",
-    "main.js": "/COSYlanguagesproject/static/js/main.c016dabc.js",
+    "main.css": "/COSYlanguagesproject/static/css/main.f5b21c06.css",
+    "main.js": "/COSYlanguagesproject/static/js/main.56d77deb.js",
     "sw.js": "/COSYlanguagesproject/static/js/sw.d72eb008.js",
     "study.css": "/COSYlanguagesproject/static/css/study.d156551b.css",
-    "study.js": "/COSYlanguagesproject/static/js/study.285aa4a4.js",
+    "study.js": "/COSYlanguagesproject/static/js/study.ab37764e.js",
     "freestyle.css": "/COSYlanguagesproject/static/css/freestyle.3e1319a7.css",
     "freestyle.js": "/COSYlanguagesproject/static/js/freestyle.08d58a0a.js",
     "study-ka.js": "/COSYlanguagesproject/static/js/study-ka.950e1d5b.js",
@@ -36,11 +36,11 @@
     "404.html": "/COSYlanguagesproject/404.html",
     "freestyle.html": "/COSYlanguagesproject/freestyle.html",
     "study-islands.html": "/COSYlanguagesproject/study-islands.html",
-    "main.d59875fd.css.map": "/COSYlanguagesproject/static/css/main.d59875fd.css.map",
-    "main.c016dabc.js.map": "/COSYlanguagesproject/static/js/main.c016dabc.js.map",
+    "main.f5b21c06.css.map": "/COSYlanguagesproject/static/css/main.f5b21c06.css.map",
+    "main.56d77deb.js.map": "/COSYlanguagesproject/static/js/main.56d77deb.js.map",
     "sw.d72eb008.js.map": "/COSYlanguagesproject/static/js/sw.d72eb008.js.map",
     "study.d156551b.css.map": "/COSYlanguagesproject/static/css/study.d156551b.css.map",
-    "study.285aa4a4.js.map": "/COSYlanguagesproject/static/js/study.285aa4a4.js.map",
+    "study.ab37764e.js.map": "/COSYlanguagesproject/static/js/study.ab37764e.js.map",
     "freestyle.3e1319a7.css.map": "/COSYlanguagesproject/static/css/freestyle.3e1319a7.css.map",
     "freestyle.08d58a0a.js.map": "/COSYlanguagesproject/static/js/freestyle.08d58a0a.js.map",
     "study-ka.950e1d5b.js.map": "/COSYlanguagesproject/static/js/study-ka.950e1d5b.js.map",
@@ -52,7 +52,7 @@
     "105.b003a77c.chunk.js.map": "/COSYlanguagesproject/static/js/105.b003a77c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d59875fd.css",
-    "static/js/main.c016dabc.js"
+    "static/css/main.f5b21c06.css",
+    "static/js/main.56d77deb.js"
   ]
 }
