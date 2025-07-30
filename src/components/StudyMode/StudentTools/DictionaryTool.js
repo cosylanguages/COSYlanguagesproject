@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils';
 import { getStudySets, addCardToSet } from '../../../utils/studySetService';
 import { loadAllLevelsForLanguageAsFlatList } from '../../../utils/vocabularyService';
 import SearchableCardList from '../../Common/SearchableCardList';
-import FlashcardPlayer from './FlashcardPlayer';
+import FlashcardPlayer from '../FlashcardPlayer';
+import Modal from '../../Common/Modal';
+import toast from 'react-hot-toast';
 import './DictionaryTool.css';
 
 const DictionaryTool = ({ isOpen, onClose }) => {
-    const { t, currentLangKey } = useI18n();
-    const { lang } = useParams();
+    const { t, language, currentLangKey } = useI18n();
     const [allVocabulary, setAllVocabulary] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -18,10 +18,10 @@ const DictionaryTool = ({ isOpen, onClose }) => {
 
     useEffect(() => {
         const loadVocabulary = async () => {
-            if (!lang || !isOpen) return;
+            if (!language || !isOpen) return;
             setIsLoading(true);
             try {
-                const vocabularyData = await loadAllLevelsForLanguageAsFlatList(lang);
+                const vocabularyData = await loadAllLevelsForLanguageAsFlatList(language);
                 setAllVocabulary(vocabularyData || []);
             } catch (err) {
                 setError(err.message || 'Failed to load vocabulary data.');
@@ -30,12 +30,11 @@ const DictionaryTool = ({ isOpen, onClose }) => {
             }
         };
         loadVocabulary();
-    }, [lang, isOpen]);
+    }, [language, isOpen]);
 
     const handleAddWordToFlashcards = (word) => {
         const studySets = getStudySets();
         if (studySets.length === 0) {
-            // If there are no study sets, create a default one
             const newSet = {
                 id: `set_${Date.now()}`,
                 name: "My Study Set",
@@ -50,6 +49,7 @@ const DictionaryTool = ({ isOpen, onClose }) => {
             notes: word.example
         };
         addCardToSet(firstSetId, cardData);
+        toast.success(`'${word.term}' added to flashcards!`);
     };
 
     const searchFunction = (item, searchTerm) => {
@@ -80,10 +80,6 @@ const DictionaryTool = ({ isOpen, onClose }) => {
         </div>
     );
 
-    if (!isOpen) {
-        return null;
-    }
-
     if (isLoading) return <p>{t('dictionary.loading', 'Loading dictionary...')}</p>;
     if (error) return <p className="error-message">{t('dictionary.loadError', 'Error loading dictionary: ')}{error}</p>;
 
@@ -91,35 +87,28 @@ const DictionaryTool = ({ isOpen, onClose }) => {
         const studySets = getStudySets();
         const studySet = studySets.length > 0 ? studySets[0] : { items: [] };
         return (
-            <div className="tool-panel-modal">
-                <div className="tool-panel-modal-content">
-                    <button onClick={() => setShowFlashcardPlayer(false)} className="close-button">&times;</button>
-                    <FlashcardPlayer
-                        studySetId={studySet.id}
-                        initialSetData={studySet}
-                        onExitPlayer={() => setShowFlashcardPlayer(false)}
-                        source="student"
-                    />
-                </div>
-            </div>
+            <Modal isOpen={showFlashcardPlayer} onClose={() => setShowFlashcardPlayer(false)} title={t('dictionary.study_flashcards', 'Study Flashcards')}>
+                <FlashcardPlayer
+                    studySetId={studySet.id}
+                    initialSetData={studySet}
+                    onExitPlayer={() => setShowFlashcardPlayer(false)}
+                    source="student"
+                />
+            </Modal>
         );
     }
 
     return (
-        <div className="tool-panel-modal">
-            <div className="tool-panel-modal-content">
-                <button onClick={onClose} className="close-button">&times;</button>
-                <h3>{t('dictionary.title', 'Vocabulary Dictionary')}</h3>
-                <button onClick={() => setShowFlashcardPlayer(true)} className="btn btn-primary">
-                    {t('dictionary.study_flashcards', 'Study Flashcards')}
-                </button>
-                <SearchableCardList
-                    items={allVocabulary}
-                    searchFunction={searchFunction}
-                    renderCard={renderVocabularyCard}
-                />
-            </div>
-        </div>
+        <Modal isOpen={isOpen} onClose={onClose} title={t('dictionary.title', 'Vocabulary Dictionary')}>
+            <button onClick={() => setShowFlashcardPlayer(true)} className="btn btn-primary">
+                {t('dictionary.study_flashcards', 'Study Flashcards')}
+            </button>
+            <SearchableCardList
+                items={allVocabulary}
+                searchFunction={searchFunction}
+                renderCard={renderVocabularyCard}
+            />
+        </Modal>
     );
 };
 
