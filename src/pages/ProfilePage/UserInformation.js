@@ -1,29 +1,28 @@
 // src/pages/ProfilePage/UserInformation.js
-import React, { useState } from 'react';
-import { useAuth } from '../../contexts/AuthContext';
-import { updateUserProfile } from '../../api/api';
+import React, { useState, useEffect } from 'react';
+import { useI18n } from '../../i18n/I18nContext';
 import Button from '../../components/Common/Button';
 import './UserInformation.css';
 
-const UserInformation = ({ isEditMode, onSave }) => {
-  const { currentUser, authToken } = useAuth();
-  const [username, setUsername] = useState(currentUser?.username || '');
-  const [email, setEmail] = useState(currentUser?.email || '');
+const UserInformation = ({ user, isEditMode, onSave }) => {
+  const { t } = useI18n();
+  const [username, setUsername] = useState(user?.username || '');
+  const [email, setEmail] = useState(user?.email || '');
 
-  const handleSave = async () => {
-    try {
-      await updateUserProfile(authToken, currentUser.id, { username, email });
-      onSave({ username, email });
-    } catch (error) {
-      console.error('Failed to update profile:', error);
-    }
+  useEffect(() => {
+    setUsername(user?.username || '');
+    setEmail(user?.email || '');
+  }, [user]);
+
+  const handleSaveClick = () => {
+    onSave({ username, email });
   };
 
   return (
     <div className="user-information">
-      <h3>User Information</h3>
+      <h3>{t('profile.userInfo.title', 'User Information')}</h3>
       <div className="user-info-row">
-        <span className="user-info-label">Username:</span>
+        <span className="user-info-label">{t('profile.userInfo.usernameLabel', 'Username:')}</span>
         {isEditMode ? (
           <input
             type="text"
@@ -31,11 +30,11 @@ const UserInformation = ({ isEditMode, onSave }) => {
             onChange={(e) => setUsername(e.target.value)}
           />
         ) : (
-          <span className="user-info-value">{username}</span>
+          <span className="user-info-value">{user?.username}</span>
         )}
       </div>
       <div className="user-info-row">
-        <span className="user-info-label">Email:</span>
+        <span className="user-info-label">{t('profile.userInfo.emailLabel', 'Email:')}</span>
         {isEditMode ? (
           <input
             type="email"
@@ -43,13 +42,13 @@ const UserInformation = ({ isEditMode, onSave }) => {
             onChange={(e) => setEmail(e.target.value)}
           />
         ) : (
-          <span className="user-info-value">{email}</span>
+          <span className="user-info-value">{user?.email}</span>
         )}
       </div>
       {isEditMode && (
         <div className="user-info-actions">
-          <Button onClick={handleSave} variant="contained" color="primary">
-            Save Changes
+          <Button onClick={handleSaveClick} variant="contained" color="primary">
+            {t('profile.userInfo.saveButton', 'Save Changes')}
           </Button>
         </div>
       )}
