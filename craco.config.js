@@ -108,4 +108,9 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
   },
+  jest: {
+    configure: {
+      setupFilesAfterEnv: ['<rootDir>/src/setupTests.js']
+    }
+  }
 };
