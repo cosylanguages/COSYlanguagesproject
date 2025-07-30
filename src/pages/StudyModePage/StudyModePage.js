@@ -194,10 +194,7 @@ const StudyModePage = () => {
   // Callback to handle section selection.
   const handleSectionSelectSmP = (sectionIdentifier) => {
     setSelectedSectionId(sectionIdentifier);
-    const mainContentPanel = document.getElementById('main-content-panel');
-    if (mainContentPanel) {
-      mainContentPanel.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    // Scrolling is now handled by the child components (StudentPage/TeacherPage)
   };
 
   // Renders the day selector based on the selected role.
@@ -273,7 +270,7 @@ const StudyModePage = () => {
           currentDisplayLanguage={currentLangKey || language}
         />
         <Button onClick={() => window.location.href = '/freestyle'}>
-          Freestyle 🚀
+          <TransliterableText text={t('studyModePage.freestyleButton', 'Freestyle 🚀')} />
         </Button>
       </div>
 
@@ -288,8 +285,8 @@ const StudyModePage = () => {
       {/* Welcome message */}
       {!selectedRole && (
         <div className="welcome-message">
-          <h2>Welcome to Study Mode!</h2>
-          <p>Please select your role to begin.</p>
+          <h2><TransliterableText text={t('studyModePage.welcomeHeading', 'Welcome to Study Mode!')} /></h2>
+          <p><TransliterableText text={t('studyModePage.welcomeMessage', 'Please select your role to begin.')} /></p>
         </div>
       )}
 

@@ -8,6 +8,8 @@ import {
     updateLessonSection,
     deleteLessonSection
 } from '../../api/api';
+import Modal from '../Common/Modal';
+import Button from '../Common/Button';
 import './LessonSectionManager.css';
 
 /**
@@ -27,6 +29,10 @@ const LessonSectionManager = ({ dayId, onSectionSelect, selectedSectionId }) => 
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [newSectionTitle, setNewSectionTitle] = useState('');
+    const [editingSectionId, setEditingSectionId] = useState(null);
+    const [editingTitle, setEditingTitle] = useState('');
+    const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
+    const [sectionToDelete, setSectionToDelete] = useState(null);
 
     /**
      * Loads the list of lesson sections for the current day from the API.
@@ -91,60 +97,75 @@ const LessonSectionManager = ({ dayId, onSectionSelect, selectedSectionId }) => 
      * @param {string} sectionId - The ID of the section to rename.
      * @param {object} currentTitleObj - The current title object of the section.
      */
-    const handleRenameSection = async (sectionId, currentTitleObj) => {
-        if (!authToken || !dayId) return;
-        const currentTitleInUILang = currentTitleObj?.[currentUILanguage] || currentTitleObj?.COSYenglish || '';
-        const newTitlePrompt = prompt(t('enterNewTitleForSection', { currentTitle: currentTitleInUILang }) || `Enter new title for section "${currentTitleInUILang}":`, currentTitleInUILang);
+    const handleStartRename = (section) => {
+        setEditingSectionId(section.id);
+        setEditingTitle(section.title?.[currentUILanguage] || section.title?.COSYenglish || '');
+    };
 
-        if (newTitlePrompt && newTitlePrompt.trim() !== "") {
-            const updatedTitle = { ...currentTitleObj };
-            updatedTitle[currentUILanguage] = newTitlePrompt.trim();
-            if (currentUILanguage === 'COSYenglish' || !updatedTitle.COSYenglish || updatedTitle.COSYenglish === currentTitleInUILang) {
-                updatedTitle.COSYenglish = newTitlePrompt.trim();
+    const handleCancelRename = () => {
+        setEditingSectionId(null);
+        setEditingTitle('');
+    };
+
+    const handleSaveRename = async (sectionId, currentTitleObj) => {
+        if (!authToken || !dayId || !editingTitle.trim()) {
+            handleCancelRename();
+            return;
+        }
+
+        const updatedTitle = { ...currentTitleObj };
+        const oldTitle = currentTitleObj?.[currentUILanguage] || currentTitleObj?.COSYenglish || '';
+        updatedTitle[currentUILanguage] = editingTitle.trim();
+
+        Object.keys(allTranslations || {}).forEach(langKey => {
+            if (!updatedTitle[langKey] || updatedTitle[langKey] === oldTitle) {
+                 updatedTitle[langKey] = editingTitle.trim();
             }
-            Object.keys(allTranslations || {}).forEach(langKey => {
-                if (!updatedTitle[langKey] || updatedTitle[langKey] === currentTitleInUILang) {
-                     updatedTitle[langKey] = newTitlePrompt.trim();
-                }
-            });
+        });
+        if (currentUILanguage === 'COSYenglish' || !updatedTitle.COSYenglish || updatedTitle.COSYenglish === oldTitle) {
+            updatedTitle.COSYenglish = editingTitle.trim();
+        }
 
-            // Keep the existing exercise blocks.
-            const sectionToUpdate = sections.find(sec => sec.id === sectionId);
-            const exerciseBlocks = sectionToUpdate ? sectionToUpdate.exerciseBlocks : [];
+        const sectionToUpdate = sections.find(sec => sec.id === sectionId);
+        const exerciseBlocks = sectionToUpdate ? sectionToUpdate.exerciseBlocks : [];
 
-            setIsLoading(true);
-            try {
-                await updateLessonSection(authToken, sectionId, { title: updatedTitle, exerciseBlocks });
-                loadLessonSections();
-            } catch (err) {
-                setError(err.message || t('errorRenamingSection') || 'Failed to rename section.');
-            } finally {
-                setIsLoading(false);
-            }
+        setIsLoading(true);
+        try {
+            await updateLessonSection(authToken, sectionId, { title: updatedTitle, exerciseBlocks });
+            loadLessonSections();
+        } catch (err) {
+            setError(err.message || t('errorRenamingSection') || 'Failed to rename section.');
+        } finally {
+            setIsLoading(false);
+            handleCancelRename();
         }
     };
 
-    /**
-     * Handles the deletion of a lesson section.
-     * @param {string} sectionId - The ID of the section to delete.
-     * @param {object} sectionTitleObj - The title object of the section to delete.
-     */
-    const handleDeleteSection = async (sectionId, sectionTitleObj) => {
-        if (!authToken || !dayId) return;
-        const sectionTitleForConfirm = sectionTitleObj?.[currentUILanguage] || sectionTitleObj?.COSYenglish || `Section ID ${sectionId}`;
-        if (window.confirm(t('confirmDeleteSection', { sectionTitle: sectionTitleForConfirm }) || `Are you sure you want to delete section "${sectionTitleForConfirm}" and all its content?`)) {
-            setIsLoading(true);
-            try {
-                await deleteLessonSection(authToken, sectionId);
-                if (selectedSectionId === sectionId) {
-                    onSectionSelect(null); // Clear the selection if the active section is deleted.
-                }
-                loadLessonSections();
-            } catch (err) {
-                setError(err.message || t('errorDeletingSection') || 'Failed to delete section.');
-            } finally {
-                setIsLoading(false);
+    const handleOpenDeleteConfirm = (section) => {
+        setSectionToDelete(section);
+        setIsConfirmModalOpen(true);
+    };
+
+    const handleCloseDeleteConfirm = () => {
+        setIsConfirmModalOpen(false);
+        setSectionToDelete(null);
+    };
+
+    const handleConfirmDelete = async () => {
+        if (!authToken || !dayId || !sectionToDelete) return;
+
+        setIsLoading(true);
+        try {
+            await deleteLessonSection(authToken, sectionToDelete.id);
+            if (selectedSectionId === sectionToDelete.id) {
+                onSectionSelect(null);
             }
+            loadLessonSections();
+        } catch (err) {
+            setError(err.message || t('errorDeletingSection') || 'Failed to delete section.');
+        } finally {
+            setIsLoading(false);
+            handleCloseDeleteConfirm();
         }
     };
 
@@ -206,29 +227,65 @@ const LessonSectionManager = ({ dayId, onSectionSelect, selectedSectionId }) => 
                             aria-pressed={selectedSectionId === section.id}
                             aria-label={t('selectSectionAria', { sectionTitle: section.title?.[currentUILanguage] || section.title?.COSYenglish || `Section ID ${section.id}`}) || `Select section: ${section.title?.[currentUILanguage] || section.title?.COSYenglish || `Section ID ${section.id}`}`}
                         >
-                            <span className="section-title">
-                                {section.title?.[currentUILanguage] || section.title?.COSYenglish || section.title || `Section ID: ${section.id}`}
-                            </span>
-                            {/* Action buttons for renaming and deleting a section. */}
-                             <div className="section-actions">
-                                <button
-                                    className="btn-small btn-rename"
-                                    onClick={(e) => { e.stopPropagation(); handleRenameSection(section.id, section.title); }}
-                                    title={t('renameSectionTooltip') || "Rename section"}
-                                    aria-label={t('renameSectionAria', { sectionTitle: section.title?.[currentUILanguage] || section.title?.COSYenglish }) || `Rename ${section.title?.[currentUILanguage] || section.title?.COSYenglish}`}
-                                    disabled={isLoading}
-                                >✏️</button>
-                                <button
-                                    className="btn-small btn-delete"
-                                    onClick={(e) => { e.stopPropagation(); handleDeleteSection(section.id, section.title); }}
-                                    title={t('deleteSectionTooltip') || "Delete section"}
-                                    aria-label={t('deleteSectionAria', { sectionTitle: section.title?.[currentUILanguage] || section.title?.COSYenglish }) || `Delete ${section.title?.[currentUILanguage] || section.title?.COSYenglish}`}
-                                    disabled={isLoading}
-                                >🗑️</button>
-                            </div>
+                            {editingSectionId === section.id ? (
+                                <div className="inline-edit-form" onClick={e => e.stopPropagation()}>
+                                    <input
+                                        type="text"
+                                        value={editingTitle}
+                                        onChange={(e) => setEditingTitle(e.target.value)}
+                                        autoFocus
+                                        onKeyDown={(e) => {
+                                            if (e.key === 'Enter') handleSaveRename(section.id, section.title);
+                                            if (e.key === 'Escape') handleCancelRename();
+                                        }}
+                                    />
+                                    <Button size="small" variant="success" onClick={() => handleSaveRename(section.id, section.title)}>✓</Button>
+                                    <Button size="small" variant="danger" onClick={handleCancelRename}>×</Button>
+                                </div>
+                            ) : (
+                                <>
+                                    <span className="section-title">
+                                        {section.title?.[currentUILanguage] || section.title?.COSYenglish || section.title || `Section ID: ${section.id}`}
+                                    </span>
+                                    <div className="section-actions">
+                                        <Button
+                                            size="small"
+                                            className="btn-rename"
+                                            onClick={(e) => { e.stopPropagation(); handleStartRename(section); }}
+                                            title={t('renameSectionTooltip') || "Rename section"}
+                                            aria-label={t('renameSectionAria', { sectionTitle: section.title?.[currentUILanguage] || section.title?.COSYenglish }) || `Rename ${section.title?.[currentUILanguage] || section.title?.COSYenglish}`}
+                                            disabled={isLoading}
+                                        >✏️</Button>
+                                        <Button
+                                            size="small"
+                                            className="btn-delete"
+                                            onClick={(e) => { e.stopPropagation(); handleOpenDeleteConfirm(section); }}
+                                            title={t('deleteSectionTooltip') || "Delete section"}
+                                            aria-label={t('deleteSectionAria', { sectionTitle: section.title?.[currentUILanguage] || section.title?.COSYenglish }) || `Delete ${section.title?.[currentUILanguage] || section.title?.COSYenglish}`}
+                                            disabled={isLoading}
+                                        >🗑️</Button>
+                                    </div>
+                                </>
+                            )}
                         </li>
                     ))}
                 </ul>
+            )}
+            {isConfirmModalOpen && (
+                <Modal isOpen={isConfirmModalOpen} onClose={handleCloseDeleteConfirm}>
+                    <h3>{t('confirmDeleteTitle', 'Confirm Deletion')}</h3>
+                    <p>
+                        {t('confirmDeleteSection', { sectionTitle: sectionToDelete?.title?.[currentUILanguage] || sectionToDelete?.title?.COSYenglish || '' })}
+                    </p>
+                    <div className="modal-actions">
+                        <Button onClick={handleCloseDeleteConfirm} variant="secondary">
+                            {t('cancelBtn', 'Cancel')}
+                        </Button>
+                        <Button onClick={handleConfirmDelete} variant="danger" disabled={isLoading}>
+                            {isLoading ? t('deletingBtn', 'Deleting...') : t('deleteBtn', 'Delete')}
+                        </Button>
+                    </div>
+                </Modal>
             )}
         </div>
     );
