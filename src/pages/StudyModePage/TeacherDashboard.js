@@ -17,6 +17,7 @@ import DayManager from '../../components/StudyMode/DayManager';
 import LessonSectionManager from '../../components/StudyMode/LessonSectionManager';
 import { getLessonSectionDetails, updateLessonSection } from '../../api/api';
 import { useAuth } from '../../contexts/AuthContext';
+import LessonEditor from '../../components/StudyMode/LessonEditor';
 
 // Import the CSS for this component.
 import './TeacherDashboard.css'; 
@@ -37,24 +38,24 @@ const TeacherDashboard = () => {
   // State for managing lesson blocks, modals, tabs, and other UI elements.
   const { currentLangKey, allTranslations } = i18n || { currentLangKey: null, allTranslations: {} };
   const logos = {
-    COSYarmenian: '/assets/icons/cosylanguages_logos/cosyarmenian.png',
-    COSYbashkir: '/assets/icons/cosylanguages_logos/cosybachkir.png',
-    COSYbreton: '/assets/icons/cosylanguages_logos/cosybreton.png',
-    COSYenglish: '/assets/icons/cosylanguages_logos/cosyenglish.png',
-    COSYfrench: '/assets/icons/cosylanguages_logos/cosyfrench.png',
-    COSYgeorgian: '/assets/icons/cosylanguages_logos/cosygeorgian.png',
-    COSYgerman: '/assets/icons/cosylanguages_logos/cosygerman.png',
-    COSYgreek: '/assets/icons/cosylanguages_logos/cosygreek.png',
-    COSYitalian: '/assets/icons/cosylanguages_logos/cosyitalian.png',
-    COSYportuguese: '/assets/icons/cosylanguages_logos/cosyportuguese.png',
-    COSYrussian: '/assets/icons/cosylanguages_logos/cosyrussian.png',
-    COSYspanish: '/assets/icons/cosylanguages_logos/cosyspanish.png',
-    COSYtatar: '/assets/icons/cosylanguages_logos/cosytatar.png',
+    COSYarmenian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyarmenian.png`,
+    COSYbashkir: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosybachkir.png`,
+    COSYbreton: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosybreton.png`,
+    COSYenglish: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyenglish.png`,
+    COSYfrench: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyfrench.png`,
+    COSYgeorgian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygeorgian.png`,
+    COSYgerman: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygerman.png`,
+    COSYgreek: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygreek.png`,
+    COSYitalian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyitalian.png`,
+    COSYportuguese: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyportuguese.png`,
+    COSYrussian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyrussian.png`,
+    COSYspanish: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyspanish.png`,
+    COSYtatar: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosytatar.png`,
   };
   const flags = {
-    COSYbashkir: '/assets/flags/Flag_of_Bashkortostan.png',
-    COSYbreton: '/assets/flags/Flag_of_Brittany.png',
-    COSYtatar: '/assets/flags/Flag_of_Tatarstan.png',
+    COSYbashkir: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Bashkortostan.png`,
+    COSYbreton: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Brittany.png`,
+    COSYtatar: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Tatarstan.png`,
   };
   const [lessonBlocks, setLessonBlocks] = useState([]);
   const [isTemplateModalOpen, setIsTemplateModalOpen] = useState(false);
@@ -402,58 +403,16 @@ const TeacherDashboard = () => {
         
         {/* The lesson editor tab. */}
         {activeTab === 'lessons' && (
-          <>
-            <div className="dashboard-main-actions">
-                <button
-                  onClick={() => handleLoadLesson()}
-                  className="btn btn-info load-lesson-btn"
-                  title={t('loadFromLocalStorageTitle') || "Load from Local Storage (Legacy)"}
-                >
-                    <TransliterableText text={t('loadLessonBtn', 'Load Lesson')} />
-                </button>
-                <button
-                  onClick={handleSaveLesson}
-                  className="btn btn-success save-lesson-btn"
-                  disabled={!selectedSectionId}
-                  title={selectedSectionId ? (t('saveToCurrentSectionAPITitle') || "Save to Current Section (API)") : (t('saveToLocalStorageTitle') || "Save to Local Storage (Legacy)")}
-                >
-                    <TransliterableText text={t('saveLessonBtn', 'Save Lesson')} />
-                </button>
-                <button
-                  onClick={openTemplateModal}
-                  className="btn btn-primary add-block-btn"
-                  disabled={!selectedSectionId}
-                  title={selectedSectionId ? (t('addContentBlockBtn') || '+ Add Content Block') : (t('selectSectionToAddBlockTitle') || "Select a section to add blocks")}
-                >
-                  <TransliterableText text={t('addContentBlockBtn') || '+ Add Content Block'} />
-                </button>
-            </div>
-            <div className="dashboard-utility-actions">
-              <button onClick={handleClearSavedLesson} className="btn btn-sm btn-warning clear-saved-lesson-btn">
-                  <TransliterableText text={t('clearSavedLessonBtn', 'Clear Saved Lesson (localStorage)')} />
-              </button>
-            </div>
-
-            {/* Display a message if no section is selected. */}
-            {!selectedSectionId && (
-                <p className="no-blocks-message">
-                    <TransliterableText text={t('teacherDashboard.selectDayAndSectionMessage', 'Please select a Day and a Lesson Section to view or edit content.')} />
-                </p>
-            )}
-
-            {/* Display a message if the section is empty. */}
-            {selectedSectionId && lessonBlocks.length === 0 && !feedbackMessage && (
-              <p className="no-blocks-message">
-                <TransliterableText text={t('teacherDashboard.noBlocksInSectionMessage', 'This section is empty. Click "Add Content Block" to start building!')} />
-              </p>
-            )}
-            {/* Display the list of lesson blocks. */}
-            {selectedSectionId && lessonBlocks.length > 0 && (
-                <div className="lesson-blocks-list">
-                  {lessonBlocks.map((block, index) => renderBlockItem(block, index, lessonBlocks.length))}
-                </div>
-            )}
-          </>
+          <LessonEditor
+            lessonBlocks={lessonBlocks}
+            selectedSectionId={selectedSectionId}
+            feedbackMessage={feedbackMessage}
+            handleLoadLesson={handleLoadLesson}
+            handleSaveLesson={handleSaveLesson}
+            openTemplateModal={openTemplateModal}
+            handleClearSavedLesson={handleClearSavedLesson}
+            renderBlockItem={renderBlockItem}
+          />
         )}
 
         {/* The templates tab. */}

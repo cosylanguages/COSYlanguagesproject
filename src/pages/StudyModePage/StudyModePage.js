@@ -7,28 +7,16 @@ import { fetchDays as fetchTeacherDays } from '../../api/api';
 import { fetchLessonSections as fetchTeacherLessonSections, getLessonSectionDetails as getTeacherLessonSectionDetails } from '../../api/api';
 import { getAvailableSyllabusDays, fetchSyllabusByFileName } from '../../utils/syllabusService';
 import RoleSelector from './RoleSelector';
-import StudentDashboard from './StudentDashboard';
-import TeacherDashboard from './TeacherDashboard';
-import StudyProgressDashboard from '../../components/StudyMode/StudyProgressDashboard';
-import LessonSectionsPanel from '../../components/StudyMode/LessonSectionsPanel';
-import ToolsPanel from '../../components/StudyMode/ToolsPanel';
+import StudentPage from './StudentPage';
+import TeacherPage from './TeacherPage';
 import TransliterableText from '../../components/Common/TransliterableText';
 import ToggleLatinizationButton from '../../components/Common/ToggleLatinizationButton';
 import Button from '../../components/Common/Button';
 import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
 import LanguageHeader from '../../components/Common/LanguageHeader';
-import PinEntry from '../../components/StudyMode/PinEntry';
 
 // Import the CSS for this page.
 import './StudyModePage.css';
-
-/**
- * Generates a unique ID for a lesson block element.
- * @param {string} blockId - The ID of the block.
- * @param {number} index - The index of the block.
- * @returns {string} The unique element ID.
- */
-export const getBlockElementId = (blockId, index) => `lesson-block-content-${blockId || `gen-${index}`}`;
 
 /**
  * The main page for the "Study Mode".
@@ -50,19 +38,13 @@ const StudyModePage = () => {
     setSelectedSectionId,
   } = useStudy();
 
-  // State for PIN verification, days, syllabus, lesson sections, exercise blocks, loading status, and errors.
-  const [pinVerified, setPinVerified] = useState(false);
+  // State for days, syllabus, lesson sections, exercise blocks, loading status, and errors.
   const [days, setDays] = React.useState([]);
   const [currentSyllabus, setCurrentSyllabus] = React.useState(null);
   const [lessonSectionsForPanel, setLessonSectionsForPanel] = React.useState([]);
   const [currentExerciseBlocks, setCurrentExerciseBlocks] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
   const [error, setError] = React.useState(null);
-
-  // Callback to handle PIN verification.
-  const handlePinVerified = () => {
-    setPinVerified(true);
-  };
 
   // Memoized callback to fetch available syllabus days for students.
   const memoizedGetAvailableSyllabusDays = useCallback(() => {
@@ -253,7 +235,7 @@ const StudyModePage = () => {
             >
               <option value="">{t('studyModePage.selectDayOption', '-- Select a Day --')}</option>
               {days.map(day => (
-                <option key={day.dayNumber} value={String(day.dayNumber)}>
+                <option key={day.dayNumber} value={String(day.dayNumber)} className={selectedDayId === String(day.dayNumber) ? 'selected' : ''}>
                   {`Day ${day.dayNumber}: ${day.lessonName}`}
                 </option>
               ))}
@@ -276,7 +258,7 @@ const StudyModePage = () => {
             >
               <option value="">{t('studyModePage.selectDayOption', '-- Select a Day --')}</option>
               {days.map(day => (
-                <option key={day.id} value={day.id}>
+                <option key={day.id} value={day.id} className={selectedDayId === day.id ? 'selected' : ''}>
                   {day.title?.[currentLangKey] || day.title?.COSYenglish || `Day ID: ${day.id}`}
                 </option>
               ))}
@@ -289,11 +271,6 @@ const StudyModePage = () => {
     }
     return null;
   };
-
-  // If the PIN has not been verified, show the PIN entry component.
-  if (!pinVerified) {
-    return <PinEntry onPinVerified={handlePinVerified} />;
-  }
 
   // Render the main study mode page.
   return (
@@ -323,8 +300,16 @@ const StudyModePage = () => {
         <label htmlFor="role-selector-buttons" id="study-choose-role-label">
           <TransliterableText text={t('studyMode.chooseRoleLabel', '👤 Choose Your Role:')} />
         </label>
-        <RoleSelector onSelectRole={handleRoleSelect} currentRole={selectedRole} />
+        <RoleSelector />
       </div>
+
+      {/* Welcome message */}
+      {!selectedRole && (
+        <div className="welcome-message">
+          <h2>Welcome to Study Mode!</h2>
+          <p>Please select your role to begin.</p>
+        </div>
+      )}
 
       {/* Day selector. */}
       {renderStudentDaySelector()}
@@ -341,62 +326,22 @@ const StudyModePage = () => {
           <p id="study-welcome-message">
             <TransliterableText text={t('studyMode.welcomeMessage', 'Please select your role to begin.')} />
           </p>
+        ) : selectedRole === 'student' ? (
+          <StudentPage
+            lessonSectionsForPanel={lessonSectionsForPanel}
+            handleSectionSelectSmP={handleSectionSelectSmP}
+            currentLangKey={currentLangKey}
+            selectedSectionId={selectedSectionId}
+            currentExerciseBlocks={currentExerciseBlocks}
+          />
         ) : (
-          <div className="dashboard-layout">
-            {/* Left panel for lesson sections. */}
-            <div className="layout-left-panel">
-              {selectedDayId && lessonSectionsForPanel.length > 0 ? (
-                <LessonSectionsPanel
-                  sectionsFromSyllabus={selectedRole === 'student' ? lessonSectionsForPanel : null}
-                  apiLessonSections={selectedRole === 'teacher' ? lessonSectionsForPanel : null}
-                  onSectionSelect={handleSectionSelectSmP}
-                  currentLangKey={currentLangKey}
-                  selectedSectionId={selectedSectionId}
-                  isStudentMode={selectedRole === 'student'}
-                />
-              ) : selectedDayId && !isLoading && !error ? (
-                <p>
-                  {selectedRole === 'student'
-                    ? t('studyModePage.noSectionsInSyllabus', 'No sections found in the syllabus for this day.')
-                    : t('studyModePage.noSectionsForTeacherDay', 'No sections configured for this day yet.')
-                  }
-                </p>
-              ) : (
-                selectedRole && !isLoading && days && days.length > 0 && !error && (
-                  <p>
-                    {selectedRole === 'student'
-                      ? t('studyModePage.pleaseSelectDay', 'Please select a day to see lesson sections.')
-                      : t('studyModePage.teacherPleaseSelectDay', 'Please select a day to manage its sections.')
-                    }
-                  </p>
-                )
-              )}
-              {!isLoading && (!days || days.length === 0) && selectedRole && !error && !selectedDayId && (
-                <p>
-                </p>
-              )}
-            </div>
-            {/* Center panel for the main dashboard (student or teacher). */}
-            <div className="layout-center-panel" id="main-content-panel">
-              {selectedRole === 'student' &&
-                <>
-                  <StudyProgressDashboard progress={{ Vocabulary: 75, Grammar: 60, Listening: 85, Speaking: 50 }} />
-                  <StudentDashboard
-                    lessonBlocks={currentExerciseBlocks}
-                  />
-                </>}
-              {selectedRole === 'teacher' &&
-                <TeacherDashboard
-                  selectedDayId={selectedDayId}
-                  key={selectedDayId}
-                />
-              }
-            </div>
-            {/* Right panel for tools. */}
-            <div className="layout-right-panel">
-              <ToolsPanel />
-            </div>
-          </div>
+          <TeacherPage
+            selectedDayId={selectedDayId}
+            lessonSectionsForPanel={lessonSectionsForPanel}
+            handleSectionSelectSmP={handleSectionSelectSmP}
+            currentLangKey={currentLangKey}
+            selectedSectionId={selectedSectionId}
+          />
         )}
       </div>
     </div>

@@ -18,39 +18,32 @@ import { useAuth } from '../../contexts/AuthContext';
  * @returns {JSX.Element} The LessonSectionsPanel component.
  */
 const LessonSectionsPanel = ({
-  selectedDayId,
+  sectionsFromSyllabus,
+  apiLessonSections,
   onSectionSelect,
   selectedSectionId,
   currentLangKey,
   isStudentMode = false,
 }) => {
   const { t } = useI18n();
-  const { authToken } = useAuth();
-  const [sections, setSections] = useState([]);
 
-  // Fetch the lesson sections from the API when in teacher mode.
-  useEffect(() => {
-    if (selectedDayId && !isStudentMode) {
-      fetchLessonSections(authToken, selectedDayId)
-        .then(data => setSections(data || []))
-        .catch(err => console.error("Error fetching lesson sections:", err));
-    }
-  }, [selectedDayId, isStudentMode, authToken]);
+  const sectionsToDisplay = isStudentMode ? sectionsFromSyllabus : apiLessonSections;
 
   /**
    * Gets the title of a section in the appropriate language.
    * @param {object} section - The section object.
    * @returns {string} The title of the section.
    */
-  const getTeacherSectionTitle = (section) => {
+  const getSectionTitle = (section) => {
+    if (isStudentMode) {
+      return section.title;
+    }
     const langKeyToUse = currentLangKey || 'COSYenglish';
     if (section.title) {
       return section.title[langKeyToUse] || section.title.COSYenglish || section.title.default || t('lessonSectionsPanel.untitledSection', 'Untitled Section');
     }
     return t('lessonSectionsPanel.untitledSection', 'Untitled Section');
   };
-
-  const sectionsToDisplay = sections;
 
   // If there are no sections to display, show a message.
   if (!sectionsToDisplay || sectionsToDisplay.length === 0) {
@@ -74,17 +67,18 @@ const LessonSectionsPanel = ({
       </h4>
       <ul className="sections-list">
         {sectionsToDisplay.map((section, index) => {
-          const sectionTitle = getTeacherSectionTitle(section);
+          const sectionTitle = getSectionTitle(section);
+          const sectionId = isStudentMode ? section.title : section.id;
           return (
             <li
-              key={section.id}
-              className={`section-item ${section.id === selectedSectionId ? 'active-section' : ''}`}
+              key={sectionId}
+              className={`section-item ${sectionId === selectedSectionId ? 'active-section' : ''}`}
             >
               <button
-                onClick={() => onSectionSelect(section.id)}
+                onClick={() => onSectionSelect(sectionId)}
                 className="section-link-button"
                 title={sectionTitle}
-                aria-pressed={section.id === selectedSectionId}
+                aria-pressed={sectionId === selectedSectionId}
               >
                 <TransliterableText text={sectionTitle} />
               </button>
