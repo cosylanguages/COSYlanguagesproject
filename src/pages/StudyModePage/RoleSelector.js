@@ -27,6 +27,7 @@ const RoleSelector = () => {
           id="student-role-btn"
           className={getButtonClass('student')}
           onClick={() => setSelectedRole('student')}
+          aria-pressed={selectedRole === 'student'}
         >
           <TransliterableText text={t('studyMode.studentRole', '🧑‍🎓 Student')} />
         </button>
@@ -34,6 +35,7 @@ const RoleSelector = () => {
           id="teacher-role-btn"
           className={getButtonClass('teacher')}
           onClick={() => setSelectedRole('teacher')}
+          aria-pressed={selectedRole === 'teacher'}
         >
           <TransliterableText text={t('studyMode.teacherRole', '🧑‍🏫 Teacher')} />
         </button>
