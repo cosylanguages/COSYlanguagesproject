@@ -1,9 +1,9 @@
 import React from 'react';
-import { act } from 'react';
 import { render } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import { AuthProvider, UserProfileProvider } from './contexts';
-import { I18nProvider } from './i18n';
+import { AuthProvider } from './contexts/AuthContext';
+import { UserProfileProvider } from './contexts/UserProfileContext';
+import { I18nProvider } from './i18n/I18nContext';
 
 const mockI18n = {
   t: (key) => key,
