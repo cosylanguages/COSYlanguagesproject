@@ -9,11 +9,11 @@ jest.mock('../../components/Freestyle/BoosterPacks', () => {
     };
 });
 
-jest.mock('../../components/Freestyle/BoosterPackOfTheWeek', () => {
-    return function DummyBoosterPackOfTheWeek() {
-        return <div data-testid="booster-pack-of-the-week"></div>;
-    };
-});
+jest.mock(
+    '../../components/Freestyle/BoosterPackOfTheWeek',
+    () => () => <div data-testid="booster-pack-of-the-week" />,
+    { virtual: true }
+);
 
 describe('FreestyleModePage', () => {
     it('renders the BoosterPacks and BoosterPackOfTheWeek components', () => {
