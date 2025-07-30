@@ -121,3 +121,9 @@
   font-style: normal; /* Remove italic if not desired */
   font-weight: 500;
 }
+
+@media (max-width: 600px) {
+  .cosy-dashboard {
+    grid-template-columns: 1fr;
+  }
+}

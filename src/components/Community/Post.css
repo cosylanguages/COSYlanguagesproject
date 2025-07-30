@@ -66,3 +66,18 @@
   background-color: #f5f8fa;
   color: #1da1f2;
 }
+
+@media (max-width: 600px) {
+  .post {
+    padding: 15px;
+  }
+
+  .post-text {
+    font-size: 14px;
+  }
+
+  .post-action-button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
