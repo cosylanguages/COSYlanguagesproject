@@ -77,7 +77,7 @@ const DaySelectorFreestyle = ({ language }) => {
           >
             <option value="">{t('daySelector.selectDay', 'Select Day')}</option>
             {daysOptions.map((day) => (
-              <option key={day} value={day} className={selectedDays.includes(day) ? 'selected' : ''}>
+              <option key={day} value={day}>
                 {day}
               </option>
             ))}
@@ -98,7 +98,7 @@ const DaySelectorFreestyle = ({ language }) => {
             <select id="freestyle-day-from" value={internalDayFrom} onChange={(e) => setInternalDayFrom(e.target.value)} className="day-select-dropdown">
               <option value="">{t('daySelector.selectStartDay', 'Start')}</option>
               {daysOptions.map((day) => (
-                <option key={`from-${day}`} value={day} className={selectedDays.includes(day) ? 'selected' : ''}>{day}</option>
+                <option key={`from-${day}`} value={day}>{day}</option>
               ))}
             </select>
           </div>
@@ -107,7 +107,7 @@ const DaySelectorFreestyle = ({ language }) => {
             <select id="freestyle-day-to" value={internalDayTo} onChange={(e) => setInternalDayTo(e.target.value)} className="day-select-dropdown">
               <option value="">{t('daySelector.selectEndDay', 'End')}</option>
               {daysOptions.map((day) => (
-                <option key={`to-${day}`} value={day} className={selectedDays.includes(day) ? 'selected' : ''}>{day}</option>
+                <option key={`to-${day}`} value={day}>{day}</option>
               ))}
             </select>
           </div>

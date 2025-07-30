@@ -1,9 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { useI18n } from '../../i18n/I18nContext';
+import toast from 'react-hot-toast';
 
 const Whiteboard = () => {
     const canvasRef = useRef(null);
     const [isDrawing, setIsDrawing] = useState(false);
     const [tool, setTool] = useState('pen');
+    const { t } = useI18n();
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -11,6 +14,15 @@ const Whiteboard = () => {
         context.lineCap = 'round';
         context.strokeStyle = 'black';
         context.lineWidth = 5;
+
+        const savedDrawing = localStorage.getItem('whiteboard');
+        if (savedDrawing) {
+            const img = new Image();
+            img.onload = () => {
+                context.drawImage(img, 0, 0);
+            };
+            img.src = savedDrawing;
+        }
     }, []);
 
     const startDrawing = ({ nativeEvent }) => {
@@ -44,11 +56,27 @@ const Whiteboard = () => {
         context.stroke();
     };
 
+    const handleSaveDrawing = () => {
+        const canvas = canvasRef.current;
+        const dataUrl = canvas.toDataURL();
+        localStorage.setItem('whiteboard', dataUrl);
+        toast.success(t('studyMode.whiteboardSaved', 'Whiteboard saved!'));
+    };
+
+    const handleClearDrawing = () => {
+        const canvas = canvasRef.current;
+        const context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        localStorage.removeItem('whiteboard');
+    };
+
     return (
         <div className="whiteboard-container">
             <div className="whiteboard-tools">
-                <button onClick={() => setTool('pen')}>Pen</button>
-                <button onClick={() => setTool('eraser')}>Eraser</button>
+                <button onClick={() => setTool('pen')}>{t('studyMode.pen', 'Pen')}</button>
+                <button onClick={() => setTool('eraser')}>{t('studyMode.eraser', 'Eraser')}</button>
+                <button onClick={handleSaveDrawing}>{t('studyMode.saveDrawing', 'Save')}</button>
+                <button onClick={handleClearDrawing}>{t('studyMode.clearDrawing', 'Clear')}</button>
             </div>
             <canvas
                 ref={canvasRef}

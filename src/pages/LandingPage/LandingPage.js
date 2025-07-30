@@ -1,6 +1,7 @@
 // Import necessary libraries and components.
-import React, { useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { useI18n } from '../../i18n/I18nContext';
 // Import the CSS for this component.
 import './LandingPage.css';
 import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
@@ -12,25 +13,23 @@ import LanguageSelector from '../../components/LanguageSelector/LanguageSelector
  * @returns {JSX.Element} The LandingPage component.
  */
 function LandingPage() {
-  // Ref pour la zone d'accueil (pour positionner les confettis)
-  const landingContentRef = useRef(null);
-
+  const { t } = useI18n();
 
   return (
     <div className="landing-container">
-      <div className="landing-content" ref={landingContentRef}>
-        <img src={`${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosylanguages.png`} alt="Cosy Languages Logo" className="logo animated-logo" />
+      <div className="landing-content">
+        <img src={`${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosylanguages.png`} alt={t('landingPage.logoAlt', 'Cosy Languages Logo')} className="logo animated-logo" />
 
-        {/* Section Langues disponibles */}
+        {/* Available Languages Section */}
         <div className="languages-section">
           <LanguageSelector />
         </div>
 
-        {/* Boutons principaux */}
+        {/* Main Buttons */}
         <div className="landing-buttons">
-          <Link to="/freestyle" className="landing-button">Freestyle</Link>
-          <Link to="/study" className="landing-button">Study Mode</Link>
-          <Link to="/community" className="landing-button">Community</Link>
+          <Link to="/freestyle" className="landing-button">{t('landingPage.freestyleButton', 'Freestyle')}</Link>
+          <Link to="/study" className="landing-button">{t('landingPage.studyModeButton', 'Study Mode')}</Link>
+          <Link to="/community" className="landing-button">{t('landingPage.communityButton', 'Community')}</Link>
         </div>
       </div>
     </div>

@@ -1,12 +1,13 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import useVerbs from '../../../hooks/useVerbs';
 import SearchableCardList from '../../Common/SearchableCardList';
 import IrregularVerbCard from './IrregularVerbCard';
+import Modal from '../../Common/Modal';
+import { useI18n } from '../../../i18n/I18nContext';
 
 const IrregularVerbsTool = ({ isOpen, onClose }) => {
-    const { lang } = useParams();
-    const { verbs, loading, error } = useVerbs('all', lang);
+    const { t, language } = useI18n();
+    const { verbs, loading, error } = useVerbs('all', language);
 
     const searchFunction = (verb, searchTerm) => {
         const lowerSearchTerm = searchTerm.toLowerCase();
@@ -18,25 +19,17 @@ const IrregularVerbsTool = ({ isOpen, onClose }) => {
         <IrregularVerbCard verb={verb} />
     );
 
-    if (!isOpen) {
-        return null;
-    }
-
     if (loading) return <p>Loading verbs...</p>;
     if (error) return <p>Error loading verbs: {error.message}</p>;
 
     return (
-        <div className="tool-panel-modal">
-            <div className="tool-panel-modal-content">
-                <button onClick={onClose} className="close-button">&times;</button>
-                <h3>Irregular Verbs</h3>
-                <SearchableCardList
-                    items={verbs}
-                    searchFunction={searchFunction}
-                    renderCard={renderVerbCard}
-                />
-            </div>
-        </div>
+        <Modal isOpen={isOpen} onClose={onClose} title={t('studyMode.toolIrregularVerbs', 'Irregular Verbs')}>
+            <SearchableCardList
+                items={verbs}
+                searchFunction={searchFunction}
+                renderCard={renderVerbCard}
+            />
+        </Modal>
     );
 };
 

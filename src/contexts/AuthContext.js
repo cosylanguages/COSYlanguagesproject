@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
-import { login as apiLogin, logout as apiLogout, signup as apiSignup } from '../api/api';
+import { login as apiLogin, logout as apiLogout, signup as apiSignup, getUserProfile } from '../api/api';
 
 export const AuthContext = createContext();
 
@@ -44,7 +44,8 @@ export function AuthProvider({ children }) {
         try {
             const data = await apiLogin(username, password);
             setAuthToken(data.token);
-            setCurrentUser({ id: data.userId, username: data.username });
+            const userProfile = await getUserProfile(data.token, data.userId);
+            setCurrentUser(userProfile);
             return true;
         } catch (err) {
             console.error("Error during login:", err);
@@ -81,7 +82,8 @@ export function AuthProvider({ children }) {
         try {
             const data = await apiSignup(username, password);
             setAuthToken(data.token);
-            setCurrentUser({ id: data.userId, username: data.username });
+            const userProfile = await getUserProfile(data.token, data.userId);
+            setCurrentUser(userProfile);
             return true;
         } catch (err) {
             console.error("Error during signup:", err);
@@ -94,6 +96,10 @@ export function AuthProvider({ children }) {
         }
     }, []);
 
+    const refreshCurrentUser = useCallback((newUserData) => {
+        setCurrentUser(prevUser => ({ ...prevUser, ...newUserData }));
+    }, []);
+
     const value = {
         authToken,
         currentUser,
@@ -103,6 +109,7 @@ export function AuthProvider({ children }) {
         login,
         logout,
         signup,
+        refreshCurrentUser,
     };
 
     return (

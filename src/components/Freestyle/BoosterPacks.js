@@ -1,9 +1,11 @@
 // Import necessary libraries and components.
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BoosterPack from './BoosterPack';
 import InteractiveScenario from './InteractiveScenario';
 import './BoosterPackOfTheWeek.css';
 import UserBoosterPackCreator from './UserBoosterPackCreator';
+import WordCloud from './WordCloud';
+import BoosterPackDescription from './BoosterPackDescription';
 
 const BoosterPackList = ({ title, packs, onPackClick }) => (
     <div className="booster-packs-section">
@@ -22,13 +24,25 @@ const BoosterPackList = ({ title, packs, onPackClick }) => (
  * A component that displays a list of booster packs.
  * It also includes a user booster pack creator and handles the selection of a pack.
  * @param {object} props - The component's props.
- * @param {function} props.onSelect - A callback function to handle the selection of a pack.
  * @param {Array} props.boosterPacks - An array of official booster packs.
  * @param {Array} props.userBoosterPacks - An array of user-created booster packs.
  * @returns {JSX.Element} The BoosterPacks component.
  */
-const BoosterPacks = ({ onSelect, boosterPacks, userBoosterPacks }) => {
+const BoosterPacks = ({ boosterPacks, userBoosterPacks }) => {
     const [selectedPack, setSelectedPack] = useState(null);
+    const [words, setWords] = useState([]);
+    const [summary, setSummary] = useState(null);
+
+    useEffect(() => {
+      if (selectedPack) {
+        const allWords = selectedPack.content.vocabulary.map(v => ({
+          text: v.term,
+          size: 1 + v.term.length / 10, // Base size on word length
+        }));
+        setWords(allWords);
+        setSummary({ description: selectedPack.description });
+      }
+    }, [selectedPack]);
 
     /**
      * Handles the click of a booster pack.
@@ -36,9 +50,6 @@ const BoosterPacks = ({ onSelect, boosterPacks, userBoosterPacks }) => {
      */
     const handlePackClick = (pack) => {
         setSelectedPack(pack);
-        if (onSelect) {
-            onSelect(pack);
-        }
     };
 
     /**
@@ -54,6 +65,13 @@ const BoosterPacks = ({ onSelect, boosterPacks, userBoosterPacks }) => {
             <UserBoosterPackCreator />
             <BoosterPackList title="Booster Packs" packs={boosterPacks} onPackClick={handlePackClick} />
             <BoosterPackList title="Your Booster Packs" packs={userBoosterPacks} onPackClick={handlePackClick} />
+
+            {selectedPack && (
+              <>
+                <WordCloud words={words} />
+                <BoosterPackDescription summary={summary} />
+              </>
+            )}
 
             {/* If a pack with a scenario is selected, render the interactive scenario. */}
             {selectedPack && selectedPack.content.scenario && (

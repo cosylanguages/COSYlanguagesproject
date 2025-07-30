@@ -7,3 +7,4 @@ export * from './plan';
 export * from './profile';
 export * from './roadmapService';
 export * from './studySets';
+export * from './progress';
