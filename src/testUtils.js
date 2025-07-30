@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import { UserProfileProvider } from './contexts/UserProfileContext';
 import { I18nProvider } from './i18n/I18nContext';
@@ -11,25 +11,26 @@ const mockI18n = {
   currentLangKey: 'en'
 };
 
-const AllTheProviders = ({ children }) => {
+const AllTheProviders = ({ children, initialEntries = ['/en'] }) => {
   return (
-    <I18nProvider i18n={mockI18n}>
-      <MemoryRouter>
-        <AuthProvider>
-          <UserProfileProvider>
-            {children}
-          </UserProfileProvider>
-        </AuthProvider>
-      </MemoryRouter>
-    </I18nProvider>
+    <MemoryRouter initialEntries={initialEntries}>
+      <Routes>
+        <Route path="/:lang" element={
+          <I18nProvider i18n={mockI18n}>
+            <AuthProvider>
+              <UserProfileProvider>
+                {children}
+              </UserProfileProvider>
+            </AuthProvider>
+          </I18nProvider>
+        } />
+      </Routes>
+    </MemoryRouter>
   );
 };
 
 const customRender = (ui, options) =>
   render(ui, { wrapper: AllTheProviders, ...options });
 
-// re-export everything
 export * from '@testing-library/react';
-
-// override render method
 export { customRender as render };
