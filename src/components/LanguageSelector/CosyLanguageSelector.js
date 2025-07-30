@@ -8,36 +8,36 @@ import './CosyLanguageSelector.css';
 
 // A map of language keys to their corresponding logo images.
 const logos = {
-  armenian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyarmenian.png',
-  bashkir: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosybachkir.png',
-  breton: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosybreton.png',
-  english: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyenglish.png',
-  french: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyfrench.png',
-  georgian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygeorgian.png',
-  german: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygerman.png',
-  greek: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosygreek.png',
-  italian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyitalian.png',
-  portuguese: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyportuguese.png',
-  russian: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyrussian.png',
-  spanish: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosyspanish.png',
-  tatar: '/COSYlanguagesproject/assets/icons/cosylanguages_logos/cosytatar.png',
+  armenian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyarmenian.png`,
+  bashkir: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosybachkir.png`,
+  breton: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosybreton.png`,
+  english: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyenglish.png`,
+  french: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyfrench.png`,
+  georgian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygeorgian.png`,
+  german: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygerman.png`,
+  greek: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygreek.png`,
+  italian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyitalian.png`,
+  portuguese: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyportuguese.png`,
+  russian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyrussian.png`,
+  spanish: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyspanish.png`,
+  tatar: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosytatar.png`,
 };
 
 // Map des drapeaux pour chaque langue (ajouter selon les fichiers disponibles)
 const flags = {
-  bashkir: '/COSYlanguagesproject/assets/flags/Flag_of_Bashkortostan.png',
-  breton: '/COSYlanguagesproject/assets/flags/Flag_of_Brittany.png',
-  tatar: '/COSYlanguagesproject/assets/flags/Flag_of_Tatarstan.png',
-  armenian: '/COSYlanguagesproject/assets/flags/Flag_of_Armenia.png',
-  georgian: '/COSYlanguagesproject/assets/flags/Flag_of_Georgia.png',
-  greek: '/COSYlanguagesproject/assets/flags/Flag_of_Greece.png',
-  italian: '/COSYlanguagesproject/assets/flags/Flag_of_Italy.png',
-  russian: '/COSYlanguagesproject/assets/flags/Flag_of_Russia.png',
-  spanish: '/COSYlanguagesproject/assets/flags/Flag_of_Spain.png',
-  french: '/COSYlanguagesproject/assets/flags/Flag_of_France.png',
-  german: '/COSYlanguagesproject/assets/flags/Flag_of_Germany.png',
-  portuguese: '/COSYlanguagesproject/assets/flags/Flag_of_Portugal.png',
-  english: '/COSYlanguagesproject/assets/flags/Flag_of_the_United_Kingdom.png',
+  bashkir: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Bashkortostan.png`,
+  breton: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Brittany.png`,
+  tatar: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Tatarstan.png`,
+  armenian: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Armenia.png`,
+  georgian: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Georgia.png`,
+  greek: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Greece.png`,
+  italian: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Italy.png`,
+  russian: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Russia.png`,
+  spanish: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Spain.png`,
+  french: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_France.png`,
+  german: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Germany.png`,
+  portuguese: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Portugal.png`,
+  english: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_the_United_Kingdom.png`,
 };
 
 /**
@@ -79,35 +79,14 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
     .filter(Boolean)
     .sort((a, b) => a.label.localeCompare(b.label));
 
-  const pageOptions = [
-    { value: 'freestyle', label: t('Freestyle') },
-    { value: 'study', label: t('Study Mode') },
-    { value: 'community', label: t('Community') },
-  ];
-
-  const groupedOptions = [
-    {
-      label: t('Languages'),
-      options: availableLanguages,
-    },
-    {
-      label: t('Pages'),
-      options: pageOptions,
-    },
-  ];
-
   /**
    * Handles the change of the selected language.
    * @param {object} selectedOption - The selected option from the dropdown.
    */
   const handleChange = (selectedOption) => {
     if (selectedOption) {
-      if (availableLanguages.find(lang => lang.value === selectedOption.value)) {
-        onLanguageChange(selectedOption.value);
-        navigate(`/study/${selectedOption.value}`);
-      } else {
-        navigate(`/${selectedOption.value}`);
-      }
+      onLanguageChange(selectedOption.value);
+      navigate(`/study/${selectedOption.value}`);
     } else {
       onLanguageChange(null);
     }
@@ -143,7 +122,7 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
         id="language-select"
         value={selectedValue}
         onChange={handleChange}
-        options={groupedOptions}
+        options={availableLanguages}
         formatOptionLabel={formatOptionLabel}
         className="cosy-language-select"
         classNamePrefix="cosy-language-select"
