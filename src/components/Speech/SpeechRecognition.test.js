@@ -14,7 +14,9 @@ jest.mock('annyang', () => ({
 
 describe('SpeechRecognition', () => {
   it('toggles listening state on button click', () => {
-    const { getByText } = render(<SpeechRecognition onSpeech={() => {}} />);
+    const { getByText } = render(<SpeechRecognition onSpeech={() => {}} />, {
+        wrapperProps: { initialEntries: ['/en'] }
+    });
     const button = getByText('Start Listening');
 
     fireEvent.click(button);

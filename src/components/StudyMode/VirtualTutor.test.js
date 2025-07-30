@@ -10,7 +10,9 @@ global.RiveScript = jest.fn(() => ({
 
 describe('VirtualTutor', () => {
     it('renders the virtual tutor and allows sending messages', async () => {
-        render(<VirtualTutor />);
+        render(<VirtualTutor />, {
+            wrapperProps: { initialEntries: ['/en'] }
+        });
         fireEvent.change(screen.getByPlaceholderText('Ask a question...'), { target: { value: 'Test question' } });
         fireEvent.click(screen.getByText('Send'));
         await waitFor(() => {
