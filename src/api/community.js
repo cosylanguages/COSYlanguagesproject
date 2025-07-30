@@ -29,3 +29,8 @@ export const createEvent = async (eventData) => {
   const response = await apiClient.post('/events', eventData);
   return response.data;
 };
+
+export const getUsers = async () => {
+  const response = await apiClient.get('/users');
+  return response.data;
+};

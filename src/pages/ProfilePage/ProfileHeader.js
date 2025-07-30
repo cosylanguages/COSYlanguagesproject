@@ -12,8 +12,7 @@ const ProfileHeader = ({ onEdit }) => {
   return (
     <div className="profile-header">
       <div className="profile-avatar">
-        {/* Placeholder for avatar */}
-        <img src="https://via.placeholder.com/150" alt={t('profile.avatarAlt', "User's avatar")} />
+        <img src={currentUser?.avatar || 'https://via.placeholder.com/150'} alt={t('profile.avatarAlt', "User's avatar")} />
       </div>
       <div className="profile-user-info">
         <h2>{currentUser?.username || 'N/A'}</h2>

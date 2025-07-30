@@ -5,10 +5,11 @@ import { useI18n } from '../../i18n/I18nContext';
 import { updateUserSettings } from '../../api/api';
 import Modal from '../../components/Common/Modal';
 import Button from '../../components/Common/Button';
+import toast from 'react-hot-toast';
 import './Settings.css';
 
 const Settings = () => {
-  const { currentUser, authToken } = useAuth();
+  const { currentUser, authToken, logout } = useAuth();
   const { t } = useI18n();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -16,21 +17,21 @@ const Settings = () => {
     try {
       await updateUserSettings(authToken, currentUser.id, { [setting]: value });
       console.log(`Setting ${setting} updated to ${value}`);
-      alert(`Setting ${setting} updated successfully!`);
+      toast.success(`Setting ${setting} updated successfully!`);
     } catch (error) {
       console.error(`Failed to update setting ${setting}:`, error);
-      alert(`Failed to update setting ${setting}.`);
+      toast.error(`Failed to update setting ${setting}.`);
     }
   };
 
   const handleConfirmDelete = async () => {
     try {
       await updateUserSettings(authToken, currentUser.id, { deleteAccount: true });
-      alert('Account deleted successfully.');
-      // Here you would typically log the user out and redirect them.
+      toast.success('Account deleted successfully.');
+      logout();
     } catch (error) {
       console.error('Failed to delete account:', error);
-      alert('Failed to delete account. Please try again.');
+      toast.error('Failed to delete account. Please try again.');
     } finally {
       setIsModalOpen(false);
     }

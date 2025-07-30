@@ -10,7 +10,7 @@ const CommunityHeader = ({ onSearch, onCreatePost, onCreateEvent }) => {
   return (
     <div className="community-header">
       <div className="search-bar">
-        <input type="text" placeholder={t('community.search', 'Search...')} onChange={onSearch} />
+        <input type="text" placeholder={t('community.search', 'Search...')} onChange={(e) => onSearch(e.target.value)} />
       </div>
       <div className="community-header-actions">
         <Button onClick={onCreatePost} variant="contained" color="primary">

@@ -1,5 +1,5 @@
 // Import necessary libraries and components.
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import LanguageHeader from '../../components/Common/LanguageHeader';
 // Import the useFreestyle hook to access the freestyle mode context.
@@ -12,8 +12,6 @@ import ExerciseHost from '../../components/Freestyle/ExerciseHost';
 import HelpPopupIsland from '../../components/Freestyle/HelpPopupIsland';
 import FreestyleProgress from '../../components/Freestyle/FreestyleProgress';
 import BoosterPacks from '../../components/Freestyle/BoosterPacks';
-import WordCloud from '../../components/Freestyle/WordCloud';
-import SessionSummary from '../../components/Freestyle/SessionSummary';
 // Import shared and page-specific CSS.
 import '../../freestyle-shared.css';
 import './FreestyleModePage.css';
@@ -29,28 +27,6 @@ const FreestyleModePage = () => {
   // Get state from the freestyle context.
   const { selectedLanguage, selectedDays, selectedExercise, boosterPacks } = useFreestyle();
   const { currentUser } = useAuth();
-  // State for booster packs, selected pack, words for the word cloud, and session summary.
-  const [selectedPack, setSelectedPack] = useState(null);
-  const [words, setWords] = useState([]);
-  const [summary, setSummary] = useState(null);
-
-  // When a booster pack is selected, extract the words for the word cloud and set the summary.
-  useEffect(() => {
-    if (selectedPack) {
-      const allWords = selectedPack.content.vocabulary.map(v => ({
-        text: v.term,
-        size: 1 + Math.random() * 1.5, // Generate a random font size for visual effect
-      }));
-      setWords(allWords);
-      // For now, we'll just use the pack description as the summary.
-      setSummary({ description: selectedPack.description });
-    }
-  }, [selectedPack]);
-
-  // Handle the selection of a booster pack.
-  const handlePackSelect = (pack) => {
-    setSelectedPack(pack);
-  };
 
   return (
     <div className="freestyle-mode-container">
@@ -70,10 +46,7 @@ const FreestyleModePage = () => {
             <BoosterPacks
               boosterPacks={boosterPacks.filter(p => !p.userId)}
               userBoosterPacks={boosterPacks.filter(p => p.userId === currentUser?.id)}
-              onSelect={handlePackSelect}
             />
-            {selectedPack && <WordCloud words={words} />}
-            {summary && <SessionSummary summary={summary} />}
           </div>
 
           <div className="practice-section">

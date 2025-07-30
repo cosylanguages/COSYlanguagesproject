@@ -24,6 +24,7 @@ import ConversationPage from './pages/StudyMode/ConversationPage/ConversationPag
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import Community from './pages/Community';
 import CalculatorPage from './pages/CalculatorPage/Calculator';
+import { Toaster } from 'react-hot-toast';
 
 /**
  * A protected route component that checks for user authentication.
@@ -49,7 +50,10 @@ const ProtectedRoute = ({ children }) => {
  */
 function AppRoutes() {
     return (
-        <App />
+        <>
+            <Toaster />
+            <App />
+        </>
     );
 }
 
