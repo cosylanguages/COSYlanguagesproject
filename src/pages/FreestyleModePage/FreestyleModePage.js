@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import LanguageHeader from '../../components/Common/LanguageHeader';
 // Import the useFreestyle hook to access the freestyle mode context.
 import { useFreestyle } from '../../contexts/FreestyleContext';
+import { useBoosterPacks } from '../../hooks/useBoosterPacks';
 // Import the components that make up the freestyle mode page.
 import DaySelectorFreestyle from '../../components/Freestyle/DaySelectorFreestyle';
 import PracticeCategoryNav from '../../components/Freestyle/PracticeCategoryNav';
@@ -25,20 +26,11 @@ import './FreestyleModePage.css';
 const FreestyleModePage = () => {
   // Get state from the freestyle context.
   const { selectedLanguage, selectedDays, selectedExercise } = useFreestyle();
+  const { boosterPacks } = useBoosterPacks();
   // State for booster packs, selected pack, words for the word cloud, and session summary.
-  const [boosterPacks, setBoosterPacks] = useState([]);
   const [selectedPack, setSelectedPack] = useState(null);
   const [words, setWords] = useState([]);
   const [summary, setSummary] = useState(null);
-
-  // Fetch the booster packs data when the component mounts.
-  useEffect(() => {
-    fetch('/data/booster_packs.json')
-      .then(response => response.json())
-      .then(data => {
-        setBoosterPacks(data);
-      });
-  }, []);
 
   // When a booster pack is selected, extract the words for the word cloud and set the summary.
   useEffect(() => {
@@ -58,33 +50,44 @@ const FreestyleModePage = () => {
   return (
     <div className="freestyle-mode-container">
       <h1 className="freestyle-mode-header">Freestyle Mode</h1>
-      {/* Affichage du logo et du drapeau de la langue sélectionnée */}
       {selectedLanguage && <LanguageHeader selectedLanguage={selectedLanguage} />}
-      {/* Display the booster packs and the user's progress. */}
-      <BoosterPacks boosterPacks={boosterPacks} onSelect={handlePackSelect} />
-      <FreestyleProgress />
-      {/* Container for the main freestyle mode controls. */}
-      <div className="freestyle-controls-container">
-        {/* Only show the day selector if a language is selected. */}
-        {selectedLanguage && <DaySelectorFreestyle language={selectedLanguage} />}
-        {/* Only show the practice category navigation if a language and days are selected. */}
-        {selectedLanguage && selectedDays.length > 0 && (
-          <PracticeCategoryNav language={selectedLanguage} days={selectedDays} />
-        )}
-      </div>
-      {/* If an exercise is selected, render the exercise host. */}
-      {selectedExercise && (
-        <ExerciseHost
-          language={selectedLanguage}
-          days={selectedDays}
-          subPracticeType={selectedExercise.exercise}
-        />
+
+      {!selectedLanguage ? (
+        <div className="welcome-message">
+          <h2>Welcome to Freestyle Mode!</h2>
+          <p>Please select a language from the header to get started.</p>
+        </div>
+      ) : (
+        <>
+          <div className="practice-section">
+            <h2>Practice with a Booster Pack</h2>
+            <p>Select a booster pack to get a curated set of vocabulary and exercises.</p>
+            <BoosterPacks boosterPacks={boosterPacks} onSelect={handlePackSelect} />
+            {selectedPack && <WordCloud words={words} />}
+            {summary && <SessionSummary summary={summary} />}
+          </div>
+
+          <div className="practice-section">
+            <h2>Custom Practice</h2>
+            <p>Create your own practice session by selecting a day and a category.</p>
+            <div className="freestyle-controls-container">
+              <DaySelectorFreestyle language={selectedLanguage} />
+              {selectedDays.length > 0 && (
+                <PracticeCategoryNav language={selectedLanguage} days={selectedDays} />
+              )}
+            </div>
+            {selectedExercise && (
+              <ExerciseHost
+                language={selectedLanguage}
+                days={selectedDays}
+                subPracticeType={selectedExercise.exercise}
+              />
+            )}
+          </div>
+        </>
       )}
-      {/* If a pack is selected, show the word cloud. */}
-      {selectedPack && <WordCloud words={words} />}
-      {/* If there is a summary, show the session summary. */}
-      {summary && <SessionSummary summary={summary} />}
-      {/* The help popup island component. */}
+
+      <FreestyleProgress />
       <HelpPopupIsland />
     </div>
   );
