@@ -1,0 +1,28 @@
+/* src/pages/ProfilePage/UserInformation.css */
+.user-information {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.user-info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-info-label {
+  font-weight: bold;
+  margin-right: 10px;
+  min-width: 100px;
+}
+
+.user-info-value {
+  font-size: 1.1em;
+}
+
+.user-info-actions {
+  margin-top: 20px;
+  text-align: right;
+}
