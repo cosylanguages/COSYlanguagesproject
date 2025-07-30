@@ -1,5 +1,5 @@
 // Import necessary libraries, hooks, and components.
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useAuth } from '../../contexts/AuthContext';
 import { useStudy } from '../../contexts/StudyContext';
@@ -31,7 +31,6 @@ const StudyModePage = () => {
   const { authToken } = useAuth();
   const {
     selectedRole,
-    setSelectedRole,
     selectedDayId,
     setSelectedDayId,
     selectedSectionId,
@@ -177,23 +176,6 @@ const StudyModePage = () => {
     }
   }, [selectedRole, currentSyllabus, selectedSectionId, authToken, t]);
 
-  // Callback to handle role selection.
-  const handleRoleSelect = useCallback((role) => {
-    setSelectedRole(prevRole => {
-      const newRole = prevRole === role ? null : role;
-      if (prevRole !== newRole) {
-        // Reset state when the role changes.
-        setDays([]);
-        setSelectedDayId(null);
-        setCurrentSyllabus(null);
-        setLessonSectionsForPanel([]);
-        setSelectedSectionId(null);
-        setCurrentExerciseBlocks([]);
-        setError(null);
-      }
-      return newRole;
-    });
-  }, [setSelectedRole, setSelectedDayId, setSelectedSectionId]);
 
   // Callback to handle day selection.
   const handleDaySelectSmP = (dayIdValue) => {

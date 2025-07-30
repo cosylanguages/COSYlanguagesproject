@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useLingui } from '@lingui/react/macro';
 import { useAuth } from '../contexts/AuthContext';
 import CommunityHeader from '../components/Community/CommunityHeader';
 import Tabs from '../components/Common/Tabs';

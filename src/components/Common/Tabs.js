@@ -18,13 +18,12 @@ const Tabs = ({ children }) => {
             key={child.props.label}
             className={activeTab === child.props.label ? 'nav-item active' : 'nav-item'}
           >
-            <a
-              href="#"
+            <button
               className="nav-link"
               onClick={(e) => handleClick(e, child.props.label)}
             >
               {child.props.label}
-            </a>
+            </button>
           </li>
         ))}
       </ul>
