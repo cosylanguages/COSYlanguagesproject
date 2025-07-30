@@ -19,13 +19,20 @@ export const useStudy = () => useContext(StudyContext);
  * @returns {JSX.Element} The StudyProvider component.
  */
 export const StudyProvider = ({ children }) => {
-  const [selectedRole, setSelectedRole] = useState(null);
+  const [selectedRole, setSelectedRole] = useState(() => {
+    return localStorage.getItem('selectedRole');
+  });
   const [selectedDayId, setSelectedDayId] = useState(null);
   const [selectedSectionId, setSelectedSectionId] = useState(null);
 
+  const setRole = (role) => {
+    setSelectedRole(role);
+    localStorage.setItem('selectedRole', role);
+  };
+
   const value = {
     selectedRole,
-    setSelectedRole,
+    setSelectedRole: setRole,
     selectedDayId,
     setSelectedDayId,
     selectedSectionId,

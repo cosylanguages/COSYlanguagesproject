@@ -7,13 +7,7 @@ import MistakeNotebook from '../../components/StudyMode/MistakeNotebook';
 import GrammarReview from '../../components/StudyMode/GrammarReview';
 import VirtualTutor from '../../components/StudyMode/VirtualTutor';
 import SmartReview from '../../components/StudyMode/SmartReview';
-import TodaysFocus from '../StudyMode/PersonalizationPage/components/TodaysFocus';
-import MyLearningGarden from '../../components/Gamification/MyLearningGarden';
-// The CosyCorner component is not yet implemented.
-// import CosyCorner from '../../components/Community/CosyCorner';
-import LanguagePet from '../../components/Gamification/LanguagePet';
-import SouvenirCollection from '../../components/Gamification/SouvenirCollection';
-import CosyStreaks from '../../components/Gamification/CosyStreaks';
+import GamificationDashboard from '../../components/Gamification/GamificationDashboard';
 import StudyFillInTheBlanks from '../../components/StudyMode/exercises/StudyFillInTheBlanks';
 import StudySentenceUnscramble from '../../components/StudyMode/exercises/StudySentenceUnscramble';
 import QuizTaker from '../../components/StudyMode/QuizTaker';
@@ -74,24 +68,24 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
   const { t, currentLangKey, allTranslations } = useI18n();
   // Logos et drapeaux comme dans CosyLanguageSelector
   const logos = {
-    COSYarmenian: '/assets/icons/cosylanguages_logos/cosyarmenian.png',
-    COSYbashkir: '/assets/icons/cosylanguages_logos/cosybachkir.png',
-    COSYbreton: '/assets/icons/cosylanguages_logos/cosybreton.png',
-    COSYenglish: '/assets/icons/cosylanguages_logos/cosyenglish.png',
-    COSYfrench: '/assets/icons/cosylanguages_logos/cosyfrench.png',
-    COSYgeorgian: '/assets/icons/cosylanguages_logos/cosygeorgian.png',
-    COSYgerman: '/assets/icons/cosylanguages_logos/cosygerman.png',
-    COSYgreek: '/assets/icons/cosylanguages_logos/cosygreek.png',
-    COSYitalian: '/assets/icons/cosylanguages_logos/cosyitalian.png',
-    COSYportuguese: '/assets/icons/cosylanguages_logos/cosyportuguese.png',
-    COSYrussian: '/assets/icons/cosylanguages_logos/cosyrussian.png',
-    COSYspanish: '/assets/icons/cosylanguages_logos/cosyspanish.png',
-    COSYtatar: '/assets/icons/cosylanguages_logos/cosytatar.png',
+    COSYarmenian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyarmenian.png`,
+    COSYbashkir: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosybachkir.png`,
+    COSYbreton: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosybreton.png`,
+    COSYenglish: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyenglish.png`,
+    COSYfrench: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyfrench.png`,
+    COSYgeorgian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygeorgian.png`,
+    COSYgerman: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygerman.png`,
+    COSYgreek: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygreek.png`,
+    COSYitalian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyitalian.png`,
+    COSYportuguese: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyportuguese.png`,
+    COSYrussian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyrussian.png`,
+    COSYspanish: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyspanish.png`,
+    COSYtatar: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosytatar.png`,
   };
   const flags = {
-    COSYbashkir: '/assets/flags/Flag_of_Bashkortostan.png',
-    COSYbreton: '/assets/flags/Flag_of_Brittany.png',
-    COSYtatar: '/assets/flags/Flag_of_Tatarstan.png',
+    COSYbashkir: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Bashkortostan.png`,
+    COSYbreton: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Brittany.png`,
+    COSYtatar: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Tatarstan.png`,
   };
   // State for controlling the visibility of different study tools.
   const [isMistakeNotebookVisible, setIsMistakeNotebookVisible] = useState(false);
@@ -178,14 +172,7 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
         </div>
       )}
       {/* Gamification and personalization components. */}
-      <div className="cosy-dashboard">
-        <TodaysFocus />
-        <MyLearningGarden />
-        {/* <CosyCorner /> */}
-        <LanguagePet />
-        <SouvenirCollection />
-        <CosyStreaks />
-      </div>
+      <GamificationDashboard />
       {/* The header for the current lesson, with buttons for study tools. */}
       <div className="lesson-header">
         <h2><TransliterableText text={t('studyMode.lessonTitlePlaceholder', 'Current Lesson')} /></h2>
