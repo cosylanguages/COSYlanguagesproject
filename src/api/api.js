@@ -4,5 +4,6 @@ export * from './days';
 export * from './freestyle';
 export * from './lessonSections';
 export * from './plan';
+export * from './profile';
 export * from './roadmapService';
 export * from './studySets';
