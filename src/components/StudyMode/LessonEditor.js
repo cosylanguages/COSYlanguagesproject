@@ -2,8 +2,6 @@
 import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
-import { displayComponentMap } from './common/displayComponentMap';
-import { getBlockElementId } from '../../pages/StudyModePage/utils';
 
 const LessonEditor = ({
   lessonBlocks,
