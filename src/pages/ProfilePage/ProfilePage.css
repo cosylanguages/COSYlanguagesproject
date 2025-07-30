@@ -19,3 +19,14 @@
 .profile-details p {
   margin-bottom: 10px;
 }
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .profile-content {
+    flex-direction: column;
+  }
+
+  .profile-sidebar {
+    width: 100%;
+  }
+}
