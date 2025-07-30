@@ -4,7 +4,6 @@ import BoosterPack from './BoosterPack';
 import InteractiveScenario from './InteractiveScenario';
 import './BoosterPackOfTheWeek.css';
 import UserBoosterPackCreator from './UserBoosterPackCreator';
-import { useBoosterPacks } from '../../hooks/useBoosterPacks';
 
 const BoosterPackList = ({ title, packs, onPackClick }) => (
     <div className="booster-packs-section">
@@ -24,10 +23,11 @@ const BoosterPackList = ({ title, packs, onPackClick }) => (
  * It also includes a user booster pack creator and handles the selection of a pack.
  * @param {object} props - The component's props.
  * @param {function} props.onSelect - A callback function to handle the selection of a pack.
+ * @param {Array} props.boosterPacks - An array of official booster packs.
+ * @param {Array} props.userBoosterPacks - An array of user-created booster packs.
  * @returns {JSX.Element} The BoosterPacks component.
  */
-const BoosterPacks = ({ onSelect }) => {
-    const { boosterPacks, userBoosterPacks } = useBoosterPacks();
+const BoosterPacks = ({ onSelect, boosterPacks, userBoosterPacks }) => {
     const [selectedPack, setSelectedPack] = useState(null);
 
     /**

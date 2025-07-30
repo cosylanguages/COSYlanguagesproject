@@ -20,6 +20,7 @@ import { displayComponentMap } from '../../components/StudyMode/common/displayCo
 
 // Import the helper function for generating consistent element IDs.
 import { getBlockElementId } from './utils';
+import { logos, flags } from '../../config/languageAssets';
 
 // Import the CSS for this component.
 import './StudentDashboard.css'; 
@@ -35,27 +36,6 @@ import './StudentDashboard.css';
 const StudentDashboard = ({ lessonBlocks = [] }) => {
   const { t, currentLangKey, allTranslations } = useI18n();
   const { currentUser } = useAuth();
-  // Logos et drapeaux comme dans CosyLanguageSelector
-  const logos = {
-    COSYarmenian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyarmenian.png`,
-    COSYbashkir: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosybachkir.png`,
-    COSYbreton: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosybreton.png`,
-    COSYenglish: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyenglish.png`,
-    COSYfrench: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyfrench.png`,
-    COSYgeorgian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygeorgian.png`,
-    COSYgerman: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygerman.png`,
-    COSYgreek: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygreek.png`,
-    COSYitalian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyitalian.png`,
-    COSYportuguese: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyportuguese.png`,
-    COSYrussian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyrussian.png`,
-    COSYspanish: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyspanish.png`,
-    COSYtatar: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosytatar.png`,
-  };
-  const flags = {
-    COSYbashkir: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Bashkortostan.png`,
-    COSYbreton: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Brittany.png`,
-    COSYtatar: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Tatarstan.png`,
-  };
   // State for controlling the visibility of different study tools.
   const [isMistakeNotebookVisible, setIsMistakeNotebookVisible] = useState(false);
   const [isGrammarReviewVisible, setIsGrammarReviewVisible] = useState(false);
