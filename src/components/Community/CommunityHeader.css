@@ -1,0 +1,26 @@
+/* src/components/Community/CommunityHeader.css */
+.community-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.community-header-actions {
+  display: flex;
+  gap: 10px;
+}

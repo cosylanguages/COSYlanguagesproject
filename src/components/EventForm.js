@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import axios from 'axios';
+import { createEvent } from '../api/community';
 import './EventForm.css';
 
 const EventForm = () => {
@@ -14,8 +14,8 @@ const EventForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newEvent = { title, videoUrl, videoTitle, start, end, description };
-    axios.post('/events/add', newEvent)
-      .then(res => console.log(res.data));
+    createEvent(newEvent)
+      .then(res => console.log(res));
   };
 
   return (

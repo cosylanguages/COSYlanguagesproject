@@ -19,3 +19,13 @@ export const commentOnPost = async (postId, commentData) => {
   const response = await apiClient.post(`/posts/${postId}/comment`, commentData);
   return response.data;
 };
+
+export const getEvents = async () => {
+  const response = await apiClient.get('/events');
+  return response.data;
+};
+
+export const createEvent = async (eventData) => {
+  const response = await apiClient.post('/events', eventData);
+  return response.data;
+};

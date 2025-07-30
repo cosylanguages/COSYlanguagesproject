@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import axios from 'axios';
+import { createPost } from '../api/community';
 import './CreatePost.css';
 
 const CreatePost = ({ userId }) => {
@@ -17,8 +17,8 @@ const CreatePost = ({ userId }) => {
     formData.append('video', video);
     formData.append('caption', caption);
     formData.append('author', userId);
-    axios.post('/posts/add', formData)
-      .then(res => console.log(res.data));
+    createPost(formData)
+      .then(res => console.log(res));
   };
 
   return (
