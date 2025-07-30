@@ -1,5 +1,5 @@
 // Import necessary libraries and components.
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 // Import the CSS for this component.
 import './LandingPage.css';

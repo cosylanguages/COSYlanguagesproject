@@ -8,7 +8,7 @@ import GamificationDashboard from '../../components/Gamification/GamificationDas
 import './ProfilePage.css';
 
 function ProfilePage() {
-  const { currentUser } = useAuth();
+  useAuth();
   const [isEditMode, setIsEditMode] = useState(false);
 
   const handleEdit = () => {
