@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Calculator.css';
-import { useI18n } from '../../../i18n/I18nContext';
+import { useI18n } from '../../i18n/I18nContext';
 import {
   priceData,
   packageDiscounts,
@@ -8,7 +8,7 @@ import {
   packageNames,
   languageNames,
   durationNames,
-} from '../../../data/calculatorData';
+} from '../../data/calculatorData';
 
 const Calculator = () => {
     const [pkg, setPkg] = useState('standard');

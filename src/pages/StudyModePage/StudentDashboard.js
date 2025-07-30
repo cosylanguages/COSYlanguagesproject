@@ -18,7 +18,7 @@ import FlashcardPlayer from '../../components/StudyMode/FlashcardPlayer';
 import { displayComponentMap } from '../../components/StudyMode/common/displayComponentMap';
 
 // Import the helper function for generating consistent element IDs.
-import { getBlockElementId } from './StudyModePage'; 
+import { getBlockElementId } from './utils';
 
 // Import the CSS for this component.
 import './StudentDashboard.css'; 
