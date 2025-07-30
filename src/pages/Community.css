@@ -1,0 +1,18 @@
+/* src/pages/Community.css */
+.community-page {
+  padding: 20px;
+}
+
+.community-content {
+  display: flex;
+  gap: 20px;
+}
+
+.community-main {
+  flex-grow: 1;
+}
+
+.community-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
