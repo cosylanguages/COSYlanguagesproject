@@ -33,3 +33,13 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     border: none;
 }
+
+@media (max-width: 768px) {
+  .freestyle-mode-container {
+    padding: 10px;
+  }
+
+  .practice-section {
+    padding: 15px;
+  }
+}

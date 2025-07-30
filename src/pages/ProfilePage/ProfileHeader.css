@@ -36,3 +36,19 @@
 .profile-header-actions {
   margin-left: auto;
 }
+
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .profile-avatar {
+    margin-right: 0;
+  }
+
+  .profile-header-actions {
+    margin-left: 0;
+  }
+}
