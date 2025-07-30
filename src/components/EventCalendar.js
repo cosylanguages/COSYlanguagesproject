@@ -1,20 +1,30 @@
 
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { getEvents } from '../api/community';
 import './EventCalendar.css';
 
 const EventCalendar = () => {
   const [events, setEvents] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('/events')
+    getEvents()
       .then(response => {
-        setEvents(response.data);
+        setEvents(response);
       })
       .catch(error => {
-        console.log(error);
+        setError('Failed to fetch events.');
+        console.error('Failed to fetch events:', error);
       });
   }, []);
+
+  const handleRsvp = (eventId) => {
+    console.log(`RSVPing to event ${eventId}`);
+  };
+
+  if (error) {
+    return <div className="error">{error}</div>;
+  }
 
   return (
     <div className="event-calendar">
@@ -24,6 +34,7 @@ const EventCalendar = () => {
           <li key={event._id}>
             <strong>{event.title}</strong> — {new Date(event.start).toLocaleString()} à {new Date(event.end).toLocaleString()}
             <div>{event.description}</div>
+            <button onClick={() => handleRsvp(event._id)}>RSVP</button>
           </li>
         ))}
       </ul>
