@@ -5,20 +5,30 @@ import UserInformation from './UserInformation';
 import Settings from './Settings';
 import Social from './Social';
 import GamificationDashboard from '../../components/Gamification/GamificationDashboard';
+import { updateUserProfile } from '../../api/api';
 import './ProfilePage.css';
 
 function ProfilePage() {
-  useAuth();
+  const { currentUser, authToken } = useAuth();
   const [isEditMode, setIsEditMode] = useState(false);
 
   const handleEdit = () => {
     setIsEditMode(!isEditMode);
   };
 
-  const handleSave = (newUserInfo) => {
-    // Here you would typically call an API to save the new user info.
-    console.log('Saving user info:', newUserInfo);
-    setIsEditMode(false);
+  const handleSave = async (newUserInfo) => {
+    if (!currentUser) return;
+    try {
+      await updateUserProfile(authToken, currentUser.id, newUserInfo);
+      alert('Profile updated successfully!');
+      // Optionally, you might need to refresh the currentUser in the context
+      // after a successful update, but for now, we'll just show a message.
+    } catch (error) {
+      console.error('Failed to update profile:', error);
+      alert('Failed to update profile. Please try again.');
+    } finally {
+      setIsEditMode(false);
+    }
   };
 
   return (
@@ -26,7 +36,7 @@ function ProfilePage() {
       <ProfileHeader onEdit={handleEdit} />
       <div className="profile-content">
         <div className="profile-main">
-          <UserInformation isEditMode={isEditMode} onSave={handleSave} />
+          <UserInformation user={currentUser} isEditMode={isEditMode} onSave={handleSave} />
           <Settings />
           <Social />
         </div>

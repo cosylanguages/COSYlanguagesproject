@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import StudyModeBanner from '../../components/StudyMode/StudyModeBanner';
 import { useI18n } from '../../i18n/I18nContext';
+import { useAuth } from '../../contexts/AuthContext';
 import TransliterableText from '../../components/Common/TransliterableText';
 import MistakeNotebook from '../../components/StudyMode/MistakeNotebook';
 import GrammarReview from '../../components/StudyMode/GrammarReview';
@@ -19,42 +20,10 @@ import { displayComponentMap } from '../../components/StudyMode/common/displayCo
 
 // Import the helper function for generating consistent element IDs.
 import { getBlockElementId } from './utils';
+import { logos, flags } from '../../config/languageAssets';
 
 // Import the CSS for this component.
 import './StudentDashboard.css'; 
-
-// Mock data for quizzes.
-const mockQuizzes = [
-    {
-        id: 1,
-        title: 'French Vocabulary Quiz',
-        questions: [
-            {
-                text: 'What is the French word for "hello"?',
-                options: ['Bonjour', 'Au revoir', 'Merci', 'Oui'],
-                correctOption: 0,
-            },
-            {
-                text: 'What is the French word for "goodbye"?',
-                options: ['Bonjour', 'Au revoir', 'Merci', 'Oui'],
-                correctOption: 1,
-            },
-        ],
-    },
-];
-
-// Mock data for flashcard decks.
-const mockDecks = [
-    {
-        id: 1,
-        title: 'French Vocabulary',
-        cards: [
-            { front: 'Hello', back: 'Bonjour' },
-            { front: 'Goodbye', back: 'Au revoir' },
-            { front: 'Thank you', back: 'Merci' },
-        ],
-    },
-];
 
 /**
  * The student's dashboard in Study Mode.
@@ -66,27 +35,7 @@ const mockDecks = [
  */
 const StudentDashboard = ({ lessonBlocks = [] }) => {
   const { t, currentLangKey, allTranslations } = useI18n();
-  // Logos et drapeaux comme dans CosyLanguageSelector
-  const logos = {
-    COSYarmenian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyarmenian.png`,
-    COSYbashkir: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosybachkir.png`,
-    COSYbreton: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosybreton.png`,
-    COSYenglish: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyenglish.png`,
-    COSYfrench: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyfrench.png`,
-    COSYgeorgian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygeorgian.png`,
-    COSYgerman: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygerman.png`,
-    COSYgreek: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosygreek.png`,
-    COSYitalian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyitalian.png`,
-    COSYportuguese: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyportuguese.png`,
-    COSYrussian: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyrussian.png`,
-    COSYspanish: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosyspanish.png`,
-    COSYtatar: `${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosytatar.png`,
-  };
-  const flags = {
-    COSYbashkir: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Bashkortostan.png`,
-    COSYbreton: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Brittany.png`,
-    COSYtatar: `${process.env.PUBLIC_URL}/assets/flags/Flag_of_Tatarstan.png`,
-  };
+  const { currentUser } = useAuth();
   // State for controlling the visibility of different study tools.
   const [isMistakeNotebookVisible, setIsMistakeNotebookVisible] = useState(false);
   const [isGrammarReviewVisible, setIsGrammarReviewVisible] = useState(false);
@@ -176,44 +125,32 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
       {/* The header for the current lesson, with buttons for study tools. */}
       <div className="lesson-header">
         <h2><TransliterableText text={t('studyMode.lessonTitlePlaceholder', 'Current Lesson')} /></h2>
-        <button onClick={() => setIsMistakeNotebookVisible(true)}>Mistake Notebook</button>
-        <button onClick={() => setIsGrammarReviewVisible(true)}>Grammar Review</button>
-        <button onClick={() => setIsVirtualTutorVisible(true)}>Virtual Tutor</button>
-        <button onClick={() => setIsSmartReviewVisible(true)}>Smart Review</button>
-        <button onClick={() => setIsFillInTheBlanksVisible(true)}>Fill in the Blanks</button>
-        <button onClick={() => setIsSentenceUnscrambleVisible(true)}>Sentence Unscramble</button>
+        <button onClick={() => setIsMistakeNotebookVisible(true)}><TransliterableText text={t('studentDashboard.mistakeNotebook', 'Mistake Notebook')} /></button>
+        <button onClick={() => setIsGrammarReviewVisible(true)}><TransliterableText text={t('studentDashboard.grammarReview', 'Grammar Review')} /></button>
+        <button onClick={() => setIsVirtualTutorVisible(true)}><TransliterableText text={t('studentDashboard.virtualTutor', 'Virtual Tutor')} /></button>
+        <button onClick={() => setIsSmartReviewVisible(true)}><TransliterableText text={t('studentDashboard.smartReview', 'Smart Review')} /></button>
+        <button onClick={() => setIsFillInTheBlanksVisible(true)}><TransliterableText text={t('studentDashboard.fillInTheBlanks', 'Fill in the Blanks')} /></button>
+        <button onClick={() => setIsSentenceUnscrambleVisible(true)}><TransliterableText text={t('studentDashboard.sentenceUnscramble', 'Sentence Unscramble')} /></button>
       </div>
       
       {/* Render the study tools if they are visible. */}
       {isMistakeNotebookVisible && <MistakeNotebook />}
       {isGrammarReviewVisible && <GrammarReview />}
       {isVirtualTutorVisible && <VirtualTutor />}
-      {isSmartReviewVisible && <SmartReview userId="123" />}
-      {isFillInTheBlanksVisible && <StudyFillInTheBlanks language={t('currentLanguage')} />}
-      {isSentenceUnscrambleVisible && <StudySentenceUnscramble language={t('currentLanguage')} />}
+      {isSmartReviewVisible && <SmartReview userId={currentUser?.id} />}
+      {isFillInTheBlanksVisible && <StudyFillInTheBlanks language={currentLangKey} />}
+      {isSentenceUnscrambleVisible && <StudySentenceUnscramble language={currentLangKey} />}
 
       {/* A section for quizzes. */}
       <div className="quizzes-section">
-          <h3>Quizzes</h3>
-          <ul>
-              {mockQuizzes.map(quiz => (
-                  <li key={quiz.id}>
-                      <button onClick={() => setSelectedQuiz(quiz)}>{quiz.title}</button>
-                  </li>
-              ))}
-          </ul>
+          <h3><TransliterableText text={t('studentDashboard.quizzes', 'Quizzes')} /></h3>
+          <p><em><TransliterableText text={t('studentDashboard.quizzesComingSoon', 'Quizzes are coming soon!')} /></em></p>
       </div>
 
       {/* A section for flashcard decks. */}
       <div className="flashcards-section">
-          <h3>My Flashcards</h3>
-          <ul>
-              {mockDecks.map(deck => (
-                  <li key={deck.id}>
-                      <button onClick={() => setSelectedDeck(deck)}>{deck.title}</button>
-                  </li>
-              ))}
-          </ul>
+          <h3><TransliterableText text={t('studentDashboard.myFlashcards', 'My Flashcards')} /></h3>
+          <p><em><TransliterableText text={t('studentDashboard.flashcardsComingSoon', 'Flashcard decks are coming soon!')} /></em></p>
       </div>
 
       {/* The main content of the lesson, with dynamically rendered exercise blocks. */}
