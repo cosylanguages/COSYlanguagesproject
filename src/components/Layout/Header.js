@@ -47,7 +47,7 @@ const Header = () => {
             variant="contained"
             color="secondary"
           >
-            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+            {isDarkMode ? t('lightMode', 'Light Mode') : t('darkMode', 'Dark Mode')}
           </Button>
           {isAuthenticated && currentUser ? (
             <div className="user-info">
