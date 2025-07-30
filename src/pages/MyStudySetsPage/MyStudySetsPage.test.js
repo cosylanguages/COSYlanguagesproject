@@ -1,10 +1,7 @@
 import React from 'react';
-import { render, screen, fireEvent, act } from '@testing-library/react';
+import { render, screen, fireEvent, act } from '../../testUtils';
 import '@testing-library/jest-dom';
 import MyStudySetsPage from './MyStudySetsPage';
-import { I18nProvider } from '../../i18n/I18nContext';
-import { AuthProvider } from '../../contexts/AuthContext';
-import { StudySetProvider } from '../../contexts/StudySetContext';
 import { mockNavigateForTest, mockUseLocationForTest, mockUseParamsForTest } from 'react-router-dom';
 
 // --- Mock studySetService at the top level ---
@@ -53,24 +50,10 @@ const renderPage = async (pathname = '/my-sets', params = {}) => {
   mockUseLocationForTest.mockReturnValue({ pathname, search: '', hash: '', state: null, key: 'testKey' });
   mockUseParamsForTest.mockReturnValue(params);
 
-  const authContextValue = {
-    isAuthenticated: true, currentUser: { uid: 'test-user', role: 'student' }, loadingAuth: false,
-    login: jest.fn(), logout: jest.fn(), signup: jest.fn(), updateUserRoleInDb: jest.fn(),
-    getToken: jest.fn().mockResolvedValue('fake-token'),
-  };
-
   let utils;
   // Use act for renders that trigger useEffect data fetching
   await act(async () => {
-    utils = render(
-        <I18nProvider i18n={{ t: mockT, language: 'COSYenglish', currentLangKey: 'COSYenglish' }}>
-          <AuthProvider value={authContextValue}>
-            <StudySetProvider>
-              <MyStudySetsPage />
-            </StudySetProvider>
-          </AuthProvider>
-        </I18nProvider>
-    );
+    utils = render(<MyStudySetsPage />);
   });
   return utils;
 };

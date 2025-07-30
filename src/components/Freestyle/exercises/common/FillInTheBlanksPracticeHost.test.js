@@ -5,14 +5,18 @@ import FillInTheBlanksPracticeHost from './FillInTheBlanksPracticeHost';
 import * as exerciseDataService from '../../../../utils/exerciseDataService';
 
 jest.mock('../../../../utils/exerciseDataService');
-jest.mock('./FillInTheBlanksExercise', () => ({ exerciseData, onCorrect, onIncorrect, onAttempt }) => (
-  <div data-testid="fill-in-blanks-exercise-mock">
-    <p>Exercise ID: {exerciseData?.id}</p>
-    <button onClick={onCorrect}>CorrectBTN</button>
-    <button onClick={onIncorrect}>IncorrectBTN</button>
-    <button onClick={onAttempt}>AttemptBTN</button>
-  </div>
-));
+jest.mock('./FillInTheBlanksExercise', () => {
+    return function DummyFillInTheBlanksExercise({ exerciseData, onCorrect, onIncorrect, onAttempt }) {
+        return (
+            <div data-testid="fill-in-blanks-exercise-mock">
+                <p>Exercise ID: {exerciseData?.id}</p>
+                <button onClick={onCorrect}>CorrectBTN</button>
+                <button onClick={onIncorrect}>IncorrectBTN</button>
+                <button onClick={onAttempt}>AttemptBTN</button>
+            </div>
+        );
+    };
+});
 
 const mockExercises = [
   { id: 'fitb1', sentenceParts: ["Part 1 ", null], answers: ["Ans1"] },
