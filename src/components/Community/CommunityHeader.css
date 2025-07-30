@@ -24,3 +24,15 @@
   display: flex;
   gap: 10px;
 }
+
+@media (max-width: 600px) {
+  .community-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-bar {
+    margin-right: 0;
+    width: 100%;
+  }
+}

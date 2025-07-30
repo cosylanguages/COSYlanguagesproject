@@ -124,3 +124,10 @@
   background-color: var(--primary-color);
   color: var(--text-color-light);
 }
+
+@media (max-width: 600px) {
+  .day-range-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

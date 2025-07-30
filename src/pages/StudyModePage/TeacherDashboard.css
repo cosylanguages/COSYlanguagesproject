@@ -223,3 +223,14 @@
     background-color: var(--color-surface-info-light, #e6f7ff); /* Example different background */
     border: 1px dashed var(--color-border-info, #91d5ff);
 }
+
+@media (max-width: 768px) {
+  .teacher-dashboard-container-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
