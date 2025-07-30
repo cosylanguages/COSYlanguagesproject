@@ -6,7 +6,7 @@ import './PracticeCategoryNav.css';
 
 const PracticeCategoryNav = ({ language, days }) => {
   const { t } = useI18n();
-  const { setSelectedExercise } = useFreestyle();
+  const { selectedExercise, setSelectedExercise } = useFreestyle();
 
   const handleCategorySelect = (category) => {
     // For now, we'll just set the category.

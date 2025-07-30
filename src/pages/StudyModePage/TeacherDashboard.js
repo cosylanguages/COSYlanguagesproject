@@ -12,7 +12,7 @@ import WritingBlockConfig from '../../components/StudyMode/TemplateConfig/Config
 import TemplateList from '../../components/StudyMode/TemplateList';
 import TemplateEditor from '../../components/StudyMode/TemplateEditor';
 import { displayComponentMap } from '../../components/StudyMode/common/displayComponentMap';
-import { getBlockElementId } from './StudyModePage';
+import { getBlockElementId } from './utils';
 import DayManager from '../../components/StudyMode/DayManager';
 import LessonSectionManager from '../../components/StudyMode/LessonSectionManager';
 import { getLessonSectionDetails, updateLessonSection } from '../../api/api';
