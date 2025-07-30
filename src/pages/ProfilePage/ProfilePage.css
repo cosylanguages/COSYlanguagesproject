@@ -2,8 +2,18 @@
   padding: 20px;
 }
 
-.profile-details {
-  margin-top: 20px;
+.profile-content {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-main {
+    flex-grow: 1;
+}
+
+.profile-sidebar {
+    width: 300px;
+    flex-shrink: 0;
 }
 
 .profile-details p {

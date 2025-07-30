@@ -1,21 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
+import ProfileHeader from './ProfileHeader';
+import UserInformation from './UserInformation';
+import Settings from './Settings';
+import Social from './Social';
+import GamificationDashboard from '../../components/Gamification/GamificationDashboard';
 import './ProfilePage.css';
 
 function ProfilePage() {
   const { currentUser } = useAuth();
+  const [isEditMode, setIsEditMode] = useState(false);
+
+  const handleEdit = () => {
+    setIsEditMode(!isEditMode);
+  };
+
+  const handleSave = (newUserInfo) => {
+    // Here you would typically call an API to save the new user info.
+    console.log('Saving user info:', newUserInfo);
+    setIsEditMode(false);
+  };
 
   return (
     <div className="profile-page">
-      <h1>Profile</h1>
-      {currentUser ? (
-        <div className="profile-details">
-          <p><strong>Username:</strong> {currentUser.username || 'N/A'}</p>
-          <p><strong>Role:</strong> {currentUser.role || 'N/A'}</p>
+      <ProfileHeader onEdit={handleEdit} />
+      <div className="profile-content">
+        <div className="profile-main">
+          <UserInformation isEditMode={isEditMode} onSave={handleSave} />
+          <Settings />
+          <Social />
         </div>
-      ) : (
-        <p>Loading user data...</p>
-      )}
+        <div className="profile-sidebar">
+          <GamificationDashboard />
+        </div>
+      </div>
     </div>
   );
 }

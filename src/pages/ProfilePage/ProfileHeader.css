@@ -1,0 +1,38 @@
+/* src/pages/ProfilePage/ProfileHeader.css */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.profile-avatar {
+  margin-right: 20px;
+}
+
+.profile-avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-user-info {
+  flex-grow: 1;
+}
+
+.profile-user-info h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.profile-user-info p {
+  margin: 0;
+  font-size: 1.2em;
+  color: #6c757d;
+}
+
+.profile-header-actions {
+  margin-left: auto;
+}
