@@ -1,8 +1,6 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { render, screen, waitFor } from '../../testUtils';
 import SmartReview from './SmartReview';
-import { I18nProvider, useI18n } from '../../i18n/I18nContext';
 
 jest.mock('../../utils/performanceAnalyzer', () => ({
     analyzePerformance: () => [{ type: 'flashcard', data: { id: 1, front: 'Hello', back: 'World', interval: 1, factor: 2.5 } }],
@@ -22,13 +20,7 @@ jest.mock('../../i18n/I18nContext', () => ({
 
 describe('SmartReview', () => {
     it('renders the smart review items', async () => {
-        render(
-            <MemoryRouter>
-                <I18nProvider>
-                    <SmartReview userId="1" />
-                </I18nProvider>
-            </MemoryRouter>
-        );
+        render(<SmartReview userId="1" />);
         await waitFor(() => {
             expect(screen.getByText('flashcard: 1')).toBeInTheDocument();
         });
