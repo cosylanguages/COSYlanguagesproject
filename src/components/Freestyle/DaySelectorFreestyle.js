@@ -2,6 +2,7 @@
 import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useDaySelection } from '../../hooks/useDaySelection';
+import { useFreestyle } from '../../contexts/FreestyleContext';
 import './DaySelectorFreestyle.css';
 
 /**
@@ -11,6 +12,7 @@ import './DaySelectorFreestyle.css';
  * @returns {JSX.Element} The DaySelectorFreestyle component.
  */
 const DaySelectorFreestyle = ({ language }) => {
+  const { selectedDays } = useFreestyle();
   const {
     internalSingleDay,
     setInternalSingleDay,
@@ -75,7 +77,7 @@ const DaySelectorFreestyle = ({ language }) => {
           >
             <option value="">{t('daySelector.selectDay', 'Select Day')}</option>
             {daysOptions.map((day) => (
-              <option key={day} value={day}>
+              <option key={day} value={day} className={selectedDays.includes(day) ? 'selected' : ''}>
                 {day}
               </option>
             ))}
@@ -96,7 +98,7 @@ const DaySelectorFreestyle = ({ language }) => {
             <select id="freestyle-day-from" value={internalDayFrom} onChange={(e) => setInternalDayFrom(e.target.value)} className="day-select-dropdown">
               <option value="">{t('daySelector.selectStartDay', 'Start')}</option>
               {daysOptions.map((day) => (
-                <option key={`from-${day}`} value={day}>{day}</option>
+                <option key={`from-${day}`} value={day} className={selectedDays.includes(day) ? 'selected' : ''}>{day}</option>
               ))}
             </select>
           </div>
@@ -105,7 +107,7 @@ const DaySelectorFreestyle = ({ language }) => {
             <select id="freestyle-day-to" value={internalDayTo} onChange={(e) => setInternalDayTo(e.target.value)} className="day-select-dropdown">
               <option value="">{t('daySelector.selectEndDay', 'End')}</option>
               {daysOptions.map((day) => (
-                <option key={`to-${day}`} value={day}>{day}</option>
+                <option key={`to-${day}`} value={day} className={selectedDays.includes(day) ? 'selected' : ''}>{day}</option>
               ))}
             </select>
           </div>
