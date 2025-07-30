@@ -5,9 +5,15 @@ import { AuthProvider } from './contexts/AuthContext';
 import { UserProfileProvider } from './contexts/UserProfileContext';
 import { I18nProvider } from './i18n/I18nContext';
 
+const mockI18n = {
+  t: (key) => key,
+  language: 'en',
+  currentLangKey: 'en'
+};
+
 const AllTheProviders = ({ children }) => {
   return (
-    <I18nProvider>
+    <I18nProvider i18n={mockI18n}>
       <MemoryRouter>
         <AuthProvider>
           <UserProfileProvider>

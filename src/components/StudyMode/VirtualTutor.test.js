@@ -1,6 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import { render, screen, fireEvent, waitFor } from '../../testUtils';
 import VirtualTutor from './VirtualTutor';
 
 global.RiveScript = jest.fn(() => ({
@@ -11,7 +10,7 @@ global.RiveScript = jest.fn(() => ({
 
 describe('VirtualTutor', () => {
     it('renders the virtual tutor and allows sending messages', async () => {
-        render(<I18nProvider><VirtualTutor /></I18nProvider>);
+        render(<VirtualTutor />);
         fireEvent.change(screen.getByPlaceholderText('Ask a question...'), { target: { value: 'Test question' } });
         fireEvent.click(screen.getByText('Send'));
         await waitFor(() => {
