@@ -2,7 +2,6 @@
 import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useDaySelection } from '../../hooks/useDaySelection';
-import { useFreestyle } from '../../contexts/FreestyleContext';
 import './DaySelectorFreestyle.css';
 
 /**
@@ -12,7 +11,6 @@ import './DaySelectorFreestyle.css';
  * @returns {JSX.Element} The DaySelectorFreestyle component.
  */
 const DaySelectorFreestyle = ({ language }) => {
-  const { selectedDays } = useFreestyle();
   const {
     internalSingleDay,
     setInternalSingleDay,
