@@ -5,7 +5,7 @@ import translations from './translationsData';
 /**
  * The i18n context.
  */
-const I18nContext = createContext();
+export const I18nContext = createContext();
 
 /**
  * A custom hook for accessing the i18n context.
