@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import { useI18n } from '../../i18n/I18nContext';
-import { addCardToStudySet } from '../../api/studySets';
+import { fetchStudySets, addStudySet, addCardToStudySet } from '../../api/studySets';
 import { commentOnEvent } from '../../api/community';
 import { useAuth } from '../../contexts/AuthContext';
+import toast from 'react-hot-toast';
 import './SpeakingClubPost.css';
 
 const SpeakingClubPost = ({ event }) => {
@@ -17,17 +18,26 @@ const SpeakingClubPost = ({ event }) => {
 
   const handleAddWordToDictionary = async (word) => {
     try {
-      // Assuming a default study set ID of 1, as per the mock data.
-      // In a real app, you'd likely fetch the user's study sets and let them choose.
-      const studySetId = 1;
-      await addCardToStudySet(studySetId, {
+      let studySets = await fetchStudySets();
+      let targetSet;
+
+      if (studySets.length === 0) {
+        // If no study sets exist, create a default one.
+        targetSet = await addStudySet({ name: 'My Dictionary' });
+        toast.success('Created a new "My Dictionary" for you!');
+      } else {
+        // Otherwise, use the first study set.
+        targetSet = studySets[0];
+      }
+
+      await addCardToStudySet(targetSet._id, {
         front: word,
         back: '... add definition', // Placeholder for the back of the card
       });
-      alert(`"${word}" added to your dictionary!`);
+      toast.success(`"${word}" added to ${targetSet.name}!`);
     } catch (error) {
       console.error('Failed to add word to dictionary:', error);
-      alert('Failed to add word to dictionary.');
+      toast.error('Failed to add word to dictionary.');
     }
   };
 
@@ -37,9 +47,10 @@ const SpeakingClubPost = ({ event }) => {
       const updatedComments = await commentOnEvent(event._id, { text: newComment });
       setComments(updatedComments);
       setNewComment('');
+      toast.success('Comment posted!');
     } catch (error) {
       console.error('Failed to post comment:', error);
-      alert('Failed to post comment.');
+      toast.error('Failed to post comment.');
     }
   };
 
@@ -96,7 +107,7 @@ const SpeakingClubPost = ({ event }) => {
         <h4>{t('speakingClubPost.comments', 'Comments')}</h4>
         {comments.map((comment, index) => (
           <div key={index} className="comment">
-            <p><strong>{comment.author?.name || 'Anonymous'}:</strong> {comment.text}</p>
+            <p><strong>{comment.author?.username || 'Anonymous'}:</strong> {comment.text}</p>
           </div>
         ))}
         {currentUser && (
