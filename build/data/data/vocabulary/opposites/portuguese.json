@@ -1,0 +1,72 @@
+{
+  "1": {
+    "Olá": "Adeus",
+    "Adeus": "Olá",
+    "Sim": "Não",
+    "Não": "Sim",
+    "Obrigado": "De nada",
+    "De nada": "Obrigado"
+  },
+  "2": {
+    "O menino": "A menina", 
+    "A menina": "O menino", 
+    "A mulher": "O homem", 
+    "O homem": "A mulher", 
+    "A pessoa": "A coisa",
+    "A coisa": "A pessoa", 
+    "O estudante": "O professor", 
+    "A estudante": "A professora", 
+    "O professor": "O estudante", 
+    "A professora": "A estudante", 
+    "Ele": "Ela",
+    "Ela": "Ele"
+  },
+  "3": {
+    "A mãe": "O pai", 
+    "O pai": "A mãe", 
+    "A irmã": "O irmão", 
+    "O irmão": "A irmã", 
+    "A filha": "O filho", 
+    "O filho": "A filha", 
+    "O marido": "A esposa",
+    "A esposa": "O marido", 
+    "O amigo": "A amiga", 
+    "A amiga": "O amigo"
+  },
+  "4": {
+    "0": "Zero",
+    "Zero": "0",
+    "1": "Um",
+    "Um": "1",
+    "2": "Dois",
+    "Dois": "2",
+    "3": "Três",
+    "Três": "3",
+    "4": "Quatro",
+    "Quatro": "4",
+    "5": "Cinco",
+    "Cinco": "5",
+    "6": "Seis",
+    "Seis": "6",
+    "7": "Sete",
+    "Sete": "7",
+    "8": "Oito",
+    "Oito": "8",
+    "9": "Nove",
+    "Nove": "9"
+  },
+  "5": {
+    "Bom": "Mal",
+    "Mal": "Bom",
+    "Grande": "Pequeno",
+    "Pequeno": "Grande",
+    "Fácil": "Difícil",
+    "Difícil": "Fácil",
+    "Interessante": "Chato",
+    "Chato": "Interessante",
+    "Frio": "Quente",
+    "Quente": "Frio",
+    "Caro": "Barato",
+    "Barato": "Caro"
+  }
+}
