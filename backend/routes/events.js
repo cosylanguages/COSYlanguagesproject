@@ -18,7 +18,7 @@ router.route('/').get(async (req, res) => {
       .sort({ start: -1 })
       .skip((page - 1) * limit)
       .limit(parseInt(limit))
-      .populate('comments.author', 'name'); // Populate author's name
+      .populate('comments.author', 'username'); // Populate author's username
 
     const totalEvents = await Event.countDocuments(query);
 
@@ -63,10 +63,32 @@ router.route('/:id/comments').post(async (req, res) => {
   }
 });
 
+// Like/unlike an event
+router.route('/:id/like').post(async (req, res) => {
+  try {
+    const event = await Event.findById(req.params.id);
+    if (!event) return res.status(404).json('Event not found');
+
+    const userId = req.user._id;
+    const index = event.likes.indexOf(userId);
+
+    if (index === -1) {
+      event.likes.push(userId);
+    } else {
+      event.likes.splice(index, 1);
+    }
+
+    await event.save();
+    res.json(event);
+  } catch (err) {
+    res.status(400).json('Error: ' + err);
+  }
+});
+
 // Get event by id
 router.route('/:id').get((req, res) => {
   Event.findById(req.params.id)
-    .populate('comments.author', 'name')
+    .populate('comments.author', 'username')
     .then(event => res.json(event))
     .catch(err => res.status(400).json('Error: ' + err));
 });
