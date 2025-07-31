@@ -54,7 +54,10 @@ router.route('/:id/comments').post(async (req, res) => {
 
     event.comments.push(newComment);
     await event.save();
-    res.status(201).json(event.comments);
+
+    // Populate the author of the newly added comment
+    const updatedEvent = await Event.findById(event._id).populate('comments.author', 'username');
+    res.status(201).json(updatedEvent.comments);
   } catch (err) {
     res.status(400).json('Error: ' + err);
   }

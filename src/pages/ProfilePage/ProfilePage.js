@@ -9,6 +9,7 @@ import { updateUserProfile } from '../../api/api';
 import Tabs from '../../components/Common/Tabs';
 import { useI18n } from '../../i18n/I18nContext';
 import toast from 'react-hot-toast';
+import MyStudySetsPage from '../MyStudySetsPage/MyStudySetsPage';
 import './ProfilePage.css';
 
 function ProfilePage() {
@@ -42,6 +43,9 @@ function ProfilePage() {
           <Tabs>
             <div label={t('profile.tabs.userInformation', 'User Information')}>
               <UserInformation user={currentUser} isEditMode={isEditMode} onSave={handleSave} />
+            </div>
+            <div label={t('profile.tabs.myStudySets', 'My Study Sets')}>
+              <MyStudySetsPage />
             </div>
             <div label={t('profile.tabs.settings', 'Settings')}>
               <Settings />

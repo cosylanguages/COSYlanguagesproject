@@ -11,13 +11,15 @@ const postsRouter = require('./routes/posts');
 const eventsRouter = require('./routes/events');
 
 app.use(express.json());
+const mockAuth = require('./middleware/mockAuth');
+
 app.use('/auth', authRouter);
-app.use('/study-sets', studySetsRouter);
+app.use('/study-sets', mockAuth, studySetsRouter);
 app.use('/progress', progressRouter);
 app.use('/freestyle-progress', freestyleProgressRouter);
 app.use('/booster-packs', boosterPacksRouter);
 app.use('/posts', postsRouter);
-app.use('/events', eventsRouter);
+app.use('/events', mockAuth, eventsRouter);
 
 mongoose.connect('mongodb://localhost/cosylanguages', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
