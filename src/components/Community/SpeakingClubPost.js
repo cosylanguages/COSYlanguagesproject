@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
 import { useI18n } from '../../i18n/I18nContext';
 import { fetchStudySets, addStudySet, addCardToStudySet } from '../../api/studySets';
-import { commentOnEvent } from '../../api/community';
+import { commentOnEvent, likeEvent } from '../../api/community';
 import { useAuth } from '../../contexts/AuthContext';
 import toast from 'react-hot-toast';
 import './SpeakingClubPost.css';
@@ -15,6 +15,12 @@ const SpeakingClubPost = ({ event }) => {
   const [loop] = useState(true);
   const [newComment, setNewComment] = useState('');
   const [comments, setComments] = useState(event.comments || []);
+  const [likes, setLikes] = useState(event.likes || []);
+
+  useEffect(() => {
+    setComments(event.comments || []);
+    setLikes(event.likes || []);
+  }, [event]);
 
   const handleAddWordToDictionary = async (word) => {
     try {
@@ -22,17 +28,15 @@ const SpeakingClubPost = ({ event }) => {
       let targetSet;
 
       if (studySets.length === 0) {
-        // If no study sets exist, create a default one.
         targetSet = await addStudySet({ name: 'My Dictionary' });
         toast.success('Created a new "My Dictionary" for you!');
       } else {
-        // Otherwise, use the first study set.
         targetSet = studySets[0];
       }
 
       await addCardToStudySet(targetSet._id, {
         front: word,
-        back: '... add definition', // Placeholder for the back of the card
+        back: '... add definition',
       });
       toast.success(`"${word}" added to ${targetSet.name}!`);
     } catch (error) {
@@ -54,17 +58,38 @@ const SpeakingClubPost = ({ event }) => {
     }
   };
 
+  const handleLike = async () => {
+    try {
+      const updatedEvent = await likeEvent(event._id);
+      setLikes(updatedEvent.likes);
+    } catch (error) {
+      console.error('Failed to like event:', error);
+      toast.error('Failed to like event.');
+    }
+  };
+
   if (!event) {
     return <div>{t('speakingClubPost.loading', 'Loading event...')}</div>;
   }
 
   const getVideoUrl = (url) => {
     return url.replace("youtube.com", "pense.pro");
-  }
+  };
+
+  const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  };
 
   return (
     <div className="speaking-club-post">
-      <h3 className="post-title">{event.title}</h3>
+      <div className="post-header">
+        <img src="/path/to/placeholder-avatar.png" alt="author avatar" className="post-author-avatar" />
+        <div>
+          <h3 className="post-title">{event.title}</h3>
+          <p className="post-date">{formatDate(event.start)}</p>
+        </div>
+      </div>
       <p className="post-description">{event.description}</p>
 
       {event.videoUrl && (
@@ -81,6 +106,12 @@ const SpeakingClubPost = ({ event }) => {
           />
         </div>
       )}
+
+      <div className="post-actions">
+        <button onClick={handleLike} className="like-btn">
+          ❤️ {likes.length} {t('speakingClubPost.likes', 'Likes')}
+        </button>
+      </div>
 
       <div className="post-details">
         <h4>{t('speakingClubPost.topics', 'Topics')}</h4>

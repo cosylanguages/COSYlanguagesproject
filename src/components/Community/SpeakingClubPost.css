@@ -1,26 +1,56 @@
 .speaking-club-post {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.speaking-club-post:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.post-author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 16px;
+  object-fit: cover;
 }
 
 .post-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.post-date {
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 16px;
 }
 
 .post-description {
   font-size: 1rem;
   color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
+  line-height: 1.6;
 }
 
 .video-container {
   position: relative;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  margin-bottom: 15px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .react-player {
@@ -29,32 +59,49 @@
   left: 0;
 }
 
-.video-controls {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
+.post-actions {
+  margin-bottom: 24px;
 }
 
-.video-controls button {
+.like-btn {
   background-color: #f0f0f0;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px 10px;
+  border-radius: 20px;
+  padding: 8px 16px;
   cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.like-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.post-details {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
 }
 
 .post-details h4 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
   border-bottom: 2px solid #eee;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
 }
 
 .vocabulary-list li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
+  padding: 8px 0;
+  font-size: 1rem;
 }
 
 .add-word-btn {
@@ -62,40 +109,62 @@
   color: white;
   border: none;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  font-size: 1rem;
+  width: 28px;
+  height: 28px;
+  font-size: 1.25rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.2s;
+}
+
+.add-word-btn:hover {
+  background-color: #0056b3;
 }
 
 .comments-section {
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .comment {
   background-color: #f9f9f9;
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.comment p {
+  margin: 0;
+}
+
+.comment-input-area {
+  display: flex;
+  flex-direction: column;
 }
 
 .comment-input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
   resize: vertical;
+  font-size: 1rem;
 }
 
 .comment-submit-btn {
   background-color: #28a745;
   color: white;
   border: none;
-  border-radius: 4px;
-  padding: 10px 15px;
+  border-radius: 8px;
+  padding: 12px 18px;
   cursor: pointer;
+  align-self: flex-end;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.comment-submit-btn:hover {
+  background-color: #218838;
 }

@@ -15,6 +15,11 @@ export const likePost = async (postId) => {
   return response.data;
 };
 
+export const likeEvent = async (eventId) => {
+  const response = await apiClient.post(`/events/${eventId}/like`);
+  return response.data;
+};
+
 export const commentOnPost = async (postId, commentData) => {
   const response = await apiClient.post(`/posts/${postId}/comment`, commentData);
   return response.data;
