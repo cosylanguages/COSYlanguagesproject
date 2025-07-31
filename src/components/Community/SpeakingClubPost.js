@@ -10,9 +10,9 @@ import './SpeakingClubPost.css';
 const SpeakingClubPost = ({ event }) => {
   const { t } = useI18n();
   const { currentUser } = useAuth();
-  const [playing, setPlaying] = useState(true);
-  const [muted, setMuted] = useState(true);
-  const [loop, setLoop] = useState(true);
+  const [playing] = useState(true);
+  const [muted] = useState(true);
+  const [loop] = useState(true);
   const [newComment, setNewComment] = useState('');
   const [comments, setComments] = useState(event.comments || []);
 
