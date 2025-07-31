@@ -20,8 +20,15 @@ export const commentOnPost = async (postId, commentData) => {
   return response.data;
 };
 
-export const getEvents = async () => {
-  const response = await apiClient.get('/events');
+export const commentOnEvent = async (eventId, commentData) => {
+  const response = await apiClient.post(`/events/${eventId}/comments`, commentData);
+  return response.data;
+};
+
+export const getEvents = async ({ filter, page, limit }) => {
+  const response = await apiClient.get('/events', {
+    params: { filter, page, limit },
+  });
   return response.data;
 };
 

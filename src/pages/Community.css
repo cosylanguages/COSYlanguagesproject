@@ -1,29 +1,61 @@
-/* src/pages/Community.css */
 .community-page {
   padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.community-content {
+.community-header {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.community-header h1 {
+  font-size: 2rem;
+}
+
+.event-filter button {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.event-filter button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
 }
 
 .community-main {
-  flex-grow: 1;
+  width: 100%;
 }
 
-.community-sidebar {
-  width: 300px;
-  flex-shrink: 0;
+.error-message {
+  color: red;
 }
 
-/* Responsive layout for smaller screens */
-@media (max-width: 768px) {
-  .community-content {
-    flex-direction: column;
-  }
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
 
-  .community-sidebar {
-    width: 100%;
-  }
+.pagination-controls button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }

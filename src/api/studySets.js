@@ -24,3 +24,8 @@ export const deleteStudySet = async (setId) => {
   const response = await apiClient.delete(`/study-sets/${setId}`);
   return response.data;
 };
+
+export const addCardToStudySet = async (studySetId, cardData) => {
+  const response = await apiClient.post(`/study-sets/${studySetId}/cards`, cardData);
+  return response.data;
+};
