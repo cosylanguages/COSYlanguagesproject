@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import IrregularVerbLevelSelector from './IrregularVerbLevelSelector';
 import useVerbs from '../../../hooks/useVerbs.js';
 import IrregularVerbQuiz from '../exercises/grammar/IrregularVerbQuiz';
@@ -80,7 +80,7 @@ const IrregularVerbsPractice = () => {
                 <button onClick={() => setExerciseType('quiz')} className={exerciseType === 'quiz' ? 'selected' : ''}>Quiz</button>
                 <button onClick={() => setExerciseType('fill-letters')} className={exerciseType === 'fill-letters' ? 'selected' : ''}>Fill Letters</button>
                 <button onClick={() => setExerciseType('fill-blanks')} className={exerciseType === 'fill-blanks' ? 'selected' : ''}>Fill Blanks</button>
-                <a href="/" className="study-mode-button">Study Mode</a>
+                <Link to="/" className="study-mode-button">Study Mode</Link>
             </div>
             <div className="category-selector">
                 {getCategories().map(cat => (
