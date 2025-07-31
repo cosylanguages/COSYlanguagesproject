@@ -29,6 +29,19 @@ router.post('/', (req, res) => {
   res.json(newStudySet);
 });
 
+// Add a card to a study set
+router.post('/:id/cards', (req, res) => {
+  const { front, back } = req.body;
+  const studySet = studySets.find(s => s.id === parseInt(req.params.id));
+  if (studySet) {
+    const newCard = { id: studySet.cards.length + 1, front, back };
+    studySet.cards.push(newCard);
+    res.json(newCard);
+  } else {
+    res.status(404).json({ success: false, message: 'Study set not found' });
+  }
+});
+
 // Update a study set
 router.put('/:id', (req, res) => {
   const { name } = req.body;

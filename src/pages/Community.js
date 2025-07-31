@@ -1,75 +1,95 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useI18n } from '../i18n/I18nContext';
-import { useAuth } from '../contexts/AuthContext';
-import CommunityHeader from '../components/Community/CommunityHeader';
-import Tabs from '../components/Common/Tabs';
-import Feed from '../components/Community/Feed';
-import EventCalendar from '../components/EventCalendar';
-import Groups from '../components/Community/Groups';
-import Users from '../components/Community/Users';
-import Sidebar from '../components/Community/Sidebar';
-import Modal from '../components/Common/Modal';
-import CreatePost from '../components/CreatePost';
-import EventForm from '../components/EventForm';
+import SpeakingClubPost from '../components/Community/SpeakingClubPost';
+import { getEvents } from '../api/community';
+import './Community.css';
 
 const Community = () => {
   const { t } = useI18n();
-  const { currentUser } = useAuth();
-  const [isCreatePostModalOpen, setIsCreatePostModalOpen] = useState(false);
-  const [isCreateEventModalOpen, setIsCreateEventModalOpen] = useState(false);
+  const [events, setEvents] = useState([]);
+  const [filter, setFilter] = useState('current'); // 'current' or 'past'
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleSearch = (query) => {
-    // TODO: Implement search logic. This should probably filter the content
-    // of the currently active tab (Feed, Events, Groups, or Users).
-    console.log('Searching for:', query);
+  const fetchEvents = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const { events: fetchedEvents, totalPages: fetchedTotalPages } = await getEvents({
+        filter,
+        page: currentPage,
+        limit: 5,
+      });
+      setEvents(fetchedEvents);
+      setTotalPages(fetchedTotalPages);
+    } catch (err) {
+      setError('Failed to fetch events.');
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  }, [filter, currentPage]);
+
+  useEffect(() => {
+    fetchEvents();
+  }, [fetchEvents]);
+
+  const handleFilterChange = (newFilter) => {
+    setFilter(newFilter);
+    setCurrentPage(1); // Reset to first page on filter change
   };
 
-  const handleCreatePost = () => {
-    setIsCreatePostModalOpen(true);
-  };
-
-  const handleCreateEvent = () => {
-    setIsCreateEventModalOpen(true);
+  const handlePageChange = (newPage) => {
+    if (newPage >= 1 && newPage <= totalPages) {
+      setCurrentPage(newPage);
+    }
   };
 
   return (
     <div className="community-page">
-      <CommunityHeader
-        onSearch={handleSearch}
-        onCreatePost={handleCreatePost}
-        onCreateEvent={handleCreateEvent}
-      />
-      <div className="community-content">
-        <div className="community-main">
-          <Tabs>
-            <div label={t('community.tabs.feed', 'Feed')}>
-              <Feed />
-            </div>
-            <div label={t('community.tabs.events', 'Events')}>
-              <EventCalendar />
-            </div>
-            <div label={t('community.tabs.groups', 'Groups')}>
-              <Groups />
-            </div>
-            <div label={t('community.tabs.users', 'Users')}>
-              <Users />
-            </div>
-          </Tabs>
-        </div>
-        <div className="community-sidebar">
-          <Sidebar />
+      <div className="community-header">
+        <h1>{t('community.title', 'Community')}</h1>
+        <div className="event-filter">
+          <button
+            className={filter === 'current' ? 'active' : ''}
+            onClick={() => handleFilterChange('current')}
+          >
+            {t('community.filter.current', 'Current Events')}
+          </button>
+          <button
+            className={filter === 'past' ? 'active' : ''}
+            onClick={() => handleFilterChange('past')}
+          >
+            {t('community.filter.past', 'Past Events')}
+          </button>
         </div>
       </div>
-      {isCreatePostModalOpen && (
-        <Modal isOpen={isCreatePostModalOpen} onClose={() => setIsCreatePostModalOpen(false)}>
-          <CreatePost userId={currentUser?.id} />
-        </Modal>
-      )}
-      {isCreateEventModalOpen && (
-        <Modal isOpen={isCreateEventModalOpen} onClose={() => setIsCreateEventModalOpen(false)}>
-          <EventForm />
-        </Modal>
-      )}
+
+      <div className="community-main">
+        {loading && <p>{t('community.loading', 'Loading...')}</p>}
+        {error && <p className="error-message">{error}</p>}
+        {!loading && !error && events.length > 0 ? (
+          events.map(event => (
+            <SpeakingClubPost key={event._id} event={event} />
+          ))
+        ) : (
+          !loading && <p>{t('community.noEvents', 'No events to display.')}</p>
+        )}
+      </div>
+
+      <div className="pagination-controls">
+        <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+          {t('pagination.previous', 'Previous')}
+        </button>
+        <span>
+          {t('pagination.page', 'Page')} {currentPage} {t('pagination.of', 'of')} {totalPages}
+        </span>
+        <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+          {t('pagination.next', 'Next')}
+        </button>
+      </div>
     </div>
   );
 };
