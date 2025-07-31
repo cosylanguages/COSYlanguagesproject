@@ -8,7 +8,7 @@ import { useI18n } from './i18n/I18nContext';
 // Import layout and page components.
 import Layout from './components/Layout/Layout';
 import Login from './components/Auth/Login';
-import StudyRoutes from './StudyRoutes';
+import StudyModePage from './pages/StudyModePage/StudyModePage';
 import MyStudySetsPage from './pages/MyStudySetsPage/MyStudySetsPage';
 import FreestyleModePage from './pages/FreestyleModePage/FreestyleModePage';
 import GamificationPage from './pages/GamificationPage/GamificationPage';
@@ -100,7 +100,8 @@ function App() {
                 {/* The grammar guidebooks page. */}
                 <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
                 {/* The study mode routes. */}
-                <Route path="study/*" element={<StudyRoutes />} />
+                <Route path="study" element={<Navigate to="en" replace />} />
+                <Route path="study/:lang" element={<StudyModePage />} />
                 {/* The review page. */}
                 <Route path="review" element={<ReviewPage />} />
                 {/* The learned words page, which is a protected route. */}
