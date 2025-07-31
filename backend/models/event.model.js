@@ -29,6 +29,23 @@ const eventSchema = new Schema({
   vocabulary: [String],
   round1: String,
   round2: String,
+  likes: [{
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  }],
+  comments: [{
+    author: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    },
+    text: String,
+    createdAt: {
+      type: Date,
+      default: Date.now
+    }
+  }]
+}, {
+  timestamps: true,
 });
 
 const Event = mongoose.model('Event', eventSchema);
