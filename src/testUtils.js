@@ -4,6 +4,11 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import { UserProfileProvider } from './contexts/UserProfileContext';
 import { I18nProvider } from './i18n/I18nContext';
+import { LatinizationProvider } from './contexts/LatinizationContext';
+import { PlanProvider } from './contexts/PlanContext';
+import { StudyProvider } from './contexts/StudyContext';
+import { StudySetProvider } from './contexts/StudySetContext';
+import { FreestyleProvider } from './contexts/FreestyleContext';
 
 const mockI18n = {
   t: (key) => key,
@@ -19,7 +24,17 @@ const AllTheProviders = ({ children, initialEntries = ['/en'] }) => {
           <I18nProvider i18n={mockI18n}>
             <AuthProvider>
               <UserProfileProvider>
-                {children}
+                <LatinizationProvider>
+                  <PlanProvider>
+                    <StudyProvider>
+                      <StudySetProvider>
+                        <FreestyleProvider>
+                          {children}
+                        </FreestyleProvider>
+                      </StudySetProvider>
+                    </StudyProvider>
+                  </PlanProvider>
+                </LatinizationProvider>
               </UserProfileProvider>
             </AuthProvider>
           </I18nProvider>
