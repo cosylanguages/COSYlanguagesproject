@@ -32,10 +32,16 @@ const Header = () => {
           <img src={`${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosylanguages.png`} alt="Cosy Languages Logo" />
           <span>COSYlanguages</span>
         </Link>
-        <button className="menu-toggle" onClick={toggleMenu}>
+        <button
+          className="menu-toggle"
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+          aria-controls="main-nav"
+        >
           ☰
         </button>
-        <nav className={`header-nav ${menuOpen ? 'active' : ''}`}>
+        <nav id="main-nav" className={`header-nav ${menuOpen ? 'active' : ''}`}>
           <NavLink to="/freestyle" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Freestyle</NavLink>
           <NavLink to="/study" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Study Mode</NavLink>
           <NavLink to="/community" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Community</NavLink>
