@@ -6,12 +6,17 @@ import LanguageHeader from '../../components/Common/LanguageHeader';
 import { useFreestyle } from '../../contexts/FreestyleContext';
 import { useAuth } from '../../contexts/AuthContext';
 // Import the components that make up the freestyle mode page.
+import HeroShowcase from '../../components/Freestyle/HeroShowcase';
+import TryStudyModeButton from '../../components/Freestyle/TryStudyModeButton';
+import CopyCodeCTA from '../../components/Freestyle/CopyCodeCTA';
+import KeyToolsCallouts from '../../components/Freestyle/KeyToolsCallouts';
 import DaySelectorFreestyle from '../../components/Freestyle/DaySelectorFreestyle';
 import PracticeCategoryNav from '../../components/Freestyle/PracticeCategoryNav';
 import ExerciseHost from '../../components/Freestyle/ExerciseHost';
 import HelpPopupIsland from '../../components/Freestyle/HelpPopupIsland';
 import FreestyleProgress from '../../components/Freestyle/FreestyleProgress';
 import BoosterPacks from '../../components/Freestyle/BoosterPacks';
+import InteractiveDemoWidget from '../../components/Freestyle/InteractiveDemoWidget';
 // Import shared and page-specific CSS.
 import '../../freestyle-shared.css';
 import './FreestyleModePage.css';
@@ -31,12 +36,14 @@ const FreestyleModePage = () => {
   return (
     <div className="freestyle-mode-container">
       <h1 className="freestyle-mode-header">{t('freestyle.title', 'Freestyle Mode')}</h1>
+      <HeroShowcase />
       {selectedLanguage && <LanguageHeader selectedLanguage={selectedLanguage} />}
 
       {!selectedLanguage ? (
         <div className="welcome-message">
           <h2>{t('freestyle.welcome.heading', 'Welcome to Freestyle Mode!')}</h2>
           <p>{t('freestyle.welcome.message', 'Please select a language from the header to get started.')}</p>
+          <InteractiveDemoWidget />
         </div>
       ) : (
         <>
@@ -52,6 +59,7 @@ const FreestyleModePage = () => {
           <div className="practice-section">
             <h2>{t('freestyle.customPractice.title', 'Custom Practice')}</h2>
             <p>{t('freestyle.customPractice.description', 'Create your own practice session by selecting a day and a category.')}</p>
+            <TryStudyModeButton />
             <div className="freestyle-controls-container">
               <DaySelectorFreestyle language={selectedLanguage} />
               {selectedDays.length > 0 && (
@@ -69,6 +77,8 @@ const FreestyleModePage = () => {
         </>
       )}
 
+      <CopyCodeCTA />
+      <KeyToolsCallouts />
       <FreestyleProgress />
       <HelpPopupIsland />
     </div>
