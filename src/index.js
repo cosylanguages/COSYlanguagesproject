@@ -29,6 +29,7 @@ import { StudySetProvider } from './contexts/StudySetContext';
 import './index.css';
 import './styles/global.css';
 import './components/Common/animations.css';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 // Create a default Material-UI theme.
 const theme = createTheme();
@@ -82,14 +83,7 @@ if (rootElement) {
   console.error("Failed to find the root element. Please ensure your HTML file has a <div id='root'></div>.");
 }
 
-// Register the service worker for offline capabilities.
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    const swUrl = `${process.env.PUBLIC_URL}/sw.js`;
-    navigator.serviceWorker.register(swUrl).then(registration => {
-      console.log('SW registered: ', registration);
-    }).catch(registrationError => {
-      console.log('SW registration failed: ', registrationError);
-    });
-  });
-}
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
+serviceWorkerRegistration.register();
