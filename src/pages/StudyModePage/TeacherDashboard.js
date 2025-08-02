@@ -18,6 +18,7 @@ import LessonSectionManager from '../../components/StudyMode/LessonSectionManage
 import { getLessonSectionDetails, updateLessonSection } from '../../api/api';
 import { useAuth } from '../../contexts/AuthContext';
 import LessonEditor from '../../components/StudyMode/LessonEditor';
+import Button from '../../components/Common/Button';
 
 // Import the CSS for this component.
 import './TeacherDashboard.css'; 
@@ -273,20 +274,20 @@ const TeacherDashboard = () => {
         <div className="lesson-block-header">
             <span className="block-type-name"><TransliterableText text={t('teacherDashboard.blockTypeLabel', 'Type:')} /> <TransliterableText text={block.typeName} /></span>
             <div className="block-actions">
-                <button 
+                <Button
                   onClick={() => handleMoveBlock(block.id, 'up')} 
-                  className="btn btn-sm btn-light"
+                  className="button--secondary button--sm"
                   disabled={index === 0}
-                  title={t('moveUpBtnTitle', 'Move Up')}><TransliterableText text={'↑'} /></button>
-                <button 
+                  title={t('moveUpBtnTitle', 'Move Up')}><TransliterableText text={'↑'} /></Button>
+                <Button
                   onClick={() => handleMoveBlock(block.id, 'down')} 
-                  className="btn btn-sm btn-light"
+                  className="button--secondary button--sm"
                   disabled={index === totalBlocks - 1}
-                  title={t('moveDownBtnTitle', 'Move Down')}><TransliterableText text={'↓'} /></button>
-                <button onClick={() => handleOpenConfiguration(block)} className="btn btn-sm btn-secondary">
-                    <TransliterableText text={t('configureBtn') || 'Configure'} /></button>
-                <button onClick={() => handleRemoveBlock(block.id)} className="btn btn-sm btn-danger">
-                    <TransliterableText text={t('removeBtn') || 'Remove'} /></button>
+                  title={t('moveDownBtnTitle', 'Move Down')}><TransliterableText text={'↓'} /></Button>
+                <Button onClick={() => handleOpenConfiguration(block)} className="button--secondary button--sm">
+                    <TransliterableText text={t('configureBtn') || 'Configure'} /></Button>
+                <Button onClick={() => handleRemoveBlock(block.id)} className="button--danger button--sm">
+                    <TransliterableText text={t('removeBtn') || 'Remove'} /></Button>
             </div>
         </div>
         <div className="lesson-block-content-preview">
@@ -322,8 +323,8 @@ const TeacherDashboard = () => {
         <h3><TransliterableText text={t('configureBlockTitle', { blockName: editingBlock.typeName })} /></h3>
         <p><TransliterableText text={t('noConfigAvailableYet', { blockType: editingBlock.typeName })} /></p>
         <div className="modal-actions">
-            <button onClick={handleCloseConfiguration} className="btn btn-secondary">
-                <TransliterableText text={t('closeConfigBtn') || 'Close Configuration'} /></button>
+            <Button onClick={handleCloseConfiguration} className="button--secondary">
+                <TransliterableText text={t('closeConfigBtn') || 'Close Configuration'} /></Button>
         </div>
       </div>
     );
@@ -369,15 +370,15 @@ const TeacherDashboard = () => {
             <TransliterableText text={t('studyMode.teacherDashboardHeading', 'Lesson Content Editor')} />
           </h2>
           <div className="dashboard-tabs">
-            <button onClick={() => setActiveTab('lessons')} className={`btn ${activeTab === 'lessons' ? 'btn-primary' : 'btn-secondary'}`}>
+            <Button onClick={() => setActiveTab('lessons')} className={`${activeTab === 'lessons' ? '' : 'button--secondary'}`}>
               <TransliterableText text={t('teacherDashboard.tabs.lessons', 'Lessons')} />
-            </button>
-            <button onClick={() => setActiveTab('templates')} className={`btn ${activeTab === 'templates' ? 'btn-primary' : 'btn-secondary'}`}>
+            </Button>
+            <Button onClick={() => setActiveTab('templates')} className={`${activeTab === 'templates' ? '' : 'button--secondary'}`}>
               <TransliterableText text={t('teacherDashboard.tabs.templates', 'Templates')} />
-            </button>
-            <button onClick={() => setIsVirtualTutorVisible(true)} className="btn btn-secondary">
+            </Button>
+            <Button onClick={() => setIsVirtualTutorVisible(true)} className="button--secondary">
                 <TransliterableText text={'Virtual Tutor'} />
-            </button>
+            </Button>
           </div>
         </div>
         

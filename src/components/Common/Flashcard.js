@@ -1,5 +1,6 @@
 // Import necessary libraries and components.
 import React, { useState } from 'react';
+import Button from './Button';
 // Import the spaced repetition scheduling utility.
 import { getNextReviewInterval } from '../../utils/srs';
 // Import the CSS for this component.
@@ -54,7 +55,7 @@ const Flashcard = ({ card, onReviewed, onAnswered }) => {
 
   // Render the flashcard.
   return (
-    <div className={`flashcard ${isFlipped ? 'flipped' : ''}`} onClick={handleFlip}>
+    <div className={`card flashcard ${isFlipped ? 'flipped' : ''}`} onClick={handleFlip}>
       <div className="flashcard-inner">
         <div className="flashcard-front">
           <p>{card.front}</p>
@@ -63,8 +64,8 @@ const Flashcard = ({ card, onReviewed, onAnswered }) => {
           <p>{card.back}</p>
           {/* Buttons for marking the card as correct or incorrect. */}
           <div className="review-buttons">
-            <button onClick={() => handleReview(true)}>Correct</button>
-            <button onClick={() => handleReview(false)}>Incorrect</button>
+            <Button onClick={() => handleReview(true)}>Correct</Button>
+            <Button onClick={() => handleReview(false)}>Incorrect</Button>
           </div>
         </div>
       </div>

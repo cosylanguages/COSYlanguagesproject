@@ -37,7 +37,7 @@ const ExerciseControls = ({
         <Button
           onClick={onShowHint}
           disabled={!canInteract}
-          className="btn-warning"
+          className="button--warning"
         >
           {hintButtonText}
         </Button>
@@ -46,7 +46,7 @@ const ExerciseControls = ({
         <Button
           onClick={onRandomize}
           disabled={!canInteract && !showNext}
-          className="btn-secondary"
+          className="button--secondary"
         >
           {randomizeButtonText}
         </Button>
@@ -55,7 +55,7 @@ const ExerciseControls = ({
         <Button
           onClick={onCheckAnswer}
           disabled={!canInteract}
-          className="btn-success"
+          className="button--success"
         >
           {checkButtonText}
         </Button>
@@ -64,7 +64,7 @@ const ExerciseControls = ({
         <Button
           onClick={onRevealAnswer}
           disabled={!canInteract}
-          className="btn-info"
+          className="button--info"
         >
           {revealButtonText}
         </Button>
@@ -73,7 +73,7 @@ const ExerciseControls = ({
       {showNext && onNextExercise && (
         <Button
           onClick={onNextExercise}
-          className="btn-primary"
+          className=""
         >
           {nextButtonText}
         </Button>

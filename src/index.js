@@ -28,11 +28,57 @@ import { StudySetProvider } from './contexts/StudySetContext';
 // Import global CSS files.
 import './index.css';
 import './styles/global.css';
+import './styles/cosy.css';
 import './components/Common/animations.css';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 // Create a default Material-UI theme.
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#1BB6AD',
+      dark: '#169087',
+    },
+    text: {
+      primary: '#000000',
+    },
+    background: {
+      default: '#FFFFFF',
+      paper: '#FFFFFF',
+    },
+  },
+  typography: {
+    fontFamily: '"Open Sans", sans-serif',
+    h1: {
+      fontFamily: '"Josefin Sans", sans-serif',
+      fontWeight: 300,
+    },
+    h2: {
+      fontFamily: '"Josefin Sans", sans-serif',
+      fontWeight: 300,
+    },
+    h3: {
+      fontFamily: '"Josefin Sans", sans-serif',
+      fontWeight: 300,
+    },
+    h4: {
+      fontFamily: '"Josefin Sans", sans-serif',
+      fontWeight: 300,
+    },
+    h5: {
+      fontFamily: '"Josefin Sans", sans-serif',
+      fontWeight: 300,
+    },
+    h6: {
+      fontFamily: '"Josefin Sans", sans-serif',
+      fontWeight: 300,
+    },
+    button: {
+        fontFamily: '"Josefin Sans", sans-serif',
+        fontWeight: 300,
+    }
+  },
+});
 
 // Get the root element from the HTML file.
 const rootElement = document.getElementById('root');

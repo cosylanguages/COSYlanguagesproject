@@ -1,7 +1,7 @@
 /* DayManager.css */
 .day-manager {
     padding: var(--spacing-sm);
-    background-color: var(--color-surface);
+    background-color: var(--color-light);
     border-radius: var(--border-radius-md);
     margin-bottom: var(--spacing-lg);
 }
@@ -9,7 +9,7 @@
 .day-manager h3 {
     margin-top: 0;
     margin-bottom: var(--spacing-md);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-muted);
     padding-bottom: var(--spacing-sm);
 }
 
@@ -21,18 +21,9 @@
 
 .add-day-form input[type="text"] {
     flex-grow: 1;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-sm);
-}
-
-/* Styling for the Button component within .add-day-form */
-.add-day-form .btn { /* Target the .btn class of the Button component */
-    padding: var(--spacing-sm) var(--spacing-md); /* Custom padding: 8px 16px */
-    border-radius: var(--border-radius-sm); /* Custom border-radius */
-    white-space: nowrap;
-    /* background-color, color, border, cursor, disabled states
-       are handled by Button variant="primary" and global styles. */
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-muted);
+    border-radius: var(--radius-sm);
 }
 
 .day-list {
@@ -40,8 +31,8 @@
     padding: 0;
     max-height: 300px; /* Example max height for scroll */
     overflow-y: auto;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--color-muted);
+    border-radius: var(--radius-sm);
 }
 
 .day-list-item {
@@ -49,7 +40,7 @@
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-sm) var(--spacing-md);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-muted);
     cursor: pointer;
     transition: background-color 0.15s ease-in-out;
 }
@@ -59,7 +50,7 @@
 }
 
 .day-list-item:hover {
-    background-color: #e9ecef; /* Light hover effect */
+    background-color: var(--color-muted);
 }
 
 .day-list-item.selected {
@@ -73,32 +64,25 @@
     margin-right: var(--spacing-sm);
 }
 
-/* Styling for Button components within .day-actions */
-.day-actions .btn { /* Target .btn class of Button components */
-    padding: var(--spacing-xs); /* Custom very small padding: 4px */
-    margin-left: var(--spacing-xs);
-    /* font-size is handled by size="sm" on the Button component (0.875rem) */
-    /* background, border, color, cursor, hover/disabled states
-       are handled by Button size="sm", variant="light" and global styles. */
+.day-actions {
+    display: flex;
+    gap: var(--space-xs);
 }
 
-/* Specific styles for buttons (btn-rename, btn-delete might have icon color tweaks if needed) */
-/* .btn-rename, .btn-delete can be used if further distinction beyond variant="light" is required */
-
-.day-list-item.selected .day-actions .btn {
+.day-list-item.selected .day-actions .button {
     color: white; /* Make icons/text white on selected background */
     border-color: rgba(255,255,255,0.5); /* Optional: Adjust border for selected state */
 }
 /* Ensure hover on selected items' buttons is also visible */
-.day-list-item.selected .day-actions .btn:hover {
+.day-list-item.selected .day-actions .button:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Light hover effect on selected buttons */
 }
 
 
 .error-message { /* Consistent error message styling */
-    color: var(--color-danger);
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
+    color: #E57373;
+    background-color: #FFEBEE;
+    border: 1px solid #E57373;
     padding: var(--spacing-sm);
     border-radius: var(--border-radius-sm);
     margin-bottom: var(--spacing-md);

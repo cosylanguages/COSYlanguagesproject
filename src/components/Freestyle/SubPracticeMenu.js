@@ -1,6 +1,7 @@
 import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText'; // For consistency if needed
+import Button from '../Common/Button';
 import './PracticeCategoryNav.css'; // Can reuse or create specific styles
 
 // Props now include menu navigation logic utilities
@@ -67,14 +68,14 @@ const SubPracticeMenu = ({
       </h4>
       <div className="practice-category-buttons"> {/* Reusing some styles */}
         {itemsToDisplay.map((item) => (
-          <button
+          <Button
             key={item.id}
             onClick={() => onMenuSelect(item.id)}
             className={`practice-category-btn sub-practice-btn ${item.isActive ? 'active' : ''}`}
             aria-pressed={item.isActive}
           >
             <TransliterableText text={item.label} />
-          </button>
+          </Button>
         ))}
       </div>
     </div>

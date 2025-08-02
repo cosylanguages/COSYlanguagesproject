@@ -21,6 +21,7 @@ import { displayComponentMap } from '../../components/StudyMode/common/displayCo
 // Import the helper function for generating consistent element IDs.
 import { getBlockElementId } from './utils';
 import { logos, flags } from '../../config/languageAssets';
+import Button from '../../components/Common/Button';
 
 // Import the CSS for this component.
 import './StudentDashboard.css'; 
@@ -125,12 +126,12 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
       {/* The header for the current lesson, with buttons for study tools. */}
       <div className="lesson-header">
         <h2><TransliterableText text={t('studyMode.lessonTitlePlaceholder', 'Current Lesson')} /></h2>
-        <button onClick={() => setIsMistakeNotebookVisible(true)}><TransliterableText text={t('studentDashboard.mistakeNotebook', 'Mistake Notebook')} /></button>
-        <button onClick={() => setIsGrammarReviewVisible(true)}><TransliterableText text={t('studentDashboard.grammarReview', 'Grammar Review')} /></button>
-        <button onClick={() => setIsVirtualTutorVisible(true)}><TransliterableText text={t('studentDashboard.virtualTutor', 'Virtual Tutor')} /></button>
-        <button onClick={() => setIsSmartReviewVisible(true)}><TransliterableText text={t('studentDashboard.smartReview', 'Smart Review')} /></button>
-        <button onClick={() => setIsFillInTheBlanksVisible(true)}><TransliterableText text={t('studentDashboard.fillInTheBlanks', 'Fill in the Blanks')} /></button>
-        <button onClick={() => setIsSentenceUnscrambleVisible(true)}><TransliterableText text={t('studentDashboard.sentenceUnscramble', 'Sentence Unscramble')} /></button>
+        <Button onClick={() => setIsMistakeNotebookVisible(true)}><TransliterableText text={t('studentDashboard.mistakeNotebook', 'Mistake Notebook')} /></Button>
+        <Button onClick={() => setIsGrammarReviewVisible(true)}><TransliterableText text={t('studentDashboard.grammarReview', 'Grammar Review')} /></Button>
+        <Button onClick={() => setIsVirtualTutorVisible(true)}><TransliterableText text={t('studentDashboard.virtualTutor', 'Virtual Tutor')} /></Button>
+        <Button onClick={() => setIsSmartReviewVisible(true)}><TransliterableText text={t('studentDashboard.smartReview', 'Smart Review')} /></Button>
+        <Button onClick={() => setIsFillInTheBlanksVisible(true)}><TransliterableText text={t('studentDashboard.fillInTheBlanks', 'Fill in the Blanks')} /></Button>
+        <Button onClick={() => setIsSentenceUnscrambleVisible(true)}><TransliterableText text={t('studentDashboard.sentenceUnscramble', 'Sentence Unscramble')} /></Button>
       </div>
       
       {/* Render the study tools if they are visible. */}
@@ -168,13 +169,13 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
                 />
                 {/* Navigation buttons for moving between blocks. */}
                 <div className="block-navigation-actions">
-                  <button 
+                  <Button
                     onClick={() => handleNavigateBlock('previous', index)} 
                     disabled={index === 0}
-                    className="btn btn-sm btn-outline-secondary prev-block-btn"
+                    className="button--secondary prev-block-btn"
                   >
                     <TransliterableText text={t('studentDashboard.prevBlockBtn', 'Previous')} />
-                  </button>
+                  </Button>
                   <span className="block-nav-page-info">
                     <TransliterableText 
                         text={t('studentDashboard.blockPageInfo', 'Block {current}/{totalBlocks}', {
@@ -183,13 +184,13 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
                         })}
                     />
                   </span>
-                  <button 
+                  <Button
                     onClick={() => handleNavigateBlock('next', index)} 
                     disabled={index === lessonBlocks.length - 1}
-                    className="btn btn-sm btn-outline-secondary next-block-btn"
+                    className="button--secondary next-block-btn"
                   >
                     <TransliterableText text={t('studentDashboard.nextBlockBtn', 'Next')} />
-                  </button>
+                  </Button>
                 </div>
               </div>
             );

@@ -182,7 +182,6 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
                 <Button
                     type="submit"
                     disabled={isLoading || !newDayTitle.trim()}
-                    variant="contained"
                 >
                     {isLoading && newDayTitle ? (t('addingDay') || 'Adding...') : (t('addDayBtn') || 'Add Day')}
                 </Button>
@@ -228,8 +227,8 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
                                             if (e.key === 'Escape') handleCancelRename();
                                         }}
                                     />
-                                    <Button size="small" variant="success" onClick={() => handleSaveRename(day.id, day.title)}>✓</Button>
-                                    <Button size="small" variant="danger" onClick={handleCancelRename}>×</Button>
+                                    <Button className="button--success button--sm" onClick={() => handleSaveRename(day.id, day.title)}>✓</Button>
+                                    <Button className="button--danger button--sm" onClick={handleCancelRename}>×</Button>
                                 </div>
                             ) : (
                                 <>
@@ -238,14 +237,14 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
                                     </span>
                                     <div className="day-actions">
                                         <Button
-                                            size="small"
+                                            className="button--secondary button--sm"
                                             onClick={(e) => { e.stopPropagation(); handleStartRename(day); }}
                                             title={t('renameDayTooltip') || "Rename day"}
                                             aria-label={t('renameDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish }) || `Rename ${day.title?.[currentUILanguage] || day.title?.COSYenglish}`}
                                             disabled={isLoading}
                                         >✏️</Button>
                                         <Button
-                                            size="small"
+                                            className="button--danger button--sm"
                                             onClick={(e) => { e.stopPropagation(); handleOpenDeleteConfirm(day); }}
                                             title={t('deleteDayTooltip') || "Delete day"}
                                             aria-label={t('deleteDayAria', { dayTitle: day.title?.[currentUILanguage] || day.title?.COSYenglish }) || `Delete ${day.title?.[currentUILanguage] || day.title?.COSYenglish}`}
@@ -265,10 +264,10 @@ const DayManager = ({ onDaySelect, selectedDayId }) => {
                         {t('confirmDeleteDay', { dayTitle: dayToDelete?.title?.[currentUILanguage] || dayToDelete?.title?.COSYenglish || '' })}
                     </p>
                     <div className="modal-actions">
-                        <Button onClick={handleCloseDeleteConfirm} variant="secondary">
+                        <Button onClick={handleCloseDeleteConfirm} className="button--secondary">
                             {t('cancelBtn', 'Cancel')}
                         </Button>
-                        <Button onClick={handleConfirmDelete} variant="danger" disabled={isLoading}>
+                        <Button onClick={handleConfirmDelete} className="button--danger" disabled={isLoading}>
                             {isLoading ? t('deletingBtn', 'Deleting...') : t('deleteBtn', 'Delete')}
                         </Button>
                     </div>

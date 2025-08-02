@@ -2,6 +2,7 @@ import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useStudy } from '../../contexts/StudyContext';
 import TransliterableText from '../../components/Common/TransliterableText';
+import Button from '../../components/Common/Button';
 
 const RoleSelector = () => {
   const { t } = useI18n();
@@ -23,22 +24,22 @@ const RoleSelector = () => {
   return (
     <div className="role-selector-container">
       <div className="role-buttons-wrapper">
-        <button
+        <Button
           id="student-role-btn"
           className={getButtonClass('student')}
           onClick={() => setSelectedRole('student')}
           aria-pressed={selectedRole === 'student'}
         >
           <TransliterableText text={t('studyMode.studentRole', '🧑‍🎓 Student')} />
-        </button>
-        <button
+        </Button>
+        <Button
           id="teacher-role-btn"
           className={getButtonClass('teacher')}
           onClick={() => setSelectedRole('teacher')}
           aria-pressed={selectedRole === 'teacher'}
         >
           <TransliterableText text={t('studyMode.teacherRole', '🧑‍🏫 Teacher')} />
-        </button>
+        </Button>
       </div>
     </div>
   );

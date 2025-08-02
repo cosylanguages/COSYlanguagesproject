@@ -1,21 +1,21 @@
 .label-pictures-block {
     padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--color-muted);
     border-radius: 8px;
-    background-color: #fff;
+    background-color: var(--color-light);
 }
 
 .label-pictures-block h4 {
     margin-top: 0;
-    color: var(--text-primary);
+    color: var(--color-dark);
 }
 
 .image-container-lp-display {
     position: relative;
     max-width: 100%; /* Ensure it doesn't overflow its container */
     margin: 15px auto; /* Center it and add some margin */
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-muted);
 }
 
 .image-container-lp-display img {
@@ -28,9 +28,9 @@
     position: absolute;
     width: 28px; /* Slightly larger for easier clicking */
     height: 28px;
-    background-color: var(--primary-color-light); /* Use a theme color */
-    color: var(--primary-color-text);
-    border: 2px solid var(--primary-color);
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: 2px solid var(--color-primary-dark);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -44,21 +44,21 @@
 }
 
 .hotspot-marker-display:hover {
-    background-color: var(--primary-color);
+    background-color: var(--color-primary-dark);
     transform: translate(-50%, -50%) scale(1.1);
 }
 
 .hotspot-marker-display.answered.correct {
-    background-color: var(--success-color-light); /* Correct answer green */
-    border-color: var(--success-color);
-    color: var(--success-color-text);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary-dark);
+    color: var(--color-light);
     cursor: default;
 }
 
 .hotspot-marker-display.answered.incorrect {
-    background-color: var(--danger-color-light); /* Incorrect answer red */
-    border-color: var(--danger-color);
-    color: var(--danger-color-text);
+    background-color: #E57373;
+    border-color: #EF5350;
+    color: var(--color-light);
     cursor: default;
 }
 
@@ -73,9 +73,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: var(--color-light);
     padding: 25px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-muted);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     border-radius: 8px;
     z-index: 1050; /* High z-index to be on top */
@@ -93,7 +93,7 @@
     width: calc(100% - 22px);
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-muted);
     border-radius: 4px;
     font-size: 1em;
 }
@@ -112,8 +112,8 @@
 .lp-results-summary {
     margin-top: 20px;
     padding: 10px;
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
+    background-color: var(--color-muted);
+    border: 1px solid var(--color-muted);
     border-radius: 4px;
 }
 .lp-results-summary h5 {
@@ -127,10 +127,10 @@
     padding: 5px 0;
 }
 .lp-results-summary li.correct {
-    color: var(--success-color, green);
+    color: var(--color-primary-dark);
 }
 .lp-results-summary li.incorrect {
-    color: var(--danger-color, red);
+    color: #E57373;
 }
 .lp-results-summary .correct-text {
     font-weight: bold;

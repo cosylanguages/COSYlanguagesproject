@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils'; // Added
+import Button from '../../Common/Button';
 import './MatchWordsBlock.css';
 
 // Helper function to shuffle an array (Fisher-Yates shuffle)
@@ -115,33 +116,33 @@ const MatchWordsBlock = ({ blockData }) => {
                 <div className="matching-area">
                     <div className="column column-1">
                         {shuffledCol1.map(item => (
-                            <button
+                            <Button
                                 key={item.id}
                                 onClick={() => handleItemSelect(item, 1)}
-                                className={`match-item ${selectedCol1Item?.id === item.id ? 'selected' : ''} ${isMatched(item.id, 1) ? 'matched' : ''}`}
+                                className={`button--match-item ${selectedCol1Item?.id === item.id ? 'selected' : ''} ${isMatched(item.id, 1) ? 'matched' : ''}`}
                                 disabled={isMatched(item.id, 1)}
                             >
                                 {item.text}
-                            </button>
+                            </Button>
                         ))}
                     </div>
                     <div className="column column-2">
                         {shuffledCol2.map(item => (
-                            <button
+                            <Button
                                 key={item.id}
                                 onClick={() => handleItemSelect(item, 2)}
-                                className={`match-item ${selectedCol2Item?.id === item.id ? 'selected' : ''} ${isMatched(item.id, 2) ? 'matched' : ''}`}
+                                className={`button--match-item ${selectedCol2Item?.id === item.id ? 'selected' : ''} ${isMatched(item.id, 2) ? 'matched' : ''}`}
                                 disabled={isMatched(item.id, 2)}
                             >
                                 <span className="match-item-text">{item.text}</span>
-                                <button
+                                <Button
                                     onClick={(e) => { e.stopPropagation(); pronounceText(item.text, blockData.lang || currentUILanguage); }}
-                                    className="btn-icon pronounce-btn-inline"
+                                    className="button--icon"
                                     title={t('pronounceText') || 'Pronounce'}
                                     aria-label={t('pronounceText') || 'Pronounce'}
                                     disabled={isMatched(item.id, 1)} // Keep TTS active even if item selected, but disable if matched
-                                >🔊</button>
-                            </button>
+                                >🔊</Button>
+                            </Button>
                         ))}
                     </div>
                 </div>

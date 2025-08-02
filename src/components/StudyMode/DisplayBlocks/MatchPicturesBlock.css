@@ -1,18 +1,19 @@
 .match-pictures-block {
     padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--color-muted);
     border-radius: 8px;
-    background-color: #fff;
+    background-color: var(--color-light);
 }
 
 .match-pictures-block h4 {
     margin-top: 0;
-    color: var(--text-primary);
+    color: var(--color-dark);
 }
 
 .match-pictures-block p {
-    color: var(--text-secondary);
+    color: var(--color-dark);
+    opacity: 0.7;
     margin-bottom: 15px;
 }
 
@@ -29,16 +30,16 @@
     flex-direction: column;
     gap: 10px; /* Space between items in a column */
     padding: 10px;
-    border: 1px solid #f0f0f0;
+    border: 1px solid var(--color-muted);
     border-radius: 6px;
-    background-color: #f8f9fa;
+    background-color: var(--color-muted);
 }
 
 .matchable-item {
     padding: 10px;
     border: 2px solid transparent; /* For selection highlight */
     border-radius: 4px;
-    background-color: #fff;
+    background-color: var(--color-light);
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     cursor: pointer;
     transition: border-color 0.2s, background-color 0.2s, transform 0.1s;
@@ -50,34 +51,34 @@
 }
 
 .matchable-item:hover:not([aria-disabled="true"]) {
-    border-color: var(--primary-color-light);
-    background-color: #e9f5ff; /* Light blue hover */
+    border-color: var(--color-primary);
+    background-color: var(--color-muted);
 }
 
 .matchable-item.selected {
-    border-color: var(--primary-color);
-    background-color: var(--primary-color-xlight); /* Even lighter blue for selected */
+    border-color: var(--color-primary-dark);
+    background-color: var(--color-primary);
     transform: scale(1.02);
 }
 
 .matchable-item.matched-visual { /* Visual cue before checking answers */
-    border-color: var(--success-color-light);
-    background-color: #e6ffed;
+    border-color: var(--color-primary-dark);
+    background-color: var(--color-primary);
     opacity: 0.7;
     cursor: default;
 }
 
 .matchable-item.correct { /* After checking answers */
-    border-color: var(--success-color);
-    background-color: var(--success-color-light) !important;
-    color: var(--success-color-text) !important;
+    border-color: var(--color-primary-dark);
+    background-color: var(--color-primary) !important;
+    color: var(--color-light) !important;
     opacity: 1;
     cursor: default;
 }
 .matchable-item.incorrect-unmatched { /* After checking, if not matched */
-    border-color: var(--danger-color);
-    background-color: var(--danger-color-light) !important;
-    color: var(--danger-color-text) !important;
+    border-color: #EF5350;
+    background-color: #E57373 !important;
+    color: var(--color-light) !important;
     opacity: 0.6;
     cursor: default;
 }
@@ -102,10 +103,10 @@
     min-height: 1.2em; /* To prevent layout jumps */
 }
 .feedback-message.correct {
-    color: var(--success-color);
+    color: var(--color-primary-dark);
 }
 .feedback-message.incorrect {
-    color: var(--danger-color);
+    color: #E57373;
 }
 
 
@@ -117,8 +118,8 @@
 .mtp-results-summary {
     margin-top: 20px;
     padding: 10px;
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
+    background-color: var(--color-muted);
+    border: 1px solid var(--color-muted);
     border-radius: 4px;
 }
 .mtp-results-summary h5 {
@@ -132,10 +133,10 @@
     padding: 5px 0;
 }
 .mtp-results-summary li.correct {
-    color: var(--success-color, green);
+    color: var(--color-primary-dark);
 }
 .mtp-results-summary li.incorrect {
-    color: var(--danger-color, red);
+    color: #E57373;
 }
 .mtp-results-summary .correct-text {
     font-weight: bold;

@@ -54,17 +54,6 @@
   background-color: var(--medium-grey);
 }
 
-.btn-primary {
-    color: var(--text-color-light);
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.btn-primary:hover {
-    color: var(--text-color-light);
-    background-color: var(--primary-hover-color);
-    border-color: var(--primary-hover-color);
-}
 
 .day-select-dropdown-container {
   text-align: center;

@@ -80,31 +80,27 @@
 }
 
 .role-btn {
-  padding: 0.8rem 1.5rem;
-  font-size: 1.1rem;
+  /* The base styles are now coming from the .button class */
   font-weight: 600; /* Bolder */
-  border-radius: var(--border-radius-lg, 8px); /* Consistent with other main buttons */
   border: 2px solid transparent; /* Prepare for border transition */
-  background-color: var(--color-surface-medium, #e9ecef);
-  color: var(--color-primary-dark, #0056b3);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  background-color: var(--color-muted);
+  color: var(--color-primary);
   min-width: 140px;
   box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.07));
 }
 
 .role-btn:hover {
-  background-color: var(--color-primary-light, #d6eaff);
-  color: var(--color-primary-darker, #00418a);
-  border-color: var(--color-primary, #007bff);
+  background-color: var(--color-muted);
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary);
   transform: translateY(-3px) scale(1.05) rotate(1deg); /* More dynamic */
   box-shadow: var(--shadow-lg, 0 5px 10px rgba(0,0,0,0.12)); /* Slightly enhanced shadow */
 }
 
 .role-btn.active-role-btn {
-  background-color: var(--color-primary, #007bff);
-  color: var(--color-text-on-dark, #fff);
-  border-color: var(--color-primary-dark, #0056b3);
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-color: var(--color-primary-dark);
   box-shadow: inset 0 2px 4px rgba(0,0,0,0.15), var(--shadow-sm, 0 1px 2px rgba(0,0,0,0.05));
   transform: translateY(0) scale(1);
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
+import Button from '../../Common/Button';
 import './AudioBlock.css';
 
 const AudioBlock = ({ blockData }) => {
@@ -55,13 +56,13 @@ const AudioBlock = ({ blockData }) => {
             
             {localizedTranscript && (
                 <div className="transcript-section">
-                    <button 
+                    <Button
                         onClick={() => setShowTranscript(!showTranscript)} 
-                        className="transcript-toggle-btn"
+                        className="button--secondary"
                         aria-expanded={showTranscript}
                     >
                         {showTranscript ? (t('hideTranscriptBtn') || 'Hide Transcript') : (t('showTranscriptBtn') || 'Show Transcript')}
-                    </button>
+                    </Button>
                     {showTranscript && (
                         <div className="transcript-content">
                             <pre>{localizedTranscript}</pre>

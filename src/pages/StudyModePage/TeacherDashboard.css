@@ -11,12 +11,12 @@
   align-items: center;
   margin-bottom: var(--spacing-lg, 1.5rem);
   padding-bottom: var(--spacing-md, 1rem);
-  border-bottom: 1px solid var(--color-border-light, #dee2e6);
+  border-bottom: 1px solid var(--color-muted);
 }
 
 .dashboard-header h2 {
   margin: 0;
-  color: var(--color-primary, #007bff);
+  color: var(--color-primary);
   flex-grow: 1; /* Allow title to take space */
 }
 
@@ -24,15 +24,6 @@
   display: flex;
   gap: var(--spacing-sm, 0.5rem);
 }
-
-.add-block-btn,
-.save-lesson-btn,
-.load-lesson-btn {
-  font-size: var(--font-size-base, 1rem);
-  padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem); /* Consistent padding */
-}
-
-/* Specific button colors can be handled by their existing btn-primary, btn-success, btn-info classes */
 
 .feedback-message {
   padding: var(--spacing-md, 1rem);
@@ -43,36 +34,32 @@
 }
 
 .feedback-success {
-  background-color: var(--color-surface-success-light, #d4edda);
-  color: var(--color-text-success, #155724);
-  border: 1px solid var(--color-border-success, #c3e6cb);
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border: 1px solid var(--color-primary);
 }
 
 .feedback-error {
-  background-color: var(--color-surface-danger-light, #f8d7da);
-  color: var(--color-text-danger, #721c24);
-  border: 1px solid var(--color-border-danger, #f5c6cb);
+  background-color: #E57373;
+  color: #FFFFFF;
+  border: 1px solid #E57373;
 }
 
 .dashboard-utility-actions {
   margin-top: var(--spacing-md, 1rem);
   margin-bottom: var(--spacing-md, 1rem);
   padding-top: var(--spacing-sm, 0.5rem);
-  border-top: 1px solid var(--color-border-extralight, #e9ecef);
+  border-top: 1px solid var(--color-muted);
   display: flex;
   justify-content: flex-end; /* Align to the right */
 }
 
-.clear-saved-lesson-btn {
-  /* Uses btn-sm and btn-warning already for sizing and color */
-}
-
 .no-blocks-message {
   font-style: italic;
-  color: var(--color-text-secondary, #6c757d);
+  color: var(--color-dark);
   text-align: center;
   padding: var(--spacing-xl, 2rem);
-  border: 2px dashed var(--color-border-light, #dee2e6);
+  border: 2px dashed var(--color-muted);
   border-radius: var(--border-radius-md, 0.25rem);
 }
 
@@ -82,22 +69,9 @@
   gap: var(--spacing-md, 1rem);
 }
 
-.lesson-block-item {
-  background-color: var(--color-surface, #f8f9fa);
-  border: 1px solid var(--color-border, #dee2e6);
-  border-radius: var(--border-radius-md, 0.25rem);
-  padding: var(--spacing-md, 1rem);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));
-  /* Removed direct flex display from item, now it's a container */
-}
-
-/* New container for each block in the list */
 .lesson-block-item-container {
-  background-color: var(--color-surface-extralight, #fcfdff);
-  border: 1px solid var(--color-border, #dee2e6);
+  background-color: var(--color-light);
+  border: 1px solid var(--color-muted);
   border-radius: var(--border-radius-md, 0.25rem);
   box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));
   display: flex;
@@ -109,15 +83,15 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem);
-  background-color: var(--color-surface-light, #e9ecef); /* Light header background */
-  border-bottom: 1px solid var(--color-border-light, #ced4da);
+  background-color: var(--color-muted); /* Light header background */
+  border-bottom: 1px solid var(--color-muted);
   border-top-left-radius: var(--border-radius-md, 0.25rem); /* Match container radius */
   border-top-right-radius: var(--border-radius-md, 0.25rem);
 }
 
 .lesson-block-header .block-type-name {
   font-weight: bold;
-  color: var(--color-text-secondary, #495057);
+  color: var(--color-dark);
   font-size: var(--font-size-sm, 0.875rem);
 }
 
@@ -133,21 +107,20 @@
 
 .lesson-block-content-preview .block-info { /* For fallback text if no component */
   font-style: italic;
-  color: var(--color-text-muted, #6c757d);
+  color: var(--color-dark);
 }
 .lesson-block-content-preview .block-info p {
     margin: var(--spacing-xs, 0.25rem) 0;
 }
 
-
 /* Ensure DisplayBlock components have some default styling if not already present */
 /* For example, .display-simple-block used by TextBlock and MCQMultipleBlock */
 .display-simple-block {
-  border: 1px dashed var(--color-border-light, #ced4da);
+  border: 1px dashed var(--color-muted);
   padding: var(--spacing-md, 1rem);
   margin: 0; /* Reset margin if they have their own */
   border-radius: var(--border-radius-sm, 0.2rem);
-  background-color: var(--color-background, #fff); /* Ensure background for visibility */
+  background-color: var(--color-light); /* Ensure background for visibility */
 }
 
 .display-simple-block h4 {
@@ -155,23 +128,18 @@
     font-size: var(--font-size-lg, 1.25rem); /* Example size for block titles in preview */
 }
 
-.btn-sm {
-  padding: var(--spacing-xs, 0.25rem) var(--spacing-sm, 0.5rem);
-  font-size: var(--font-size-sm, 0.875rem);
-}
-
 /* Placeholder for block configuration area */
 .block-configuration-placeholder {
   margin-top: var(--spacing-lg, 1.5rem);
   padding: var(--spacing-md, 1rem);
-  border: 2px dashed var(--color-primary-light, #79baff);
+  border: 2px dashed var(--color-primary);
   border-radius: var(--border-radius-md, 0.25rem);
-  background-color: var(--color-surface-light, #e9f4ff);
+  background-color: var(--color-muted);
 }
 
 .block-configuration-placeholder h3 {
   margin-top: 0;
-  color: var(--color-primary-dark, #0056b3);
+  color: var(--color-primary-dark);
 }
 
 /* New Grid Layout Styles */
@@ -185,7 +153,7 @@
 
 .teacher-dashboard-sidebar {
     padding: var(--spacing-md, 1rem);
-    background-color: var(--color-surface, #fff); /* Sidebar background */
+    background-color: var(--color-light); /* Sidebar background */
     border-radius: var(--border-radius-lg, 0.3rem);
     box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.08));
     height: fit-content; /* Adjust as needed, or make it scrollable */
@@ -199,7 +167,7 @@
 .teacher-dashboard-main-content {
     /* The existing .teacher-dashboard-container styles might largely apply here if we rename it or ensure this div gets them */
     /* For now, let's assume it's a distinct area */
-    background-color: var(--color-surface, #fff);
+    background-color: var(--color-light);
     border-radius: var(--border-radius-lg, 0.3rem);
     padding: var(--spacing-lg, 1.5rem); /* Add padding if it doesn't inherit */
     box-shadow: var(--shadow-md, 0 2px 4px rgba(0,0,0,0.1));
@@ -207,11 +175,11 @@
 
 .dashboard-tabs {
     margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--color-muted);
     padding-bottom: 10px;
 }
 
-.dashboard-tabs .btn {
+.dashboard-tabs .button {
     margin-right: 10px;
     border-radius: 5px 5px 0 0;
 }
@@ -220,8 +188,8 @@
 /* If teacher-dashboard-container-grid is the new top-level, then .teacher-dashboard-container might be redundant or need repurposing */
 
 .no-blocks-message { /* Ensure this is distinct for section selection vs general empty lesson */
-    background-color: var(--color-surface-info-light, #e6f7ff); /* Example different background */
-    border: 1px dashed var(--color-border-info, #91d5ff);
+    background-color: var(--color-muted); /* Example different background */
+    border: 1px dashed var(--color-primary);
 }
 
 @media (max-width: 768px) {

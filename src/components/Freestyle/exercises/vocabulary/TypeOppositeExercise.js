@@ -8,6 +8,7 @@ import ExerciseControls from '../../ExerciseControls';
 import { shuffleArray } from '../../../../utils/arrayUtils';
 import { useI18n } from '../../../../i18n/I18nContext';
 import TransliterableText from '../../../Common/TransliterableText'; // For title
+import Button from '../../../Common/Button';
 import './TypeOppositeExercise.css'; // Will create/update this CSS
 
 const NUM_TOTAL_OPTIONS = 4; // 1 correct, 3 distractors
@@ -172,19 +173,19 @@ const TypeOppositeExercise = ({ language, days, exerciseKey, onComplete }) => {
         <strong style={{ marginLeft: '8px', ...(isLatinized && targetDisplayWord !== getLatinizedText(targetDisplayWord, language) && {fontStyle: 'italic'}) }}>
           {getLatinizedText(targetDisplayWord, language)}
         </strong>
-        <button onClick={handlePronounceTargetWord} disabled={!targetDisplayWord} title={t('tooltips.pronounceWord', `Pronounce word`)} className="pronounce-btn-inline">🔊</button>
+        <Button onClick={handlePronounceTargetWord} disabled={!targetDisplayWord} title={t('tooltips.pronounceWord', `Pronounce word`)} className="button--icon">🔊</Button>
       </h3>
       
       <div className="mcq-options-container">
         {displayOptions.map((option) => (
-          <button
+          <Button
             key={option.id}
             onClick={() => handleOptionClick(option)}
-            className={`mcq-option-btn ${option.status}`}
+            className={`button--mcq ${option.status}`}
             disabled={isAnswered || isLoading}
           >
             {getLatinizedText(option.text, language)}
-          </button>
+          </Button>
         ))}
       </div>
       

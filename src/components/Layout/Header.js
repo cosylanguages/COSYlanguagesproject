@@ -44,8 +44,6 @@ const Header = () => {
           </div>
           <Button
             onClick={toggleDarkMode}
-            variant="contained"
-            color="secondary"
           >
             {isDarkMode ? t('lightMode', 'Light Mode') : t('darkMode', 'Dark Mode')}
           </Button>
@@ -57,8 +55,7 @@ const Header = () => {
               <Button
                 onClick={handleLogout}
                 disabled={loadingAuth}
-                variant="outlined"
-                color="secondary"
+                className="button--secondary"
               >
                 {loadingAuth ? (t('loggingOut') || 'Logging out...') : (t('btnLogout') || 'Logout')}
               </Button>

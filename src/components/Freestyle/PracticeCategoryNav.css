@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column; /* Stack label and buttons vertically */
   align-items: center; /* Center label and button group */
-  gap: var(--spacing-md, 1rem); /* Space between label and button group */
-  margin-top: var(--spacing-md, 1rem);
-  margin-bottom: var(--spacing-lg, 1.5rem); /* Similar to old .practice-types margin */
+  gap: var(--space-md); /* Space between label and button group */
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-lg); /* Similar to old .practice-types margin */
   width: 100%;
 }
 
@@ -12,45 +12,34 @@
   /* Inherits from .unified-label: font-size, font-weight, color, margin-bottom */
   /* Specific overrides for PracticeCategoryNav label: */
   text-align: center; /* Keep this centered */
-  /* font-size: var(--font-size-h4, 1.125rem); /* Optionally override if needed, but unified aims for consistency */
-  /* color: var(--color-text-headings, #343a40); /* Optionally override */
 }
 
 .practice-category-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-sm, 8px); /* From old .practice-types */
+  gap: var(--space-sm); /* From old .practice-types */
   justify-content: center; /* From old .practice-types */
   width: 100%;
 }
 
 .practice-category-btn {
-  /* Inspired by old .practice-types button */
-  color: var(--color-text-on-dark, #fff); /* --text-color-light */
-  background-color: var(--color-primary, #007bff); /* --primary-color */
-  border: 1px solid var(--color-primary, #007bff); /* --primary-color */
-  
-  padding: 0.7em 1.3em;
-  font-size: var(--font-size-sm, 0.9rem); /* old was 0.95rem, using slightly smaller theme variable */
+  /* The base styles are now coming from the .button class */
+  /* We only need to define the specific styles for this button */
   font-weight: bold;
-  border-radius: var(--border-radius-md, 0.25rem);
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.1s ease;
   min-width: 100px; /* Ensure buttons have some minimum width */
   text-align: center;
   box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.1));
 }
 
 .practice-category-btn:hover {
-  background-color: var(--color-primary-dark, #0056b3); 
-  border-color: var(--color-primary-dark, #0056b3); 
+  /* We keep the special hover effect */
   transform: translateY(-3px) scale(1.07) rotate(-2deg); /* More dynamic: lift, scale, rotate */
   box-shadow: var(--shadow-lg, 0 6px 12px rgba(0,0,0,0.2)); /* Stronger shadow */
 }
 
 .practice-category-btn.active {
-  background-color: var(--color-primary-dark, #0056b3);
-  border-color: var(--color-primary-dark, #0056b3);
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   transform: translateY(0px); /* Reset hover transform if active */
 }

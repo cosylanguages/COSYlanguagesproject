@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils';
 import TransliterableText from '../../Common/TransliterableText'; // Added
+import Button from '../../Common/Button';
 import './SimpleTextDisplay.css'; 
 import './MCQMultipleBlock.css'; 
 
@@ -117,21 +118,21 @@ const MCQMultipleBlock = ({ blockData, onAnswer }) => {
             <h4>
                 <TransliterableText text={blockTitleTextForDisplay} langOverride={effectiveLang} />
                 {titleForTTS && (
-                    <button 
+                    <Button
                         onClick={() => pronounceText(titleForTTS, effectiveLang)}
-                        className="btn-icon pronounce-btn-inline"
+                        className="button--icon"
                         title={t('pronounceTitle') || 'Pronounce title'}
-                    >🔊</button>
+                    >🔊</Button>
                 )}
             </h4>
             {questionTextForTTS && ( // Check if there's actual text to display/pronounce for the question
                 <p className="mcq-question-text">
                     <TransliterableText text={questionTextForDisplay} langOverride={effectiveLang} />
-                    <button 
+                    <Button
                         onClick={() => pronounceText(questionTextForTTS, effectiveLang)} 
-                        className="btn-icon pronounce-btn-inline"
+                        className="button--icon"
                         title={t('pronounceQuestion') || 'Pronounce question'}
-                    >🔊</button>
+                    >🔊</Button>
                 </p>
             )}
             
@@ -158,11 +159,11 @@ const MCQMultipleBlock = ({ blockData, onAnswer }) => {
                                 <TransliterableText text={opt.texts} langOverride={effectiveLang} />
                             </span>
                             {optionTextForTTS && (
-                                <button 
+                                <Button
                                     onClick={(e) => { e.stopPropagation(); pronounceText(optionTextForTTS, effectiveLang); }}
-                                    className="btn-icon pronounce-btn-inline"
+                                    className="button--icon"
                                     title={t('pronounceOption') || 'Pronounce option'}
-                                >🔊</button>
+                                >🔊</Button>
                             )}
                             {showResults && feedback[opt.id] === 'correct' && <span className="feedback-icon"> ✅</span>}
                             {showResults && feedback[opt.id] === 'incorrect-selected' && <span className="feedback-icon"> ❌</span>}
@@ -180,13 +181,13 @@ const MCQMultipleBlock = ({ blockData, onAnswer }) => {
 
             <div className="mcqm-block-actions">
                 {!showResults ? (
-                    <button onClick={checkAnswers} className="btn btn-primary">
+                    <Button onClick={checkAnswers} className="">
                         {t('checkAnswersBtn') || 'Check Answers'}
-                    </button>
+                    </Button>
                 ) : (
-                    <button onClick={tryAgain} className="btn btn-secondary">
+                    <Button onClick={tryAgain} className="button--secondary">
                         {t('tryAgainBtn') || 'Try Again'}
-                    </button>
+                    </Button>
                 )}
             </div>
 

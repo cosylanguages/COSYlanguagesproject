@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
+import Button from '../../Common/Button';
 import './ParagraphOrderBlock.css'; // To be created
 
 // Helper function to shuffle an array
@@ -125,13 +126,13 @@ const ParagraphOrderBlock = ({ blockData, onAnswer }) => {
             
             <div className="po-block-actions">
                 {!showResults ? (
-                    <button onClick={checkOrder} className="btn btn-primary">
+                    <Button onClick={checkOrder} className="">
                         {t('checkOrderBtn') || 'Check Order'}
-                    </button>
+                    </Button>
                 ) : (
-                    <button onClick={tryAgain} className="btn btn-secondary">
+                    <Button onClick={tryAgain} className="button--secondary">
                         {t('tryAgainBtn') || 'Try Again'}
-                    </button>
+                    </Button>
                 )}
             </div>
 
