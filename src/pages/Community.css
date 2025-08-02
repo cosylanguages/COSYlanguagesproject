@@ -1,7 +1,5 @@
 .community-page {
   padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .community-header {
@@ -9,26 +7,37 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  border-bottom: 1px solid var(--cosy-shadow);
+  padding-bottom: 1em;
 }
 
 .community-header h1 {
+  font-family: var(--ff-serif);
   font-size: 2rem;
+  color: var(--cosy-dark);
 }
 
 .event-filter button {
-  background-color: transparent;
-  border: 1px solid #ddd;
+  background-color: var(--cosy-light);
+  border: 1px solid var(--cosy-accent);
+  color: var(--cosy-accent);
   border-radius: 20px;
   padding: 8px 16px;
   margin-left: 10px;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.event-filter button:hover {
+    background-color: var(--cosy-bg);
+    color: var(--cosy-light);
 }
 
 .event-filter button.active {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
+  background-color: var(--cosy-bg);
+  color: var(--cosy-light);
+  border-color: var(--cosy-bg);
 }
 
 .community-main {
@@ -48,14 +57,23 @@
 }
 
 .pagination-controls button {
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
+  background-color: var(--cosy-light);
+  border: 1px solid var(--cosy-accent);
+  color: var(--cosy-accent);
   border-radius: 4px;
   padding: 8px 16px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-controls button:hover {
+    background-color: var(--cosy-bg);
+    color: var(--cosy-light);
 }
 
 .pagination-controls button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+  background-color: var(--cosy-shadow);
+  color: var(--cosy-dark);
 }
