@@ -1,5 +1,5 @@
 // src/components/Layout/Header.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import { useAuth } from '../../contexts/AuthContext';
@@ -14,10 +14,15 @@ const Header = () => {
   const { t } = useI18n();
   const navigate = useNavigate();
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLogout = async () => {
     await logout();
     navigate('/login');
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
@@ -27,7 +32,10 @@ const Header = () => {
           <img src={`${process.env.PUBLIC_URL}/assets/icons/cosylanguages_logos/cosylanguages.png`} alt="Cosy Languages Logo" />
           <span>COSYlanguages</span>
         </Link>
-        <nav className="header-nav">
+        <button className="menu-toggle" onClick={toggleMenu}>
+          ☰
+        </button>
+        <nav className={`header-nav ${menuOpen ? 'active' : ''}`}>
           <NavLink to="/freestyle" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Freestyle</NavLink>
           <NavLink to="/study" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Study Mode</NavLink>
           <NavLink to="/community" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Community</NavLink>
@@ -38,7 +46,7 @@ const Header = () => {
             </NavLink>
           )}
         </nav>
-        <div className="header-controls">
+        <div className={`header-controls ${menuOpen ? 'active' : ''}`}>
           <div className="header-language-selector">
             <LanguageSelector />
           </div>

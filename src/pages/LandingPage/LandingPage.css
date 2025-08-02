@@ -6,29 +6,37 @@
   justify-content: center;
   min-height: 100vh;
   text-align: center;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
-  color: #333; /* Dark grey text */
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Styling for the main content area */
 .landing-content {
   max-width: 800px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Styling for the main navigation buttons */
 .landing-buttons {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+  padding: 1em;
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
 .landing-button {
+  width: 100%;
+  max-width: 300px;
   padding: 15px 30px;
-  font-size: 1.2em;
+  font-size: 1.1rem;
   color: white;
   background-color: #007bff; /* Vibrant blue */
   border: none;
@@ -68,32 +76,10 @@
 }
 
 /* Responsive design for smaller screens */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .landing-buttons {
-    gap: 15px;
-  }
-
-  .landing-button {
-    padding: 12px 25px;
-    font-size: 1.1em;
-  }
-
-  .logo {
-    width: 120px;
-  }
-}
-
-@media (max-width: 600px) {
-  .landing-buttons {
-    flex-direction: column;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  p {
-    font-size: 1em;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 

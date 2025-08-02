@@ -30,7 +30,9 @@ html {
 
 body {
   font-family: var(--font-family-base);
-  background-color: var(--color-background); /* Default background for main app */
+  background: linear-gradient(180deg, #00bfbf 0%, #d6f4f4 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--color-text-primary);
   display: flex; /* Ensure body takes full height for sticky footer */
   flex-direction: column; /* Ensure body takes full height for sticky footer */
