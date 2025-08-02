@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cosylanguages.github.io/COSYlanguagesproject/sitemap.xml
