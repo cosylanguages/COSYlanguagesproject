@@ -24,6 +24,7 @@ const LessonSectionsPanel = ({
   selectedSectionId,
   currentLangKey,
   isStudentMode = false,
+  selectedDayId,
 }) => {
   const { t, language } = useI18n();
   const { currentUser } = useAuth();
