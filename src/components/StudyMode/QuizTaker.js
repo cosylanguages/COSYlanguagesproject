@@ -1,21 +1,27 @@
 import React, { useState } from 'react';
+import Toast from '../Common/Toast';
 
 const QuizTaker = ({ quiz, onSubmit }) => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [answers, setAnswers] = useState([]);
+    const [toast, setToast] = useState({ message: '', type: '' });
 
     const handleAnswerSelect = (answer) => {
         const newAnswers = [...answers];
         newAnswers[currentQuestionIndex] = answer;
         setAnswers(newAnswers);
 
-        // Fade out, then move to next question
-        // For simplicity, we'll just move to the next question directly
-        setTimeout(() => {
-            if (currentQuestionIndex < quiz.questions.length - 1) {
-                setCurrentQuestionIndex(currentQuestionIndex + 1);
-            }
-        }, 300); // This timeout can be used for a fade-out animation
+        const isCorrect = answer === quiz.questions[currentQuestionIndex].correctAnswer;
+        setToast({ message: isCorrect ? '✅ Correct!' : '❌ Try again!', type: isCorrect ? 'success' : 'error' });
+
+        if (isCorrect) {
+            setTimeout(() => {
+                setToast({ message: '', type: '' });
+                if (currentQuestionIndex < quiz.questions.length - 1) {
+                    setCurrentQuestionIndex(currentQuestionIndex + 1);
+                }
+            }, 1000);
+        }
     };
 
     const handleSubmit = () => {
@@ -27,6 +33,7 @@ const QuizTaker = ({ quiz, onSubmit }) => {
 
     return (
         <div className="quiz-card">
+            <Toast message={toast.message} type={toast.type} onDone={() => setToast({ message: '', type: '' })} />
             <div className="progress-bar">
                 <div className="progress-bar__inner" style={{ width: `${progress}%` }}></div>
             </div>

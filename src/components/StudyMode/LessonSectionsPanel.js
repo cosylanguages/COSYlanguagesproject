@@ -2,7 +2,7 @@
 import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
-import StudentDashboard from '../../pages/StudyModePage/StudentDashboard';
+import './LessonSectionsPanel.css';
 
 /**
  * A panel that displays a list of lesson sections for a given day.
@@ -18,6 +18,7 @@ import StudentDashboard from '../../pages/StudyModePage/StudentDashboard';
 const LessonSectionsPanel = ({
   sectionsFromSyllabus,
   apiLessonSections,
+  onSectionSelect,
   selectedSectionId,
   currentLangKey,
   isStudentMode = false,
@@ -62,18 +63,27 @@ const LessonSectionsPanel = ({
       <h4>
         <TransliterableText text={t('studyMode.lessonSectionsTitle', 'Lesson Sections')} />
       </h4>
-      {sectionsToDisplay.map((section, index) => {
-        const sectionTitle = getSectionTitle(section);
-        const sectionId = isStudentMode ? section.title : section.id;
-        return (
-          <details key={sectionId}>
-            <summary>
-              <TransliterableText text={sectionTitle} />
-            </summary>
-            <StudentDashboard lessonBlocks={section.content_blocks || []} />
-          </details>
-        );
-      })}
+      <ul className="sections-list">
+        {sectionsToDisplay.map((section, index) => {
+          const sectionTitle = getSectionTitle(section);
+          const sectionId = isStudentMode ? section.title : section.id;
+          return (
+            <li
+              key={sectionId}
+              className={`section-item ${sectionId === selectedSectionId ? 'active-section' : ''}`}
+            >
+              <button
+                onClick={() => onSectionSelect(sectionId)}
+                className="section-link-button"
+                title={sectionTitle}
+                aria-pressed={sectionId === selectedSectionId}
+              >
+                <TransliterableText text={sectionTitle} />
+              </button>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

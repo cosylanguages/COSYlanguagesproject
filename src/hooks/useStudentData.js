@@ -78,5 +78,5 @@ export const useStudentData = (language, selectedDayId, selectedSectionId) => {
     }
   }, [currentSyllabus, selectedSectionId]);
 
-  return { days, lessonSectionsForPanel, currentExerciseBlocks, isLoading, error, currentSyllabus };
+  return { days, lessonSectionsForPanel, currentExerciseBlocks, isLoading, error };
 };

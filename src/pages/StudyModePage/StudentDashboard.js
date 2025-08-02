@@ -1,5 +1,5 @@
 // Import necessary libraries, hooks, and components.
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import StudyModeBanner from '../../components/StudyMode/StudyModeBanner';
 import { useI18n } from '../../i18n/I18nContext';
 import { useAuth } from '../../contexts/AuthContext';
@@ -48,25 +48,19 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
   const [selectedQuiz, ] = useState(null);
   const [quizAnswers, setQuizAnswers] = useState(null);
   const [selectedDeck, ] = useState(null);
-  
-  /**
-   * Handles navigation between lesson blocks.
-   * @param {string} direction - The direction to navigate ('previous' or 'next').
-   * @param {number} currentIndex - The index of the current block.
-   */
-  const handleNavigateBlock = (direction, currentIndex) => {
-    let targetIndex;
-    if (direction === 'previous') {
-      targetIndex = currentIndex - 1;
-    } else { // next
-      targetIndex = currentIndex + 1;
-    }
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
 
-    if (targetIndex >= 0 && targetIndex < lessonBlocks.length) {
-      const targetBlock = lessonBlocks[targetIndex];
-      const elementId = getBlockElementId(targetBlock.id || targetBlock.title || targetBlock.block_type, targetIndex);
-      const element = document.getElementById(elementId);
-      element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const paginatedBlocks = useMemo(() => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    return lessonBlocks.slice(startIndex, startIndex + itemsPerPage);
+  }, [lessonBlocks, currentPage, itemsPerPage]);
+
+  const totalPages = Math.ceil(lessonBlocks.length / itemsPerPage);
+
+  const handlePageChange = (newPage) => {
+    if (newPage > 0 && newPage <= totalPages) {
+      setCurrentPage(newPage);
     }
   };
 
@@ -122,76 +116,59 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
         </div>
       )}
       {/* Gamification and personalization components. */}
-      <GamificationDashboard />
+      <div className="study-card">
+        <GamificationDashboard />
+      </div>
       {/* The header for the current lesson, with buttons for study tools. */}
-      <div className="lesson-header">
-        <h2><TransliterableText text={t('studyMode.lessonTitlePlaceholder', 'Current Lesson')} /></h2>
-        <Button onClick={() => setIsMistakeNotebookVisible(true)}><TransliterableText text={t('studentDashboard.mistakeNotebook', 'Mistake Notebook')} /></Button>
-        <Button onClick={() => setIsGrammarReviewVisible(true)}><TransliterableText text={t('studentDashboard.grammarReview', 'Grammar Review')} /></Button>
-        <Button onClick={() => setIsVirtualTutorVisible(true)}><TransliterableText text={t('studentDashboard.virtualTutor', 'Virtual Tutor')} /></Button>
-        <Button onClick={() => setIsSmartReviewVisible(true)}><TransliterableText text={t('studentDashboard.smartReview', 'Smart Review')} /></Button>
-        <Button onClick={() => setIsFillInTheBlanksVisible(true)}><TransliterableText text={t('studentDashboard.fillInTheBlanks', 'Fill in the Blanks')} /></Button>
-        <Button onClick={() => setIsSentenceUnscrambleVisible(true)}><TransliterableText text={t('studentDashboard.sentenceUnscramble', 'Sentence Unscramble')} /></Button>
+      <div className="study-card">
+        <div className="lesson-header">
+          <h2><TransliterableText text={t('studyMode.lessonTitlePlaceholder', 'Current Lesson')} /></h2>
+          <Button onClick={() => setIsMistakeNotebookVisible(true)}><TransliterableText text={t('studentDashboard.mistakeNotebook', 'Mistake Notebook')} /></Button>
+          <Button onClick={() => setIsGrammarReviewVisible(true)}><TransliterableText text={t('studentDashboard.grammarReview', 'Grammar Review')} /></Button>
+          <Button onClick={() => setIsVirtualTutorVisible(true)}><TransliterableText text={t('studentDashboard.virtualTutor', 'Virtual Tutor')} /></Button>
+          <Button onClick={() => setIsSmartReviewVisible(true)}><TransliterableText text={t('studentDashboard.smartReview', 'Smart Review')} /></Button>
+          <Button onClick={() => setIsFillInTheBlanksVisible(true)}><TransliterableText text={t('studentDashboard.fillInTheBlanks', 'Fill in the Blanks')} /></Button>
+          <Button onClick={() => setIsSentenceUnscrambleVisible(true)}><TransliterableText text={t('studentDashboard.sentenceUnscramble', 'Sentence Unscramble')} /></Button>
+        </div>
       </div>
       
       {/* Render the study tools if they are visible. */}
-      {isMistakeNotebookVisible && <MistakeNotebook />}
-      {isGrammarReviewVisible && <GrammarReview />}
-      {isVirtualTutorVisible && <VirtualTutor />}
-      {isSmartReviewVisible && <SmartReview userId={currentUser?.id} />}
-      {isFillInTheBlanksVisible && <StudyFillInTheBlanks language={currentLangKey} />}
-      {isSentenceUnscrambleVisible && <StudySentenceUnscramble language={currentLangKey} />}
+      {isMistakeNotebookVisible && <div className="study-card"><MistakeNotebook /></div>}
+      {isGrammarReviewVisible && <div className="study-card"><GrammarReview /></div>}
+      {isVirtualTutorVisible && <div className="study-card"><VirtualTutor /></div>}
+      {isSmartReviewVisible && <div className="study-card"><SmartReview userId={currentUser?.id} /></div>}
+      {isFillInTheBlanksVisible && <div className="study-card"><StudyFillInTheBlanks language={currentLangKey} /></div>}
+      {isSentenceUnscrambleVisible && <div className="study-card"><StudySentenceUnscramble language={currentLangKey} /></div>}
 
       {/* A section for quizzes. */}
-      <div className="quizzes-section">
-          <h3><TransliterableText text={t('studentDashboard.quizzes', 'Quizzes')} /></h3>
-          <p><em><TransliterableText text={t('studentDashboard.quizzesComingSoon', 'Quizzes are coming soon!')} /></em></p>
+      <div className="study-card">
+        <div className="quizzes-section">
+            <h3><TransliterableText text={t('studentDashboard.quizzes', 'Quizzes')} /></h3>
+            <p><em><TransliterableText text={t('studentDashboard.quizzesComingSoon', 'Quizzes are coming soon!')} /></em></p>
+        </div>
       </div>
 
       {/* A section for flashcard decks. */}
-      <div className="flashcards-section">
-          <h3><TransliterableText text={t('studentDashboard.myFlashcards', 'My Flashcards')} /></h3>
-          <p><em><TransliterableText text={t('studentDashboard.flashcardsComingSoon', 'Flashcard decks are coming soon!')} /></em></p>
+      <div className="study-card">
+        <div className="flashcards-section">
+            <h3><TransliterableText text={t('studentDashboard.myFlashcards', 'My Flashcards')} /></h3>
+            <p><em><TransliterableText text={t('studentDashboard.flashcardsComingSoon', 'Flashcard decks are coming soon!')} /></em></p>
+        </div>
       </div>
 
       {/* The main content of the lesson, with dynamically rendered exercise blocks. */}
       <div className="lesson-content-student-view">
-        {lessonBlocks.map((block, index) => {
+        {paginatedBlocks.map((block, index) => {
           const componentKey = block.block_type;
           const DisplayComponent = displayComponentMap[componentKey];
           const blockDomId = getBlockElementId(block.id || block.title || block.block_type, index);
 
           if (DisplayComponent) {
             return (
-              <div key={index} id={blockDomId} className="student-lesson-block">
+              <div key={index} id={blockDomId} className="study-card">
                 <DisplayComponent 
                   blockData={block}
                 />
-                {/* Navigation buttons for moving between blocks. */}
-                <div className="block-navigation-actions">
-                  <Button
-                    onClick={() => handleNavigateBlock('previous', index)} 
-                    disabled={index === 0}
-                    className="button--secondary prev-block-btn"
-                  >
-                    <TransliterableText text={t('studentDashboard.prevBlockBtn', 'Previous')} />
-                  </Button>
-                  <span className="block-nav-page-info">
-                    <TransliterableText 
-                        text={t('studentDashboard.blockPageInfo', 'Block {current}/{totalBlocks}', {
-                            current: index + 1,
-                            totalBlocks: lessonBlocks.length
-                        })}
-                    />
-                  </span>
-                  <Button
-                    onClick={() => handleNavigateBlock('next', index)} 
-                    disabled={index === lessonBlocks.length - 1}
-                    className="button--secondary next-block-btn"
-                  >
-                    <TransliterableText text={t('studentDashboard.nextBlockBtn', 'Next')} />
-                  </Button>
-                </div>
               </div>
             );
           }
@@ -206,6 +183,15 @@ const StudentDashboard = ({ lessonBlocks = [] }) => {
             </div>
           );
         })}
+      </div>
+      <div className="pagination-controls">
+        <Button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+          Previous
+        </Button>
+        <span>Page {currentPage} of {totalPages}</span>
+        <Button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+          Next
+        </Button>
       </div>
     </div>
   );
