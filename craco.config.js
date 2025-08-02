@@ -1,4 +1,5 @@
 const CopyPlugin = require('copy-webpack-plugin');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   webpack: {
@@ -12,6 +13,15 @@ module.exports = {
           ],
         })
       );
+
+      if (env === 'production') {
+        webpackConfig.plugins.push(
+          new WorkboxWebpackPlugin.InjectManifest({
+            swSrc: './src/service-worker.js',
+            swDest: 'service-worker.js',
+          })
+        );
+      }
 
       return webpackConfig;
     },
