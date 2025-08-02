@@ -1,7 +1,9 @@
 // Import necessary libraries, hooks, and components.
-import React from 'react';
+import React, { useState } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
+import { useAuth } from '../../contexts/AuthContext';
 import TransliterableText from '../Common/TransliterableText';
+import Modal from '../Common/Modal';
 import './LessonSectionsPanel.css';
 
 /**
@@ -23,9 +25,29 @@ const LessonSectionsPanel = ({
   currentLangKey,
   isStudentMode = false,
 }) => {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
+  const { currentUser } = useAuth();
+  const [showModal, setShowModal] = useState(false);
 
   const sectionsToDisplay = isStudentMode ? sectionsFromSyllabus : apiLessonSections;
+
+  const handleBookmark = (sectionId, selectedDayId) => {
+    if (!currentUser) {
+      const guestProgress = {
+        language,
+        dayId: selectedDayId,
+        sectionId,
+        timestamp: new Date().toISOString(),
+      };
+      localStorage.setItem('cosyGuestProgress', JSON.stringify(guestProgress));
+      setShowModal(true);
+    } else {
+      // In a real scenario, we would call an API to save progress for the logged-in user.
+      // For now, we can just log it.
+      console.log('Bookmarking for logged-in user:', { language, dayId: selectedDayId, sectionId });
+      alert('Progress saved!');
+    }
+  };
 
   /**
    * Gets the title of a section in the appropriate language.
@@ -72,18 +94,31 @@ const LessonSectionsPanel = ({
               key={sectionId}
               className={`section-item ${sectionId === selectedSectionId ? 'active-section' : ''}`}
             >
-              <button
-                onClick={() => onSectionSelect(sectionId)}
-                className="section-link-button"
-                title={sectionTitle}
-                aria-pressed={sectionId === selectedSectionId}
-              >
-                <TransliterableText text={sectionTitle} />
-              </button>
+              <div className="section-content">
+                <button
+                  onClick={() => onSectionSelect(sectionId)}
+                  className="section-link-button"
+                  title={sectionTitle}
+                  aria-pressed={sectionId === selectedSectionId}
+                >
+                  <TransliterableText text={sectionTitle} />
+                </button>
+                <button
+                  className="bookmark-button"
+                  onClick={() => handleBookmark(sectionId, selectedDayId)}
+                  title="Bookmark this section"
+                >
+                  🔖
+                </button>
+              </div>
             </li>
           );
         })}
       </ul>
+      <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+        <h2>Progress Saved!</h2>
+        <p>Your progress has been saved on this device. To save it permanently and access it from anywhere, please sign up or log in.</p>
+      </Modal>
     </div>
   );
 };

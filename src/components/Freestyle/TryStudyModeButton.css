@@ -1,0 +1,36 @@
+.try-study-mode-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px 0;
+}
+
+.try-study-mode-button:hover {
+    background-color: #357abd;
+}
+
+.modal-cta-button {
+    background-color: #50e3c2;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.modal-cta-button:hover {
+    background-color: #43c4a7;
+}
+
+.modal-auth-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
