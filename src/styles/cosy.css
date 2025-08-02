@@ -251,3 +251,59 @@ select:focus {
   height: 40px;
   padding: 0;
 }
+
+/* Study Mode Layout */
+.study-layout-body {
+  display: flex;
+}
+
+.study-main-content {
+  flex-grow: 1;
+  padding: 1.5em;
+}
+
+.study-header {
+  position: sticky; top: 0;
+  background: var(--cosy-light);
+  padding: 1em; box-shadow: 0 2px 4px var(--cosy-shadow);
+  font-family: var(--ff-serif);
+  z-index: 10;
+}
+
+.study-card {
+  background: var(--cosy-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--cosy-shadow);
+  padding: 1.5em;
+  margin: 1em auto;
+  max-width: 700px;
+}
+
+.sidebar {
+  background: var(--cosy-light);
+  border-right: 1px solid var(--cosy-accent);
+  width: 240px;
+  padding: 1em;
+  position: sticky; top: 0;
+  height: 100vh;
+}
+
+.sidebar a {
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: var(--cosy-dark);
+    border-radius: 4px;
+}
+
+.sidebar a:hover {
+    background-color: var(--cosy-bg);
+    color: var(--cosy-light);
+}
+
+.sidebar a.active {
+  font-weight: 700;
+  color: var(--cosy-dark);
+  background-color: var(--cosy-bg);
+  color: var(--cosy-light);
+}

@@ -15,6 +15,8 @@ import LanguageSelector from '../../components/LanguageSelector/LanguageSelector
 import LanguageHeader from '../../components/Common/LanguageHeader';
 import './StudyModePage.css';
 
+import StudyLayout from '../../components/Layout/StudyLayout';
+
 const StudyModePage = () => {
   const { t, language, currentLangKey } = useI18n();
   const { authToken } = useAuth();
@@ -94,71 +96,69 @@ const StudyModePage = () => {
   };
 
   return (
-    <div className="study-mode-page-container">
-      <h1>
-        <TransliterableText text={t('studyMode.mainHeading', 'COSYlanguages - Study Mode 🎓')} />
-      </h1>
+    <StudyLayout>
+      <div className="study-mode-page-container">
+        {currentLangKey && <LanguageHeader selectedLanguage={currentLangKey} />}
 
-      {currentLangKey && <LanguageHeader selectedLanguage={currentLangKey} />}
-
-      <div className="study-menu-section">
-        <label htmlFor="language-select" id="study-choose-language-label">
-          <TransliterableText text={t('studyMode.chooseLanguageLabel', '🌎 Choose Your Language:')} />
-        </label>
-        <LanguageSelector />
-        <ToggleLatinizationButton
-          currentDisplayLanguage={currentLangKey || language}
-        />
-        <Button onClick={() => window.location.href = '/freestyle'}>
-          <TransliterableText text={t('studyModePage.freestyleButton', 'Freestyle 🚀')} />
-        </Button>
-      </div>
-
-      <div className="study-menu-section">
-        <label htmlFor="role-selector-buttons" id="study-choose-role-label">
-          <TransliterableText text={t('studyMode.chooseRoleLabel', '👤 Choose Your Role:')} />
-        </label>
-        <RoleSelector />
-      </div>
-
-      {!selectedRole && (
-        <div className="welcome-message">
-          <h2><TransliterableText text={t('studyModePage.welcomeHeading', 'Welcome to Study Mode!')} /></h2>
-          <p><TransliterableText text={t('studyModePage.welcomeMessage', 'Please select your role to begin.')} /></p>
+        <div className="study-menu-section">
+          <label htmlFor="language-select" id="study-choose-language-label">
+            <TransliterableText text={t('studyMode.chooseLanguageLabel', '🌎 Choose Your Language:')} />
+          </label>
+          <LanguageSelector />
+          <ToggleLatinizationButton
+            currentDisplayLanguage={currentLangKey || language}
+          />
+          <Button onClick={() => window.location.href = '/freestyle'}>
+            <TransliterableText text={t('studyModePage.freestyleButton', 'Freestyle 🚀')} />
+          </Button>
         </div>
-      )}
 
-      {renderDaySelector()}
+        <div className="study-menu-section">
+          <label htmlFor="role-selector-buttons" id="study-choose-role-label">
+            <TransliterableText text={t('studyMode.chooseRoleLabel', '👤 Choose Your Role:')} />
+          </label>
+          <RoleSelector />
+        </div>
 
-      {error && <p className="error-message" role="alert">{error}</p>}
-      {isLoading && selectedRole && (!days || days.length === 0) && !error && (
-        <p role="status"><TransliterableText text={t('loading', 'Loading...')} /></p>
-      )}
-
-      <div className="study-content-area">
-        {!selectedRole ? (
-          <p id="study-welcome-message">
-            <TransliterableText text={t('studyMode.welcomeMessage', 'Please select your role to begin.')} />
-          </p>
-        ) : selectedRole === 'student' ? (
-          <StudentPage
-            lessonSectionsForPanel={lessonSectionsForPanel}
-            handleSectionSelectSmP={handleSectionSelect}
-            currentLangKey={currentLangKey}
-            selectedSectionId={selectedSectionId}
-            currentExerciseBlocks={studentExerciseBlocks}
-          />
-        ) : (
-          <TeacherPage
-            selectedDayId={selectedDayId}
-            lessonSectionsForPanel={lessonSectionsForPanel}
-            handleSectionSelectSmP={handleSectionSelect}
-            currentLangKey={currentLangKey}
-            selectedSectionId={selectedSectionId}
-          />
+        {!selectedRole && (
+          <div className="welcome-message">
+            <h2><TransliterableText text={t('studyModePage.welcomeHeading', 'Welcome to Study Mode!')} /></h2>
+            <p><TransliterableText text={t('studyModePage.welcomeMessage', 'Please select your role to begin.')} /></p>
+          </div>
         )}
+
+        {renderDaySelector()}
+
+        {error && <p className="error-message" role="alert">{error}</p>}
+        {isLoading && selectedRole && (!days || days.length === 0) && !error && (
+          <p role="status"><TransliterableText text={t('loading', 'Loading...')} /></p>
+        )}
+
+        <div className="study-content-area">
+          {!selectedRole ? (
+            <p id="study-welcome-message">
+              <TransliterableText text={t('studyMode.welcomeMessage', 'Please select your role to begin.')} />
+            </p>
+          ) : selectedRole === 'student' ? (
+            <StudentPage
+              lessonSectionsForPanel={lessonSectionsForPanel}
+              handleSectionSelectSmP={handleSectionSelect}
+              currentLangKey={currentLangKey}
+              selectedSectionId={selectedSectionId}
+              currentExerciseBlocks={studentExerciseBlocks}
+            />
+          ) : (
+            <TeacherPage
+              selectedDayId={selectedDayId}
+              lessonSectionsForPanel={lessonSectionsForPanel}
+              handleSectionSelectSmP={handleSectionSelect}
+              currentLangKey={currentLangKey}
+              selectedSectionId={selectedSectionId}
+            />
+          )}
+        </div>
       </div>
-    </div>
+    </StudyLayout>
   );
 };
 

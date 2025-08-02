@@ -1,0 +1,10 @@
+.toast {
+  position: fixed; bottom: 1em; right: 1em;
+  background: var(--cosy-dark); color: var(--cosy-light);
+  padding: 0.8em 1em; border-radius: 6px;
+  opacity: 0; transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.toast.show {
+  opacity: 1; transform: translateY(0);
+}
