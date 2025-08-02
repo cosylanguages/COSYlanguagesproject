@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
+import Button from '../../Common/Button';
 import './SimpleTextDisplay.css'; // Reusing for basic layout
 import './SpeakingRecBlock.css';   // For specific recording UI styles
 
@@ -79,13 +80,13 @@ const SpeakingRecBlock = ({ blockData, onStudentRecordingComplete }) => { // onS
             )}
 
             <div className="recording-controls">
-                <button 
+                <Button
                     onClick={handleRecordButtonClick} 
-                    className={`btn record-btn ${isRecording ? 'recording' : ''}`}
+                    className={`record-btn ${isRecording ? 'recording' : ''}`}
                     aria-pressed={isRecording}
                 >
                     {isRecording ? (t('stopRecordingBtnText') || '⏹️ Stop Recording') : (t('startRecordingBtnText') || '🎤 Start Recording')}
-                </button>
+                </Button>
                 {isRecording && <span className="recording-indicator">{t('recordingNowIndicator') || 'Recording...'}</span>}
             </div>
 
@@ -95,9 +96,9 @@ const SpeakingRecBlock = ({ blockData, onStudentRecordingComplete }) => { // onS
                 <div className="audio-playback-area">
                     <h5>{t('yourRecordingLabel') || 'Your Recording:'}</h5>
                     <audio src={audioURL} controls />
-                    <button onClick={startRecording} className="btn btn-secondary record-again-btn"> 
+                    <Button onClick={startRecording} className="button--secondary">
                         {t('recordAgainBtnText') || '🎙️ Record Again'}
-                    </button>
+                    </Button>
                 </div>
             )}
             <p className="feature-notice"><em>{t('audioRecordingStorageNotice') || 'Note: Recordings are currently local to your browser session and not saved long-term.'}</em></p>

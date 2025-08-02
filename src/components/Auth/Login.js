@@ -55,7 +55,6 @@ const Login = () => {
                 <Button
                     type="submit"
                     disabled={loadingAuth}
-                    className="btn-primary"
                 >
                     {loadingAuth ? (isLogin ? 'Logging in...' : 'Signing up...') : (isLogin ? 'Login' : 'Sign Up')}
                 </Button>
@@ -63,7 +62,6 @@ const Login = () => {
                     type="button"
                     onClick={() => setIsLogin(!isLogin)}
                     disabled={loadingAuth}
-                    className="btn-secondary"
                 >
                     {isLogin ? 'Need an account? Sign Up' : 'Already have an account? Login'}
                 </Button>

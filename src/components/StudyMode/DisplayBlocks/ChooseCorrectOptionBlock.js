@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
+import Button from '../../Common/Button';
 import './ChooseCorrectOptionBlock.css';
 import '../../../freestyle-shared.css';
 
@@ -95,13 +96,11 @@ const ChooseCorrectOptionBlock = ({ blockData }) => {
                     );
                 })}
             </div>
-            {/* Placeholder for future "Check Answers" button
             <div className="form-actions" style={{ marginTop: '15px' }}>
-                <button type="button" className="btn-primary">
+                <Button type="button" className="">
                     {t('checkAnswersBtn') || 'Check Answers'}
-                </button>
+                </Button>
             </div>
-            */}
         </div>
     );
 };

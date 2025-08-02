@@ -2,6 +2,7 @@ import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useFreestyle } from '../../contexts/FreestyleContext';
 import TransliterableText from '../Common/TransliterableText';
+import Button from '../Common/Button';
 import './PracticeCategoryNav.css';
 
 const PracticeCategoryNav = ({ language, days }) => {
@@ -31,13 +32,13 @@ const PracticeCategoryNav = ({ language, days }) => {
       </h3>
       <div className="practice-category-buttons">
         {categoryKeys.map((categoryKey) => (
-          <button
+          <Button
             key={categoryKey}
             onClick={() => handleCategorySelect(categoryKey)}
             className={`practice-category-btn ${selectedExercise?.exercise === categoryKey ? 'active' : ''}`}
           >
             {t(categoryDisplayInfo[categoryKey].translationKey, categoryDisplayInfo[categoryKey].defaultLabel)}
-          </button>
+          </Button>
         ))}
       </div>
     </div>

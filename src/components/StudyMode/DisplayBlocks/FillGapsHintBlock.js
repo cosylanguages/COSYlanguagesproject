@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
+import Button from '../../Common/Button';
 import './FillGapsHintBlock.css';
 
 const FillGapsHintBlock = ({ blockData }) => {
@@ -53,15 +54,15 @@ const FillGapsHintBlock = ({ blockData }) => {
                         <span className="text-after">{getLocalizedText(item.textAfter)}</span>
                         
                         {item.hint && (getLocalizedText(item.hint)) && (
-                            <button 
+                            <Button
                                 type="button" 
                                 onClick={() => toggleHint(index)} 
-                                className="hint-toggle-btn"
+                                className="button--icon"
                                 title={t('toggleHintBtnTitle') || 'Toggle hint'}
                                 aria-expanded={showHints[index]}
                             >
                                 💡
-                            </button>
+                            </Button>
                         )}
                         {showHints[index] && item.hint && (getLocalizedText(item.hint)) && (
                             <span className="hint-text">({getLocalizedText(item.hint)})</span>
@@ -69,14 +70,12 @@ const FillGapsHintBlock = ({ blockData }) => {
                     </div>
                 ))}
             </div>
-            {/* 
-            // Placeholder for future "Check Answers" button and feedback display
+
             <div className="form-actions" style={{marginTop: '15px'}}>
-                <button type="button" className="btn-primary">
+                <Button type="button" className="">
                     {t('checkAnswersBtn') || 'Check Answers'}
-                </button>
+                </Button>
             </div>
-            */}
         </div>
     );
 };

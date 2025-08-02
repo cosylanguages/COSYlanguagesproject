@@ -1,22 +1,23 @@
 .match-words-block {
     padding: 15px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--color-muted);
     border-radius: 5px;
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: var(--color-light);
 }
 
 .match-words-block h4 {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.3em;
-    color: #333;
+    color: var(--color-dark);
 }
 
 .match-words-block .instructions {
     margin-bottom: 20px;
     font-style: italic;
-    color: #555;
+    color: var(--color-dark);
+    opacity: 0.7;
 }
 
 .matching-area {
@@ -31,40 +32,26 @@
     flex-direction: column;
     gap: 10px; /* Gap between items in a column */
     padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #eee;
+    background-color: var(--color-muted);
+    border: 1px solid var(--color-muted);
     border-radius: 4px;
     min-height: 150px; /* Ensure columns have some height */
 }
 
 .match-item {
-    padding: 10px 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-    cursor: pointer;
-    text-align: left;
-    transition: background-color 0.2s, border-color 0.2s;
-    width: 100%; /* Make buttons take full width of column */
-    box-sizing: border-box;
+    /* This class is now empty, as the styling is handled by the .button--match-item class */
 }
 
 .match-item:hover:not(:disabled) {
-    background-color: #f0f0f0;
-    border-color: #bbb;
+    /* This class is now empty, as the styling is handled by the .button--match-item class */
 }
 
 .match-item.selected {
-    background-color: var(--primary-color-light, #cfe2ff); /* Light primary color */
-    border-color: var(--primary-color, #0d6efd);
-    font-weight: bold;
+    /* This class is now empty, as the styling is handled by the .button--match-item class */
 }
 
 .match-item.matched {
-    background-color: #e9ecef; /* Light grey for matched */
-    border-color: #ced4da;
-    cursor: default;
-    opacity: 0.7;
+    /* This class is now empty, as the styling is handled by the .button--match-item class */
 }
 
 .match-item:disabled {

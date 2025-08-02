@@ -19,31 +19,32 @@
     display: flex;
     align-items: center;
     padding: 10px 15px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-muted);
     border-radius: 6px;
-    background-color: #f9f9f9;
+    background-color: var(--color-light);
     cursor: pointer;
     transition: background-color 0.2s, border-color 0.2s;
 }
 
 .mcq-option:hover:not([aria-disabled="true"]) {
-    background-color: #e9ecef;
-    border-color: #ced4da;
+    background-color: var(--color-muted);
+    border-color: var(--color-primary);
 }
 
 .mcq-option.selected {
-    background-color: var(--primary-color-xlight, #cfe2ff);
-    border-color: var(--primary-color, #0d6efd);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary-dark);
+    color: var(--color-light);
 }
 
 .mcq-checkbox-custom {
     margin-right: 10px;
     font-size: 1.3em; /* Make checkbox icon larger */
     line-height: 1;
-    color: var(--text-secondary);
+    color: var(--color-dark);
 }
 .mcq-option.selected .mcq-checkbox-custom {
-    color: var(--primary-color, #0d6efd);
+    color: var(--color-light);
 }
 
 
@@ -53,37 +54,37 @@
 
 /* Feedback styles after checking answers */
 .mcq-option.correct-answer {
-    background-color: var(--success-color-xlight, #d1e7dd);
-    border-color: var(--success-color, #198754);
-    color: var(--success-color-text, #0f5132);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary-dark);
+    color: var(--color-light);
 }
 .mcq-option.correct-answer .mcq-checkbox-custom,
 .mcq-option.correct-answer .feedback-icon {
-    color: var(--success-color, #198754);
+    color: var(--color-light);
 }
 
 
 .mcq-option.incorrect-answer { /* User selected this, but it was wrong */
-    background-color: var(--danger-color-xlight, #f8d7da);
-    border-color: var(--danger-color, #dc3545);
-    color: var(--danger-color-text, #842029);
+    background-color: #E57373;
+    border-color: #EF5350;
+    color: var(--color-light);
     text-decoration: line-through; /* Optional: strike through incorrect selections */
 }
 .mcq-option.incorrect-answer .mcq-checkbox-custom,
 .mcq-option.incorrect-answer .feedback-icon {
-    color: var(--danger-color, #dc3545);
+    color: var(--color-light);
 }
 
 
 .mcq-option.missed-answer { /* User did NOT select this, but it was correct */
     /* background-color: #fff3cd; */ /* Light yellow for missed correct answers */
-    border: 2px dashed var(--success-color, #198754); /* Highlight that it should have been selected */
+    border: 2px dashed var(--color-primary-dark); /* Highlight that it should have been selected */
 }
 .mcq-option.missed-answer .mcq-checkbox-custom {
-    color: var(--text-secondary); /* Keep checkbox normal as it wasn't selected */
+    color: var(--color-dark); /* Keep checkbox normal as it wasn't selected */
 }
 .mcq-option.missed-answer .feedback-icon { /* The "(Correct)" text */
-    color: var(--success-color, #198754);
+    color: var(--color-primary-dark);
     font-style: italic;
     font-size: 0.9em;
 }
@@ -115,28 +116,28 @@
 /* Styling for option-specific feedback messages */
 .option-specific-feedback {
     font-size: 0.9em;
-    color: var(--text-muted, #6c757d); /* Default color, can be overridden by parent's color if needed */
+    color: var(--color-dark); /* Default color, can be overridden by parent's color if needed */
     margin-top: 8px; /* Space between option text and its feedback */
     padding: 8px;
-    background-color: var(--surface-light, #f8f9fa); /* Light background for the feedback box */
+    background-color: var(--color-muted); /* Light background for the feedback box */
     border-radius: 4px;
-    border-left: 3px solid var(--border-color-muted, #ced4da); /* Accent border */
+    border-left: 3px solid var(--color-muted); /* Accent border */
     width: 100%; /* Make it take the full width of the option container */
     box-sizing: border-box;
 }
 
 /* Adjust feedback text color based on parent mcq-option state for better context */
 .mcq-option.correct-answer .option-specific-feedback {
-    border-left-color: var(--success-color, #198754);
-    background-color: var(--success-color-xxlight, #e6f5ea); /* Even lighter success background */
+    border-left-color: var(--color-primary-dark);
+    background-color: var(--color-light);
 }
 
 .mcq-option.incorrect-answer .option-specific-feedback {
-    border-left-color: var(--danger-color, #dc3545);
-    background-color: var(--danger-color-xxlight, #fdedee); /* Even lighter danger background */
+    border-left-color: #EF5350;
+    background-color: var(--color-light);
 }
 
 .mcq-option.missed-answer .option-specific-feedback {
-    border-left-color: var(--warning-color, #ffc107); /* Or success, depending on desired emphasis */
-    background-color: var(--warning-color-xxlight, #fff8e1);
+    border-left-color: var(--color-primary-dark);
+    background-color: var(--color-light);
 }

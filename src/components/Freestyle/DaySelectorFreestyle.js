@@ -2,6 +2,7 @@
 import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useDaySelection } from '../../hooks/useDaySelection';
+import Button from '../Common/Button';
 import './DaySelectorFreestyle.css';
 
 /**
@@ -114,13 +115,12 @@ const DaySelectorFreestyle = ({ language }) => {
 
       {/* The confirm button. */}
       <div style={{ marginTop: '15px', textAlign: 'center' }}>
-        <button
+        <Button
           onClick={handleConfirmDays}
           disabled={isConfirmButtonDisabled()}
-          className="btn btn-primary"
         >
           {t('buttons.confirmDays', 'Confirm Days & Show Exercises')}
-        </button>
+        </Button>
       </div>
     </div>
   );

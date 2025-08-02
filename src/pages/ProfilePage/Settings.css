@@ -2,7 +2,7 @@
 .settings {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: var(--color-muted);
   border-radius: 8px;
 }
 

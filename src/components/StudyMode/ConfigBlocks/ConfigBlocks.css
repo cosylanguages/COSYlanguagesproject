@@ -26,7 +26,7 @@
 .options-fieldset legend {
   font-size: var(--font-size-base, 1rem); /* Match .unified-label size */
   font-weight: 600; /* Match .unified-label weight */
-  color: var(--color-text-secondary, #6c757d); /* Match .unified-label color */
+  color: var(--color-dark); /* Match .unified-label color */
   padding: 0 var(--spacing-xs, 0.25rem); 
   margin-bottom: var(--spacing-sm, 0.5rem); /* Consistent spacing */
 }
@@ -35,9 +35,9 @@
 .form-group input[type="text"],
 .form-group textarea {
   width: 100%;
-  padding: var(--spacing-sm, 0.5rem);
-  border: 1px solid var(--color-border, #ced4da);
-  border-radius: var(--border-radius-md, 0.25rem);
+  padding: var(--space-sm);
+  border: 1px solid var(--color-muted);
+  border-radius: var(--radius-sm);
   font-size: var(--font-size-base, 1rem);
   box-sizing: border-box; /* Ensures padding doesn't expand width */
 }
@@ -49,14 +49,15 @@
 
 .form-group input[type="text"]:focus,
 .form-group textarea:focus {
-  border-color: var(--color-primary, #007bff);
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(27, 182, 173, 0.2);
   outline: none;
 }
 
 .input-hint {
   font-size: var(--font-size-sm, 0.85rem); /* Slightly larger for better readability */
-  color: var(--color-text-secondary, #5a6268); /* Consistent secondary text color */
+  color: var(--color-dark); /* Consistent secondary text color */
+  opacity: 0.7;
   margin-top: var(--spacing-xs, 0.3rem); /* Consistent small top margin */
   line-height: 1.5; /* Improved line height */
   font-style: italic; /* Italicize hints for distinction */
@@ -65,16 +66,16 @@
 /* Modal actions are usually styled by Modal.css or overridden if needed */
 /* .modal-actions { (defined in Modal.css, ensure it's flexible) } */
 /* Styles for buttons within .modal-actions if specific overrides are needed */
-.modal-actions .btn {
-  margin-left: var(--spacing-sm, 0.5rem);
+.modal-actions .button {
+  margin-left: var(--space-sm);
 }
-.modal-actions .btn:first-child {
+.modal-actions .button:first-child {
   margin-left: 0;
 }
 
 /* Styles specific to MCQMultipleBlockConfig */
 .mcq-multiple-config-form .options-fieldset {
-  border: 1px solid var(--color-border-light, #dee2e6);
+  border: 1px solid var(--color-muted);
   padding: var(--spacing-md, 1rem);
   border-radius: var(--border-radius-md, 0.25rem);
   margin-top: var(--spacing-sm, 0.5rem); /* A bit of space above the fieldset */
@@ -82,7 +83,7 @@
 
 .mcq-multiple-config-form .options-fieldset legend {
   font-weight: bold;
-  color: var(--color-text-headings, #343a40);
+  color: var(--color-dark);
   padding: 0 var(--spacing-xs, 0.25rem); /* Padding around legend text */
   font-size: var(--font-size-base, 1rem);
 }
@@ -90,19 +91,19 @@
 .mcq-option-config-item {
   display: flex;
   align-items: flex-start; /* Align items to the top for textareas */
-  gap: var(--spacing-sm, 0.5rem);
+  gap: var(--space-sm);
   padding: var(--spacing-md, 1rem);
-  border: 1px solid var(--color-border-extralight, #e9ecef);
+  border: 1px solid var(--color-muted);
   border-radius: var(--border-radius-sm, 0.2rem);
   margin-bottom: var(--spacing-md, 1rem);
-  background-color: var(--color-background, #fff); /* White background for each option item */
+  background-color: var(--color-light); /* White background for each option item */
 }
 
 .mcq-option-config-item .option-inputs {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm, 0.5rem);
+  gap: var(--space-sm);
 }
 
 .mcq-option-config-item .option-text-group input[type="text"] {
@@ -120,26 +121,24 @@
   margin-right: var(--spacing-xs, 0.5rem);
   width: auto; /* Override full width from .form-group input */
   height: var(--font-size-base, 1rem); /* Align size with text */
-  accent-color: var(--color-primary, #007bff);
+  accent-color: var(--color-primary);
 }
 .mcq-option-config-item .option-correct-group .checkbox-label {
     font-weight: normal; /* Override bold from .form-group label */
     font-size: var(--font-size-base, 1rem);
-    color: var(--color-text-primary, #212529);
+    color: var(--color-dark);
     display: flex;
     align-items: center;
 }
 
 
 .mcq-option-config-item .remove-option-btn {
-  /* Styles for the remove button for an option */
-  align-self: center; /* Center button vertically if inputs are shorter */
-  height: fit-content;
+  /* This class is now empty, as the styling is handled by the .button--danger and .button--sm classes */
 }
 
 .mcq-multiple-config-form .add-option-btn {
-  /* Styles for the '+ Add Option' button */
-  margin-top: var(--spacing-sm, 0.5rem); /* Space above the add button within the fieldset */
+  /* This class is now empty, as the styling is handled by the .button class */
+  margin-top: var(--space-sm); /* Space above the add button within the fieldset */
   align-self: flex-start; /* Align to the left */
 }
 

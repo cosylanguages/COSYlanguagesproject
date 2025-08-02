@@ -5,6 +5,7 @@ import { fetchStudySets, addStudySet, addCardToStudySet } from '../../api/studyS
 import { commentOnEvent, likeEvent } from '../../api/community';
 import { useAuth } from '../../contexts/AuthContext';
 import toast from 'react-hot-toast';
+import Button from '../Common/Button';
 import './SpeakingClubPost.css';
 
 const SpeakingClubPost = ({ event }) => {
@@ -108,9 +109,9 @@ const SpeakingClubPost = ({ event }) => {
       )}
 
       <div className="post-actions">
-        <button onClick={handleLike} className="like-btn">
+        <Button onClick={handleLike} className="like-btn">
           ❤️ {likes.length} {t('speakingClubPost.likes', 'Likes')}
-        </button>
+        </Button>
       </div>
 
       <div className="post-details">
@@ -126,9 +127,9 @@ const SpeakingClubPost = ({ event }) => {
           {event.vocabulary && event.vocabulary.map((word, index) => (
             <li key={index}>
               {word}
-              <button className="add-word-btn" onClick={() => handleAddWordToDictionary(word)}>
+              <Button className="add-word-btn" onClick={() => handleAddWordToDictionary(word)}>
                 +
-              </button>
+              </Button>
             </li>
           ))}
         </ul>
@@ -149,9 +150,9 @@ const SpeakingClubPost = ({ event }) => {
               value={newComment}
               onChange={(e) => setNewComment(e.target.value)}
             />
-            <button className="comment-submit-btn" onClick={handleCommentSubmit}>
+            <Button className="comment-submit-btn" onClick={handleCommentSubmit}>
               {t('speakingClubPost.submitComment', 'Submit')}
-            </button>
+            </Button>
           </div>
         )}
       </div>

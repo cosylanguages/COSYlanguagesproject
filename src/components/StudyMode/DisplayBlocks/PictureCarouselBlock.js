@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
+import Button from '../../Common/Button';
 import './PictureCarouselBlock.css'; // To be created
 
 const PictureCarouselBlock = ({ blockData }) => {
@@ -47,15 +48,15 @@ const PictureCarouselBlock = ({ blockData }) => {
             </div>
 
             <div className="carousel-controls">
-                <button onClick={goToPrevious} className="carousel-control-btn prev" aria-label={t('previousImageAria') || "Previous image"}>
+                <Button onClick={goToPrevious} className="button--circle" aria-label={t('previousImageAria') || "Previous image"}>
                     &lt;
-                </button>
+                </Button>
                 <div className="carousel-caption-area">
                     {currentCaption && <p className="carousel-caption" data-transliterable="true">{currentCaption}</p>}
                 </div>
-                <button onClick={goToNext} className="carousel-control-btn next" aria-label={t('nextImageAria') || "Next image"}>
+                <Button onClick={goToNext} className="button--circle" aria-label={t('nextImageAria') || "Next image"}>
                     &gt;
-                </button>
+                </Button>
             </div>
             
             <div className="carousel-dots">

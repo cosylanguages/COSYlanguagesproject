@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils';
 import { normalizeString } from '../../../utils/stringUtils'; // Import normalizeString
+import Button from '../../Common/Button';
 import './LabelPicturesBlock.css';
 
 const LabelPicturesBlock = ({ blockData, onAnswer }) => {
@@ -136,17 +137,17 @@ const LabelPicturesBlock = ({ blockData, onAnswer }) => {
                         }}
                     />
                     <div className="modal-actions">
-                        <button onClick={handleModalSubmit} className="btn btn-primary">{t('submitBtn') || 'OK'}</button> {/* Changed from Submit to OK as it just closes */}
-                        {/* <button onClick={() => setActiveHotspot(null)} className="btn btn-secondary">{t('cancelBtn') || 'Cancel'}</button> */}
+                        <Button onClick={handleModalSubmit} className="">{t('submitBtn') || 'OK'}</Button> {/* Changed from Submit to OK as it just closes */}
+                        {/* <Button onClick={() => setActiveHotspot(null)} className="button--secondary">{t('cancelBtn') || 'Cancel'}</Button> */}
                     </div>
                 </div>
             )}
 
             <div className="lp-block-actions">
                 {!showResults ? (
-                    <button onClick={checkAllAnswers} className="btn btn-primary">{t('checkAnswersBtn') || 'Check Answers'}</button>
+                    <Button onClick={checkAllAnswers} className="">{t('checkAnswersBtn') || 'Check Answers'}</Button>
                 ) : (
-                    <button onClick={tryAgain} className="btn btn-secondary">{t('tryAgainBtn') || 'Try Again'}</button>
+                    <Button onClick={tryAgain} className="button--secondary">{t('tryAgainBtn') || 'Try Again'}</Button>
                 )}
             </div>
              {showResults && (
@@ -163,11 +164,11 @@ const LabelPicturesBlock = ({ blockData, onAnswer }) => {
                                     <span className="student-answer-lp">
                                         {userAnswerDisplay}
                                         {fb.userAnswer && (
-                                            <button 
+                                            <Button
                                                 onClick={() => pronounceText(fb.userAnswer, blockData.lang || language)}
-                                                className="btn-icon pronounce-btn-inline"
+                                                className="button--icon"
                                                 title={t('pronounceYourAnswer') || 'Pronounce your answer'}
-                                            >🔊</button>
+                                            >🔊</Button>
                                         )}
                                     </span>
                                     <span className="feedback-separator">-</span>
@@ -183,11 +184,11 @@ const LabelPicturesBlock = ({ blockData, onAnswer }) => {
                                                 {t('incorrect')} ❌ 
                                                 ({t('correctAnswerWas') || 'Correct'}: {fb.correctAnswer}
                                                 {fb.correctAnswer && (
-                                                    <button 
+                                                    <Button
                                                         onClick={() => pronounceText(fb.correctAnswer, blockData.lang || language)}
-                                                        className="btn-icon pronounce-btn-inline"
+                                                        className="button--icon"
                                                         title={t('pronounceCorrectAnswer') || 'Pronounce correct answer'}
-                                                    >🔊</button>
+                                                    >🔊</Button>
                                                 )}
                                                 )
                                             </span>

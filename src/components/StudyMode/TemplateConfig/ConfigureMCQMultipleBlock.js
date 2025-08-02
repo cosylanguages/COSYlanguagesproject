@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import TransliterableText from '../../Common/TransliterableText';
 import Modal from '../../Common/Modal';
+import Button from '../../Common/Button';
 import './ConfigureMCQMultipleBlock.css'; // Re-use common styles
 
 const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
@@ -182,14 +183,14 @@ const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
                   </label>
                 </div>
               </div>
-              <button type="button" onClick={() => removeOption(index)} className="btn btn-sm btn-danger remove-option-btn">
+              <Button type="button" onClick={() => removeOption(index)} className="button--danger button--sm remove-option-btn">
                 <TransliterableText text={t('removeOptionBtn', 'Remove Option')} />
-              </button>
+              </Button>
             </div>
           ))}
-          <button type="button" onClick={addOption} className="btn btn-sm btn-secondary add-option-btn">
+          <Button type="button" onClick={addOption} className="button--secondary button--sm add-option-btn">
             <TransliterableText text={t('addOptionBtn', '+ Add Option')} />
-          </button>
+          </Button>
         </fieldset>
 
         {/* Block Language Override */}
@@ -204,12 +205,12 @@ const MCQMultipleBlockConfig = ({ block, onSave, onClose }) => {
         </div>
 
         <div className="modal-actions">
-          <button onClick={handleSave} className="btn btn-primary">
+          <Button onClick={handleSave} className="">
             <TransliterableText text={t('saveConfigBtn', 'Save Configuration')} />
-          </button>
-          <button onClick={onClose} className="btn btn-secondary">
+          </Button>
+          <Button onClick={onClose} className="button--secondary">
             <TransliterableText text={t('cancelBtn', 'Cancel')} />
-          </button>
+          </Button>
         </div>
       </div>
     </Modal>

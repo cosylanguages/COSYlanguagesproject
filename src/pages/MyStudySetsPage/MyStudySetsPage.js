@@ -6,6 +6,7 @@ import FlashcardPlayer from '../../components/StudyMode/StudentTools/FlashcardPl
 import { getStudySetById } from '../../utils/studySetService';
 import { useI18n } from '../../i18n/I18nContext';
 import { useStudySet } from '../../contexts/StudySetContext';
+import Button from '../../components/Common/Button';
 import './MyStudySetsPage.css';
 
 const MyStudySetsPage = () => {
@@ -85,9 +86,9 @@ const MyStudySetsPage = () => {
     <div className="my-study-sets-page">
       <h1>{t('myStudySetsPage.title', 'Manage Your Study Sets')}</h1>
       {currentView !== 'list' && (
-        <button onClick={showListView} className="btn btn-secondary back-to-list-btn">
+        <Button onClick={showListView} className="button--secondary back-to-list-btn">
           {t('myStudySetsPage.backToList', '← Back to Set List')}
-        </button>
+        </Button>
       )}
       {content}
     </div>

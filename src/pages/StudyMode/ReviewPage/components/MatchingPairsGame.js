@@ -39,7 +39,7 @@ function MatchingPairsGame({ pairs }) {
       {cards.map((card) => (
         <div
           key={card.id}
-          className={`card ${flippedCards.includes(card) || matchedPairs.includes(card.id) ? 'flipped' : ''}`}
+          className={`card matching-card ${flippedCards.includes(card) || matchedPairs.includes(card.id) ? 'flipped' : ''}`}
           onClick={() => handleCardClick(card)}
         >
           {flippedCards.includes(card) || matchedPairs.includes(card.id) ? card.word : ''}

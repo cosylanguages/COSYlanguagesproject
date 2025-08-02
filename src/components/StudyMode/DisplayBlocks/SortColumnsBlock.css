@@ -1,27 +1,28 @@
 .sort-columns-block {
     padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--color-muted);
     border-radius: 8px;
-    background-color: #fff;
+    background-color: var(--color-light);
 }
 
 .sort-columns-block h4 {
     margin-top: 0;
-    color: var(--text-primary);
+    color: var(--color-dark);
 }
 
 .sort-columns-block > p { /* Instruction paragraph */
-    color: var(--text-secondary);
+    color: var(--color-dark);
+    opacity: 0.7;
     margin-bottom: 15px;
 }
 
 .item-pool {
     padding: 15px;
     margin-bottom: 20px;
-    border: 2px dashed #ccc;
+    border: 2px dashed var(--color-muted);
     border-radius: 6px;
-    background-color: #f8f9fa;
+    background-color: var(--color-muted);
     min-height: 80px;
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap */
@@ -33,14 +34,16 @@
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1em;
-    color: var(--text-secondary);
+    color: var(--color-dark);
+    opacity: 0.7;
     text-align: center;
 }
 .empty-pool-message {
     width: 100%;
     text-align: center;
     font-style: italic;
-    color: #888;
+    color: var(--color-dark);
+    opacity: 0.7;
 }
 
 
@@ -54,9 +57,9 @@
 .sortable-column {
     flex: 1;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-muted);
     border-radius: 6px;
-    background-color: #f0f8ff; /* Light alice blue or similar */
+    background-color: var(--color-light);
     min-height: 150px; /* Ensure columns have some drop area */
     display: flex;
     flex-direction: column;
@@ -66,10 +69,10 @@
     margin-top: 0;
     margin-bottom: 10px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--color-muted);
     text-align: center;
     font-size: 1.1em;
-    color: var(--text-primary);
+    color: var(--color-dark);
 }
 
 .column-items-container {
@@ -84,9 +87,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #aaa;
+    color: var(--color-dark);
+    opacity: 0.7;
     font-style: italic;
-    border: 2px dashed #e0e0e0;
+    border: 2px dashed var(--color-muted);
     border-radius: 4px;
     padding: 10px;
     text-align: center;
@@ -95,8 +99,8 @@
 
 .draggable-item {
     padding: 8px 12px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: var(--color-light);
+    border: 1px solid var(--color-muted);
     border-radius: 4px;
     cursor: grab;
     transition: background-color 0.2s, box-shadow 0.2s;
@@ -106,7 +110,7 @@
 .draggable-item:active {
     cursor: grabbing;
     box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-    background-color: #f0f0f0;
+    background-color: var(--color-muted);
 }
 
 .pool-item {
@@ -118,15 +122,15 @@
 }
 
 .placed-item.correct {
-    background-color: var(--success-color-xlight, #d4edda); /* Very light green */
-    border-color: var(--success-color-light, #c3e6cb);
-    color: var(--success-color, #155724);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary-dark);
+    color: var(--color-light);
 }
 
 .placed-item.incorrect {
-    background-color: var(--danger-color-xlight, #f8d7da); /* Very light red */
-    border-color: var(--danger-color-light, #f5c6cb);
-    color: var(--danger-color, #721c24);
+    background-color: #E57373;
+    border-color: #EF5350;
+    color: var(--color-light);
 }
 
 
@@ -138,8 +142,8 @@
 .sc-results-summary {
     margin-top: 20px;
     padding: 10px;
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
+    background-color: var(--color-muted);
+    border: 1px solid var(--color-muted);
     border-radius: 4px;
 }
 .sc-results-summary h5 {

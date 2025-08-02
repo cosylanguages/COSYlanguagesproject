@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
+import Button from '../../Common/Button';
 import './SortColumnsBlock.css'; // To be created
 
 // Helper function to shuffle an array
@@ -219,11 +220,11 @@ const SortColumnsBlock = ({ blockData, onAnswer }) => {
             
             <div className="sc-block-actions">
                 {!showResults ? (
-                    <button onClick={checkAllAnswers} className="btn btn-primary" disabled={itemPool.length > 0 && columns.some(col => placedItems[col.id]?.length === 0)}>
+                    <Button onClick={checkAllAnswers} className="" disabled={itemPool.length > 0 && columns.some(col => placedItems[col.id]?.length === 0)}>
                         {t('checkAnswersBtn') || 'Check Answers'}
-                    </button>
+                    </Button>
                 ) : (
-                    <button onClick={tryAgain} className="btn btn-secondary">{t('tryAgainBtn') || 'Try Again'}</button>
+                    <Button onClick={tryAgain} className="button--secondary">{t('tryAgainBtn') || 'Try Again'}</Button>
                 )}
             </div>
 

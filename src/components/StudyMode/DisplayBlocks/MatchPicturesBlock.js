@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils'; // Added
+import Button from '../../Common/Button';
 import './MatchPicturesBlock.css'; 
 
 // Helper function to shuffle an array
@@ -168,16 +169,16 @@ const MatchPicturesBlock = ({ blockData, onAnswer }) => {
                                 aria-disabled={showResults || isMatched}
                             >
                                 <span className="text-content-mtp">{txtItem.content}</span>
-                                <button
+                                <Button
                                     onClick={(e) => { 
                                         e.stopPropagation(); // Prevent item selection
                                         pronounceText(txtItem.content, blockData.lang || language); 
                                     }}
-                                    className="btn-icon pronounce-btn-inline"
+                                    className="button--icon"
                                     title={t('pronounceText') || 'Pronounce'}
                                     aria-label={t('pronounceText') || 'Pronounce'}
                                     disabled={showResults && isMatched && !allMatched} // Keep enabled if not fully solved to hear options
-                                >🔊</button>
+                                >🔊</Button>
                             </div>
                         );
                     })}
@@ -188,11 +189,11 @@ const MatchPicturesBlock = ({ blockData, onAnswer }) => {
             
             <div className="mtp-block-actions">
                 {!showResults ? (
-                    <button onClick={checkAllAnswers} className="btn btn-primary" disabled={!allMatched && Object.keys(matchedPairs).length < pairs.length}>
+                    <Button onClick={checkAllAnswers} className="" disabled={!allMatched && Object.keys(matchedPairs).length < pairs.length}>
                         {t('checkAnswersBtn') || 'Check Answers'}
-                    </button>
+                    </Button>
                 ) : (
-                    <button onClick={tryAgain} className="btn btn-secondary">{t('tryAgainBtn') || 'Try Again'}</button>
+                    <Button onClick={tryAgain} className="button--secondary">{t('tryAgainBtn') || 'Try Again'}</Button>
                 )}
             </div>
 

@@ -1,8 +1,8 @@
 /* src/components/Layout/Header.css */
 .app-header {
-  background-color: #f8f9fa;
+  background-color: var(--color-muted);
   padding: 10px 20px;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid var(--color-muted);
   position: sticky;
   top: 0;
   z-index: 1020;
@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #333;
+  color: var(--color-dark);
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -38,7 +38,7 @@
 
 .header-link {
   text-decoration: none;
-  color: #007bff;
+  color: var(--color-primary);
   font-weight: 500;
   padding: 5px 10px;
   border-radius: 5px;
@@ -47,8 +47,8 @@
 
 .header-link:hover,
 .header-link.active-link {
-  background-color: #007bff;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-light);
 }
 
 .header-controls {
@@ -69,11 +69,11 @@
 
 .profile-link {
   font-weight: 500;
-  color: #333;
+  color: var(--color-dark);
 }
 
 .login-link {
   font-weight: 500;
-  color: #007bff;
+  color: var(--color-primary);
   text-decoration: none;
 }

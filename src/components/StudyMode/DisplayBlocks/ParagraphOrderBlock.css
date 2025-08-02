@@ -1,33 +1,34 @@
 .paragraph-order-block {
     padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--color-muted);
     border-radius: 8px;
-    background-color: #fff;
+    background-color: var(--color-light);
 }
 
 .paragraph-order-block h4 {
     margin-top: 0;
-    color: var(--text-primary);
+    color: var(--color-dark);
 }
 
 .paragraph-order-block > p { /* Instruction paragraph */
-    color: var(--text-secondary);
+    color: var(--color-dark);
+    opacity: 0.7;
     margin-bottom: 15px;
 }
 
 .paragraphs-container {
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-muted);
     border-radius: 6px;
     padding: 10px;
-    background-color: #f8f9fa;
+    background-color: var(--color-muted);
 }
 
 .draggable-paragraph {
-    background-color: #fff;
+    background-color: var(--color-light);
     padding: 12px;
     margin-bottom: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-muted);
     border-radius: 4px;
     cursor: grab;
     transition: background-color 0.2s, box-shadow 0.2s, border-color 0.2s;
@@ -42,13 +43,13 @@
 .draggable-paragraph:active, .draggable-paragraph.dragging {
     cursor: grabbing;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    background-color: #e9f5ff; /* Light blue when dragging */
+    background-color: var(--color-muted);
     opacity: 0.9;
 }
 
 .drag-handle {
     margin-right: 10px;
-    color: #aaa;
+    color: var(--color-muted);
     cursor: grab;
     font-size: 1.2em;
     line-height: 1; /* Adjust line height for better vertical alignment */
@@ -61,18 +62,21 @@
 .paragraph-index-display {
     margin-right: 8px;
     font-weight: bold;
-    color: var(--text-secondary);
+    color: var(--color-dark);
+    opacity: 0.7;
 }
 
 
 .draggable-paragraph.correct {
-    border-left: 5px solid var(--success-color, green);
-    background-color: var(--success-color-xlight, #e6ffed);
+    border-left: 5px solid var(--color-primary-dark);
+    background-color: var(--color-primary);
+    color: var(--color-light);
 }
 
 .draggable-paragraph.incorrect {
-    border-left: 5px solid var(--danger-color, red);
-    background-color: var(--danger-color-xlight, #f8d7da);
+    border-left: 5px solid #EF5350;
+    background-color: #E57373;
+    color: var(--color-light);
 }
 
 .po-block-actions {
@@ -83,8 +87,8 @@
 .po-results-summary {
     margin-top: 15px;
     padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #e0e0e0;
+    background-color: var(--color-muted);
+    border: 1px solid var(--color-muted);
     border-radius: 4px;
     text-align: center;
 }

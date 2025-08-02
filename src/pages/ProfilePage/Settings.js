@@ -57,9 +57,9 @@ const Settings = () => {
           </select>
         </div>
         <div className="setting-row">
-          <button className="btn btn-danger" onClick={() => setIsModalOpen(true)}>
+          <Button className="button--danger" onClick={() => setIsModalOpen(true)}>
             {t('profile.settings.deleteAccountButton', 'Delete Account')}
-          </button>
+          </Button>
         </div>
       </div>
       {isModalOpen && (
@@ -69,10 +69,10 @@ const Settings = () => {
             {t('profile.settings.deleteModal.message', 'Are you sure you want to delete your account? This action is irreversible.')}
           </p>
           <div className="modal-actions">
-            <Button onClick={() => setIsModalOpen(false)} variant="secondary">
+            <Button onClick={() => setIsModalOpen(false)} className="button--secondary">
               {t('profile.settings.deleteModal.cancelButton', 'Cancel')}
             </Button>
-            <Button onClick={handleConfirmDelete} variant="danger">
+            <Button onClick={handleConfirmDelete} className="button--danger">
               {t('profile.settings.deleteModal.confirmButton', 'Confirm Delete')}
             </Button>
           </div>

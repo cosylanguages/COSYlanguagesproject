@@ -7,10 +7,10 @@
     flex-direction: column; /* Stack text input and checkbox vertically on small screens if needed */
     gap: 10px;
     padding: 10px;
-    border: 1px dashed #e0e0e0;
+    border: 1px dashed var(--color-muted);
     margin-bottom: 10px;
     border-radius: 4px;
-    background-color: #ffffff; /* Slightly different background for options area */
+    background-color: var(--color-light); /* Slightly different background for options area */
 }
 
 @media (min-width: 600px) {
