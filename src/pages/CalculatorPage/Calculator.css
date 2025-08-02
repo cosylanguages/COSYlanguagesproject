@@ -1,154 +1,106 @@
-:root {
-    --cosy-navy: #1a2a3a;
-    --cosy-brick: #e74c3c;
-    --cosy-cream: #f8f4e9;
-    --cosy-taupe: #d7ccc8;
-}
-
 .calculator-section {
     padding: 10px;
     overflow-y: auto;
 }
 
 .calculator-section h2 {
-    color: var(--cosy-navy);
-    font-size: 1.1rem;
-    margin: 5px 0 10px;
+    font-family: var(--ff-serif);
+    color: var(--cosy-dark);
+    font-size: 1.5rem;
+    margin: 10px 0;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
 .calculator-section h2 i {
-    color: var(--cosy-brick);
-    font-size: 1rem;
+    color: var(--cosy-accent);
+    font-size: 1.2rem;
 }
 
 .form-group {
-    margin-bottom: 8px;
+    margin-bottom: 1em;
 }
 
 .calculator-section label {
     display: block;
-    margin-bottom: 3px;
-    font-size: 0.8rem;
-    color: var(--cosy-navy);
+    margin-bottom: 0.5em;
+    font-size: 1rem;
+    color: var(--cosy-dark);
 }
 
 .calculator-section select, .calculator-section input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid var(--cosy-taupe);
+    padding: 10px;
+    border: 1px solid var(--cosy-shadow);
     border-radius: 4px;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-family: var(--ff-sans);
 }
 
 .result-box {
-    background: white;
-    border-left: 3px solid var(--cosy-brick);
-    padding: 10px;
-    margin: 10px 0;
+    background: var(--cosy-light);
+    border-left: 3px solid var(--cosy-accent);
+    padding: 1.5em;
+    margin: 1.5em 0;
 }
 
 .price {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--cosy-navy);
+    color: var(--cosy-dark);
 }
 
 .original-price {
     text-decoration: line-through;
-    color: #999;
-    font-size: 0.9rem;
-    margin-right: 5px;
+    color: var(--cosy-dark);
+    opacity: 0.7;
+    font-size: 1rem;
+    margin-right: 1em;
 }
 
 .discount-badge {
-    background: var(--cosy-brick);
-    color: white;
-    padding: 2px 5px;
+    background: var(--cosy-accent);
+    color: var(--cosy-light);
+    padding: 0.3em 0.6em;
     border-radius: 3px;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     display: inline-block;
 }
 
 .details {
-    font-size: 0.8rem;
-    color: #555;
-    margin: 5px 0;
+    font-size: 1rem;
+    color: var(--cosy-dark);
+    margin: 1em 0;
 }
 
 .conversion {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    margin-top: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1em;
+    margin-top: 1em;
 }
 
 .currency-box {
-    background: white;
-    padding: 8px;
+    background: var(--cosy-light);
+    padding: 1em;
     border-radius: 4px;
     text-align: center;
-    border: 1px solid var(--cosy-taupe);
+    border: 1px solid var(--cosy-shadow);
 }
 
 .currency-flag {
-    font-size: 1.2rem;
-    margin-bottom: 3px;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
 }
 
 .currency-name {
-    font-size: 0.7rem;
-    color: #666;
+    font-size: 0.8rem;
+    color: var(--cosy-dark);
+    opacity: 0.7;
 }
 
 .currency-value {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 600;
-}
-
-.calculator-wrapper {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.calculator-toggle {
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.3s;
-}
-
-.calculator-toggle:hover {
-  background: #0056b3;
-}
-
-.calculator-container {
-  position: absolute;
-  bottom: 60px; /* Position above the toggle button */
-  right: 0;
-  width: 300px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  padding: 15px;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-  transform: translateY(10px);
-  opacity: 0;
-  visibility: hidden; /* Initially hidden */
-}
-
-.calculator-wrapper.open .calculator-container {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible; /* Visible when open */
 }

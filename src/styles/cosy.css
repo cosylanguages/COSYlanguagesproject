@@ -288,20 +288,26 @@ select:focus {
   height: 100vh;
 }
 
-.sidebar a {
-    display: block;
+.button-link {
+    background: none;
+    border: none;
     padding: 0.5em 1em;
     text-decoration: none;
     color: var(--cosy-dark);
     border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    font-family: var(--ff-sans);
+    font-size: 1rem;
 }
 
-.sidebar a:hover {
+.sidebar .button-link:hover {
     background-color: var(--cosy-bg);
     color: var(--cosy-light);
 }
 
-.sidebar a.active {
+.sidebar .button-link.active {
   font-weight: 700;
   color: var(--cosy-dark);
   background-color: var(--cosy-bg);

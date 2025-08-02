@@ -1,14 +1,10 @@
 .speaking-club-post {
-  background-color: var(--color-light);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: var(--space-lg);
-  margin-bottom: var(--space-lg);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.speaking-club-post:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: var(--cosy-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--cosy-shadow);
+  padding: 1.5em;
+  margin: 1em auto;
+  max-width: 700px;
 }
 
 .post-header {
@@ -26,22 +22,24 @@
 }
 
 .post-title {
+  font-family: var(--ff-serif);
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: var(--space-sm);
-  color: var(--color-dark);
+  color: var(--cosy-dark);
 }
 
 .post-date {
   font-size: 0.875rem;
-  color: var(--color-dark); /* No secondary text color in Cosy theme, using dark */
+  color: var(--cosy-dark);
   opacity: 0.7;
   margin-bottom: var(--space-md);
 }
 
 .post-description {
+  font-family: var(--ff-sans);
   font-size: 1rem;
-  color: var(--color-dark);
+  color: var(--cosy-dark);
   margin-bottom: var(--space-lg);
   line-height: 1.6;
 }
@@ -65,29 +63,31 @@
 }
 
 .like-btn {
-  background-color: var(--color-muted);
-  border: 1px solid var(--color-muted);
+  background-color: var(--cosy-light);
+  border: 1px solid var(--cosy-accent);
+  color: var(--cosy-accent);
   gap: var(--space-sm);
 }
 
 .like-btn:hover {
-  background-color: var(--color-primary-dark);
-  color: var(--color-light);
+  background-color: var(--cosy-bg);
+  color: var(--cosy-light);
 }
 
 .post-details {
-  background-color: var(--color-muted);
+  background-color: var(--cosy-light);
   border-radius: var(--radius-md);
   padding: var(--space-md);
   margin-bottom: var(--space-lg);
 }
 
 .post-details h4 {
+  font-family: var(--ff-serif);
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: var(--space-sm);
-  color: var(--color-dark);
-  border-bottom: 2px solid var(--color-light);
+  color: var(--cosy-dark);
+  border-bottom: 2px solid var(--cosy-shadow);
   padding-bottom: var(--space-sm);
 }
 
@@ -100,8 +100,8 @@
 }
 
 .add-word-btn {
-  background-color: var(--color-primary);
-  color: var(--color-light);
+  background-color: var(--cosy-bg);
+  color: var(--cosy-light);
   border: none;
   border-radius: 50%;
   width: 28px;
@@ -115,7 +115,7 @@
 }
 
 .add-word-btn:hover {
-  background-color: var(--color-primary-dark);
+  background-color: var(--cosy-accent);
 }
 
 .comments-section {
@@ -123,10 +123,11 @@
 }
 
 .comment {
-  background-color: var(--color-muted);
+  background-color: var(--cosy-light);
   border-radius: var(--radius-md);
   padding: var(--space-md);
   margin-bottom: var(--space-md);
+  border: 1px solid var(--cosy-shadow);
 }
 
 .comment p {
@@ -141,7 +142,7 @@
 .comment-input {
   width: 100%;
   padding: var(--space-md);
-  border: 1px solid var(--color-muted);
+  border: 1px solid var(--cosy-shadow);
   border-radius: var(--radius-md);
   margin-bottom: var(--space-md);
   resize: vertical;
@@ -149,11 +150,11 @@
 }
 
 .comment-submit-btn {
-  background-color: var(--color-primary);
-  color: var(--color-light);
+  background-color: var(--cosy-bg);
+  color: var(--cosy-light);
   align-self: flex-end;
 }
 
 .comment-submit-btn:hover {
-  background-color: var(--color-primary-dark);
+  background-color: var(--cosy-accent);
 }

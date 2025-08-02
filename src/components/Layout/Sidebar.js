@@ -5,11 +5,11 @@ const Sidebar = () => {
         <aside className="sidebar">
             <nav>
                 <ul>
-                    <li><a href="#" className="active">Vocabulary</a></li>
-                    <li><a href="#">Flashcards</a></li>
-                    <li><a href="#">Quiz</a></li>
-                    <li><a href="#">Grammar</a></li>
-                    <li><a href="#">Listening</a></li>
+                    <li><button className="button-link active">Vocabulary</button></li>
+                    <li><button className="button-link">Flashcards</button></li>
+                    <li><button className="button-link">Quiz</button></li>
+                    <li><button className="button-link">Grammar</button></li>
+                    <li><button className="button-link">Listening</button></li>
                 </ul>
             </nav>
         </aside>
