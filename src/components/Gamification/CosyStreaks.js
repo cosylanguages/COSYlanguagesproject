@@ -1,5 +1,5 @@
 // Import necessary libraries and components.
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './CosyStreaks.css';
 
 /**
@@ -7,19 +7,37 @@ import './CosyStreaks.css';
  * @returns {JSX.Element} The CosyStreaks component.
  */
 const CosyStreaks = () => {
-  // TODO: Update the streak visuals based on the user's daily progress.
-  const streak = {
-    days: 5,
-    visual: '🧣', // Placeholder for a growing scarf
-  };
+  const [streak, setStreak] = useState(0);
+
+  useEffect(() => {
+    const today = new Date().toDateString();
+    const lastVisit = localStorage.getItem('lastVisit');
+    let currentStreak = parseInt(localStorage.getItem('streak') || '0', 10);
+
+    if (lastVisit === today) {
+      // No change
+    } else {
+      const yesterday = new Date();
+      yesterday.setDate(yesterday.getDate() - 1);
+      if (lastVisit === yesterday.toDateString()) {
+        currentStreak++;
+      } else {
+        currentStreak = 1;
+      }
+    }
+
+    localStorage.setItem('streak', currentStreak);
+    localStorage.setItem('lastVisit', today);
+    setStreak(currentStreak);
+  }, []);
 
   // Render the cosy streaks component.
   return (
     <div className="cosy-streaks-container">
       <h3>My Cosy Streak</h3>
       <div className="streak">
-        <div className="streak-visual">{streak.visual}</div>
-        <div className="streak-days">{streak.days} days</div>
+        <div className="streak-visual">🔥</div>
+        <div className="streak-days">{streak} Day{streak !== 1 ? 's' : ''} in a row!</div>
       </div>
     </div>
   );

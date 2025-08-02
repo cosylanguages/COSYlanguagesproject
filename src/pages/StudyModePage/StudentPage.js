@@ -10,9 +10,7 @@ import { getStudentProgress } from '../../api/api';
 
 const StudentPage = ({
   lessonSectionsForPanel,
-  handleSectionSelectSmP,
   currentLangKey,
-  selectedSectionId,
   currentExerciseBlocks,
 }) => {
   const mainContentRef = useRef(null);
@@ -29,7 +27,8 @@ const StudentPage = ({
     try {
       const data = await getStudentProgress(language, currentUser.id, authToken);
       setProgress(data);
-    } catch (err) {
+    } catch (err)
+{
       setError(err.message);
     } finally {
       setLoading(false);
@@ -40,37 +39,22 @@ const StudentPage = ({
     fetchProgress();
   }, [fetchProgress]);
 
-  useEffect(() => {
-    if (mainContentRef.current) {
-      mainContentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }, [selectedSectionId]);
-
   return (
     <div className="dashboard-layout">
       <div className="layout-left-panel">
+        {loading && <p>Loading progress...</p>}
+        {error && <p className="error-message">{error}</p>}
+        {progress && <StudyProgressDashboard progress={progress} />}
         {lessonSectionsForPanel.length > 0 ? (
           <LessonSectionsPanel
             sectionsFromSyllabus={lessonSectionsForPanel}
-            onSectionSelect={handleSectionSelectSmP}
             currentLangKey={currentLangKey}
-            selectedSectionId={selectedSectionId}
             isStudentMode={true}
+            exerciseBlocks={currentExerciseBlocks}
           />
         ) : (
           <p>No sections found for this day.</p>
         )}
-      </div>
-      <div className="layout-center-panel" ref={mainContentRef}>
-        {loading && <p>Loading progress...</p>}
-        {error && <p className="error-message">{error}</p>}
-        {progress && <StudyProgressDashboard progress={progress} />}
-        <StudentDashboard
-          lessonBlocks={currentExerciseBlocks}
-        />
-      </div>
-      <div className="layout-right-panel">
-        <ToolsPanel />
       </div>
     </div>
   );

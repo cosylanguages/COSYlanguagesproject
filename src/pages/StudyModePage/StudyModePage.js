@@ -22,10 +22,10 @@ const StudyModePage = () => {
 
   const {
     days: studentDays,
-    lessonSectionsForPanel: studentLessonSections,
     currentExerciseBlocks: studentExerciseBlocks,
     isLoading: isStudentLoading,
     error: studentError,
+    currentSyllabus,
   } = useStudentData(language, selectedDayId, selectedSectionId);
 
   const {
@@ -38,7 +38,7 @@ const StudyModePage = () => {
   const isLoading = isStudentLoading || isTeacherLoading;
   const error = studentError || teacherError;
   const days = selectedRole === 'student' ? studentDays : teacherDays;
-  const lessonSectionsForPanel = selectedRole === 'student' ? studentLessonSections : teacherLessonSections;
+  const lessonSectionsForPanel = selectedRole === 'student' ? (currentSyllabus?.sections || []) : teacherLessonSections;
 
   const renderDaySelector = () => {
     const daySelectLabel = <TransliterableText text={t('studyModePage.selectDayLabel', 'Select Day:')} />;
@@ -143,9 +143,7 @@ const StudyModePage = () => {
         ) : selectedRole === 'student' ? (
           <StudentPage
             lessonSectionsForPanel={lessonSectionsForPanel}
-            handleSectionSelectSmP={handleSectionSelect}
             currentLangKey={currentLangKey}
-            selectedSectionId={selectedSectionId}
             currentExerciseBlocks={studentExerciseBlocks}
           />
         ) : (
