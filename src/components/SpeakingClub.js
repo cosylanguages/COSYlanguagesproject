@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import specializedComponents from './SpeakingClub/Specialized';
 
 import './SpeakingClub.css';
 
@@ -142,8 +143,6 @@ const ClosingSection = ({ closing }) => {
   );
 };
 
-
-import specializedComponents from './SpeakingClub/Specialized';
 
 // --- Main SpeakingClub Component ---
 
