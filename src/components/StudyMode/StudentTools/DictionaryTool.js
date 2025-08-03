@@ -11,9 +11,9 @@ import './DictionaryTool.css';
 
 const DictionaryTool = ({ isOpen, onClose }) => {
     const { t, language, currentLangKey } = useI18n();
-    const [allVocabulary, setAllVocabulary] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [allVocabulary] = useState([]);
+    const [isLoading] = useState(false);
+    const [error] = useState(null);
     const [showFlashcardPlayer, setShowFlashcardPlayer] = useState(false);
 
     useEffect(() => {
