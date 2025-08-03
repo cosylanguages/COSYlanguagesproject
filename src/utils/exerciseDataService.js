@@ -30,19 +30,24 @@ async function fetchJsonData(filePath) {
 }
 
 // A map that associates COSYlanguage identifiers with their corresponding file keys.
+// NOTE: The file naming conventions in the /public/data directory are inconsistent.
+// - Most files use the full English language name (e.g., "english.json", "grammar_verbs_english.json").
+// - Some files in grammar/possessives use a "COSY" prefix (e.g., "COSYenglish.json").
+// - This map uses the full language name, which is the most common convention.
+//   Services that use this map may need to handle exceptions.
 const langFileMap = {
-  'COSYenglish': 'en',
-  'COSYfrench': 'fr',
-  'COSYespañol': 'es',
-  'COSYitalian': 'it',
-  'COSYdeutsch': 'de',
-  'COSYportugese': 'pt',
-  'COSYgreek': 'el',
-  'COSYrussian': 'ru',
-  'COSYarmenian': 'hy',
-  'COSYbrezhoneg': 'br',
-  'COSYtatar': 'tt',
-  'COSYbachkir': 'ba'
+  'COSYenglish': 'english',
+  'COSYfrench': 'french',
+  'COSYespañol': 'spanish',
+  'COSYitalian': 'italian',
+  'COSYdeutsch': 'german',
+  'COSYportugese': 'portuguese', // The key is misspelled ('portugese') in the codebase.
+  'COSYgreek': 'greek',
+  'COSYrussian': 'russian',
+  'COSYarmenian': 'armenian',
+  'COSYbrezhoneg': 'breton',
+  'COSYtatar': 'tatar',
+  'COSYbachkir': 'bashkir' // The key has 'bachkir', filename has 'bashkir'.
 };
 
 /**

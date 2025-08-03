@@ -1,6 +1,7 @@
 // src/hooks/useStudentData.js
 import { useState, useEffect, useCallback } from 'react';
-import { getAvailableSyllabusDays, fetchSyllabusByFileName } from '../utils/syllabusService';
+import { getSyllabusIndex } from '../utils/syllabusService';
+import { loadVocabularyData } from '../utils/exerciseDataService';
 
 export const useStudentData = (language, selectedDayId, selectedSectionId) => {
   const [days, setDays] = useState([]);
@@ -10,24 +11,34 @@ export const useStudentData = (language, selectedDayId, selectedSectionId) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const memoizedGetAvailableSyllabusDays = useCallback(() => {
+  const memoizedGetSyllabusIndex = useCallback(() => {
     if (language) {
       setIsLoading(true);
-      getAvailableSyllabusDays(language)
-        .then(syllabusDays => {
-          setDays(syllabusDays || []);
+      getSyllabusIndex()
+        .then(syllabusIndex => {
+          if (syllabusIndex && syllabusIndex[language]) {
+            const langSyllabus = syllabusIndex[language];
+            const availableDays = langSyllabus.days.map(dayNum => ({
+              dayNumber: dayNum,
+              lessonName: `Day ${dayNum}`, // Placeholder name
+              fileName: langSyllabus.fileName, // We still need this to know which file to fetch from
+            }));
+            setDays(availableDays);
+          } else {
+            setDays([]);
+          }
         })
         .catch(err => {
-          console.error("Error fetching syllabus days:", err);
-          setError('Failed to load study days.');
+          console.error("Error fetching syllabus index:", err);
+          setError('Failed to load study plan.');
         })
         .finally(() => setIsLoading(false));
     }
   }, [language]);
 
   useEffect(() => {
-    memoizedGetAvailableSyllabusDays();
-  }, [memoizedGetAvailableSyllabusDays]);
+    memoizedGetSyllabusIndex();
+  }, [memoizedGetSyllabusIndex]);
 
   useEffect(() => {
     if (!selectedDayId) {
@@ -38,31 +49,40 @@ export const useStudentData = (language, selectedDayId, selectedSectionId) => {
     }
 
     const dayInfo = days.find(d => d.dayNumber === parseInt(selectedDayId));
-    if (dayInfo && dayInfo.fileName) {
+    if (dayInfo) {
       setIsLoading(true);
       setCurrentSyllabus(null);
       setLessonSectionsForPanel([]);
       setCurrentExerciseBlocks([]);
 
-      fetchSyllabusByFileName(dayInfo.fileName)
-        .then(syllabusData => {
-          if (syllabusData) {
+      // The "syllabus" for a day is now just its vocabulary list.
+      loadVocabularyData(language, selectedDayId)
+        .then(vocabulary => {
+          if (vocabulary) {
+            // Adapt the vocabulary array to the structure the components expect.
+            const syllabusData = {
+              day: selectedDayId,
+              sections: [{
+                title: "Vocabulary",
+                content_blocks: [{ type: "vocabulary_list", items: vocabulary }]
+              }]
+            };
             setCurrentSyllabus(syllabusData);
             setLessonSectionsForPanel(syllabusData.sections || []);
             setError(null);
           } else {
-            throw new Error(`Syllabus data for ${dayInfo.fileName} is null or not structured as expected.`);
+            throw new Error(`Vocabulary data for day ${selectedDayId} is null or empty.`);
           }
         })
         .catch(err => {
-          console.error(`Error fetching or processing syllabus file ${dayInfo.fileName}:`, err);
+          console.error(`Error fetching or processing vocabulary for day ${selectedDayId}:`, err);
           setError('Failed to load lesson content for the selected day.');
           setCurrentSyllabus(null);
           setLessonSectionsForPanel([]);
         })
         .finally(() => setIsLoading(false));
     }
-  }, [selectedDayId, days]);
+  }, [selectedDayId, days, language]);
 
   useEffect(() => {
     if (!selectedSectionId) {
