@@ -1,105 +1,195 @@
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ReactPlayer from 'react-player';
-import { get_subtitles_for_video } from '@suejon/youtube-subtitles';
+
 import './SpeakingClub.css';
+
+// --- Placeholder Sub-components ---
+
+const ClubHeader = ({ title, level, inspiringMaterial, description, topics }) => (
+  <div className="club-header-section">
+    <div className="club-title">
+      <h2>{title}</h2>
+      <span className={`level-badge ${level?.toLowerCase()}`}>{level}</span>
+    </div>
+    {inspiringMaterial?.link && (
+      <div className="inspiring-material">
+        <a href={inspiringMaterial.link} target="_blank" rel="noopener noreferrer">
+          <img src={inspiringMaterial.thumbnail} alt="Inspiring material preview" />
+          <span>Inspiring Material</span>
+        </a>
+      </div>
+    )}
+    <p className="session-description">{description}</p>
+    <div className="topics-covered">
+      <h4>Topics Covered</h4>
+      <ul>
+        {topics?.map((topic, index) => <li key={index}>{topic}</li>)}
+      </ul>
+    </div>
+  </div>
+);
+
+const VocabularyBank = ({ vocabulary }) => {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <div className="vocabulary-bank-section">
+      <h3 onClick={() => setExpanded(!expanded)}>
+        Vocabulary Bank {expanded ? '▲' : '▼'}
+      </h3>
+      {expanded && (
+        <ul>
+          {vocabulary?.map((item, index) => (
+            <li key={index}>
+              <strong>{item.word}</strong>
+              <button onClick={() => new Audio(item.pronunciation).play()}>🔊</button>
+              <button className="add-to-dict-btn">+</button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+const TeacherTools = () => {
+    const [visible, setVisible] = useState(false);
+    return (
+      <div className="teacher-tools-section">
+        <h3 onClick={() => setVisible(!visible)}>
+          Teacher Tools {visible ? '▲' : '▼'}
+        </h3>
+        {visible && (
+          <div className="tools-content">
+            <button>Download Session PDF</button>
+            <button>View Analytics</button>
+            <button>Export Vocabulary</button>
+          </div>
+        )}
+      </div>
+    );
+  };
+
+const TeacherNotes = ({ notes }) => {
+  const [visible, setVisible] = useState(false);
+  if (!notes) return null;
+  return (
+    <div className="teacher-notes-section">
+      <h3 onClick={() => setVisible(!visible)}>
+        Teacher Notes {visible ? '▲' : '▼'}
+      </h3>
+      {visible && (
+        <div className="notes-content">
+          <h4>Discussion Tips</h4>
+          <p>{notes.discussionTips}</p>
+          <h4>Common Pitfalls</h4>
+          <p>{notes.commonPitfalls}</p>
+          <h4>Cultural Context</h4>
+          <p>{notes.culturalContext}</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const SessionRound = ({ round }) => {
+    if (!round) return null;
+    return (
+      <div className="session-round">
+        <h4>{round.title}</h4>
+        <ul>
+          {round.questions?.map((q, i) => (
+            <li key={i}>
+              <span className="question-difficulty">{q.difficulty}</span>
+              {q.text}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
+const MiniBreak = ({ miniBreak }) => {
+  if (!miniBreak) return null;
+  return (
+    <div className="mini-break-section">
+      <h4>Mini-Break</h4>
+      <p><strong>Fun Fact:</strong> {miniBreak.funFact}</p>
+      <p><strong>Tongue Twister:</strong> {miniBreak.tongueTwister}</p>
+      {miniBreak.memeUrl && <img src={miniBreak.memeUrl} alt="Relevant meme" />}
+    </div>
+  );
+};
+
+const ClosingSection = ({ closing }) => {
+  if (!closing) return null;
+  return (
+    <div className="closing-section">
+      <h3>Key Takeaways</h3>
+      <ul>
+        {closing.keyTakeaways?.map((item, i) => <li key={i}>{item}</li>)}
+      </ul>
+      <h3>Continue Exploring</h3>
+      <ul>
+        {closing.continueExploring?.map((item, i) => (
+          <li key={i}><a href={item.link} target="_blank" rel="noopener noreferrer">{item.title}</a></li>
+        ))}
+      </ul>
+      <div className="feedback-prompt">
+        <p>How was this session? 👍 👎</p>
+        <textarea placeholder="Your feedback..."></textarea>
+      </div>
+    </div>
+  );
+};
+
+
+import specializedComponents from './SpeakingClub/Specialized';
+
+// --- Main SpeakingClub Component ---
 
 const SpeakingClub = ({ eventId }) => {
   const [event, setEvent] = useState(null);
-  const [playing, setPlaying] = useState(true);
-  const [muted, setMuted] = useState(true);
-  const [loop, setLoop] = useState(true);
-  const [subtitles, setSubtitles] = useState([]);
-  const [showSubtitles, setShowSubtitles] = useState(false);
 
   useEffect(() => {
     if (eventId) {
-      axios.get(`/events/${eventId}`)
+      axios.get(`/api/events/${eventId}`) // Assuming API is prefixed
         .then(response => {
           setEvent(response.data);
-          if (response.data.videoUrl) {
-            const videoId = new URL(response.data.videoUrl).searchParams.get('v');
-            get_subtitles_for_video({ videoId, lang: 'en' }).then(setSubtitles);
-          }
         })
         .catch(error => {
-          console.log(error);
+          console.error("Failed to fetch event:", error);
         });
     }
   }, [eventId]);
 
   if (!event) {
-    return <div>Chargement du club de parole...</div>;
+    return <div>Loading Speaking Club...</div>;
   }
 
-  const getVideoUrl = (url) => {
-    // A simple proxy for youtube links
-    return url.replace("youtube.com", "pense.pro");
-  }
+  const SpecializedComponent = specializedComponents[event.clubType];
 
   return (
     <div className="speaking-club">
-      <h3>{event.title}</h3>
-      {event.videoUrl && (
-        <div className="video-container">
-          <h4>{event.videoTitle}</h4>
-          <ReactPlayer
-            url={getVideoUrl(event.videoUrl)}
-            playing={playing}
-            muted={muted}
-            loop={loop}
-            controls
-            config={{
-              file: {
-                tracks: subtitles.map((sub, i) => ({
-                  kind: 'subtitles',
-                  src: `data:text/vtt,${encodeURIComponent(sub.text)}`,
-                  srcLang: 'en',
-                  default: i === 0,
-                })),
-              },
-            }}
-          />
-          <div className="video-controls">
-            <button onClick={() => setPlaying(!playing)}>{playing ? 'Pause' : 'Play'}</button>
-            <button onClick={() => setMuted(!muted)}>{muted ? 'Unmute' : 'Mute'}</button>
-            <button onClick={() => setLoop(!loop)}>{loop ? 'Disable Loop' : 'Enable Loop'}</button>
-            <button onClick={() => setShowSubtitles(!showSubtitles)}>{showSubtitles ? 'Hide Subtitles' : 'Show Subtitles'}</button>
-          </div>
-          {showSubtitles && (
-            <div className="subtitles">
-              {subtitles.map((line, index) => (
-                <p key={index}>{line.text}</p>
-              ))}
-            </div>
-          )}
-        </div>
-      )}
-      <div>
-        <h4>Sujets</h4>
-        <ul>
-          {event.topics && event.topics.map((topic, index) => <li key={index}>{topic}</li>)}
-        </ul>
+      <ClubHeader
+        title={event.title}
+        level={event.level}
+        inspiringMaterial={event.inspiringMaterial}
+        description={event.description}
+        topics={event.topics}
+      />
+      <div className="pre-session-prep">
+        <VocabularyBank vocabulary={event.vocabularyBank} />
+        <TeacherNotes notes={event.teacherNotes} />
+        <TeacherTools />
       </div>
-      <div>
-        <h4>Discussion</h4>
-        <p>{event.discussion}</p>
+      <div className="session-flow">
+        <h3>Session Flow</h3>
+        <SessionRound round={event.sessionFlow?.round1} />
+        <MiniBreak miniBreak={event.sessionFlow?.miniBreak} />
+        <SessionRound round={event.sessionFlow?.round2} />
+        {SpecializedComponent && <SpecializedComponent content={event.specializedContent} />}
       </div>
-      <div>
-        <h4>Vocabulaire</h4>
-        <ul>
-          {event.vocabulary && event.vocabulary.map((word, index) => <li key={index}>{word}</li>)}
-        </ul>
-      </div>
-      <div>
-        <h4>Tour 1</h4>
-        <p>{event.round1}</p>
-      </div>
-      <div>
-        <h4>Tour 2</h4>
-        <p>{event.round2}</p>
-      </div>
+      <ClosingSection closing={event.closingSection} />
     </div>
   );
 };

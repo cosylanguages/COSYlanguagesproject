@@ -24,6 +24,8 @@ import ConversationPage from './pages/StudyMode/ConversationPage/ConversationPag
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import Community from './pages/Community';
 import CalculatorPage from './pages/CalculatorPage/Calculator';
+import ClubSelectionPage from './pages/ClubSelectionPage/ClubSelectionPage';
+import SpeakingClub from './components/SpeakingClub';
 import { Toaster } from 'react-hot-toast';
 
 /**
@@ -112,6 +114,9 @@ function App() {
                 <Route path="profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
                 {/* The community page. */}
                 <Route path="community" element={<Community />} />
+                {/* The Speaking Club pages. */}
+                <Route path="speaking-club" element={<ClubSelectionPage />} />
+                <Route path="speaking-club/:eventId" element={<SpeakingClub />} />
                 {/* The calculator page. */}
                 <Route path="calculator" element={<CalculatorPage />} />
                 {/* The "my study sets" page, which is a protected route. */}

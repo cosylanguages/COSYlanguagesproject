@@ -3,22 +3,21 @@ const Event = require('../models/event.model');
 
 // Get all events with filtering and pagination
 router.route('/').get(async (req, res) => {
-  const { filter, page = 1, limit = 10 } = req.query;
+  const { clubType, level, page = 1, limit = 10 } = req.query;
   const query = {};
-  const now = new Date();
 
-  if (filter === 'current') {
-    query.end = { $gte: now };
-  } else if (filter === 'past') {
-    query.end = { $lt: now };
+  if (clubType) {
+    query.clubType = clubType;
+  }
+  if (level) {
+    query.level = level;
   }
 
   try {
     const events = await Event.find(query)
-      .sort({ start: -1 })
+      .sort({ createdAt: -1 })
       .skip((page - 1) * limit)
-      .limit(parseInt(limit))
-      .populate('comments.author', 'username'); // Populate author's username
+      .limit(parseInt(limit));
 
     const totalEvents = await Event.countDocuments(query);
 

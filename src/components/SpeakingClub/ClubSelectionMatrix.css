@@ -1,0 +1,28 @@
+.club-selection-matrix {
+  margin: 20px;
+}
+.club-selection-matrix table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+.club-selection-matrix th, .club-selection-matrix td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+.club-selection-matrix th {
+  background-color: #f2f2f2;
+}
+.club-link {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.club-link.available {
+  color: #4caf50;
+  font-weight: bold;
+}
+.club-link.unavailable {
+  color: #ccc;
+}

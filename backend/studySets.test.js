@@ -1,10 +1,22 @@
 const request = require('supertest');
 const express = require('express');
 const studySetsRouter = require('./studySets');
+const mockAuth = require('./middleware/mockAuth');
 
 const app = express();
 app.use(express.json());
+app.use(mockAuth);
 app.use('/study-sets', studySetsRouter);
+
+beforeAll(async () => {
+  const mongoose = require('mongoose');
+  await mongoose.connect('mongodb://localhost/cosylanguages_test', { useNewUrlParser: true, useUnifiedTopology: true });
+});
+
+afterAll(async () => {
+  const mongoose = require('mongoose');
+  await mongoose.connection.close();
+});
 
 describe('Study Sets routes', () => {
   it('should get all study sets', async () => {
@@ -19,7 +31,7 @@ describe('Study Sets routes', () => {
       .send({
         name: 'Test Study Set'
       });
-    expect(res.statusCode).toEqual(200);
+    expect(res.statusCode).toEqual(201);
     expect(res.body).toHaveProperty('name', 'Test Study Set');
   });
 
@@ -29,7 +41,7 @@ describe('Study Sets routes', () => {
       .send({
         name: 'Test Study Set 2'
       });
-    const res = await request(app).get(`/study-sets/${postRes.body.id}`);
+    const res = await request(app).get(`/study-sets/${postRes.body._id}`);
     expect(res.statusCode).toEqual(200);
     expect(res.body).toHaveProperty('name', 'Test Study Set 2');
   });
@@ -41,7 +53,7 @@ describe('Study Sets routes', () => {
         name: 'Test Study Set 3'
       });
     const res = await request(app)
-      .put(`/study-sets/${postRes.body.id}`)
+      .put(`/study-sets/${postRes.body._id}`)
       .send({
         name: 'Updated Test Study Set 3'
       });
@@ -55,7 +67,7 @@ describe('Study Sets routes', () => {
       .send({
         name: 'Test Study Set 4'
       });
-    const res = await request(app).delete(`/study-sets/${postRes.body.id}`);
+    const res = await request(app).delete(`/study-sets/${postRes.body._id}`);
     expect(res.statusCode).toEqual(200);
     expect(res.body).toHaveProperty('success', true);
   });

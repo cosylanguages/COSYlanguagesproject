@@ -1,0 +1,95 @@
+{
+  "title": "New Year's Traditions Around the World",
+  "level": "Intermediate",
+  "clubType": "Let's Celebrate",
+  "inspiringMaterial": {
+    "link": "/assets/articles/placeholder_new_year.html",
+    "thumbnail": "/assets/images/new_year_celebration.jpg"
+  },
+  "description": "How do people around the globe say goodbye to the old year and welcome the new one? This session is a vibrant journey through the world's most unique and fascinating New Year's traditions. From eating grapes to smashing plates, we'll discover the diverse ways cultures celebrate hope and new beginnings.",
+  "topics": [
+    "Symbolic foods for luck and prosperity.",
+    "Unique actions and rituals performed at midnight.",
+    "First-footing and other New Year's superstitions.",
+    "The role of fireworks and noise in celebrations.",
+    "Personal and cultural resolutions for the year ahead."
+  ],
+  "vocabularyBank": [
+    {"word": "Resolution", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Countdown", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Fireworks", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Toast", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Superstition", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Prosperity", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Tradition", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Custom", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Auld Lang Syne", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Confetti", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Parade", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Gala", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Midnight", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Eve", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Celebration", "pronunciation": "/assets/sounds/placeholder.mp3"}
+  ],
+  "teacherNotes": {
+    "discussionTips": "Encourage students to share traditions from their own cultures or families. The comparison matrix is a great starting point. Use the 'reinvent the holiday' section to foster creativity and more complex language use.",
+    "commonPitfalls": "Students might only know about mainstream Western traditions. Gently guide them to consider a wider world of celebrations. Be prepared for some students to not celebrate New Year's in a traditional way; ensure they feel included.",
+    "culturalContext": "Emphasize that what seems strange in one culture is a cherished tradition in another. The goal is to appreciate diversity, not to judge. Explain that many traditions are rooted in ancient beliefs about chasing away evil spirits and welcoming good fortune."
+  },
+  "sessionFlow": {
+    "round1": {
+      "title": "Foundation Building",
+      "questions": [
+        {"text": "What is the first thing you do when you wake up on New Year's Day?", "type": "Icebreaker", "difficulty": "★"},
+        {"text": "What does the phrase 'to turn over a new leaf' mean to you?", "type": "Conceptual", "difficulty": "★"},
+        {"text": "Have you ever made a New Year's resolution? Did you keep it?", "type": "Icebreaker", "difficulty": "★"},
+        {"text": "Why do you think so many cultures use fireworks to celebrate the New Year?", "type": "Conceptual", "difficulty": "★★"},
+        {"text": "In Spain, people eat 12 grapes at midnight. What could be the reason for this tradition?", "type": "Critical Thinking", "difficulty": "★★"},
+        {"text": "Describe a traditional New Year's food from any culture you know.", "type": "Conceptual", "difficulty": "★★"},
+        {"text": "Is it better to spend New Year's Eve at a huge party or a quiet gathering with family?", "type": "Critical Thinking", "difficulty": "★★"},
+        {"text": "What is one thing you hope to achieve in the coming year?", "type": "Icebreaker", "difficulty": "★"},
+        {"text": "If you could spend New Year's Eve in any city in the world, where would you go and why?", "type": "Critical Thinking", "difficulty": "★★"},
+        {"text": "Why do you think making resolutions is a popular New Year's tradition?", "type": "Conceptual", "difficulty": "★★"}
+      ]
+    },
+    "miniBreak": {
+      "funFact": "The ancient Babylonians were the first to make New Year's resolutions, some 4,000 years ago. Their main resolution was to return borrowed farm equipment!",
+      "tongueTwister": "Red lorry, yellow lorry.",
+      "memeUrl": "/assets/memes/placeholder_meme.jpg"
+    },
+    "round2": {
+      "title": "Interactive Development: Reinvent the Holiday!",
+      "questions": [
+        {"text": "Imagine you are creating a brand new tradition for New Year's Eve. What would it be and what would it symbolize? 'Develop This': How would you convince your friends and family to adopt this new tradition?", "type": "Creative", "difficulty": "★★★"},
+        {"text": "If you had to replace fireworks with something more environmentally friendly, what would you choose for a spectacular midnight celebration? 'Develop This': What are the pros and cons of your new idea?", "type": "Creative", "difficulty": "★★★"},
+        {"text": "Design a new global New Year's dish that everyone around the world could eat. What would be its ingredients and what would they represent? 'Develop This': Create a name and a slogan for your new dish.", "type": "Creative", "difficulty": "★★★"}
+      ]
+    }
+  },
+  "closingSection": {
+    "keyTakeaways": [
+      "New Year's is celebrated with diverse and meaningful traditions across the globe.",
+      "Many traditions are rooted in hopes for luck, prosperity, and a fresh start.",
+      "Celebrations are a reflection of a culture's history and values."
+    ],
+    "continueExploring": [
+      {
+        "title": "Wikipedia: New Year's Eve",
+        "link": "https://en.wikipedia.org/wiki/New_Year%27s_Eve"
+      },
+      {
+        "title": "15 New Year's Traditions From Around the World (Video)",
+        "link": "https://www.youtube.com/watch?v=i4-s_jS-5aE"
+      }
+    ]
+  },
+  "specializedContent": {
+    "matrixTitle": "Holiday Tradition Comparison Matrix",
+    "headers": ["Country", "Midnight Action", "Special Food"],
+    "rows": [
+      ["Spain", "Eat 12 grapes, one for each chime of the clock", "Churros with chocolate"],
+      ["Japan", "Listen for 108 bells from Buddhist temples (Joya no Kane)", "Toshikoshi Soba (year-crossing noodles)"],
+      ["Denmark", "Smash plates on friends' and neighbors' doors", "Kransekage (wreath cake)"]
+    ]
+  }
+}
