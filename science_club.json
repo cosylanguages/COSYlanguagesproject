@@ -1,0 +1,94 @@
+{
+  "title": "The Ethics of AI in Healthcare",
+  "level": "Advanced",
+  "clubType": "Keeping Up With Science",
+  "inspiringMaterial": {
+    "link": "https://www.who.int/publications/i/item/9789240029200",
+    "thumbnail": "https://www.who.int/images/default-source/fallback/share-images/your-health/banner-who.jpg"
+  },
+  "description": "This session explores the ethical landscape of Artificial Intelligence in the medical field. We will delve into the promise and potential pitfalls of using AI for diagnosis, treatment, and public health, guided by the principles outlined by the World Health Organization. Prepare to discuss complex dilemmas where technology and human well-being intersect.",
+  "topics": [
+    "The role of AI in medical diagnosis and treatment.",
+    "Protecting patient data and privacy in the age of AI.",
+    "Understanding and mitigating algorithmic bias in healthcare.",
+    "The importance of human oversight and accountability for AI systems.",
+    "Ensuring equitable access to AI-driven health technologies."
+  ],
+  "vocabularyBank": [
+    {"word": "Algorithm", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Bias", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Autonomy", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Accountability", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Governance", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Equity", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Transparency", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Diagnostics", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Prognosis", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Liability", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Efficacy", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Machine Learning", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Neural Network", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Data Privacy", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Informed Consent", "pronunciation": "/assets/sounds/placeholder.mp3"}
+  ],
+  "teacherNotes": {
+    "discussionTips": "Encourage students to think from multiple perspectives: patient, doctor, developer, and policymaker. Use the 'Develop This' prompts to go deeper into complex scenarios. Keep an eye on time, as the ethical dilemmas can spark long debates.",
+    "commonPitfalls": "Students might get bogged down in technical details. Steer the conversation back to the human and ethical implications. Some may have a utopian or dystopian view of AI; encourage a balanced discussion of both benefits and risks.",
+    "culturalContext": "Different cultures have varying expectations of privacy and the role of technology in healthcare. Acknowledge these differences and ask students to consider how these ethical guidelines might be applied globally."
+  },
+  "sessionFlow": {
+    "round1": {
+      "title": "Foundation Building",
+      "questions": [
+        {"text": "To start, what is one app or technology you use that makes your life easier?", "type": "Icebreaker", "difficulty": "★"},
+        {"text": "How would you define 'Artificial Intelligence' in your own words?", "type": "Conceptual", "difficulty": "★"},
+        {"text": "What are some potential benefits of using AI to help doctors diagnose illnesses?", "type": "Conceptual", "difficulty": "★★"},
+        {"text": "What is 'algorithmic bias'? Why is it a major concern in healthcare?", "type": "Critical Thinking", "difficulty": "★★"},
+        {"text": "Who should be held responsible if an AI makes a diagnostic error: the doctor, the hospital, or the AI's developer?", "type": "Critical Thinking", "difficulty": "★★★"},
+        {"text": "How can we ensure that AI health technologies benefit everyone, not just the wealthy?", "type": "Conceptual", "difficulty": "★★"},
+        {"text": "Should a patient have the right to refuse treatment from an AI, even if it's proven to be more accurate than a human doctor?", "type": "Critical Thinking", "difficulty": "★★★"},
+        {"text": "What kind of personal health data would you be comfortable sharing with an AI system?", "type": "Icebreaker", "difficulty": "★"},
+        {"text": "How can we balance the need for vast amounts of data to train AI with the individual's right to privacy?", "type": "Critical Thinking", "difficulty": "★★★"},
+        {"text": "In your opinion, what is the single most important ethical principle to follow when developing AI for health?", "type": "Conceptual", "difficulty": "★★"}
+      ]
+    },
+    "miniBreak": {
+      "funFact": "The term 'robot' comes from the Czech word 'robota', which means 'forced labor' or 'drudgery'.",
+      "tongueTwister": "Surely Sylvia swims, shall Sylvia swim?",
+      "memeUrl": "/assets/memes/placeholder_meme.jpg"
+    },
+    "round2": {
+      "title": "Interactive Development: Ethical Dilemmas",
+      "questions": [
+        {"text": "An AI algorithm is 95% accurate in predicting a rare, fatal disease, but has a 5% false positive rate. A positive diagnosis causes extreme stress. Should doctors use this AI? 'Develop This': What if the false positive rate was 15%?", "type": "Ethical Dilemma", "difficulty": "★★★"},
+        {"text": "A hospital in a low-income area can only afford an AI system trained on data from a high-income population. The AI may be less accurate for the local community. Is it better than no AI at all? 'Develop This': How could the hospital mitigate the bias?", "type": "Ethical Dilemma", "difficulty": "★★★"},
+        {"text": "An AI can predict with 80% certainty who will develop an addiction to a certain painkiller. Should this information be shared with the patient, their family, or their insurance company? 'Develop This': What are the arguments for and against sharing this prediction?", "type": "Ethical Dilemma", "difficulty": "★★★"}
+      ]
+    }
+  },
+  "closingSection": {
+    "keyTakeaways": [
+      "AI in health is a powerful tool with both immense promise and significant risks.",
+      "Ethical principles like transparency, accountability, and equity are crucial for responsible AI development.",
+      "Balancing innovation with patient safety and privacy is a key challenge for the future."
+    ],
+    "continueExploring": [
+      {
+        "title": "WHO: Ethics and governance of artificial intelligence for health",
+        "link": "https://www.who.int/publications/i/item/9789240029200"
+      },
+      {
+        "title": "AI for Good: Global Summit",
+        "link": "https://aiforgood.itu.int/"
+      }
+    ]
+  },
+  "specializedContent": {
+    "roundTitle": "Fact or Myth?",
+    "statements": [
+      {"statement": "AI can already perform certain types of surgery completely on its own.", "isFact": false, "explanation": "Myth: While AI is used to assist surgeons (robotic-assisted surgery), it does not yet perform complex surgeries autonomously. A human surgeon is always in control."},
+      {"statement": "AI systems are completely objective and free from human biases.", "isFact": false, "explanation": "Myth: AI systems learn from data created by humans, and they can inherit and even amplify the biases present in that data."},
+      {"statement": "The first AI program was created in the 1950s.", "isFact": true, "explanation": "Fact: The 'Logic Theorist', considered by many to be the first AI program, was written in 1955 and 1956 by Allen Newell, Herbert A. Simon, and Cliff Shaw."}
+    ]
+  }
+}

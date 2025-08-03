@@ -21,18 +21,18 @@ describe('POST /events/add', () => {
       .post('/events/add')
       .send({
         title: 'Test Event',
-        start: new Date(),
-        end: new Date(Date.now() + 3600000),
-        description: 'Event description',
+        level: 'Intermediate',
+        clubType: 'The Greatest Quotes',
+        description: 'A test event description.',
       });
     expect(res.statusCode).toBe(200);
   });
 });
 
 describe('GET /events', () => {
-  it('should return an array of events', async () => {
+  it('should return an object with an array of events', async () => {
     const res = await request(app).get('/events');
     expect(res.statusCode).toBe(200);
-    expect(Array.isArray(res.body)).toBe(true);
+    expect(Array.isArray(res.body.events)).toBe(true);
   });
 });

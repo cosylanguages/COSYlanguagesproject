@@ -1,0 +1,120 @@
+{
+  "title": "The Culture of Coffee Around the World",
+  "level": "Advanced",
+  "clubType": "I Couldn't Help But Wonder",
+  "inspiringMaterial": {
+    "mediaClip": {
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=placeholder_video_id",
+      "preview": "/assets/videos/coffee_preview.mp4"
+    },
+    "thumbnail": "/assets/images/coffee_culture.jpg"
+  },
+  "description": "I couldn't help but wonder... how did a simple roasted bean come to dominate the world? This session explores the rich and diverse culture of coffee, from the traditional ceremonies of Ethiopia to the fast-paced espresso bars of Italy and the artisanal cafes of the 'third wave' movement. We'll discuss how this single beverage shapes social interactions, workdays, and rituals across the globe.",
+  "topics": [
+    "The historical journey of coffee from Africa to the world.",
+    "The Italian espresso culture and its global influence.",
+    "The 'Third Wave' coffee movement and its focus on quality.",
+    "Coffee as a social ritual vs. a productivity fuel.",
+    "The future of coffee in a changing climate."
+  ],
+  "vocabularyBank": [
+    {"word": "Espresso", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Barista", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Aroma", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Caffeine", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Ritual", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Artisanal", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Brewing", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Roast", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Latte", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Cappuccino", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Affogato", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Filter coffee", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Single-origin", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Phenomenon", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Commodity", "pronunciation": "/assets/sounds/placeholder.mp3"}
+  ],
+  "teacherNotes": {
+    "discussionTips": "Use the Cultural Comparison Tool to spark debate. Ask students which coffee culture they would most like to experience. The timeline is great for showing how cultures adapt and change. The Advice Generator can be a fun, low-pressure way to practice giving opinions.",
+    "commonPitfalls": "The discussion might get stuck on personal preferences. Guide the conversation towards the 'why' behind these preferences - the cultural and historical reasons for different coffee habits.",
+    "culturalContext": "Coffee can be a status symbol, a social lubricant, a religious sacrament, or a simple daily habit. Acknowledge this diversity. Be aware that for some, tea is the more culturally significant beverage, which can be a great point of comparison."
+  },
+  "sessionFlow": {
+    "round1": {
+      "title": "Foundation Building",
+      "questions": [
+        {"text": "How do you take your coffee? Or if you don't drink it, what's your morning beverage of choice?", "type": "Icebreaker", "difficulty": "★"},
+        {"text": "What words come to mind when you think of 'coffee'?", "type": "Icebreaker", "difficulty": "★"},
+        {"text": "Is coffee more of a 'social' drink or a 'work' drink in your opinion?", "type": "Conceptual", "difficulty": "★★"},
+        {"text": "Why do you think coffee shops have become such popular 'third places' (a place that is not home or work)?", "type": "Critical Thinking", "difficulty": "★★"},
+        {"text": "How has the way people drink coffee changed in the last 20 years?", "type": "Conceptual", "difficulty": "★★"},
+        {"text": "What's the difference between a $1 cup of coffee and a $5 cup of coffee?", "type": "Critical Thinking", "difficulty": "★★"},
+        {"text": "Would you say coffee is a healthy or unhealthy habit? Why?", "type": "Critical Thinking", "difficulty": "★★★"},
+        {"text": "Describe the 'perfect' coffee shop atmosphere.", "type": "Icebreaker", "difficulty": "★"},
+        {"text": "How does advertising influence our coffee choices?", "type": "Conceptual", "difficulty": "★★"},
+        {"text": "If coffee suddenly disappeared from the world, what would be the biggest impact?", "type": "Critical Thinking", "difficulty": "★★★"}
+      ]
+    },
+    "miniBreak": {
+      "funFact": "According to legend, coffee was discovered by an Ethiopian goat herder in the 9th century who noticed his goats became energetic after eating berries from a certain tree.",
+      "tongueTwister": "Fresh fried fish, fish fresh fried, fried fish fresh, fish fried fresh.",
+      "memeUrl": "/assets/memes/placeholder_meme.jpg"
+    },
+    "round2": {
+      "title": "Interactive Development: Cultural Exploration",
+      "questions": [
+        {"text": "Use the Cultural Comparison Tool to explore the coffee habits of Italy and the USA. What is the biggest difference you see?", "type": "Tool-based", "difficulty": "★★★"},
+        {"text": "Using the Decade Timeline, how did the 1970s (rise of big chains) change coffee culture compared to the 2010s (rise of artisanal shops)?", "type": "Tool-based", "difficulty": "★★★"},
+        {"text": "A friend wants to ask someone on a date. Use the Advice Generator to get a suggestion. Do you agree with the AI's advice?", "type": "Tool-based", "difficulty": "★★★"}
+      ]
+    }
+  },
+  "closingSection": {
+    "keyTakeaways": [
+      "Coffee is more than a drink; it's a global cultural institution.",
+      "The way we consume coffee reflects our values, from speed and efficiency to craftsmanship and community.",
+      "Coffee culture is constantly evolving, with new trends and traditions emerging all the time."
+    ],
+    "continueExploring": [
+      {
+        "title": "The World Atlas of Coffee by James Hoffmann (Book)",
+        "link": "https://www.amazon.com/World-Atlas-Coffee-2nd-Explored/dp/1784724293"
+      },
+      {
+        "title": "Black Gold (Documentary Film)",
+        "link": "https://www.imdb.com/title/tt0492496/"
+      }
+    ]
+  },
+  "specializedContent": {
+    "culturalComparisonTool": {
+      "title": "Interactive World Map: Coffee Culture",
+      "points": [
+        {"country": "Italy", "description": "Fast-paced, stand-up espresso bars. Coffee is a quick, functional shot of energy. Cappuccino is strictly for the morning."},
+        {"country": "Turkey", "description": "Thick, unfiltered coffee, often served with Turkish delight. The grounds are sometimes used for fortune-telling. A social ritual."},
+        {"country": "USA", "description": "Diverse culture, from large chains serving flavored lattes to-go, to artisanal shops focusing on brewing methods and single-origin beans."},
+        {"country": "Ethiopia", "description": "The birthplace of coffee. Features elaborate, hours-long coffee ceremonies (Buna) for community bonding and respect."},
+        {"country": "Vietnam", "description": "Strong, dark-roast coffee, often brewed with a phin filter and mixed with sweetened condensed milk (Cà phê sữa đá)."}
+      ]
+    },
+    "decadeTimelineSlider": {
+      "title": "A Century of Coffee",
+      "events": [
+        {"decade": "1920s", "description": "Prohibition in the US leads to a boom in coffee houses as alternative social spaces."},
+        {"decade": "1950s", "description": "The rise of instant coffee emphasizes convenience and speed for the modern home."},
+        {"decade": "1970s", "description": "Starbucks is founded (1971), planting the seeds for the global coffee chain phenomenon."},
+        {"decade": "1990s", "description": "The 'second wave' of coffee culture goes global, popularized by shows like 'Friends'. The coffee shop as a 'third place' is established."},
+        {"decade": "2010s", "description": "The 'third wave' focuses on artisanal production, single-origin beans, and complex brewing methods like pour-over and AeroPress."}
+      ]
+    },
+    "adviceGenerator": {
+      "title": "AI-Suggested Response Starters",
+      "prompts": [
+        {"situation": "Your friend says, 'This coffee is too bitter.'", "suggestion": "You could say, 'That's the robust flavor of a dark roast! Have you ever tried a light roast? It's much more acidic and fruity.'"},
+        {"situation": "You want to invite a colleague for coffee.", "suggestion": "You could ask, 'Would you be open to grabbing a quick coffee sometime next week to chat about the project?'"},
+        {"situation": "The barista asks, 'How was your first sip?'", "suggestion": "You could say, 'It's fantastic! The aroma is so complex. Could you tell me more about where these beans are from?'"}
+      ]
+    }
+  }
+}

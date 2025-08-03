@@ -1,0 +1,122 @@
+{
+  "title": "Growth Mindset vs. Fixed Mindset",
+  "level": "Advanced",
+  "clubType": "Mind Matters",
+  "inspiringMaterial": {
+    "link": "/assets/articles/placeholder_mindset.html",
+    "thumbnail": "/assets/images/brain_growth.jpg"
+  },
+  "description": "This session explores the transformative psychological concept of 'mindsets,' as developed by Dr. Carol Dweck. We will examine the differences between a 'fixed mindset' and a 'growth mindset' and discuss how the way we think about our abilities can profoundly impact our learning, resilience, and success in all areas of life.",
+  "topics": [
+    "Defining 'fixed' and 'growth' mindsets.",
+    "The impact of mindset on motivation and achievement.",
+    "How effort and strategy are key to growth.",
+    "The power of the word 'yet' in learning.",
+    "Practical steps to cultivate a growth mindset."
+  ],
+  "vocabularyBank": [
+    {"word": "Mindset", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Resilience", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Neuroplasticity", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Praise", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Effort", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Challenge", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Setback", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Innate", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Malleable", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Potential", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Feedback", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Critique", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Aptitude", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Mastery", "pronunciation": "/assets/sounds/placeholder.mp3"},
+    {"word": "Cultivate", "pronunciation": "/assets/sounds/placeholder.mp3"}
+  ],
+  "teacherNotes": {
+    "discussionTips": "This can be a personal topic. Create a safe space for students to share. Use the conditional questions to move from abstract concepts to concrete examples. Emphasize that having a fixed mindset in some areas is normal and it's a spectrum, not a binary choice.",
+    "commonPitfalls": "Beware of 'false growth mindset,' where people simply agree with the concept without changing their behavior. Ask for specific examples of how they apply these ideas. Some may confuse growth mindset with just 'trying harder'; clarify that it also involves changing strategies.",
+    "culturalContext": "Some cultures place a high value on innate talent, which can foster a fixed mindset. Other cultures may strongly emphasize effort. Discuss how cultural background might influence one's default mindset."
+  },
+  "sessionFlow": {
+    "round1": {
+      "title": "Foundation Building",
+      "questions": [
+        {"text": "Think of a skill you are good at. Do you think you were born with this talent, or did you develop it over time?", "type": "Icebreaker", "difficulty": "★"},
+        {"text": "What's the difference between 'I'm not good at this' and 'I'm not good at this... yet'?", "type": "Conceptual", "difficulty": "★"},
+        {"text": "How do you feel when you receive negative feedback or criticism?", "type": "Icebreaker", "difficulty": "★"},
+        {"text": "Why do some people avoid challenges while others seek them out?", "type": "Conceptual", "difficulty": "★★"},
+        {"text": "Is it better to praise a child for being 'smart' or for 'working hard'? Why?", "type": "Critical Thinking", "difficulty": "★★"},
+        {"text": "Describe a time you failed at something. What did you learn from the experience?", "type": "Conceptual", "difficulty": "★★"},
+        {"text": "Can a person have a growth mindset for one skill (like sports) but a fixed mindset for another (like math)?", "type": "Critical Thinking", "difficulty": "★★★"},
+        {"text": "How does the success story of a 'natural genius' support a fixed mindset?", "type": "Conceptual", "difficulty": "★★"},
+        {"text": "What is one small thing you could do this week to practice a growth mindset?", "type": "Icebreaker", "difficulty": "★"},
+        {"text": "How can a teacher or manager help foster a growth mindset in their students or team?", "type": "Critical Thinking", "difficulty": "★★★"}
+      ]
+    },
+    "miniBreak": {
+      "funFact": "The human brain is capable of neuroplasticity, meaning it can reorganize itself by forming new neural connections throughout life. This is the biological basis of a growth mindset!",
+      "tongueTwister": "She sells seashells by the seashore.",
+      "memeUrl": "/assets/memes/placeholder_meme.jpg"
+    },
+    "round2": {
+      "title": "Interactive Development: Conditional Question Engine",
+      "questions": [
+        {"text": "What would you do if you spent weeks preparing for an important exam and still received a very low grade?", "type": "2nd Conditional", "difficulty": "★★★"},
+        {"text": "What would have happened in your life if you had given up on a difficult skill you have now mastered?", "type": "3rd Conditional", "difficulty": "★★★"},
+        {"text": "What would you say to a friend if they told you, 'I'm just not a creative person'?", "type": "2nd Conditional", "difficulty": "★★★"}
+      ]
+    }
+  },
+  "closingSection": {
+    "keyTakeaways": [
+      "Our beliefs about our abilities are a key predictor of our success.",
+      "A growth mindset sees challenges as opportunities to learn and improve.",
+      "We can all learn to cultivate a growth mindset through practice and self-awareness."
+    ],
+    "continueExploring": [
+      {
+        "title": "Carol Dweck: The power of believing that you can improve (TED Talk)",
+        "link": "https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve"
+      },
+      {
+        "title": "Mindset Works - Resources and Information",
+        "link": "https://www.mindsetworks.com/"
+      }
+    ]
+  },
+  "specializedContent": {
+    "infographics": [
+      {
+        "title": "Fixed Mindset",
+        "points": [
+          "Belief: Intelligence is static.",
+          "Focus: Looking smart.",
+          "Challenges: Avoids them.",
+          "Effort: Sees it as fruitless.",
+          "Feedback: Ignores useful criticism.",
+          "Setbacks: Gets discouraged easily."
+        ]
+      },
+      {
+        "title": "Growth Mindset",
+        "points": [
+          "Belief: Intelligence can be developed.",
+          "Focus: Learning.",
+          "Challenges: Embraces them.",
+          "Effort: Sees it as the path to mastery.",
+          "Feedback: Learns from criticism.",
+          "Setbacks: Persists in the face of failure."
+        ]
+      }
+    ],
+    "personalityTestSnippet": {
+      "title": "Quick Mindset Check",
+      "instructions": "Which statement in each pair do you agree with more?",
+      "pairs": [
+        {"a": "Your intelligence is something very basic about you that you can't change very much.", "b": "You can always substantially change how intelligent you are."},
+        {"a": "You can learn new things, but you can't really change your basic abilities.", "b": "No matter what kind of person you are, you can always change substantially."},
+        {"a": "I often feel threatened when others are more successful than me.", "b": "I find lessons and inspiration in the success of others."}
+      ],
+      "resultNote": "If you mostly agreed with 'a', you might lean towards a fixed mindset. If you mostly agreed with 'b', you might lean towards a growth mindset."
+    }
+  }
+}

@@ -1,24 +1,136 @@
 .speaking-club {
-  max-width: 600px;
+  max-width: 800px;
   margin: 30px auto;
-  background: #fff;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 25px;
+  font-family: sans-serif;
+}
+
+/* --- Header --- */
+.club-header-section .club-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.club-header-section h2 {
+  color: #333;
+  margin-right: 15px;
+}
+.level-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  color: white;
+  text-transform: uppercase;
+}
+.level-badge.starter { background-color: #4caf50; }
+.level-badge.elementary { background-color: #2196f3; }
+.level-badge.intermediate { background-color: #ff9800; }
+.level-badge.advanced { background-color: #f44336; }
+
+.inspiring-material img {
+  max-width: 150px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  padding: 20px;
+  margin-bottom: 10px;
 }
-.speaking-club h3 {
+.session-description {
+  margin: 10px 0;
+  font-style: italic;
+  color: #555;
+}
+.topics-covered ul {
+  list-style-type: '✓';
+  padding-left: 20px;
+}
+.topics-covered li {
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+/* --- Pre-Session --- */
+.pre-session-prep {
+  margin: 20px 0;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+.vocabulary-bank-section h3, .teacher-notes-section h3, .teacher-tools-section h3 {
+  cursor: pointer;
   color: #4a90e2;
-  margin-bottom: 12px;
 }
-.speaking-club h4 {
-  margin-top: 18px;
-  color: #357ab8;
+
+.teacher-tools-section .tools-content button {
+    margin-right: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.speaking-club ul {
-  list-style: disc inside;
-  margin: 0 0 10px 0;
-  padding: 0 0 0 18px;
+.vocabulary-bank-section ul {
+  list-style: none;
+  padding: 0;
 }
-.speaking-club p {
-  margin: 0 0 10px 0;
+.vocabulary-bank-section li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.add-to-dict-btn {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+/* --- Session Flow --- */
+.session-flow {
+  margin: 20px 0;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+.session-round ul {
+  list-style: none;
+  padding: 0;
+}
+.session-round li {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.question-difficulty {
+  margin-right: 10px;
+  color: #ff9800;
+}
+.mini-break-section {
+  background-color: #e3f2fd;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.specialized-club-section {
+  background-color: #fffde7;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid #fff9c4;
+}
+
+/* --- Closing --- */
+.closing-section {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+.feedback-prompt textarea {
+  width: 100%;
+  min-height: 80px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 8px;
 }
