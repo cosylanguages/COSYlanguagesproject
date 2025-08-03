@@ -6,10 +6,18 @@ module.exports = {
     configure: (webpackConfig, { env, paths }) => {
       // For a Single-Page Application, we let craco handle the default entry points.
       // We only need to add a plugin to copy the 404.html for GitHub Pages routing.
+      // We replace the specific CopyPlugin for 404.html with a more general one
+      // to ensure all files from the public directory are copied to the build output.
       webpackConfig.plugins.push(
         new CopyPlugin({
           patterns: [
-            { from: 'public/404.html', to: '404.html' },
+            {
+              from: 'public',
+              to: '.', // to the root of the build directory
+              globOptions: {
+                ignore: ['**/index.html'], // index.html is handled by HtmlWebpackPlugin
+              },
+            },
           ],
         })
       );
@@ -28,6 +36,13 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001',
+        pathRewrite: { '^/api': '' },
+        changeOrigin: true,
+      },
+    },
   },
   jest: {
     configure: {

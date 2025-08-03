@@ -1,0 +1,50 @@
+{
+  "COSYenglish": {
+    "fileName": "english.json",
+    "days": [1, 2, 3, 4, 5, 6, 10]
+  },
+  "COSYfrench": {
+    "fileName": "french.json",
+    "days": [1, 2, 3, 4, 5, 6, 10]
+  },
+  "COSYespañol": {
+    "fileName": "spanish.json",
+    "days": [1, 2, 3, 4, 5, 6, 10]
+  },
+  "COSYitalian": {
+    "fileName": "italian.json",
+    "days": [1, 2, 3, 4, 5, 6, 10]
+  },
+  "COSYdeutsch": {
+    "fileName": "german.json",
+    "days": [1, 2, 3, 4, 5, 6, 10]
+  },
+  "COSYportugese": {
+    "fileName": "portuguese.json",
+    "days": [1, 2, 3, 4, 5, 6, 10]
+  },
+  "COSYgreek": {
+    "fileName": "greek.json",
+    "days": [1, 2, 3, 4, 5, 6, 10]
+  },
+  "COSYrussian": {
+    "fileName": "russian.json",
+    "days": [1, 2, 3, 4, 5, 6, 10]
+  },
+  "COSYarmenian": {
+    "fileName": "armenian.json",
+    "days": [1, 2, 3, 4, 5, 6, 10]
+  },
+  "COSYbrezhoneg": {
+    "fileName": "breton.json",
+    "days": [1, 2, 3, 4, 5, 6, 10]
+  },
+  "COSYtatar": {
+    "fileName": "tatar.json",
+    "days": [1, 2, 3, 4, 5, 6, 10]
+  },
+  "COSYbachkir": {
+    "fileName": "bashkir.json",
+    "days": [1, 2, 3, 4, 5, 6, 10]
+  }
+}

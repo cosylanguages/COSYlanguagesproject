@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils';
 import { getStudySets, addCardToSet } from '../../../utils/studySetService';
-import { loadAllLevelsForLanguageAsFlatList } from '../../../utils/vocabularyService';
+// import { loadAllLevelsForLanguageAsFlatList } from '../../../utils/vocabularyService';
 import SearchableCardList from '../../Common/SearchableCardList';
 import FlashcardPlayer from '../FlashcardPlayer';
 import Modal from '../../Common/Modal';
@@ -19,15 +19,15 @@ const DictionaryTool = ({ isOpen, onClose }) => {
     useEffect(() => {
         const loadVocabulary = async () => {
             if (!language || !isOpen) return;
-            setIsLoading(true);
-            try {
-                const vocabularyData = await loadAllLevelsForLanguageAsFlatList(language);
-                setAllVocabulary(vocabularyData || []);
-            } catch (err) {
-                setError(err.message || 'Failed to load vocabulary data.');
-            } finally {
-                setIsLoading(false);
-            }
+            // setIsLoading(true);
+            // try {
+            //     // const vocabularyData = await loadAllLevelsForLanguageAsFlatList(language);
+            //     // setAllVocabulary(vocabularyData || []);
+            // } catch (err) {
+            //     setError(err.message || 'Failed to load vocabulary data.');
+            // } finally {
+            //     setIsLoading(false);
+            // }
         };
         loadVocabulary();
     }, [language, isOpen]);
