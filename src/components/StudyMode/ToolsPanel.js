@@ -11,6 +11,7 @@ import QuizCreator from './QuizCreator';
 import Whiteboard from './Whiteboard';
 import FlashcardCreator from './FlashcardCreator';
 import Modal from '../Common/Modal';
+import CalculatorPage from '../../pages/CalculatorPage/Calculator';
 
 const ToolsPanel = () => {
   const { t, language: currentUILanguage } = useI18n();
@@ -23,6 +24,7 @@ const ToolsPanel = () => {
   const [isQuizCreatorOpen, setIsQuizCreatorOpen] = useState(false);
   const [isWhiteboardOpen, setIsWhiteboardOpen] = useState(false);
   const [isFlashcardCreatorOpen, setIsFlashcardCreatorOpen] = useState(false);
+  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
 
   const toggleNotes = () => setIsNotesOpen(!isNotesOpen);
   const toggleIrregularVerbs = () => setIsIrregularVerbsOpen(!isIrregularVerbsOpen);
@@ -32,6 +34,7 @@ const ToolsPanel = () => {
   const toggleQuizCreator = () => setIsQuizCreatorOpen(!isQuizCreatorOpen);
   const toggleWhiteboard = () => setIsWhiteboardOpen(!isWhiteboardOpen);
   const toggleFlashcardCreator = () => setIsFlashcardCreatorOpen(!isFlashcardCreatorOpen);
+  const toggleCalculator = () => setIsCalculatorOpen(!isCalculatorOpen);
 
   const verbsToolLabel = currentUILanguage === 'COSYenglish'
     ? t('studyMode.toolIrregularVerbs', '📚 Irregular Verbs')
@@ -78,6 +81,11 @@ const ToolsPanel = () => {
                 <TransliterableText text={t('studyMode.toolCreateFlashcards', '🃏 Create Flashcards')} />
             </button>
         </li>
+        <li>
+            <button onClick={toggleCalculator} className="btn-link">
+                <TransliterableText text={t('studyMode.toolCalculator', '🧮 Calculator')} />
+            </button>
+        </li>
         {selectedRole === 'teacher' && (
           <li>
             <button onClick={toggleQuizCreator} className="btn-link">
@@ -117,6 +125,11 @@ const ToolsPanel = () => {
       {isFlashcardCreatorOpen && (
           <Modal isOpen={isFlashcardCreatorOpen} onClose={toggleFlashcardCreator}>
               <FlashcardCreator />
+          </Modal>
+      )}
+      {isCalculatorOpen && (
+          <Modal isOpen={isCalculatorOpen} onClose={toggleCalculator}>
+              <CalculatorPage />
           </Modal>
       )}
     </div>

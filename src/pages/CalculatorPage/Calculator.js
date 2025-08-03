@@ -5,11 +5,12 @@ import StudyLayout from '../../components/Layout/StudyLayout';
 import {
   priceData,
   packageDiscounts,
-  exchangeRates,
   packageNames,
   languageNames,
   durationNames,
+  currencies
 } from '../../data/calculatorData';
+import { getFlagEmoji } from '../../utils/stringUtils';
 
 const Calculator = () => {
     const [pkg, setPkg] = useState('standard');
@@ -53,6 +54,11 @@ const Calculator = () => {
                 <div className="calculator-section">
                     <h2><i className="fas fa-calculator"></i>CALCULATOR</h2>
 
+                    <div className="calculator-intro">
+                        <p>
+                            {t('calculator.intro', 'Use this calculator to estimate the cost of your language lessons. Select a package, duration, and quantity to see the total price. Discounts are applied automatically for larger packages.')}
+                        </p>
+                    </div>
 
                     <div className="form-group">
                         <label>Package</label>
@@ -96,21 +102,18 @@ const Calculator = () => {
 
                     <h2><i className="fas fa-exchange-alt"></i>CURRENCY</h2>
                     <div className="conversion">
-                        <div className="currency-box">
-                            <div className="currency-flag">🇪🇺</div>
-                            <div className="currency-name">EURO</div>
-                            <div className="currency-value" id="eurValue">€{totalEUR.toFixed(2)}</div>
-                        </div>
-                        <div className="currency-box">
-                            <div className="currency-flag">🇺🇸</div>
-                            <div className="currency-name">DOLLAR</div>
-                            <div className="currency-value" id="usdValue">${(totalEUR * exchangeRates.usd).toFixed(2)}</div>
-                        </div>
-                        <div className="currency-box">
-                            <div className="currency-flag">🇷🇺</div>
-                            <div className="currency-name">RUBLE</div>
-                            <div className="currency-value" id="rubValue">₽{(totalEUR * exchangeRates.rub).toFixed(2)}</div>
-                        </div>
+                        {Object.entries(currencies).map(([locale, currency]) => {
+                            if (navigator.language.startsWith(locale.split('-')[0])) {
+                                return (
+                                    <div className="currency-box" key={locale}>
+                                        <div className="currency-flag">{getFlagEmoji(locale.split('-')[1])}</div>
+                                        <div className="currency-name">{currency.name}</div>
+                                        <div className="currency-value">{currency.symbol}{(totalEUR * currency.rate).toFixed(2)}</div>
+                                    </div>
+                                );
+                            }
+                            return null;
+                        })}
                     </div>
                 </div>
             </div>

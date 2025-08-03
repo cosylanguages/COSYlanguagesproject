@@ -39,11 +39,10 @@ export function I18nProvider({ children }) {
 
     // Effect to set the language from the URL.
     useEffect(() => {
-        const langFromUrl = params.lang || location.pathname.split('/')[1];
-        if (langFromUrl && translations[langFromUrl]) {
-            setLanguage(langFromUrl);
+        if (params.lang && translations[params.lang]) {
+            setLanguage(params.lang);
         }
-    }, [params.lang, location.pathname]);
+    }, [params.lang]);
 
     // Effect to update the translations and the document's lang attribute when the language changes.
     useEffect(() => {
@@ -78,10 +77,10 @@ export function I18nProvider({ children }) {
         setLanguage(newLang);
 
         const pathParts = location.pathname.split('/');
-        if (pathParts[1] === 'study' && pathParts.length > 2) {
-            if (pathParts[2] !== newLang) {
-                navigate(`/study/${newLang}`);
-            }
+        // pathParts[0] is an empty string, pathParts[1] is the language
+        if (pathParts.length > 1 && pathParts[1] !== newLang) {
+            pathParts[1] = newLang;
+            navigate(pathParts.join('/'));
         }
     }, [location.pathname, navigate]);
 

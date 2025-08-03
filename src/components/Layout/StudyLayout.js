@@ -1,13 +1,11 @@
 import React from 'react';
-import StudyHeader from './StudyHeader';
-import Sidebar from './Sidebar';
+import Header from './Header';
 
 const StudyLayout = ({ children }) => {
     return (
         <div className="study-layout">
-            <StudyHeader />
+            <Header />
             <div className="study-layout-body">
-                <Sidebar />
                 <main className="study-main-content">
                     {children}
                 </main>

@@ -45,7 +45,7 @@ const Header = () => {
           <NavLink to="/freestyle" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Freestyle</NavLink>
           <NavLink to="/study" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Study Mode</NavLink>
           <NavLink to="/community" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Community</NavLink>
-          <NavLink to="/calculator" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Calculator</NavLink>
+          <NavLink to="/progress" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Progress</NavLink>
           {isAuthenticated && (
             <NavLink to="/my-sets" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>
               <TransliterableText text={t('navMyStudySets') || 'My Sets'} />

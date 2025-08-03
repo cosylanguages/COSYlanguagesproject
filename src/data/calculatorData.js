@@ -26,9 +26,17 @@ export const packageDiscounts = {
   maestro: 15,
 };
 
-export const exchangeRates = {
-  usd: 1.08,
-  rub: 100.50,
+export const currencies = {
+    'en-US': { symbol: '$', name: 'DOLLAR', rate: 1.08 },
+    'en-GB': { symbol: '£', name: 'POUND', rate: 0.85 },
+    'ja-JP': { symbol: '¥', name: 'YEN', rate: 145.50 },
+    'ru-RU': { symbol: '₽', name: 'RUBLE', rate: 100.50 },
+    'de-DE': { symbol: '€', name: 'EURO', rate: 1 },
+    'fr-FR': { symbol: '€', name: 'EURO', rate: 1 },
+    'it-IT': { symbol: '€', name: 'EURO', rate: 1 },
+    'es-ES': { symbol: '€', name: 'EURO', rate: 1 },
+    'pt-PT': { symbol: '€', name: 'EURO', rate: 1 },
+    'el-GR': { symbol: '€', name: 'EURO', rate: 1 },
 };
 
 export const packageNames = {

@@ -62,10 +62,11 @@
 .discount-badge {
     background: var(--cosy-accent);
     color: var(--cosy-light);
-    padding: 0.3em 0.6em;
+    padding: 0.5em 1em;
     border-radius: 3px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     display: inline-block;
+    font-weight: bold;
 }
 
 .details {

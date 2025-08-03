@@ -1,7 +1,8 @@
 // Import necessary libraries and components.
 import React, { useEffect } from 'react';
 // Import routing components from react-router-dom.
-import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate, useParams }
+from 'react-router-dom';
 // Import custom hooks for authentication and internationalization.
 import { useAuth } from './contexts/AuthContext';
 import { useI18n } from './i18n/I18nContext';
@@ -36,11 +37,12 @@ import { Toaster } from 'react-hot-toast';
 const ProtectedRoute = ({ children }) => {
     const { isAuthenticated, loadingAuth } = useAuth();
     const { t } = useI18n();
+    const { lang } = useParams();
 
     if (loadingAuth) {
         return <div>{t('auth.loadingStatus', 'Loading authentication status...')}</div>;
     }
-    return isAuthenticated ? children : <Navigate to="/login" replace />;
+    return isAuthenticated ? children : <Navigate to={`/${lang}/login`} replace />;
 };
 
 /**
@@ -79,10 +81,11 @@ function App() {
 
     return (
         <Routes>
+            <Route path="/" element={<Navigate to="/en" replace />} />
             {/* The login page route. */}
-            <Route path="/login" element={<Login />} />
+            <Route path="/:lang/login" element={<Login />} />
             {/* The main layout route, which contains all other pages. */}
-            <Route path="/" element={<Layout />}>
+            <Route path="/:lang" element={<Layout />}>
                 {/* The landing page, which is the default page for the root URL. */}
                 <Route index element={<LandingPage />} />
                 {/* The freestyle mode page. */}
@@ -100,8 +103,7 @@ function App() {
                 {/* The grammar guidebooks page. */}
                 <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
                 {/* The study mode routes. */}
-                <Route path="study" element={<Navigate to="en" replace />} />
-                <Route path="study/:lang" element={<StudyModePage />} />
+                <Route path="study" element={<StudyModePage />} />
                 {/* The review page. */}
                 <Route path="review" element={<ReviewPage />} />
                 {/* The learned words page, which is a protected route. */}
@@ -138,7 +140,7 @@ function App() {
  * @returns {JSX.Element} The CatchAll component.
  */
 function CatchAll() {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/en" replace />;
 }
 
 export default AppRoutes;
