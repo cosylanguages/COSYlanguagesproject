@@ -1,0 +1,50 @@
+{
+  "events": [
+    {
+      "_id": "1",
+      "title": "I Couldn't Help But Wonder",
+      "videoUrl": "https://www.youtube.com/watch?v=c5-i0KjR384",
+      "videoTitle": "I Couldn't Help But Wonder.",
+      "start": "2025-08-01T18:00:00Z",
+      "end": "2025-08-01T19:00:00Z",
+      "description": "Speaking club"
+    },
+    {
+      "_id": "2",
+      "title": "Mind matters",
+      "videoUrl": "https://www.youtube.com/watch?v=iKhneDP4Bsk",
+      "videoTitle": "Mind matters.",
+      "start": "2025-08-01T18:00:00Z",
+      "end": "2025-08-01T19:00:00Z",
+      "description": "Speaking club"
+    },
+    {
+      "_id": "3",
+      "title": "Keeping up with science",
+      "videoUrl": "https://www.youtube.com/watch?v=0LiuP7RmHEE",
+      "videoTitle": "Keeping up with science.",
+      "start": "2025-08-01T18:00:00Z",
+      "end": "2025-08-01T19:00:00Z",
+      "description": "Speaking club"
+    },
+    {
+      "_id": "4",
+      "title": "Let’s Celebrate",
+      "videoUrl": "https://www.youtube.com/watch?v=50n-axjpaZ8",
+      "videoTitle": "Let’s Celebrate.",
+      "start": "2025-08-01T18:00:00Z",
+      "end": "2025-08-01T19:00:00Z",
+      "description": "Speaking club"
+    },
+    {
+      "_id": "5",
+      "title": "The greatest quotes",
+      "videoUrl": "https://www.youtube.com/watch?v=ON2SlXA7gq8",
+      "videoTitle": "The greatest quotes.",
+      "start": "2025-08-01T18:00:00Z",
+      "end": "2025-08-01T19:00:00Z",
+      "description": "Speaking club"
+    }
+  ],
+  "totalPages": 1
+}

@@ -31,10 +31,9 @@ export const commentOnEvent = async (eventId, commentData) => {
 };
 
 export const getEvents = async ({ filter, page, limit }) => {
-  const response = await apiClient.get('/events', {
-    params: { filter, page, limit },
-  });
-  return response.data;
+  const response = await fetch(`${process.env.PUBLIC_URL}/data/events.json`);
+  const data = await response.json();
+  return data;
 };
 
 export const createEvent = async (eventData) => {
