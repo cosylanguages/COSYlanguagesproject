@@ -8,7 +8,7 @@ const InteractiveDemoWidget = () => {
   useEffect(() => {
     const fetchRandomCard = async () => {
       try {
-        const res = await fetch('/data/vocabulary/images/images.json');
+        const res = await fetch(`${process.env.PUBLIC_URL}/data/vocabulary/images/images.json`);
         const data = await res.json();
 
         const allWords = Object.values(data).flat();

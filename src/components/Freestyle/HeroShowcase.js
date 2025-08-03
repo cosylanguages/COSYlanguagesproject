@@ -19,7 +19,7 @@ const roadmaps = [
 
 const fetchRandomContent = async () => {
     const randomRoadmapFile = roadmaps[Math.floor(Math.random() * roadmaps.length)];
-    const roadmapRes = await fetch(`/data/roadmaps/${randomRoadmapFile}`);
+    const roadmapRes = await fetch(`${process.env.PUBLIC_URL}/data/roadmaps/${randomRoadmapFile}`);
     const roadmapData = await roadmapRes.json();
 
     const contentType = Math.random() < 0.5 ? 'roadmap' : 'tip';
