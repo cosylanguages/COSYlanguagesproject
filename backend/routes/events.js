@@ -3,19 +3,24 @@ const Event = require('../models/event.model');
 
 // Get all events with filtering and pagination
 router.route('/').get(async (req, res) => {
-  const { clubType, level, page = 1, limit = 10 } = req.query;
+  const { filter, page = 1, limit = 10 } = req.query;
   const query = {};
+  const sort = {};
 
-  if (clubType) {
-    query.clubType = clubType;
-  }
-  if (level) {
-    query.level = level;
+  if (filter === 'current') {
+    query.date = { $gte: new Date() };
+    sort.date = 1; // Ascending order for upcoming events
+  } else if (filter === 'past') {
+    query.date = { $lt: new Date() };
+    sort.date = -1; // Descending order for past events
+  } else {
+    // Default behavior if no filter is specified
+    sort.createdAt = -1;
   }
 
   try {
     const events = await Event.find(query)
-      .sort({ createdAt: -1 })
+      .sort(sort)
       .skip((page - 1) * limit)
       .limit(parseInt(limit));
 
