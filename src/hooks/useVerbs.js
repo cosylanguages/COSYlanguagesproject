@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { loadConjugationData } from '../utils/conjugationDataService';
+import { loadConjugationData, loadEnglishIrregularVerbsData } from '../utils/conjugationDataService';
 
 // This is the reverse mapping of langFileMap in exerciseDataService.js
 const langIdentifierMap = {
@@ -17,6 +17,20 @@ const langIdentifierMap = {
     'bashkir': 'COSYbachkir'
 };
 
+const transformEnglishVerbs = (data) => {
+    if (!data) return [];
+    let allVerbs = [];
+    data.forEach(category => {
+        const transformed = category.verbs.map(verb => ({
+            ...verb,
+            infinitive: verb.base,
+            translation_en: verb.translation
+        }));
+        allVerbs.push(...transformed);
+    });
+    return allVerbs;
+};
+
 
 /**
  * A custom hook that fetches and filters verb data.
@@ -32,29 +46,41 @@ const useVerbs = (levels, lang) => {
     useEffect(() => {
         const fetchVerbs = async () => {
             setLoading(true);
+            setError(null);
             try {
-                const languageIdentifier = langIdentifierMap[lang] || `COSY${lang}`;
-                const { data, error: fetchError } = await loadConjugationData(languageIdentifier);
+                let data;
+                let fetchError;
 
-                if (fetchError) {
-                    throw new Error(fetchError);
+                if (lang === 'en' || lang === 'english') {
+                    const englishData = await loadEnglishIrregularVerbsData();
+                    data = transformEnglishVerbs(englishData.data);
+                    fetchError = englishData.error;
+                } else {
+                    const languageIdentifier = langIdentifierMap[lang] || `COSY${lang}`;
+                    const conjugationData = await loadConjugationData(languageIdentifier);
+                    data = conjugationData.data ? conjugationData.data.verbs : [];
+                    fetchError = conjugationData.error;
                 }
 
-                const allVerbs = data ? data.verbs : [];
-
-                let filteredVerbs = allVerbs;
-                if (levels && levels !== 'all') {
-                    const levelSet = new Set(levels.split(','));
-                    filteredVerbs = allVerbs.filter(verb => {
-                        // If a verb has no group, we include it, or if its group is in the selected levels.
-                        return !verb.verb_group || levelSet.has(verb.verb_group);
-                    });
+                if (fetchError && fetchError.errorType === 'fileNotFound') {
+                    console.warn(fetchError.error);
+                    setVerbs([]);
+                } else if (fetchError) {
+                    throw new Error(fetchError.error);
+                } else {
+                    let filteredVerbs = data;
+                    if (levels && levels !== 'all') {
+                        const levelSet = new Set(levels.split(','));
+                        filteredVerbs = data.filter(verb => {
+                            return !verb.verb_group || levelSet.has(verb.verb_group);
+                        });
+                    }
+                    setVerbs(filteredVerbs);
                 }
-
-                setVerbs(filteredVerbs);
             } catch (err) {
                 console.error('Error fetching or processing verbs:', err);
                 setError(err);
+                setVerbs([]);
             } finally {
                 setLoading(false);
             }
@@ -63,6 +89,7 @@ const useVerbs = (levels, lang) => {
         if (lang) {
             fetchVerbs();
         } else {
+            setVerbs([]);
             setLoading(false);
         }
     }, [levels, lang]);
