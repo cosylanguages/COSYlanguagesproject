@@ -45,8 +45,8 @@ const DictionaryTool = ({ isOpen, onClose }) => {
         const firstSetId = getStudySets()[0].id;
         const cardData = {
             term1: word.term,
-            term2: word.definition,
-            notes: word.example
+            term2: word.definition || word.term,
+            notes: word.example || ''
         };
         addCardToSet(firstSetId, cardData);
         toast.success(`'${word.term}' added to flashcards!`);
