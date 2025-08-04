@@ -19,7 +19,7 @@ export async function loadConjugationData(languageIdentifier) {
  * @returns {Promise<{data: Array, error: string|null, errorType: string|null}>} A promise that resolves to an object containing the English irregular verbs data, or an error if the data could not be loaded.
  */
 export async function loadEnglishIrregularVerbsData() {
-  const filePath = `/data/grammar/verbs/irregular/irregular_verbs_COSYenglish.json`;
+  const filePath = `/data/grammar/verbs/irregular/irregular_verbs_english.json`;
   const { data, error, errorType } = await fetchJsonData(filePath);
   if (error) return { data: [], error, errorType };
   return { data: data || [], error: null, errorType: null };
