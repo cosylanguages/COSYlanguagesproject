@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils';
 import { getStudySets, addCardToSet } from '../../../utils/studySetService';
-// import { loadAllLevelsForLanguageAsFlatList } from '../../../utils/vocabularyService';
+import { loadAllLevelsForLanguageAsFlatList } from '../../../utils/vocabularyService';
 import SearchableCardList from '../../Common/SearchableCardList';
 import FlashcardPlayer from '../FlashcardPlayer';
 import Modal from '../../Common/Modal';
@@ -11,23 +11,23 @@ import './DictionaryTool.css';
 
 const DictionaryTool = ({ isOpen, onClose }) => {
     const { t, language, currentLangKey } = useI18n();
-    const [allVocabulary] = useState([]);
-    const [isLoading] = useState(false);
-    const [error] = useState(null);
+    const [allVocabulary, setAllVocabulary] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
     const [showFlashcardPlayer, setShowFlashcardPlayer] = useState(false);
 
     useEffect(() => {
         const loadVocabulary = async () => {
             if (!language || !isOpen) return;
-            // setIsLoading(true);
-            // try {
-            //     // const vocabularyData = await loadAllLevelsForLanguageAsFlatList(language);
-            //     // setAllVocabulary(vocabularyData || []);
-            // } catch (err) {
-            //     setError(err.message || 'Failed to load vocabulary data.');
-            // } finally {
-            //     setIsLoading(false);
-            // }
+            setIsLoading(true);
+            try {
+                const vocabularyData = await loadAllLevelsForLanguageAsFlatList(language);
+                setAllVocabulary(vocabularyData || []);
+            } catch (err) {
+                setError(err.message || 'Failed to load vocabulary data.');
+            } finally {
+                setIsLoading(false);
+            }
         };
         loadVocabulary();
     }, [language, isOpen]);
