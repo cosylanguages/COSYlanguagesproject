@@ -65,7 +65,7 @@ const DictionaryTool = ({ isOpen, onClose }) => {
             <h4>
                 {item.term || t('dictionary.unknownTerm', 'Unknown Term')}
                 {item.level && ` (${item.level})`}
-                {item.term && <button onClick={() => pronounceText(item.term, item.lang || currentLangKey)} className="btn-icon pronounce-btn-inline" title={t('dictionary.pronounceTerm', 'Pronounce term')}>🔊</button>}
+                {item.term && <button onClick={() => pronounceText(item.term, item.lang || currentLangKey)} className="button--icon pronounce-btn-inline" title={t('dictionary.pronounceTerm', 'Pronounce term')}>🔊</button>}
             </h4>
             {item.pronunciation && <p className="vocab-pronunciation"><strong>{t('dictionary.pronunciation', 'Pronunciation:')}</strong> {item.pronunciation}</p>}
             {item.partOfSpeech && <p className="vocab-pos"><strong>{t('dictionary.partOfSpeech', 'Part of Speech:')}</strong> {item.partOfSpeech}</p>}
@@ -74,7 +74,7 @@ const DictionaryTool = ({ isOpen, onClose }) => {
             {item.definition && <p className="vocab-definition"><strong>{t('dictionary.definition', 'Definition:')}</strong> {item.definition}</p>}
             {item.example && <p className="vocab-example"><strong>{t('dictionary.example', 'Example:')}</strong> <em>{item.example}</em></p>}
             {item.theme && <p className="vocab-theme"><small>{t('dictionary.theme', 'Theme:')} {item.theme}</small></p>}
-            <button className="btn btn-primary" onClick={() => handleAddWordToFlashcards(item)}>
+            <button className="button" onClick={() => handleAddWordToFlashcards(item)}>
                 {t('dictionary.add_to_flashcards', 'Add to Flashcards')}
             </button>
         </div>
@@ -100,7 +100,7 @@ const DictionaryTool = ({ isOpen, onClose }) => {
 
     return (
         <Modal isOpen={isOpen} onClose={onClose} title={t('dictionary.title', 'Vocabulary Dictionary')}>
-            <button onClick={() => setShowFlashcardPlayer(true)} className="btn btn-primary">
+            <button onClick={() => setShowFlashcardPlayer(true)} className="button">
                 {t('dictionary.study_flashcards', 'Study Flashcards')}
             </button>
             <SearchableCardList

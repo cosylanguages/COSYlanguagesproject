@@ -92,14 +92,14 @@ const TimerTool = ({ isOpen, onClose }) => {
             <div className="timer-mode-select">
                 <button
                     onClick={handleModeToggle}
-                    className={`btn btn-sm ${!isCountdown ? 'active' : 'btn-outline-secondary'}`}
+                    className={`button button--sm ${!isCountdown ? 'active' : 'button--secondary'}`}
                     disabled={isActive}
                 >
                     {t('timerStopwatchMode') || 'Stopwatch'}
                 </button>
                 <button
                     onClick={handleModeToggle}
-                    className={`btn btn-sm ${isCountdown ? 'active' : 'btn-outline-secondary'}`}
+                    className={`button button--sm ${isCountdown ? 'active' : 'button--secondary'}`}
                     disabled={isActive}
                 >
                     {t('timerCountdownMode') || 'Countdown'}
@@ -121,10 +121,10 @@ const TimerTool = ({ isOpen, onClose }) => {
             )}
 
             <div className="timer-controls">
-                <button onClick={handleStartPause} className={`btn ${isActive ? 'btn-warning' : 'btn-success'}`}>
+                <button onClick={handleStartPause} className={`button ${isActive ? 'button--warning' : 'button--success'}`}>
                     {isActive ? (t('timerPauseBtn') || 'Pause') : (t('timerStartBtn') || 'Start')}
                 </button>
-                <button onClick={handleReset} className="btn btn-danger" disabled={isActive && time === 0}>
+                <button onClick={handleReset} className="button button--danger" disabled={isActive && time === 0}>
                     {t('timerResetBtn') || 'Reset'}
                 </button>
             </div>
