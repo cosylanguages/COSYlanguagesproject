@@ -1,0 +1,26 @@
+.flashcards-tool .studyset-selector {
+    margin-bottom: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.flashcards-tool .studyset-selector label {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--color-dark);
+}
+
+.flashcards-tool .studyset-selector select {
+    font-size: 1rem;
+}
+
+.flashcards-tool .no-cards-message {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    text-align: center;
+    padding: var(--space-lg);
+    background-color: var(--color-muted);
+    border-radius: var(--radius-lg);
+}

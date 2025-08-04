@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import toast from 'react-hot-toast';
+import './FlashcardCreator.css';
 
 const FlashcardCreator = () => {
     const { t } = useI18n();
@@ -55,8 +56,8 @@ const FlashcardCreator = () => {
                     />
                 </div>
             ))}
-            <button onClick={handleAddCard}>{t('studyMode.addCardButton', 'Add Card')}</button>
-            <button onClick={handleSaveDeck}>{t('studyMode.saveDeckButton', 'Save Deck')}</button>
+            <button className="button" onClick={handleAddCard}>{t('studyMode.addCardButton', 'Add Card')}</button>
+            <button className="button button--success" onClick={handleSaveDeck}>{t('studyMode.saveDeckButton', 'Save Deck')}</button>
         </div>
     );
 };

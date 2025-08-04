@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import toast from 'react-hot-toast';
+import './Whiteboard.css';
 
 const Whiteboard = () => {
     const canvasRef = useRef(null);
@@ -73,10 +74,10 @@ const Whiteboard = () => {
     return (
         <div className="whiteboard-container">
             <div className="whiteboard-tools">
-                <button onClick={() => setTool('pen')}>{t('studyMode.pen', 'Pen')}</button>
-                <button onClick={() => setTool('eraser')}>{t('studyMode.eraser', 'Eraser')}</button>
-                <button onClick={handleSaveDrawing}>{t('studyMode.saveDrawing', 'Save')}</button>
-                <button onClick={handleClearDrawing}>{t('studyMode.clearDrawing', 'Clear')}</button>
+                <button className={`button ${tool === 'pen' ? '' : 'button--secondary'}`} onClick={() => setTool('pen')}>{t('studyMode.pen', 'Pen')}</button>
+                <button className={`button ${tool === 'eraser' ? '' : 'button--secondary'}`} onClick={() => setTool('eraser')}>{t('studyMode.eraser', 'Eraser')}</button>
+                <button className="button button--success" onClick={handleSaveDrawing}>{t('studyMode.saveDrawing', 'Save')}</button>
+                <button className="button button--danger" onClick={handleClearDrawing}>{t('studyMode.clearDrawing', 'Clear')}</button>
             </div>
             <canvas
                 ref={canvasRef}
@@ -85,7 +86,6 @@ const Whiteboard = () => {
                 onMouseDown={startDrawing}
                 onMouseUp={finishDrawing}
                 onMouseMove={draw}
-                style={{ border: '1px solid black' }}
             />
         </div>
     );
