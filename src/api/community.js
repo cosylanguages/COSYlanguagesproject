@@ -47,6 +47,11 @@ export const getUsers = async () => {
   return response.data;
 };
 
+export const getClubs = async () => {
+  const response = await apiClient.get('/clubs');
+  return response.data;
+};
+
 export const createClub = async (clubData) => {
   const response = await apiClient.post('/clubs', clubData);
   return response.data;
