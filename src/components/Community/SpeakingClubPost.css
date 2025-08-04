@@ -26,12 +26,12 @@
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: var(--space-sm);
-  color: var(--cosy-dark);
+  color: var(--color-text);
 }
 
 .post-date {
   font-size: 0.875rem;
-  color: var(--cosy-dark);
+  color: var(--color-text);
   opacity: 0.7;
   margin-bottom: var(--space-md);
 }
@@ -39,7 +39,7 @@
 .post-description {
   font-family: var(--ff-sans);
   font-size: 1rem;
-  color: var(--cosy-dark);
+  color: var(--color-text);
   margin-bottom: var(--space-lg);
   line-height: 1.6;
 }
@@ -86,7 +86,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: var(--space-sm);
-  color: var(--cosy-dark);
+  color: var(--color-text);
   border-bottom: 2px solid var(--cosy-shadow);
   padding-bottom: var(--space-sm);
 }

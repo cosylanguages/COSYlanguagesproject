@@ -1,28 +1,46 @@
 const request = require('supertest');
 const express = require('express');
+const mongoose = require('mongoose');
 const studySetsRouter = require('./studySets');
-const mockAuth = require('./middleware/mockAuth');
+const User = require('./models/user');
+const StudySet = require('./models/studySet');
 
 const app = express();
 app.use(express.json());
-app.use(mockAuth);
+
+// This is a mock authentication middleware.
+const auth = async (req, res, next) => {
+  const user = await User.findOne();
+  req.user = user;
+  next();
+};
+app.use(auth);
 app.use('/study-sets', studySetsRouter);
 
 beforeAll(async () => {
-  const mongoose = require('mongoose');
   await mongoose.connect('mongodb://localhost/cosylanguages_test', { useNewUrlParser: true, useUnifiedTopology: true });
 });
 
 afterAll(async () => {
-  const mongoose = require('mongoose');
   await mongoose.connection.close();
 });
 
+afterEach(async () => {
+  await mongoose.connection.db.dropDatabase();
+});
+
 describe('Study Sets routes', () => {
+  let user;
+  beforeEach(async () => {
+    user = await new User({ username: 'testuser', password: 'password' }).save();
+  });
+
   it('should get all study sets', async () => {
+    await new StudySet({ name: 'Test Study Set', user: user._id }).save();
     const res = await request(app).get('/study-sets');
     expect(res.statusCode).toEqual(200);
     expect(res.body).toBeInstanceOf(Array);
+    expect(res.body.length).toBe(1);
   });
 
   it('should create a new study set', async () => {
@@ -35,40 +53,32 @@ describe('Study Sets routes', () => {
     expect(res.body).toHaveProperty('name', 'Test Study Set');
   });
 
-  it('should get a study set by id', async () => {
-    const postRes = await request(app)
-      .post('/study-sets')
-      .send({
-        name: 'Test Study Set 2'
-      });
-    const res = await request(app).get(`/study-sets/${postRes.body._id}`);
-    expect(res.statusCode).toEqual(200);
-    expect(res.body).toHaveProperty('name', 'Test Study Set 2');
-  });
+  describe('with a study set', () => {
+    let studySet;
+    beforeEach(async () => {
+      studySet = await new StudySet({ name: 'Test Study Set', user: user._id }).save();
+    });
 
-  it('should update a study set', async () => {
-    const postRes = await request(app)
-      .post('/study-sets')
-      .send({
-        name: 'Test Study Set 3'
-      });
-    const res = await request(app)
-      .put(`/study-sets/${postRes.body._id}`)
-      .send({
-        name: 'Updated Test Study Set 3'
-      });
-    expect(res.statusCode).toEqual(200);
-    expect(res.body).toHaveProperty('name', 'Updated Test Study Set 3');
-  });
+    it('should get a study set by id', async () => {
+      const res = await request(app).get(`/study-sets/${studySet._id}`);
+      expect(res.statusCode).toEqual(200);
+      expect(res.body).toHaveProperty('name', 'Test Study Set');
+    });
 
-  it('should delete a study set', async () => {
-    const postRes = await request(app)
-      .post('/study-sets')
-      .send({
-        name: 'Test Study Set 4'
-      });
-    const res = await request(app).delete(`/study-sets/${postRes.body._id}`);
-    expect(res.statusCode).toEqual(200);
-    expect(res.body).toHaveProperty('success', true);
+    it('should update a study set', async () => {
+      const res = await request(app)
+        .put(`/study-sets/${studySet._id}`)
+        .send({
+          name: 'Updated Test Study Set'
+        });
+      expect(res.statusCode).toEqual(200);
+      expect(res.body).toHaveProperty('name', 'Updated Test Study Set');
+    });
+
+    it('should delete a study set', async () => {
+      const res = await request(app).delete(`/study-sets/${studySet._id}`);
+      expect(res.statusCode).toEqual(200);
+      expect(res.body).toHaveProperty('message', 'Study set deleted successfully');
+    });
   });
 });

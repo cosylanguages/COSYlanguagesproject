@@ -86,7 +86,7 @@
 
 .gap-placeholder.filled {
     border-style: solid;
-    border-color: var(--primary-color-dark, #0a58ca);
+    border-color: var(--primary-color, #0a58ca);
     background-color: var(--primary-color-xlight, #e7f1ff);
     color: var(--primary-text-on-light, #000);
     font-style: normal;

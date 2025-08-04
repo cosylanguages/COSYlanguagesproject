@@ -8,7 +8,7 @@
 .flashcards-tool .studyset-selector label {
     font-family: var(--font-display);
     font-size: 1.1rem;
-    color: var(--color-dark);
+    color: var(--color-text);
 }
 
 .flashcards-tool .studyset-selector select {
@@ -18,7 +18,7 @@
 .flashcards-tool .no-cards-message {
     font-family: var(--font-body);
     font-size: 1.1rem;
-    color: var(--color-dark);
+    color: var(--color-text);
     text-align: center;
     padding: var(--space-lg);
     background-color: var(--color-muted);

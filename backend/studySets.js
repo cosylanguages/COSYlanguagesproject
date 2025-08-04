@@ -72,7 +72,7 @@ router.put('/:id', async (req, res) => {
     if (studySet) {
       res.json(studySet);
     } else {
-      res.status(440).json({ success: false, message: 'Study set not found' });
+      res.status(404).json({ success: false, message: 'Study set not found' });
     }
   } catch (error) {
     res.status(400).json({ message: 'Error updating study set', error });

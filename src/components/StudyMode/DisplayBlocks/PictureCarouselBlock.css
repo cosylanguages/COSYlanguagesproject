@@ -14,7 +14,7 @@
     margin-bottom: var(--spacing-md, 1rem);
     font-size: var(--font-size-h5, 1.25rem);
     font-weight: 600;
-    color: var(--color-dark);
+    color: var(--color-text);
     text-align: center;
 }
 
@@ -69,7 +69,7 @@
 
 .carousel-caption {
     font-size: var(--font-size-base, 1rem);
-    color: var(--color-dark);
+    color: var(--color-text);
     opacity: 0.7;
     margin: 0;
     font-style: italic;

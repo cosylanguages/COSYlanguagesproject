@@ -8,7 +8,7 @@
 
 .label-pictures-block h4 {
     margin-top: 0;
-    color: var(--color-dark);
+    color: var(--color-text);
 }
 
 .image-container-lp-display {
@@ -30,7 +30,7 @@
     height: 28px;
     background-color: var(--color-primary);
     color: var(--color-light);
-    border: 2px solid var(--color-primary-dark);
+    border: 2px solid var(--color-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -44,13 +44,13 @@
 }
 
 .hotspot-marker-display:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-primary);
     transform: translate(-50%, -50%) scale(1.1);
 }
 
 .hotspot-marker-display.answered.correct {
     background-color: var(--color-primary);
-    border-color: var(--color-primary-dark);
+    border-color: var(--color-primary);
     color: var(--color-light);
     cursor: default;
 }
@@ -127,7 +127,7 @@
     padding: 5px 0;
 }
 .lp-results-summary li.correct {
-    color: var(--color-primary-dark);
+    color: var(--color-primary);
 }
 .lp-results-summary li.incorrect {
     color: #E57373;

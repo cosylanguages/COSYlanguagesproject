@@ -6,14 +6,12 @@ import { useAuth } from '../../contexts/AuthContext';
 import { useI18n } from '../../i18n/I18nContext';
 import Button from '../Common/Button';
 import TransliterableText from '../Common/TransliterableText';
-import { useDarkMode } from '../../hooks/useDarkMode';
 import './Header.css';
 
 const Header = () => {
   const { isAuthenticated, currentUser, logout, loadingAuth } = useAuth();
   const { t } = useI18n();
   const navigate = useNavigate();
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLogout = async () => {
@@ -56,11 +54,6 @@ const Header = () => {
           <div className="header-language-selector">
             <LanguageSelector />
           </div>
-          <Button
-            onClick={toggleDarkMode}
-          >
-            {isDarkMode ? t('lightMode', 'Light Mode') : t('darkMode', 'Dark Mode')}
-          </Button>
           {isAuthenticated && currentUser ? (
             <div className="user-info">
               <NavLink to="/profile" className="profile-link">

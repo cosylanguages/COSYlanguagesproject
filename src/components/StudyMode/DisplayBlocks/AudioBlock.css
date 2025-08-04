@@ -10,7 +10,7 @@
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.3em;
-    color: var(--color-dark);
+    color: var(--color-text);
 }
 
 .audio-upload-placeholder,
@@ -20,7 +20,7 @@
     border: 1px dashed var(--color-muted);
     border-radius: 4px;
     text-align: center;
-    color: var(--color-dark);
+    color: var(--color-text);
     margin-bottom: 10px;
 }
 
@@ -31,7 +31,7 @@
 
 .audio-upload-placeholder strong,
 .audio-tts-placeholder strong {
-    color: var(--color-dark);
+    color: var(--color-text);
 }
 
 .audio-tts-placeholder .tts-text-quote {
@@ -65,5 +65,5 @@
     font-family: inherit; /* Use the block's font */
     font-size: 0.95em;
     margin: 0;
-    color: var(--color-dark);
+    color: var(--color-text);
 }

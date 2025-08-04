@@ -91,7 +91,7 @@
 }
 .true-button:disabled {
   background-color: var(--color-success-light, #d4edda);
-  color: var(--color-success-dark, #155724);
+  color: var(--color-success, #155724);
   cursor: not-allowed;
 }
 
@@ -104,7 +104,7 @@
 }
 .false-button:disabled {
   background-color: var(--color-danger-light, #f8d7da);
-  color: var(--color-danger-dark, #721c24);
+  color: var(--color-danger, #721c24);
   cursor: not-allowed;
 }
 
@@ -115,7 +115,7 @@
   margin-top: var(--spacing-sm, 0.5rem);
 }
 .next-button:hover {
-  background-color: var(--color-primary-dark, #0056b3);
+  background-color: var(--color-primary, #0056b3);
 }
 
 

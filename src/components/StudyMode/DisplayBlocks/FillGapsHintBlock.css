@@ -10,13 +10,13 @@
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.3em;
-    color: var(--color-dark);
+    color: var(--color-text);
 }
 
 .fill-gaps-hint-block .instructions {
     margin-bottom: 15px;
     font-style: italic;
-    color: var(--color-dark);
+    color: var(--color-text);
     opacity: 0.7;
 }
 
@@ -55,7 +55,7 @@
 
 .hint-text {
     font-size: 0.9em;
-    color: var(--color-dark);
+    color: var(--color-text);
     opacity: 0.7;
     margin-left: 5px;
     font-style: italic;

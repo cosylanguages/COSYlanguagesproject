@@ -59,7 +59,7 @@
   border: 1px solid var(--color-border, #ced4da);
   border-radius: var(--border-radius-sm, 0.2rem);
   background-color: var(--color-primary-light, #cfe8fc); /* A light primary for pool tiles */
-  color: var(--color-primary-dark, #004085);
+  color: var(--color-primary, #004085);
   font-weight: bold;
   cursor: pointer;
   min-width: 40px;
@@ -75,13 +75,13 @@
 
 .letter-tile.formed {
   background-color: var(--color-success-light, #d4edda); /* Light success for formed word */
-  color: var(--color-success-dark, #155724);
+  color: var(--color-success, #155724);
   border-color: var(--color-success, #28a745);
 }
 
 .letter-tile.formed:hover {
   background-color: var(--color-warning-light, #fff3cd); /* Light warning to indicate it can be moved back */
-  color: var(--color-warning-dark, #856404);
+  color: var(--color-warning, #856404);
 }
 
 .action-buttons {
@@ -108,7 +108,7 @@
   cursor: not-allowed;
 }
 .check-button:hover:not(:disabled) {
-  background-color: var(--color-primary-dark, #0056b3);
+  background-color: var(--color-primary, #0056b3);
 }
 
 .next-button {

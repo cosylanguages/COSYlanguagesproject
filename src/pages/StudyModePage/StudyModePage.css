@@ -91,7 +91,7 @@
 
 .role-btn:hover {
   background-color: var(--color-muted);
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   border-color: var(--color-primary);
   transform: translateY(-3px) scale(1.05) rotate(1deg); /* More dynamic */
   box-shadow: var(--shadow-lg, 0 5px 10px rgba(0,0,0,0.12)); /* Slightly enhanced shadow */
@@ -100,7 +100,7 @@
 .role-btn.active-role-btn {
   background-color: var(--color-primary);
   color: var(--color-light);
-  border-color: var(--color-primary-dark);
+  border-color: var(--color-primary);
   box-shadow: inset 0 2px 4px rgba(0,0,0,0.15), var(--shadow-sm, 0 1px 2px rgba(0,0,0,0.05));
   transform: translateY(0) scale(1);
 }

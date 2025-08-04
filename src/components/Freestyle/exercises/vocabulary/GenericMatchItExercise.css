@@ -46,7 +46,7 @@
 }
 
 .match-item:hover:not(.matched):not(.selected) {
-  border-color: var(--color-primary-dark, #0056b3);
+  border-color: var(--color-primary, #0056b3);
   background-color: var(--color-surface-medium, #e9ecef);
 }
 
@@ -106,5 +106,5 @@
 }
 
 .next-button:hover {
-  background-color: var(--color-primary-dark, #0056b3);
+  background-color: var(--color-primary, #0056b3);
 }

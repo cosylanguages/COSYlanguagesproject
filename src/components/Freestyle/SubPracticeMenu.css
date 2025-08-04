@@ -13,7 +13,7 @@
   margin-bottom: var(--space-md);
   text-align: center;
   font-size: var(--font-size-h4, 1.125rem);
-  color: var(--color-dark);
+  color: var(--color-text);
 }
 
 .sub-practice-buttons-wrapper {
@@ -26,7 +26,7 @@
 .sub-practice-btn {
   /* The base styles are now coming from the .button class */
   background: linear-gradient(135deg, var(--color-light) 0%, var(--color-muted) 100%);
-  color: var(--color-dark);
+  color: var(--color-text);
   border: 1px solid var(--color-muted);
   min-width: 160px; /* Adjusted min-width */
   text-align: center;
@@ -35,8 +35,8 @@
 
 .sub-practice-btn:hover {
   /* Inspired by old .practice-options button:hover */
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  border-color: var(--color-primary-dark);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary) 100%);
+  border-color: var(--color-primary);
   color: var(--color-light); /* Text color on primary gradient */
   transform: translateY(-3px) scale(1.08) rotate(-2deg); 
   box-shadow: var(--shadow-lg, 0 6px 12px rgba(0,0,0,0.2)); 
@@ -44,16 +44,16 @@
 
 .sub-practice-btn.active {
   /* Inspired by old .practice-options button.active-option-btn */
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary) 100%);
   color: var(--color-light);
-  border-color: var(--color-primary-dark);
+  border-color: var(--color-primary);
   box-shadow: var(--shadow-md, 0 4px 8px rgba(0,0,0,0.15)), inset 0 1px 3px rgba(0,0,0,0.2);
   transform: translateY(0) scale(1.1); /* Slightly larger when active */
 }
 
 .sub-practice-btn.active:hover {
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
-  border-color: var(--color-primary-dark);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary) 100%);
+  border-color: var(--color-primary);
   /* Keep transform from .active or slightly enhance if desired */
   transform: translateY(-1px) scale(1.12); /* Minor lift on active hover */
 }

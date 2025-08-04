@@ -10,15 +10,20 @@ app.use('/posts', postsRouter);
 
 let testUser;
 
-// Connexion à une base de test MongoDB (en mémoire ou locale)
-beforeEach(async () => {
+beforeAll(async () => {
   await mongoose.connect('mongodb://localhost/cosylanguages_test', { useNewUrlParser: true, useUnifiedTopology: true });
+});
+
+afterAll(async () => {
+  await mongoose.connection.close();
+});
+
+beforeEach(async () => {
   testUser = await new User({ username: 'testuser', password: 'password' }).save();
 });
 
 afterEach(async () => {
   await mongoose.connection.db.dropDatabase();
-  await mongoose.connection.close();
 });
 
 describe('POST /posts/add', () => {

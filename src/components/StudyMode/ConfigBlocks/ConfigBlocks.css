@@ -26,7 +26,7 @@
 .options-fieldset legend {
   font-size: var(--font-size-base, 1rem); /* Match .unified-label size */
   font-weight: 600; /* Match .unified-label weight */
-  color: var(--color-dark); /* Match .unified-label color */
+  color: var(--color-text); /* Match .unified-label color */
   padding: 0 var(--spacing-xs, 0.25rem); 
   margin-bottom: var(--spacing-sm, 0.5rem); /* Consistent spacing */
 }
@@ -56,7 +56,7 @@
 
 .input-hint {
   font-size: var(--font-size-sm, 0.85rem); /* Slightly larger for better readability */
-  color: var(--color-dark); /* Consistent secondary text color */
+  color: var(--color-text); /* Consistent secondary text color */
   opacity: 0.7;
   margin-top: var(--spacing-xs, 0.3rem); /* Consistent small top margin */
   line-height: 1.5; /* Improved line height */
@@ -83,7 +83,7 @@
 
 .mcq-multiple-config-form .options-fieldset legend {
   font-weight: bold;
-  color: var(--color-dark);
+  color: var(--color-text);
   padding: 0 var(--spacing-xs, 0.25rem); /* Padding around legend text */
   font-size: var(--font-size-base, 1rem);
 }
@@ -126,7 +126,7 @@
 .mcq-option-config-item .option-correct-group .checkbox-label {
     font-weight: normal; /* Override bold from .form-group label */
     font-size: var(--font-size-base, 1rem);
-    color: var(--color-dark);
+    color: var(--color-text);
     display: flex;
     align-items: center;
 }

@@ -91,7 +91,7 @@
     text-align: center;
 }
 .configure-paragraph-order .btn-primary { background-color: var(--primary-color); color: white; }
-.configure-paragraph-order .btn-primary:hover { background-color: var(--primary-dark-color); }
+.configure-paragraph-order .btn-primary:hover { background-color: var(--primary-color); }
 .configure-paragraph-order .btn-secondary { background-color: #6c757d; color: white; }
 .configure-paragraph-order .btn-secondary:hover { background-color: #5a6268; }
 .configure-paragraph-order .btn-danger { background-color: #dc3545; color: white; }

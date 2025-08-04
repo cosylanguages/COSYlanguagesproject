@@ -73,7 +73,7 @@
 .set-name {
     font-weight: 600;
     font-size: 1.1em;
-    color: var(--text-primary-dark);
+    color: var(--text-primary);
 }
 
 .set-item-count, .set-language {
