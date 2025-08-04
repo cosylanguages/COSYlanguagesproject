@@ -9,7 +9,6 @@ const freestyleProgressRouter = require('./freestyleProgress');
 const boosterPacksRouter = require('./boosterPacks');
 const postsRouter = require('./routes/posts');
 const eventsRouter = require('./routes/events');
-const clubsRouter = require('./routes/clubs');
 const usersRouter = require('./routes/users');
 const authMiddleware = require('./middleware/auth');
 
@@ -20,14 +19,11 @@ app.use('/api/study-sets', authMiddleware, studySetsRouter);
 app.use('/api/progress', authMiddleware, progressRouter);
 app.use('/api/freestyle-progress', authMiddleware, freestyleProgressRouter);
 app.use('/api/booster-packs', boosterPacksRouter);
-app.use('/api/posts', authMiddleware, postsRouter);
 app.use('/api/events', eventsRouter);
 app.use('/api/clubs', clubsRouter);
 app.use('/api/users', authMiddleware, usersRouter);
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/cosylanguages';
-
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost/cosylanguages', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Could not connect to MongoDB', err));
 
