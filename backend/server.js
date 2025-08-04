@@ -21,7 +21,7 @@ app.use('/api/progress', authMiddleware, progressRouter);
 app.use('/api/freestyle-progress', authMiddleware, freestyleProgressRouter);
 app.use('/api/booster-packs', boosterPacksRouter);
 app.use('/api/posts', authMiddleware, postsRouter);
-app.use('/api/events', authMiddleware, eventsRouter);
+app.use('/api/events', eventsRouter);
 app.use('/api/clubs', clubsRouter);
 app.use('/api/users', authMiddleware, usersRouter);
 
