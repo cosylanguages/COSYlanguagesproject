@@ -3,6 +3,7 @@ import { useI18n } from '../../../i18n/I18nContext';
 import { getStudySets } from '../../../utils/studySetService';
 import FlashcardPlayer from '../FlashcardPlayer';
 import toast from 'react-hot-toast';
+import './FlashcardsTool.css';
 
 const FlashcardsTool = () => {
   const { t } = useI18n();
@@ -29,7 +30,7 @@ const FlashcardsTool = () => {
   };
 
   return (
-    <div>
+    <div className="flashcards-tool">
       <h3>{t('studyMode.toolFlashcards', 'Flashcards')}</h3>
       {studySets.length > 0 ? (
         <>
@@ -48,11 +49,11 @@ const FlashcardsTool = () => {
               source="student"
             />
           ) : (
-            <p>{t('flashcards.noCardsInSet', 'This study set is empty.')}</p>
+            <p className="no-cards-message">{t('flashcards.noCardsInSet', 'This study set is empty.')}</p>
           )}
         </>
       ) : (
-        <p>{t('studyMode.noFlashcards', 'No flashcards available. Create some in the Dictionary tool!')}</p>
+        <p className="no-cards-message">{t('studyMode.noFlashcards', 'No flashcards available. Create some in the Dictionary tool!')}</p>
       )}
     </div>
   );
