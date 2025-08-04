@@ -15,9 +15,14 @@ const useVerbs = (levels, lang) => {
         const fetchVerbs = async () => {
             try {
                 console.log('Fetching verbs for lang:', lang);
-                const response = await fetch(`/data/grammar/verbs/verbs_${lang}.json`);
+                const response = await fetch(`/data/grammar/verbs/grammar_verbs_${lang}.json`);
                 console.log('Fetch response:', response);
                 if (!response.ok) {
+                    if (response.status === 404) {
+                        console.warn(`No verb data found for language: ${lang}`);
+                        setVerbs([]);
+                        return;
+                    }
                     throw new Error('Failed to fetch verbs');
                 }
                 const allVerbsData = await response.json();
