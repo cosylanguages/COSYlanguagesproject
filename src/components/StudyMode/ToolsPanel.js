@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useAuth } from '../../contexts/AuthContext';
 import TransliterableText from '../Common/TransliterableText';
-import NotesTool from './StudentTools/NotesTool';
+import NotesPanelTool from './StudentTools/NotesPanelTool';
 import IrregularVerbsTool from './StudentTools/IrregularVerbsTool';
 import TimerTool from './StudentTools/TimerTool';
 import DictionaryTool from './StudentTools/DictionaryTool';
@@ -38,49 +38,49 @@ const ToolsPanel = () => {
     : t('studyMode.toolConjugations', '📚 Conjugations');
 
   return (
-    <div className="tools-panel">
+    <div className="tools-panel card">
       <h4>
         <TransliterableText text={t('studyMode.toolsTitle', 'Tools')} />
       </h4>
       <ul>
         <li>
-          <button onClick={toggleNotes} className="btn-link">
+          <button onClick={toggleNotes} className="button button--secondary">
             <TransliterableText text={t('studyMode.toolNotes', '📝 Notes')} />
           </button>
         </li>
         <li>
-          <button onClick={toggleIrregularVerbs} className="btn-link">
+          <button onClick={toggleIrregularVerbs} className="button button--secondary">
             <TransliterableText text={verbsToolLabel} />
           </button>
         </li>
         <li>
-          <button onClick={toggleTimer} className="btn-link">
+          <button onClick={toggleTimer} className="button button--secondary">
             <TransliterableText text={t('studyMode.toolTimer', '⏱️ Timer')} />
           </button>
         </li>
         <li>
-          <button onClick={toggleDictionary} className="btn-link">
+          <button onClick={toggleDictionary} className="button button--secondary">
             <TransliterableText text={t('studyMode.toolDictionary', '📖 Dictionary')} />
           </button>
         </li>
         <li>
-          <button onClick={toggleFlashcards} className="btn-link">
+          <button onClick={toggleFlashcards} className="button button--secondary">
             <TransliterableText text={t('studyMode.toolFlashcards', '🃏 Flashcards')} />
           </button>
         </li>
         <li>
-            <button onClick={toggleWhiteboard} className="btn-link">
+            <button onClick={toggleWhiteboard} className="button button--secondary">
                 <TransliterableText text={t('studyMode.toolWhiteboard', '🎨 Whiteboard')} />
             </button>
         </li>
         <li>
-            <button onClick={toggleFlashcardCreator} className="btn-link">
+            <button onClick={toggleFlashcardCreator} className="button button--secondary">
                 <TransliterableText text={t('studyMode.toolCreateFlashcards', '🃏 Create Flashcards')} />
             </button>
         </li>
         {selectedRole === 'teacher' && (
           <li>
-            <button onClick={toggleQuizCreator} className="btn-link">
+            <button onClick={toggleQuizCreator} className="button button--secondary">
               <TransliterableText text={t('studyMode.toolCreateQuiz', '📝 Create Quiz')} />
             </button>
           </li>
@@ -89,7 +89,7 @@ const ToolsPanel = () => {
 
       {isNotesOpen && (
         <Modal isOpen={isNotesOpen} onClose={toggleNotes}>
-          <NotesTool />
+          <NotesPanelTool isOpen={isNotesOpen} onClose={toggleNotes} />
         </Modal>
       )}
       {isIrregularVerbsOpen && <IrregularVerbsTool isOpen={isIrregularVerbsOpen} onClose={toggleIrregularVerbs} />}
