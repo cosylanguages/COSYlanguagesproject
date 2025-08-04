@@ -1,9 +1,27 @@
 import { useState, useEffect } from 'react';
+import { loadConjugationData } from '../utils/conjugationDataService';
+
+// This is the reverse mapping of langFileMap in exerciseDataService.js
+const langIdentifierMap = {
+    'english': 'COSYenglish',
+    'french': 'COSYfrench',
+    'spanish': 'COSYespañol',
+    'italian': 'COSYitalian',
+    'german': 'COSYdeutsch',
+    'portuguese': 'COSYportugese',
+    'greek': 'COSYgreek',
+    'russian': 'COSYrussian',
+    'armenian': 'COSYarmenian',
+    'breton': 'COSYbrezhoneg',
+    'tatar': 'COSYtatar',
+    'bashkir': 'COSYbachkir'
+};
+
 
 /**
  * A custom hook that fetches and filters verb data.
  * @param {string} levels - A comma-separated string of verb levels to filter by.
- * @param {string} lang - The language of the verbs to fetch.
+ * @param {string} lang - The language of the verbs to fetch (e.g., 'en', 'es').
  * @returns {{verbs: Array, loading: boolean, error: object|null}} An object containing the filtered verbs, a loading state, and an error object.
  */
 const useVerbs = (levels, lang) => {
@@ -13,38 +31,29 @@ const useVerbs = (levels, lang) => {
 
     useEffect(() => {
         const fetchVerbs = async () => {
+            setLoading(true);
             try {
-                console.log('Fetching verbs for lang:', lang);
-                const response = await fetch(`/data/grammar/verbs/grammar_verbs_${lang}.json`);
-                console.log('Fetch response:', response);
-                if (!response.ok) {
-                    if (response.status === 404) {
-                        console.warn(`No verb data found for language: ${lang}`);
-                        setVerbs([]);
-                        return;
-                    }
-                    throw new Error('Failed to fetch verbs');
-                }
-                const allVerbsData = await response.json();
-                console.log('Fetched data:', allVerbsData);
+                const languageIdentifier = langIdentifierMap[lang] || `COSY${lang}`;
+                const { data, error: fetchError } = await loadConjugationData(languageIdentifier);
 
-                let allVerbs = [];
-                allVerbsData.forEach(category => {
-                    allVerbs.push(...category.verbs);
-                });
-                console.log('All verbs:', allVerbs);
+                if (fetchError) {
+                    throw new Error(fetchError);
+                }
+
+                const allVerbs = data ? data.verbs : [];
 
                 let filteredVerbs = allVerbs;
-                if (levels) {
+                if (levels && levels !== 'all') {
                     const levelSet = new Set(levels.split(','));
-                    console.log('Filtering by levels:', levelSet);
-                    filteredVerbs = filteredVerbs.filter(verb => verb.verb_group === levels);
+                    filteredVerbs = allVerbs.filter(verb => {
+                        // If a verb has no group, we include it, or if its group is in the selected levels.
+                        return !verb.verb_group || levelSet.has(verb.verb_group);
+                    });
                 }
-                console.log('Filtered verbs:', filteredVerbs);
 
                 setVerbs(filteredVerbs);
             } catch (err) {
-                console.error('Error fetching verbs:', err);
+                console.error('Error fetching or processing verbs:', err);
                 setError(err);
             } finally {
                 setLoading(false);
@@ -53,6 +62,8 @@ const useVerbs = (levels, lang) => {
 
         if (lang) {
             fetchVerbs();
+        } else {
+            setLoading(false);
         }
     }, [levels, lang]);
 
