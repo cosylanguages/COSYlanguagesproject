@@ -101,7 +101,7 @@ const IrregularVerbsPractice = () => {
                 {renderExercise()}
                 {showDefinition && currentVerb && (
                     <div className="verb-definition-popup">
-                        <p><strong>Translation:</strong> {currentVerb.translation}</p>
+                        <p><strong>Translation:</strong> {currentVerb.translation_en}</p>
                     </div>
                 )}
             </div>
