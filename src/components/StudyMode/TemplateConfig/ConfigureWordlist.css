@@ -87,7 +87,7 @@
     text-align: center;
 }
 .configure-wordlist .btn-primary { background-color: var(--primary-color); color: white; }
-.configure-wordlist .btn-primary:hover { background-color: var(--primary-dark-color); }
+.configure-wordlist .btn-primary:hover { background-color: var(--primary-color); }
 .configure-wordlist .btn-secondary { background-color: #6c757d; color: white; }
 .configure-wordlist .btn-secondary:hover { background-color: #5a6268; }
 .configure-wordlist .btn-danger { background-color: #dc3545; color: white; }

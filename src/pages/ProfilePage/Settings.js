@@ -50,13 +50,6 @@ const Settings = () => {
           />
         </div>
         <div className="setting-row">
-          <label htmlFor="theme">{t('profile.settings.theme', 'Theme')}</label>
-          <select id="theme" onChange={(e) => handleSettingChange('theme', e.target.value)}>
-            <option value="light">{t('profile.settings.themeLight', 'Light')}</option>
-            <option value="dark">{t('profile.settings.themeDark', 'Dark')}</option>
-          </select>
-        </div>
-        <div className="setting-row">
           <Button className="button--danger" onClick={() => setIsModalOpen(true)}>
             {t('profile.settings.deleteAccountButton', 'Delete Account')}
           </Button>

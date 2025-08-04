@@ -1,10 +1,9 @@
 :root {
   /* Colours */
   --color-primary:       #1BB6AD;
-  --color-primary-dark:  #169087;
-  --color-dark:          #000000;
   --color-light:         #FFFFFF;
   --color-muted:         #F8F8F8;
+  --color-text:          #333333;
 
   /* Type */
   --font-display: 'Josefin Sans', sans-serif;
@@ -43,7 +42,7 @@ body {
   padding: 0;
   font-family: var(--font-body);
   background-color: var(--color-light);
-  color: var(--color-dark);
+  color: var(--color-text);
   line-height: 1.6;
   transition: background-color var(--dur) var(--ease),
               color            var(--dur) var(--ease);
@@ -57,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   margin-top: 0;
   line-height: 1.2;
-  color: var(--color-dark);
+  color: var(--color-text);
 }
 
 a {
@@ -66,7 +65,7 @@ a {
   transition: color var(--dur) var(--ease);
 }
 a:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
 }
 
 .button {
@@ -85,7 +84,7 @@ a:hover {
     transform        var(--dur) var(--ease);
 }
 .button:hover {
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-primary);
   transform: translateY(-2px);
 }
 
@@ -144,13 +143,13 @@ select:focus {
 
 .toggle-latinization-btn {
   /* This button has a special gradient background */
-  background: linear-gradient(90deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary) 100%);
   font-weight: 600; /* Make it a bit bolder than the standard button */
 }
 
 .toggle-latinization-btn:hover {
   /* A slightly different gradient on hover */
-  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary) 100%);
 }
 
 /* Button variants */
@@ -158,17 +157,17 @@ select:focus {
   background-color: var(--color-primary);
 }
 .button--warning {
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-primary);
 }
 .button--info {
   background-color: var(--color-primary);
 }
 .button--secondary {
   background-color: var(--color-muted);
-  color: var(--color-dark);
+  color: var(--color-text);
 }
 .button--secondary:hover {
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-primary);
   color: var(--color-light);
 }
 
@@ -197,7 +196,7 @@ select:focus {
 .button--mcq {
   width: 100%;
   background-color: var(--color-light);
-  color: var(--color-dark);
+  color: var(--color-text);
   border: 1px solid var(--color-muted);
 }
 
@@ -214,7 +213,7 @@ select:focus {
 
 .button--mcq.incorrect {
   background-color: var(--color-muted);
-  color: var(--color-dark);
+  color: var(--color-text);
   border-color: var(--color-muted);
   opacity: 0.8;
 }
@@ -223,7 +222,7 @@ select:focus {
 .button--match-item {
   width: 100%;
   background-color: var(--color-light);
-  color: var(--color-dark);
+  color: var(--color-text);
   border: 1px solid var(--color-muted);
 }
 
@@ -233,13 +232,13 @@ select:focus {
 }
 
 .button--match-item.selected {
-  border-color: var(--color-primary-dark);
+  border-color: var(--color-primary);
   background-color: var(--color-primary);
   color: var(--color-light);
 }
 
 .button--match-item.matched {
-  border-color: var(--color-primary-dark);
+  border-color: var(--color-primary);
   background-color: var(--color-primary);
   color: var(--color-light);
   opacity: 0.7;
@@ -293,7 +292,7 @@ select:focus {
     border: none;
     padding: 0.5em 1em;
     text-decoration: none;
-    color: var(--cosy-dark);
+    color: var(--color-text);
     border-radius: 4px;
     cursor: pointer;
     text-align: left;
@@ -309,7 +308,7 @@ select:focus {
 
 .sidebar .button-link.active {
   font-weight: 700;
-  color: var(--cosy-dark);
+  color: var(--color-text);
   background-color: var(--cosy-bg);
   color: var(--cosy-light);
 }

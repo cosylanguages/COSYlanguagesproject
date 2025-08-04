@@ -19,7 +19,7 @@
 }
 
 .lesson-header h2 { /* Main Lesson Title in Student Dashboard */
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   text-align: center; 
   margin-top: 0;
   margin-bottom: var(--spacing-md, 1rem); /* More space below lesson title */
@@ -58,7 +58,7 @@
     margin-top: 0; /* Ensure no extra top margin */
     margin-bottom: var(--spacing-md, 1rem);
     font-size: var(--font-size-h4, 1.125rem); /* Standard H4 size */
-    color: var(--color-dark); /* Standard heading color */
+    color: var(--color-text); /* Standard heading color */
     font-weight: 600; /* Standard heading weight */
     border-bottom: 1px solid var(--color-muted);
     padding-bottom: var(--spacing-sm, 0.5rem);
@@ -70,7 +70,7 @@
   padding: var(--spacing-lg, 1.5rem);
   background-color: var(--color-muted); /* Use theme variable */
   border: 1px solid var(--color-muted); /* Use theme variable */
-  color: var(--color-dark); /* Use theme variable */
+  color: var(--color-text); /* Use theme variable */
   border-radius: var(--border-radius-lg, 8px);
   text-align: center;
 }
@@ -79,7 +79,7 @@
 /* Message when no content is available */
 .student-dashboard-container > p:first-child:last-child { /* Targets the 'No lesson content' p if it's the only child */
   font-style: italic;
-  color: var(--color-dark);
+  color: var(--color-text);
   text-align: center;
   padding: var(--spacing-xl, 2rem);
   border: 2px dashed var(--color-muted);
@@ -105,7 +105,7 @@
 
 .block-navigation-actions .block-nav-page-info {
   font-size: var(--font-size-sm, 0.9rem); /* Slightly larger */
-  color: var(--color-dark); /* Darker secondary */
+  color: var(--color-text); /* Darker secondary */
   font-style: normal; /* Remove italic if not desired */
   font-weight: 500;
 }

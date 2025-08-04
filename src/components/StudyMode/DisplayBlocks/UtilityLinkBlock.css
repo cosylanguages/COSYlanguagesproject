@@ -20,7 +20,7 @@
     display: inline-block;
     padding: var(--spacing-xs, 0.25rem) var(--spacing-sm, 0.5rem);
     background-color: var(--color-primary-light, #e6f2ff); /* Light primary background */
-    color: var(--color-primary-dark, #004085); /* Darker primary text */
+    color: var(--color-primary, #004085); /* Darker primary text */
     border-radius: var(--border-radius-sm, 0.2rem);
     text-decoration: none;
     font-weight: 500;

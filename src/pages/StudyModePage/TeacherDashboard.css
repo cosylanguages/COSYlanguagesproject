@@ -56,7 +56,7 @@
 
 .no-blocks-message {
   font-style: italic;
-  color: var(--color-dark);
+  color: var(--color-text);
   text-align: center;
   padding: var(--spacing-xl, 2rem);
   border: 2px dashed var(--color-muted);
@@ -91,7 +91,7 @@
 
 .lesson-block-header .block-type-name {
   font-weight: bold;
-  color: var(--color-dark);
+  color: var(--color-text);
   font-size: var(--font-size-sm, 0.875rem);
 }
 
@@ -107,7 +107,7 @@
 
 .lesson-block-content-preview .block-info { /* For fallback text if no component */
   font-style: italic;
-  color: var(--color-dark);
+  color: var(--color-text);
 }
 .lesson-block-content-preview .block-info p {
     margin: var(--spacing-xs, 0.25rem) 0;
@@ -139,7 +139,7 @@
 
 .block-configuration-placeholder h3 {
   margin-top: 0;
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
 }
 
 /* New Grid Layout Styles */

@@ -37,7 +37,7 @@
 
 .wordlist-display-item .term1 {
     font-weight: 500;
-    color: var(--text-primary-dark); /* Slightly darker for emphasis */
+    color: var(--text-primary); /* Slightly darker for emphasis */
     flex-basis: 45%; /* Give it some base width */
     flex-grow: 1;
     display: flex; /* To align pronounce button with text */

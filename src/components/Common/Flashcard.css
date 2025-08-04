@@ -35,12 +35,12 @@
 
   .flashcard-front {
     background: var(--color-light);
-    color: var(--color-dark);
+    color: var(--color-text);
   }
 
   .flashcard-back {
     background: var(--color-muted);
-    color: var(--color-dark);
+    color: var(--color-text);
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;

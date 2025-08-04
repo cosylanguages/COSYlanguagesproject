@@ -33,7 +33,7 @@
 
 .mcq-option.selected {
     background-color: var(--color-primary);
-    border-color: var(--color-primary-dark);
+    border-color: var(--color-primary);
     color: var(--color-light);
 }
 
@@ -41,7 +41,7 @@
     margin-right: 10px;
     font-size: 1.3em; /* Make checkbox icon larger */
     line-height: 1;
-    color: var(--color-dark);
+    color: var(--color-text);
 }
 .mcq-option.selected .mcq-checkbox-custom {
     color: var(--color-light);
@@ -55,7 +55,7 @@
 /* Feedback styles after checking answers */
 .mcq-option.correct-answer {
     background-color: var(--color-primary);
-    border-color: var(--color-primary-dark);
+    border-color: var(--color-primary);
     color: var(--color-light);
 }
 .mcq-option.correct-answer .mcq-checkbox-custom,
@@ -78,13 +78,13 @@
 
 .mcq-option.missed-answer { /* User did NOT select this, but it was correct */
     /* background-color: #fff3cd; */ /* Light yellow for missed correct answers */
-    border: 2px dashed var(--color-primary-dark); /* Highlight that it should have been selected */
+    border: 2px dashed var(--color-primary); /* Highlight that it should have been selected */
 }
 .mcq-option.missed-answer .mcq-checkbox-custom {
-    color: var(--color-dark); /* Keep checkbox normal as it wasn't selected */
+    color: var(--color-text); /* Keep checkbox normal as it wasn't selected */
 }
 .mcq-option.missed-answer .feedback-icon { /* The "(Correct)" text */
-    color: var(--color-primary-dark);
+    color: var(--color-primary);
     font-style: italic;
     font-size: 0.9em;
 }
@@ -116,7 +116,7 @@
 /* Styling for option-specific feedback messages */
 .option-specific-feedback {
     font-size: 0.9em;
-    color: var(--color-dark); /* Default color, can be overridden by parent's color if needed */
+    color: var(--color-text); /* Default color, can be overridden by parent's color if needed */
     margin-top: 8px; /* Space between option text and its feedback */
     padding: 8px;
     background-color: var(--color-muted); /* Light background for the feedback box */
@@ -128,7 +128,7 @@
 
 /* Adjust feedback text color based on parent mcq-option state for better context */
 .mcq-option.correct-answer .option-specific-feedback {
-    border-left-color: var(--color-primary-dark);
+    border-left-color: var(--color-primary);
     background-color: var(--color-light);
 }
 
@@ -138,6 +138,6 @@
 }
 
 .mcq-option.missed-answer .option-specific-feedback {
-    border-left-color: var(--color-primary-dark);
+    border-left-color: var(--color-primary);
     background-color: var(--color-light);
 }

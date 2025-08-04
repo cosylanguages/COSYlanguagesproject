@@ -33,7 +33,7 @@
 }
 
 .language-select-dropdown:hover {
-    border-color: var(--color-primary-dark, #0056b3); 
+    border-color: var(--color-primary, #0056b3);
 }
 
 .language-select-dropdown:focus {

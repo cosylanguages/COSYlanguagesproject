@@ -81,7 +81,7 @@
 .section-item.active-section {
   background-color: var(--color-primary, #007bff);
   color: var(--color-text-on-primary, #fff);
-  border-color: var(--color-primary-dark, #0056b3);
+  border-color: var(--color-primary, #0056b3);
 }
 
 .section-item.active-section .section-link-button {
@@ -95,6 +95,6 @@
 
 .section-item.active-section:hover,
 .section-item.active-section:focus-within {
-  background-color: var(--color-primary-dark, #0056b3);
-  border-color: var(--color-primary-darker, #004085);
+  background-color: var(--color-primary, #0056b3);
+  border-color: var(--color-primary, #004085);
 }

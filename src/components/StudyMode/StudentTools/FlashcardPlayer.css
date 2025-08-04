@@ -20,7 +20,7 @@
 .player-header h3 {
     margin: 0;
     font-size: 1.5em;
-    color: var(--text-primary-dark);
+    color: var(--text-primary);
 }
 .exit-player-btn {
     font-size: 0.9em;
@@ -100,7 +100,7 @@
 
 .flashcard-front {
     background-color: #fff;
-    color: var(--text-primary-dark);
+    color: var(--text-primary);
     border: 1px solid #ddd;
 }
 
@@ -125,7 +125,7 @@
     width: 36px;
     height: 36px;
     font-size: 1.2em;
-    color: var(--text-primary-dark); /* Ensure it's visible on card background */
+    color: var(--text-primary); /* Ensure it's visible on card background */
     cursor: pointer;
     display: flex;
     align-items: center;

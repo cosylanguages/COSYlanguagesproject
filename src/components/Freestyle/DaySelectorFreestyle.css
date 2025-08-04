@@ -33,7 +33,7 @@
 
 .radio-label {
   margin-right: var(--spacing-xs, 5px);
-  color: var(--text-color-dark, #333);
+  color: var(--text-color, #333);
   font-weight: bold;
   font-size: var(--font-size-normal);
   display: flex;
@@ -63,12 +63,12 @@
 .day-select-dropdown {
   padding: 0.6em 1.2em;
   border-radius: 0.3rem;
-  border: 1px solid var(--dark-grey);
+  border: 1px solid var(--text-color);
   min-width: 140px; /* Slightly wider */
   margin-right: var(--spacing-sm, 10px);
   font-size: var(--font-size-small, 0.9rem);
   background: var(--medium-grey);
-  color: var(--text-color-dark);
+  color: var(--text-color);
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .day-select-dropdown:hover {
@@ -101,7 +101,7 @@
 .thematic-name-display {
   margin-top: var(--spacing-md, 15px); /* More space */
   font-size: 1em; /* Slightly larger */
-  color: var(--color-primary-dark, #0056b3); /* Darker blue */
+  color: var(--color-primary, #0056b3); /* Darker blue */
   font-style: italic;
   font-weight: 600; /* Bolder */
   padding: var(--spacing-sm, 8px);

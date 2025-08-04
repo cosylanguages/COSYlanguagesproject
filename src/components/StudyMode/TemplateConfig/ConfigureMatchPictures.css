@@ -84,7 +84,7 @@
     color: white;
 }
 .configure-match-pictures .btn-primary:hover {
-    background-color: var(--primary-dark-color);
+    background-color: var(--primary-color);
 }
 
 .configure-match-pictures .btn-secondary {

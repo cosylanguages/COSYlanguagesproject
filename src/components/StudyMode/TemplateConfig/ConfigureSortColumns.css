@@ -85,7 +85,7 @@
     color: white;
 }
 .add-column-main-btn:hover {
-    background-color: var(--info-dark-color, #138496);
+    background-color: var(--info-color, #138496);
 }
 
 
@@ -105,7 +105,7 @@
     text-align: center;
 }
 .configure-sort-columns .btn-primary { background-color: var(--primary-color); color: white; }
-.configure-sort-columns .btn-primary:hover { background-color: var(--primary-dark-color); }
+.configure-sort-columns .btn-primary:hover { background-color: var(--primary-color); }
 .configure-sort-columns .btn-secondary { background-color: #6c757d; color: white; }
 .configure-sort-columns .btn-secondary:hover { background-color: #5a6268; }
 .configure-sort-columns .btn-danger { background-color: #dc3545; color: white; }
