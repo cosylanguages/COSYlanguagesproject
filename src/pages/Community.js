@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useI18n } from '../i18n/I18nContext';
 import SpeakingClubPost from '../components/Community/SpeakingClubPost';
-import Clubs from '../components/Community/Clubs';
 import { getEvents } from '../api/community';
 import './Community.css';
 import StudyLayout from '../components/Layout/StudyLayout';
@@ -52,7 +51,6 @@ const Community = () => {
   return (
     <StudyLayout>
       <div className="community-page">
-        <Clubs />
         <div className="community-header">
           <h1>{t('community.title', 'Community')}</h1>
           <div className="event-filter">
