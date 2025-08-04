@@ -46,3 +46,23 @@ export const getUsers = async () => {
   const response = await apiClient.get('/users');
   return response.data;
 };
+
+export const getClubs = async () => {
+  const response = await apiClient.get('/clubs');
+  return response.data;
+};
+
+export const createClub = async (clubData) => {
+  const response = await apiClient.post('/clubs', clubData);
+  return response.data;
+};
+
+export const updateClub = async (id, clubData) => {
+  const response = await apiClient.put(`/clubs/${id}`, clubData);
+  return response.data;
+};
+
+export const deleteClub = async (id) => {
+  const response = await apiClient.delete(`/clubs/${id}`);
+  return response.data;
+};

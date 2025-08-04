@@ -49,6 +49,11 @@ const Header = () => {
               <TransliterableText text={t('navMyStudySets') || 'My Sets'} />
             </NavLink>
           )}
+          {isAuthenticated && (currentUser?.role === 'admin' || currentUser?.role === 'teacher') && (
+            <NavLink to="/admin/clubs" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>
+              Admin
+            </NavLink>
+          )}
         </nav>
         <div className={`header-controls ${menuOpen ? 'active' : ''}`}>
           <div className="header-language-selector">

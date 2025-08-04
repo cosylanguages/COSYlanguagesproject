@@ -26,6 +26,7 @@ import Community from './pages/Community';
 import CalculatorPage from './pages/CalculatorPage/Calculator';
 import ClubSelectionPage from './pages/ClubSelectionPage/ClubSelectionPage';
 import SpeakingClub from './components/SpeakingClub';
+import ClubsManager from './pages/Admin/ClubsManager';
 import { Toaster } from 'react-hot-toast';
 
 /**
@@ -130,6 +131,8 @@ function App() {
                 >
                   {/* Nested routes for MyStudySetsPage can be added here if needed. */}
                 </Route>
+                {/* Admin Routes */}
+                <Route path="admin/clubs" element={<ProtectedRoute><ClubsManager /></ProtectedRoute>} />
             </Route>
             {/* A catch-all route that redirects users to the appropriate page based on their authentication status. */}
             <Route path="*" element={<CatchAll />} />
