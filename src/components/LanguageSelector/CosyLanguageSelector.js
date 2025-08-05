@@ -1,7 +1,6 @@
 // Import necessary libraries and components.
 import React from 'react';
 import Select from 'react-select';
-import { useNavigate } from 'react-router-dom';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
 import './CosyLanguageSelector.css';
@@ -50,7 +49,6 @@ const flags = {
  */
 const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
   const { allTranslations, t } = useI18n();
-  const navigate = useNavigate();
 
   // Get the list of available languages from the translations data.
   const availableLanguages = Object.keys(allTranslations)
@@ -86,7 +84,6 @@ const CosyLanguageSelector = ({ selectedLanguage, onLanguageChange }) => {
   const handleChange = (selectedOption) => {
     if (selectedOption) {
       onLanguageChange(selectedOption.value);
-      navigate(`/study/${selectedOption.value}`);
     } else {
       onLanguageChange(null);
     }

@@ -15,7 +15,7 @@ import './StudySetList.css';
  * @returns {JSX.Element} The StudySetList component.
  */
 const StudySetList = ({ onCreateNew, onEditSetDetails, onEditSetCards, onLaunchStudyPlayer }) => {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
   // State for the list of study sets, loading status, and errors.
   const [studySets, setStudySets] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -28,15 +28,16 @@ const StudySetList = ({ onCreateNew, onEditSetDetails, onEditSetCards, onLaunchS
     setIsLoading(true);
     setError(null);
     try {
-      const sets = getStudySets();
-      setStudySets(sets);
+      const allSets = getStudySets();
+      const filteredSets = allSets.filter(set => set.languageCode === language);
+      setStudySets(filteredSets);
     } catch (err) {
       console.error("Error loading study sets:", err);
       setError(t('studySets.loadError', 'Failed to load study sets.'));
     } finally {
       setIsLoading(false);
     }
-  }, [t]);
+  }, [t, language]);
 
   // Load the study sets when the component mounts.
   useEffect(() => {
