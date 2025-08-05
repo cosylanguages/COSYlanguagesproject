@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lift version="0.13" producer="CoSy Dictionary Converter">
+    <header>
+        <dictionary>
+            <entry id="dummy_entry"/>
+        </dictionary>
+    </header>
+
+    <entry id="hello">
+        <lexical-unit>
+            <form lang="en">
+                <text>Hello</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="goodbye">
+        <lexical-unit>
+            <form lang="en">
+                <text>Goodbye</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="yes">
+        <lexical-unit>
+            <form lang="en">
+                <text>Yes</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="no">
+        <lexical-unit>
+            <form lang="en">
+                <text>No</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="thank_you">
+        <lexical-unit>
+            <form lang="en">
+                <text>Thank you</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="you're_welcome">
+        <lexical-unit>
+            <form lang="en">
+                <text>You're welcome</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="alright">
+        <lexical-unit>
+            <form lang="en">
+                <text>Alright</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="day">
+        <lexical-unit>
+            <form lang="en">
+                <text>Day</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="sorry">
+        <lexical-unit>
+            <form lang="en">
+                <text>Sorry</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="water">
+        <lexical-unit>
+            <form lang="en">
+                <text>Water</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="juice">
+        <lexical-unit>
+            <form lang="en">
+                <text>Juice</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="beer">
+        <lexical-unit>
+            <form lang="en">
+                <text>Beer</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="wine">
+        <lexical-unit>
+            <form lang="en">
+                <text>Wine</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="coffee">
+        <lexical-unit>
+            <form lang="en">
+                <text>Coffee</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="tea">
+        <lexical-unit>
+            <form lang="en">
+                <text>Tea</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="card">
+        <lexical-unit>
+            <form lang="en">
+                <text>Card</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="cash">
+        <lexical-unit>
+            <form lang="en">
+                <text>Cash</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="boy">
+        <lexical-unit>
+            <form lang="en">
+                <text>Boy</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="girl">
+        <lexical-unit>
+            <form lang="en">
+                <text>Girl</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="teacher">
+        <lexical-unit>
+            <form lang="en">
+                <text>Teacher</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="student">
+        <lexical-unit>
+            <form lang="en">
+                <text>Student</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="woman">
+        <lexical-unit>
+            <form lang="en">
+                <text>Woman</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="man">
+        <lexical-unit>
+            <form lang="en">
+                <text>Man</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="thing">
+        <lexical-unit>
+            <form lang="en">
+                <text>Thing</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="person">
+        <lexical-unit>
+            <form lang="en">
+                <text>Person</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="drink">
+        <lexical-unit>
+            <form lang="en">
+                <text>Drink</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="nice_to_meet_you">
+        <lexical-unit>
+            <form lang="en">
+                <text>Nice to meet you</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="mother">
+        <lexical-unit>
+            <form lang="en">
+                <text>Mother</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="father">
+        <lexical-unit>
+            <form lang="en">
+                <text>Father</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="son">
+        <lexical-unit>
+            <form lang="en">
+                <text>Son</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="daughter">
+        <lexical-unit>
+            <form lang="en">
+                <text>Daughter</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="sister">
+        <lexical-unit>
+            <form lang="en">
+                <text>Sister</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="brother">
+        <lexical-unit>
+            <form lang="en">
+                <text>Brother</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="husband">
+        <lexical-unit>
+            <form lang="en">
+                <text>Husband</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="wife">
+        <lexical-unit>
+            <form lang="en">
+                <text>Wife</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="friend">
+        <lexical-unit>
+            <form lang="en">
+                <text>Friend</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="family">
+        <lexical-unit>
+            <form lang="en">
+                <text>Family</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="zero">
+        <lexical-unit>
+            <form lang="en">
+                <text>Zero</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="one">
+        <lexical-unit>
+            <form lang="en">
+                <text>One</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="two">
+        <lexical-unit>
+            <form lang="en">
+                <text>Two</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="three">
+        <lexical-unit>
+            <form lang="en">
+                <text>Three</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="four">
+        <lexical-unit>
+            <form lang="en">
+                <text>Four</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="five">
+        <lexical-unit>
+            <form lang="en">
+                <text>Five</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="six">
+        <lexical-unit>
+            <form lang="en">
+                <text>Six</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="seven">
+        <lexical-unit>
+            <form lang="en">
+                <text>Seven</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="eight">
+        <lexical-unit>
+            <form lang="en">
+                <text>Eight</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="nine">
+        <lexical-unit>
+            <form lang="en">
+                <text>Nine</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="parent">
+        <lexical-unit>
+            <form lang="en">
+                <text>Parent</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="child">
+        <lexical-unit>
+            <form lang="en">
+                <text>Child</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="number">
+        <lexical-unit>
+            <form lang="en">
+                <text>Number</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="good">
+        <lexical-unit>
+            <form lang="en">
+                <text>Good</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="bad">
+        <lexical-unit>
+            <form lang="en">
+                <text>Bad</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="big">
+        <lexical-unit>
+            <form lang="en">
+                <text>Big</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="small">
+        <lexical-unit>
+            <form lang="en">
+                <text>Small</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="easy">
+        <lexical-unit>
+            <form lang="en">
+                <text>Easy</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="difficult">
+        <lexical-unit>
+            <form lang="en">
+                <text>Difficult</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="interesting">
+        <lexical-unit>
+            <form lang="en">
+                <text>Interesting</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="boring">
+        <lexical-unit>
+            <form lang="en">
+                <text>Boring</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="cold">
+        <lexical-unit>
+            <form lang="en">
+                <text>Cold</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="hot">
+        <lexical-unit>
+            <form lang="en">
+                <text>Hot</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="expensive">
+        <lexical-unit>
+            <form lang="en">
+                <text>Expensive</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="cheap">
+        <lexical-unit>
+            <form lang="en">
+                <text>Cheap</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="red_wine">
+        <lexical-unit>
+            <form lang="en">
+                <text>Red wine</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="white_wine">
+        <lexical-unit>
+            <form lang="en">
+                <text>White wine</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="green_tea">
+        <lexical-unit>
+            <form lang="en">
+                <text>Green tea</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="black_tea">
+        <lexical-unit>
+            <form lang="en">
+                <text>Black tea</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="iced_tea">
+        <lexical-unit>
+            <form lang="en">
+                <text>Iced tea</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="iced_coffee">
+        <lexical-unit>
+            <form lang="en">
+                <text>Iced coffee</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="orange_juice">
+        <lexical-unit>
+            <form lang="en">
+                <text>Orange juice</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="apple_juice">
+        <lexical-unit>
+            <form lang="en">
+                <text>Apple juice</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="film">
+        <lexical-unit>
+            <form lang="en">
+                <text>Film</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="series">
+        <lexical-unit>
+            <form lang="en">
+                <text>Series</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="music">
+        <lexical-unit>
+            <form lang="en">
+                <text>Music</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="book">
+        <lexical-unit>
+            <form lang="en">
+                <text>Book</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="monday">
+        <lexical-unit>
+            <form lang="en">
+                <text>Monday</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="tuesday">
+        <lexical-unit>
+            <form lang="en">
+                <text>Tuesday</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="wednesday">
+        <lexical-unit>
+            <form lang="en">
+                <text>Wednesday</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="thursday">
+        <lexical-unit>
+            <form lang="en">
+                <text>Thursday</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="friday">
+        <lexical-unit>
+            <form lang="en">
+                <text>Friday</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="saturday">
+        <lexical-unit>
+            <form lang="en">
+                <text>Saturday</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="sunday">
+        <lexical-unit>
+            <form lang="en">
+                <text>Sunday</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+</lift>

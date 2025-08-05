@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lift version="0.13" producer="CoSy Dictionary Converter">
+    <header>
+        <dictionary>
+            <entry id="dummy_entry"/>
+        </dictionary>
+    </header>
+
+    <entry id="hola">
+        <lexical-unit>
+            <form lang="en">
+                <text>Hola</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="adiós">
+        <lexical-unit>
+            <form lang="en">
+                <text>Adiós</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="sí">
+        <lexical-unit>
+            <form lang="en">
+                <text>Sí</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="no">
+        <lexical-unit>
+            <form lang="en">
+                <text>No</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="gracias">
+        <lexical-unit>
+            <form lang="en">
+                <text>Gracias</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="de_nada">
+        <lexical-unit>
+            <form lang="en">
+                <text>De nada</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="está_bien">
+        <lexical-unit>
+            <form lang="en">
+                <text>Está bien</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_día">
+        <lexical-unit>
+            <form lang="en">
+                <text>El día</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="lo_siento">
+        <lexical-unit>
+            <form lang="en">
+                <text>Lo siento</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="agua">
+        <lexical-unit>
+            <form lang="en">
+                <text>Agua</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="jugo">
+        <lexical-unit>
+            <form lang="en">
+                <text>Jugo</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="cerveza">
+        <lexical-unit>
+            <form lang="en">
+                <text>Cerveza</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="vino">
+        <lexical-unit>
+            <form lang="en">
+                <text>Vino</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="café">
+        <lexical-unit>
+            <form lang="en">
+                <text>Café</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="té">
+        <lexical-unit>
+            <form lang="en">
+                <text>Té</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="tarjeta">
+        <lexical-unit>
+            <form lang="en">
+                <text>Tarjeta</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="efectivo">
+        <lexical-unit>
+            <form lang="en">
+                <text>Efectivo</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_niño">
+        <lexical-unit>
+            <form lang="en">
+                <text>El niño</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_niña">
+        <lexical-unit>
+            <form lang="en">
+                <text>La niña</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_profesor">
+        <lexical-unit>
+            <form lang="en">
+                <text>El profesor</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_profesora">
+        <lexical-unit>
+            <form lang="en">
+                <text>La profesora</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_estudiante">
+        <lexical-unit>
+            <form lang="en">
+                <text>El estudiante</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_estudiante">
+        <lexical-unit>
+            <form lang="en">
+                <text>La estudiante</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_mujer">
+        <lexical-unit>
+            <form lang="en">
+                <text>La mujer</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_hombre">
+        <lexical-unit>
+            <form lang="en">
+                <text>El hombre</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_objeto">
+        <lexical-unit>
+            <form lang="en">
+                <text>El objeto</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_persona">
+        <lexical-unit>
+            <form lang="en">
+                <text>La persona</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_bebida">
+        <lexical-unit>
+            <form lang="en">
+                <text>La bebida</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="encantado.a_de_conocerte">
+        <lexical-unit>
+            <form lang="en">
+                <text>Encantado.a de conocerte</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_madre">
+        <lexical-unit>
+            <form lang="en">
+                <text>La madre</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_padre">
+        <lexical-unit>
+            <form lang="en">
+                <text>El padre</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_hijo">
+        <lexical-unit>
+            <form lang="en">
+                <text>El hijo</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_hija">
+        <lexical-unit>
+            <form lang="en">
+                <text>La hija</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_hermana">
+        <lexical-unit>
+            <form lang="en">
+                <text>La hermana</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_hermano">
+        <lexical-unit>
+            <form lang="en">
+                <text>El hermano</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_marido">
+        <lexical-unit>
+            <form lang="en">
+                <text>El marido</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_esposa">
+        <lexical-unit>
+            <form lang="en">
+                <text>La esposa</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_amigo">
+        <lexical-unit>
+            <form lang="en">
+                <text>El amigo</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_amiga">
+        <lexical-unit>
+            <form lang="en">
+                <text>La amiga</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_familia">
+        <lexical-unit>
+            <form lang="en">
+                <text>La familia</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="cero">
+        <lexical-unit>
+            <form lang="en">
+                <text>Cero</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="uno">
+        <lexical-unit>
+            <form lang="en">
+                <text>Uno</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="dos">
+        <lexical-unit>
+            <form lang="en">
+                <text>Dos</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="tres">
+        <lexical-unit>
+            <form lang="en">
+                <text>Tres</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="cuatro">
+        <lexical-unit>
+            <form lang="en">
+                <text>Cuatro</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="cinco">
+        <lexical-unit>
+            <form lang="en">
+                <text>Cinco</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="seis">
+        <lexical-unit>
+            <form lang="en">
+                <text>Seis</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="siete">
+        <lexical-unit>
+            <form lang="en">
+                <text>Siete</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ocho">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ocho</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="nueve">
+        <lexical-unit>
+            <form lang="en">
+                <text>Nueve</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_padre">
+        <lexical-unit>
+            <form lang="en">
+                <text>El padre</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_hijo">
+        <lexical-unit>
+            <form lang="en">
+                <text>El hijo</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_número">
+        <lexical-unit>
+            <form lang="en">
+                <text>El número</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="bueno.a">
+        <lexical-unit>
+            <form lang="en">
+                <text>Bueno.a</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="malo.a">
+        <lexical-unit>
+            <form lang="en">
+                <text>Malo.a</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="grande">
+        <lexical-unit>
+            <form lang="en">
+                <text>Grande</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="pequeño.a">
+        <lexical-unit>
+            <form lang="en">
+                <text>Pequeño.a</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="fácil">
+        <lexical-unit>
+            <form lang="en">
+                <text>Fácil</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="difícil">
+        <lexical-unit>
+            <form lang="en">
+                <text>Difícil</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="interesante">
+        <lexical-unit>
+            <form lang="en">
+                <text>Interesante</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="aburrido.a">
+        <lexical-unit>
+            <form lang="en">
+                <text>Aburrido.a</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="frío.a">
+        <lexical-unit>
+            <form lang="en">
+                <text>Frío.a</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="caliente.a">
+        <lexical-unit>
+            <form lang="en">
+                <text>Caliente.a</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="caro.a">
+        <lexical-unit>
+            <form lang="en">
+                <text>Caro.a</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="barato.a">
+        <lexical-unit>
+            <form lang="en">
+                <text>Barato.a</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_vino_tinto">
+        <lexical-unit>
+            <form lang="en">
+                <text>El vino tinto</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_vino_blanco">
+        <lexical-unit>
+            <form lang="en">
+                <text>El vino blanco</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_té_verde">
+        <lexical-unit>
+            <form lang="en">
+                <text>El té verde</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_té_nero">
+        <lexical-unit>
+            <form lang="en">
+                <text>El té nero</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_té_helado">
+        <lexical-unit>
+            <form lang="en">
+                <text>El té helado</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_café_helado">
+        <lexical-unit>
+            <form lang="en">
+                <text>El café helado</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_jugo_de_naranja">
+        <lexical-unit>
+            <form lang="en">
+                <text>El jugo de naranja</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_jugo_de_manzana">
+        <lexical-unit>
+            <form lang="en">
+                <text>El jugo de manzana</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_película">
+        <lexical-unit>
+            <form lang="en">
+                <text>La película</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_serie">
+        <lexical-unit>
+            <form lang="en">
+                <text>La serie</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="la_música">
+        <lexical-unit>
+            <form lang="en">
+                <text>La música</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_libro">
+        <lexical-unit>
+            <form lang="en">
+                <text>El libro</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_lunes">
+        <lexical-unit>
+            <form lang="en">
+                <text>El lunes</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_martes">
+        <lexical-unit>
+            <form lang="en">
+                <text>El martes</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_miércoles">
+        <lexical-unit>
+            <form lang="en">
+                <text>El miércoles</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_jueves">
+        <lexical-unit>
+            <form lang="en">
+                <text>El jueves</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_viernes">
+        <lexical-unit>
+            <form lang="en">
+                <text>El viernes</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_sábado">
+        <lexical-unit>
+            <form lang="en">
+                <text>El sábado</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="el_domingo">
+        <lexical-unit>
+            <form lang="en">
+                <text>El domingo</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+</lift>
