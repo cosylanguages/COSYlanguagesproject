@@ -10,7 +10,7 @@ import Modal from '../../Common/Modal';
 import toast from 'react-hot-toast';
 import './DictionaryTool.css';
 import Tabs from '../../Common/Tabs';
-import Tab from '../../Common/Tabs';
+import Tab from '../../Common/Tab';
 import { generateRecommendations } from '../../../utils/recommendationService';
 
 const DictionaryTool = ({ isOpen, onClose }) => {
