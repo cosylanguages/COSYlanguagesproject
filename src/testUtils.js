@@ -10,15 +10,6 @@ import { StudyProvider } from './contexts/StudyContext';
 import { StudySetProvider } from './contexts/StudySetContext';
 import { FreestyleProvider } from './contexts/FreestyleContext';
 
-console.log('AuthProvider', AuthProvider);
-console.log('UserProfileProvider', UserProfileProvider);
-console.log('I18nProvider', I18nProvider);
-console.log('LatinizationProvider', LatinizationProvider);
-console.log('PlanProvider', PlanProvider);
-console.log('StudyProvider', StudyProvider);
-console.log('StudySetProvider', StudySetProvider);
-console.log('FreestyleProvider', FreestyleProvider);
-
 const mockI18n = {
   t: (key) => key,
   language: 'en',
