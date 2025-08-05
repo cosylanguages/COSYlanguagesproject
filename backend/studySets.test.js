@@ -1,6 +1,7 @@
 const request = require('supertest');
 const express = require('express');
 const mongoose = require('mongoose');
+const { MongoMemoryServer } = require('mongodb-memory-server');
 const studySetsRouter = require('./studySets');
 const User = require('./models/user');
 const StudySet = require('./models/studySet');
@@ -17,16 +18,25 @@ const auth = async (req, res, next) => {
 app.use(auth);
 app.use('/study-sets', studySetsRouter);
 
+let mongoServer;
+
 beforeAll(async () => {
-  await mongoose.connect('mongodb://localhost/cosylanguages_test', { useNewUrlParser: true, useUnifiedTopology: true });
+  mongoServer = await MongoMemoryServer.create();
+  const mongoUri = mongoServer.getUri();
+  await mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true });
 });
 
 afterAll(async () => {
-  await mongoose.connection.close();
+  await mongoose.disconnect();
+  await mongoServer.stop();
 });
 
 afterEach(async () => {
-  await mongoose.connection.db.dropDatabase();
+  const collections = mongoose.connection.collections;
+  for (const key in collections) {
+    const collection = collections[key];
+    await collection.deleteMany();
+  }
 });
 
 describe('Study Sets routes', () => {
