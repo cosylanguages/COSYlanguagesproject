@@ -5,15 +5,23 @@ import useLatinization from '../../../../hooks/useLatinization';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
 import { useI18n } from '../../../../i18n/I18nContext';
+import DictionaryTool from '../../../StudyMode/StudentTools/DictionaryTool';
 
 const StoryReadingExercise = ({ language, days, exerciseKey }) => {
   const [currentStory, setCurrentStory] = useState(null); // { title: string, paragraphs: string[] }
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isDictionaryOpen, setIsDictionaryOpen] = useState(false);
+  const [selectedWord, setSelectedWord] = useState('');
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
   const { t } = useI18n();
+
+  const handleWordClick = (word) => {
+    setSelectedWord(word);
+    setIsDictionaryOpen(true);
+  };
 
   const fetchNewStory = useCallback(async () => {
     setIsLoading(true);
@@ -52,11 +60,27 @@ const StoryReadingExercise = ({ language, days, exerciseKey }) => {
   if (isLoading) return <p>{t('loading.readingExercise', 'Loading story...')}</p>;
   if (error) return <FeedbackDisplay message={error} type="error" />;
   if (!currentStory && !isLoading) return <FeedbackDisplay message={t('exercises.noStoryToDisplay', 'No story to display. Try different selections.')} type="info" />;
-  
+
   const storyTitle = currentStory ? getLatinizedText(currentStory.title, language) : "";
+
+  const renderParagraph = (paragraph) => {
+    const latinizedParagraph = getLatinizedText(paragraph, language);
+    return latinizedParagraph.split(' ').map((word, i) => (
+      <span key={i} onClick={() => handleWordClick(word)} style={{cursor: 'pointer'}}>
+        {word}{' '}
+      </span>
+    ));
+  };
 
   return (
     <div style={{ padding: '20px', border: '1px solid #eee', borderRadius: '8px', maxWidth: '800px', margin: '0 auto' }}>
+      {isDictionaryOpen && (
+        <DictionaryTool
+          isOpen={isDictionaryOpen}
+          onClose={() => setIsDictionaryOpen(false)}
+          initialSearchTerm={selectedWord}
+        />
+      )}
       {currentStory && (
         <>
           <h3 style={{ textAlign: 'center', marginBottom: '20px', ...(isLatinized && currentStory.title !== storyTitle && {fontStyle: 'italic'}) }}>
@@ -65,7 +89,7 @@ const StoryReadingExercise = ({ language, days, exerciseKey }) => {
           <div style={{ textAlign: 'left', lineHeight: '1.8', fontSize: '1.1rem' }}>
             {currentStory.paragraphs.map((paragraph, index) => (
               <p key={index} style={{ marginBottom: '1rem', ...(isLatinized && paragraph !== getLatinizedText(paragraph, language) && {fontStyle: 'italic'}) }}>
-                {getLatinizedText(paragraph, language)}
+                {renderParagraph(paragraph)}
               </p>
             ))}
           </div>
@@ -77,7 +101,7 @@ const StoryReadingExercise = ({ language, days, exerciseKey }) => {
         // isAnswerCorrect and isRevealed are not relevant here, defaults to false in ExerciseControls
         config={{
           showCheck: false,
-          showHint: false, 
+          showHint: false,
           showReveal: false,
           showRandomize: true, // Enable Randomize button
           showNext: true,
