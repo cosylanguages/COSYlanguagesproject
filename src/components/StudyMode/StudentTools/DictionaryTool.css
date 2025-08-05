@@ -88,6 +88,56 @@
     min-width: 250px;
 }
 
+.search-history {
+    margin-top: 15px;
+}
+
+.search-history h4 {
+    margin-bottom: 5px;
+}
+
+.search-history ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-history li {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.search-history li:hover {
+    background-color: #f0f0f0;
+}
+
+.favorite-btn {
+    color: #ccc;
+    font-size: 20px;
+}
+
+.favorite-btn.is-favorite {
+    color: #ffc107;
+}
+
+.dictionary-view-selector {
+    margin-bottom: 15px;
+}
+
+.dictionary-view-selector .button {
+    margin-right: 10px;
+}
+
+.dictionary-view-selector .button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.favorites-list {
+    margin-top: 15px;
+}
+
 .dictionary-search-input {
     flex-grow: 1;
     margin-right: 10px;

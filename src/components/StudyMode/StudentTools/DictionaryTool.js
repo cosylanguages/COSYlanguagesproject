@@ -17,6 +17,23 @@ const DictionaryTool = ({ isOpen, onClose }) => {
     const [error, setError] = useState(null);
     const [showFlashcardPlayer, setShowFlashcardPlayer] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
+    const [searchHistory, setSearchHistory] = useState([]);
+    const [favorites, setFavorites] = useState([]);
+    const [currentView, setCurrentView] = useState('vocabulary'); // vocabulary, history, favorites
+
+    useEffect(() => {
+        const storedFavorites = localStorage.getItem(`favorites_${currentLangKey}`);
+        if (storedFavorites) {
+            setFavorites(JSON.parse(storedFavorites));
+        }
+    }, [currentLangKey]);
+
+    useEffect(() => {
+        const storedHistory = localStorage.getItem(`searchHistory_${currentLangKey}`);
+        if (storedHistory) {
+            setSearchHistory(JSON.parse(storedHistory));
+        }
+    }, [currentLangKey]);
 
     useEffect(() => {
         const loadVocabulary = async () => {
@@ -56,13 +73,35 @@ const DictionaryTool = ({ isOpen, onClose }) => {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        if (searchTerm.trim() && currentLangKey) {
+        const trimmedSearchTerm = searchTerm.trim();
+        if (trimmedSearchTerm && currentLangKey) {
             const baseUrl = dictionaryLinks[currentLangKey];
             if (baseUrl) {
-                const url = `${baseUrl}${encodeURIComponent(searchTerm.trim())}`;
+                const url = `${baseUrl}${encodeURIComponent(trimmedSearchTerm)}`;
                 window.open(url, '_blank', 'noopener,noreferrer');
+
+                const newHistory = [trimmedSearchTerm, ...searchHistory.filter(item => item !== trimmedSearchTerm)].slice(0, 10);
+                setSearchHistory(newHistory);
+                localStorage.setItem(`searchHistory_${currentLangKey}`, JSON.stringify(newHistory));
             }
         }
+    };
+
+    const handleClearHistory = () => {
+        setSearchHistory([]);
+        localStorage.removeItem(`searchHistory_${currentLangKey}`);
+    };
+
+    const toggleFavorite = (word) => {
+        const isFavorite = favorites.some(fav => fav.term === word.term);
+        let newFavorites;
+        if (isFavorite) {
+            newFavorites = favorites.filter(fav => fav.term !== word.term);
+        } else {
+            newFavorites = [...favorites, word];
+        }
+        setFavorites(newFavorites);
+        localStorage.setItem(`favorites_${currentLangKey}`, JSON.stringify(newFavorites));
     };
 
     const searchFunction = (item, searchTerm) => {
@@ -90,6 +129,9 @@ const DictionaryTool = ({ isOpen, onClose }) => {
             <button className="button" onClick={() => handleAddWordToFlashcards(item)}>
                 {t('dictionary.add_to_flashcards', 'Add to Flashcards')}
             </button>
+            <button className={`button--icon favorite-btn ${favorites.some(fav => fav.term === item.term) ? 'is-favorite' : ''}`} onClick={() => toggleFavorite(item)} title={t('dictionary.toggle_favorite', 'Toggle Favorite')}>
+                ★
+            </button>
         </div>
     );
 
@@ -114,6 +156,11 @@ const DictionaryTool = ({ isOpen, onClose }) => {
     return (
         <Modal isOpen={isOpen} onClose={onClose} title={t('dictionary.title', 'Vocabulary Dictionary')}>
             <div className="dictionary-controls">
+                <div className="dictionary-view-selector">
+                    <button onClick={() => setCurrentView('vocabulary')} className={`button ${currentView === 'vocabulary' ? 'active' : ''}`}>{t('dictionary.vocabulary', 'Vocabulary')}</button>
+                    <button onClick={() => setCurrentView('history')} className={`button ${currentView === 'history' ? 'active' : ''}`}>{t('dictionary.history', 'History')}</button>
+                    <button onClick={() => setCurrentView('favorites')} className={`button ${currentView === 'favorites' ? 'active' : ''}`}>{t('dictionary.favorites', 'Favorites')}</button>
+                </div>
                 <button onClick={() => setShowFlashcardPlayer(true)} className="button">
                     {t('dictionary.study_flashcards', 'Study Flashcards')}
                 </button>
@@ -131,11 +178,50 @@ const DictionaryTool = ({ isOpen, onClose }) => {
                 </form>
             </div>
 
-            <SearchableCardList
-                items={allVocabulary}
-                searchFunction={searchFunction}
-                renderCard={renderVocabularyCard}
-            />
+            {currentView === 'vocabulary' && (
+                <SearchableCardList
+                    items={allVocabulary}
+                    searchFunction={searchFunction}
+                    renderCard={renderVocabularyCard}
+                />
+            )}
+
+            {currentView === 'history' && (
+                <div className="search-history">
+                    <h4>{t('dictionary.recent_searches', 'Recent Searches')}</h4>
+                    {searchHistory.length > 0 ? (
+                        <>
+                            <ul>
+                                {searchHistory.map((item, index) => (
+                                    <li key={index} onClick={() => setSearchTerm(item)}>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                            <button onClick={handleClearHistory} className="button--link">
+                                {t('dictionary.clear_history', 'Clear History')}
+                            </button>
+                        </>
+                    ) : (
+                        <p>{t('dictionary.no_history', 'No search history yet.')}</p>
+                    )}
+                </div>
+            )}
+
+            {currentView === 'favorites' && (
+                <div className="favorites-list">
+                    <h4>{t('dictionary.favorite_words', 'Favorite Words')}</h4>
+                    {favorites.length > 0 ? (
+                        <SearchableCardList
+                            items={favorites}
+                            searchFunction={searchFunction}
+                            renderCard={renderVocabularyCard}
+                        />
+                    ) : (
+                        <p>{t('dictionary.no_favorites', 'You have no favorite words yet.')}</p>
+                    )}
+                </div>
+            )}
         </Modal>
     );
 };
