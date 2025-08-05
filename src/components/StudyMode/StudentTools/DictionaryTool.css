@@ -77,7 +77,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -143,6 +145,12 @@
     justify-content: space-around;
     margin-bottom: 15px;
     font-weight: bold;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+.recommendations-list {
+    margin-top: 15px;
 }
 
 .dictionary-search-input {

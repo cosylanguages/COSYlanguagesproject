@@ -9,6 +9,9 @@ import FlashcardPlayer from '../FlashcardPlayer';
 import Modal from '../../Common/Modal';
 import toast from 'react-hot-toast';
 import './DictionaryTool.css';
+import Tabs from '../../Common/Tabs';
+import Tab from '../../Common/Tabs';
+import { generateRecommendations } from '../../../utils/recommendationService';
 
 const DictionaryTool = ({ isOpen, onClose }) => {
     const { t, language, currentLangKey } = useI18n();
@@ -19,9 +22,16 @@ const DictionaryTool = ({ isOpen, onClose }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchHistory, setSearchHistory] = useState([]);
     const [favorites, setFavorites] = useState([]);
-    const [currentView, setCurrentView] = useState('vocabulary'); // vocabulary, history, favorites
     const [score, setScore] = useState(0);
     const [streak, setStreak] = useState(0);
+    const [recommendations, setRecommendations] = useState([]);
+
+    useEffect(() => {
+        if (favorites.length > 0) {
+            const newRecommendations = generateRecommendations(favorites, allVocabulary, searchHistory);
+            setRecommendations(newRecommendations);
+        }
+    }, [favorites, allVocabulary, searchHistory]);
 
     useEffect(() => {
         const storedStreak = localStorage.getItem(`streak_${currentLangKey}`);
@@ -200,13 +210,8 @@ const DictionaryTool = ({ isOpen, onClose }) => {
         <Modal isOpen={isOpen} onClose={onClose} title={t('dictionary.title', 'Vocabulary Dictionary')}>
             <div className="dictionary-controls">
                 <div className="gamification-stats">
-                    <span>{t('dictionary.score', 'Score')}: {score}</span>
-                    <span>{t('dictionary.streak', 'Streak')}: {streak} 🔥</span>
-                </div>
-                <div className="dictionary-view-selector">
-                    <button onClick={() => setCurrentView('vocabulary')} className={`button ${currentView === 'vocabulary' ? 'active' : ''}`}>{t('dictionary.vocabulary', 'Vocabulary')}</button>
-                    <button onClick={() => setCurrentView('history')} className={`button ${currentView === 'history' ? 'active' : ''}`}>{t('dictionary.history', 'History')}</button>
-                    <button onClick={() => setCurrentView('favorites')} className={`button ${currentView === 'favorites' ? 'active' : ''}`}>{t('dictionary.favorites', 'Favorites')}</button>
+                    <span>🏆 {t('dictionary.score', 'Score')}: {score}</span>
+                    <span>🔥 {t('dictionary.streak', 'Streak')}: {streak}</span>
                 </div>
                 <button onClick={() => setShowFlashcardPlayer(true)} className="button">
                     {t('dictionary.study_flashcards', 'Study Flashcards')}
@@ -225,50 +230,64 @@ const DictionaryTool = ({ isOpen, onClose }) => {
                 </form>
             </div>
 
-            {currentView === 'vocabulary' && (
-                <SearchableCardList
-                    items={allVocabulary}
-                    searchFunction={searchFunction}
-                    renderCard={renderVocabularyCard}
-                />
-            )}
-
-            {currentView === 'history' && (
-                <div className="search-history">
-                    <h4>{t('dictionary.recent_searches', 'Recent Searches')}</h4>
-                    {searchHistory.length > 0 ? (
-                        <>
-                            <ul>
-                                {searchHistory.map((item, index) => (
-                                    <li key={index} onClick={() => setSearchTerm(item)}>
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                            <button onClick={handleClearHistory} className="button--link">
-                                {t('dictionary.clear_history', 'Clear History')}
-                            </button>
-                        </>
-                    ) : (
-                        <p>{t('dictionary.no_history', 'No search history yet.')}</p>
-                    )}
-                </div>
-            )}
-
-            {currentView === 'favorites' && (
-                <div className="favorites-list">
-                    <h4>{t('dictionary.favorite_words', 'Favorite Words')}</h4>
-                    {favorites.length > 0 ? (
-                        <SearchableCardList
-                            items={favorites}
-                            searchFunction={searchFunction}
-                            renderCard={renderVocabularyCard}
-                        />
-                    ) : (
-                        <p>{t('dictionary.no_favorites', 'You have no favorite words yet.')}</p>
-                    )}
-                </div>
-            )}
+            <Tabs>
+                <Tab label={t('dictionary.vocabulary', 'Vocabulary')}>
+                    <SearchableCardList
+                        items={allVocabulary}
+                        searchFunction={searchFunction}
+                        renderCard={renderVocabularyCard}
+                    />
+                </Tab>
+                <Tab label={t('dictionary.history', 'History')}>
+                    <div className="search-history">
+                        <h4>{t('dictionary.recent_searches', 'Recent Searches')}</h4>
+                        {searchHistory.length > 0 ? (
+                            <>
+                                <ul>
+                                    {searchHistory.map((item, index) => (
+                                        <li key={index} onClick={() => setSearchTerm(item)}>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <button onClick={handleClearHistory} className="button--link">
+                                    {t('dictionary.clear_history', 'Clear History')}
+                                </button>
+                            </>
+                        ) : (
+                            <p>{t('dictionary.no_history', 'No search history yet.')}</p>
+                        )}
+                    </div>
+                </Tab>
+                <Tab label={t('dictionary.favorites', 'Favorites')}>
+                    <div className="favorites-list">
+                        <h4>{t('dictionary.favorite_words', 'Favorite Words')}</h4>
+                        {favorites.length > 0 ? (
+                            <SearchableCardList
+                                items={favorites}
+                                searchFunction={searchFunction}
+                                renderCard={renderVocabularyCard}
+                            />
+                        ) : (
+                            <p>{t('dictionary.no_favorites', 'You have no favorite words yet.')}</p>
+                        )}
+                    </div>
+                </Tab>
+                <Tab label={t('dictionary.recommendations', 'Recommendations')}>
+                    <div className="recommendations-list">
+                        <h4>{t('dictionary.recommended_words', 'Recommended Words')}</h4>
+                        {recommendations.length > 0 ? (
+                            <SearchableCardList
+                                items={recommendations}
+                                searchFunction={searchFunction}
+                                renderCard={renderVocabularyCard}
+                            />
+                        ) : (
+                            <p>{t('dictionary.no_recommendations', 'Add some words to your favorites to get recommendations.')}</p>
+                        )}
+                    </div>
+                </Tab>
+            </Tabs>
         </Modal>
     );
 };
