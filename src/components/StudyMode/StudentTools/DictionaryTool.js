@@ -20,6 +20,22 @@ const DictionaryTool = ({ isOpen, onClose }) => {
     const [searchHistory, setSearchHistory] = useState([]);
     const [favorites, setFavorites] = useState([]);
     const [currentView, setCurrentView] = useState('vocabulary'); // vocabulary, history, favorites
+    const [score, setScore] = useState(0);
+    const [streak, setStreak] = useState(0);
+
+    useEffect(() => {
+        const storedStreak = localStorage.getItem(`streak_${currentLangKey}`);
+        if (storedStreak) {
+            setStreak(parseInt(storedStreak, 10));
+        }
+    }, [currentLangKey]);
+
+    useEffect(() => {
+        const storedScore = localStorage.getItem(`score_${currentLangKey}`);
+        if (storedScore) {
+            setScore(parseInt(storedScore, 10));
+        }
+    }, [currentLangKey]);
 
     useEffect(() => {
         const storedFavorites = localStorage.getItem(`favorites_${currentLangKey}`);
@@ -83,6 +99,33 @@ const DictionaryTool = ({ isOpen, onClose }) => {
                 const newHistory = [trimmedSearchTerm, ...searchHistory.filter(item => item !== trimmedSearchTerm)].slice(0, 10);
                 setSearchHistory(newHistory);
                 localStorage.setItem(`searchHistory_${currentLangKey}`, JSON.stringify(newHistory));
+
+                const lookedUpWords = JSON.parse(localStorage.getItem(`lookedUpWords_${currentLangKey}`) || '[]');
+                if (!lookedUpWords.includes(trimmedSearchTerm)) {
+                    const newScore = score + 10;
+                    setScore(newScore);
+                    localStorage.setItem(`score_${currentLangKey}`, newScore);
+                    localStorage.setItem(`lookedUpWords_${currentLangKey}`, JSON.stringify([...lookedUpWords, trimmedSearchTerm]));
+
+                    const today = new Date().toLocaleDateString();
+                    const lastLookupDate = localStorage.getItem(`lastLookupDate_${currentLangKey}`);
+
+                    if (lastLookupDate === today) {
+                        // already looked up a new word today
+                    } else {
+                        const yesterday = new Date();
+                        yesterday.setDate(yesterday.getDate() - 1);
+                        if (lastLookupDate === yesterday.toLocaleDateString()) {
+                            const newStreak = streak + 1;
+                            setStreak(newStreak);
+                            localStorage.setItem(`streak_${currentLangKey}`, newStreak);
+                        } else {
+                            setStreak(1);
+                            localStorage.setItem(`streak_${currentLangKey}`, 1);
+                        }
+                        localStorage.setItem(`lastLookupDate_${currentLangKey}`, today);
+                    }
+                }
             }
         }
     };
@@ -156,6 +199,10 @@ const DictionaryTool = ({ isOpen, onClose }) => {
     return (
         <Modal isOpen={isOpen} onClose={onClose} title={t('dictionary.title', 'Vocabulary Dictionary')}>
             <div className="dictionary-controls">
+                <div className="gamification-stats">
+                    <span>{t('dictionary.score', 'Score')}: {score}</span>
+                    <span>{t('dictionary.streak', 'Streak')}: {streak} 🔥</span>
+                </div>
                 <div className="dictionary-view-selector">
                     <button onClick={() => setCurrentView('vocabulary')} className={`button ${currentView === 'vocabulary' ? 'active' : ''}`}>{t('dictionary.vocabulary', 'Vocabulary')}</button>
                     <button onClick={() => setCurrentView('history')} className={`button ${currentView === 'history' ? 'active' : ''}`}>{t('dictionary.history', 'History')}</button>
