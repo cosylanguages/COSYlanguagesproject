@@ -11,6 +11,7 @@ import toast from 'react-hot-toast';
 import './DictionaryTool.css';
 import Tabs from '../../Common/Tabs';
 import Tab from '../../Common/Tabs';
+import { generateRecommendations } from '../../../utils/recommendationService';
 
 const DictionaryTool = ({ isOpen, onClose }) => {
     const { t, language, currentLangKey } = useI18n();
@@ -23,6 +24,14 @@ const DictionaryTool = ({ isOpen, onClose }) => {
     const [favorites, setFavorites] = useState([]);
     const [score, setScore] = useState(0);
     const [streak, setStreak] = useState(0);
+    const [recommendations, setRecommendations] = useState([]);
+
+    useEffect(() => {
+        if (favorites.length > 0) {
+            const newRecommendations = generateRecommendations(favorites, allVocabulary, searchHistory);
+            setRecommendations(newRecommendations);
+        }
+    }, [favorites, allVocabulary, searchHistory]);
 
     useEffect(() => {
         const storedStreak = localStorage.getItem(`streak_${currentLangKey}`);
@@ -261,6 +270,20 @@ const DictionaryTool = ({ isOpen, onClose }) => {
                             />
                         ) : (
                             <p>{t('dictionary.no_favorites', 'You have no favorite words yet.')}</p>
+                        )}
+                    </div>
+                </Tab>
+                <Tab label={t('dictionary.recommendations', 'Recommendations')}>
+                    <div className="recommendations-list">
+                        <h4>{t('dictionary.recommended_words', 'Recommended Words')}</h4>
+                        {recommendations.length > 0 ? (
+                            <SearchableCardList
+                                items={recommendations}
+                                searchFunction={searchFunction}
+                                renderCard={renderVocabularyCard}
+                            />
+                        ) : (
+                            <p>{t('dictionary.no_recommendations', 'Add some words to your favorites to get recommendations.')}</p>
                         )}
                     </div>
                 </Tab>

@@ -149,6 +149,10 @@
     color: #007bff;
 }
 
+.recommendations-list {
+    margin-top: 15px;
+}
+
 .dictionary-search-input {
     flex-grow: 1;
     margin-right: 10px;
