@@ -85,7 +85,7 @@ const SpeakingClubPost = ({ event }) => {
   return (
     <div className="speaking-club-post">
       <div className="post-header">
-        <img src="/path/to/placeholder-avatar.png" alt="author avatar" className="post-author-avatar" />
+        <img src={event.author?.avatar || "/path/to/placeholder-avatar.png"} alt={event.author?.username || "author avatar"} className="post-author-avatar" />
         <div>
           <h3 className="post-title">{event.title}</h3>
           <p className="post-date">{formatDate(event.start)}</p>

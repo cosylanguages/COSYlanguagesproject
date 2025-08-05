@@ -5,7 +5,7 @@ const MindMatters = ({ content }) => {
   return (
     <div className="specialized-club-section">
       <h4>Mind Matters</h4>
-      {content.infographicUrl && <img src={content.infographicUrl} alt="Psychological concept" />}
+      {content.infographicUrl && <img src={content.infographicUrl} alt={content.infographicDescription || "Psychological concept"} />}
       {content.conditionalQuestion && (
         <div>
           <h5>What if...</h5>
