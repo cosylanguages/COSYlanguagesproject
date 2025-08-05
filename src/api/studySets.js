@@ -1,12 +1,16 @@
 import apiClient from './apiClient';
 
-export const fetchStudySets = async () => {
-  const response = await apiClient.get('/study-sets');
+export const fetchStudySets = async (language) => {
+  const response = await apiClient.get('/study-sets', {
+    params: { lang: language },
+  });
   return response.data;
 };
 
-export const fetchStudySetById = async (setId) => {
-  const response = await apiClient.get(`/study-sets/${setId}`);
+export const fetchStudySetById = async (setId, language) => {
+  const response = await apiClient.get(`/study-sets/${setId}`, {
+    params: { lang: language },
+  });
   return response.data;
 };
 
