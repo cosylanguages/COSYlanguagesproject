@@ -3,6 +3,7 @@ import { useI18n } from '../../../i18n/I18nContext';
 import { pronounceText } from '../../../utils/speechUtils';
 import { getStudySets, addCardToSet } from '../../../utils/studySetService';
 import { loadAllLevelsForLanguageAsFlatList } from '../../../utils/vocabularyService';
+import { dictionaryLinks } from '../../../config/dictionaryLinks';
 import SearchableCardList from '../../Common/SearchableCardList';
 import FlashcardPlayer from '../FlashcardPlayer';
 import Modal from '../../Common/Modal';
@@ -15,6 +16,7 @@ const DictionaryTool = ({ isOpen, onClose }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [showFlashcardPlayer, setShowFlashcardPlayer] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         const loadVocabulary = async () => {
@@ -50,6 +52,17 @@ const DictionaryTool = ({ isOpen, onClose }) => {
         };
         addCardToSet(firstSetId, cardData);
         toast.success(`'${word.term}' added to flashcards!`);
+    };
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (searchTerm.trim() && currentLangKey) {
+            const baseUrl = dictionaryLinks[currentLangKey];
+            if (baseUrl) {
+                const url = `${baseUrl}${encodeURIComponent(searchTerm.trim())}`;
+                window.open(url, '_blank', 'noopener,noreferrer');
+            }
+        }
     };
 
     const searchFunction = (item, searchTerm) => {
@@ -100,9 +113,24 @@ const DictionaryTool = ({ isOpen, onClose }) => {
 
     return (
         <Modal isOpen={isOpen} onClose={onClose} title={t('dictionary.title', 'Vocabulary Dictionary')}>
-            <button onClick={() => setShowFlashcardPlayer(true)} className="button">
-                {t('dictionary.study_flashcards', 'Study Flashcards')}
-            </button>
+            <div className="dictionary-controls">
+                <button onClick={() => setShowFlashcardPlayer(true)} className="button">
+                    {t('dictionary.study_flashcards', 'Study Flashcards')}
+                </button>
+                <form onSubmit={handleSearch} className="dictionary-search-form">
+                    <input
+                        type="text"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        placeholder={t('dictionary.search_placeholder', 'Look up a word...')}
+                        className="dictionary-search-input"
+                    />
+                    <button type="submit" className="button">
+                        {t('dictionary.search', 'Search')}
+                    </button>
+                </form>
+            </div>
+
             <SearchableCardList
                 items={allVocabulary}
                 searchFunction={searchFunction}
