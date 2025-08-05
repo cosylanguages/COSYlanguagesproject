@@ -41,7 +41,7 @@ export function PlanProvider({ children }) {
      * @param {string} languageIdentifier - The language identifier.
      * @param {string} token - The user's authentication token.
      */
-    const fetchPlanData = useCallback(async (languageIdentifier, token) => {
+    const fetchPlanData = useCallback(async (languageIdentifier) => {
         if (!languageIdentifier) {
             console.warn("fetchPlanData called without languageIdentifier. Using default or doing nothing.");
             setPlan({ days: [], studySets: [], roadmapDetails: null });

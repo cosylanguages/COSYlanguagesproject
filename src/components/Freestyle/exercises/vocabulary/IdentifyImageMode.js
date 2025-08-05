@@ -94,12 +94,14 @@ const IdentifyImageMode = ({ imageObject, language, onDone, exerciseKeyInternal 
     ? `${process.env.PUBLIC_URL}${imageObject.imagePath.startsWith('/') ? '' : '/'}${imageObject.imagePath}`
     : `/assets/vocabulary_images/placeholder.png`; // Fallback image
 
+  const altText = (imageObject && imageObject.translations && imageObject.translations[language]) || (imageObject && imageObject.altText) || t('altText.identifyImage', "Identify this image");
+
   return (
     <div style={{ textAlign: 'center', padding: '20px', border: '1px solid #eee', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
       <h3>{t('titles.whatIsThis', 'What is this?')}</h3>
       <img
         src={imagePath}
-        alt={imageObject.altText || t('altText.identifyImage', "Identify this image")}
+        alt={altText}
         style={{ maxWidth: '300px', maxHeight: '300px', margin: '15px auto', display: 'block', border: '1px solid #ccc', objectFit: 'contain' }}
         onError={(e) => { e.target.onerror = null; e.target.src=`/assets/vocabulary_images/placeholder.png`; }}
       />

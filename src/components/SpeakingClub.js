@@ -15,7 +15,7 @@ const ClubHeader = ({ title, level, inspiringMaterial, description, topics }) =>
     {inspiringMaterial?.link && (
       <div className="inspiring-material">
         <a href={inspiringMaterial.link} target="_blank" rel="noopener noreferrer">
-          <img src={inspiringMaterial.thumbnail} alt="Inspiring material preview" />
+          <img src={inspiringMaterial.thumbnail} alt={inspiringMaterial.title || "Inspiring material preview"} />
           <span>Inspiring Material</span>
         </a>
       </div>
@@ -116,7 +116,7 @@ const MiniBreak = ({ miniBreak }) => {
       <h4>Mini-Break</h4>
       <p><strong>Fun Fact:</strong> {miniBreak.funFact}</p>
       <p><strong>Tongue Twister:</strong> {miniBreak.tongueTwister}</p>
-      {miniBreak.memeUrl && <img src={miniBreak.memeUrl} alt="Relevant meme" />}
+      {miniBreak.memeUrl && <img src={miniBreak.memeUrl} alt={miniBreak.memeDescription || "Relevant meme"} />}
     </div>
   );
 };

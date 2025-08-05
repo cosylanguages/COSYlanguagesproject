@@ -33,23 +33,25 @@ const Flashcard = ({ card, onReviewed, onAnswered }) => {
    * @param {boolean} isCorrect - Whether the user answered the card correctly.
    */
   const handleReview = (isCorrect) => {
-    if (onAnswered) {
-      onAnswered(isCorrect);
-    } else {
-      // Calculate the new review interval and factor using the spaced repetition algorithm.
-      const newFactor = isCorrect ? factor + 0.1 : Math.max(1.3, factor - 0.2);
-      const newInterval = getNextReviewInterval(interval, newFactor);
+    // Calculate the new review interval and factor using the spaced repetition algorithm.
+    const newFactor = isCorrect ? factor + 0.1 : Math.max(1.3, factor - 0.2);
+    const newInterval = getNextReviewInterval(interval, newFactor);
 
-      // Update the card's review data.
-      setFactor(newFactor);
-      setInterval(newInterval);
+    // Update the card's review data.
+    setFactor(newFactor);
+    setInterval(newInterval);
 
-      // Call the onReviewed callback with the updated review data.
+    // Call the onReviewed callback with the updated review data.
+    if (onReviewed) {
       onReviewed(card.id, {
         interval: newInterval,
         factor: newFactor,
         nextReviewDate: new Date(Date.now() + newInterval * 24 * 60 * 60 * 1000),
       });
+    }
+
+    if (onAnswered) {
+      onAnswered(isCorrect);
     }
   };
 

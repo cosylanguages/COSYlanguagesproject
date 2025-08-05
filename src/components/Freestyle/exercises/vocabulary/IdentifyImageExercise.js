@@ -80,15 +80,15 @@ const IdentifyImageExercise = ({ language, days, exerciseKey, onComplete }) => {
       if (userInput.trim() === correctAnswer) {
         setFeedback({ message: t('feedback.correct', 'Correct!'), type: 'correct' });
       } else {
-        setFeedback({ 
-          message: t('feedback.correctAnswerIs', `Correct! The answer is: ${displayCorrect}`, { correctAnswer: displayCorrect }), 
-          type: 'correct' 
+        setFeedback({
+          message: t('feedback.correctAnswerIs', `Correct! The answer is: ${displayCorrect}`, { correctAnswer: displayCorrect }),
+          type: 'correct'
         });
       }
       if (onComplete) {
-        setTimeout(() => onComplete(), 1500); 
+        setTimeout(() => onComplete(), 1500);
       }
-      // Removed: setTimeout(() => { fetchAndSetNewImage(); }, 1500); 
+      // Removed: setTimeout(() => { fetchAndSetNewImage(); }, 1500);
     } else {
       setIsAnsweredCorrectly(true); // Also mark as answered on incorrect to allow host to proceed
       setFeedback({ message: t('feedback.incorrectAnswerWas', `Incorrect. The correct answer is: {answer}`, { answer: displayCorrect }), type: 'incorrect' });
@@ -114,9 +114,9 @@ const IdentifyImageExercise = ({ language, days, exerciseKey, onComplete }) => {
     setIsRevealed(true);
     setIsAnsweredCorrectly(true); // Mark as answered
     if (onComplete) {
-      setTimeout(() => onComplete(), 2000); 
+      setTimeout(() => onComplete(), 2000);
     }
-    // Removed: setTimeout(() => { fetchAndSetNewImage(); }, 2000); 
+    // Removed: setTimeout(() => { fetchAndSetNewImage(); }, 2000);
   };
 
   const handleNextRequestByControl = () => {
@@ -161,12 +161,12 @@ const IdentifyImageExercise = ({ language, days, exerciseKey, onComplete }) => {
   }
 
   const imagePath = currentImageItem.src.startsWith('assets/') ? `/${currentImageItem.src}` : currentImageItem.src;
-  const altText = currentImageItem.alt || t('altText.identifyImage', "Identify this image");
+  const altText = (currentImageItem && currentImageItem.translations && currentImageItem.translations[language]) || (currentImageItem && currentImageItem.alt) || t('altText.identifyImage', "Identify this image");
   const latinizedAltText = getLatinizedUiText(altText, i18nLanguage);
 
   const placeholderText = t('placeholders.typeTheWord', "Type the word...");
   const latinizedPlaceholder = getLatinizedUiText(placeholderText, i18nLanguage);
-  
+
   const pronounceTooltipText = t('tooltips.pronounceCorrectAnswer', "Pronounce correct answer");
   const latinizedPronounceTooltip = getLatinizedUiText(pronounceTooltipText, i18nLanguage);
 
