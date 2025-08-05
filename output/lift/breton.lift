@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lift version="0.13" producer="CoSy Dictionary Converter">
+    <header>
+        <dictionary>
+            <entry id="dummy_entry"/>
+        </dictionary>
+    </header>
+
+    <entry id="demat">
+        <lexical-unit>
+            <form lang="en">
+                <text>Demat</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="kenavo">
+        <lexical-unit>
+            <form lang="en">
+                <text>Kenavo</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ya">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ya</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ket">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ket</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="trugarez">
+        <lexical-unit>
+            <form lang="en">
+                <text>Trugarez</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="netra">
+        <lexical-unit>
+            <form lang="en">
+                <text>Netra</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="mat_eo">
+        <lexical-unit>
+            <form lang="en">
+                <text>Mat eo</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_deiz">
+        <lexical-unit>
+            <form lang="en">
+                <text>An deiz</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="digarezit">
+        <lexical-unit>
+            <form lang="en">
+                <text>Digarezit</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_dour">
+        <lexical-unit>
+            <form lang="en">
+                <text>An dour</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_sukr">
+        <lexical-unit>
+            <form lang="en">
+                <text>An sukr</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_c'hwezh">
+        <lexical-unit>
+            <form lang="en">
+                <text>An c'hwezh</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_win">
+        <lexical-unit>
+            <form lang="en">
+                <text>An win</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_c'hafe">
+        <lexical-unit>
+            <form lang="en">
+                <text>An c'hafe</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_te">
+        <lexical-unit>
+            <form lang="en">
+                <text>An te</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_garta">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar garta</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_c'hont">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar c'hont</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_paotr">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar paotr</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_plac'h">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar plac'h</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_mestr">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar mestr</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_gelennerez">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar gelennerez</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_studier">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar studier</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_studierez">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar studierez</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_wreg">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar wreg</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_den">
+        <lexical-unit>
+            <form lang="en">
+                <text>An den</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_dra">
+        <lexical-unit>
+            <form lang="en">
+                <text>An dra</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_den">
+        <lexical-unit>
+            <form lang="en">
+                <text>An den</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_dra">
+        <lexical-unit>
+            <form lang="en">
+                <text>An dra</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_dra">
+        <lexical-unit>
+            <form lang="en">
+                <text>An dra</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_dra">
+        <lexical-unit>
+            <form lang="en">
+                <text>An dra</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_dra">
+        <lexical-unit>
+            <form lang="en">
+                <text>An dra</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_dra">
+        <lexical-unit>
+            <form lang="en">
+                <text>An dra</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_dra">
+        <lexical-unit>
+            <form lang="en">
+                <text>An dra</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_dra">
+        <lexical-unit>
+            <form lang="en">
+                <text>An dra</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_vamm">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar vamm</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_tad">
+        <lexical-unit>
+            <form lang="en">
+                <text>An tad</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_mab">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar mab</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_verc'h">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar verc'h</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_c'hoar">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar c'hoar</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_breur">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar breur</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_pried">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar pried</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_wreg">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar wreg</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_amezeg">
+        <lexical-unit>
+            <form lang="en">
+                <text>An amezeg</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_amezegez">
+        <lexical-unit>
+            <form lang="en">
+                <text>An amezegez</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_tiegezh">
+        <lexical-unit>
+            <form lang="en">
+                <text>An tiegezh</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_noll">
+        <lexical-unit>
+            <form lang="en">
+                <text>An noll</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="un">
+        <lexical-unit>
+            <form lang="en">
+                <text>Un</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="div">
+        <lexical-unit>
+            <form lang="en">
+                <text>Div</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="tri">
+        <lexical-unit>
+            <form lang="en">
+                <text>Tri</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="peder">
+        <lexical-unit>
+            <form lang="en">
+                <text>Peder</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="pemp">
+        <lexical-unit>
+            <form lang="en">
+                <text>Pemp</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="c'hwec'h">
+        <lexical-unit>
+            <form lang="en">
+                <text>C'hwec'h</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="seizh">
+        <lexical-unit>
+            <form lang="en">
+                <text>Seizh</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="eizh">
+        <lexical-unit>
+            <form lang="en">
+                <text>Eizh</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="nav">
+        <lexical-unit>
+            <form lang="en">
+                <text>Nav</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_vamm">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar vamm</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_den">
+        <lexical-unit>
+            <form lang="en">
+                <text>An den</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_niver">
+        <lexical-unit>
+            <form lang="en">
+                <text>An niver</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="mat">
+        <lexical-unit>
+            <form lang="en">
+                <text>Mat</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="fall">
+        <lexical-unit>
+            <form lang="en">
+                <text>Fall</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="bras">
+        <lexical-unit>
+            <form lang="en">
+                <text>Bras</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="bihan">
+        <lexical-unit>
+            <form lang="en">
+                <text>Bihan</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="simpl">
+        <lexical-unit>
+            <form lang="en">
+                <text>Simpl</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="kalon">
+        <lexical-unit>
+            <form lang="en">
+                <text>Kalon</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="fur">
+        <lexical-unit>
+            <form lang="en">
+                <text>Fur</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="dibourc'h">
+        <lexical-unit>
+            <form lang="en">
+                <text>Dibourc'h</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="glao">
+        <lexical-unit>
+            <form lang="en">
+                <text>Glao</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="gouloù">
+        <lexical-unit>
+            <form lang="en">
+                <text>Gouloù</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="kostezus">
+        <lexical-unit>
+            <form lang="en">
+                <text>Kostezus</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="fur">
+        <lexical-unit>
+            <form lang="en">
+                <text>Fur</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_win_ruz">
+        <lexical-unit>
+            <form lang="en">
+                <text>An win ruz</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_win_gwenn">
+        <lexical-unit>
+            <form lang="en">
+                <text>An win gwenn</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_te_glas">
+        <lexical-unit>
+            <form lang="en">
+                <text>An te glas</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_te_du">
+        <lexical-unit>
+            <form lang="en">
+                <text>An te du</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_te_laouen">
+        <lexical-unit>
+            <form lang="en">
+                <text>An te laouen</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_c'hafe_laouen">
+        <lexical-unit>
+            <form lang="en">
+                <text>An c'hafe laouen</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_sukr_oren">
+        <lexical-unit>
+            <form lang="en">
+                <text>An sukr oren</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="an_sukr_aval">
+        <lexical-unit>
+            <form lang="en">
+                <text>An sukr aval</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_film">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar film</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_seri">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar seri</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_sonerezh">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar sonerezh</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ar_levr">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ar levr</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="lun">
+        <lexical-unit>
+            <form lang="en">
+                <text>Lun</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="meurzh">
+        <lexical-unit>
+            <form lang="en">
+                <text>Meurzh</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="merc'her">
+        <lexical-unit>
+            <form lang="en">
+                <text>Merc'her</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="yaou">
+        <lexical-unit>
+            <form lang="en">
+                <text>Yaou</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="gwener">
+        <lexical-unit>
+            <form lang="en">
+                <text>Gwener</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="sadorn">
+        <lexical-unit>
+            <form lang="en">
+                <text>Sadorn</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="sul">
+        <lexical-unit>
+            <form lang="en">
+                <text>Sul</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+</lift>

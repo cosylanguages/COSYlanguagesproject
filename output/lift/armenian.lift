@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lift version="0.13" producer="CoSy Dictionary Converter">
+    <header>
+        <dictionary>
+            <entry id="dummy_entry"/>
+        </dictionary>
+    </header>
+
+    <entry id="բարեւ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Բարեւ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ցտեսություն">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ցտեսություն</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="այո">
+        <lexical-unit>
+            <form lang="en">
+                <text>Այո</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ոչ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ոչ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="շնորհակալություն">
+        <lexical-unit>
+            <form lang="en">
+                <text>Շնորհակալություն</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="խնդրեմ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Խնդրեմ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="լավ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Լավ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="օր">
+        <lexical-unit>
+            <form lang="en">
+                <text>Օր</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ներեցեք">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ներեցեք</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ջուր">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ջուր</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="հյութ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Հյութ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="գարեջուր">
+        <lexical-unit>
+            <form lang="en">
+                <text>Գարեջուր</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="գինի">
+        <lexical-unit>
+            <form lang="en">
+                <text>Գինի</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="սուրճ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Սուրճ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="թեյ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Թեյ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="կարտա">
+        <lexical-unit>
+            <form lang="en">
+                <text>Կարտա</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="նაღդի">
+        <lexical-unit>
+            <form lang="en">
+                <text>Նაღդի</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="տղա">
+        <lexical-unit>
+            <form lang="en">
+                <text>Տղա</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="աղջիկ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Աղջիկ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ուսուցիչ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ուսուցիչ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ուսուցչուհի">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ուսուցչուհի</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ուսանող">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ուսանող</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ուսանողուհի">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ուսանողուհի</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="կին">
+        <lexical-unit>
+            <form lang="en">
+                <text>Կին</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="տղամարդ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Տղամարդ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="բան">
+        <lexical-unit>
+            <form lang="en">
+                <text>Բան</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="մարդ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Մարդ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="խմիչք">
+        <lexical-unit>
+            <form lang="en">
+                <text>Խմիչք</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="շատ_ուրախ_եմ_ծանոթանալ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Շատ ուրախ եմ ծանոթանալ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="մայր">
+        <lexical-unit>
+            <form lang="en">
+                <text>Մայր</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="հայր">
+        <lexical-unit>
+            <form lang="en">
+                <text>Հայր</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="որդի">
+        <lexical-unit>
+            <form lang="en">
+                <text>Որդի</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="դուստր">
+        <lexical-unit>
+            <form lang="en">
+                <text>Դուստր</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="քույր">
+        <lexical-unit>
+            <form lang="en">
+                <text>Քույր</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="եղբայր">
+        <lexical-unit>
+            <form lang="en">
+                <text>Եղբայր</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ամուսին">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ամուսին</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="կին">
+        <lexical-unit>
+            <form lang="en">
+                <text>Կին</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ընկեր_(արական)">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ընկեր (արական)</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ընկերուհի_(իգական)">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ընկերուհի (իգական)</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ընտանիք">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ընտանիք</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="զրո">
+        <lexical-unit>
+            <form lang="en">
+                <text>Զրո</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="մեկ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Մեկ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="երկու">
+        <lexical-unit>
+            <form lang="en">
+                <text>Երկու</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="երեք">
+        <lexical-unit>
+            <form lang="en">
+                <text>Երեք</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="չորս">
+        <lexical-unit>
+            <form lang="en">
+                <text>Չորս</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="հինգ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Հինգ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="վեց">
+        <lexical-unit>
+            <form lang="en">
+                <text>Վեց</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="յոթ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Յոթ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ութ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ութ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="տաս">
+        <lexical-unit>
+            <form lang="en">
+                <text>Տաս</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ինը">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ինը</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ծնող">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ծնող</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="երեխա">
+        <lexical-unit>
+            <form lang="en">
+                <text>Երեխա</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="թիվ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Թիվ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="լավ">
+        <lexical-unit>
+            <form lang="en">
+                <text>լավ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="վատ">
+        <lexical-unit>
+            <form lang="en">
+                <text>վատ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="մեծ">
+        <lexical-unit>
+            <form lang="en">
+                <text>մեծ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="փոքր">
+        <lexical-unit>
+            <form lang="en">
+                <text>փոքր</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="հեշտ">
+        <lexical-unit>
+            <form lang="en">
+                <text>հեշտ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="դժվար">
+        <lexical-unit>
+            <form lang="en">
+                <text>դժվար</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="հետաքրքիր">
+        <lexical-unit>
+            <form lang="en">
+                <text>հետաքրքիր</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ծանր">
+        <lexical-unit>
+            <form lang="en">
+                <text>ծանր</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="սառը">
+        <lexical-unit>
+            <form lang="en">
+                <text>սառը</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="տաք">
+        <lexical-unit>
+            <form lang="en">
+                <text>տաք</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="թանկ">
+        <lexical-unit>
+            <form lang="en">
+                <text>թանկ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ժողովրդական">
+        <lexical-unit>
+            <form lang="en">
+                <text>ժողովրդական</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="կարմիր_գինի">
+        <lexical-unit>
+            <form lang="en">
+                <text>Կարմիր գինի</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="սպիտակ_գինի">
+        <lexical-unit>
+            <form lang="en">
+                <text>Սպիտակ գինի</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="կանաչ_թեյ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Կանաչ թեյ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="սև_թեյ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Սև թեյ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="սառը_թեյ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Սառը թեյ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="սառը_սուրճ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Սառը սուրճ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="նարինջի_հյութ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Նարինջի հյութ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="խնձորի_հյութ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Խնձորի հյութ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ֆիլմ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ֆիլմ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="հեռուստասերիալ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Հեռուստասերիալ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="երաժշտություն">
+        <lexical-unit>
+            <form lang="en">
+                <text>Երաժշտություն</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="գիրք">
+        <lexical-unit>
+            <form lang="en">
+                <text>Գիրք</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="երկուշաբթի">
+        <lexical-unit>
+            <form lang="en">
+                <text>Երկուշաբթի</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="երեքշաբթի">
+        <lexical-unit>
+            <form lang="en">
+                <text>Երեքշաբթի</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="չորեքշաբթի">
+        <lexical-unit>
+            <form lang="en">
+                <text>Չորեքշաբթի</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="հինգշաբթի">
+        <lexical-unit>
+            <form lang="en">
+                <text>Հինգշաբթի</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ուրբաթ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ուրբաթ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="շաբաթ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Շաբաթ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="կիրակի">
+        <lexical-unit>
+            <form lang="en">
+                <text>Կիրակի</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+</lift>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lift version="0.13" producer="CoSy Dictionary Converter">
+    <header>
+        <dictionary>
+            <entry id="dummy_entry"/>
+        </dictionary>
+    </header>
+
+</lift>

@@ -5,15 +5,23 @@ import useLatinization from '../../../../hooks/useLatinization';
 import FeedbackDisplay from '../../FeedbackDisplay';
 import ExerciseControls from '../../ExerciseControls';
 import { useI18n } from '../../../../i18n/I18nContext';
+import DictionaryTool from '../../../StudyMode/StudentTools/DictionaryTool';
 
 const InterestingFactExercise = ({ language, days, exerciseKey }) => {
   const [currentFact, setCurrentFact] = useState(null); // { title: string, text: string } or similar
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isDictionaryOpen, setIsDictionaryOpen] = useState(false);
+  const [selectedWord, setSelectedWord] = useState('');
 
   const { isLatinized } = useLatinizationContext();
   const getLatinizedText = useLatinization;
   const { t } = useI18n();
+
+  const handleWordClick = (word) => {
+    setSelectedWord(word);
+    setIsDictionaryOpen(true);
+  };
 
   const fetchNewFact = useCallback(async () => {
     setIsLoading(true);
@@ -59,19 +67,34 @@ const InterestingFactExercise = ({ language, days, exerciseKey }) => {
   if (isLoading) return <p>{t('loading.readingExercise', 'Loading interesting fact...')}</p>;
   if (error) return <FeedbackDisplay message={error} type="error" />;
   if (!currentFact && !isLoading) return <FeedbackDisplay message={t('exercises.noFactToDisplay', 'No fact to display. Try different selections.')} type="info" />;
-  
+
   const factTitle = currentFact ? getLatinizedText(currentFact.title || "Interesting Fact", language) : "";
-  const factText = currentFact ? getLatinizedText(currentFact.text, language) : "";
+
+  const renderText = (text) => {
+    const latinizedText = getLatinizedText(text, language);
+    return latinizedText.split(' ').map((word, i) => (
+      <span key={i} onClick={() => handleWordClick(word)} style={{cursor: 'pointer'}}>
+        {word}{' '}
+      </span>
+    ));
+  };
 
   return (
     <div style={{ padding: '20px', border: '1px solid #eee', borderRadius: '8px', maxWidth: '700px', margin: '0 auto' }}>
+        {isDictionaryOpen && (
+            <DictionaryTool
+            isOpen={isDictionaryOpen}
+            onClose={() => setIsDictionaryOpen(false)}
+            initialSearchTerm={selectedWord}
+            />
+        )}
       {currentFact && (
         <>
           <h3 style={{ textAlign: 'center', marginBottom: '15px', ...(isLatinized && currentFact.title && currentFact.title !== factTitle && {fontStyle: 'italic'}) }}>
             {factTitle}
           </h3>
-          <div style={{ textAlign: 'left', lineHeight: '1.7', fontSize: '1.1rem', padding: '10px', background: '#f9f9f9', borderRadius: '5px', ...(isLatinized && currentFact.text !== factText && {fontStyle: 'italic'}) }}>
-            {factText}
+          <div style={{ textAlign: 'left', lineHeight: '1.7', fontSize: '1.1rem', padding: '10px', background: '#f9f9f9', borderRadius: '5px', ...(isLatinized && currentFact.text !== getLatinizedText(currentFact.text, language) && {fontStyle: 'italic'}) }}>
+            {renderText(currentFact.text)}
           </div>
         </>
       )}
@@ -79,7 +102,7 @@ const InterestingFactExercise = ({ language, days, exerciseKey }) => {
         onNextExercise={fetchNewFact}
         config={{
           showCheck: false,
-          showHint: false, 
+          showHint: false,
           showReveal: false,
           showNext: true,
         }}

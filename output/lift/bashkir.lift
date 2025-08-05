@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lift version="0.13" producer="CoSy Dictionary Converter">
+    <header>
+        <dictionary>
+            <entry id="dummy_entry"/>
+        </dictionary>
+    </header>
+
+    <entry id="сәлам">
+        <lexical-unit>
+            <form lang="en">
+                <text>Сәлам</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="һау_бул">
+        <lexical-unit>
+            <form lang="en">
+                <text>Һау бул</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="эйе">
+        <lexical-unit>
+            <form lang="en">
+                <text>Эйе</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="юҡ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Юҡ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="рәхмәт">
+        <lexical-unit>
+            <form lang="en">
+                <text>Рәхмәт</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="зинһар">
+        <lexical-unit>
+            <form lang="en">
+                <text>Зинһар</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ярай">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ярай</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="көн">
+        <lexical-unit>
+            <form lang="en">
+                <text>Көн</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ғәфү_итегеҙ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ғәфү итегеҙ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="һыу">
+        <lexical-unit>
+            <form lang="en">
+                <text>Һыу</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="сок">
+        <lexical-unit>
+            <form lang="en">
+                <text>Сок</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="пиво">
+        <lexical-unit>
+            <form lang="en">
+                <text>Пиво</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="вино">
+        <lexical-unit>
+            <form lang="en">
+                <text>Вино</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="кофе">
+        <lexical-unit>
+            <form lang="en">
+                <text>Кофе</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="чәй">
+        <lexical-unit>
+            <form lang="en">
+                <text>Чәй</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="карта">
+        <lexical-unit>
+            <form lang="en">
+                <text>Карта</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="наличные">
+        <lexical-unit>
+            <form lang="en">
+                <text>Наличные</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="малай">
+        <lexical-unit>
+            <form lang="en">
+                <text>Малай</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ҡыҙ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ҡыҙ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="уҡытыусы">
+        <lexical-unit>
+            <form lang="en">
+                <text>Уҡытыусы</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="уҡытыусы_ҡатын">
+        <lexical-unit>
+            <form lang="en">
+                <text>Уҡытыусы ҡатын</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="студент">
+        <lexical-unit>
+            <form lang="en">
+                <text>Студент</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="студент_ҡыҙ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Студент ҡыҙ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ҡатын">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ҡатын</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ир-ат">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ир-ат</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="әйбер">
+        <lexical-unit>
+            <form lang="en">
+                <text>әйбер</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="кеше">
+        <lexical-unit>
+            <form lang="en">
+                <text>Кеше</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="эсемлек">
+        <lexical-unit>
+            <form lang="en">
+                <text>Эсемлек</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="таныш_булыу_шатлығы">
+        <lexical-unit>
+            <form lang="en">
+                <text>Таныш булыу шатлығы</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="әсәй">
+        <lexical-unit>
+            <form lang="en">
+                <text>Әсәй</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="атай">
+        <lexical-unit>
+            <form lang="en">
+                <text>Атай</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="улы">
+        <lexical-unit>
+            <form lang="en">
+                <text>Улы</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ҡыҙы">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ҡыҙы</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="һеңле">
+        <lexical-unit>
+            <form lang="en">
+                <text>Һеңле</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ағай">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ағай</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ире">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ире</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ҡатыны">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ҡатыны</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="дуҫы_(ир)">
+        <lexical-unit>
+            <form lang="en">
+                <text>Дуҫы (ир)</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="дуҫы_(ҡатын)">
+        <lexical-unit>
+            <form lang="en">
+                <text>Дуҫы (ҡатын)</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ғаилә">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ғаилә</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="нөл">
+        <lexical-unit>
+            <form lang="en">
+                <text>Нөл</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="бер">
+        <lexical-unit>
+            <form lang="en">
+                <text>Бер</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ике">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ике</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="өс">
+        <lexical-unit>
+            <form lang="en">
+                <text>Өс</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="дүрт">
+        <lexical-unit>
+            <form lang="en">
+                <text>Дүрт</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="биш">
+        <lexical-unit>
+            <form lang="en">
+                <text>Биш</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="алты">
+        <lexical-unit>
+            <form lang="en">
+                <text>Алты</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ете">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ете</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="һигеҙ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Һигеҙ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="туғыҙ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Туғыҙ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ата-әсә">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ата-әсә</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="балалар">
+        <lexical-unit>
+            <form lang="en">
+                <text>Балалар</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="сан">
+        <lexical-unit>
+            <form lang="en">
+                <text>Сан</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="яхшы">
+        <lexical-unit>
+            <form lang="en">
+                <text>Яхшы</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="яман">
+        <lexical-unit>
+            <form lang="en">
+                <text>Яман</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="зур">
+        <lexical-unit>
+            <form lang="en">
+                <text>Зур</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="кечкенә">
+        <lexical-unit>
+            <form lang="en">
+                <text>Кечкенә</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="җиңел">
+        <lexical-unit>
+            <form lang="en">
+                <text>Җиңел</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="авыр">
+        <lexical-unit>
+            <form lang="en">
+                <text>Авыр</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="кызыклы">
+        <lexical-unit>
+            <form lang="en">
+                <text>Кызыклы</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="борсыҡ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Борсыҡ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="салҡын">
+        <lexical-unit>
+            <form lang="en">
+                <text>Салҡын</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="җылы">
+        <lexical-unit>
+            <form lang="en">
+                <text>Җылы</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ҡиммәтле">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ҡиммәтле</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="арзан">
+        <lexical-unit>
+            <form lang="en">
+                <text>Арзан</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ҡыҙыл_вино">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ҡыҙыл вино</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="аҡ_вино">
+        <lexical-unit>
+            <form lang="en">
+                <text>Аҡ вино</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="йәшел_сәй">
+        <lexical-unit>
+            <form lang="en">
+                <text>Йәшел сәй</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ҡара_сәй">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ҡара сәй</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="салҡын_сәй">
+        <lexical-unit>
+            <form lang="en">
+                <text>Салҡын сәй</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="салҡын_кофе">
+        <lexical-unit>
+            <form lang="en">
+                <text>Салҡын кофе</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="апельсин_сокы">
+        <lexical-unit>
+            <form lang="en">
+                <text>Апельсин сокы</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="алма_сокы">
+        <lexical-unit>
+            <form lang="en">
+                <text>Алма сокы</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="фильм">
+        <lexical-unit>
+            <form lang="en">
+                <text>Фильм</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="сериал">
+        <lexical-unit>
+            <form lang="en">
+                <text>Сериал</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="музыка">
+        <lexical-unit>
+            <form lang="en">
+                <text>Музыка</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="китап">
+        <lexical-unit>
+            <form lang="en">
+                <text>Китап</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="дүшәмбе">
+        <lexical-unit>
+            <form lang="en">
+                <text>Дүшәмбе</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="шишәмбе">
+        <lexical-unit>
+            <form lang="en">
+                <text>Шишәмбе</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="шаршамбы">
+        <lexical-unit>
+            <form lang="en">
+                <text>Шаршамбы</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="кесе_йәкшәмбе">
+        <lexical-unit>
+            <form lang="en">
+                <text>Кесе йәкшәмбе</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="йәкшәмбе">
+        <lexical-unit>
+            <form lang="en">
+                <text>Йәкшәмбе</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="дүшәмбе">
+        <lexical-unit>
+            <form lang="en">
+                <text>Дүшәмбе</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="шаршамбы">
+        <lexical-unit>
+            <form lang="en">
+                <text>Шаршамбы</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="кесе_йәкшәмбе">
+        <lexical-unit>
+            <form lang="en">
+                <text>Кесе йәкшәмбе</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+</lift>

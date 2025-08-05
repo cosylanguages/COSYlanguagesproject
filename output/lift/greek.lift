@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lift version="0.13" producer="CoSy Dictionary Converter">
+    <header>
+        <dictionary>
+            <entry id="dummy_entry"/>
+        </dictionary>
+    </header>
+
+    <entry id="γεια_σου">
+        <lexical-unit>
+            <form lang="en">
+                <text>Γεια σου</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="αντίο">
+        <lexical-unit>
+            <form lang="en">
+                <text>Αντίο</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ναι">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ναι</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="όχι">
+        <lexical-unit>
+            <form lang="en">
+                <text>Όχι</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ευχαριστώ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ευχαριστώ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="παρακαλώ">
+        <lexical-unit>
+            <form lang="en">
+                <text>Παρακαλώ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="εντάξει">
+        <lexical-unit>
+            <form lang="en">
+                <text>Εντάξει</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_μέρα">
+        <lexical-unit>
+            <form lang="en">
+                <text>Η μέρα</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="συγνώμη">
+        <lexical-unit>
+            <form lang="en">
+                <text>Συγνώμη</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_νερό">
+        <lexical-unit>
+            <form lang="en">
+                <text>το νερό</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_χυμός">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο χυμός</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_μπύρα">
+        <lexical-unit>
+            <form lang="en">
+                <text>η μπύρα</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_κρασί">
+        <lexical-unit>
+            <form lang="en">
+                <text>το κρασί</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_καφές">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο καφές</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_τσάι">
+        <lexical-unit>
+            <form lang="en">
+                <text>το τσάι</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_κάρτα">
+        <lexical-unit>
+            <form lang="en">
+                <text>η κάρτα</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="τα_μετρητά">
+        <lexical-unit>
+            <form lang="en">
+                <text>τα μετρητά</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_άτομο">
+        <lexical-unit>
+            <form lang="en">
+                <text>το άτομο</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_πράγμα">
+        <lexical-unit>
+            <form lang="en">
+                <text>το πράγμα</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_γυναίκα">
+        <lexical-unit>
+            <form lang="en">
+                <text>η γυναίκα</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_άντρας">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο άντρας</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_κορίτσι">
+        <lexical-unit>
+            <form lang="en">
+                <text>το κορίτσι</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_αγόρι">
+        <lexical-unit>
+            <form lang="en">
+                <text>το αγόρι</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_μαθήτρια">
+        <lexical-unit>
+            <form lang="en">
+                <text>η μαθήτρια</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_μαθητής">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο μαθητής</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_δασκάλα">
+        <lexical-unit>
+            <form lang="en">
+                <text>η δασκάλα</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_δάσκαλος">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο δάσκαλος</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_πράγμα">
+        <lexical-unit>
+            <form lang="en">
+                <text>το πράγμα</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_άτομο">
+        <lexical-unit>
+            <form lang="en">
+                <text>το άτομο</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_ποτό">
+        <lexical-unit>
+            <form lang="en">
+                <text>το ποτό</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="xαίρω_πολύ">
+        <lexical-unit>
+            <form lang="en">
+                <text>xαίρω πολύ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_μητέρα">
+        <lexical-unit>
+            <form lang="en">
+                <text>η μητέρα</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_πατέρας">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο πατέρας</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_γιος">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο γιος</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_κόρη">
+        <lexical-unit>
+            <form lang="en">
+                <text>η κόρη</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_αδελφή">
+        <lexical-unit>
+            <form lang="en">
+                <text>η αδελφή</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_αδελφός">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο αδελφός</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_σύζυγος">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο σύζυγος</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_σύζυγος">
+        <lexical-unit>
+            <form lang="en">
+                <text>η σύζυγος</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_φίλος">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο φίλος</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_φίλη">
+        <lexical-unit>
+            <form lang="en">
+                <text>η φίλη</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_οικογένεια">
+        <lexical-unit>
+            <form lang="en">
+                <text>η οικογένεια</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="μηδέν">
+        <lexical-unit>
+            <form lang="en">
+                <text>μηδέν</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ένα">
+        <lexical-unit>
+            <form lang="en">
+                <text>ένα</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="δύο">
+        <lexical-unit>
+            <form lang="en">
+                <text>δύο</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="τρία">
+        <lexical-unit>
+            <form lang="en">
+                <text>τρία</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="τέσσερα">
+        <lexical-unit>
+            <form lang="en">
+                <text>τέσσερα</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="πέντε">
+        <lexical-unit>
+            <form lang="en">
+                <text>πέντε</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="έξι">
+        <lexical-unit>
+            <form lang="en">
+                <text>έξι</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="επτά">
+        <lexical-unit>
+            <form lang="en">
+                <text>επτά</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="οκτώ">
+        <lexical-unit>
+            <form lang="en">
+                <text>οκτώ</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="εννέα">
+        <lexical-unit>
+            <form lang="en">
+                <text>εννέα</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_γονιός">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο γονιός</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_παιδί">
+        <lexical-unit>
+            <form lang="en">
+                <text>το παιδί</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_αριθμός">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο αριθμός</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="καλός.ή.ό">
+        <lexical-unit>
+            <form lang="en">
+                <text>καλός.ή.ό</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="κακός.ή.ό">
+        <lexical-unit>
+            <form lang="en">
+                <text>κακός.ή.ό</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="μεγάλος.η.ο">
+        <lexical-unit>
+            <form lang="en">
+                <text>μεγάλος.η.ο</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="μικρός.ή.ό">
+        <lexical-unit>
+            <form lang="en">
+                <text>μικρός.ή.ό</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="εύκολος.η.ο">
+        <lexical-unit>
+            <form lang="en">
+                <text>εύκολος.η.ο</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="δύσκολος.η.ο">
+        <lexical-unit>
+            <form lang="en">
+                <text>δύσκολος.η.ο</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ενδιαφέρων.ουσα.ον">
+        <lexical-unit>
+            <form lang="en">
+                <text>ενδιαφέρων.ουσα.ον</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="βαρετός.ή.ό">
+        <lexical-unit>
+            <form lang="en">
+                <text>βαρετός.ή.ό</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="κρύος.α">
+        <lexical-unit>
+            <form lang="en">
+                <text>κρύος.α</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ζεστός.η.ο">
+        <lexical-unit>
+            <form lang="en">
+                <text>ζεστός.η.ο</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ακριβός.ή.ό">
+        <lexical-unit>
+            <form lang="en">
+                <text>ακριβός.ή.ό</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="φτηνός.ή.ό,_'σημαντικός.ή.ό">
+        <lexical-unit>
+            <form lang="en">
+                <text>φτηνός.ή.ό, 'σημαντικός.ή.ό</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ασήμαντος.η.ο">
+        <lexical-unit>
+            <form lang="en">
+                <text>ασήμαντος.η.ο</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_κόκκινο_κρασί">
+        <lexical-unit>
+            <form lang="en">
+                <text>το κόκκινο κρασί</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_λευκό_κρασί">
+        <lexical-unit>
+            <form lang="en">
+                <text>το λευκό κρασί</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_πράσινο_τσάι">
+        <lexical-unit>
+            <form lang="en">
+                <text>το πράσινο τσάι</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_μαύρο_τσάι">
+        <lexical-unit>
+            <form lang="en">
+                <text>το μαύρο τσάι</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_παγωμένο_τσάι">
+        <lexical-unit>
+            <form lang="en">
+                <text>το παγωμένο τσάι</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_παγωμένος_καφές">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο παγωμένος καφές</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_χυμός_πορτοκάλι">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο χυμός πορτοκάλι</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ο_χυμός_μήλο">
+        <lexical-unit>
+            <form lang="en">
+                <text>ο χυμός μήλο</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_ταινία">
+        <lexical-unit>
+            <form lang="en">
+                <text>η ταινία</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_σειρά">
+        <lexical-unit>
+            <form lang="en">
+                <text>η σειρά</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_μουσική">
+        <lexical-unit>
+            <form lang="en">
+                <text>η μουσική</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_βιβλίο">
+        <lexical-unit>
+            <form lang="en">
+                <text>το βιβλίο</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_δευτέρα">
+        <lexical-unit>
+            <form lang="en">
+                <text>η Δευτέρα</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_τρίτη">
+        <lexical-unit>
+            <form lang="en">
+                <text>η Τρίτη</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_τετάρτη">
+        <lexical-unit>
+            <form lang="en">
+                <text>η Τετάρτη</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_πέμπτη">
+        <lexical-unit>
+            <form lang="en">
+                <text>η Πέμπτη</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_παρασκευή">
+        <lexical-unit>
+            <form lang="en">
+                <text>η Παρασκευή</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="το_σάββατο">
+        <lexical-unit>
+            <form lang="en">
+                <text>το Σάββατο</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="η_κυριακή">
+        <lexical-unit>
+            <form lang="en">
+                <text>η Κυριακή</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+</lift>

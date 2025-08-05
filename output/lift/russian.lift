@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lift version="0.13" producer="CoSy Dictionary Converter">
+    <header>
+        <dictionary>
+            <entry id="dummy_entry"/>
+        </dictionary>
+    </header>
+
+    <entry id="привет">
+        <lexical-unit>
+            <form lang="en">
+                <text>Привет</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="до_свидания">
+        <lexical-unit>
+            <form lang="en">
+                <text>До свидания</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="да">
+        <lexical-unit>
+            <form lang="en">
+                <text>Да</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="нет">
+        <lexical-unit>
+            <form lang="en">
+                <text>Нет</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="спасибо">
+        <lexical-unit>
+            <form lang="en">
+                <text>Спасибо</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="пожалуйста">
+        <lexical-unit>
+            <form lang="en">
+                <text>Пожалуйста</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="хорошо">
+        <lexical-unit>
+            <form lang="en">
+                <text>Хорошо</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="день">
+        <lexical-unit>
+            <form lang="en">
+                <text>День</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="извините">
+        <lexical-unit>
+            <form lang="en">
+                <text>Извините</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="вода">
+        <lexical-unit>
+            <form lang="en">
+                <text>Вода</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="сок">
+        <lexical-unit>
+            <form lang="en">
+                <text>Сок</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="пиво">
+        <lexical-unit>
+            <form lang="en">
+                <text>Пиво</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="вино">
+        <lexical-unit>
+            <form lang="en">
+                <text>Вино</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="кофе">
+        <lexical-unit>
+            <form lang="en">
+                <text>Кофе</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="чай">
+        <lexical-unit>
+            <form lang="en">
+                <text>Чай</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="карта">
+        <lexical-unit>
+            <form lang="en">
+                <text>Карта</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="наличные">
+        <lexical-unit>
+            <form lang="en">
+                <text>Наличные</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="мальчик">
+        <lexical-unit>
+            <form lang="en">
+                <text>Мальчик</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="девочка">
+        <lexical-unit>
+            <form lang="en">
+                <text>Девочка</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="учитель">
+        <lexical-unit>
+            <form lang="en">
+                <text>Учитель</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="учительница">
+        <lexical-unit>
+            <form lang="en">
+                <text>Учительница</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="студент">
+        <lexical-unit>
+            <form lang="en">
+                <text>Студент</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="студентка">
+        <lexical-unit>
+            <form lang="en">
+                <text>Студентка</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="женщина">
+        <lexical-unit>
+            <form lang="en">
+                <text>Женщина</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="мужчина">
+        <lexical-unit>
+            <form lang="en">
+                <text>Мужчина</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="вещь">
+        <lexical-unit>
+            <form lang="en">
+                <text>Вещь</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="человек">
+        <lexical-unit>
+            <form lang="en">
+                <text>Человек</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="напиток">
+        <lexical-unit>
+            <form lang="en">
+                <text>Напиток</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="рад_встрече">
+        <lexical-unit>
+            <form lang="en">
+                <text>Рад встрече</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="мать">
+        <lexical-unit>
+            <form lang="en">
+                <text>Мать</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="отец">
+        <lexical-unit>
+            <form lang="en">
+                <text>Отец</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="сын">
+        <lexical-unit>
+            <form lang="en">
+                <text>Сын</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="дочь">
+        <lexical-unit>
+            <form lang="en">
+                <text>Дочь</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="сестра">
+        <lexical-unit>
+            <form lang="en">
+                <text>Сестра</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="брат">
+        <lexical-unit>
+            <form lang="en">
+                <text>Брат</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="муж">
+        <lexical-unit>
+            <form lang="en">
+                <text>Муж</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="жена">
+        <lexical-unit>
+            <form lang="en">
+                <text>Жена</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="друг">
+        <lexical-unit>
+            <form lang="en">
+                <text>Друг</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="подруга">
+        <lexical-unit>
+            <form lang="en">
+                <text>Подруга</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="семья">
+        <lexical-unit>
+            <form lang="en">
+                <text>Семья</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ноль">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ноль</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="один">
+        <lexical-unit>
+            <form lang="en">
+                <text>Один</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="два">
+        <lexical-unit>
+            <form lang="en">
+                <text>Два</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="три">
+        <lexical-unit>
+            <form lang="en">
+                <text>Три</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="четыре">
+        <lexical-unit>
+            <form lang="en">
+                <text>Четыре</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="пять">
+        <lexical-unit>
+            <form lang="en">
+                <text>Пять</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="шесть">
+        <lexical-unit>
+            <form lang="en">
+                <text>Шесть</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="семь">
+        <lexical-unit>
+            <form lang="en">
+                <text>Семь</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="восемь">
+        <lexical-unit>
+            <form lang="en">
+                <text>Восемь</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="девять">
+        <lexical-unit>
+            <form lang="en">
+                <text>Девять</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="родитель">
+        <lexical-unit>
+            <form lang="en">
+                <text>Родитель</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="ребенок">
+        <lexical-unit>
+            <form lang="en">
+                <text>Ребенок</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="число">
+        <lexical-unit>
+            <form lang="en">
+                <text>Число</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="хороший.ая">
+        <lexical-unit>
+            <form lang="en">
+                <text>Хороший.ая</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="плохой.ая">
+        <lexical-unit>
+            <form lang="en">
+                <text>Плохой.ая</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="большой.ая">
+        <lexical-unit>
+            <form lang="en">
+                <text>Большой.ая</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="маленький.ая">
+        <lexical-unit>
+            <form lang="en">
+                <text>Маленький.ая</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="легкий.ая">
+        <lexical-unit>
+            <form lang="en">
+                <text>Легкий.ая</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="трудный.ая">
+        <lexical-unit>
+            <form lang="en">
+                <text>Трудный.ая</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="интересный.ая">
+        <lexical-unit>
+            <form lang="en">
+                <text>Интересный.ая</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="скучный.ая">
+        <lexical-unit>
+            <form lang="en">
+                <text>Скучный.ая</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="холодный.ая">
+        <lexical-unit>
+            <form lang="en">
+                <text>Холодный.ая</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="горячий.ая">
+        <lexical-unit>
+            <form lang="en">
+                <text>Горячий.ая</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="дорогой.ая">
+        <lexical-unit>
+            <form lang="en">
+                <text>Дорогой.ая</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="дешевый.ая">
+        <lexical-unit>
+            <form lang="en">
+                <text>Дешевый.ая</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="красное_вино">
+        <lexical-unit>
+            <form lang="en">
+                <text>Красное вино</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="белое_вино">
+        <lexical-unit>
+            <form lang="en">
+                <text>Белое вино</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="зеленый_чай">
+        <lexical-unit>
+            <form lang="en">
+                <text>Зеленый чай</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="черный_чай">
+        <lexical-unit>
+            <form lang="en">
+                <text>Черный чай</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="холодный_чай">
+        <lexical-unit>
+            <form lang="en">
+                <text>Холодный чай</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="холодный_кофе">
+        <lexical-unit>
+            <form lang="en">
+                <text>Холодный кофе</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="апельсиновый_сок">
+        <lexical-unit>
+            <form lang="en">
+                <text>Апельсиновый сок</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="яблочный_сок">
+        <lexical-unit>
+            <form lang="en">
+                <text>Яблочный сок</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="фильм">
+        <lexical-unit>
+            <form lang="en">
+                <text>Фильм</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="сериал">
+        <lexical-unit>
+            <form lang="en">
+                <text>Сериал</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="музыка">
+        <lexical-unit>
+            <form lang="en">
+                <text>Музыка</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="книга">
+        <lexical-unit>
+            <form lang="en">
+                <text>Книга</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="понедельник">
+        <lexical-unit>
+            <form lang="en">
+                <text>Понедельник</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="вторник">
+        <lexical-unit>
+            <form lang="en">
+                <text>Вторник</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="среда">
+        <lexical-unit>
+            <form lang="en">
+                <text>Среда</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="четверг">
+        <lexical-unit>
+            <form lang="en">
+                <text>Четверг</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="пятница">
+        <lexical-unit>
+            <form lang="en">
+                <text>Пятница</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="суббота">
+        <lexical-unit>
+            <form lang="en">
+                <text>Суббота</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+    <entry id="воскресенье">
+        <lexical-unit>
+            <form lang="en">
+                <text>Воскресенье</text>
+            </form>
+        </lexical-unit>
+    </entry>
+
+</lift>
