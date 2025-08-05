@@ -41,7 +41,7 @@ describe('POST /posts/add', () => {
       .post('/posts/add')
       .field('author', testUser._id.toString())
       .field('caption', 'Test post with video')
-      .attach('video', '/app/dummy.txt');
+      .attach('video', __dirname + '/../dummy.txt');
     expect(res.statusCode).toBe(200);
     expect(res.body).toBeDefined();
   });
