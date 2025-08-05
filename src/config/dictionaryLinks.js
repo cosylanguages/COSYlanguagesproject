@@ -1,0 +1,15 @@
+export const dictionaryLinks = {
+    en: "https://dictionary.cambridge.org/dictionary/english/",
+    de: "https://www.duden.de/suchen/dudenonline/",
+    es: "https://dle.rae.es/",
+    fr: "https://www.larousse.fr/dictionnaires/francais/",
+    it: "https://www.treccani.it/vocabolario/",
+    pt: "https://dicionario.priberam.org/",
+    ru: "https://www.classes.ru/all-russian/russian-dictionary-Efremova-term-",
+    el: "https://www.greek-language.gr/greekLang/modern_greek/tools/lexica/triantafyllides/search.html?lq=",
+    hy: "https://www.translator.am/am/dictionary/",
+    ka: "http://www.nplg.gov.ge/gwdict/index.php?a=index&d=6&p=1&q=",
+    ba: "https://ba.wiktionary.org/wiki/",
+    br: "https://devri.bzh/",
+    tt: "https://suzlek.antat.ru/",
+};

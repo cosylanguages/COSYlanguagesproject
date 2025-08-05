@@ -21,9 +21,6 @@ const Layout = () => {
       <main className="app-main-content">
         <Outlet />
       </main>
-      <footer className="app-footer">
-        <p>&copy; {new Date().getFullYear()} <TransliterableText text={t('mainHeading') || 'COSYlanguages'} /></p>
-      </footer>
     </div>
   );
 };
