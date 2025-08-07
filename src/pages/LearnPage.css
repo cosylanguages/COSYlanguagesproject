@@ -1,0 +1,29 @@
+/* src/pages/LearnPage.css */
+.learn-page {
+  padding: 2rem;
+}
+
+.learn-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.learn-section-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease-in-out;
+}
+
+.learn-section-card:hover {
+  transform: translateY(-5px);
+}
+
+.learn-section-card h2 {
+  margin-top: 0;
+}
