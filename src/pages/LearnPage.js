@@ -1,6 +1,6 @@
 // src/pages/LearnPage.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import './LearnPage.css';
 
 const learnSections = [
@@ -58,6 +58,7 @@ const LearnPage = () => {
           </Link>
         ))}
       </div>
+      <Outlet />
     </div>
   );
 };
