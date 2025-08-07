@@ -10,9 +10,12 @@ const PracticeCategoryNav = ({ language, days }) => {
   const { selectedExercise, setSelectedExercise } = useFreestyle();
 
   const handleCategorySelect = (category) => {
-    // For now, we'll just set the category.
-    // In the future, we might want to have a sub-menu for each category.
-    setSelectedExercise({ exercise: category, key: `${language}-${days.join(',')}-${category}` });
+    const subCategory = category === 'vocabulary' ? 'random' : 'main';
+    setSelectedExercise({
+      category,
+      subCategory,
+      key: `${language}-${days.join(',')}-${category}-${subCategory}`,
+    });
   };
 
   const categoryDisplayInfo = {
@@ -35,7 +38,7 @@ const PracticeCategoryNav = ({ language, days }) => {
           <Button
             key={categoryKey}
             onClick={() => handleCategorySelect(categoryKey)}
-            className={`practice-category-btn ${selectedExercise?.exercise === categoryKey ? 'active' : ''}`}
+            className={`practice-category-btn ${selectedExercise?.category === categoryKey ? 'active' : ''}`}
           >
             {t(categoryDisplayInfo[categoryKey].translationKey, categoryDisplayInfo[categoryKey].defaultLabel)}
           </Button>
