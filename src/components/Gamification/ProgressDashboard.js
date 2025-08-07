@@ -4,8 +4,6 @@ import Achievements from './Achievements';
 import DailyStreak from './DailyStreak';
 import ProgressChart from './ProgressChart';
 import CalendarView from './CalendarView';
-import { useUserProfile } from '../../contexts/UserProfileContext';
-import { useI18n } from '../../i18n/I18nContext';
 import { useLocation } from 'react-router-dom';
 import {
     getLeaderboard,
@@ -17,8 +15,6 @@ import {
 } from '../../api/gamification';
 
 const ProgressDashboard = () => {
-    const { xp } = useUserProfile();
-    const { t } = useI18n();
     const location = useLocation();
     const mode = location.pathname.includes('/study') ? 'study' : 'freestyle';
 

@@ -1,5 +1,5 @@
 // Import necessary libraries and components.
-import React, { lazy, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
 import Loading from '../Common/Loading';
