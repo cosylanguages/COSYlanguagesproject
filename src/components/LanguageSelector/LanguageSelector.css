@@ -1,50 +1,48 @@
-/* Common styles for language selectors */
-.language-selector-container { 
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; 
-    /* margin-bottom: 10px; /* Context-specific, manage in parent or specific page CSS if needed */
-    /* background-color: rgba(255, 255, 255, 0.1); /* Removed for neutrality */
-    /* border-radius: 4px; /* Will use new default */
+.cosy-language-select .cosy-language-select__control {
+  background-color: #fff;
+  border-color: #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  min-width: 200px;
 }
 
-.language-select-label {
-    /* Inherits from .unified-label: font-weight, color, margin-bottom */
-    /* Specific overrides for LanguageSelector label: */
-    font-size: 1.2rem; /* Keep for the emoji if desired, or adjust .unified-label */
-    margin-right: var(--spacing-sm, 0.5rem); /* Standardized margin */
-    /* font-weight: 500; /* .unified-label is 600, this could be an override if needed */
-    /* color: var(--color-text-primary, #333); /* .unified-label uses --color-text-secondary */
-    /* Ensure it aligns well with the dropdown if .unified-label's display:block is too aggressive here */
-    display: inline-block; /* Override .unified-label's display:block if it causes layout issues here */
-    margin-bottom: 0; /* Override .unified-label's margin-bottom if it's not desired next to the dropdown */
+.cosy-language-select .cosy-language-select__control--is-focused {
+  border-color: var(--color-primary, #007bff);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
 }
 
-.language-select-dropdown {
-    padding: 10px 15px; 
-    border-radius: 5px; 
-    border: 1px solid #ccc;
-    background-color: #fff;
-    color: #333;
-    font-size: 1rem; 
-    cursor: pointer;
-    min-width: 200px; 
-    transition: border-color 0.2s, box-shadow 0.2s; 
+.cosy-language-select .cosy-language-select__menu {
+  border-radius: 5px;
 }
 
-.language-select-dropdown:hover {
-    border-color: var(--color-primary, #0056b3);
+.cosy-language-select .cosy-language-select__option {
+  padding: 10px 15px;
 }
 
-.language-select-dropdown:focus {
-    outline: none; 
-    border-color: var(--color-primary, #007bff); 
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.15); 
+.cosy-language-select .cosy-language-select__option--is-focused {
+  background-color: var(--color-primary-light, #d6eaff);
+}
+
+.cosy-language-select .cosy-language-select__option--is-selected {
+  background-color: var(--color-primary, #007bff);
+  color: #fff;
+}
+
+.cosy-language-option {
+  display: flex;
+  align-items: center;
 }
 
 .language-logo {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.language-flag {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
 }

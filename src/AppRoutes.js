@@ -24,11 +24,12 @@ import LearnedWordsPage from './pages/StudyMode/LearnedWordsPage/LearnedWordsPag
 import ConversationPage from './pages/StudyMode/ConversationPage/ConversationPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import Community from './pages/Community';
-import CalculatorPage from './pages/CalculatorPage/Calculator';
 import ClubSelectionPage from './pages/ClubSelectionPage/ClubSelectionPage';
 import SpeakingClub from './components/SpeakingClub';
 import ClubsManager from './pages/Admin/ClubsManager';
 import { Toaster } from 'react-hot-toast';
+import LearnPage from './pages/LearnPage';
+import PricingPage from './pages/PricingPage';
 
 /**
  * A protected route component that checks for user authentication.
@@ -108,25 +109,20 @@ function App() {
                 <Route path="freestyle/*" element={<FreestyleModePage />} />
                 {/* The gamification/progress page. */}
                 <Route path="progress" element={<GamificationPage />} />
-                {/* The personalization page. */}
-                <Route path="personalize" element={<PersonalizationPage />} />
-                {/* The interactive page. */}
-                <Route path="interactive" element={<InteractivePage />} />
-                {/* The study tools page. */}
-                <Route path="study-tools" element={<StudyToolsPage />} />
-                {/* The dictionary page. */}
-                <Route path="dictionary" element={<DictionaryPage />} />
                 {/* The grammar guidebooks page. */}
                 <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
-                {/* The study mode routes. */}
-                <Route path="study" element={<Navigate to="en" replace />} />
-                <Route path="study/:lang" element={<StudyModePage />} />
-                {/* The review page. */}
-                <Route path="review" element={<ReviewPage />} />
-                {/* The learned words page, which is a protected route. */}
-                <Route path="learned-words" element={<ProtectedRoute><LearnedWordsPage /></ProtectedRoute>} />
-                {/* The conversation page. */}
-                <Route path="conversation" element={<ConversationPage />} />
+                {/* The new learn route */}
+                <Route path="learn" element={<LearnPage />}>
+                    <Route path="personalize" element={<PersonalizationPage />} />
+                    <Route path="interactive" element={<InteractivePage />} />
+                    <Route path="study-tools" element={<StudyToolsPage />} />
+                    <Route path="dictionary" element={<DictionaryPage />} />
+                    <Route path="study" element={<Navigate to="en" replace />} />
+                    <Route path="study/:lang" element={<StudyModePage />} />
+                    <Route path="review" element={<ReviewPage />} />
+                    <Route path="learned-words" element={<ProtectedRoute><LearnedWordsPage /></ProtectedRoute>} />
+                    <Route path="conversation" element={<ConversationPage />} />
+                </Route>
                 {/* The profile page, which is a protected route. */}
                 <Route path="profile" element={<ProtectedRoute roles={['user', 'admin']}><ProfilePage /></ProtectedRoute>} />
                 {/* The community page. */}
@@ -134,8 +130,8 @@ function App() {
                 {/* The Speaking Club pages. */}
                 <Route path="speaking-club" element={<ClubSelectionPage />} />
                 <Route path="speaking-club/:eventId" element={<SpeakingClub />} />
-                {/* The calculator page. */}
-                <Route path="calculator" element={<CalculatorPage />} />
+                {/* The pricing page. */}
+                <Route path="pricing" element={<PricingPage />} />
                 {/* The "my study sets" page, which is a protected route. */}
                 <Route
                   path="my-sets"

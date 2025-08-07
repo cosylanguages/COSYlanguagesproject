@@ -1,39 +1,40 @@
-.tools-menu {
-    position: relative;
-    display: inline-block;
+.main-nav {
+    display: flex;
+    align-items: center;
 }
 
-.tools-menu-toggle {
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
     background: none;
     border: none;
+    color: white;
     cursor: pointer;
-    padding: 0;
     font-size: 1rem;
-    font-weight: bold;
+    margin: 0 1rem;
+    text-decoration: none;
 }
 
-.tools-menu-dropdown {
+.dropdown-menu {
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 4px;
-    padding: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     z-index: 1000;
 }
 
-.tools-menu-link {
+.dropdown-link {
+    color: black;
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    color: #333;
-    padding: 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.2s;
 }
 
-.tools-menu-link:hover {
+.dropdown-link:hover {
     background-color: #f0f0f0;
 }

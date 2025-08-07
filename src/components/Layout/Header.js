@@ -6,7 +6,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { useI18n } from '../../i18n/I18nContext';
 import TransliterableText from '../Common/TransliterableText';
 import UserMenu from './UserMenu';
-import ToolsMenu from './ToolsMenu';
+import Navigation from './Navigation';
 import './Header.css';
 
 const Header = () => {
@@ -34,12 +34,9 @@ const Header = () => {
         >
           ☰
         </button>
-        <nav id="main-nav" className={`header-nav ${menuOpen ? 'active' : ''}`}>
-          <NavLink to="/freestyle" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Freestyle</NavLink>
-          <NavLink to="/study" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Study Mode</NavLink>
-          <NavLink to="/community" className={({ isActive }) => (isActive ? 'header-link active-link' : 'header-link')}>Community</NavLink>
-          <ToolsMenu />
-        </nav>
+        <div id="main-nav" className={`header-nav ${menuOpen ? 'active' : ''}`}>
+          <Navigation />
+        </div>
         <div className={`header-controls ${menuOpen ? 'active' : ''}`}>
           <div className="header-language-selector">
             <LanguageSelector />
