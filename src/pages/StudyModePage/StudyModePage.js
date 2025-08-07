@@ -8,6 +8,7 @@ import { useStudyMode } from '../../hooks/useStudyMode';
 import RoleSelector from './RoleSelector';
 import StudentPage from './StudentPage';
 import TeacherPage from './TeacherPage';
+import DaySelector from './DaySelector';
 import TransliterableText from '../../components/Common/TransliterableText';
 import ToggleLatinizationButton from '../../components/Common/ToggleLatinizationButton';
 import Button from '../../components/Common/Button';
@@ -42,59 +43,6 @@ const StudyModePage = () => {
   const days = selectedRole === 'student' ? studentDays : teacherDays;
   const lessonSectionsForPanel = selectedRole === 'student' ? studentLessonSections : teacherLessonSections;
 
-  const renderDaySelector = () => {
-    const daySelectLabel = <TransliterableText text={t('studyModePage.selectDayLabel', 'Select Day:')} />;
-
-    if (selectedRole === 'student') {
-      if (days.length > 0) {
-        return (
-          <div className="study-menu-section">
-            <label htmlFor="smp-student-day-select">{daySelectLabel}</label>
-            <select
-              id="smp-student-day-select"
-              value={selectedDayId || ""}
-              onChange={(e) => handleDaySelect(e.target.value)}
-              disabled={isLoading}
-            >
-              <option value="">{t('studyModePage.selectDayOption', '-- Select a Day --')}</option>
-              {days.map(day => (
-                <option key={day.dayNumber} value={String(day.dayNumber)}>
-                  {`Day ${day.dayNumber}: ${day.lessonName}`}
-                </option>
-              ))}
-            </select>
-          </div>
-        );
-      } else if (!isLoading && !error) {
-        return <div className="study-menu-section"><p>{t('studyModePage.noSyllabusDays', 'No syllabus days found for this language.')}</p></div>;
-      }
-    } else if (selectedRole === 'teacher') {
-      if (days.length > 0) {
-        return (
-          <div className="study-menu-section">
-            <label htmlFor="smp-teacher-day-select">{daySelectLabel}</label>
-            <select
-              id="smp-teacher-day-select"
-              value={selectedDayId || ""}
-              onChange={(e) => handleDaySelect(e.target.value)}
-              disabled={isLoading}
-            >
-              <option value="">{t('studyModePage.selectDayOption', '-- Select a Day --')}</option>
-              {days.map(day => (
-                <option key={day.id} value={day.id}>
-                  {day.title?.[currentLangKey] || day.title?.COSYenglish || `Day ID: ${day.id}`}
-                </option>
-              ))}
-            </select>
-          </div>
-        );
-      } else if (!isLoading && !error) {
-        return <div className="study-menu-section"><p>{t('studyModePage.noTeacherDays', 'No days configured by teacher yet.')}</p></div>;
-      }
-    }
-    return null;
-  };
-
   return (
     <StudyLayout>
       <div className="study-mode-page-container">
@@ -127,7 +75,14 @@ const StudyModePage = () => {
           </div>
         )}
 
-        {renderDaySelector()}
+        <DaySelector
+          role={selectedRole}
+          days={days}
+          selectedDayId={selectedDayId}
+          onDaySelect={handleDaySelect}
+          isLoading={isLoading}
+          error={error}
+        />
 
         {error && <p className="error-message" role="alert">{error}</p>}
         {isLoading && selectedRole && (!days || days.length === 0) && !error && (

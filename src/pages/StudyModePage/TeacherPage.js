@@ -1,8 +1,7 @@
 // src/pages/StudyModePage/TeacherPage.js
 import React, { useRef, useEffect } from 'react';
 import TeacherDashboard from './TeacherDashboard';
-import LessonSectionsPanel from '../../components/StudyMode/LessonSectionsPanel';
-import ToolsPanel from '../../components/StudyMode/ToolsPanel';
+import TeacherSidebar from './TeacherSidebar';
 
 const TeacherPage = ({
   selectedDayId,
@@ -21,26 +20,18 @@ const TeacherPage = ({
 
   return (
     <div className="dashboard-layout">
-      <div className="layout-left-panel">
-        {selectedDayId && (
-          <LessonSectionsPanel
-            apiLessonSections={lessonSectionsForPanel}
-            onSectionSelect={handleSectionSelectSmP}
-            currentLangKey={currentLangKey}
-            selectedSectionId={selectedSectionId}
-            isStudentMode={false}
-            selectedDayId={selectedDayId}
-          />
-        )}
-      </div>
+      <TeacherSidebar
+        selectedDayId={selectedDayId}
+        lessonSectionsForPanel={lessonSectionsForPanel}
+        handleSectionSelectSmP={handleSectionSelectSmP}
+        currentLangKey={currentLangKey}
+        selectedSectionId={selectedSectionId}
+      />
       <div className="layout-center-panel" ref={mainContentRef}>
         <TeacherDashboard
           selectedDayId={selectedDayId}
           key={selectedDayId}
         />
-      </div>
-      <div className="layout-right-panel">
-        <ToolsPanel />
       </div>
     </div>
   );

@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useStudy } from '../../contexts/StudyContext';
 import TransliterableText from '../../components/Common/TransliterableText';
 import Button from '../../components/Common/Button';
+import HelpModal from '../../components/Common/HelpModal';
 
 const RoleSelector = () => {
   const { t } = useI18n();
   const { selectedRole, setSelectedRole } = useStudy();
+  const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
 
   const getButtonClass = (role) => {
     let classes = "role-btn";
@@ -40,7 +42,14 @@ const RoleSelector = () => {
         >
           <TransliterableText text={t('studyMode.teacherRole', '🧑‍🏫 Teacher')} />
         </Button>
+        <button onClick={() => setIsHelpModalOpen(true)} className="help-button">?</button>
       </div>
+      <HelpModal
+        isOpen={isHelpModalOpen}
+        onClose={() => setIsHelpModalOpen(false)}
+        title="roleSelector.help.title"
+        content="roleSelector.help.content"
+      />
     </div>
   );
 };
