@@ -1,7 +1,9 @@
 import apiClient from './apiClient';
 
-export const getPosts = async () => {
-  const response = await apiClient.get('/posts');
+export const getPosts = async ({ page, limit }) => {
+  const response = await apiClient.get('/posts', {
+    params: { page, limit },
+  });
   return response.data;
 };
 
@@ -64,5 +66,12 @@ export const updateClub = async (id, clubData) => {
 
 export const deleteClub = async (id) => {
   const response = await apiClient.delete(`/clubs/${id}`);
+  return response.data;
+};
+
+export const getUserPosts = async ({ userId, page, limit }) => {
+  const response = await apiClient.get(`/users/${userId}/posts`, {
+    params: { page, limit },
+  });
   return response.data;
 };
