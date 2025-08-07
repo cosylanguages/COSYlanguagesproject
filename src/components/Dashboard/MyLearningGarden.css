@@ -1,0 +1,34 @@
+/* src/components/Dashboard/MyLearningGarden.css */
+.learning-garden {
+  background-color: #f0f7f4; /* A light green background */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.garden {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.plant {
+  width: 20px;
+  background-color: #4caf50; /* Green color for the plants */
+  border-radius: 10px 10px 0 0;
+}
+
+.plant-1 {
+  height: 40px;
+}
+
+.plant-2 {
+  height: 60px;
+}
+
+.plant-3 {
+  height: 30px;
+}

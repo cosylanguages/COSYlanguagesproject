@@ -19,6 +19,7 @@ import StudyToolsPage from './pages/StudyMode/StudyToolsPage/StudyToolsPage';
 import GrammarGuidebookPage from './pages/GrammarGuidebookPage/GrammarGuidebookPage';
 import DictionaryPage from './pages/StudyMode/DictionaryPage/DictionaryPage';
 import LandingPage from './pages/LandingPage/LandingPage';
+import DashboardPage from './pages/DashboardPage/DashboardPage';
 import ReviewPage from './pages/StudyMode/ReviewPage/ReviewPage';
 import LearnedWordsPage from './pages/StudyMode/LearnedWordsPage/LearnedWordsPage';
 import ConversationPage from './pages/StudyMode/ConversationPage/ConversationPage';
@@ -80,6 +81,11 @@ function AppRoutes() {
  * This allows other parts of the application to trigger navigation events.
  * @returns {JSX.Element} The App component.
  */
+const Home = () => {
+    const { isAuthenticated } = useAuth();
+    return isAuthenticated ? <DashboardPage /> : <LandingPage />;
+};
+
 function App() {
     const navigate = useNavigate();
 
@@ -104,7 +110,8 @@ function App() {
             {/* The main layout route, which contains all other pages. */}
             <Route path="/" element={<Layout />}>
                 {/* The landing page, which is the default page for the root URL. */}
-                <Route index element={<LandingPage />} />
+                <Route index element={<Home />} />
+                <Route path="dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
                 {/* The freestyle mode page. */}
                 <Route path="freestyle/*" element={<FreestyleModePage />} />
                 {/* The gamification/progress page. */}
@@ -112,17 +119,16 @@ function App() {
                 {/* The grammar guidebooks page. */}
                 <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
                 {/* The new learn route */}
-                <Route path="learn" element={<LearnPage />}>
-                    <Route path="personalize" element={<PersonalizationPage />} />
-                    <Route path="interactive" element={<InteractivePage />} />
-                    <Route path="study-tools" element={<StudyToolsPage />} />
-                    <Route path="dictionary" element={<DictionaryPage />} />
-                    <Route path="study" element={<Navigate to="en" replace />} />
-                    <Route path="study/:lang" element={<StudyModePage />} />
-                    <Route path="review" element={<ReviewPage />} />
-                    <Route path="learned-words" element={<ProtectedRoute><LearnedWordsPage /></ProtectedRoute>} />
-                    <Route path="conversation" element={<ConversationPage />} />
-                </Route>
+                <Route path="learn" element={<LearnPage />} />
+                <Route path="learn/personalize" element={<PersonalizationPage />} />
+                <Route path="learn/interactive" element={<InteractivePage />} />
+                <Route path="learn/study-tools" element={<StudyToolsPage />} />
+                <Route path="learn/dictionary" element={<DictionaryPage />} />
+                <Route path="learn/study" element={<Navigate to="en" replace />} />
+                <Route path="learn/study/:lang" element={<StudyModePage />} />
+                <Route path="learn/review" element={<ReviewPage />} />
+                <Route path="learn/learned-words" element={<ProtectedRoute><LearnedWordsPage /></ProtectedRoute>} />
+                <Route path="learn/conversation" element={<ConversationPage />} />
                 {/* The profile page, which is a protected route. */}
                 <Route path="profile" element={<ProtectedRoute roles={['user', 'admin']}><ProfilePage /></ProtectedRoute>} />
                 {/* The community page. */}
