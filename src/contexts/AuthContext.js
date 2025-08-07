@@ -90,11 +90,13 @@ export function AuthProvider({ children }) {
         setLoadingAuth(false);
     }, [authToken]);
 
-    const signup = useCallback(async (username, password) => {
+    const signup = useCallback(async (username, userData) => {
         setLoadingAuth(true);
         setAuthError(null);
         try {
-            const data = await apiSignup(username, password);
+            // For now, we'll send a dummy password to the backend.
+            // This will be replaced with a proper passwordless solution later.
+            const data = await apiSignup(username, "dummyPassword", userData);
             setAuthToken(data.token);
             const userProfile = await getUserProfile(data.token, data.userId);
             setCurrentUser(userProfile);

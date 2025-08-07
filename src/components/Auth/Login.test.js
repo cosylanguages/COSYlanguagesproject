@@ -56,11 +56,12 @@ describe('Login', () => {
     render(<Login />);
     fireEvent.click(screen.getByText('Need an account? Sign Up'));
     fireEvent.change(screen.getByLabelText(/username/i), { target: { value: 'newuser' } });
-    fireEvent.change(screen.getByLabelText(/password/i), { target: { value: 'newpassword' } });
+    fireEvent.change(screen.getByLabelText(/language/i), { target: { value: 'fr' } });
+    fireEvent.change(screen.getByLabelText(/level/i), { target: { value: 'beginner' } });
     fireEvent.click(screen.getByRole('button', { name: 'Sign Up' }));
 
     await waitFor(() => {
-      expect(signup).toHaveBeenCalledWith('newuser', 'newpassword');
+      expect(signup).toHaveBeenCalledWith('newuser', 'fr', 'beginner');
     });
   });
 });

@@ -7,7 +7,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     enum: ['student', 'teacher', 'admin'],
     default: 'student'
-  }
+  },
+  language: { type: String },
+  level: { type: String },
+  isGuest: { type: Boolean, default: false },
 });
 
 module.exports = mongoose.model('User', userSchema);

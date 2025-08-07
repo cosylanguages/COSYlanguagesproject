@@ -33,6 +33,9 @@ const UserMenu = () => {
                     <NavLink to="/my-sets" className="user-menu-link">
                         <TransliterableText text={t('userMenu.mySets', 'My Sets')} />
                     </NavLink>
+                    <NavLink to="/profile/settings" className="user-menu-link">
+                        <TransliterableText text={t('userMenu.settings', 'Settings')} />
+                    </NavLink>
                     {currentUser?.role === 'admin' && (
                         <NavLink to="/admin/clubs" className="user-menu-link">
                             <TransliterableText text={t('userMenu.admin', 'Admin')} />

@@ -1,4 +1,3 @@
-// src/pages/ProfilePage/UserInformation.js
 import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import Button from '../../components/Common/Button';

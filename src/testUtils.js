@@ -16,13 +16,13 @@ const mockI18n = {
   currentLangKey: 'en'
 };
 
-const AllTheProviders = ({ children, initialEntries = ['/en'] }) => {
+const AllTheProviders = ({ children, initialEntries = ['/en'], mockAuth }) => {
   return (
     <MemoryRouter initialEntries={initialEntries}>
       <Routes>
         <Route path="/:lang" element={
           <I18nProvider i18n={mockI18n}>
-            <AuthProvider>
+            <AuthProvider {...mockAuth}>
               <UserProfileProvider>
                 <LatinizationProvider>
                   <PlanProvider>
@@ -44,8 +44,13 @@ const AllTheProviders = ({ children, initialEntries = ['/en'] }) => {
   );
 };
 
-const customRender = (ui, options) =>
-  render(ui, { wrapper: AllTheProviders, ...options });
+const customRender = (ui, options) => {
+  const { mockAuth, ...renderOptions } = options || {};
+  const Wrapper = ({ children }) => (
+    <AllTheProviders mockAuth={mockAuth}>{children}</AllTheProviders>
+  );
+  return render(ui, { wrapper: Wrapper, ...renderOptions });
+};
 
 export * from '@testing-library/react';
 export { customRender as render };

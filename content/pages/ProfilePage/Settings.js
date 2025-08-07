@@ -1,4 +1,3 @@
-// src/pages/ProfilePage/Settings.js
 import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useI18n } from '../../i18n/I18nContext';

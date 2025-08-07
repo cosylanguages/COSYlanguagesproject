@@ -1,4 +1,3 @@
-// src/pages/ProfilePage/Social.js
 import React from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useI18n } from '../../i18n/I18nContext';

@@ -9,23 +9,35 @@ const JWT_SECRET = 'your_jwt_secret';
 
 // Signup route
 router.post('/signup', async (req, res) => {
-  const { username, password } = req.body;
+  const { username, password, language, level } = req.body;
 
   try {
     let user = await User.findOne({ username });
-    if (user) {
+
+    if (user && user.isGuest) {
+      // Convert guest user to a real user
+      user.isGuest = false;
+      user.language = language;
+      user.level = level;
+      const salt = await bcrypt.genSalt(10);
+      user.password = await bcrypt.hash(password, salt);
+      await user.save();
+    } else if (user) {
       return res.status(400).json({ message: 'User already exists' });
+    } else {
+      // Create a new user
+      user = new User({
+        username,
+        password,
+        language,
+        level,
+      });
+
+      const salt = await bcrypt.genSalt(10);
+      user.password = await bcrypt.hash(password, salt);
+
+      await user.save();
     }
-
-    user = new User({
-      username,
-      password,
-    });
-
-    const salt = await bcrypt.genSalt(10);
-    user.password = await bcrypt.hash(password, salt);
-
-    await user.save();
 
     const payload = {
       user: {

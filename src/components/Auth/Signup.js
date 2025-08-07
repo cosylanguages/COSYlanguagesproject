@@ -10,7 +10,6 @@ import './Login.css'; // Reusing login styles for now
 
 const Signup = () => {
     const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
     const [language, setLanguage] = useState(null);
     const [level, setLevel] = useState(null);
     const { signup, loginAsGuest, loadingAuth, authError } = useAuth();
@@ -29,7 +28,7 @@ const Signup = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const success = await signup(username, password, { language: language?.value, level: level?.value });
+        const success = await signup(username, { language: language?.value, level: level?.value });
         if (success) {
             navigate('/study');
         }
@@ -48,16 +47,6 @@ const Signup = () => {
                         onChange={(e) => setUsername(e.target.value)}
                         disabled={loadingAuth}
                         autoFocus
-                    />
-                </div>
-                <div className="form-group">
-                    <Label htmlFor="password"><TransliterableText text="Password:" /></Label>
-                    <input
-                        type="password"
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        disabled={loadingAuth}
                     />
                 </div>
                 <div className="form-group">
