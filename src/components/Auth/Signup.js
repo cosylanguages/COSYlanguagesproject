@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import Button from '../Common/Button';
-import Label from '../Common/Label';
-import TransliterableText from '../Common/TransliterableText';
 import Select from 'react-select';
 import { useI18n } from '../../i18n/I18nContext';
-import './Login.css'; // Reusing login styles for now
 
 const Signup = () => {
     const [username, setUsername] = useState('');
@@ -36,11 +33,11 @@ const Signup = () => {
     };
 
     return (
-        <div className="login-container">
-            <form onSubmit={handleSubmit} className="login-form">
-                <h2><TransliterableText text="Sign Up" /></h2>
-                <div className="form-group">
-                    <Label htmlFor="username"><TransliterableText text="Username:" /></Label>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', padding: '2rem', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+                <h2>Sign Up</h2>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <label htmlFor="username">Username:</label>
                     <input
                         type="text"
                         id="username"
@@ -48,20 +45,22 @@ const Signup = () => {
                         onChange={(e) => setUsername(e.target.value)}
                         disabled={loadingAuth}
                         autoFocus
+                        style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc' }}
                     />
                 </div>
-                <div className="form-group">
-                    <Label htmlFor="password"><TransliterableText text="Password:" /></Label>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <label htmlFor="password">Password:</label>
                     <input
                         type="password"
                         id="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         disabled={loadingAuth}
+                        style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc' }}
                     />
                 </div>
-                <div className="form-group">
-                    <Label htmlFor="language"><TransliterableText text="Primary Language:" /></Label>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <label htmlFor="language">Primary Language:</label>
                     <Select
                         id="language"
                         value={language}
@@ -70,8 +69,8 @@ const Signup = () => {
                         isDisabled={loadingAuth}
                     />
                 </div>
-                <div className="form-group">
-                    <Label htmlFor="level"><TransliterableText text="Proficiency Level:" /></Label>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <label htmlFor="level">Proficiency Level:</label>
                     <Select
                         id="level"
                         value={level}
@@ -80,22 +79,26 @@ const Signup = () => {
                         isDisabled={loadingAuth}
                     />
                 </div>
-                {authError && <p className="error-message"><TransliterableText text={authError} /></p>}
+                {authError && <p style={{ color: 'red' }}>{authError}</p>}
                 <Button
                     type="submit"
+                    variant="contained"
+                    color="primary"
                     disabled={loadingAuth}
                 >
                     {loadingAuth ? 'Signing up...' : 'Sign Up'}
                 </Button>
-                <div className="guest-login">
+                <div style={{ textAlign: 'center' }}>
                     <Button
                         type="button"
+                        variant="outlined"
+                        color="secondary"
                         onClick={() => {
                             loginAsGuest();
                             navigate('/');
                         }}
                     >
-                        <TransliterableText text="Continue as Guest" />
+                        Continue as Guest
                     </Button>
                 </div>
             </form>
