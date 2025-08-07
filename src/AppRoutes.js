@@ -8,6 +8,7 @@ import { useI18n } from './i18n/I18nContext';
 // Import layout and page components.
 import Layout from './components/Layout/Layout';
 import Login from './components/Auth/Login';
+import Signup from './components/Auth/Signup';
 import StudyModePage from './pages/StudyModePage/StudyModePage';
 import MyStudySetsPage from './pages/MyStudySetsPage/MyStudySetsPage';
 import FreestyleModePage from './pages/FreestyleModePage/FreestyleModePage';
@@ -23,11 +24,12 @@ import LearnedWordsPage from './pages/StudyMode/LearnedWordsPage/LearnedWordsPag
 import ConversationPage from './pages/StudyMode/ConversationPage/ConversationPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import Community from './pages/Community';
-import CalculatorPage from './pages/CalculatorPage/Calculator';
 import ClubSelectionPage from './pages/ClubSelectionPage/ClubSelectionPage';
 import SpeakingClub from './components/SpeakingClub';
 import ClubsManager from './pages/Admin/ClubsManager';
 import { Toaster } from 'react-hot-toast';
+import LearnPage from './pages/LearnPage';
+import PricingPage from './pages/PricingPage';
 
 /**
  * A protected route component that checks for user authentication.
@@ -36,14 +38,27 @@ import { Toaster } from 'react-hot-toast';
  * @param {object} children - The child components to render if the user is authenticated.
  * @returns {JSX.Element} The protected route component.
  */
-const ProtectedRoute = ({ children }) => {
-    const { isAuthenticated, loadingAuth } = useAuth();
+const ProtectedRoute = ({ children, roles }) => {
+    const { isAuthenticated, loadingAuth, currentUser, isGuest } = useAuth();
     const { t } = useI18n();
 
     if (loadingAuth) {
         return <div>{t('auth.loadingStatus', 'Loading authentication status...')}</div>;
     }
-    return isAuthenticated ? children : <Navigate to="/login" replace />;
+
+    if (!isAuthenticated) {
+        return <Navigate to="/login" replace />;
+    }
+
+    if (isGuest && roles) {
+        return <Navigate to="/login" replace />;
+    }
+
+    if (roles && !roles.includes(currentUser?.role)) {
+        return <Navigate to="/" replace />; // Or a dedicated "unauthorized" page
+    }
+
+    return children;
 };
 
 /**
@@ -84,6 +99,8 @@ function App() {
         <Routes>
             {/* The login page route. */}
             <Route path="/login" element={<Login />} />
+            {/* The signup page route. */}
+            <Route path="/signup" element={<Signup />} />
             {/* The main layout route, which contains all other pages. */}
             <Route path="/" element={<Layout />}>
                 {/* The landing page, which is the default page for the root URL. */}
@@ -92,39 +109,34 @@ function App() {
                 <Route path="freestyle/*" element={<FreestyleModePage />} />
                 {/* The gamification/progress page. */}
                 <Route path="progress" element={<GamificationPage />} />
-                {/* The personalization page. */}
-                <Route path="personalize" element={<PersonalizationPage />} />
-                {/* The interactive page. */}
-                <Route path="interactive" element={<InteractivePage />} />
-                {/* The study tools page. */}
-                <Route path="study-tools" element={<StudyToolsPage />} />
-                {/* The dictionary page. */}
-                <Route path="dictionary" element={<DictionaryPage />} />
                 {/* The grammar guidebooks page. */}
                 <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
-                {/* The study mode routes. */}
-                <Route path="study" element={<Navigate to="en" replace />} />
-                <Route path="study/:lang" element={<StudyModePage />} />
-                {/* The review page. */}
-                <Route path="review" element={<ReviewPage />} />
-                {/* The learned words page, which is a protected route. */}
-                <Route path="learned-words" element={<ProtectedRoute><LearnedWordsPage /></ProtectedRoute>} />
-                {/* The conversation page. */}
-                <Route path="conversation" element={<ConversationPage />} />
+                {/* The new learn route */}
+                <Route path="learn" element={<LearnPage />}>
+                    <Route path="personalize" element={<PersonalizationPage />} />
+                    <Route path="interactive" element={<InteractivePage />} />
+                    <Route path="study-tools" element={<StudyToolsPage />} />
+                    <Route path="dictionary" element={<DictionaryPage />} />
+                    <Route path="study" element={<Navigate to="en" replace />} />
+                    <Route path="study/:lang" element={<StudyModePage />} />
+                    <Route path="review" element={<ReviewPage />} />
+                    <Route path="learned-words" element={<ProtectedRoute><LearnedWordsPage /></ProtectedRoute>} />
+                    <Route path="conversation" element={<ConversationPage />} />
+                </Route>
                 {/* The profile page, which is a protected route. */}
-                <Route path="profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
+                <Route path="profile" element={<ProtectedRoute roles={['user', 'admin']}><ProfilePage /></ProtectedRoute>} />
                 {/* The community page. */}
                 <Route path="community" element={<Community />} />
                 {/* The Speaking Club pages. */}
                 <Route path="speaking-club" element={<ClubSelectionPage />} />
                 <Route path="speaking-club/:eventId" element={<SpeakingClub />} />
-                {/* The calculator page. */}
-                <Route path="calculator" element={<CalculatorPage />} />
+                {/* The pricing page. */}
+                <Route path="pricing" element={<PricingPage />} />
                 {/* The "my study sets" page, which is a protected route. */}
                 <Route
                   path="my-sets"
                   element={
-                    <ProtectedRoute>
+                    <ProtectedRoute roles={['user', 'admin']}>
                       <MyStudySetsPage />
                     </ProtectedRoute>
                   }
@@ -132,7 +144,7 @@ function App() {
                   {/* Nested routes for MyStudySetsPage can be added here if needed. */}
                 </Route>
                 {/* Admin Routes */}
-                <Route path="admin/clubs" element={<ProtectedRoute><ClubsManager /></ProtectedRoute>} />
+                <Route path="admin/clubs" element={<ProtectedRoute roles={['admin']}><ClubsManager /></ProtectedRoute>} />
             </Route>
             {/* A catch-all route that redirects users to the appropriate page based on their authentication status. */}
             <Route path="*" element={<CatchAll />} />

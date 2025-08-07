@@ -8,11 +8,8 @@ import { useAuth } from '../../contexts/AuthContext';
 // Import the components that make up the freestyle mode page.
 import HeroShowcase from '../../components/Freestyle/HeroShowcase';
 import TryStudyModeButton from '../../components/Freestyle/TryStudyModeButton';
-import CopyCodeCTA from '../../components/Freestyle/CopyCodeCTA';
-import KeyToolsCallouts from '../../components/Freestyle/KeyToolsCallouts';
-import DaySelectorFreestyle from '../../components/Freestyle/DaySelectorFreestyle';
-import PracticeCategoryNav from '../../components/Freestyle/PracticeCategoryNav';
 import ExerciseHost from '../../components/Freestyle/ExerciseHost';
+import PracticeSelector from '../../components/Freestyle/PracticeSelector';
 import HelpPopupIsland from '../../components/Freestyle/HelpPopupIsland';
 import FreestyleProgress from '../../components/Freestyle/FreestyleProgress';
 import BoosterPacks from '../../components/Freestyle/BoosterPacks';
@@ -32,12 +29,25 @@ const FreestyleModePage = () => {
   // Get state from the freestyle context.
   const { selectedLanguage, selectedDays, selectedExercise, boosterPacks } = useFreestyle();
   const { currentUser } = useAuth();
+  const [feedbackMessage, setFeedbackMessage] = React.useState('');
+
+  React.useEffect(() => {
+    if (selectedLanguage && selectedDays.length > 0 && selectedExercise) {
+      setFeedbackMessage("Great! Now you can start the exercise.");
+    } else if (selectedLanguage) {
+      setFeedbackMessage("Now, select a day and a practice category to start learning!");
+    } else {
+      setFeedbackMessage('');
+    }
+  }, [selectedLanguage, selectedDays, selectedExercise]);
 
   return (
     <div className="freestyle-mode-container">
       <h1 className="freestyle-mode-header">{t('freestyle.title', 'Freestyle Mode')}</h1>
       <HeroShowcase />
       {selectedLanguage && <LanguageHeader selectedLanguage={selectedLanguage} />}
+
+      {feedbackMessage && <p className="feedback-message">{feedbackMessage}</p>}
 
       {!selectedLanguage ? (
         <div className="welcome-message">
@@ -46,39 +56,35 @@ const FreestyleModePage = () => {
           <InteractiveDemoWidget />
         </div>
       ) : (
-        <>
-          <div className="practice-section">
-            <h2>{t('freestyle.boosterPacks.title', 'Practice with a Booster Pack')}</h2>
-            <p>{t('freestyle.boosterPacks.description', 'Select a booster pack to get a curated set of vocabulary and exercises.')}</p>
-            <BoosterPacks
-              boosterPacks={boosterPacks.filter(p => !p.userId)}
-              userBoosterPacks={boosterPacks.filter(p => p.userId === currentUser?.id)}
-            />
-          </div>
-
-          <div className="practice-section">
-            <h2>{t('freestyle.customPractice.title', 'Custom Practice')}</h2>
-            <p>{t('freestyle.customPractice.description', 'Create your own practice session by selecting a day and a category.')}</p>
-            <TryStudyModeButton />
-            <div className="freestyle-controls-container">
-              <DaySelectorFreestyle language={selectedLanguage} />
-              {selectedDays.length > 0 && (
-                <PracticeCategoryNav language={selectedLanguage} days={selectedDays} />
-              )}
+        <div className="freestyle-content">
+          <div className="freestyle-practice-selection">
+            <div className={`practice-section ${!selectedLanguage ? 'disabled' : ''}`}>
+              <h2>{t('freestyle.customPractice.title', 'Custom Practice')}</h2>
+              <p>{t('freestyle.customPractice.description', 'Create your own practice session by selecting a day and a category.')}</p>
+              <TryStudyModeButton />
+              <div className="freestyle-controls-container">
+                <PracticeSelector />
+              </div>
             </div>
-            {selectedExercise && (
-              <ExerciseHost
-                language={selectedLanguage}
-                days={selectedDays}
-                subPracticeType={selectedExercise.exercise}
+            <div className={`practice-section ${!selectedLanguage ? 'disabled' : ''}`}>
+              <h2>{t('freestyle.boosterPacks.title', 'Practice with a Booster Pack')}</h2>
+              <p>{t('freestyle.boosterPacks.description', 'Select a booster pack to get a curated set of vocabulary and exercises.')}</p>
+              <BoosterPacks
+                boosterPacks={boosterPacks.filter(p => !p.userId)}
+                userBoosterPacks={boosterPacks.filter(p => p.userId === currentUser?.id)}
               />
-            )}
+            </div>
           </div>
-        </>
+          {selectedExercise && (
+            <ExerciseHost
+              language={selectedLanguage}
+              days={selectedDays}
+              subPracticeType={selectedExercise.exercise}
+            />
+          )}
+        </div>
       )}
 
-      <CopyCodeCTA />
-      <KeyToolsCallouts />
       <FreestyleProgress />
       <HelpPopupIsland />
     </div>
