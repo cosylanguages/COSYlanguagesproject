@@ -1,6 +1,8 @@
 // Import necessary libraries and components.
-import React from 'react';
+import React, { useState } from 'react';
 import './Leaderboard.css';
+import HelpModal from '../Common/HelpModal';
+import TransliterableText from '../Common/TransliterableText';
 
 /**
  * A component that displays a leaderboard of users.
@@ -10,30 +12,35 @@ import './Leaderboard.css';
  * @param {string} props.mode - The mode to sort the users by ('study' or 'freestyle').
  * @returns {JSX.Element} The Leaderboard component.
  */
-const Leaderboard = ({ users, mode }) => {
-  // Sort the users based on the selected mode.
-  const sortedUsers = users.sort((a, b) => {
-    if (mode === 'study') {
-      return b.studyScore - a.studyScore;
-    }
-    return b.xp - a.xp;
-  });
+const Leaderboard = ({ users, sortKey, title, helpTitle, helpContent }) => {
+  const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
+  // Sort the users based on the selected sort key.
+  const sortedUsers = users.sort((a, b) => b[sortKey] - a[sortKey]);
 
   // Render the leaderboard.
   return (
     <div className="leaderboard">
-      <h2>Leaderboard</h2>
+      <div className="leaderboard-header">
+        <h2><TransliterableText text={title} /></h2>
+        <button onClick={() => setIsHelpModalOpen(true)} className="help-button">?</button>
+      </div>
       <ol>
         {sortedUsers.map((user, index) => (
           <li key={user.id}>
             <span className="leaderboard-rank">{index + 1}</span>
             <span className="leaderboard-name">{user.name}</span>
             <span className="leaderboard-xp">
-              {mode === 'study' ? `${user.studyScore} Study Score` : `${user.xp} XP`}
+              {user[sortKey]}
             </span>
           </li>
         ))}
       </ol>
+      <HelpModal
+        isOpen={isHelpModalOpen}
+        onClose={() => setIsHelpModalOpen(false)}
+        title={helpTitle}
+        content={helpContent}
+      />
     </div>
   );
 };

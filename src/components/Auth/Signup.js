@@ -13,7 +13,7 @@ const Signup = () => {
     const [password, setPassword] = useState('');
     const [language, setLanguage] = useState(null);
     const [level, setLevel] = useState(null);
-    const { signup, loadingAuth, authError } = useAuth();
+    const { signup, loginAsGuest, loadingAuth, authError } = useAuth();
     const navigate = useNavigate();
     const { allTranslations } = useI18n();
 

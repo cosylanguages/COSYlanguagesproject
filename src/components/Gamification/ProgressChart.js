@@ -1,65 +1,29 @@
-// Import necessary libraries and components.
-import React from 'react';
+import React, { useState } from 'react';
 import { Line } from 'react-chartjs-2';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
+import TransliterableText from '../Common/TransliterableText';
+import HelpModal from '../Common/HelpModal';
+import './ProgressChart.css';
 
-// Register the necessary components with ChartJS.
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+const ProgressChart = ({ data }) => {
+  const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
 
-/**
- * A component that displays a line chart of the user's progress over time.
- * @param {object} props - The component's props.
- * @param {Array} [props.data=[]] - An array of data points for the chart.
- * @returns {JSX.Element} The ProgressChart component.
- */
-const ProgressChart = ({ data = [] }) => {
-  // The data for the chart.
-  const chartData = {
-    labels: data.map(d => d.date),
-    datasets: [
-      {
-        label: 'XP Over Time',
-        data: data.map(d => d.xp),
-        fill: false,
-        backgroundColor: 'rgb(75, 192, 192)',
-        borderColor: 'rgba(75, 192, 192, 0.2)',
-      },
-    ],
-  };
-
-  // The options for the chart.
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top',
-      },
-      title: {
-        display: true,
-        text: 'Your Learning Progress',
-      },
-    },
-  };
-
-  // Render the chart.
-  return <Line data={chartData} options={options} />;
+  return (
+    <div className="progress-chart-container">
+      <div className="progress-chart-header">
+        <h2><TransliterableText text="Progress Chart" /></h2>
+        <button onClick={() => setIsHelpModalOpen(true)} className="help-button">?</button>
+      </div>
+      <div className="progress-chart-content">
+        <Line data={data} />
+      </div>
+      <HelpModal
+        isOpen={isHelpModalOpen}
+        onClose={() => setIsHelpModalOpen(false)}
+        title="progressChart.help.title"
+        content="progressChart.help.content"
+      />
+    </div>
+  );
 };
 
 export default ProgressChart;

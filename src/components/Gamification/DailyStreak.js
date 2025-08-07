@@ -1,21 +1,28 @@
-// Import necessary libraries and components.
-import React from 'react';
-import { useUserProfile } from '../../contexts/UserProfileContext';
+import React, { useState } from 'react';
+import TransliterableText from '../Common/TransliterableText';
+import HelpModal from '../Common/HelpModal';
 import './DailyStreak.css';
 
-/**
- * A component that displays the user's daily streak.
- * @returns {JSX.Element} The DailyStreak component.
- */
-const DailyStreak = () => {
-  const { streak } = useUserProfile();
+const DailyStreak = ({ data }) => {
+  const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
 
-  // Render the daily streak component.
   return (
-    <div className="daily-streak">
-      <h3>Daily Streak</h3>
-      <div className="streak-count">{streak}</div>
-      <p>Keep it up to earn rewards!</p>
+    <div className="daily-streak-container">
+      <div className="daily-streak-header">
+        <h2><TransliterableText text="Daily Streak" /></h2>
+        <button onClick={() => setIsHelpModalOpen(true)} className="help-button">?</button>
+      </div>
+      <div className="daily-streak-content">
+        <div className="streak-icon">🔥</div>
+        <div className="streak-count">{data.streak}</div>
+        <div className="streak-label"><TransliterableText text="days" /></div>
+      </div>
+      <HelpModal
+        isOpen={isHelpModalOpen}
+        onClose={() => setIsHelpModalOpen(false)}
+        title="dailyStreak.help.title"
+        content="dailyStreak.help.content"
+      />
     </div>
   );
 };

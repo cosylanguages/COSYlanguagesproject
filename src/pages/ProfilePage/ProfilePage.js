@@ -11,6 +11,7 @@ import { useI18n } from '../../i18n/I18nContext';
 import toast from 'react-hot-toast';
 import MyStudySetsPage from '../MyStudySetsPage/MyStudySetsPage';
 import LanguageDashboard from './LanguageDashboard';
+import UserFeed from '../../components/Community/UserFeed';
 import './ProfilePage.css';
 
 function ProfilePage() {
@@ -56,6 +57,9 @@ function ProfilePage() {
             </div>
             <div label={t('profile.tabs.languages', 'Languages')}>
               <LanguageDashboard />
+            </div>
+            <div label={t('profile.tabs.myPosts', 'My Posts')}>
+              <UserFeed userId={currentUser?.id} />
             </div>
           </Tabs>
         </div>

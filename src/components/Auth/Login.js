@@ -9,7 +9,7 @@ import './Login.css';
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const { login, loadingAuth, authError } = useAuth();
+    const { login, loginAsGuest, loadingAuth, authError } = useAuth();
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
