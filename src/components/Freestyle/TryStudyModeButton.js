@@ -26,7 +26,7 @@ const TryStudyModeButton = () => {
                     <li>And much more!</li>
                 </ul>
                 {currentUser ? (
-                    <Link to="/study" className="modal-cta-button">Go to Study Mode</Link>
+                    <Link to="/learn/study" className="modal-cta-button">Go to Study Mode</Link>
                 ) : (
                     <div className="modal-auth-buttons">
                         <Link to="/login" className="modal-cta-button">Login</Link>

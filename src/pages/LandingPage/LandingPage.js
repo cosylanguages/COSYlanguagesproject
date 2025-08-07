@@ -23,7 +23,7 @@ function LandingPage() {
         {/* Main Buttons */}
         <div className="landing-buttons">
           <Link to="/freestyle" className="landing-button">{t('landingPage.freestyleButton', 'Freestyle')}</Link>
-          <Link to="/study" className="landing-button">{t('landingPage.studyModeButton', 'Study Mode')}</Link>
+          <Link to="/learn/study" className="landing-button">{t('landingPage.studyModeButton', 'Study Mode')}</Link>
           <Link to="/community" className="landing-button">{t('landingPage.communityButton', 'Community')}</Link>
         </div>
       </div>
