@@ -19,6 +19,7 @@ import StudyToolsPage from './pages/StudyMode/StudyToolsPage/StudyToolsPage';
 import GrammarGuidebookPage from './pages/GrammarGuidebookPage/GrammarGuidebookPage';
 import DictionaryPage from './pages/StudyMode/DictionaryPage/DictionaryPage';
 import LandingPage from './pages/LandingPage/LandingPage';
+import DashboardPage from './pages/DashboardPage/DashboardPage';
 import ReviewPage from './pages/StudyMode/ReviewPage/ReviewPage';
 import LearnedWordsPage from './pages/StudyMode/LearnedWordsPage/LearnedWordsPage';
 import ConversationPage from './pages/StudyMode/ConversationPage/ConversationPage';
@@ -80,6 +81,11 @@ function AppRoutes() {
  * This allows other parts of the application to trigger navigation events.
  * @returns {JSX.Element} The App component.
  */
+const Home = () => {
+    const { isAuthenticated } = useAuth();
+    return isAuthenticated ? <DashboardPage /> : <LandingPage />;
+};
+
 function App() {
     const navigate = useNavigate();
 
@@ -104,7 +110,8 @@ function App() {
             {/* The main layout route, which contains all other pages. */}
             <Route path="/" element={<Layout />}>
                 {/* The landing page, which is the default page for the root URL. */}
-                <Route index element={<LandingPage />} />
+                <Route index element={<Home />} />
+                <Route path="dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
                 {/* The freestyle mode page. */}
                 <Route path="freestyle/*" element={<FreestyleModePage />} />
                 {/* The gamification/progress page. */}
