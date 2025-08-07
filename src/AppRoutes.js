@@ -8,6 +8,7 @@ import { useI18n } from './i18n/I18nContext';
 // Import layout and page components.
 import Layout from './components/Layout/Layout';
 import Login from './components/Auth/Login';
+import Signup from './components/Auth/Signup';
 import StudyModePage from './pages/StudyModePage/StudyModePage';
 import MyStudySetsPage from './pages/MyStudySetsPage/MyStudySetsPage';
 import FreestyleModePage from './pages/FreestyleModePage/FreestyleModePage';
@@ -36,14 +37,27 @@ import { Toaster } from 'react-hot-toast';
  * @param {object} children - The child components to render if the user is authenticated.
  * @returns {JSX.Element} The protected route component.
  */
-const ProtectedRoute = ({ children }) => {
-    const { isAuthenticated, loadingAuth } = useAuth();
+const ProtectedRoute = ({ children, roles }) => {
+    const { isAuthenticated, loadingAuth, currentUser, isGuest } = useAuth();
     const { t } = useI18n();
 
     if (loadingAuth) {
         return <div>{t('auth.loadingStatus', 'Loading authentication status...')}</div>;
     }
-    return isAuthenticated ? children : <Navigate to="/login" replace />;
+
+    if (!isAuthenticated) {
+        return <Navigate to="/login" replace />;
+    }
+
+    if (isGuest && roles) {
+        return <Navigate to="/login" replace />;
+    }
+
+    if (roles && !roles.includes(currentUser?.role)) {
+        return <Navigate to="/" replace />; // Or a dedicated "unauthorized" page
+    }
+
+    return children;
 };
 
 /**
@@ -84,6 +98,8 @@ function App() {
         <Routes>
             {/* The login page route. */}
             <Route path="/login" element={<Login />} />
+            {/* The signup page route. */}
+            <Route path="/signup" element={<Signup />} />
             {/* The main layout route, which contains all other pages. */}
             <Route path="/" element={<Layout />}>
                 {/* The landing page, which is the default page for the root URL. */}
@@ -112,7 +128,7 @@ function App() {
                 {/* The conversation page. */}
                 <Route path="conversation" element={<ConversationPage />} />
                 {/* The profile page, which is a protected route. */}
-                <Route path="profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
+                <Route path="profile" element={<ProtectedRoute roles={['user', 'admin']}><ProfilePage /></ProtectedRoute>} />
                 {/* The community page. */}
                 <Route path="community" element={<Community />} />
                 {/* The Speaking Club pages. */}
@@ -124,7 +140,7 @@ function App() {
                 <Route
                   path="my-sets"
                   element={
-                    <ProtectedRoute>
+                    <ProtectedRoute roles={['user', 'admin']}>
                       <MyStudySetsPage />
                     </ProtectedRoute>
                   }
@@ -132,7 +148,7 @@ function App() {
                   {/* Nested routes for MyStudySetsPage can be added here if needed. */}
                 </Route>
                 {/* Admin Routes */}
-                <Route path="admin/clubs" element={<ProtectedRoute><ClubsManager /></ProtectedRoute>} />
+                <Route path="admin/clubs" element={<ProtectedRoute roles={['admin']}><ClubsManager /></ProtectedRoute>} />
             </Route>
             {/* A catch-all route that redirects users to the appropriate page based on their authentication status. */}
             <Route path="*" element={<CatchAll />} />

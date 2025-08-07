@@ -9,6 +9,7 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
     const [authToken, setAuthToken] = useState(sessionStorage.getItem('authToken'));
+    const [isGuest, setIsGuest] = useState(sessionStorage.getItem('isGuest') === 'true');
     const [currentUser, setCurrentUser] = useState(() => {
         try {
             const item = sessionStorage.getItem('currentUser');
@@ -25,6 +26,8 @@ export function AuthProvider({ children }) {
     useEffect(() => {
         if (authToken) {
             sessionStorage.setItem('authToken', authToken);
+            setIsGuest(false);
+            sessionStorage.setItem('isGuest', 'false');
         } else {
             sessionStorage.removeItem('authToken');
         }
@@ -37,6 +40,15 @@ export function AuthProvider({ children }) {
             sessionStorage.removeItem('currentUser');
         }
     }, [currentUser]);
+
+    useEffect(() => {
+        sessionStorage.setItem('isGuest', isGuest);
+    }, [isGuest]);
+
+    const loginAsGuest = useCallback(() => {
+        setIsGuest(true);
+        setCurrentUser({ username: 'Guest', role: 'guest' });
+    }, []);
 
     const login = useCallback(async (username, password) => {
         setLoadingAuth(true);
@@ -71,8 +83,10 @@ export function AuthProvider({ children }) {
         }
         setAuthToken(null);
         setCurrentUser(null);
+        setIsGuest(false);
         sessionStorage.removeItem('authToken');
         sessionStorage.removeItem('currentUser');
+        sessionStorage.removeItem('isGuest');
         setLoadingAuth(false);
     }, [authToken]);
 
@@ -103,12 +117,14 @@ export function AuthProvider({ children }) {
     const value = {
         authToken,
         currentUser,
-        isAuthenticated: !!authToken && !!currentUser,
+        isAuthenticated: (!!authToken && !!currentUser) || isGuest,
+        isGuest,
         authError,
         loadingAuth,
         login,
         logout,
         signup,
+        loginAsGuest,
         refreshCurrentUser,
     };
 
