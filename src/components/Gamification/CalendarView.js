@@ -1,40 +1,38 @@
-// Import necessary libraries and components.
-import React from 'react';
+import React, { useState } from 'react';
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+import TransliterableText from '../Common/TransliterableText';
+import HelpModal from '../Common/HelpModal';
 import './CalendarView.css';
 
-/**
- * A component that displays a calendar view of the user's progress.
- * It highlights the days on which the user has made progress.
- * @param {object} props - The component's props.
- * @param {object} props.data - An object where the keys are dates and the values are progress data.
- * @returns {JSX.Element} The CalendarView component.
- */
-function CalendarView({ data }) {
-  /**
-   * A function that returns a class name for a calendar tile.
-   * @param {object} param0 - The function's parameters.
-   * @param {Date} param0.date - The date of the tile.
-   * @param {string} param0.view - The current view of the calendar.
-   * @returns {string|null} The class name for the tile, or null if no class should be applied.
-   */
+const CalendarView = ({ data }) => {
+  const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
+
   const tileClassName = ({ date, view }) => {
     if (view === 'month') {
-      const dateString = date.toISOString().split('T')[0];
+      const dateString = date.toISOString().slice(0, 10);
       if (data[dateString]) {
-        return 'highlight';
+        return `day-${data[dateString]}`;
       }
     }
   };
 
-  // Render the calendar view.
   return (
     <div className="calendar-view-container">
-      <h2>Your Progress Calendar</h2>
-      <Calendar tileClassName={tileClassName} />
+      <div className="calendar-view-header">
+        <h2><TransliterableText text="Calendar View" /></h2>
+        <button onClick={() => setIsHelpModalOpen(true)} className="help-button">?</button>
+      </div>
+      <div className="calendar-view-content">
+        <Calendar tileClassName={tileClassName} />
+      </div>
+      <HelpModal
+        isOpen={isHelpModalOpen}
+        onClose={() => setIsHelpModalOpen(false)}
+        title="calendarView.help.title"
+        content="calendarView.help.content"
+      />
     </div>
   );
-}
+};
 
 export default CalendarView;
