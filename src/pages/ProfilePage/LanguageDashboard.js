@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 import { useI18n } from '../../i18n/I18nContext';
 import Button from '../../components/Common/Button';
-import Label from '../../components/Common/Label';
-import TransliterableText from '../../components/Common/TransliterableText';
 import { useAuth } from '../../contexts/AuthContext';
 
 const LanguageDashboard = () => {
@@ -30,24 +28,24 @@ const LanguageDashboard = () => {
 
     return (
         <div className="language-dashboard">
-            <h3><TransliterableText text="Manage Your Languages" /></h3>
+            <h3>Manage Your Languages</h3>
             <div className="add-language">
-                <Label htmlFor="add-language-select"><TransliterableText text="Add a new language:" /></Label>
+                <label htmlFor="add-language-select">Add a new language:</label>
                 <Select
                     id="add-language-select"
                     value={selectedLanguage}
                     onChange={setSelectedLanguage}
                     options={languageOptions}
                 />
-                <Button onClick={handleAddLanguage}><TransliterableText text="Add Language" /></Button>
+                <Button onClick={handleAddLanguage}>Add Language</Button>
             </div>
             <div className="language-list">
-                <h4><TransliterableText text="Your Languages:" /></h4>
+                <h4>Your Languages:</h4>
                 <ul>
                     {currentUser.languages?.map(lang => (
                         <li key={lang}>
-                            <TransliterableText text={allTranslations[lang]?.cosyName || lang} />
-                            <Button onClick={() => handleRemoveLanguage(lang)}><TransliterableText text="Remove" /></Button>
+                            {allTranslations[lang]?.cosyName || lang}
+                            <Button onClick={() => handleRemoveLanguage(lang)}>Remove</Button>
                         </li>
                     ))}
                 </ul>
