@@ -2,6 +2,7 @@
 import React from 'react';
 import { useI18n } from '../../i18n/I18nContext';
 import { useLatinizationContext } from '../../contexts/LatinizationContext';
+import { usePictureDictionary } from '../../contexts/PictureDictionaryContext';
 import useLatinization from '../../hooks/useLatinization';
 
 /**
@@ -44,10 +45,24 @@ const TransliterableText = ({ text, langOverride = null, as: Component = 'span',
     // Construct the component's class name.
     const componentClassName = `transliterable-text ${className} ${actuallyLatinized ? 'latinized-text' : ''}`.trim();
 
+    const { openModal } = usePictureDictionary();
+
+    const handleWordClick = (word) => {
+        // Remove punctuation from the end of the word
+        const cleanedWord = word.replace(/[.,/#!$%^&*;:{}=\-_`~()]/g,"");
+        if (cleanedWord) {
+            openModal(cleanedWord);
+        }
+    };
+
     // Render the component with the possibly latinized text.
     return (
         <Component className={componentClassName} {...props}>
-            {possiblyLatinizedText}
+            {possiblyLatinizedText.split(' ').map((word, index) => (
+                <span key={index} onClick={() => handleWordClick(word)} style={{ cursor: 'pointer' }}>
+                    {word}{' '}
+                </span>
+            ))}
         </Component>
     );
 };

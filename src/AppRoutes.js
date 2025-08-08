@@ -28,6 +28,8 @@ import ClubsManager from './pages/Admin/ClubsManager';
 import { Toaster } from 'react-hot-toast';
 import CalculatorPage from './pages/CalculatorPage/Calculator';
 import StudyModeGuard from './components/StudyMode/StudyModeGuard';
+import { usePictureDictionary } from './contexts/PictureDictionaryContext';
+import PictureDictionary from './components/Common/PictureDictionary';
 
 const ProtectedRoute = ({ children, roles }) => {
     const { isAuthenticated, loadingAuth, currentUser } = useAuth();
@@ -54,9 +56,11 @@ const Home = () => {
 };
 
 function AppRoutes() {
+    const { isModalOpen, selectedWord, closeModal } = usePictureDictionary();
     return (
         <>
             <Toaster />
+            {isModalOpen && <PictureDictionary word={selectedWord} onClose={closeModal} />}
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
