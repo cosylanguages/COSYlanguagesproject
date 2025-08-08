@@ -3,7 +3,6 @@ import axios from 'axios';
 import './MemoryGame.css';
 
 const MemoryGame = ({ studySet }) => {
-  const [deck, setDeck] = useState(null);
   const [cards, setCards] = useState([]);
   const [flippedCards, setFlippedCards] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
@@ -43,7 +42,6 @@ const MemoryGame = ({ studySet }) => {
     const newDeck = async () => {
       try {
         const response = await axios.get('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1');
-        setDeck(response.data);
         createGameCards(response.data.deck_id);
       } catch (error) {
         console.error('Error creating a new deck:', error);
