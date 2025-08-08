@@ -51,6 +51,6 @@ describe('GET /posts', () => {
   it('should return an array of posts', async () => {
     const res = await request(app).get('/posts');
     expect(res.statusCode).toBe(200);
-    expect(Array.isArray(res.body)).toBe(true);
+    expect(Array.isArray(res.body.posts)).toBe(true);
   });
 });

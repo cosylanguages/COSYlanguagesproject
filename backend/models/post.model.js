@@ -20,15 +20,8 @@ const postSchema = new Schema({
     ref: 'User'
   }],
   comments: [{
-    author: {
-      type: Schema.Types.ObjectId,
-      ref: 'User'
-    },
-    text: String,
-    createdAt: {
-      type: Date,
-      default: Date.now
-    }
+    type: Schema.Types.ObjectId,
+    ref: 'Comment'
   }]
 }, {
   timestamps: true,

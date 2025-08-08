@@ -7,6 +7,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     enum: ['student', 'teacher', 'admin'],
     default: 'student'
+  },
+  isPaidUser: {
+    type: Boolean,
+    default: false
   }
 });
 
