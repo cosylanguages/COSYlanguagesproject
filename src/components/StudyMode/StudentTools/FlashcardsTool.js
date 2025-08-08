@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useI18n } from '../../../i18n/I18nContext';
 import { getStudySets } from '../../../utils/studySetService';
 import FlashcardPlayer from '../FlashcardPlayer';
+import MemoryGame from './MemoryGame';
 import toast from 'react-hot-toast';
 import './FlashcardsTool.css';
 
@@ -9,6 +10,7 @@ const FlashcardsTool = () => {
   const { t } = useI18n();
   const [studySets, setStudySets] = useState([]);
   const [selectedSet, setSelectedSet] = useState(null);
+  const [gameMode, setGameMode] = useState('flashcards');
 
   useEffect(() => {
     try {
@@ -42,12 +44,23 @@ const FlashcardsTool = () => {
               ))}
             </select>
           </div>
+          <div className="gamemode-selector">
+            <label htmlFor="gamemode-select">{t('flashcards.selectGame', 'Select a game:')}</label>
+            <select id="gamemode-select" onChange={(e) => setGameMode(e.target.value)} value={gameMode}>
+              <option value="flashcards">Flashcards</option>
+              <option value="memory">Memory Game</option>
+            </select>
+          </div>
           {selectedSet && selectedSet.items && selectedSet.items.length > 0 ? (
-            <FlashcardPlayer
-              studySetId={selectedSet.id}
-              initialSetData={selectedSet}
-              source="student"
-            />
+            gameMode === 'flashcards' ? (
+              <FlashcardPlayer
+                studySetId={selectedSet.id}
+                initialSetData={selectedSet}
+                source="student"
+              />
+            ) : (
+              <MemoryGame studySet={selectedSet} />
+            )
           ) : (
             <p className="no-cards-message">{t('flashcards.noCardsInSet', 'This study set is empty.')}</p>
           )}
