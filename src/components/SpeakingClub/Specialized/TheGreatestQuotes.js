@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { pronounceText } from '../../../../utils/speechUtils';
+import { pronounceText } from '../../../utils/speechUtils';
 
 const TheGreatestQuotes = ({ content, dailyQuote, language }) => {
   const [quote, setQuote] = useState(null);
