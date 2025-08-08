@@ -13,13 +13,28 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// Get all posts
-router.route('/').get((req, res) => {
-  Post.find()
-    .populate('author')
-    .sort({ createdAt: -1 })
-    .then(posts => res.json(posts))
-    .catch(err => res.status(400).json('Error: ' + err));
+// Get all posts with pagination
+router.route('/').get(async (req, res) => {
+  const { page = 1, limit = 10 } = req.query;
+
+  try {
+    const posts = await Post.find()
+      .populate('author')
+      .sort({ createdAt: -1 })
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .exec();
+
+    const count = await Post.countDocuments();
+
+    res.json({
+      posts,
+      totalPages: Math.ceil(count / limit),
+      currentPage: page,
+    });
+  } catch (err) {
+    res.status(400).json('Error: ' + err);
+  }
 });
 
 // Add a post (with video upload)

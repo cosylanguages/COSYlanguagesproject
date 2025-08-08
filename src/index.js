@@ -25,6 +25,7 @@ import { FreestyleProvider } from './contexts/FreestyleContext';
 import { StudyProvider } from './contexts/StudyContext';
 // StudySetProvider manages user-created study sets.
 import { StudySetProvider } from './contexts/StudySetContext';
+import { PictureDictionaryProvider } from './contexts/PictureDictionaryContext';
 // Import global CSS files.
 import './index.css';
 import './styles/global.css';
@@ -108,11 +109,13 @@ if (rootElement) {
                     <StudyProvider>
                       {/* StudySetProvider manages user-created study sets. */}
                       <StudySetProvider>
-                        {/* ThemeProvider applies the Material-UI theme to the application. */}
-                        <ThemeProvider theme={theme}>
-                          {/* AppRoutes contains all the application's routes. */}
-                          <AppRoutes />
-                        </ThemeProvider>
+                        <PictureDictionaryProvider>
+                          {/* ThemeProvider applies the Material-UI theme to the application. */}
+                          <ThemeProvider theme={theme}>
+                            {/* AppRoutes contains all the application's routes. */}
+                            <AppRoutes />
+                          </ThemeProvider>
+                        </PictureDictionaryProvider>
                       </StudySetProvider>
                     </StudyProvider>
                   </FreestyleProvider>

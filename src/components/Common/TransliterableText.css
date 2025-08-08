@@ -1,0 +1,32 @@
+.word-container {
+  display: inline-block;
+  position: relative;
+  margin-right: 4px;
+}
+
+.word-container .btn-icon {
+  display: none;
+  position: absolute;
+  top: -20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.word-container:hover .btn-icon {
+  display: inline-block;
+}
+
+.word-container .btn-icon:first-of-type {
+  left: 0;
+}
+
+.word-container .btn-icon:last-of-type {
+  left: 22px;
+}

@@ -148,12 +148,23 @@ const ClosingSection = ({ closing }) => {
 
 const SpeakingClub = ({ eventId }) => {
   const [event, setEvent] = useState(null);
+  const [dailyQuote, setDailyQuote] = useState(null);
 
   useEffect(() => {
     if (eventId) {
       axios.get(`/api/events/${eventId}`) // Assuming API is prefixed
         .then(response => {
-          setEvent(response.data);
+          const eventData = response.data;
+          setEvent(eventData);
+          if (eventData.clubType === 'The Greatest Quotes') {
+            axios.get('/api/quotes/daily')
+              .then(response => {
+                setDailyQuote(response.data);
+              })
+              .catch(error => {
+                console.error("Failed to fetch daily quote:", error);
+              });
+          }
         })
         .catch(error => {
           console.error("Failed to fetch event:", error);
@@ -186,7 +197,7 @@ const SpeakingClub = ({ eventId }) => {
         <SessionRound round={event.sessionFlow?.round1} />
         <MiniBreak miniBreak={event.sessionFlow?.miniBreak} />
         <SessionRound round={event.sessionFlow?.round2} />
-        {SpecializedComponent && <SpecializedComponent content={event.specializedContent} />}
+        {SpecializedComponent && <SpecializedComponent content={event.specializedContent} dailyQuote={dailyQuote} language={event.languageCode} />}
       </div>
       <ClosingSection closing={event.closingSection} />
     </div>

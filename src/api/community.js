@@ -12,8 +12,8 @@ export const createPost = async (postData) => {
   return response.data;
 };
 
-export const likePost = async (postId) => {
-  const response = await apiClient.post(`/posts/${postId}/like`);
+export const likePost = async (postId, userId) => {
+  const response = await apiClient.post(`/posts/${postId}/like`, { userId });
   return response.data;
 };
 
@@ -22,8 +22,13 @@ export const likeEvent = async (eventId) => {
   return response.data;
 };
 
+export const getComments = async (postId) => {
+  const response = await apiClient.get(`/posts/${postId}/comments`);
+  return response.data;
+};
+
 export const commentOnPost = async (postId, commentData) => {
-  const response = await apiClient.post(`/posts/${postId}/comment`, commentData);
+  const response = await apiClient.post(`/posts/${postId}/comments`, commentData);
   return response.data;
 };
 

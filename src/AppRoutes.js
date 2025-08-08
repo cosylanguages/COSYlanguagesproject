@@ -26,8 +26,10 @@ import ClubSelectionPage from './pages/ClubSelectionPage/ClubSelectionPage';
 import SpeakingClub from './components/SpeakingClub';
 import ClubsManager from './pages/Admin/ClubsManager';
 import { Toaster } from 'react-hot-toast';
-import LearnPage from './pages/LearnPage';
-import PricingPage from './pages/PricingPage';
+import CalculatorPage from './pages/CalculatorPage/Calculator';
+import StudyModeGuard from './components/StudyMode/StudyModeGuard';
+import { usePictureDictionary } from './contexts/PictureDictionaryContext';
+import PictureDictionary from './components/Common/PictureDictionary';
 
 const ProtectedRoute = ({ children, roles }) => {
     const { isAuthenticated, loadingAuth, currentUser } = useAuth();
@@ -54,42 +56,41 @@ const Home = () => {
 };
 
 function AppRoutes() {
+    const { isModalOpen, selectedWord, closeModal } = usePictureDictionary();
     return (
         <>
             <Toaster />
+            {isModalOpen && <PictureDictionary word={selectedWord} onClose={closeModal} />}
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route path="dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
+
+                    {/* Core Features */}
                     <Route path="freestyle/*" element={<FreestyleModePage />} />
-                    <Route path="progress" element={<GamificationPage />} />
-                    <Route path="grammar-guidebooks" element={<GrammarGuidebookPage />} />
-                    <Route path="learn" element={<LearnPage />}>
-                        <Route path="personalize" element={<PersonalizationPage />} />
-                        <Route path="interactive" element={<InteractivePage />} />
-                        <Route path="study-tools" element={<StudyToolsPage />} />
-                        <Route path="dictionary" element={<DictionaryPage />} />
-                        <Route path="study" element={<Navigate to="en" replace />} />
-                        <Route path="study/:lang" element={<StudyModePage />} />
-                        <Route path="review" element={<ReviewPage />} />
-                        <Route path="learned-words" element={<ProtectedRoute><LearnedWordsPage /></ProtectedRoute>} />
-                        <Route path="conversation" element={<ConversationPage />} />
-                    </Route>
-                    <Route path="profile" element={<ProtectedRoute roles={['user', 'admin']}><ProfilePage /></ProtectedRoute>} />
                     <Route path="community" element={<Community />} />
                     <Route path="speaking-club" element={<ClubSelectionPage />} />
                     <Route path="speaking-club/:eventId" element={<SpeakingClub />} />
-                    <Route path="pricing" element={<PricingPage />} />
-                    <Route
-                        path="my-sets"
-                        element={
-                            <ProtectedRoute roles={['user', 'admin']}>
-                                <MyStudySetsPage />
-                            </ProtectedRoute>
-                        }
-                    />
+
+                    {/* Study Mode */}
+                    <Route path="study" element={<Navigate to="en" replace />} />
+                    <Route path="study/:lang" element={<StudyModeGuard><StudyModePage /></StudyModeGuard>}>
+                        {/* Sub-routes for the unified dashboard can be defined here if needed */}
+                    </Route>
+
+                    {/* User Menu Routes */}
+                    <Route path="profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
+                    <Route path="my-sets" element={<ProtectedRoute><MyStudySetsPage /></ProtectedRoute>} />
+                    <Route path="progress" element={<ProtectedRoute><GamificationPage /></ProtectedRoute>} />
+
+                    {/* Tools Section */}
+                    <Route path="tools/grammar" element={<GrammarGuidebookPage />} />
+                    <Route path="tools/dictionary" element={<DictionaryPage />} />
+                    <Route path="tools/calculator" element={<CalculatorPage />} />
+
+                    {/* Admin Routes */}
                     <Route path="admin/clubs" element={<ProtectedRoute roles={['admin']}><ClubsManager /></ProtectedRoute>} />
                 </Route>
                 <Route path="*" element={<Navigate to="/" replace />} />
