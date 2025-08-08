@@ -197,7 +197,7 @@ const SpeakingClub = ({ eventId }) => {
         <SessionRound round={event.sessionFlow?.round1} />
         <MiniBreak miniBreak={event.sessionFlow?.miniBreak} />
         <SessionRound round={event.sessionFlow?.round2} />
-        {SpecializedComponent && <SpecializedComponent content={event.specializedContent} dailyQuote={dailyQuote} />}
+        {SpecializedComponent && <SpecializedComponent content={event.specializedContent} dailyQuote={dailyQuote} language={event.languageCode} />}
       </div>
       <ClosingSection closing={event.closingSection} />
     </div>

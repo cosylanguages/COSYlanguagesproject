@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { pronounceText } from '../../../../utils/speechUtils';
 
-const TheGreatestQuotes = ({ content, dailyQuote }) => {
+const TheGreatestQuotes = ({ content, dailyQuote, language }) => {
   const [quote, setQuote] = useState(null);
 
   const discussionPrompts = [
@@ -44,7 +45,13 @@ const TheGreatestQuotes = ({ content, dailyQuote }) => {
     <div className="specialized-club-section">
       <h4>The Greatest Quotes</h4>
       <div className="animated-quote">
-        <blockquote>"{quote.text}"</blockquote>
+        <blockquote>
+          "{quote.text}"
+          <button
+            onClick={() => pronounceText(quote.text, language)}
+            className="btn-icon pronounce-btn-inline"
+          >🔊</button>
+        </blockquote>
         <cite>- {quote.author}</cite>
         {quote.context && <p><strong>Context:</strong> {quote.context}</p>}
       </div>

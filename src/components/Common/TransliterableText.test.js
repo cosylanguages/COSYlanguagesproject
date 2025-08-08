@@ -1,22 +1,20 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { PictureDictionaryProvider, usePictureDictionary } from '../../contexts/PictureDictionaryContext';
+import { usePictureDictionary } from '../../contexts/PictureDictionaryContext';
 import TransliterableText from './TransliterableText';
+import * as speechUtils from '../../utils/speechUtils';
 
-// Mock the context to avoid wrapping the component in the provider in every test
 jest.mock('../../contexts/PictureDictionaryContext', () => ({
-  ...jest.requireActual('../../contexts/PictureDictionaryContext'),
   usePictureDictionary: jest.fn(),
 }));
+jest.mock('../../utils/speechUtils');
 
 describe('TransliterableText', () => {
-  it('should split text into words and call openModal on click', () => {
+  it('should render words with pronounce and picture dictionary buttons', () => {
     const openModal = jest.fn();
     usePictureDictionary.mockReturnValue({ openModal });
 
-    render(
-        <TransliterableText text="hello world" />
-    );
+    render(<TransliterableText text="hello world" />);
 
     const word1 = screen.getByText('hello');
     const word2 = screen.getByText('world');
@@ -24,10 +22,16 @@ describe('TransliterableText', () => {
     expect(word1).toBeInTheDocument();
     expect(word2).toBeInTheDocument();
 
-    fireEvent.click(word1);
-    expect(openModal).toHaveBeenCalledWith('hello');
+    const pronounceButtons = screen.getAllByText('🔊');
+    const pictureButtons = screen.getAllByText('🖼️');
 
-    fireEvent.click(word2);
+    expect(pronounceButtons).toHaveLength(2);
+    expect(pictureButtons).toHaveLength(2);
+
+    fireEvent.click(pronounceButtons[0]);
+    expect(speechUtils.pronounceText).toHaveBeenCalledWith('hello', expect.any(String));
+
+    fireEvent.click(pictureButtons[1]);
     expect(openModal).toHaveBeenCalledWith('world');
   });
 });
